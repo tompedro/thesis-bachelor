@@ -1,0 +1,45 @@
+\contentsline {section}{\numberline {1}Strutture Matematiche}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Geometria Simplettica e Varietà di Kähler}{6}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Blocco: Geometria Simplettica}{6}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Blocco: Struttura Complessa Integrabile}{6}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Blocco: Struttura di Kähler}{6}{subsubsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.2}Gruppi di Lie e Mappa Momento}{7}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}Blocco: Fondamenti di Lie}{7}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}\leavevmode {\color {red}Blocco: Geometria delle Simmetrie Classiche}}{7}{subsubsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.3}Richiami di teoria degli operatori}{7}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Blocco Operatori Illimitati e Gruppi Unitari}{7}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Blocco Struttura Algebrico-Topologica delle C*-Algebre}{8}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}Costruzione Algebrica della Meccanica Quantistica}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Approccio Operazionale}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Algebre di Weyl e l'Ostruzione di Wielandt}{9}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Blocco: Ostruzione di Wintner--Wielandt}{9}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Blocco: Algebra di Weyl come Soluzione}{9}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Teorema GNS e Unicità della Rappresentazione}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Blocco: Costruzione GNS e Teorema di Gelfand-Naimark}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Blocco: Teorema di Stone--von Neumann}{10}{subsubsection.2.3.2}%
+\contentsline {section}{\numberline {3}La Varietà di Kähler Quantistica}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Spazio di Hilbert Proiettivo}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}La Struttura di Kähler di $PH$}{11}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Blocco: Struttura Quasi-Complessa}{11}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Blocco: Prodotto Scalare e Decomposizione}{11}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Proprietà di chiusura della forma simplettica $\omega $}{12}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Blocco: Dominio di regolarità e limitazioni di $f_H$ su $PH$}{12}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Dinamica hamiltoniana su PH: osservabili e flusso}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}\leavevmode {\color {red}Mappa Momento Quantistica e Teorema di Noether}}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Limiti e ambito di validità dell'approccio Kähleriano}{13}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Quantizzazione per Deformazione}{14}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introduzione: Analisi del parametro $\hbar $}{14}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}L'Ostruzione alla quantizzazione}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Quantizzazione per Deformazione: Formale vs.\ Stretta}{14}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}\leavevmode {\color {red}Blocco: Star-Product Formale}}{14}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Blocco: DQ Stretta}{15}{subsubsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.4}Quantizzazione di Berezin e Funzione di Husimi}{15}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Blocco Problema di Wigner}{15}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Funzione di Husimi e quantizzazione di Berezin}{15}{subsubsection.4.4.2}%
+\contentsline {section}{\numberline {5}Esempio: Il Qubit e il Collasso della Non-Commutatività}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Setup: $M_2(\mathbb {C})$ come Modello di Sistema Quantistico}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Il Limite Classico Esplicito: Decoerenza del Qubit}{17}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}\leavevmode {\color {red}Funzione di Husimi del Qubit}}{18}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Conclusione}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Il Taglio di Heisenberg}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Prospettive e questioni aperte}{19}{subsection.6.2}%

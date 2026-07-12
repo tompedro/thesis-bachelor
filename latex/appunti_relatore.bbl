@@ -1,0 +1,144 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{abrahamFoundationsMechanics2008}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a662cea2e646a5fd5025f8ebbdaaae10}{%
+           family={Abraham},
+           familyi={A\bibinitperiod},
+           given={Ralph},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ec03988d2dd9d918b4d7f236b192cc6a}{%
+           family={Marsden},
+           familyi={M\bibinitperiod},
+           given={Jerrold\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Providence, R.I}%
+      }
+      \list{publisher}{1}{%
+        {AMS Chelsea Pub./American Mathematical Society}%
+      }
+      \strng{namehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \strng{fullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \strng{bibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \strng{authorbibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \strng{authornamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \strng{authorfullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd ed}
+      \field{isbn}{978-0-8218-4438-0}
+      \field{pagetotal}{826}
+      \field{title}{Foundations of Mechanics}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/V5A2HTA2/ABRAHAM MECCANICA RAZIONALE.pdf
+      \endverb
+      \keyw{Celestial mechanics,Geometry Differential,Mechanics Analytic}
+      \warn{\item Entry 'abrahamFoundationsMechanics2008' (bib.bib): Invalid format '2008' of date field 'date' - ignoring}
+    \endentry
+    \entry{humphreysIntroductionLieAlgebras2010}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fffcf3523abd2080d6ffc75ac22de7f8}{%
+           family={Humphreys},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{fullhash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{bibnamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authorbibnamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authornamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \strng{authorfullhash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{11. print}
+      \field{isbn}{978-0-387-90053-7}
+      \field{langid}{english}
+      \field{number}{9}
+      \field{pagetotal}{173}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Introduction to {{Lie}} Algebras and Representation Theory}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/XS44XUDX/lie_algebras_humphreys.pdf
+      \endverb
+      \warn{\item Entry 'humphreysIntroductionLieAlgebras2010' (bib.bib): Invalid format '2010' of date field 'date' - ignoring}
+    \endentry
+    \entry{hallLieGroupsLie2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b805c00e09278506b061111d904aa5c8}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{fullhash}{b805c00e09278506b061111d904aa5c8}
+      \strng{bibnamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authorbibnamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authornamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authorfullhash}{b805c00e09278506b061111d904aa5c8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4419-2313-4 978-0-387-21554-9}
+      \field{langid}{english}
+      \field{series}{Graduate {{Texts}} in {{Mathematics}}}
+      \field{title}{Lie {{Groups}}, {{Lie Algebras}}, and {{Representations}}}
+      \field{volume}{222}
+      \verb{doi}
+      \verb 10.1007/978-0-387-21554-9
+      \endverb
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/MW2IE2DT/Hall - 2003 - Lie Groups, Lie Algebras, and Representations.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-0-387-21554-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-0-387-21554-9
+      \endverb
+      \warn{\item Entry 'hallLieGroupsLie2003' (bib.bib): Invalid format '2003' of date field 'date' - ignoring}
+      \warn{\item Entry 'hallLieGroupsLie2003' (bib.bib): Invalid format '2026-07-10' of date field 'urldate' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

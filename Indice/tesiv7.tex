@@ -1,0 +1,912 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{textcomp}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+
+% Colori
+\definecolor{accent}{RGB}{30, 80, 140}
+\definecolor{boxbg}{RGB}{240, 245, 255}
+\definecolor{fontecolor}{RGB}{90, 90, 90}
+
+
+% Box fonti
+\newmdenv[
+backgroundcolor=boxbg,
+linecolor=accent,
+linewidth=1pt,
+leftmargin=0pt,
+rightmargin=0pt,
+innerleftmargin=10pt,
+innerrightmargin=10pt,
+innertopmargin=6pt,
+innerbottommargin=6pt,
+skipabove=8pt,
+skipbelow=8pt
+]{fontebox}
+
+\newcommand{\fonti}[1]{%
+	\begin{fontebox}
+		\textcolor{fontecolor}{\footnotesize\textbf{Fonti:} #1}
+	\end{fontebox}%
+}
+
+% Comando per nota concettuale
+\newcommand{\nota}[1]{%
+	\par\smallskip
+	\noindent\textit{\small $\triangleright$\; #1}
+	\par\smallskip
+}
+
+\setlist[itemize,1]{leftmargin=1.5em, itemsep=2pt, topsep=4pt}
+\setlist[itemize,2]{leftmargin=1.5em, itemsep=1pt, topsep=2pt}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=accent,
+	urlcolor=accent
+}
+
+\title{%
+	\textbf{Strutture Hamiltoniane in Meccanica Quantistica}\\[6pt]
+	\normalsize Indice Concettuale
+}
+\author{Tommaso Pedroni}
+\date{\today}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	% ============================================================
+	\section*{Domanda Guida della Tesi}
+	\addcontentsline{toc}{section}{Domanda Guida della Tesi}
+	% ============================================================
+	
+	Le strutture della meccanica razionale --- spazio delle fasi, parentesi di Poisson,
+	flusso hamiltoniano, teorema di Noether --- sono letteralmente presenti nella meccanica
+	quantistica. La tesi argomenta che questo non è una coincidenza né un'analogia formale,
+	ma una conseguenza strutturale leggibile in due modi complementari.
+	
+	\medskip
+	
+	\textbf{Bottom-up (Parti I--II + Cap.\ 4).} Meccanica razionale e meccanica quantistica
+	sono entrambe $C^*$-algebre --- una commutativa, l'altra no --- connesse da un campo
+	continuo tramite la strict deformation quantization di Rieffel. Il Lie-bracket classico
+	e il commutatore quantistico sono la stessa struttura astratta in due rappresentazioni
+	distinte.
+	
+	\medskip
+	
+	\textbf{Top-down (Cap.\ 3).} Lo spazio degli stati quantistico $\mathbb{P}\mathcal{H}$
+	è una varietà simplettica kähleriana. Forma simplettica, campi hamiltoniani, mappa
+	momento e teorema di Noether non sono importati dall'esterno: emergono dalla
+	decomposizione del prodotto scalare di $\mathcal{H}$.
+	
+	\medskip
+	
+	La risposta si articola in quattro passi con dipendenza logica stretta.
+	
+	\medskip
+	
+	\textbf{Passo 1 (Cap.\ 1).} La MR è costruita in forma algebrica invariante e
+	riconosciuta come $C^*$-algebra commutativa tramite Gelfand. Il Lie-bracket classico
+	è struttura interna di $C^\infty_c(M)\subset C_0(M)$, non un assioma aggiunto.
+	
+	\medskip
+	
+	\textbf{Passo 2 (Cap.\ 2).} La MQ è costruita senza postulare $\mathcal{H}$.
+	L'ostruzione di Wintner (algebre di Banach) motiva l'algebra di Weyl. Lo spazio
+	di Hilbert emerge dal teorema GNS. Il commutatore $[a,b]=ab-ba$ è struttura interna
+	di ogni $C^*$-algebra non commutativa --- parallelo esatto del Passo~1.
+	
+	\medskip
+	
+	\textbf{Passo 3 (Cap.\ 3).} $\mathbb{P}\mathcal{H}$ è una varietà simplettica
+	kähleriana. L'equazione di Schrödinger, il teorema di Noether e le relazioni di
+	indeterminazione sono teoremi su questa varietà, non assiomi indipendenti.
+	
+	\medskip
+	
+	\textbf{Passo 4 (Cap.\ 4).} La strict deformation quantization di Rieffel costruisce
+	una famiglia continua $\{A_\hbar\}_{\hbar\in[0,1]}$ di $C^*$-algebre. La condizione
+	di Dirac garantisce che parentesi di Poisson e commutatore siano la stessa struttura
+	in senso normato per $\hbar\to 0$.
+	
+	% ============================================================
+	\newpage
+	\part*{Parte I --- Il Lato Classico}
+	\addcontentsline{toc}{part}{Parte I: Il Lato Classico}
+	% ============================================================
+	
+	\nota{La Parte~I costruisce il linguaggio geometrico e algebrico della meccanica
+		razionale in forma invariante, poi riconosce la struttura risultante come
+		$C^*$-algebra commutativa. Ogni definizione introdotta qui ha un analogo esplicito
+		nel Cap.\ 3.}
+	
+	% ============================================================
+	\section{Varietà Simplettiche e Algebra delle Osservabili}
+	% ============================================================
+	
+	\nota{Sequenza logica: algebre di Lie forniscono il linguaggio del bracket; la geometria
+		simplettica introduce $C^\infty(M)$ come spazio naturale delle osservabili; le
+		parentesi di Poisson dotano $C^\infty(M)$ di struttura di algebra di Lie; il teorema
+		di Gelfand riconosce $C_0(M)$ come $C^*$-algebra. Il capitolo si chiude con un
+		risultato: la MR \emph{è} la teoria delle $C^*$-algebre commutative.}
+	
+	% ----------------------------------------------------------
+	\subsection{Algebre di Lie}
+	% ----------------------------------------------------------
+	
+	\fonti{Humphreys, \textit{Introduction to Lie Algebras and Representation Theory};
+		Kirillov, \textit{An Introduction to Lie Groups and Lie Algebras}.}
+	
+	\nota{Prerequisito per l'intero capitolo. Le algebre di Lie sono il linguaggio in cui
+		si esprimono sia le parentesi di Poisson (\S1.3) sia il commutatore quantistico
+		(Cap.\ 2). Ogni bracket che compare in questa tesi --- classico o quantistico ---
+		è una rappresentazione della struttura astratta definita qui.}
+	
+	\begin{itemize}
+		\item \textbf{Definizione assiomatica} $(\mathfrak{g},[\cdot,\cdot])$: bilinearità,
+		antisimmetria, identità di Jacobi. L'identità di Jacobi è anticipata come
+		condizione di coerenza strutturale --- il suo legame con $d\omega=0$ è il punto
+		tecnico cruciale di \S1.3.
+		\item \textbf{Omomorfismi, rappresentazioni} e algebra inviluppante universale
+		(enunciato).
+		\item \textbf{Esempi rilevanti:} $\mathfrak{su}(2)$, $\mathfrak{u}(n)$; mappa
+		esponenziale $\exp:\mathfrak{g}\to G$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Geometria Simplettica}
+	% ----------------------------------------------------------
+	
+	\fonti{Abraham \& Marsden, \textit{Foundations of Mechanics};
+		Cannas da Silva, \textit{Lectures on Symplectic Geometry}.}
+	
+	\nota{Qui entra $C^\infty(M)$: è lo spazio in cui le hamiltoniane vivono naturalmente,
+		perché definire $X_f$ tramite $\iota_{X_f}\omega = df$ richiede differenziabilità
+		di $f$. Il passaggio a $C_0(M)$ avverrà in \S1.5, quando si vorrà una struttura
+		di $C^*$-algebra.}
+	
+	\begin{itemize}
+		\item \textbf{Nota sulla compattezza:} salvo diversa indicazione, $M$ è una
+		varietà simplettica localmente compatta di Hausdorff. I risultati che richiedono
+		compattezza di $M$ sono segnalati esplicitamente con \emph{(M compatta)}.
+		\item \textbf{Varietà simplettica} $(M,\omega)$: $\omega$ chiusa ($d\omega=0$) e
+		non degenere; dimensione pari, orientazione canonica.
+		\item \textbf{Isomorfismi musicali} $\flat:TM\to T^*M$ e $\sharp:T^*M\to TM$
+		indotti da $\omega$; campi vettoriali hamiltoniani $X_f$ via $\iota_{X_f}\omega=df$;
+		esistenza e unicità dall'isomorfismo musicale.
+		\item \textbf{Teorema di Darboux:} esistenza \emph{locale} di coordinate
+		$(q^i,p_i)$ con $\omega=\sum_i dq^i\wedge dp_i$. Le coordinate canoniche sono
+		una conseguenza locale --- non esistono coordinate di Darboux globali su varietà
+		compatte come $S^2$.
+		\item \textbf{Simplettomorfismi e teorema di Liouville:} il flusso di ogni campo
+		hamiltoniano è un gruppo a un parametro di simplettomorfismi \emph{(completezza
+			garantita se $M$ è compatta, o con ipotesi di crescita su $H$)}; invarianza
+		della misura di Liouville $\omega^n/n!$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Parentesi di Poisson e Struttura di Algebra di Lie}
+	% ----------------------------------------------------------
+	
+	\fonti{Abraham \& Marsden, \textit{Foundations of Mechanics};
+		Cannas da Silva, \textit{Lectures on Symplectic Geometry}.}
+	
+	\begin{itemize}
+		\item \textbf{Parentesi di Poisson:} $\{f,g\}=\omega(X_f,X_g)$; bilinearità,
+		antisimmetria, regola di Leibniz.
+		\item \textbf{Identità di Jacobi $\Leftrightarrow$ $d\omega=0$:} l'equivalenza
+		si dimostra espandendo $\{\{f,g\},h\}$ tramite la formula di Cartan
+		$\mathcal{L}_X=\iota_X d+d\iota_X$ e usando la chiusura di $\omega$. Riferimento:
+		Abraham--Marsden, Thm~2.4.6; Cannas da Silva, Prop.~2.3. Questo è il punto
+		tecnico cruciale: la stessa equivalenza garantirà Jacobi su $\mathbb{P}\mathcal{H}$
+		nel Cap.~3.
+		\item \textbf{$(C^\infty(M),\{\cdot,\cdot\})$ come algebra di Lie:} tutti gli
+		assiomi di \S1.1 soddisfatti; il Lie-bracket classico è la struttura astratta
+		di cui il commutatore $\frac{1}{i\hbar}[\cdot,\cdot]$ è l'omologo non commutativo.
+		\item \textbf{Mappa $f\mapsto X_f$:} omomorfismo di algebre di Lie
+		$(C^\infty(M),\{\cdot,\cdot\})\to(\mathfrak{X}(M),[\cdot,\cdot])$; nucleo nelle
+		funzioni costanti.
+		\item \textbf{Evoluzione delle osservabili:} $\tfrac{d}{dt}(f\circ\phi_t^H)=
+		\{f,H\}\circ\phi_t^H$; la dinamica classica è codificata nel Lie-bracket con $H$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Azione Simplettica e Teorema di Noether}
+	% ----------------------------------------------------------
+	
+	\fonti{Abraham \& Marsden, \textit{Foundations of Mechanics};
+		Moretti, \textit{Spectral Theory and Quantum Mechanics}.}
+	
+	\begin{itemize}
+		\item \textbf{Gruppo di Lie $G$:} algebra di Lie $\mathfrak{g}=T_eG$; mappa
+		esponenziale; esempi $U(1)$, $SU(2)$, $U(n)$.
+		\item \textbf{Azione simplettica:} $\Phi:G\times M\to M$ con $\Phi_g^*\omega=\omega$;
+		campo generatore infinitesimale $\xi_M$.
+		\item \textbf{Mappa momento:} $\mu:M\to\mathfrak{g}^*$ definita da
+		$d\langle\mu,\xi\rangle=\iota_{\xi_M}\omega$. \emph{(Per $M$ non compatta,
+			l'esistenza globale richiede la completezza del flusso di $\xi_M$; automatica
+			se $M$ è compatta.)}
+		\item \textbf{Teorema di Noether geometrico:} se $H$ è $G$-invariante,
+		\[
+		\frac{d}{dt}\langle\mu\circ\phi_t^H,\xi\rangle = \{\langle\mu,\xi\rangle,H\} = 0.
+		\]
+		Simmetria $\Leftrightarrow$ conservazione, mediata dal Lie-bracket. Questa
+		dimostrazione usa solo la struttura simplettica e l'identità di Jacobi --- si
+		applicherà identicamente a $\mathbb{P}\mathcal{H}$ nel Cap.~3.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{$C_0(M)$ come $C^*$-algebra e Teorema di Gelfand}
+	% ----------------------------------------------------------
+	
+	\fonti{Bratteli \& Robinson, \textit{Operator Algebras and Quantum Statistical
+			Mechanics}, Vol.~I; Strocchi, \textit{An Introduction to the Mathematical
+			Structure of Quantum Mechanics}.}
+	
+	\nota{Perché $C_0(M)$ e non $C^\infty(M)$? La struttura di $C^*$-algebra richiede
+		completezza in norma. $C^\infty(M)$ non ammette una norma di Banach naturale.
+		$C_0(M)$ --- funzioni continue che si annullano all'infinito, con norma sup ---
+		è lo spazio di completamento naturale su cui la condizione $\|f^*f\|=\|f\|^2$
+		è soddisfatta per costruzione. La subalgebra densa su cui la struttura di Poisson
+		è effettivamente definita è $C^\infty_c(M)\subset C_0(M)$ --- funzioni lisce a
+		supporto compatto, che si annullano all'infinito e sono differenziabili.
+		Per $M$ compatta, $C_0(M)=C(M)$ e $C^\infty_c(M)=C^\infty(M)$.}
+	
+	\begin{itemize}
+		\item \textbf{$C_0(M)$ come $C^*$-algebra commutativa:} norma sup, involuzione per
+		coniugazione complessa, condizione C* soddisfatta per costruzione.
+		\item \textbf{Osservabili classiche come elementi autoaggiunti:} $f=\bar f$;
+		spettro reale.
+		\item \textbf{Stato come funzionale positivo normalizzato:} $\omega:C_0(M)\to
+		\mathbb{C}$ con $\omega(\bar ff)\geq 0$ e $\omega(1)=1$; valore di aspettazione
+		come dato fisico primitivo. Approccio parallelo al \S2.1.
+		\item \textbf{Teorema di Gelfand:} ogni $C^*$-algebra commutativa è isometricamente
+		isomorfa a $C_0(X)$ per qualche spazio localmente compatto di Hausdorff $X$
+		\emph{(per $M$ compatta: isomorfa a $C(X)$)}. La MR non \emph{usa}
+		$C^*$-algebre --- la MR \emph{è} la teoria delle $C^*$-algebre commutative.
+		\item \textbf{Conclusione:} il Lie-bracket classico è struttura interna di
+		$C^\infty_c(M)\subset C_0(M)$, non un assioma aggiunto. Il Cap.~2 mostrerà che
+		lo stesso vale per il commutatore in $B(\mathcal{H})$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Qubit I --- $S^2$ come Spazio delle Fasi dello Spin Classico}
+	% ----------------------------------------------------------
+	
+	\fonti{Abraham \& Marsden, \textit{Foundations of Mechanics};
+		Perelomov, \textit{Generalized Coherent States}.}
+	
+	\begin{itemize}
+		\item \textbf{Spazio delle fasi ridotto $S^2$} \emph{(compatto):} forma simplettica
+		$\omega=\sin\theta\,d\theta\wedge d\phi$. Su $S^2$ il flusso hamiltoniano è
+		automaticamente completo e la mappa momento è globalmente definita.
+		\item \textbf{Parentesi di Poisson su $S^2$:} $\{x_i,x_j\}=\varepsilon_{ijk}x_k$;
+		algebra $\mathfrak{su}(2)$ realizzata come parentesi di Poisson.
+		\item \textbf{$C(S^2)$ come $C^*$-algebra commutativa} (caso compatto: $C_0=C$);
+		stato come misura di probabilità su $S^2$.
+		\item \textbf{Anticipazione:} nel Cap.~2 il commutatore $[\sigma_i,\sigma_j]=
+		2i\varepsilon_{ijk}\sigma_k$ su $M_2(\mathbb{C})$ è la stessa algebra di Lie
+		$\mathfrak{su}(2)$ --- non per analogia, ma perché entrambe sono rappresentazioni
+		della struttura di \S1.1.
+	\end{itemize}
+	
+	% ============================================================
+	\newpage
+	\part*{Parte II --- Il Lato Quantistico}
+	\addcontentsline{toc}{part}{Parte II: Il Lato Quantistico}
+	% ============================================================
+	
+	\nota{La Parte~II costruisce la MQ senza postulare $\mathcal{H}$. Il percorso è:
+		osservabili fisiche $\to$ $C^*$-algebra astratta $\to$ GNS $\to$ $\mathcal{H}$
+		come conseguenza. L'ostruzione di Wintner motiva l'algebra di Weyl. Il capitolo
+		si chiude aprendo la domanda a cui il Cap.~3 risponde.}
+	
+	% ============================================================
+	\section{Costruzione Algebrica della Meccanica Quantistica}
+	% ============================================================
+	
+	\nota{Struttura parallela al Cap.~1: come $C_0(M)$ è riconosciuta come $C^*$-algebra
+		commutativa da Gelfand, $B(\mathcal{H})$ è riconosciuta come $C^*$-algebra non
+		commutativa da Gelfand--Naimark. Il Lie-bracket $[a,b]=ab-ba$ è struttura interna,
+		non un assioma. La definizione di $C^*$-algebra e di stato non vengono ripetute ---
+		sono già in \S1.5.}
+	
+	% ----------------------------------------------------------
+	\subsection{Approccio Operazionale di Strocchi}
+	% ----------------------------------------------------------
+	
+	\fonti{Strocchi, \textit{An Introduction to the Mathematical Structure of Quantum
+			Mechanics}.}
+	
+	\begin{itemize}
+		\item \textbf{Impostazione:} preparazioni e misure come punto di partenza; nessuno
+		spazio di Hilbert assunto. La struttura $C^*$-algebra è già nota dal \S1.5; ora
+		l'algebra è non commutativa.
+		\item \textbf{Il Lie-bracket $[a,b]=ab-ba$ come struttura interna:} antisimmetria
+		e identità di Jacobi per costruzione algebrica pura. \emph{Parallelo diretto con
+			\S1.3: anche lì il Lie-bracket era struttura interna, non un assioma.}
+		\item \textbf{Stato come funzionale positivo normalizzato:} approccio parallelo
+		a \S1.5.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Teorema GNS, Gelfand--Naimark e Complementi Tecnici}
+	% ----------------------------------------------------------
+	
+	\fonti{Reed \& Simon, \textit{Methods of Modern Mathematical Physics}, Vol.~I;
+		Moretti, \textit{Spectral Theory and Quantum Mechanics}; Strocchi;
+		Bratteli \& Robinson, Vol.~I.}
+	
+	\begin{itemize}
+		\item \textbf{Prodotto interno GNS:} dato $\omega$, $\langle a,b\rangle_\omega=
+		\omega(a^*b)$; ideale di Gelfand $\mathcal{I}_\omega=\{a:\omega(a^*a)=0\}$.
+		\item \textbf{Spazio GNS $\mathcal{H}_\omega$:} completamento di
+		$\mathcal{A}/\mathcal{I}_\omega$; rappresentazione $\pi_\omega:\mathcal{A}\to
+		B(\mathcal{H}_\omega)$; vettore ciclico $\Omega_\omega=[I]$.
+		\item \textbf{Teorema GNS:} ogni stato determina un'unica rappresentazione
+		$(\mathcal{H}_\omega,\pi_\omega,\Omega_\omega)$ a meno di equivalenza unitaria;
+		$\mathcal{H}$ \emph{emerge} dalla struttura algebrica. Dimostrazione dell'unicità
+		via costruzione esplicita dell'isomorfismo unitario.
+		\item \textbf{Teorema di Gelfand--Naimark:} ogni $C^*$-algebra astratta si
+		rappresenta isometricamente su $B(\mathcal{H})$; lo spazio di Hilbert è il
+		supporto naturale di qualsiasi $C^*$-algebra.
+		\item \textbf{Complemento tecnico:} costruzione dell'algebra di Weyl per $n>1$
+		(necessaria per il \S2.3 e il Cap.~4); si veda anche l'Appendice~A.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{L'Ostruzione di Wintner e l'Algebra di Weyl}
+	% ----------------------------------------------------------
+	
+	\fonti{Wintner, \textit{The unboundedness of quantum-mechanical matrices}
+		(Phys.\ Rev.\ 71, 1947); Strocchi;
+		Bratteli \& Robinson, Vol.~II; Moretti.}
+	
+	\nota{Prima di Wintner entrano i prerequisiti di teoria spettrale strettamente
+		necessari, integrati come paragrafo organico alla motivazione.}
+	
+	\begin{itemize}
+		\item \textbf{Prerequisito di teoria spettrale:} operatori simmetrici vs
+		autoaggiunti su $\mathcal{H}$ --- la distinzione è fondamentale perché
+		$\hat q$, $\hat p$ sono non limitati e simmetrici, ma il teorema di Stone
+		richiede autoaggiunzione. Teorema spettrale per operatori non limitati (enunciato);
+		calcolo funzionale misurabile. Questi strumenti ricompaiono in \S2.3 (Stone)
+		e nel Cap.~3.
+		\item \textbf{Il problema delle CCR:} si cerca una $C^*$-algebra contenente
+		$q,p$ con $[q,p]=i\hbar I$.
+		\item \textbf{Teorema di Wintner (1947) --- algebre di Banach:} in qualsiasi
+		algebra di Banach unitale non esistono elementi $A,B$ con $AB-BA=I$.
+		\begin{itemize}
+			\item \textit{Dimostrazione:} per induzione, $AB^n-B^nA=nB^{n-1}$. Quindi
+			$n\|B\|^{n-1}\leq\|AB^n-B^nA\|\leq 2\|A\|\|B\|^n$, da cui $n\leq 2\|A\|\|B\|$
+			per ogni $n$ --- contraddizione. Questa dimostrazione vale per qualsiasi
+			algebra di Banach, senza uso della traccia e senza distinzione di dimensione.
+		\end{itemize}
+		\item \textbf{Conseguenza:} le CCR $[q,p]=i\hbar I$ non possono essere soddisfatte
+		da operatori limitati in nessuna algebra di Banach unitale. Bisogna riformulare.
+		\item \textbf{Operatori di Weyl:} $W(\alpha)=e^{i(s\hat q+t\hat p)}$,
+		$\alpha=(s,t)\in\mathbb{R}^2$; unitari (limitati) anche se $\hat q$, $\hat p$
+		non lo sono.
+		\item \textbf{Relazioni di Weyl:} $W(\alpha)W(\beta)=e^{\frac{i}{2}\omega(\alpha,\beta)}
+		W(\alpha+\beta)$; CCR in forma esponenziale, senza problemi di dominio.
+		\item \textbf{$C^*$-algebra di Weyl $\mathrm{CCR}(\mathbb{R}^2)$:} completamento
+		in norma $C^*$; unicità della norma ($\|W(\alpha)\|=1$ dalla condizione C*).
+		\item \textbf{Teorema di Stone} \emph{(marcato: riusato nel Cap.~3):} ogni gruppo
+		unitario fortemente continuo $\{U(t)\}_{t\in\mathbb{R}}$ su $\mathcal{H}$ ammette
+		un unico generatore autoaggiunto $H$ con $U(t)=e^{-iHt/\hbar}$; conversamente,
+		ogni operatore autoaggiunto genera tale gruppo.
+		\item \textbf{Teorema di Stone--von Neumann:} ogni rappresentazione irriducibile
+		fortemente continua di $\mathrm{CCR}(\mathbb{R}^{2n})$ è unitariamente equivalente
+		alla rappresentazione di Schrödinger su $L^2(\mathbb{R}^n)$; unicità cinematica
+		per sistemi a finiti gradi di libertà \emph{(fallisce in dimensione infinita)}.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Il Ponte verso la Geometria degli Stati}
+	% ----------------------------------------------------------
+	
+	\fonti{Ashtekar \& Schilling, \textit{Geometrical Formulation of Quantum Mechanics}
+		(gr-qc/9706069); Landsman, \textit{Mathematical Topics Between Classical and
+			Quantum Mechanics}.}
+	
+	\nota{Questo paragrafo è la cerniera tra il Cap.~2 e il Cap.~3. Non introduce nuovi
+		strumenti tecnici: formula la domanda a cui il Cap.~3 risponde.}
+	
+	\begin{itemize}
+		\item \textbf{La simmetria algebrica:} MR e MQ sono entrambe $C^*$-algebre con
+		il Lie-bracket come struttura interna. Nel caso classico quel bracket è il motore
+		geometrico che genera il flusso hamiltoniano su $(M,\omega)$, definisce la mappa
+		momento, rende Noether un teorema sulla varietà.
+		\item \textbf{La domanda:} dato che il Lie-bracket della MQ è la stessa struttura
+		astratta, esiste uno spazio in cui le strutture geometriche della MR --- forma
+		simplettica, campi hamiltoniani, mappa momento --- siano altrettanto letteralmente
+		presenti nel caso quantistico?
+		\item \textbf{La traccia della risposta:} il GNS ha prodotto $\mathcal{H}$; Stone
+		dice che ogni osservabile autoaggiunto genera un flusso unitario su $\mathcal{H}$.
+		Il quoziente $\mathbb{P}\mathcal{H}$ rimuove la ridondanza di fase. La domanda
+		diventa: \emph{$\mathbb{P}\mathcal{H}$ è una varietà simplettica? Il flusso
+			unitario discende a flusso hamiltoniano su $\mathbb{P}\mathcal{H}$?} Il Cap.~3
+		risponde affermativamente.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Qubit II --- $M_2(\mathbb{C})$ come $C^*$-Algebra}
+	% ----------------------------------------------------------
+	
+	\fonti{Bratteli \& Robinson, Vol.~I; Landsman.}
+	
+	\begin{itemize}
+		\item \textbf{Algebra degli osservabili:} $\mathcal{A}=M_2(\mathbb{C})$; matrici
+		hermitiane come osservabili; $[\sigma_i,\sigma_j]=2i\varepsilon_{ijk}\sigma_k$.
+		\item \textbf{Stati come matrici densità:} $\rho\geq 0$, $\mathrm{tr}(\rho)=1$;
+		stati puri ($\rho^2=\rho$) e misti ($\mathrm{tr}(\rho^2)<1$).
+		\item \textbf{GNS esplicito} per lo stato traciale $\omega(a)=\frac{1}{2}
+		\mathrm{tr}(a)$: spazio $\mathbb{C}^2$, vettore ciclico $\Omega=\frac{1}{\sqrt{2}}
+		(1,1)^T$. Calcolo esplicito.
+		\item \textbf{Confronto con Qubit I:} $[\sigma_i,\sigma_j]=2i\varepsilon_{ijk}
+		\sigma_k$ in $M_2(\mathbb{C})$ e $\{x_i,x_j\}=\varepsilon_{ijk}x_k$ su $S^2$
+		--- stessa algebra di Lie $\mathfrak{su}(2)$, due rappresentazioni distinte.
+	\end{itemize}
+	
+	% ============================================================
+	\newpage
+	\part*{Parte III --- Le Strutture Classiche nello Spazio degli Stati Quantistico}
+	\addcontentsline{toc}{part}{Parte III: Le Strutture Classiche nello Spazio degli
+		Stati Quantistico}
+	% ============================================================
+	
+	\nota{La Parte~III offre la risposta top-down alla domanda del \S2.4. Lo spazio degli
+		stati $\mathbb{P}\mathcal{H}$ è una varietà simplettica kähleriana. La struttura
+		non è assunta: emerge dalla decomposizione del prodotto scalare. Il teorema di
+		Stone, enunciato in \S2.3, viene qui riusato in modo esplicito e preciso.}
+	
+	% ============================================================
+	\section{Geometria di $\mathbb{P}\mathcal{H}$ e Recupero delle Strutture Classiche}
+	% ============================================================
+	
+	\nota{Scopo: mostrare che le strutture del Cap.~1 --- forma simplettica, campi
+		hamiltoniani, mappa momento, Noether --- sono letteralmente presenti in
+		$\mathbb{P}\mathcal{H}$ come conseguenze della geometria intrinseca.}
+	
+	% ----------------------------------------------------------
+	\subsection{Lo Spazio Proiettivo $\mathbb{P}\mathcal{H}$ come Varietà}
+	% ----------------------------------------------------------
+	
+	\fonti{Ashtekar \& Schilling, \textit{Geometrical Formulation of Quantum Mechanics};
+		Cirelli, Lanzavecchia \& Mania, \textit{Quantum Mechanics as an
+			Infinite-Dimensional Hamiltonian System} (J.\ Math.\ Phys.\ 31, 1990).}
+	
+	\begin{itemize}
+		\item \textbf{Ridondanza di fase:} $|\psi\rangle$ e $e^{i\theta}|\psi\rangle$
+		danno gli stessi valori di aspettazione; $\mathbb{P}\mathcal{H}=
+		(\mathcal{H}\setminus\{0\})/{\sim}$.
+		\item \textbf{Struttura differenziabile reale} di dimensione $2(\dim\mathcal{H}-1)$.
+		Per $\mathcal{H}$ finito-dimensionale ($\dim\mathcal{H}=n$):
+		$\mathbb{P}\mathcal{H}\cong\mathbb{CP}^{n-1}$, \emph{compatta}. Per $\mathcal{H}$
+		infinito-dimensionale separabile: varietà di Hilbert non compatta; le proprietà
+		locali (forma simplettica, campi hamiltoniani) restano valide, ma l'esistenza
+		globale del flusso richiede che $\hat H$ sia essenzialmente autoaggiunto ---
+		condizione garantita dal teorema spettrale di \S2.3.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Decomposizione del Prodotto Scalare e Struttura di Kähler}
+	% ----------------------------------------------------------
+	
+	\fonti{Ashtekar \& Schilling; Cirelli, Lanzavecchia \& Mania.}
+	
+	\nota{La definizione di varietà kähleriana come terna $(g,J,\omega)$ con $\omega$
+		chiusa entra qui in una riga, al momento in cui serve. La struttura complessa
+		integrabile (Nijenhuis, Newlander--Nirenberg) non è necessaria: l'integrabilità
+		si verifica direttamente via potenziale di Kähler.}
+	
+	\begin{itemize}
+		\item \textbf{Decomposizione fondamentale:} su $\mathcal{H}$ come spazio
+		vettoriale reale,
+		\[
+		\langle\psi|\phi\rangle = g(\psi,\phi) + i\,\omega(\psi,\phi)
+		\]
+		dove $g=\mathrm{Re}\langle\cdot|\cdot\rangle$ è una metrica riemanniana e
+		$\omega=\mathrm{Im}\langle\cdot|\cdot\rangle$ è una 2-forma antisimmetrica.
+		\item \textbf{Non degenerazione di $\omega$:} $\omega$ è simplettica.
+		\item \textbf{Struttura complessa $J$:} $\psi\mapsto i\psi$; $J^2=-\mathrm{Id}$;
+		compatibilità $\omega(\psi,\phi)=g(J\psi,\phi)$.
+		\item \textbf{Discesa a $\mathbb{P}\mathcal{H}$:} la terna $(g,J,\omega)$ discende
+		al quoziente e soddisfa le condizioni di compatibilità kähleriana.
+		\item \textbf{Potenziale di Kähler e chiusura di $\omega$:} in carta locale
+		$U_0$ con coordinate $z_j=\psi_j/\psi_0$, il potenziale $K=\log(1+\sum_j|z_j|^2)$
+		genera $\omega=i\partial\bar\partial K$; chiusura $d\omega=0$ dalla nilpotenza
+		$\partial^2=0$.
+		\item \textbf{Metrica di Fubini--Study:} la componente riemanniana $g$ è la
+		metrica di Fubini--Study.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Equazione di Schrödinger come Flusso Hamiltoniano}
+	% ----------------------------------------------------------
+	
+	\fonti{Ashtekar \& Schilling, \textit{Geometrical Formulation of Quantum Mechanics},
+		Prop.~3.1.}
+	
+	\begin{itemize}
+		\item \textbf{Osservabile come funzione liscia:} dato $\hat A$ autoaggiunto,
+		$f_A([\psi])=\langle\psi|\hat A|\psi\rangle/\langle\psi|\psi\rangle$ è liscia
+		su $\mathbb{P}\mathcal{H}$; analogo diretto dell'osservabile classica di \S1.3.
+		\item \textbf{Campo hamiltoniano:} $X_{f_H}$ da $\iota_{X_{f_H}}\omega=df_H$.
+		\item \textbf{Stone su $\mathcal{H}$, flusso su $\mathbb{P}\mathcal{H}$:}
+		il teorema di Stone (\S2.3) produce il flusso unitario $U(t)=e^{-i\hat Ht/\hbar}$
+		su $\mathcal{H}$. Poiché $U(t)$ è lineare e commuta con la moltiplicazione per
+		scalari, esso \emph{discende} al quoziente: $\Phi_t:[\psi]\mapsto[e^{-i\hat Ht/\hbar}
+		\psi]$. Il flusso disceso coincide con il flusso del campo hamiltoniano $X_{f_H}$
+		rispetto a $\omega$ (Ashtekar--Schilling, Prop.~3.1). \emph{Stone lavora su
+			$\mathcal{H}$; il flusso scende su $\mathbb{P}\mathcal{H}$ e lì coincide con
+			il flusso simplettico. Stone non viene applicato direttamente a
+			$\mathbb{P}\mathcal{H}$.}
+		\item \textbf{Equazione di Schrödinger:} le orbite di $\Phi_t$ soddisfano
+		$i\hbar\partial_t|\psi\rangle=\hat H|\psi\rangle$ --- non un assioma indipendente,
+		ma la conseguenza del flusso unitario ridisceso.
+		\item \textbf{Identità geometrica fondamentale:}
+		\[
+		\{f_A,f_B\}_\omega = \omega(X_{f_A},X_{f_B}) = \frac{\langle\psi|[\hat A,\hat B]|\psi\rangle}{i\hbar \langle\psi | \psi \rangle};
+		\]
+		le parentesi di Poisson su $\mathbb{P}\mathcal{H}$ \emph{sono} i commutatori
+		quantistici.
+		\item \textbf{Parallelo con il Cap.~1:} stessa struttura, stesso teorema: ogni
+		operatore autoaggiunto genera un flusso unitario su $\mathcal{H}$ che discende
+		a flusso hamiltoniano su $\mathbb{P}\mathcal{H}$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Teorema di Noether Quantistico}
+	% ----------------------------------------------------------
+	
+	\fonti{Cirelli, Lanzavecchia \& Mania (J.\ Math.\ Phys.\ 31, 1990);
+		Ashtekar \& Schilling.}
+	
+	\begin{itemize}
+		\item \textbf{Enunciato:} se $[\hat H,\hat A]=0$, allora $\frac{d}{dt}
+		\langle\hat A\rangle_\psi=0$ lungo ogni soluzione dell'equazione di Schrödinger.
+		\item \textbf{Dimostrazione geometrica:} $[\hat H,\hat A]=0$ implica
+		$\{f_H,f_A\}_\omega=0$ per l'identità di \S3.3; per il teorema di Noether di
+		\S1.4 applicato a $(\mathbb{P}\mathcal{H},\omega)$, $f_A$ è conservata lungo
+		il flusso di $X_{f_H}$. La conservazione segue per identità di Jacobi, garantita
+		da $d\omega=0$ su $\mathbb{P}\mathcal{H}$ (\S3.2). \emph{Classico e quantistico
+			usano la stessa dimostrazione --- perché usano la stessa struttura.}
+		\item \textbf{Mappa momento quantistica:} $\mu_Q:\mathbb{P}\mathcal{H}\to
+		\mathfrak{g}^*$ definita da $\langle\mu_Q([\psi]),\xi\rangle=\langle\psi|
+		\hat T_\xi|\psi\rangle$; controparte esatta della mappa momento classica di \S1.4.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Relazioni di Indeterminazione come Corollario}
+	% ----------------------------------------------------------
+	
+	\fonti{Reed \& Simon, Vol.~I; Moretti, \textit{Spectral Theory and Quantum Mechanics}.}
+	
+	\begin{itemize}
+		\item \textbf{Origine dalla struttura simplettica:} Cauchy--Schwarz su $\mathcal{H}$
+		dà
+		\[
+		\Delta_\psi A\cdot\Delta_\psi B \;\geq\;
+		\tfrac{1}{2}|\langle\psi|[\hat A,\hat B]|\psi\rangle|;
+		\]
+		tramite l'identità di \S3.3 il membro destro è $\tfrac{\hbar}{2}|\{f_A,f_B\}_\omega|$.
+		\item \textbf{Natura del risultato:} struttura intrinseca della geometria kähleriana
+		di $\mathbb{P}\mathcal{H}$, priva di analogo classico diretto. Alcune strutture
+		della MR riemergono identiche (Noether, flusso); le relazioni di indeterminazione
+		sono genuinamente quantistiche.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Qubit III --- $\mathbb{P}\mathbb{C}^1 \cong S^2$: Chiusura Geometrica}
+	% ----------------------------------------------------------
+	
+	\fonti{Ashtekar \& Schilling, \textit{Geometrical Formulation of Quantum Mechanics};
+		Cirelli, Lanzavecchia \& Mania.}
+	
+	\begin{itemize}
+		\item \textbf{Lo spazio degli stati puri del qubit:} per $\mathcal{H}=\mathbb{C}^2$,
+		la costruzione del \S3.1 dà $\mathbb{P}\mathcal{H}=\mathbb{P}\mathbb{C}^1$.
+		Topologicamente $\mathbb{P}\mathbb{C}^1\cong S^2$; esplicitamente, la carta
+		$U_0=\{[\psi_0,\psi_1]:\psi_0\neq 0\}$ con coordinata $z=\psi_1/\psi_0\in\mathbb{C}$
+		copre $S^2$ privata del polo nord tramite la proiezione stereografica.
+		
+		\item \textbf{La forma simplettica è quella del Qubit I:}
+		il potenziale di Kähler del \S3.2 su $\mathbb{P}\mathbb{C}^1$ è
+		$K=\log(1+|z|^2)$, e la forma risultante
+		$\omega_{FS}=i\partial\bar\partial K=\frac{i\,dz\wedge d\bar z}{(1+|z|^2)^2}$
+		in coordinate sferiche $z=\tan(\theta/2)e^{i\phi}$ diventa
+		\[
+		\omega_{FS} = \tfrac{1}{2}\sin\theta\;d\theta\wedge d\phi.
+		\]
+		Questa è esattamente la forma simplettica di $S^2$ introdotta nel \S1.6 (Qubit I),
+		a meno del fattore di normalizzazione per il raggio dello spin. Lo spazio degli
+		stati puri del qubit e lo spazio delle fasi dello spin classico sono la
+		\emph{stessa varietà simplettica} --- non un'analogia, un'identità.
+		
+		\item \textbf{La precessione di Larmor come flusso hamiltoniano su $S^2$:}
+		l'hamiltoniana $\hat H=-\frac{\gamma B}{2}\sigma_z$ è autoaggiunta su
+		$\mathbb{C}^2$; la funzione osservabile associata è
+		$f_H([\psi])=\langle\psi|\hat H|\psi\rangle/\|\psi\|^2$.
+		Per il \S3.3, il flusso unitario $U(t)=e^{-i\hat Ht/\hbar}$ discende a un
+		flusso hamiltoniano $\Phi_t$ su $(\mathbb{P}\mathbb{C}^1,\omega_{FS})\cong(S^2,\omega)$.
+		In coordinate sferiche $\Phi_t$ è la rotazione $\phi\mapsto\phi+\gamma Bt$,
+		$\theta\mapsto\theta$ --- precisamente la precessione di Larmor del Qubit I
+		come flusso simplettico su $S^2$.
+		
+		\item \textbf{Chiusura del cerchio geometrico:} il sistema fisico è uno solo.
+		Visto come spazio delle fasi classico (Qubit I), vive su $(S^2,\omega)$.
+		Visto come spazio degli stati quantistici puri (Qubit II--III), vive su
+		$(\mathbb{P}\mathbb{C}^1,\omega_{FS})$. Le due descrizioni usano la stessa
+		varietà simplettica con la stessa forma simplettica. La struttura geometrica
+		con cui la tesi apre al \S1.2 è la stessa struttura che governa lo spazio degli
+		stati del sistema quantistico più semplice.
+	\end{itemize}
+	
+	% ============================================================
+	\newpage
+	\part*{Parte IV --- Strict Deformation Quantization}
+	\addcontentsline{toc}{part}{Parte IV: Strict Deformation Quantization}
+	% ============================================================
+	
+	\nota{La Parte~IV risponde alla domanda complementare: esiste un oggetto matematico
+		che connette $C_0(M)$ e $B(\mathcal{H})$ in modo continuo? La risposta di Rieffel
+		è affermativa e fornisce una stima normata esplicita tramite la condizione di Dirac.}
+	
+	% ============================================================
+	\section{Quantizzazione per Deformazione (Rieffel)}
+	% ============================================================
+	
+	\nota{Struttura del capitolo: (1) il significato di $\hbar$ come parametro variabile;
+		(2) perché la deformazione formale non è sufficiente; (3) la costruzione di Rieffel
+		e la condizione di Dirac; (4) la quantizzazione di Weyl come esempio principale;
+		(5) l'ostacolo di Groenewold--van Hove come delimitazione della portata.}
+	
+	% ----------------------------------------------------------
+	\subsection{Il Significato di $\hbar$ come Parametro}
+	% ----------------------------------------------------------
+	
+	\fonti{Landsman, \textit{Mathematical Topics Between Classical and Quantum Mechanics}.}
+	
+	\begin{itemize}
+		\item \textbf{(i) $\hbar$ come costante fisica fissata:} regime cinematico
+		(Capp.\ 1--2).
+		\item \textbf{(ii) $\hbar$ come parametro formale:} variabile nelle serie
+		$\mathbb{R}[[\hbar]]$; base della deformazione formale (\S4.2).
+		\item \textbf{(iii) $\hbar\in[0,1]$ come indice continuo:} parametrizza le fibre
+		di un campo continuo di $C^*$-algebre; il limite classico $\hbar\to 0$ è un
+		limite normato (\S\S4.3--4.4).
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Perché la Deformazione Formale Non Basta}
+	% ----------------------------------------------------------
+	
+	\fonti{Landsman; Kontsevich, \textit{Deformation Quantization of Poisson Manifolds}
+		(Lett.\ Math.\ Phys.\ 66, 2003).}
+	
+	\begin{itemize}
+		\item \textbf{Star-product formale (BFFLS):} $f\star_\hbar g=\sum_{k=0}^\infty
+		\hbar^k B_k(f,g)$; $B_0(f,g)=fg$; $B_1(f,g)-B_1(g,f)=i\{f,g\}$.
+		\item \textbf{Problema:} le serie formali non definiscono una $C^*$-algebra;
+		nessuna norma di convergenza; il limite $\hbar\to 0$ non ha senso normato.
+		\item \textbf{Necessità della strict DQ:} vera $C^*$-algebra per ogni $\hbar$,
+		continuità in norma.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Definizione di Rieffel e Condizione di Dirac}
+	% ----------------------------------------------------------
+	
+	\fonti{Rieffel, \textit{Deformation Quantization for Actions of $\mathbb{R}^d$}
+		(Mem.\ AMS, 1993); Landsman.}
+	
+	\begin{itemize}
+		\item \textbf{Definizione (Rieffel, 1993):} una strict deformation quantization
+		di $(A_0,\{\cdot,\cdot\})$ è una famiglia $\{A_\hbar\}_{\hbar\in I}$ di
+		$C^*$-algebre con $A_0=C_0(M)$ e mappe $Q_\hbar:\widetilde{A}_0\to A_\hbar$
+		definite su algebra densa $\widetilde{A}_0\subset A_0$ \emph{(nella pratica:
+			$C^\infty_c(M)$ o $\mathcal{S}(\mathbb{R}^{2n})$, dove le parentesi di
+			Poisson sono definite)}, tali che:
+		\begin{itemize}
+			\item[(i)] $Q_\hbar(\bar f)=Q_\hbar(f)^*$;
+			\item[(ii)] $\|Q_\hbar(f)\|_{A_\hbar}\to\|f\|_{A_0}$ per $\hbar\to 0$;
+			\item[(iii)] \emph{Condizione di Dirac:}
+			$\bigl\|\tfrac{1}{i\hbar}[Q_\hbar(f),Q_\hbar(g)]-Q_\hbar(\{f,g\})\bigr\|_{A_\hbar}
+			\to 0$ per $\hbar\to 0$.
+		\end{itemize}
+		\item \textbf{Cosa garantisce Dirac:} non l'uguaglianza tra commutatore e parentesi
+		di Poisson, ma la loro differenza piccola in norma $C^*$ per $\hbar$ piccolo.
+		Le strutture classiche persistono come \emph{limite normato}.
+		\item \textbf{Campo continuo:} classicità e quantisticità connesse da un limite
+		asintotico nella topologia della norma --- non da una discontinuità ontologica.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Esempio Principale: Quantizzazione di Weyl su $\mathbb{R}^2$}
+	% ----------------------------------------------------------
+	
+	\fonti{Landsman, \textit{Mathematical Topics}, Cap.~II.1;
+		Hudson, \textit{When is the Wigner quasi-probability density non-negative?}
+		(Rep.\ Math.\ Phys.\ 6, 1974).}
+	
+	\begin{itemize}
+		\item \textbf{Setup:} $A_0=C_0(\mathbb{R}^2)$; $A_\hbar=\mathrm{CCR}(\mathbb{R}^2)$;
+		$Q_\hbar^W(f)=\frac{1}{2\pi\hbar}\int f(q,p)W(q,p)\,dq\,dp$.
+		\item \textbf{Verifica delle tre condizioni di Rieffel:}
+		\begin{itemize}
+			\item[(i)] compatibilità con l'involuzione: dalle proprietà degli operatori
+			di Weyl;
+			\item[(ii)] limite della norma: $\|Q_\hbar^W(f)\|\to\|f\|_\infty$ tramite
+			stima di Calderón--Vaillancourt;
+			\item[(iii)] condizione di Dirac: dal calcolo esplicito del commutatore
+			degli operatori di Weyl.
+		\end{itemize}
+		\item \textbf{Teorema di Hudson:} per uno stato puro $\rho=|\psi\rangle\langle\psi|$,
+		la funzione di Wigner $W_\psi\geq 0$ se e solo se $\psi$ è gaussiano.
+		\item \textbf{Conclusione:} la corrispondenza di Dirac non è un'analogia ---
+		è una disuguaglianza normata.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Ostacolo di Groenewold--van Hove}
+	% ----------------------------------------------------------
+	
+	\fonti{Moretti, \textit{Spectral Theory and Quantum Mechanics}, p.~605;
+		Gotay, \textit{Obstructions to Quantization} (arXiv:math-ph/9809011).}
+	
+	\begin{itemize}
+		\item \textbf{Teorema di Groenewold--van Hove:} non esiste nessuna mappa lineare
+		$Q:\mathcal{P}(\mathbb{R}^{2n})\to L(\mathcal{H})$ che soddisfi le regole di
+		Dirac esatte sull'algebra dei polinomi; il conflitto emerge sui monomi di grado
+		$\leq 4$.
+		\item \textbf{Compatibilità con Rieffel:} la condizione di Dirac è \emph{asintotica}
+		($\hbar\to 0$), non un'uguaglianza esatta per $\hbar>0$. GvH proibisce l'uguaglianza
+		esatta; non proibisce la continuità asintotica.
+		\item \textbf{Portata della risposta:} per $\hbar>0$ fissato la quantizzazione
+		non può essere un omomorfismo esatto di algebre di Lie su tutto $C^\infty$.
+	\end{itemize}
+	
+	% ----------------------------------------------------------
+	\subsection{Qubit IV --- Condizione di Dirac su $\mathfrak{su}(2)$: Verifica Esplicita}
+	% ----------------------------------------------------------
+	
+	\fonti{Landsman, \textit{Mathematical Topics Between Classical and Quantum Mechanics},
+		Cap.~II; Rieffel, \textit{Deformation Quantization for Actions of $\mathbb{R}^d$}.}
+	
+	\begin{itemize}
+		\item \textbf{Setup e parametro di deformazione:} si pone $\hbar=1/j$ con
+		$j\in\tfrac{1}{2}\mathbb{N}$, $j\to\infty$; la fibra quantistica a spin $j$ è
+		$A_j=M_{2j+1}(\mathbb{C})$, con generatori rinormalizzati $\hat x_i=\hat J_i/j$
+		(operatori di momento angolare nella rappresentazione di spin $j$). La fibra
+		classica è $A_0=C(S^2)$ con coordinate $x_i$ e parentesi
+		$\{x_i,x_j\}=\varepsilon_{ijk}x_k$.
+		
+		\item \textbf{Calcolo del lato quantistico:} le relazioni di commutazione
+		$[\hat J_i,\hat J_j]=i\varepsilon_{ijk}\hat J_k$ danno, per i generatori
+		rinormalizzati:
+		\[
+		\frac{1}{i\hbar}[\hat x_i,\hat x_j]
+		=\frac{j}{i}[\hat J_i/j,\hat J_j/j]
+		=\frac{1}{ij}[\hat J_i,\hat J_j]
+		=\frac{\varepsilon_{ijk}\hat J_k}{j}
+		=\varepsilon_{ijk}\hat x_k.
+		\]
+		Dunque $\frac{1}{i\hbar}[\hat x_i,\hat x_j]=\varepsilon_{ijk}\hat x_k$
+		\emph{esattamente}, per ogni $j$.
+		
+		\item \textbf{Verifica della condizione di Dirac:} la mappa di quantizzazione
+		$Q_j$ invia $x_i\mapsto\hat x_i$. La condizione di Dirac del \S4.3 richiede
+		\[
+		\Bigl\|\frac{1}{i\hbar}[Q_j(x_i),Q_j(x_j)] - Q_j(\{x_i,x_j\})\Bigr\|_{A_j}
+		\;\to\; 0 \quad\text{per }j\to\infty.
+		\]
+		Il calcolo mostra che questo scarto è \emph{identicamente zero} per ogni $j$:
+		il lato sinistro è $\varepsilon_{ijk}\hat x_k$ e il lato destro è
+		$Q_j(\varepsilon_{ijk}x_k)=\varepsilon_{ijk}\hat x_k$. La condizione di Dirac
+		è soddisfatta non asintoticamente, ma esattamente --- un caso raro e strutturalmente
+		significativo, possibile perché $\mathfrak{su}(2)$ è un'algebra di Lie
+		\emph{di dimensione finita} e la quantizzazione è una sua rappresentazione.
+		
+		\item \textbf{Convergenza degli osservabili nel limite classico:}
+		gli stati coerenti di $SU(2)$ $|\theta,\phi;j\rangle$ localizzati nel punto
+		$(\theta,\phi)\in S^2$ soddisfano, per $j\to\infty$,
+		\[
+		\langle\theta,\phi;j|\,\hat x_i\,|\theta,\phi;j\rangle \;\to\; x_i(\theta,\phi),
+		\]
+		dove $x_i$ sono le coordinate di $S^2$. Il valore di aspettazione dell'operatore
+		converge alla funzione classica puntualmente su $S^2$: la fibra quantistica
+		$A_j$ converge alla fibra classica $A_0=C(S^2)$ nello spazio degli stati.
+		
+		\item \textbf{Chiusura del cerchio algebrico:} i quattro Qubit formano un
+		percorso chiuso. Il Qubit I pone la struttura di Poisson su $S^2$; il Qubit II
+		identifica $M_2(\mathbb{C})$ come $C^*$-algebra non commutativa con lo stesso
+		Lie-bracket; il Qubit III mostra che i due spazi degli stati sono la stessa
+		varietà simplettica; il Qubit IV mostra che il commutatore normalizzato
+		\emph{è} la parentesi di Poisson --- non nel limite, ma per costruzione.
+		La domanda guida della tesi trova qui la sua risposta più diretta: le strutture
+		non riemergono nel quantistico perché non se ne sono mai andate.
+	\end{itemize}
+	
+	% ============================================================
+	\newpage
+	\section*{Conclusioni}
+	\addcontentsline{toc}{section}{Conclusioni}
+	% ============================================================
+	
+	La domanda corretta non è ``perché le strutture classiche riemergono nel quantistico?''
+	ma ``perché ci aspettavamo che non ci fossero?'' Il Cap.~3 mostra che
+	$\mathbb{P}\mathcal{H}$ è una varietà simplettica kähleriana e che su di essa vivono,
+	nella loro forma originale, tutti gli oggetti del Cap.~1: la forma simplettica emerge
+	dalla decomposizione del prodotto scalare, il flusso hamiltoniano discende da Stone,
+	Noether segue per identità di Jacobi. Il Cap.~4 lo conferma analiticamente: MR e MQ
+	sono fibre dello stesso campo continuo di $C^*$-algebre, e la condizione di Dirac
+	garantisce che parentesi di Poisson e commutatore siano la stessa struttura nel senso
+	normato per $\hbar\to 0$.
+	
+	\medskip
+	
+	\textbf{Delimitazione del dominio.} La risposta è formulata rigorosamente per sistemi
+	con un numero finito di gradi di libertà. In QFT il fallimento di Stone--von Neumann
+	introduce rappresentazioni unitariamente inequivalenti e fenomeni senza analogo classico:
+	il campo continuo di Rieffel non si estende automaticamente a quel contesto. Le
+	prospettive aperte riguardano la geometria degli stati misti (metrica di Bures--Uhlmann
+	come generalizzazione di Fubini--Study), la decoerenza come meccanismo che sposta il
+	sistema verso la fibra $A_0=C_0(M)$, e i sistemi con vincoli tramite riduzione
+	simplettica.
+	
+	% ============================================================
+	\newpage
+	\section*{Appendici}
+	\addcontentsline{toc}{section}{Appendici}
+	% ============================================================
+	
+	\subsection*{Appendice A --- Complementi di $C^*$-Algebre}
+	
+	\fonti{Bratteli \& Robinson, Vol.~I; Moretti.}
+	
+	Dimostrazione dell'unicità GNS tramite costruzione esplicita dell'isomorfismo unitario
+	tra due rappresentazioni dello stesso stato (citata in \S2.2). Costruzione esplicita
+	dell'algebra di Weyl $\mathrm{CCR}(\mathbb{R}^{2n})$ per $n>1$, necessaria per \S2.3
+	e \S4.4.
+	
+	\subsection*{Appendice B --- Tabella di Corrispondenza Strutturale}
+	
+	\begin{center}
+		\renewcommand{\arraystretch}{1.35}
+		\begin{tabular}{lll}
+			\hline
+			\textbf{Struttura} & \textbf{Meccanica Razionale} & \textbf{Meccanica Quantistica} \\
+			\hline
+			Algebra delle osservabili & $C_0(M)$ (commutativa) & $B(\mathcal{H})$ (non comm.) \\
+			Lie-bracket & $\{f,g\}$ & $\tfrac{1}{i\hbar}[A,B]$ \\
+			Spazio degli stati & $(M,\omega)$ & $(\mathbb{P}\mathcal{H},\omega)$ \\
+			Osservabile come funzione & $f\in C^\infty(M)$ &
+			$f_A([\psi])=\langle\psi|\hat A|\psi\rangle/\|\psi\|^2$ \\
+			Campo hamiltoniano & $\iota_{X_f}\omega=df$ & $\iota_{X_{f_A}}\omega=df_A$ \\
+			Flusso & $\phi_t^H$ su $(M,\omega)$ &
+			$[e^{-i\hat Ht/\hbar}\psi]$ su $(\mathbb{P}\mathcal{H},\omega)$ \\
+			Conservazione (Noether) & $\{H,f\}=0$ & $[\hat H,\hat A]=0$ \\
+			Classificazione & Teorema di Gelfand & Teorema di Gelfand--Naimark \\
+			Ponte $\hbar\to 0$ & --- & Condizione di Dirac (Rieffel) \\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+\end{document}

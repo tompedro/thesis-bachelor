@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "c8b5c7dbd250561b",
+    "type": "split",
+    "children": [
+      {
+        "id": "fec9acfb6eef52a4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be66eaad12f54629",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "capitoli/cap1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "cap1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e8ce1f2fac41dccb",
+    "type": "split",
+    "children": [
+      {
+        "id": "17380149eda4e16c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5e3482fcdec4638",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Esplora risorse"
+            }
+          },
+          {
+            "id": "cef636a7ce6a2488",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Ricerca"
+            }
+          },
+          {
+            "id": "f70a251b66be90af",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Segnalibri"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fd08aebf3d0e18ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "6ff123b7129a4baf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9dff96906f39e25e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Riferimenti"
+            }
+          },
+          {
+            "id": "ae6e402b75571b58",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "capitoli/CLAUDE.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Collegamenti in uscita da CLAUDE"
+            }
+          },
+          {
+            "id": "f1cef5f2d1d29c3a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etichette"
+            }
+          },
+          {
+            "id": "b3b6e884a595c0d0",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Tutte le proprietà"
+            }
+          },
+          {
+            "id": "95013d7831806a7f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "capitoli/CLAUDE.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Struttura di CLAUDE"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Apri selezione rapida": false,
+      "graph:Apri vista grafo": false,
+      "canvas:Crea nuova lavagna": false,
+      "daily-notes:Apri nota del giorno": false,
+      "templates:Inserisci modello": false,
+      "command-palette:Apri riquadro comandi": false,
+      "bases:Crea nuova Base": false
+    }
+  },
+  "active": "be66eaad12f54629",
+  "lastOpenFiles": [
+    "latex/appunti_relatore.synctex(busy)",
+    "concetti/lie_algebra.md",
+    "letteratura/humphreysIntroductionLieAlgebras2010.md",
+    "latex/appunti_relatore.bbl",
+    "latex/appunti_relatore.blg",
+    "latex/appunti_relatore.synctex.gz",
+    "latex/appunti_relatore.run.xml",
+    "latex/appunti_relatore.pdf",
+    "latex/appunti_relatore.out",
+    "latex/appunti_relatore.bcf",
+    "latex/appunti_relatore.aux",
+    "latex/appunti_relatore.log",
+    "concetti/c_star_algebra.md",
+    "concetti/poisson_brackets.md",
+    "capitoli/cap2.md",
+    "capitoli/cap1.md",
+    "letteratura/bratteliOperatorAlgebrasQuantum.md",
+    "concetti/gelfand_theorem.md",
+    "concetti/geometry_of_states_bridge.md",
+    "capitoli/cap4.md",
+    "capitoli/cap3.md",
+    "_contesto/CLAUDE.md",
+    "concetti/symplectic_geometry.md",
+    "concetti/weyl_algebra.md",
+    "concetti/uncertainty_relations.md",
+    "concetti/stone_theorem.md",
+    "concetti/projective_hilbert_space.md",
+    "concetti/noether_theorem_classical.md",
+    "concetti/kahler_geometry.md",
+    "concetti/gns_construction.md",
+    "concetti/gelfand_naimark_theorem.md",
+    "concetti/noether_theorem_quantum.md",
+    "concetti/schrodinger_hamiltonian_flow.md",
+    "concetti/strocchi_operational_approach.md",
+    "latex/unipv_logo_new.jpg",
+    "letteratura/cirelliQuantumMechanicsInfinitedimensional1990a.md",
+    "Senza nome.canvas"
+  ]
+}

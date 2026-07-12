@@ -1,0 +1,26 @@
+\input{preambolo_main}
+
+\begin{document}
+
+\frontmatter
+\include{frontespizio}
+\tableofcontents
+
+% --- da qui in poi: margini stretti e corpo 10pt ("preambolo nuovo") ---
+% Frontespizio e indice sopra restano con i margini/12pt originali,
+% perché geometry non è ancora stata attivata (nessuna opzione al caricamento).
+\newgeometry{margin=2cm}
+\fontsize{10}{12}\selectfont
+
+\mainmatter
+\include{incipit}
+\include{cap1}
+\include{cap2}
+\include{cap3}
+\include{cap4}
+\include{conclusioni}
+
+\backmatter
+\printbibliography
+
+\end{document}

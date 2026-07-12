@@ -1,0 +1,75 @@
+\documentclass[12pt,a4paper,oneside,openany]{book}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage[charter]{mathdesign}
+\usepackage{amsmath}
+\usepackage{lipsum}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{bib.bib}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\newcommand{\poisson}[2]{\{#1,#2\}}
+% ============================================================
+% Comandi Matematici
+% ============================================================
+
+% --- Insiemi numerici ---
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+
+% --- Spazio di Hilbert e spazio proiettivo ---
+% ATTENZIONE: \H è già un comando di LaTeX (accento ungherese, es. \H{o}=ő).
+% Il renewcommand lo sovrascrive: nella tesi non ti servirà mai quell'accento,
+% quindi è sicuro, ma se preferisci non toccare comandi di sistema usa \Hil
+% al posto di \H ovunque sotto.
+\renewcommand{\H}{\mathcal{H}}
+\newcommand{\PH}{\mathbb{P}\H}                    % P H, spazio proiettivo
+
+% --- Algebre C* ---
+\newcommand{\Cstar}{C^*}                          % da usare in math mode: $\Cstar$
+\newcommand{\Csalg}{$C^*$-algebra}                % da usare nel testo: "è una \Csalg\ commutativa"
+\newcommand{\Csalgs}{$C^*$-algebre}               % plurale
+\newcommand{\BH}{B(\H)}                           % operatori limitati su H
+\newcommand{\Cz}[1]{C_0(#1)}                      % C_0(M)
+\newcommand{\Cinf}[1]{C^\infty(#1)}               % C^infty(M)
+\newcommand{\Cinfc}[1]{C^\infty_c(#1)}            % C^infty_c(M)
+\newcommand{\Mat}[2]{M_{#1}(#2)}                  % M_n(C), es. \Mat{2}{\C}
+
+% --- Algebre di Lie (fraktur generico) ---
+\newcommand{\mf}[1]{\mathfrak{#1}}                % \mf{g}, \mf{su}(2), \mf{u}(n), \mf{X}(M)
+
+\newcommand{\qcomm}[2]{\dfrac{1}{i\hbar}[#1,#2]}  % (1/ih)[A,B]  -- condizione di Dirac, Qubit IV
+
+% --- Notazione bra-ket ---
+\newcommand{\melem}[3]{\langle#1|#2|#3\rangle}    % elemento di matrice <psi|A|psi>
+\newcommand{\expect}[2]{\langle#1\rangle_{#2}}    % <A>_psi
+
+% --- Campo vettoriale hamiltoniano ---
+\newcommand{\Ham}[1]{X_{#1}}                      % \Ham{f}, \Ham{f_H}, \Ham{f_A}
+
+% --- Simboli e operatori vari ---
+\newcommand{\Id}{\mathrm{Id}}
+\renewcommand{\Re}{\mathrm{Re}}                   % la tesi usa Re/Im in tondo, non ℜ/ℑ
+\renewcommand{\Im}{\mathrm{Im}}
+\newcommand{\LC}{\varepsilon_{ijk}}               % simbolo di Levi-Civita (indici fissi ijk)

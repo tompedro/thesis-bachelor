@@ -1,0 +1,49 @@
+\contentsline {part}{Parte I: Il Lato Classico}{5}{part*.1}%
+\contentsline {section}{\numberline {1}Varietà Simplettiche e Spazio delle Fasi}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Geometria Simplettica}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Simplettomorfismi e Invarianza della Struttura}{6}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Parentesi di Poisson e Algebra delle Osservabili}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}$C^\infty (M)$ come Algebra di Lie}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Campi Hamiltoniani e Flusso di Poisson}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Qubit I: $S^2$ come Spazio delle Fasi dello Spin Classico}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Flusso Hamiltoniano e Teorema di Noether}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Gruppi di Lie e Azioni Simplettiche}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Mappa Momento e Teorema di Noether}{8}{subsection.3.2}%
+\contentsline {part}{Parte II: Il Quadro Algebrico}{9}{part*.2}%
+\contentsline {section}{\numberline {4}$C^*$-Algebre: Struttura Comune di MR e MQ}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Definizione Assiomatica}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}MR come $C^*$-Algebra Commutativa: Teorema di Gelfand}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}MQ come $C^*$-Algebra Non Commutativa: Teorema di Gelfand--Naimark}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Teorema GNS: lo Spazio di Hilbert come Conseguenza}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Qubit II: $M_2(\mathbb {C})$ come $C^*$-Algebra}{11}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Wintner--Wielandt e Algebra di Weyl}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Il Problema delle CCR}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Teorema di Wintner--Wielandt}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Algebra di Weyl come Soluzione}{12}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Il Lie-Bracket come Struttura Interna}{13}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Strict Deformation Quantization (Rieffel)}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Introduzione: il Parametro $\hbar $}{14}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Perché la Deformazione Formale Non Basta}{14}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Definizione di Rieffel e Condizione di Dirac}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Esempio: Quantizzazione di Weyl su $\mathbb {R}^2$}{15}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Qubit III: Famiglia $A_\hbar $ che Interpola $C(S^2) \to M_2(\mathbb {C})$}{15}{subsection.6.5}%
+\contentsline {part}{Parte III: Le Risposte}{16}{part*.3}%
+\contentsline {section}{\numberline {7}La Corrispondenza Classico-Quantistica: Tre Livelli}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Livello 1 --- Corrispondenza come Continuità}{17}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Livello 2 --- Ostacolo di Groenewold--van Hove}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Livello 3 --- Il Lie-Bracket è Intrinseco}{17}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Qubit IV: Calcolo Esplicito}{18}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Evoluzione Unitaria e Flusso Hamiltoniano}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Stone--von Neumann e Unicità della Rappresentazione}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Teorema di Stone: Equazione di Schrödinger come Flusso}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Qubit V: Precessione di Larmor}{19}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Geometria Simplettica dello Spazio degli Stati}{21}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Cornice Esplicita: dal Lato delle Osservabili a Quello degli Stati}{21}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Decomposizione del Prodotto Scalare}{21}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Equazione di Schrödinger come Equazione Hamiltoniana}{22}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Qubit VI: $\mathbb {C}^2$ in Coordinate Reali}{22}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Noether, Taglio di Heisenberg e Risposta Sintetica}{23}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Teorema di Noether Quantistico}{23}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Il Taglio di Heisenberg nel Linguaggio di Rieffel}{23}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Risposta Sintetica alla Domanda della Tesi}{23}{subsection.10.3}%
+\contentsline {section}{Appendici}{25}{subsection.10.3}%

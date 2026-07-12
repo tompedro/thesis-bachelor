@@ -1,0 +1,26 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "BibTEX",
+      "format": "biblatex",
+      "command": "autocite"
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Estrazione Tesi",
+      "outputPathTemplate": "letteratura/{{citekey}}.md",
+      "imageOutputPathTemplate": "letteratura/assets/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "Zotero Template.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note"
+}
