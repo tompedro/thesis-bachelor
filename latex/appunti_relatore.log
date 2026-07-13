@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  12 JUL 2026 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  13 JUL 2026 08:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,6 +1110,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip82
 )
 \c@theorem=\count449
+\c@definition=\count450
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1155,16 +1156,16 @@ LaTeX Font Info:    ... okay on input line 3.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count450
+\scratchcounter=\count451
 \scratchdimen=\dimen283
 \scratchbox=\box65
-\nofMPsegments=\count451
-\nofMParguments=\count452
+\nofMPsegments=\count452
+\nofMParguments=\count453
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count453
+\MPscratchCnt=\count454
 \MPscratchDim=\dimen284
-\MPnumerator=\count454
-\makeMPintoPDFobject=\count455
+\MPnumerator=\count455
+\makeMPintoPDFobject=\count456
 \everyMPtoPDFconversion=\toks48
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1261,7 +1262,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count456
+\c@section@level=\count457
 )
 LaTeX Info: Redefining \ref on input line 3.
 LaTeX Info: Redefining \pageref on input line 3.
@@ -1360,19 +1361,6 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 44.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 44.
-
-Overfull \hbox (15.6462pt too wide) in paragraph at lines 44--45
-[][]\T1/mdbch/m/it/10.95 Remark \T1/mdbch/m/n/10.95 1.6\T1/mdbch/m/it/10.95 . [
-]\T1/mdbch/m/n/10.95 Equiv-a-lently, a curve $\OML/mdbch/m/it/10.95 ^^M \OT1/md
-bch/m/n/10.95 : (\OMS/mdbch/m/n/10.95 ^^@\OML/mdbch/m/it/10.95 "; "\OT1/mdbch/m
-/n/10.95 ) \OMS/mdbch/m/n/10.95 ! \OML/mdbch/m/it/10.95 M$ \T1/mdbch/m/n/10.95 
-with $\OML/mdbch/m/it/10.95 ^^M\OT1/mdbch/m/n/10.95 (0) = \OML/mdbch/m/it/10.95
- p$ \T1/mdbch/m/n/10.95 in-duces the deriva-tion $\OML/mdbch/m/it/10.95 v[]\OT1
-/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 f\OT1/mdbch/m/n/10.95 ) := [][][]\OML/m
-dbch/m/it/10.95 f\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 ^^M\OT1/mdbch/m/n/
-10.95 (\OML/mdbch/m/it/10.95 t\OT1/mdbch/m/n/10.95 ))$\T1/mdbch/m/n/10.95 ,
- []
-
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
 (Font)              scaled to size 10.5886pt on input line 67.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
@@ -1381,6 +1369,7 @@ LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
 (Font)              scaled to size 5.80197pt on input line 67.
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
 (Font)              scaled to size 10.51207pt on input line 68.
+
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -1417,70 +1406,71 @@ dbch/m/n/10.95 ]\OML/mdbch/m/it/10.95 ; a\OT1/mdbch/m/n/10.95 ] \OMS/mdbch/m/n/
  []
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 184.
+(Font)              scaled to size 11.52008pt on input line 182.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 184.
+(Font)              scaled to size 11.52008pt on input line 182.
+[3]
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
+(Font)              scaled to size 5.76004pt on input line 186.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 187.
+(Font)              scaled to size 10.51207pt on input line 186.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 187.
+(Font)              scaled to size 7.68005pt on input line 186.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 187.
-[3] [4] [5]
+(Font)              scaled to size 5.76004pt on input line 186.
+ [4] [5]
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 345.
+ 350.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 345.
+(Font)              scaled to size 10.51207pt on input line 350.
 
 [6] [7] [8] [9] [10]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 572.
+(Font)              scaled to size 23.88496pt on input line 586.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 572.
+(Font)              scaled to size 23.88496pt on input line 586.
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 572.
+(Font)              scaled to size 10.51207pt on input line 586.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 572.
+(Font)              scaled to size 11.73846pt on input line 586.
  [11
 
 ] (./appunti_relatore.aux)
@@ -1491,11 +1481,11 @@ Package logreq Info: Writing requests to 'appunti_relatore.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33565 strings out of 478268
- 637572 string characters out of 5846347
- 1422770 words of memory out of 5000000
- 51118 multiletter control sequences out of 15000+600000
- 537284 words of font info for 129 fonts, out of 8000000 for 9000
+ 33581 strings out of 478268
+ 638060 string characters out of 5846347
+ 1423712 words of memory out of 5000000
+ 51135 multiletter control sequences out of 15000+600000
+ 537034 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,15n,106p,889b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -1516,7 +1506,7 @@ sign/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /mathdesign/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
 /public/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/cm-super/sftt1095.pfb>
-Output written on appunti_relatore.pdf (11 pages, 185079 bytes).
+Output written on appunti_relatore.pdf (11 pages, 185602 bytes).
 PDF statistics:
  272 PDF objects out of 1000 (max. 8388607)
  226 compressed objects within 3 object streams

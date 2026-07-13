@@ -4,36 +4,36 @@
 
 \section{A Brief Introduction to Differential Geometry}
 
-We can start by giving the most basic definitions that will be used throughout all the thesis. One of the most important one is the smooth manifold, but first we need to understand what a manifold is and why it is so important in physics.
-\begin{definition}[Topological manifold]
-	A topological manifold of dimension $n$ is a topological space $M$ that is Hausdorff, second countable, and locally Euclidean of dimension $n$: every point $p \in M$ has an open neighborhood homeomorphic to an open subset of $\mathbb{R}^n$. \cite{abrahamFoundationsMechanics2008}
+We can start by giving the most basic definitions that will be used throughout all the thesis. One of the most important is the smooth manifold, to get to that, first we need to understand what a manifold is and why it is so important in physics.
+\begin{definition}[Topological manifold]\label{def:top-man}
+	A topological manifold of dimension $n$ is a topological space $M$ that is Hausdorff, second countable, and locally Euclidean of dimension $n$: every point $p \in M$ has an open neighborhood homeomorphic to an open subset of $\R^n$. \cite{abrahamFoundationsMechanics2008}
 \end{definition}
 
-\begin{definition}[Chart, atlas]
-	A chart on $M$ is a pair $(U,\varphi)$, with $U \subseteq M$ open and $\varphi: U \to \varphi(U) \subseteq \mathbb{R}^n$ a bijection onto an open subset. Two charts $(U,\varphi)$, $(V,\psi)$ are $C^\infty$-compatible if the transition map
+\begin{definition}[Chart, atlas]\label{def:chart-atlas}
+	A chart on $M$ is a pair $(U,\varphi)$, with $U \subseteq M$ open and $\varphi: U \to \varphi(U) \subseteq \R^n$ a bijection onto an open subset. Two charts $(U,\varphi)$, $(V,\psi)$ are $C^\infty$-compatible if the transition map
 	\[
 	\psi \circ \varphi^{-1} : \varphi(U \cap V) \to \psi(U \cap V)
 	\]
-	is a $C^\infty$-diffeomorphism whenever $U \cap V \neq \emptyset$. An atlas is a collection of pairwise compatible charts covering $M$. The union of all the atlases on M is the maximal atlas.
+	is a $C^\infty$-diffeomorphism whenever $U \cap V \neq \emptyset$. An atlas is a collection of pairwise compatible charts covering $M$. The union of all the atlases compatible with a particular atlas on M is called the maximal atlas.
 \end{definition}
 
-\begin{definition}[Smooth manifold]
+\begin{definition}[Smooth manifold]\label{def:smooth-man}
 	A smooth manifold is a pair $(M,\mathcal{A})$, where $M$ is a topological manifold and $\mathcal{A}$ is a maximal atlas on $M$ (the smooth structure). We write $\dim M = n$.
 \end{definition}
 
-\begin{definition}[Smooth map, diffeomorphism]
+\begin{definition}[Smooth map, diffeomorphism]\label{def:diffeo}
 	Let $M^m$, $N^n$ be smooth manifolds. A map $f: M \to N$ is smooth at $p \in M$ if there exist charts $(U,\varphi)$ around $p$ and $(V,\psi)$ around $f(p)$, with $f(U) \subseteq V$, such that
 	\[
 	\psi \circ f \circ \varphi^{-1} : \varphi(U) \to \psi(V)
 	\]
-	is $C^\infty$ in the usual sense on $\mathbb{R}^m$. $f$ is smooth if smooth at every point. $f$ is a diffeomorphism if it is a smooth bijection with smooth inverse. We write $C^\infty(M) := C^\infty(M,\mathbb{R})$.
+	is $C^\infty$ in the usual sense on $\R^m$. $f$ is smooth if smooth at every point. $f$ is a diffeomorphism if it is a smooth bijection with smooth inverse. We write $C^\infty(M) := C^\infty(M,\R)$.
 \end{definition}
 \medspace
 
-The concept of manifold itself doesn't carry a vector space structure. Despite that we can always fix a point and define a tangent vector as an object with the same properties as a derivation. This creates a vector space at every point of M called \textit{tangent space}.
+The concept of manifold itself doesn't carry a vector space structure. Despite that, we can always fix a point and define a tangent vector as an object with the same properties as a derivation. This creates a vector space at every point of M called \textit{tangent space}.
 
-\begin{definition}[Tangent vector, tangent space]
-	Fix $p \in M$. A tangent vector at $p$ is a linear map $v : C^\infty(M) \to \mathbb{R}$ satisfying the Leibniz rule
+\begin{definition}[Tangent vector, tangent space]\label{def:tan-space}
+	Fix $p \in M$. A tangent vector at $p$ is a linear map $v : C^\infty(M) \to \R$ satisfying the Leibniz rule
 	\[
 	v(fg) = f(p)\,v(g) + g(p)\,v(f), \qquad f,g \in C^\infty(M).
 	\]
@@ -41,12 +41,12 @@ The concept of manifold itself doesn't carry a vector space structure. Despite t
 \end{definition}
 
 \begin{remark}
-	Equivalently, a curve $\gamma:(-\varepsilon,\varepsilon)\to M$ with $\gamma(0)=p$ induces the derivation $v_\gamma(f) := \frac{d}{dt}\Big|_{t=0} f(\gamma(t))$, and every $v \in T_pM$ can be derived in this way. It can be proved that two curves induce the same tangent vector iff their local representatives agree to first order at $p$; this equivalent identification $T_pM \cong \{\text{curves through } p\}/\!\sim$ is used later (e.g.\ for the flows $\phi^H_t$).
+	Equivalently, a curve $\gamma:(-\varepsilon,\varepsilon)\to M$ with $\gamma(0)=p$ induces the derivation $v_\gamma(f) := \frac{d}{dt}\Big|_{t=0} f(\gamma(t))$, and every $v \in T_pM$ can be derived in this way. It can be proved that two curves induce the same tangent vector iff their local representatives agree to first order at $p$; this equivalent identification $T_pM \cong \{\text{curves through } p\}/\!\sim$ is used later.
 \end{remark}
 
-Sometimes it is convenient to switch to a notation more explicit than the global description really implicit used most of the times, for that we can write our objects on manifolds in coordinates.
+Most of the times it is convenient to write statements locally on a specific chart. This permits one to use the rules of calculus on manifolds in order to compute more easily.
 
-\begin{definition}[Coordinate basis]
+\begin{definition}[Coordinate basis]\label{def:coord}
 	Given a chart $(U,\varphi=(x^1,\dots,x^n))$ around $p$, the vectors
 	\[
 	\frac{\partial}{\partial x^i}\bigg|_p \in T_pM, \qquad
@@ -55,7 +55,7 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	form a basis of $T_pM$; hence $\dim T_pM = n$, and $v = v^i\, \partial_i |_p$ (using the Einstein summation notation).
 \end{definition}
 
-\begin{definition}[Tangent bundle]
+\begin{definition}[Tangent bundle]\label{def:tan-bundle}
 	The tangent bundle of $M$ is
 	\[
 	TM := \bigsqcup_{p \in M} T_pM,
@@ -63,11 +63,11 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	with projection $\pi: TM \to M$, $\pi(v) = p$ for $v \in T_pM$. A chart $(U,\varphi=(x^1,\dots,x^n))$ on $M$ induces a chart on $\pi^{-1}(U)$ via $v = v^i \partial_i|_p \mapsto (x^1(p),\dots,x^n(p),v^1,\dots,v^n)$, giving $TM$ a smooth structure of dimension $2n$ and making $\pi: TM \to M$ a rank-$n$ vector bundle.
 \end{definition}
 
-\begin{definition}[Vector field]
-	A vector field on $M$ is a called a smooth section of $\pi: TM \to M$, if it is a smooth map $X: M \to TM$ with $\pi \circ X = \mathrm{id}_M$; equivalently, $p \mapsto X_p \in T_pM$ smooth in $p$. Equivalently again, $X$ is a derivation of the $\mathbb{R}$-algebra $C^\infty(M)$: linear, with $X(fg) = f\,X(g) + g\,X(f)$. We denote by $\mathfrak{X}(M)$ the $C^\infty(M)$-module of vector fields on $M$.
+\begin{definition}[Vector field]\label{def:vector-field}
+	A vector field on $M$ is called a smooth section of $\pi: TM \to M$, if it is a smooth map $X: M \to TM$ with $\pi \circ X = \mathrm{id}_M$; equivalently, $p \mapsto X_p \in T_pM$ smooth in $p$. Equivalently again, $X$ is a derivation of the $\R$-algebra $C^\infty(M)$: linear, with $X(fg) = f\,X(g) + g\,X(f)$. We denote by $\mathfrak{X}(M)$ the $C^\infty(M)$-module (because $C^\infty(M)$ functions are not a field) of vector fields on $M$.
 \end{definition}
 
-\begin{definition}[Cotangent space]
+\begin{definition}[Cotangent space]\label{def:cot-space}
 	The cotangent space at $p$ is the dual vector space $T_p^*M := (T_pM)^*$. For $f \in C^\infty(M)$, its differential at $p$ is the covector
 	\[
 	df_p \in T_p^*M, \qquad df_p(v) := v(f), \quad v \in T_pM.
@@ -75,7 +75,7 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	In the coordinate basis, $\{dx^1|_p,\dots,dx^n|_p\}$ is dual to $\{\partial/\partial x^i|_p\}$, and $df_p = \frac{\partial f}{\partial x^i}\Big|_p\, dx^i|_p$.
 \end{definition}
 
-\begin{definition}[Cotangent bundle]
+\begin{definition}[Cotangent bundle]\label{def:cot-bundle}
 	The cotangent bundle is
 	\[
 	T^*M := \bigsqcup_{p \in M} T_p^*M,
@@ -83,7 +83,7 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	with projection $\pi: T^*M \to M$ and the induced smooth structure of dimension $2n$ (local coordinates $(x^i,p_i)$), making $T^*M \to M$ a rank-$n$ vector bundle. A smooth section $\alpha: M \to T^*M$ is a differential $1$-form; the space of $1$-forms is $\Omega^1(M)$.
 \end{definition}
 
-\begin{definition}[Pushforward / Differential]
+\begin{definition}[Pushforward / Differential]\label{def:pushforward}
 	Let $F: M \to N$ be a smooth map between smooth manifolds. For each point $p \in M$, the \textit{pushforward} (or \textit{differential}) of $F$ at $p$ is the linear map 
 	\[
 	F_*: T_pM \to T_{F(p)}N
@@ -99,7 +99,7 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	The pushforward map is also frequently denoted by $dF_p$.
 \end{definition}
 
-\begin{definition}[Pullback]
+\begin{definition}[Pullback]\label{def:pullback}
 	Let $F: M \to N$ be a smooth map between smooth manifolds. The \textit{pullback} operator $F^*$ is defined on different classes of fields as follows:
 	\begin{enumerate}
 		\item \textbf{Smooth Functions:} For any smooth function $f \in C^\infty(N)$, the pullback $F^*f \in C^\infty(M)$ is defined by precomposition:
@@ -119,12 +119,12 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 	\end{enumerate}
 \end{definition}
 
-\begin{definition}[Flow of a Vector Field]
-	Let $X$ be a smooth vector field on a smooth manifold $M$. An \textit{integral curve} of $X$ is a smooth curve $\gamma: I \to M$, where $I \subset \mathbb{R}$ is an open interval, such that $\gamma'(t) = X(\gamma(t))$ for all $t \in I$.
+\begin{definition}[Flow of a Vector Field]\label{def:flow}
+	Let $X$ be a smooth vector field on a smooth manifold $M$. An \textit{integral curve} of $X$ is a smooth curve $\gamma: I \to M$, where $I \subset \R$ is an open interval, such that $\gamma'(t) = X(\gamma(t))$ for all $t \in I$.
 	
-	The \textit{local flow} (or simply \textit{flow}) of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \mathbb{R} \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties:
+	The \textit{local flow} (or simply \textit{flow}) of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \R \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties:
 	\begin{enumerate}
-		\item For each $p \in M$, the slice $\mathcal{D}^{(p)} = \{t \in \mathbb{R} : (t, p) \in \mathcal{D}\}$ is an open interval containing $0$, and the curve $\theta^{(p)}: \mathcal{D}^{(p)} \to M$ defined by $\theta^{(p)}(t) = \theta(t, p)$ is the unique maximal integral curve of $X$ satisfying the initial condition $\theta(0, p) = p$. That is,
+		\item For each $p \in M$, the slice $\mathcal{D}^{(p)} = \{t \in \R : (t, p) \in \mathcal{D}\}$ is an open interval containing $0$, and the curve $\theta^{(p)}: \mathcal{D}^{(p)} \to M$ defined by $\theta^{(p)}(t) = \theta(t, p)$ is the unique maximal integral curve of $X$ satisfying the initial condition $\theta(0, p) = p$. That is,
 		\[
 		\frac{\partial \theta}{\partial t}(t, p) = X(\theta(t, p)).
 		\]
@@ -133,12 +133,12 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 		\theta_t(\theta_s(p)) = \theta_{t+s}(p).
 		\]
 	\end{enumerate}
-	If $\mathcal{D} = \mathbb{R} \times M$, the vector field $X$ is called \textit{complete}, and the maps $\theta_t: M \to M$ constitute a global one-parameter group of diffeomorphisms.
+	If $\mathcal{D} = \R \times M$, the vector field $X$ is called \textit{complete}, and the maps $\theta_t: M \to M$ constitute a global one-parameter group of diffeomorphisms.
 \end{definition}
 
 \section{Lie Algebras and Representations}
 \textit{In this chapter, $\K$ denotes an arbitrary commutative field.}
-
+\newline Having introduced vector fields and their flows, we now turn to the algebraic structure that governs their commutators: Lie algebras.
 \begin{definition}[Lie algebra]\label{def:lie-algebra}
 	A \emph{Lie algebra} over $\mathbb{K}$ is a $\mathbb{K}$-vector space $\mathfrak{g}$ equipped with a bilinear map $[\cdot,\cdot]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ satisfying
 	\begin{align}
@@ -150,7 +150,7 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 
 \begin{remark}
 	Every associative algebra $(\mathcal{A},\cdot)$ carries a canonical Lie algebra
-	structure via the commutator $[a,b]:=ab-ba$. It satisfy trivially the antisymmetry and Jacobi identity via:
+	structure via the commutator $[a,b]:=ab-ba$. It satisfies trivially the antisymmetry and Jacobi identity via:
 	\[
 		[[a,b],c] = (abc - bac) - c(ab - ba) = abc - bac - cab + cba + bca - bca + acb - acb = -[[b,c],a] - [[c,a],b].
 	\]
@@ -162,13 +162,11 @@ Sometimes it is convenient to switch to a notation more explicit than the global
 \end{example}
 
 \begin{example}\label{ex:su-n}
-	Another example is $\mathfrak{su}(n)$. It consist of the $M(n, \C)$ matrices which are traceless and anti-hermitian, this makes the dimension of the resulting Lie algebra $n^2 -1$. In two dimensions, the basis of $\mathfrak{su}(2)$, consists of the Pauli operators $\sigma_i$ which $i = x,y,z$ which are used for representing the spin of a fermion in quantum physics. In three dimensions, the basis is formed by the eight Gell-Mann matrices $\lambda_a$ used in quantum chromodynamics.
+	Another example is $\mathfrak{su}(n)$. It consist of the $M(n, \C)$ matrices which are traceless and anti-hermitian, this makes the dimension of the resulting Lie algebra $n^2 -1$. In two dimensions, the basis of $\mathfrak{su}(2)$ is $\{-i\sigma_j/2\}_{j=x,y,z}$, where $\sigma_j$ are the Pauli operators which are used for representing the spin of a fermion in quantum physics. Instead, in three dimensions, the basis is formed by the eight Gell-Mann matrices $\lambda_a$ used in quantum chromodynamics.
 \end{example}
 
-Now, let us recall some basic concepts and fundamentals in the Lie theory. 
-In general, an \textit{homomorphism} is an application between the same mathematical structures that preserves the inner operations. When, in particular, the structure is a Lie algebra we can use the following definition.
-
-%So, in the particular case in which we are working on, we can use the following definition.
+Let us now recall some basic concepts of Lie theory.
+In general, a \textit{homomorphism} is a map between the same mathematical structures that preserves the inner operations. In particular, when the structure is a Lie algebra we can use the following definition.
 
 \begin{definition}[Homomorphism of Lie Algebras]\label{def:lie-homo}
 Let \(\mathfrak{g}\) and \(\mathfrak{h}\) be Lie algebras over the same field $\K$. A linear map \(\phi: \mathfrak{g} \rightarrow \mathfrak{h}\) is a Lie algebra homomorphism if it preserves the Lie bracket:
@@ -182,20 +180,21 @@ Let \(\mathfrak{g}\) and \(\mathfrak{h}\) be Lie algebras over the same field $\
 \end{definition}
 
 \subsection{Lie Groups}
+We can now imagine that a Lie algebra, being a vector space, could be a tangent space of a particular manifold. Turns out that this manifold, to guarantee that its tangent space behaves like a Lie algebra, has to be compatible with the group operations. 
 
 \begin{definition}[Lie Group]\label{def:lie-group}
-	A Lie Groups is a smooth manifold G together with a smooth map from $G \cross G \to G$ that makes G into a group and such that the inverse map $g \to g^{-1}$ is a smooth map $G \to G$.
+	A Lie group is a smooth manifold G together with a smooth map from $G \cross G \to G$ that makes G into a group and such that the inverse map $g \mapsto g^{-1}$ is a smooth map $G \to G$.
 \end{definition}
 
 Also in this case we can specialize the definition of homomorphism in the case of Lie groups.
 
 \begin{definition}[Homomorphism of Lie Groups]\label{def:lie-grhomo}
-	A map $F: G \to H$ where G and H are Lie groups is called an homomorphism if it is a smooth map and an homomorphism between groups.
+	A map $F: G \to H$ where G and H are Lie groups is called a homomorphism if it is a smooth map and a homomorphism between groups.
 \end{definition}
 
-Let's look now at the tangent space of a Lie group. We can define an operation $L_g : G \to G$ by $L_g(h) = g \circ h$ called the \textit{"left multiplication"} which is smooth. So the differential $dL_g$ at the point $h$ will be a linear map from $T_h(G)$ to $T_{gh}(G)$.
+Consider the tangent space of a Lie group. We can define an operation $L_g : G \to G$ by $L_g(h) = gh$ called the \textit{"left multiplication"} which is smooth. So the differential $dL_g$ at the point $h$ will be a linear map from $T_h(G)$ to $T_{gh}(G)$.
 
-Now we can take a vector field X on G, and that is called \textit{left-invariant} if
+Given a vector field X on G, that is called \textit{left-invariant} if
 \[
 	dL_g (X_h) = X_{gh} \qquad \forall h \in G.
 \]
@@ -204,7 +203,7 @@ It is also true that for any given vector $v \in T_e(G)$ there is a unique left-
 	X^v_g = dL_g (X^v_e) = dL_g(v),
 \]
 it can be shown easily that is left-invariant.
-Recall that if we think of vector fields as first-order differential operators, then the commutator of two vector fields is, again, a vector field. It is not difficult to show that the commutator of two left-invariant vector fields is, again, a left-invariant vector field.
+Recall that if we think of vector fields as first-order differential operator, then the commutator of two vector fields is, again, a vector field. It is not difficult to show that the commutator of two left-invariant vector fields is, again, a left-invariant vector field.
 
 \begin{definition}[Lie algebra of a Lie group]\label{def:lie-gralg}
 	The Lie algebra $\mathfrak{g}$ of a Lie group G is the tangent space at the identity with the bracket operation defined by
@@ -216,16 +215,18 @@ Recall that if we think of vector fields as first-order differential operators, 
 We now show that every left-invariant vector field is complete, so that it integrates to a global flow.
 
 \begin{proposition}[Completeness of left-invariant vector fields]\label{prop:complete}
-	Let $X^v \in \mathfrak{X}(G)$ be the left-invariant vector field associated to $v \in \mathfrak{g} = T_eG$. Then $X^v$ is complete: its maximal integral curve through $e$ is defined for all $t \in \mathbb{R}$.
+	Let $X^v \in \mathfrak{X}(G)$ be the left-invariant vector field associated to $v \in \mathfrak{g} = T_eG$. Then $X^v$ is complete: its maximal integral curve through $e$ is defined for all $t \in \R$.
 \end{proposition}
 
 \begin{proposition}[One-parameter subgroup]\label{prop:one-param}
-	Let $\gamma_v:\mathbb{R}\to G$ be the integral curve of $X^v$ through $e$. Then
+	Let $\gamma_v:\R\to G$ be the integral curve of $X^v$ through $e$. Then
 	\[
-	\gamma_v(t+s) = \gamma_v(t)\,\gamma_v(s) \qquad \forall\, t,s \in \mathbb{R},
+	\gamma_v(t+s) = \gamma_v(t)\,\gamma_v(s) \qquad \forall\, t,s \in \R,
 	\]
-	$\gamma_v$ is a Lie group homomorphism $\mathbb{R} \to G$ (a \emph{one-parameter subgroup}).
+	$\gamma_v$ is a Lie group homomorphism $\R \to G$ (a \emph{one-parameter subgroup}).
 \end{proposition}
+
+This concepts could be used to create a map that connects a Lie algebra with its associated Lie group. The most used is the exponential map, defined as following.
 
 \begin{definition}[Exponential map]\label{def:exp}
 	The exponential map of $G$ is
@@ -237,7 +238,7 @@ We now show that every left-invariant vector field is complete, so that it integ
 \begin{proposition}[Basic properties of $\exp$]\label{prop:exp-props}
 	It can be shown that
 	\begin{enumerate}
-		\item $\exp(tv) = \gamma_v(t)$ for all $t\in\mathbb{R}$ (from $\gamma_{tv}(s)=\gamma_v(ts)$).
+		\item $\exp(tv) = \gamma_v(t)$ for all $t\in\R$ (from $\gamma_{tv}(s)=\gamma_v(ts)$).
 		\item $\exp(0)=e$ and $d(\exp)_0 = \mathrm{id}_{\mathfrak g}$; by the inverse function theorem $\exp$ restricts to a diffeomorphism from a neighborhood of $0\in\mathfrak g$ onto a neighborhood of $e\in G$.
 		\item Naturality: if $F:G\to H$ is a homomorphism of Lie groups with differential $dF_e:\mathfrak g\to\mathfrak h$, then
 		\[
@@ -247,13 +248,13 @@ We now show that every left-invariant vector field is complete, so that it integ
 \end{proposition}
 
 \begin{remark}
-	Global surjectivity of $\exp$ is not automatic in general (fails e.g.\ for $SL(2,\mathbb{R})$), but holds for $G$ compact and connected — which covers every group used in this thesis ($SU(2)$, $U(n)$).
+	Global surjectivity of $\exp$ is not automatic in general (fails e.g.\ for $SL(2,\R)$), but holds for $G$ compact and connected — which covers every group used in this thesis ($SU(2)$, $U(n)$).
 \end{remark}
 
 \begin{remark}[Matrix Lie groups]
-	For $G \subseteq GL(n,\mathbb{C})$ a closed subgroup $\mathfrak g \subset \mathfrak{gl}(n,\mathbb{C}) = M_n(\mathbb{C})$ is identified with a linear subspace of matrices via $T_eG \subset T_eGL(n,\mathbb{C}) \cong M_n(\mathbb{C})$, and left multiplication is literally matrix multiplication: $L_g(h) = gh$, so $dL_g(v) = gv$ for $v \in \mathfrak g$. The left-invariant vector field associated to $v$ is therefore $X^v_g = gv$, and its integral curve through $e$ solves the linear matrix ODE
+	For $G \subseteq GL(n,\C)$ a closed subgroup, $\mathfrak g \subset \mathfrak{gl}(n,\C) = M_n(\C)$ is identified with a linear subspace of matrices via $T_eG \subset T_eGL(n,\C) \cong M_n(\C)$, and left multiplication is literally matrix multiplication: $L_g(h) = gh$, so $dL_g(v) = gv$ for $v \in \mathfrak g$. The left-invariant vector field associated to $v$ is therefore $X^v_g = gv$, and its integral curve through $e$ solves the linear matrix ODE
 	\[
-	\dot\gamma(t) = \gamma(t)\, v, \qquad \gamma(0) = I,
+	\dot\gamma(t) = \gamma(t)\, v, \qquad \gamma(0) = \Id,
 	\]
 	whose unique solution is the matrix exponential series
 	\[
@@ -261,26 +262,26 @@ We now show that every left-invariant vector field is complete, so that it integ
 	\]
 	Hence $\exp(v) = e^{v}$: the abstract exponential map of Definition \ref{def:exp} coincides with the ordinary matrix exponential whenever $G$ is realized as a matrix group. In particular
 	\[
-	\mathfrak g = \{v \in M_n(\mathbb{C}) : e^{tv} \in G \ \forall t \in \mathbb{R}\},
+	\mathfrak g = \{v \in M_n(\C) : e^{tv} \in G \ \forall t \in \R\},
 	\]
 	which is often the fastest way to identify $\mathfrak g$ in practice, without passing through tangent vectors to curves at all.
 \end{remark}
 
 \begin{example}[$\mathfrak{su}(2)$ from $SU(2)$ via the matrix exponential]
-	Let $G = SU(2) = \{g \in GL(2,\mathbb{C}) : g^\dagger g = I,\ \det g = 1\}$. Differentiating both defining conditions along $\gamma(t) = e^{tv}$, $\gamma(0)=I$, gives the linearized conditions on $v$:
+	Let $G = SU(2) = \{g \in GL(2,\C) : g^\dagger g = \Id,\ \det g = 1\}$. Differentiating both defining conditions along $\gamma(t) = e^{tv}$, $\gamma(0)= \Id$, gives the linearized conditions on $v$:
 	\[
 	\frac{d}{dt}\Big|_{t=0} \big(e^{tv}\big)^\dagger e^{tv} = v^\dagger + v = 0, \qquad
 	\frac{d}{dt}\Big|_{t=0} \det e^{tv} = \operatorname{tr}(v) = 0,
 	\]
 	using $\det e^{tv} = e^{t\,\operatorname{tr} v}$. So
 	\[
-	\mathfrak{su}(2) = \{v \in M_2(\mathbb{C}) : v^\dagger = -v,\ \operatorname{tr}(v) = 0\},
+	\mathfrak{su}(2) = \{v \in M_2(\C) : v^\dagger = -v,\ \operatorname{tr}(v) = 0\},
 	\]
 	a $3$-dimensional real vector space.
 	
-	Take $v = -\tfrac{i\theta}{2}\sigma_3$, $\theta \in \mathbb{R}$, $\sigma_3 = \mathrm{diag}(1,-1)$. Since $\sigma_3^2 = I$, the series splits into even and odd powers:
+	Take $v = -\tfrac{i\theta}{2}\sigma_3$, $\theta \in \R$, $\sigma_3 = \mathrm{diag}(1,-1)$. Since $\sigma_3^2 = \Id$, the series splits into even and odd powers:
 	\[
-	\exp(v) = e^{-i\theta\sigma_3/2} = \cos\!\left(\frac{\theta}{2}\right) I - i\sin\!\left(\frac{\theta}{2}\right)\sigma_3
+	\exp(v) = e^{-i\theta\sigma_3/2} = \cos\!\left(\frac{\theta}{2}\right) \Id - i\sin\!\left(\frac{\theta}{2}\right)\sigma_3
 	= \begin{pmatrix} e^{-i\theta/2} & 0 \\ 0 & e^{i\theta/2} \end{pmatrix}.
 	\]
 	This matrix is unitary with determinant $1$ for every $\theta$, confirming $\exp(v) \in SU(2)$; and $\theta \mapsto \exp(v)$ satisfies the one-parameter subgroup law, consistently with Proposition \ref{prop:one-param}. 
@@ -288,10 +289,10 @@ We now show that every left-invariant vector field is complete, so that it integ
 
 
 \subsection{Representations of groups}
-The previously presented concepts can be used to state the definition of a representation (or \textit{rep}). Given that we will use the following applied to various mathematical objects, we decided to first show the general definition on groups but it is clearly valid for Lie groups and Lie algebras with some modifies. \cite{hallLieGroupsLie2003}
+Groups, Lie groups, and Lie algebras are abstract object and usually to use them we have to identify them using maps that act on vector spaces, those are called representations. Given that we will use the following applied to various mathematical objects, we first state the general definition for groups but it is clearly valid for Lie groups and Lie algebras with a few modifications. \cite{hallLieGroupsLie2003}
 
 \begin{definition}[Representation of a group]\label{def:group-rep}
-	Let G be a group and V a vector space over $\K$. A representation of G on V is an homomorphism between groups:
+	Let G be a group and V a vector space over $\K$. A representation (or rep) of G on V is a homomorphism between groups:
 	\[
 		\rho : G \to GL(V),
 	\]
@@ -301,7 +302,7 @@ The previously presented concepts can be used to state the definition of a repre
 In the case of Lie algebras this can be transported as the following.
 
 \begin{definition}[Representation of a Lie Algebra]\label{def:lie-rep}
-	A representation of a Lie Algebra $\mathfrak{g}$ is an homomorphism $\phi: \mathfrak{g} \to \mathfrak{gl}(V)$ where V is a $\K$-vector space.
+	A representation of a Lie Algebra $\mathfrak{g}$ is a homomorphism $\phi: \mathfrak{g} \to \mathfrak{gl}(V)$ where V is a $\K$-vector space.
 \end{definition}
 
 \begin{remark}
@@ -310,19 +311,23 @@ In the case of Lie algebras this can be transported as the following.
 
 \begin{example}
 	Let us define the \textit{adjoint representation} as the homomorphism $\ad: \mathfrak{g} \to \mathfrak{gl}(\mathfrak{g})$ which it sends $x \mapsto \ad{x}$ with $\ad{x}$ being an endomorphism on $\mathfrak{g}$ defined as \[ \ad{x}(y) := [x,y].\]
+	In addition,it can be easily proved that \[
+		\ad{[x,y]} = [\ad{x},\ad{y}],
+	\]
+	so it preserves Lie brackets.
 \end{example}
 
 One of the most important proprieties of a representation is the faithfulness.
 \begin{definition}[Faithful Representation]\label{def:rep-faith}
 	A representation $(V, \rho)$ is said to be \textit{faithful} if $\rho$ is injective that is
 	\[
-		\ker{\rho} = \{g \in G | \quad \rho(g) = \Id_V\} = \{e\},
+		\ker{\rho} = \{g \in G | \rho(g) = \Id_V\} = \{e\},
 	\]
 	where $e$ is the identity element of the group.
 \end{definition}
 
 \begin{remark}
-	This definition is referring to the representations which don't lose the informations encoded in the group G. All the different elements of the group are being mapped into a different application.
+	This definition is referring to the representations which don't lose the informations encoded in the group G. All the different elements of the group are being mapped into a different map.
 \end{remark}
 
 \begin{definition}[Equivalent representations] \label{def:rep-equiv}
@@ -336,25 +341,25 @@ One of the most important proprieties of a representation is the faithfulness.
 	\]
 \end{definition}
 
-Now we are ready to define what it means to "decompose" representations into the so called \textit{irreducible representations} or \textit{irreps}.
+Now we are ready to define what it means to decompose representations into the so called \textit{irreducible representations} or \textit{irreps}.
 
 \begin{definition}[Irreducibility of a representation] \label{def:rep-irreps}
 	Let (V, $\pi$) be a finite-dimensional representation of a group G, acting on a space V. 
 	We can define the following terms:
 	\begin{itemize}
-	 \item A subspace W of V is called invariant if $(\pi(g))(w) \in W \quad \forall w \in W , \forall a \in G$. 
+	 \item A subspace W of V is called invariant if $(\pi(g))(w) \in W \quad \forall w \in W , \forall g \in G$. 
 	 \item An invariant subspace W is called nontrivial if $W \neq \{\emptyset\}$ and $W \neq V$. 
 	 \item A representation with no nontrivial invariant subspaces is called irreducible.
 	\end{itemize}
 	The terms invariant, nontrivial, and irreducible are defined analogously for representations of Lie algebras.
 \end{definition}
 
-Thanks to that definition we can now state one of the most famous and important lemmas in representation theory. It
+Thanks to that definition we can now state one of the most famous and important lemmas in representation theory. 
 
 \begin{lemma}[Schur's Lemma]\label{lem:schur}
-	Let $\pi: G \to GL(V)$ be a finite-dimensional \emph{irrep}  over $\mathbb{C}$.
+	Let $\pi: G \to GL(V)$ be a finite-dimensional \emph{irrep}  over $\C$.
 	\begin{enumerate}
-		\item If $T: V \to V$ is a linear map commuting with $\pi(g)$ for every $g$, then $T = \lambda \, \mathrm{id}_V$ for some $\lambda \in \mathbb{C}$.
+		\item If $T: V \to V$ is a linear map commuting with $\pi(g)$ for every $g$, then $T = \lambda \, \mathrm{id}_V$ for some $\lambda \in \C$.
 		\item More generally, if $\pi_1: G\to GL(V_1)$, $\pi_2: G\to GL(V_2)$ are both irreducible and $T: V_1 \to V_2$ satisfies $T\pi_1(g) = \pi_2(g)T$ for all $g$, then either $T=0$ or $T$ is an isomorphism.
 	\end{enumerate}
 \end{lemma}
@@ -366,7 +371,7 @@ Thanks to that definition we can now state one of the most famous and important 
 	\]
 	be the total angular momentum squared operator. Using $[\hat J_i, \hat J_j] = i\varepsilon_{ijk}\hat J_k$, a direct computation gives $[\hat J^2, \hat J_i] = 0$ for every $i$: $\hat J^2$ commutes with the entire representation.
 	
-	By Schur's Lemma (part 1), any operator commuting with an irreducible representation is a scalar multiple of the identity:
+	By Schur's Lemma (part 1), any operator commuting with an irreducible representation is a scalar multiple of the identity. In addition, given that $J^2$ is positive semidefinite we can write:
 	\[
 	\hat J^2 = j(j+1)\, \mathrm{id}_V, \qquad \text{for some } j \geq 0.
 	\]
@@ -385,6 +390,8 @@ To conclude, let us state an important definition that will be needed in the nex
 
 \section{Elements of symplectic geometry}
 
+Let's focus now on a different but strongly connected subject. In this section, we introduce the basic concepts that help us see how Hamiltonian mechanics is a deeply geometrical theory, arising from the symplectic manifolds we now define.
+
 \begin{definition}[Non-degenerate 2-form on a manifold]\label{def:non-deg}
 	Let $M$ be a smooth manifold and $\omega \in \Omega^2(M)$. We say $\omega$ is \emph{non-degenerate} if, for every $p \in M$, the bilinear form $\omega_p$ is non-degenerate on $T_pM$: for every $X \in T_pM$,
 	\[
@@ -400,12 +407,12 @@ To conclude, let us state an important definition that will be needed in the nex
 	or, equivalently, the matrix of $\omega_p$ in this basis is
 	\[
 	\begin{pmatrix}
-		0 & I & 0 \\
-		-I & 0 & 0 \\
+		0 & \Id & 0 \\
+		-\Id & 0 & 0 \\
 		0 & 0 & 0
 	\end{pmatrix},
 	\]
-	where $I$ is the $n_p \times n_p$ identity matrix and the bottom-right block has size $(d-2n_p)\times(d-2n_p)$, $d := \dim T_pM$.
+	where $\Id$ is the $n_p \times n_p$ identity matrix and the bottom-right block has size $(d-2n_p)\times(d-2n_p)$, $d := \dim T_pM$.
 \end{proposition}
 
 \begin{remark}
@@ -431,6 +438,8 @@ To conclude, let us state an important definition that will be needed in the nex
 	We can clearly see that $(X^\flat)^\sharp = X$ and $(\alpha^\sharp)^\flat = \alpha$ due to the non-degeneracy of $\omega$.
 \end{remark}
 
+This next theorem is one of the most important due to its vast usage in Hamiltonian mechanics. 
+
 \begin{theorem}[Darboux Theorem]\label{thm:darboux}
 	Suppose $\omega$ is a non-degenerate two-form on a 2n-manifold M. Then $d \omega = 0$ (where $d$ denotes the exterior derivative) iff there is a chart $(U, \phi)$ at each $m \in M$ such that $\phi(m) = \boldsymbol{0}$ and $\phi(u) = (x^1(u),..,x^n(u), y^1(u),...,y^n(u))$ having
 	\[
@@ -438,30 +447,33 @@ To conclude, let us state an important definition that will be needed in the nex
 	\]
 \end{theorem}
 
-Finally, we can state the next important definition that encodes all the structure to derive Hamiltonian mechanics in the clearest and natural way possible.
+Finally, we can state the next important definition that encodes all the structure to derive Hamiltonian mechanics in the natural way.
 
 \begin{definition}[Symplectic manifold]\label{def:sympl-man}
 	A symplectic form $\omega$ on a manifold M is a non-degenerate, closed ($d \omega = 0$), two-form on M. A symplectic manifold $(M, \omega)$ is a manifold M together with a symplectic form $\omega$ on M. The charts guaranteed by the Darboux theorem are called symplectic charts and the coordinate are called \emph{canonical coordinates}.
 \end{definition}
 
 \begin{definition}[Canonical transformation]\label{def:canonical-transformation}
-	Let $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds, F a $C^\infty$-mapping $F:M \to N$ is called \emph{symplectic} or \emph{canonical transformation} if $F*\rho = \omega$.
+	Let $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds, F a $C^\infty$-mapping $F:M \to N$ is called \emph{symplectic} or \emph{canonical transformation} if $F^*\rho = \omega$.
 \end{definition}
 
 Also we have a particular property for canonical transformations.
 \begin{proposition}
-	If $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds and $F:M \to N$ symplectic then F is volume preserving and $det_{(\Omega_\omega, \Omega_\rho)} F = 1$ and F is a local diffeomorphism.
+	If $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds and $F:M \to N$ symplectic then F is volume preserving and $\det F = 1$ and F is a local diffeomorphism.
 \end{proposition}
 
-The next theorem can be really obscure but it is a key result that we cannot omit in this introduction to symplectic geometry. The problem we want to solve is the following: Imagine you need to construct a 1-form on a manifold M, so you would need a rule to give any tangent vector a real number. If M is already a cotangent bundle of another manifold Q (that's the case of the phase space in Hamiltonian mechanics), this is really helping because there is a natural way to accomplish this.
+The next theorem is notationally dense, but it is central to this introduction to symplectic geometry. The problem is the following: Constructing a 1-form on a manifold M, requires a rule that assign a real number to any tangent vector. When M is already a cotangent bundle of another manifold Q (as in the case of the phase space in Hamiltonian mechanics), there is a natural way to accomplish this.
 
-Every point in M so it's a 1-form, viewed in the perspective of Q, let's call it $\alpha_q$. If we switch in the perspective of Q, now we can define the tangent vector at the point $\alpha_q$, let's call it $w_{\alpha_q}$. The natural way to create a 1-form now is to use $\alpha_q$ as a form defined on tangent vectors to Q. So we take $w_{\alpha_q}$, use a pushforward to move it to the tangent bundle of Q and finally pairing it with $\alpha_q$. This is what the \textit{canonical form} $\theta_0$ does.
+Fix a $q \in Q$, from the perspective of Q, every point in M is a 1-form, which we denote as $\alpha_q$. From the perspective of M, we can instead consider the tangent vector at the point $\alpha_q$, calling it $w_{\alpha_q}$. 
+
+At this point, the natural way to create a 1-form is to use $\alpha_q$ viewed as a form acting on tangent vectors in $TQ$. Thus, we can apply a pushforward to $w_{\alpha_q}$ in order to move it to the tangent bundle of Q and finally pairing it with $\alpha_q$. This is how the \textit{canonical form} $\theta_0$ works.
+
 \begin{theorem}[Canonical forms]\label{thm:canon}
 	Let Q be an $n$-manifold and $M = T^*Q$. Consider now the maps $\tau^*_Q: T^*Q \to Q$ and $d\tau^*_Q: TM \to TQ$, which is the pushforward of $\tau^*_Q$. Given a point $q \in Q$, we can define $\alpha_q \in T^*Q$ and $w_{\alpha_q} \in TM$ in the fiber above $\alpha_q$. Define
 	\[
-		\theta_{\alpha_q} : T_{\alpha_q}M \in \R \qquad w_{\alpha_q} \mapsto \alpha_q(d \tau^*_Q(w_{\alpha_q}))
+		\theta_{\alpha_q} : T_{\alpha_q}M \to \R \qquad w_{\alpha_q} \mapsto \alpha_q(d \tau^*_Q(w_{\alpha_q}))
 	\] 
-	and the map $\theta_0: \alpha_q \in \theta_{\alpha_q}$. In this case $\theta_0 \in \Omega^1(M)$ and $\omega_0=-d\theta_0$ is a symplectic form on M. The forms $\theta_0$ and $\omega_0$ are called the canonical forms on M.
+	and the map $\theta_0: \alpha_q \to \theta_{\alpha_q}$. In this case $\theta_0 \in \Omega^1(M)$ and $\omega_0=-d\theta_0$ is a symplectic form on M. The forms $\theta_0$ and $\omega_0$ are called the canonical forms on M.
 \end{theorem}
 
 \begin{remark}
@@ -479,9 +491,9 @@ We can also prove that these canonical forms are not changed by any diffeomorphi
 \begin{theorem}[Invariance of the canonical forms]\label{thm:inv-canon}
 	Let Q be a manifold and $f: Q \to Q$ a diffeomorphism; define the lift of f as
 	\[
-		T^*f : T^*Q \to T^*Q \qquad (T^*f(\alpha_q))(v) = \alpha_q(df(v))
+		T^*f : T^*Q \to T^*Q \qquad (T^*f(\alpha_q))(v) = \alpha_q(df(v)).
 	\]
-	Then $T^*f$ is symplectic and if I use the lift to pullback the canonical form $(T^*f)^*\theta_0 = \theta_0$ it comes right back.
+	Then $T^*f$ is symplectic and $\theta_0$ is invariant under the application of the pulled-back lift:  $(T^*f)^*\theta_0 = \theta_0$.
 \end{theorem}
 
 \begin{remark}
@@ -508,7 +520,7 @@ We can also prove that these canonical forms are not changed by any diffeomorphi
 \end{remark}
 
 \section{Hamiltonian Vector Fields and Poisson Brackets}
-
+With a symplectic structure in hand, we can finally construct the object that generates dynamics: given an energy function on phase space, the symplectic form turns its differential into a vector field.
 \begin{definition}[Hamiltonian Vector Field]\label{def:ham-field}
 	Let $(M, \omega)$ be a symplectic manifold called \emph{Phase space} and $H : M \to \R$ a given $C^r$-function. The vector field $X_H$ determined by 
 	
@@ -519,18 +531,18 @@ We can also prove that these canonical forms are not changed by any diffeomorphi
 	is called the \emph{Hamiltonian vector field} with H be the \emph{energy function}. $(M, \omega, H)$ is an Hamiltonian system.
 \end{definition}
 
-\begin{proposition}[Hamilton Equations]\label{prop:ham-eq}
+\begin{theorem}[Hamilton Equations]\label{prop:ham-eq}
 Let $(q^1,\ldots,q^n,p_1,\ldots,p_n)$ be canonical coordinates for $\omega$, so $\omega = \sum dq^i \wedge dp_i$. Then in these coordinates (and dropping base points),
 
 \begin{equation}
 	X_H = \left( \frac{\partial H}{\partial p_i}, -\frac{\partial H}{\partial q^i} \right) = J \cdot dH \label{eq:ham-field}
 \end{equation}
 
-where $J = \begin{pmatrix} 0 & I \\ -I & 0 \end{pmatrix}$. Thus $(q(t),p(t))$ is an integral curve of $X_H$ iff Hamilton's equations hold:
+where $J = \begin{pmatrix} 0 & \Id \\ -\Id & 0 \end{pmatrix}$. Thus $(q(t),p(t))$ is an integral curve of $X_H$ iff Hamilton's equations hold:
 \[
 \boxed{ \dot{q}^i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q^i}, \quad i = 1,\ldots,n}
 \]
-\end{proposition}
+\end{theorem}
 
 \begin{proof}Let $X_H$ be defined by the formula \ref{eq:ham-field}. We then have to verify \ref{eq:hamiltonian}.
 Now $i_{X_H} dq^i = \partial H/\partial p_i$, $i_{X_H} dp_i = -\partial H/\partial q^i$ by construction, so
@@ -554,21 +566,23 @@ i_{X_H}\omega = \sum i_{X_H}(dq^i \wedge dp_i) = \sum (i_{X_H} dq^i) \wedge dp_i
 since $\omega$ is skew-symmetric. 
 \end{proof}
 
-The next basic fact about Hamiltonian systems is that their flows consist of canonical transformations.
+The next basic fact about Hamiltonian systems is that their flows consists of canonical transformations.
 
 \begin{proposition}[Liouville's Theorem]\label{thm:liouville}
 	Let $(M,\omega,X_H)$ be a Hamiltonian system, and $F_t$ be the flow of $X_H$. Then for each $t$, $F_t^*\omega = \omega$, that is, $F_t$ is symplectic (on its domain). Thus $F_t$ also preserves the phase volume $\Omega_\omega$.
 \end{proposition}
 
-\begin{proof}We have
-\begin{align*}
-	\frac{d}{dt} F_t^*\omega &= F_t^* L_{X_H}\omega \\
-	&= F_t^*\big(i_{X_H} d\omega + d i_{X_H}\omega\big) \\
-	&= F_t^*(0 + ddH) \qquad (\text{since } d\omega = 0 \text{ and } i_{X_H}\omega = dH) \\
-	&= 0
-\end{align*}
-Thus $F_t^*\omega$ is constant in $t$. Since $F_0 = \Id$, the equation $F_t^*\omega = \omega$ results. 
-\end{proof}
+% INSERIRE QUESTA DIMOSTRAZIONE UNA VOLTA CHE ABBIAMO LA FORMULA DI CARTAN
+%\begin{proof}We have
+%\begin{align*}
+%	\frac{d}{dt} F_t^*\omega &= F_t^* L_{X_H}\omega \\
+%	&= F_t^*\big(i_{X_H} d\omega + d i_{X_H}\omega\big) \\
+%	&= F_t^*(0 + ddH) \qquad (\text{since } d\omega = 0 \text{ and } i_{X_H}\omega = dH) \\
+%	&= 0
+%\end{align*}
+%Thus $F_t^*\omega$ is constant in $t$. Since $F_0 = \Id$, the equation $F_t^*\omega = \omega$ results. 
+%\end{proof}
+
 \printbibliography
 
 \end{document}
