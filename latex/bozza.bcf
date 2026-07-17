@@ -2344,12 +2344,16 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">abrahamFoundationsMechanics2008</bcf:citekey>
-    <bcf:citekey order="2">humphreysIntroductionLieAlgebras2010</bcf:citekey>
-    <bcf:citekey order="3">hallLieGroupsLie2003</bcf:citekey>
-    <bcf:citekey order="4">abrahamFoundationsMechanics2008</bcf:citekey>
+    <bcf:citekey order="1">humphreysIntroductionLieAlgebras2010</bcf:citekey>
+    <bcf:citekey order="2">leeIntroductionSmoothManifolds2013</bcf:citekey>
+    <bcf:citekey order="3">abrahamFoundationsMechanics2008</bcf:citekey>
+    <bcf:citekey order="4">leeIntroductionSmoothManifolds2013</bcf:citekey>
     <bcf:citekey order="5">humphreysIntroductionLieAlgebras2010</bcf:citekey>
     <bcf:citekey order="6">hallLieGroupsLie2003</bcf:citekey>
+    <bcf:citekey order="7">humphreysIntroductionLieAlgebras2010</bcf:citekey>
+    <bcf:citekey order="8">leeIntroductionSmoothManifolds2013</bcf:citekey>
+    <bcf:citekey order="9">abrahamFoundationsMechanics2008</bcf:citekey>
+    <bcf:citekey order="10">hallLieGroupsLie2003</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

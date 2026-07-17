@@ -1,0 +1,18 @@
+[1] Config.pm:307> INFO - This is Biber 2.17
+[1] Config.pm:310> INFO - Logfile is 'bozza.blg'
+[111] biber-darwin:340> INFO - === Wed Jul 15, 2026, 11:39:05
+[141] Biber.pm:418> INFO - Reading 'bozza.bcf'
+[238] Biber.pm:972> INFO - Found 4 citekeys in bib section 0
+[252] Biber.pm:4383> INFO - Processing section 0
+[266] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[272] bibtex.pm:1713> INFO - LaTeX decoding ...
+[335] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[432] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[432] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[432] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[432] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[450] bbl.pm:654> INFO - Writing 'bozza.bbl' with encoding 'UTF-8'
+[453] bbl.pm:757> INFO - Output to bozza.bbl
+[453] Biber.pm:130> WARN - ISBN '978-1-4899-9475-2 978-1-4419-9981-8' in entry 'leeIntroductionSmoothManifolds2013' is invalid - run biber with '--validate_datamodel' for details.
+[454] Biber.pm:130> WARN - ISBN '978-1-4419-2313-4 978-0-387-21554-9' in entry 'hallLieGroupsLie2003' is invalid - run biber with '--validate_datamodel' for details.
+[454] Biber.pm:132> INFO - WARNINGS: 2

@@ -1,0 +1,484 @@
+\input{preambolo_bozza}
+\setcounter{chapter}{1}
+\setcounter{section}{1}
+\begin{document}
+
+\subsection*{Lie derivative}
+We know how to make sense of directional derivatives of smooth functions on a manifold. A tangent vector $v \in T_pM$ can act as a derivative when applied to a real-valued function as shown in \ref{remark:vec-der}. What about the directional derivative of a vector field? In a euclidean space, this can be done easily with the classical definition. Unfortunately, this is heavily dependent on the fact that $\R^n$ is a vector space and so the tangent vectors can be viewed as part of the same space $\R^n$. That is not the case for a generic smooth manifold $M$. 
+
+This problem can be circumvented if we replace the vector $v \in T_pM$ with a vector field $V \in \mathfrak{X}(M)$, so we can use the flow of $V$ to push values of $W$ back to $p$ and then differentiate. Thus we make the following definition. 
+
+\begin{definition}[Lie derivative]
+	Let $M$ be a smooth manifold, $V \in \mathfrak{X}(M)$, and let $\theta$ be the flow of $V$. For $W \in \mathfrak{X}(M)$, the \emph{Lie derivative of $W$ with respect to $V$} is the rough vector field $\mathscr{L}_VW$ defined by
+	\begin{equation}
+	(\mathscr{L}_VW)_p = \frac{d}{dt}\Big|_{t=0} d(\theta_{-t})_{\theta_t(p)}\big(W_{\theta_t(p)}\big) = \lim_{t\to 0} \frac{d(\theta_{-t})_{\theta_t(p)}\big(W_{\theta_t(p)}\big) - W_p}{t}, \label{eq:lie-der}
+	\end{equation}
+	wherever the derivative exists.
+\end{definition}
+
+The map $d(\theta_{-t})_{\theta_t(p)}$ is what pulls $W_{\theta_t(p)} \in T_{\theta_t(p)}M$ back into $T_pM$. Both terms of the quotient then sit in the same vector space. For $t \neq 0$ small enough, $\theta_t$ is defined near $p$ and $\theta_{-t}$ is its inverse there, so $d(\theta_{-t})_{\theta_t(p)}(W_{\theta_t(p)})$ and $W_p$ both lie in $T_pM$, and the difference quotient makes sense.
+
+If $\partial M \neq \emptyset$, the definition still goes through as long as $V$ is tangent to $\partial M$, since that is exactly the condition needed for the flow of $V$ to exist on all of $M$.
+
+\begin{lemma}
+	Suppose $M$ is a smooth manifold with or without boundary, and $V, W \in \mathfrak{X}(M)$. If $\partial M \neq \emptyset$, assume in addition that $V$ is tangent to $\partial M$. Then $(\mathscr{L}_VW)_p$ exists for every $p \in M$, and $\mathscr{L}_VW$ is a smooth vector field.
+\end{lemma}
+
+\noindent The next theorem gives us a geometric interpretation of the Lie bracket of two vector fields. It is the directional derivative of the second vector field along the flow of the first.
+
+\begin{theorem}[Lie derivative of vector fields]\label{thm:lie-der-comm}
+	If M is a smooth manifold and $V, W \in \mathfrak{X}(M)$, then $\mathscr{L}_VW = VW - WV$ that is the commutator $[V,W]$.
+\end{theorem}
+
+ \noindent We analyse now some Lie derivative properties following immediately from the theorem \ref{thm:lie-der-comm}.
+
+\begin{corollary}
+	Suppose $M$ is a smooth manifold with or without boundary, and $V, W, X \in \mathfrak{X}(M)$. 
+	\begin{enumerate}
+		\item[(a)] $\mathscr{L}_VW = -\mathscr{L}_WV$.
+		\item[(b)] $\mathscr{L}_V[W,X] = [\mathscr{L}_VW,X] + [W,\mathscr{L}_VX]$.
+		\item[(c)] $\mathscr{L}_{[V,W]}X = \mathscr{L}_V\mathscr{L}_WX - \mathscr{L}_W\mathscr{L}_VX$.
+		\item[(d)] If $g \in C^\infty(M)$, then $\mathscr{L}_V(gW) = (Vg)W + g\mathscr{L}_VW$.
+		\item[(e)] If $F : M \to N$ is a diffeomorphism, then $F_*(\mathscr{L}_VX) = \mathscr{L}_{F_*V}F_*X$.
+	\end{enumerate}
+\end{corollary}
+
+\noindent An analogous definition can be stated dually for differential forms instead of vector fields.
+
+\begin{definition}[Lie derivative of a differential form]
+	Let $M$ be a smooth manifold, let $V \in \mathfrak{X}(M)$ have flow $\theta$, and let $\omega \in \Omega^k(M)$ be a smooth differential form on $M$. The \emph{Lie derivative of $\omega$ with respect to $V$} is the differential form $\mathscr{L}_V\omega$ whose value at $p \in M$ is
+	\[
+	(\mathscr{L}_V\omega)_p = \frac{d}{dt}\Big|_{t=0} \big(\theta_t^*\omega\big)_p = \lim_{t\to 0} \frac{\big(\theta_t^*\omega\big)_p - \omega_p}{t},
+	\]
+	wherever this derivative exists, where $\theta_t^*\omega$ is the pullback of $\omega$ by the time-$t$ flow map of $V$.
+\end{definition}
+
+Differential forms pull back naturally along any smooth map, so here the definition works directly with $\theta_t^*$, unlike the vector field case, where the pushforward had to be inverted through $d(\theta_{-t})$. The result $\mathscr{L}_V\omega$ is again a differential form of degree $k$.
+Lie differentiation satisfies a product rule with respect to wedge products.
+
+\begin{proposition}
+	Suppose $M$ is a smooth manifold, $V \in \mathfrak{X}(M)$, and $\omega, \eta \in \Omega^*(M)$. Then
+	\[
+	\mathscr{L}_V(\omega \wedge \eta) = (\mathscr{L}_V\omega) \wedge \eta + \omega \wedge (\mathscr{L}_V\eta).
+	\]
+\end{proposition}
+
+The next result gives a formula for Lie derivatives of differential forms, due to \'Elie Cartan.
+
+\begin{theorem}[Cartan's Magic Formula]\label{thm:cartan}
+	On a smooth manifold $M$, for any smooth vector field $V$ and any smooth differential form $\omega$,
+	\begin{equation}
+		\mathscr{L}_V\omega = \iota_V(d\omega) + d(\iota_V\omega).
+	\end{equation}
+\end{theorem}
+
+\setcounter{section}{3}
+\section{Hamiltonian Vector Fields and Poisson Brackets}
+
+Having built the geometric picture of phase space, this section focuses on dynamics and symmetries in Hamiltonian mechanics, where the geometric and algebraic structures introduced in the previous chapters come together. We first show how a single observable, the Hamiltonian function typically encoding the total energy of the system, generates a flow that governs how physical quantities change in time. We then bring in the Poisson bracket, which turns the space of smooth classical observables into a Lie algebra. This algebraic structure is what generates continuous symmetries.
+
+\begin{definition}[Hamiltonian Vector Field]\label{def:ham-field}
+	Let $(M, \omega)$ be a symplectic manifold called \emph{phase space} and $H : M \to \R$ a given $C^\infty$-function. The vector field $X_H$ determined by 
+	
+	\begin{equation}
+		\iota_{X_H}\omega=dH, \label{eq:hamiltonian}
+	\end{equation}
+	
+	\noindent is called the \emph{Hamiltonian vector field} with $H$ be the \emph{energy function}. $(M, \omega, H)$ is a Hamiltonian system.
+\end{definition}
+
+\begin{definition}[Symplectic and Hamiltonian Vector Fields]\label{def:symp-ham-fields}
+	Let $P$ be a symplectic manifold with symplectic form $\omega$. A vector field $X \in \mathfrak{X}(P)$ is called \emph{symplectic} or \emph{locally Hamiltonian} if its flow preserves the symplectic form, which means $\mathscr{L}_X\omega = 0$. 
+	
+	The vector field $X$ is called \emph{globally Hamiltonian} if there exists a smooth function $H \in C^\infty(P)$ such that the contraction satisfies $\iota_X\omega = dH$.
+\end{definition}
+
+\begin{remark}[Closedness and exactness of Hamiltonian vector fields]
+	The condition for a vector field $X$ to be locally Hamiltonian is that preserves the symplectic form, such that $\mathscr{L}_X\omega = 0$. Using Cartan's magic formula \ref{thm:cartan}, the Lie derivative of the symplectic form is:
+	\begin{equation}
+		\mathscr{L}_X\omega = \iota_X(d\omega) + d(\iota_X\omega).
+	\end{equation}
+	Hence $\omega$ is a symplectic form, it is automatically closed $d\omega = 0$. The equations reduces to:
+	\begin{equation}
+		\mathscr{L}_X\omega = d(\iota_X\omega).
+	\end{equation}
+	Consequently the invariance of the symplectic structure stand if and only if $d(\iota_X\omega) = 0$, that is requiring the closedness of $\iota_X\omega$. Analogously, the condition for $X$ to be globally Hamiltonian postulates the existence of $H$ such that $\iota_X\omega = dH$. That is, by definition, requiring the exactness of $\iota_X\omega$.
+\end{remark}
+
+
+The fundamental advantage of this algebraic definition is its reliance on the symplectic structure, which maps $dH$ into the corresponding vector field. When evaluated in local canonical coordinates, whose existence is guaranteed by Darboux's Theorem \ref{thm:darboux}, this geometric mapping seamlessly recovers the classical Hamilton's equations of motion.
+
+\begin{theorem}[Hamilton Equations]\label{prop:ham-eq}
+Let $(q^1,\ldots,q^n,p_1,\ldots,p_n)$ be canonical coordinates for $\omega$, so $\omega = \sum dq^i \wedge dp_i$. Then in these coordinates and dropping base points,
+
+\begin{equation}
+	X_H = \left( \frac{\partial H}{\partial p_i}, -\frac{\partial H}{\partial q^i} \right) = J \cdot dH \label{eq:ham-field},
+\end{equation}
+here $dH$ denotes the column vector of its coordinate partial derivatives and $J = \begin{pmatrix} 0 & \Id \\ -\Id & 0 \end{pmatrix}$. Thus $(q(t),p(t))$ is an integral curve of $X_H$ iff Hamilton's equations hold:
+\[
+\boxed{ \dot{q}^i = \frac{\partial H}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial H}{\partial q^i}, \quad i = 1,\ldots,n}
+\]
+\end{theorem}
+
+\begin{proof}Let $Y$ be defined by the formula \ref{eq:ham-field}. We then have to verify \ref{eq:hamiltonian}.
+Now $\iota_{Y} dq^i = \partial H/\partial p_i$, $\iota_{Y} dp_i = -\partial H/\partial q^i$ by construction, so
+\[
+\iota_{X_H}\omega = \sum \iota_{X_H}(dq^i \wedge dp_i) = \sum (\iota_{X_H} dq^i) \wedge dp_i - \sum dq^i \wedge \iota_{X_H} dp_i = \sum \frac{\partial H}{\partial p_i} dp_i + \frac{\partial H}{\partial q^i} dq^i = dH.
+\]
+By the non-degeneracy of $\omega$, $Y=X_H$.
+\end{proof}
+ A direct physical consequence of the anti-symmetry inherent to the symplectic form is the emergence of conserved quantities which we will study in the next section. Here, we can show the principal example, the Hamiltonian itself. Evaluating the time derivative of the energy along its own integral curves demonstrates that the dynamics intrinsically preserves the total energy of the system.
+
+\begin{proposition}[Conservation of energy]\label{prop:cons-energy}
+	Let $(M,\omega,X_H)$ be a Hamiltonian system and let $c(t)$ be an integral curve for $X_H$. Then $H(c(t))$ is constant in $t$.
+\end{proposition}
+\begin{proof}
+	By the chain rule and \ref{eq:hamiltonian},
+\begin{align*}
+	\frac{d}{dt} H(c(t)) &= dH(c(t)) \cdot c'(t) \\
+	&= dH(c(t)) \cdot X_H(c(t)) \\
+	&= \omega\big(X_H(c(t)), X_H(c(t))\big) \\
+	&= 0
+\end{align*}
+since $\omega$ is skew-symmetric. 
+\end{proof}
+
+Another important statement is that the phase flow actively preserves the underlying symplectic structure. Consequently, time evolution in classical mechanics unfolds as a continuous one-parameter group of canonical transformations, a structural feature presented by Liouville's Theorem.
+
+\begin{proposition}[Liouville's Theorem]\label{thm:liouville}
+	Let $(M,\omega,X_H)$ be a Hamiltonian system, and $F_t$ be the flow of $X_H$. Then for each $t$, $F_t^*\omega = \omega$, that is, $F_t$ is symplectic on its domain. Thus $F_t$ also preserves the phase volume $\Omega_\omega$.
+\end{proposition}
+
+\begin{proof}We have
+\begin{align*}
+	\frac{d}{dt} F_t^*\omega &= \lim_{h \to 0} \frac{F^*_{t+h}\omega - F^*_t\omega}{h} \\
+	&= F_t^* \left( \lim_{h\to 0} \frac{F_h^*\omega - \omega}{h}\right )\\
+	&= F_t^* \mathscr{L}_{X_H}\omega \\
+	&= F_t^*\big(i_{X_H} d\omega + d i_{X_H}\omega\big) \\
+	&= F_t^*(0 + ddH) \qquad (\text{since } d\omega = 0 \text{ and } i_{X_H}\omega = dH) \\
+	&= 0
+\end{align*}
+Thus $F_t^*\omega$ is constant in $t$. Since $F_0 = \Id$, it follows that $F_t^*\omega = \omega$. 
+\end{proof}
+
+\subsection*{Poisson Bracket}
+
+Previously, the Hamiltonian dynamics was presented as an analytical way to introduce onto the phase space the evolution of observables through time. In this section, we see that the construction above has a much deeper meaning enclosed in the algebraic formulation. In fact, analysing the structure that lies beyond classical observables, we can find a Lie product given by the Poisson Bracket. To show this, we start from enriching $\Omega^1$ with a particular Lie bracket.
+
+\begin{definition}[Poisson Bracket of forms]\label{def:poi-forms}
+	Suppose $(M, \omega)$ is a symplectic manifold and $\alpha, \beta \in \Omega^1(M)$. The Poisson bracket is the one-form $$\{\alpha, \beta\} = -[\alpha^\sharp, \beta^\sharp]^\flat$$
+\end{definition}
+
+\noindent Note that we have the following commutative diagram:
+\[
+\begin{tikzcd}
+	\mathfrak{X} \times \mathfrak{X} \arrow{r}{-[\cdot, \cdot]} \arrow[swap]{d}{\flat \times \flat} & \mathfrak{X} \arrow{d}{\flat} \\
+	\Omega^1 \times \Omega^1 \arrow{r}{\{\cdot, \cdot\}} & \Omega^1
+\end{tikzcd}
+\]
+
+\noindent As we showed in Example \ref{ex:lie-fields}, the commutator $[ , ]$ makes $\mathfrak{X}(M)$ a Lie algebra. Since $\flat$ is linear, then $\Omega^1(M)$ as a real vector space with the composition $\{,\}$ is a Lie algebra.
+
+\noindent Our goal is to define a Lie algebra on the classical observables that are represented, on our phase space $M$, by $C^\infty(M)$ functions. To do so, we have to find a definition that links a particular binary operation on smooth functions to the Poisson brackets defined on forms. These definitions must finally match when the functions are differentiated and brought into $\Omega^1(M)$. Having such an operation will eventually end up in an homomorphism between the Lie algebra of vector fields and observables.
+
+\begin{definition}[Poisson Bracket of functions]\label{def:poi-fun}
+	Let $(M, \omega)$ be a symplectic manifold and $f,g \in C^\infty(M)$, with $X_f = (df)^\sharp \in \mathfrak{X}(M)$ and analogously for $g$. The Poisson bracket of f and g is the function
+	\[
+		\{ f,g \} = \omega(X_f, X_g).
+	\]
+\end{definition}
+
+Let us state some important properties that gives us an intuition of why this is exactly the operation we are looking for.
+
+\begin{proposition}\label{prop:poi-prop}
+	Let $(M, \omega)$ be a symplectic manifold and $f, g \in C^\infty(M)$. Then
+	\[
+	\{f, g\} = - \mathscr{L}_{X_f} g = \mathscr{L}_{X_g} f.
+	\]
+	In addition, we have that 
+	\begin{itemize}
+		
+		\item For $f_0 \in C^\infty(M)$, the map $g \mapsto \{f_0, g\}$ is a derivation.
+		
+		\item $f$ is constant on the orbits, supports of the maximal integral curve, of $X_g$ if and only if $\{f, g\} = 0$ if and only if $g$ is constant on the orbits of $X_f$.
+	\end{itemize}
+\end{proposition}
+
+%FORSE INSERIRLA
+%\begin{proof}
+%	We have $L_{X_f} g = i_{X_f} d g = i_{X_f} i_{X_g} \omega$ since $dg = i_{X_g} \omega$. Since $i_X i_Y \omega = - i_Y i_X \omega = \omega(Y, X)$, the last equality follows.
+%	(i) $g \mapsto \{f_0, g\} = -L_{X_{f_0}} g$ is clearly a derivation. 
+%	
+%	(ii) If $F_t$ is the flow of $X_f$,
+%	\[
+%	\frac{d}{dt} (g \circ F_t) = F_t^* L_{X_f} g = -F_t^* \{f, g\}
+%	\]
+%	which vanishes iff $\{f, g\} = 0$. Since $\{f, g\} = -\{g, f\}$, this is equivalent to $(d/dt)(f \circ G_t) = 0$, where $G_t$ is the flow of $X_g$.
+%\end{proof}
+
+
+\noindent \textit{Observe that the identity $\{H, H\} = 0$ corresponds to conservation of energy by (ii) already proved by \ref{prop:cons-energy}}.
+
+\medskip While the axiomatic properties of the Poisson bracket highlight its algebraic elegance, practical analytical calculations and the direct connection to classical mechanics necessitate an explicit representation in local charts. In this standard representation, the abstract symplectic structure reduces to its canonical form, yielding the familiar coordinate expression for the Poisson bracket.
+
+\begin{corollary}
+	In canonical coordinates  $(q^1, \dots, q^n, p_1, \dots, p_n)$, we have
+	\[
+	\{f, g\} = \sum_{i=1}^n \left( \frac{\partial f}{\partial q^i} \frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q^i} \right).
+	\]
+	Note: $\{q^i, q^j\} = 0$, $\{p_i, p_j\} = 0$, $\{q^i, p_j\} = \delta^i_j$.
+\end{corollary}
+
+%\begin{proof}
+%	$\{f, g\} = L_{X_g} f = df \cdot X_g$, so
+%	\begin{align*}
+%		\{f, g\} &= \left( \frac{\partial f}{\partial q^i}, \frac{\partial f}{\partial p_i} \right) \cdot \left( \frac{\partial g}{\partial p_i}, - \frac{\partial g}{\partial q^i} \right) \\
+%		&= \sum_{i=1}^n \left( \frac{\partial f}{\partial q^i} \frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q^i} \right)
+%	\end{align*}
+%\end{proof}
+
+In addition of all these important properties, we can finally observe that the exterior derivative $d$ acts as a compatible morphism, mapping the bracket of scalar observables directly to the bracket of their corresponding $1$-forms on the cotangent space.
+
+\begin{proposition}
+	Let $(M, \omega)$ be a symplectic manifold and $f, g \in C^\infty(M)$. Then $d\{f, g\} = \{df, dg\}$.
+\end{proposition}
+
+Furthermore, we can prove that the Poisson brackets are an operation suitable for making the classical observable space a Lie algebra.
+
+\begin{proposition}
+	The real vector space $ C^\infty(M)$, together with the Poisson bracket $\{\cdot, \cdot\}$, forms a Lie algebra.
+\end{proposition}
+
+\begin{proof}
+	Since $d$ and $\omega^\sharp$ are $\mathbb{R}$ linear, the map $f \mapsto X_f$ is $\mathbb{R}$ linear. Hence $\{f, g\} = \omega(X_f, X_g)$ is $\mathbb{R}$ bilinear. It is also clear that $\{f, f\} = 0$. For Jacobi's identity, we have
+	\begin{align*}
+		\{f, \{g, h\}\} &= - \mathscr{L}_{X_f} \{g, h\} =  \mathscr{L}_{X_f}( \mathscr{L}_{X_g} h) \\
+		\{g, \{h, f\}\} &=  \mathscr{L}_{X_g} ( \mathscr{L}_{X_h} f) = - \mathscr{L}_{X_g} ( \mathscr{L}_{X_f} h) \\
+		\{h, \{f, g\}\} &=  \mathscr{L}_{X_{\{f, g\}}} h
+	\end{align*}
+	However, $X_{\{f, g\}} = (d\{f, g\})^\sharp = \{df, dg\}^\sharp = -[(df)^\sharp, (dg)^\sharp]$. Hence $X_{\{f, g\}} = -[X_f, X_g]$ and the result follows.
+\end{proof}
+
+The fundamental relation derived from the Jacobi identity elevates the mapping between scalar observables and vector fields to a strict algebraic morphism. This structural correspondence dictates that the Poisson bracket on the space of smooth functions perfectly mirrors the Lie bracket of their associated generators, up to a conventional sign.
+
+\begin{theorem}[Lie Algebra Homomorphism of Hamiltonian Vector Fields]\label{thm:ham-homomorphism}
+	Let $(M, \omega)$ be a symplectic manifold. The mapping $\mathcal{H}: C^\infty(M) \to \mathfrak{X}(M)$ defined by $f \mapsto X_f$, where $\iota_{X_f}\omega = df$, relates the Poisson algebra of smooth functions to the Lie algebra of vector fields via the identity:
+	\[
+	X_{\{f, g\}} = -[X_f, X_g] \qquad \forall f, g \in C^\infty(M).
+	\]
+	Consequently, the map $f \mapsto -X_f$ constitutes a strict Lie algebra homomorphism from $(C^\infty(M), \{\cdot, \cdot\})$ to $(\mathfrak{X}(M), [\cdot, \cdot])$.
+\end{theorem}
+
+This theorem serves as the algebraic cornerstone of Hamiltonian mechanics. It guarantees that the algebra of classical observables is intrinsically tied to the geometry of infinitesimal canonical transformations. Physically, it implies that the algebraic structure of symmetries, encoded in the Poisson bracket, is faithfully represented by the commutation of their dynamical flows on the phase space.
+
+\begin{corollary}[Lie Subalgebra of Globally Hamiltonian Vector Fields]\label{cor:ham-subalgebra}
+	The space of globally Hamiltonian vector fields on a symplectic manifold $(M, \omega)$, denoted as $\mathfrak{X}_{\mathcal{H}}(M)$, constitutes a linear subspace of $\mathfrak{X}(M)$ that is closed under the Lie bracket operation called a \emph{Lie subalgebra}.
+\end{corollary}
+
+\begin{remark}\label{rem:ham-subalgebra-proof}
+	The structural rigidity established in Corollary \ref{cor:ham-subalgebra} follows as a direct algebraic consequence of Theorem \ref{thm:ham-homomorphism}. By definition, the space $\mathfrak{X}_{\mathcal{H}}(M)$ is precisely the image of the mapping $\mathcal{H}: C^\infty(M) \to \mathfrak{X}(M)$. Since the homomorphic image of any Lie algebra necessarily forms a Lie subalgebra of the codomain, the closure of $\mathfrak{X}_{\mathcal{H}}(M)$ under the Lie bracket is automatically ensured. Furthermore, the kernel of this homomorphism consists entirely of functions $f \in C^\infty(M)$ satisfying $df = 0$, which exactly correspond to the locally constant functions on the manifold $M$.
+\end{remark}
+
+Beyond its structural role in defining symmetries, the primary physical utility of the Poisson bracket lies in its dynamical capacity to generate time evolution on the phase space. Given a Hamiltonian function $H$, the integral curves of its associated vector field $X_H$ dictate the classical trajectories of the physical system. The following proposition formalizes this relation, demonstrating that the temporal derivative of any smooth observable along the dynamical flow is completely determined by its Poisson bracket with the Hamiltonian.
+
+\begin{proposition}
+	Let $X_H$ be a Hamiltonian vector field on a symplectic manifold $(M, \omega)$ with Hamiltonian $H \in C^\infty(M)$ and flow $F_t$. Then for $f \in C^\infty(M)$ we have
+	\[
+	\frac{d}{dt} (f \circ F_t) = \{f \circ F_t, H\}
+	\]
+\end{proposition}
+
+\begin{proof}
+	\begin{align*}
+		\frac{d}{dt} (f \circ F_t) &= \frac{d}{dt} F_t^* f = F_t^* \mathscr{L}_{X_H} f \\
+		&= L_{X_H} (f \circ F_t) = \{f \circ F_t, H\}
+	\end{align*}
+\end{proof}
+
+\section{Symmetries and Geometrical Noether's Theorem}
+
+The relationship between continuous symmetries and conserved quantities constitutes one of the most fundamental principles in theoretical physics. To analyse formally this correspondence, it is strictly necessary to formalize the concept of physical symmetry through the mathematical apparatus of Lie group actions on smooth manifolds. 
+
+In this section, we transition from the local dynamics generated by a single Hamiltonian observable to the global symmetry transformations induced by Lie groups. We shall establish how a symplectic group action on a phase space naturally generates a set of fundamental conserved observables, an algebraic and geometric synthesis culminating in the modern geometrical formulation of Noether's Theorem.
+
+First we formalise how a Lie group can act on the points of the phase space.
+
+\begin{definition}[Left Action]\label{def:action}
+	Let $M$ be a smooth manifold. A left action, which we will refer as action for simplicity, of a Lie group $G$ on $M$ is a smooth mapping $\Phi: G \times M \to M$ such that
+	\begin{itemize}
+		\item $\Phi(e,x) = x$ $\forall p \in M$,
+		\item given $g,h \in G$ we have $\Phi(g, \Phi(h,x)) = \Phi(gh,x)$ $\forall p \in M$.
+	\end{itemize}
+\end{definition}
+
+The iterated action of a group leaves behind a collection of points in the manifold called orbit. 
+
+\begin{definition}[Orbit]\label{def:orbit}
+	Let $M$ be a smooth manifold and $\Phi$ be an action of G on M. For $x \in M$ the orbit is given by
+	\[
+		G \cdot x = \{\Phi_g(x) \ | \ g \in G\}.
+	\]
+\end{definition}
+
+\begin{definition}[Transitive, effective and free action]\label{def:action-prop}
+	An action is transitive if there is just one orbit. 
+	It if effective if $\Phi_g = \Id$ implies $g = e$, that is $g \mapsto \Phi_g$ is one-to-one. 
+	An action is free if, for each $x \in M$, $g \mapsto \Phi_g(x)$ is one-to-one
+\end{definition}
+
+While the orbit characterizes the global, geometric footprint of a group action on a manifold, its local, differential structure is governed by the continuous flow of the symmetry group. Hence, the tangent space to the orbit at any point $x \in M$ is precisely spanned by induced velocity vector fields evaluated at $x$. This localized, differential perspective leads naturally to the formal definition of the infinitesimal generator.
+
+\begin{definition}[Infinitesimal generator]\label{def:inf-generator}
+	Suppose $\Phi: G \times M \to M$ is a smooth action. If $\xi \in T_eG \cong \mathfrak{g}$, then
+	\[
+	\Phi^\xi: \R \times M \to M, \quad (t, x) \mapsto \Phi(\exp t\xi, x)
+	\]
+	is an $\R$-action on $M$, that is, $\Phi^\xi$ is a flow on $M$. The corresponding vector field on $M$ given by
+	\[
+	\xi_M(x) = \frac{d}{dt} \Phi(\exp t\xi, x) \bigg|_{t=0}
+	\]
+	is called the \emph{infinitesimal generator} of the action corresponding to $\xi$.
+\end{definition}
+
+\begin{remark}
+	The role of the exponential map in this definition serves as the bridge between abstract algebraic symmetries and physical dynamics on the manifold. Intuitively, an element $\xi \in \mathfrak{g}$ represents a purely infinitesimal transformation, essentially a "direction" of symmetry at the identity of the group. The exponential map $\exp(t\xi)$ integrates this infinitesimal tangent vector into a finite, continuous curve (a one-parameter subgroup) within the Lie group $G$, parametrized by the continuous parameter $t$. By feeding this trajectory into the action $\Phi$, we translate the abstract symmetry into a concrete flow on the physical space $M$. Taking the temporal derivative at $t=0$ then simply extracts the physical velocity field, the infinitesimal generator, that pushes the points of the manifold along that specific direction of symmetry.
+\end{remark}
+
+\begin{example}[Infinitesimal generator of planar rotations]
+	Consider the canonical action of the rotation group $G = SO(2)$ on the configuration manifold $M = \R^2$. The Lie algebra $\mathfrak{so}(2)$ is spanned by the basis element $\xi = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}$. The exponential map yields the standard rotation matrix $\exp(t\xi) = \begin{pmatrix} \cos t & -\sin t \\ \sin t & \cos t \end{pmatrix}$.
+	Given a point $\mathbf{x} = (x, y)^T \in \R^2$, the infinitesimal generator associated with $\xi$ is computed directly from the flow:
+	\[
+	\xi_M(x,y) = \frac{d}{dt} \begin{pmatrix} \cos t & -\sin t \\ \sin t & \cos t \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} \bigg|_{t=0} = \begin{pmatrix} -y \\ x \end{pmatrix}.
+	\]
+	This dynamically yields the vector field $\xi_M = -y \frac{\partial}{\partial x} + x \frac{\partial}{\partial y}$, which is the standard generator of angular momentum and continuous rotational symmetries in the plane.
+\end{example}
+
+\medskip
+
+\noindent The concrete derivation of the rotational generator in the preceding example underlines a systematic correspondence. More generally, the mapping $\mathfrak{g} \to \mathfrak{X}(M)$ that assigns $\xi \mapsto \xi_M$ acts as a Lie algebra anti-homomorphism, satisfying the fundamental bracket relation:
+\begin{equation}
+	[\xi_M, \eta_M] = -[\xi, \eta]_M \qquad \forall \xi, \eta \in \mathfrak{g}.
+\end{equation}
+This allows us to classify and study continuous symmetries purely through the local generators of the Lie algebra $\mathfrak{g}$. By choosing a basis $\{e_1, \dots, e_k\}$ of $\mathfrak{g}$ defined by the structure constants $[e_\alpha, e_\beta] = c_{\alpha\beta}^\gamma e_\gamma$, the abstract commutation relations are mapped directly to the physical velocity fields on the manifold:
+\begin{equation}
+	[e_{\alpha, M}, e_{\beta, M}] = -c_{\alpha\beta}^\gamma e_{\gamma, M}.
+\end{equation}
+When $M$ is a symplectic phase space $(P, \omega)$ and the group action preserves the symplectic form, these infinitesimal generators $e_{\alpha, M}$ are necessarily locally Hamiltonian vector fields. Assuming they are globally Hamiltonian, each basis generator is dynamically generated by a smooth scalar observable $J_\alpha \in C^\infty(P)$ such that $e_{\alpha, M} = X_{J_\alpha}$. Imposing that these Hamiltonian functions faithfully preserve the commutation relations of the symmetry group constitutes the exact geometric requirement that motivates the definition of the momentum mapping.
+
+\subsection*{Momentum Map}
+
+QUESTA SEZIONE DA RIVEDERE MA NON MANCA NIENTE
+In this section we show how to obtain conserved quantities for a Hamiltonian system with symmetries. Linear and angular momentum associated with translational and rotational invariance are the most common examples. However, topologically more complex examples such as the rigid body benefit from a rather abstract point of view.
+
+\begin{definition}[Momentum mapping]\label{def:momentum_mapping}
+	Let $(P, \omega)$ be a connected symplectic manifold and $\Phi: G \times P \to P$ a \emph{symplectic action} of the Lie group $G$ on $P$; that is, for each $g \in G$, the map $\Phi_g: P \to P; x \mapsto \Phi(g, x)$ is symplectic. We say that a mapping
+	\[
+	J: P \to \mathfrak{g}^* \quad \text{(the dual of the Lie algebra of } G\text{)},
+	\]
+	is a \emph{momentum mapping} for the action provided that for every $\xi \in \mathfrak{g}$,
+	\[
+	d\hat{J}(\xi) = \iota_{\xi_P}\omega,
+	\]
+	where $\hat{J}(\xi): P \to \R$ is defined by $\hat{J}(\xi)(x) = J(x) \cdot \xi$ and $\xi_P$ is the infinitesimal generator of the action corresponding to $\xi$. In other words, $J$ is a momentum mapping provided
+	\[
+	X_{\hat{J}(\xi)} = \xi_P,
+	\]
+	for all $\xi \in \mathfrak{g}$. Sometimes $(P, \omega, \Phi, J)$ is called a Hamiltonian G-space.
+\end{definition}
+
+\begin{remark}[Geometric Intuition of the Momentum Map]
+	The abstract codomain of $J$, namely the dual of the Lie algebra $\mathfrak{g}^*$, can initially appear counterintuitive. However, it is rooted precisely in the physical necessity of constructing scalar conserved quantities. In classical mechanics, an observable is inherently a real-valued function on the phase space, $P \to \R$. A continuous symmetry is generated by an element of the Lie algebra, $\xi \in \mathfrak{g}$, as said by Definition \ref{def:inf-generator}. To systematically assign a scalar conserved quantity to each possible symmetry direction $\xi$, we require a map that linearly consumes a vector in $\mathfrak{g}$ and produces a real number at each point $x \in P$. The mathematical space of linear functionals operating on $\mathfrak{g}$ is exactly the dual space $\mathfrak{g}^*$. Therefore, evaluating $J(x) \in \mathfrak{g}^*$ on a generator $\xi \in \mathfrak{g}$ through the natural pairing $\langle J(x), \xi \rangle = J(x) \cdot \xi$ yields the observable $\hat{J}(\xi)(x)$. Geometrically, this translates to taking the scalar product between an element representing the generalized momentum and a tangent vector representing the infinitesimal symmetry transformation.
+\end{remark}
+\medskip
+\begin{example}[Translational Symmetry and Linear Momentum]
+	Consider the phase space of a free particle, $P = T^*\R^3 \cong \R^3 \times \R^3$, with canonical coordinates $(q, p)$ and symplectic form $\omega = \sum dq^i \wedge dp_i$. Let $G = \R^3$ act on $P$ via spatial translations: $\Phi_a(q, p) = (q + a, p)$. The Lie algebra $\mathfrak{g}$ is isomorphic to $\R^3$, and its elements $\xi$ represent constant translation vectors. 
+	
+	The infinitesimal generator on $P$ is precisely the constant vector field $\xi_P = \sum \xi^i \frac{\partial}{\partial q^i}$. By solving the defining relation $d\hat{J}(\xi) = \iota_{\xi_P}\omega$, one finds $\hat{J}(\xi)(q, p) = p \cdot \xi$. Consequently, the momentum map $J: P \to (\R^3)^*$ is simply $J(q, p) = p$, which is the standard classical linear momentum.
+\end{example}
+\medskip
+
+\begin{remark}[Limitations for momentum map]
+	If the infinitesimal generators $\xi_P$ associated with the action are only locally Hamiltonian, we cannot define a global momentum mapping. According to Definition \ref{def:momentum_mapping}, the momentum map requires the existence of a family of global smooth functions $\hat{J}(\xi)$ on $P$ whose differentials satisfy $d\hat{J}(\xi) = \iota_{\xi_P}\omega$. If the 1-form $\iota_{\xi_P}\omega$ is closed but not exact, such global functions do not exist on the manifold, which prevents the formulation of the momentum map.
+\end{remark}
+
+The following theorem constitutes the modern, coordinate-free formulation of Noether's Theorem. It establishes a profound structural correspondence between the symmetry of the Hamiltonian function under a Lie group action and the existence of constants of motion. If the dynamics are invariant under $G$, the components of the momentum map $J$ are conserved along the integral curves of the Hamiltonian vector field.
+
+\begin{theorem}[Geometric Noether Theorem]\label{thm:geometric_noether_iff}
+	Let $\Phi: G \times P \to P$ be a symplectic action of a connected Lie group $G$ on a symplectic manifold $(P, \omega)$ admitting a momentum mapping $J: P \to \mathfrak{g}^*$. A Hamiltonian function $H: P \to \mathbb{R}$ is invariant under the action of $G$, that is
+	\[
+	H(\Phi_g(x)) = H(x) \quad \forall x \in P, \ \forall g \in G,
+	\]
+	if and only if the momentum mapping $J$ is an integral of the motion for the Hamiltonian vector field $X_H$ such that
+	\[
+	J(F_t(x)) = J(x) \quad \forall x \in P, \ \forall t \in \mathbb{R},
+	\]
+	where $F_t$ denotes the flow of $X_H$.
+\end{theorem}
+
+\begin{proof}
+	Both invariance statements are equivalent to the pointwise vanishing of $\{H, \hat{J}(\xi)\}$ for every $\xi \in \mathfrak{g}$, where $\hat{J}(\xi) := J(\cdot)\cdot \xi$. We show the chain of equivalences.
+	
+	\noindent Since $G$ is connected, it is generated by $\exp(\mathfrak{g})$: every $g \in G$ is a finite product $\exp(\xi_1)\cdots\exp(\xi_k)$. Hence
+	\[
+	H(\Phi_g(x)) = H(x) \ \ \forall g \in G
+	\quad\Longleftrightarrow\quad
+	H(\Phi_{\exp(t\xi)}(x)) = H(x) \ \ \forall \xi \in \mathfrak{g},\ \forall t \in \mathbb{R},
+	\]
+	the backward implication holding because invariance under each individual flow $(\xi_i)_P$ composes to invariance under the product $g$. Differentiating the expression on the right in $t$ at $t=0$ gives
+	\[
+	dH(x) \cdot \xi_P(x) = 0 \quad \implies \quad \mathscr{L}_{\xi_P} H = 0 \quad \forall \xi \in \mathfrak{g}.
+	\]
+	By definition of the momentum mapping, $\xi_P = X_{\hat{J}(\xi)}$, so
+	\[
+	\mathscr{L}_{\xi_P} H = \mathscr{L}_{X_{\hat{J}(\xi)}} H = \{H, \hat{J}(\xi)\},
+	\]
+	and by skew-symmetry of the Poisson bracket,
+	\[
+	\{H, \hat{J}(\xi)\} = 0 \quad\Longleftrightarrow\quad \{\hat{J}(\xi), H\} = \mathscr{L}_{X_H}\hat{J}(\xi) = 0.
+	\]
+	Finally, $\mathscr{L}_{X_H}\hat{J}(\xi) = 0$ for all $t$ is equivalent to $\hat{J}(\xi)$ being constant along the flow $F_t$ of $X_H$,
+	\[
+	\hat{J}(\xi)(F_t(x)) = \hat{J}(\xi)(x) \quad \forall t \in \mathbb{R}, \ \forall \xi \in \mathfrak{g},
+	\]
+	and since the pairing between $\mathfrak{g}^*$ and $\mathfrak{g}$ is non-degenerate, this holds for all $\xi \in \mathfrak{g}$ if and only if
+	\[
+	J(F_t(x)) = J(x) \quad \forall t \in \mathbb{R}.
+	\]
+	Chaining all the equivalences together proves the theorem.
+\end{proof}
+
+
+\begin{remark}[Conservation along the Flow]
+	The proof relies exquisitely on the antisymmetry of the Poisson bracket. The derivation demonstrates that the directional derivative of $H$ along the symmetry generator $\xi_P$ vanishes, $\mathscr{L}_{\xi_P} H = 0$. Because $\xi_P = X_{\hat{J}(\xi)}$, this immediately implies that the Poisson bracket $\{H, \hat{J}(\xi)\}$ is zero. By the algebraic properties of the bracket, it necessarily follows that $\{ \hat{J}(\xi), H \} = 0$, which is equivalent to $\mathscr{L}_{X_H} \hat{J}(\xi) = 0$. Thus, the observable $\hat{J}(\xi)$ remains strictly constant when transported along the dynamical orbits generated by $X_H$.
+\end{remark}
+
+\noindent While Definition \ref{def:momentum_mapping} establishes the fundamental geometric and algebraic requirements for a momentum mapping, its explicit construction necessitates a dedicated analytical methodology. The following theorem furnishes a systematic procedure to compute the momentum mapping directly, relying upon the critical hypothesis that the symplectic manifold admits an exact symplectic form whose globally defined primitive is strictly invariant under the designated group action.
+
+\begin{theorem}
+	Let $\Phi$ be a symplectic action on P. Assume the symplectic form $\omega$ on P is exact, $\omega = -d\theta$ and the action leaves $\theta$ invariant. That is $\Phi^*_g \theta = \theta$ for all $g \in G$. Then $J: P \to \mathfrak{g}^*$ defined by 
+	\[
+		J(x) \cdot \xi = (\iota_{\xi_P} \theta)(x)
+	\]
+	is a momentum mapping for that action.
+\end{theorem}
+
+\begin{example}[Momentum mapping for translational symmetry via exact forms]
+	The preceding theorem provides an algorithmic method to compute the momentum mapping in the case of cotangent spaces $P = T^*Q$, where the canonical symplectic form is structurally exact. Let us consider again the phase space of a free particle $P = T^*\R^3 \cong \R^3 \times \R^3$, equipped with canonical coordinates $(q, p)$. By defining the canonical $1$-form as $\theta = \sum_{i=1}^3 p_i dq^i$, its exterior derivative is given by:
+	\begin{equation}
+		d\theta = \sum_{i=1}^3 dp_i \wedge dq^i = -\sum_{i=1}^3 dq^i \wedge dp_i = -\omega.
+	\end{equation}
+	Thus, we recover the required condition $\omega = -d\theta$.
+	
+	The action of the translation group $G = \R^3$ operates on the phase space via $\Phi_a(q, p) = (q + a, p)$. We first verify that this action preserves the $1$-form $\theta$:
+	\begin{equation}
+		\Phi_a^*\theta = \sum_{i=1}^3 (p_i \circ \Phi_a) d(q^i \circ \Phi_a) = \sum_{i=1}^3 p_i d(q^i + a^i) = \sum_{i=1}^3 p_i dq^i = \theta.
+	\end{equation}
+	Since $\theta$ is strictly invariant under the global action, the hypotheses of the theorem are fully satisfied. The infinitesimal generator associated with the Lie algebra element $\xi \in \R^3$ is the constant vector field $\xi_P = \sum_{i=1}^3 \xi^i \frac{\partial}{\partial q^i}$. Evaluating the contraction of $\theta$ along $\xi_P$ directly yields the momentum observable:
+	\begin{equation}
+		J(q, p) \cdot \xi = (\iota_{\xi_P}\theta)(q, p) = \left( \sum_{i=1}^3 p_i dq^i \right) \left( \sum_{j=1}^3 \xi^j \frac{\partial}{\partial q^j} \right) = \sum_{i=1}^3 p_i \xi^i = p \cdot \xi.
+	\end{equation}
+	This algebraic procedure cleanly and instantaneously yields the linear momentum mapping $J(q, p) = p$.
+\end{example}
+
+
+\end{document}
