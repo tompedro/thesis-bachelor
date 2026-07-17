@@ -15,7 +15,7 @@ The geometric formulation of classical mechanics replaces the traditional Euclid
 Physical configuration spaces provide the most natural examples of such topological spaces. For instance, a simple pendulum constrained to move in a plane has the unit circle $S^1$ as its configuration space, while the configurations of a free rigid body are described by the special orthogonal group $SO(3)$. Neither of these spaces is globally homeomorphic to a Euclidean space. To perform calculus, we must cover the manifold with open sets that locally resemble flat space.
 
 \begin{definition}[Chart, atlas]\label{def:chart-atlas}
-	A chart on $M$ is a pair $(U,\varphi)$, with $U \subseteq M$ open and $\varphi: U \to \varphi(U) \subseteq \R^n$ a homeomorphism. Two charts $(U,\varphi)$, $(V,\psi)$ are $C^\infty$-compatible if the transition maps
+	A chart on $M$ is a pair $(U,\varphi)$, with $U \subseteq M$ open and $\varphi: U \to \varphi(U) \subseteq \R^n$ a homeomorphism. Two charts $(U,\varphi)$, $(V,\psi)$ are $C^\infty$-compatible if the transition map
 	\[
 	\psi \circ \varphi^{-1} : \varphi(U \cap V) \to \psi(U \cap V)
 	\]
@@ -23,7 +23,7 @@ Physical configuration spaces provide the most natural examples of such topologi
 \end{definition}
 
 \begin{remark}
-	An equivalent formulation of Definition \ref{def:chart-atlas} could have been state using $\varphi \circ \psi^{-1}$ that is a diffeomorphism being the inverse of $\psi \circ \varphi^{-1}$. 
+	An equivalent formulation of Definition \ref{def:chart-atlas} could have been stated using $\varphi \circ \psi^{-1}$ that is a diffeomorphism being the inverse of $\psi \circ \varphi^{-1}$. 
 \end{remark}
 
 The compatibility condition ensures that if two observers describe the same physical region using different local coordinates, the transformation between their descriptions is smooth. This allows for a globally consistent notion of differentiability.
@@ -255,7 +255,7 @@ Having described how differential forms and covectors transform under smooth map
 \begin{definition}[Flow of a Vector Field]\label{def:flow}
 	Let $X$ be a smooth vector field on a smooth manifold $M$. An \textit{integral curve} of $X$ is a smooth curve $\gamma: I \to M$, where $I \subseteq \R$ is an open interval, such that $\gamma'(t) = X(\gamma(t))$ for all $t \in I$.
 	
-	The \textit{(local) flow} of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \R \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties:
+	\noindent The \textit{(local) flow} of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \R \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties:
 	\begin{enumerate}
 		\item For each $p \in M$, the slice $\mathcal{D}^{(p)} = \{t \in \R : (t, p) \in \mathcal{D}\}$ is an open interval containing $0$, and the curve $\theta^{(p)}: \mathcal{D}^{(p)} \to M$ defined by $\theta^{(p)}(t) = \theta(t, p)$ is the unique maximal integral curve of $X$ satisfying the initial condition $\theta(0, p) = p$, namely
 		\[
@@ -306,7 +306,7 @@ In this section we develop the algebraic component of classical mechanics. We fi
 \end{example}
 
 \begin{example}
-	One of the most important examples of Lie algebra is $\mathfrak{gl}(V)$, the space of all linear endomorphisms of a finite dimensional vector space $V$, equipped with the commutator $[A,B] = AB - BA$ as Lie bracket. When $V = \C^n$, $\mathfrak{gl}(V) \cong \mathfrak{gl}(n,\C)$ can be identified with $M(n,\C)$. A natural basis, denoted $E_{ij}$ for $i,j = 1,\dots,n$, is given by the \textit{matrix units}, \textit{i.e.}, the matrix with entry $1$ in position $(i,j)$ and $0$ elsewhere, satisfying $$[E_{ij}, E_{kl}] = \delta_{jk}E_{il} - \delta_{li}E_{kj}.$$
+	One of the most important examples of Lie algebra, as per Definition \ref{def:lie-algebra}, is $\mathfrak{gl}(V)$, the space of all linear endomorphisms of a finite dimensional vector space $V$, equipped with the commutator $[A,B] = AB - BA$ as Lie bracket. When $V = \C^n$, $\mathfrak{gl}(V) \cong \mathfrak{gl}(n,\C)$ can be identified with $M(n,\C)$. A natural basis, denoted $E_{ij}$ for $i,j = 1,\dots,n$, is given by the \textit{matrix units}, \textit{i.e.}, the matrix with entry $1$ in position $(i,j)$ and $0$ elsewhere, satisfying $$[E_{ij}, E_{kl}] = \delta_{jk}E_{il} - \delta_{li}E_{kj}.$$
 \end{example}
 
 \begin{example}\label{ex:su-n}
@@ -330,7 +330,7 @@ Let \(\mathfrak{g}\) and \(\mathfrak{h}\) be Lie algebras over the same field $\
 \end{definition}
 
 \subsection*{Lie Groups}
-To benefit from the algebraic structure of Lie algebra in the framework of differential geometry, we must introduce manifolds equipped with compatible group operations. A tangent space exists at every point of a smooth manifold, but there is a restriction. In order to canonically endow the tangent space at a specific point with a Lie algebra structure, the manifold itself must be a Lie group.
+To benefit from the algebraic structure of Lie algebras within the framework of differential geometry, we must introduce manifolds equipped with compatible smooth group operations. In order to canonically endow the tangent space at the identity element with a non-trivial Lie algebra structure induced by left-invariant vector fields, the manifold must globally be a Lie group.
 
 To formalize this relationship, we first define a Lie group by requiring the group operations to be smooth.
 
