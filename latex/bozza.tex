@@ -2,17 +2,17 @@
 \setcounter{chapter}{1}
 \begin{document}
 
-\noindent This chapter establishes the geometric and algebraic language of classical mechanics in an invariant form. Moving beyond the traditional Newtonian approach, we adopt a coordinate-free framework on smooth manifolds. The logical sequence of the chapter is as follows: first, we introduce Lie algebras (relying on Humphreys \cite{humphreysIntroductionLieAlgebras2010} and Lee \cite{leeIntroductionSmoothManifolds2013}) to provide the formal infrastructure for the algebraic brackets; second, using the foundations of symplectic geometry (following Abraham and Marsden \cite{abrahamFoundationsMechanics2008}), we identify $C^\infty(M)$ as the natural space for observables. In this context, Poisson brackets endow the space with a Lie algebra structure. Finally, by applying the Gelfand theorem, we recognize $C_0(M)$ as a commutative $C^*$-algebra. This leads to our primary structural result, classical mechanics formally coincides with the theory of commutative $C^*$-algebras.
+\noindent This chapter establishes the geometric and algebraic language of classical mechanics in an invariant form. Moving beyond the traditional Newtonian approach, we adopt a coordinate-free framework on smooth manifolds. The logical sequence of the chapter is as follows: first, we introduce Lie algebras, relying on Humphreys \cite{humphreysIntroductionLieAlgebras2010} and Lee \cite{leeIntroductionSmoothManifolds2013}, to provide the formal infrastructure for the algebraic brackets; second, using the foundations of symplectic geometry, following Abraham and Marsden \cite{abrahamFoundationsMechanics2008}, we identify $C^\infty(M)$ as the natural space for observables. In this context, Poisson brackets endow the space with a Lie algebra structure. Finally, by applying the Gelfand theorem, we recognize $C_0(M)$ as a commutative $C^*$-algebra. This leads to our primary structural result, classical mechanics formally coincides with the theory of commutative $C^*$-algebras.
 
 \section{A Brief Introduction to Differential Geometry}
 
 The geometric formulation of classical mechanics replaces the traditional Euclidean space with a coordinate-free framework on smooth manifolds. This abstraction is physically justified by holonomic constraints, which curve the configuration space and remove any global vector space structure. This section introduces the topological and differential tools required to extend ordinary calculus to such curved spaces.
 
 \begin{definition}[Topological manifold]\label{def:top-man}
-	A topological manifold of dimension $n$ is a topological space $M$ that is Hausdorff, second countable, and locally Euclidean of dimension $n$: every point $p \in M$ has an open neighborhood homeomorphic to an open subset of $\R^n$. We write $\dim M = n$.
+	A topological manifold of dimension $n$ is a topological space $M$ that is Hausdorff, second countable, and locally Euclidean of dimension $n$. Every point $p \in M$ has an open neighborhood homeomorphic to an open subset of $\R^n$. We write $\dim M = n$.
 \end{definition}
 
-Physical configuration spaces provide the most natural examples of such topological spaces. For instance, a simple pendulum constrained to move in a plane has the unit circle $S^1$ as its configuration space, while the configurations of a free rigid body are described by the special orthogonal group $SO(3)$. Neither of these spaces is globally homeomorphic to a Euclidean space. To perform calculus, we must cover the manifold with open sets that locally resemble flat space.
+In physics, configuration spaces, the space formed by all the possible spatial configurations of a system of particles, provide the most natural examples of such topological spaces. For instance, a simple pendulum constrained to move in a plane has the unit circle $S^1$ as its configuration space, while the configurations of a free rigid body are described by the special orthogonal group $SO(3)$. Neither of these spaces is globally homeomorphic to a Euclidean space. To perform calculus, we must cover the manifold with open sets that locally resemble flat space.
 
 \begin{definition}[Chart, atlas]\label{def:chart-atlas}
 	A chart on $M$ is a pair $(U,\varphi)$, with $U \subseteq M$ open and $\varphi: U \to \varphi(U) \subseteq \R^n$ a homeomorphism. Two charts $(U,\varphi)$, $(V,\psi)$ are $C^\infty$-compatible if the transition map
@@ -50,7 +50,7 @@ The concept of manifold itself does not carry a vector space structure. Despite 
 	\[
 	v(fg) = f(p)\,v(g) + g(p)\,v(f), \qquad f,g \in C^\infty(M).
 	\]
-	The set of tangent vectors at $p$ is the tangent space at a point $p$ denoted as $T_pM$.
+	The set of these tangent vectors is the tangent space at $p \in M$ denoted as $T_pM$.
 \end{definition}
 
 \begin{remark}\label{remark:vec-der}
@@ -73,7 +73,7 @@ Most of the times it is convenient to write statements locally on a specific cha
 \end{definition}
 
 \begin{proposition}
-	A coordinate basis formed as in Definition \ref{def:coord}, forms a basis of $T_pM$. Hence $\dim T_pM = n$, and $v = v^i\, \partial_i |_p$ using the Einstein summation convention.
+	A coordinate basis as in Definition \ref{def:coord}, forms a basis of $T_pM$. Hence $\dim T_pM = n$, and $v = v^i\, \partial_i |_p$ using the Einstein summation convention.
 \end{proposition}
 
 We can now assemble the tangent spaces at every point of $M$ into a single geometric object, endowed with its own smooth structure. In literature, it is used as the natural stage for the Lagrangian description of a mechanical system.
@@ -94,7 +94,7 @@ A single tangent vector specifies a generalized velocity at a specific configura
 	Let $M$ be a smooth manifold as in Definition \ref{def:smooth-man}, a vector field on $M$ is a smooth map $X: M \to TM$ with $\pi \circ X = \mathrm{id}_M$. We denote by $\mathfrak{X}(M)$ the $C^\infty(M)$-module of vector fields on $M$.
 \end{definition}
 
-The tangent space captures the kinematics of a system: it is the space of generalized velocities. The Hamiltonian framework also requires generalized momenta, which are dual to velocities and are modeled as linear functionals on the tangent space.
+The tangent space captures the kinematics of a system. It is the space of generalized velocities. The Hamiltonian framework also requires generalized momenta, which are dual to velocities and are modeled as linear functionals on the tangent space.
 
 \begin{definition}[Covector]\label{def:covector}
 	Let $M$ be a smooth manifold, the cotangent space at $p \in M$ is the dual vector space $T_p^*M := (T_pM)^*$. For $f \in C^\infty(M)$, its differential at $p$ is the covector
@@ -107,7 +107,7 @@ The tangent space captures the kinematics of a system: it is the space of genera
 	In the coordinate basis, $\{dx^1|_p,\dots,dx^n|_p\}$ is dual to $\{\partial/\partial x^i|_p\}$, and $df_p = \frac{\partial f}{\partial x^i}\Big|_p\, dx^i|_p$.
 \end{remark}
 
-The same construction that produced the tangent space from the individual tangent spaces can be repeated for their duals.
+\noindent The same construction that produced the tangent space from the individual tangent spaces can be repeated for their duals.
 
 \begin{definition}[Cotangent space]\label{def:cot-space}
 	Let $M$ be a smooth manifold, the cotangent space is
@@ -152,7 +152,7 @@ Using the same construction seen above in Proposition \ref{prop:smooth-tm}, we c
 
 
 \subsection*{Operators on vector fields and forms}
-With the structure of manifolds, tangent spaces, and the algebra of differential forms in place, we introduce the operators that act on them. In the geometric theory of mechanics, these operators map physical quantities between different spaces, through symmetries or coordinate transformations, for instance, and generate the dynamical equations. The pushforward maps velocity vectors. Its dual, the pullback, acts on configuration constraints and momenta.
+With the structure of manifolds, tangent spaces, and the algebra of differential forms in place, we introduce the operators that act on them. In the geometric theory of mechanics, these operators map physical quantities between different spaces, through symmetries or coordinate transformations and generate the dynamical equations. The pushforward maps velocity vectors, its dual, the pullback, acts on configuration constraints and momenta.
 
 First we see that there is a unique way to compute the product of vectors and covectors.
 
@@ -167,14 +167,14 @@ First we see that there is a unique way to compute the product of vectors and co
 While the interior product acts as an algebraic contraction that reduces the degree of a form, we conversely require an operation to build higher-degree forms from lower-degree ones. To construct the full exterior algebra, we introduce an intrinsic product that combines a $k$-covector and an $l$-covector into a $(k+l)$-covector, rigorously preserving the alternating property.
 
 \begin{definition}[Wedge product]\label{def:wedge-product}
-	Let $M$ be a smooth manifold, and let $\omega \in \Lambda^k(T_p^*M)$ and $\eta \in \Lambda^l(T_p^*M)$ as defined in \ref{def:k-covector}. Their \emph{wedge product} (or exterior product) is the alternating $(k+l)$-covector $\omega \wedge \eta \in \Lambda^{k+l}(T_p^*M)$ defined by its evaluation on tangent vectors $v_1, \dots, v_{k+l} \in T_pM$:
+	Let $M$ be a smooth manifold, and let $\omega \in \Lambda^k(T_p^*M)$ and $\eta \in \Lambda^l(T_p^*M)$ as defined in \ref{def:k-covector}. Their \emph{wedge product}, or exterior product, is the alternating $(k+l)$-covector $\omega \wedge \eta \in \Lambda^{k+l}(T_p^*M)$ defined by its evaluation on tangent vectors $v_1, \dots, v_{k+l} \in T_pM$:
 	\[
 	(\omega \wedge \eta)(v_1, \dots, v_{k+l}) := \frac{1}{k!l!} \sum_{\sigma \in S_{k+l}} \mathrm{sgn}(\sigma)\, \omega(v_{\sigma(1)}, \dots, v_{\sigma(k)}) \eta(v_{\sigma(k+1)}, \dots, v_{\sigma(k+l)}),
 	\]
 	where $S_{k+l}$ is the symmetric group of permutations of $\{1, \dots, k+l\}$ and $\mathrm{sgn}(\sigma)$ denotes the signature of the permutation. 
 \end{definition}
 
-\noindent This algebraic operation naturally extends pointwise to smooth sections, endowing the space of differential forms with the structure of a graded algebra.
+\noindent This algebraic operation naturally extends pointwise to smooth sections.
 
 \begin{remark}\label{rem:graded-commutativity}
 	A fundamental algebraic consequence of Definition \ref{def:wedge-product} is its graded commutativity: for any $\alpha \in \Omega^k(M)$ and $\beta \in \Omega^l(M)$, the relation
@@ -199,15 +199,15 @@ We now examine the differential operators that map kinematic quantities between 
 \end{definition}
 
 \begin{remark}
-	We can state an alternative definition of \ref{def:pushforward} using the geometric description of tangent vectors as equivalence classes of curves. Let $\gamma \in C^\infty( (-\epsilon, \epsilon); M)$ such that $\gamma(0) = p$ and $\gamma'(0) = X$. Then the pushforward $F_*X$ is the velocity vector of the curve $F \circ \gamma$ at $t = 0$:
+	We can state an alternative definition of \ref{def:pushforward} using the geometric description of tangent vectors as equivalence classes of curves. Let $\gamma \in C^\infty( (-\epsilon, \epsilon); M)$ such that $\gamma(0) = p$ and $\gamma'(0) = v \in T_pM$. Then the pushforward $F_*v$ is the velocity vector of the curve $F \circ \gamma$ at $t = 0$:
 	\[
-	F_*X = \frac{d}{dt}\Big|_{t=0} (F \circ \gamma)(t).
+	F_*v = \frac{d}{dt}\Big|_{t=0} (F \circ \gamma)(t).
 	\]
 \end{remark}
 
 The differential of a function yields the linear approximation of a scalar observable. To build the geometric machinery of classical mechanics, in particular the canonical symplectic form on the cotangent space, we need to extend this operation to higher-degree forms. The exterior derivative does exactly that.
 
-\begin{definition}[Exterior derivative]
+\begin{definition}[Exterior derivative]\label{def:ext-der}
 	Let $M$ be a smooth manifold, define a family of mappings $d^k(U) : \Omega^k(U) \to \Omega^{k+1}(U)$ with $k = 0,1,2,\dots,n$, and $U$ is open in $M$, which we denote by $d$, called the \emph{exterior derivative} on $M$, such that
 	\begin{enumerate}
 		\item[(i)] $d$ is a $\wedge$-antiderivation. That is, $d$ is $\mathbb{R}$ linear and for $\alpha \in \Omega^k(U)$, $\beta \in \Omega^l(U)$,
@@ -219,8 +219,11 @@ The differential of a function yields the linear approximation of a scalar obser
 		\item[(iii)] $d\circ d = 0$, that is, $d^{k+1}(U)\circ d^k(U) = 0$.
 		\item[(iv)] $d$ is natural with respect to restrictions, that is, if $U \subset V \subset M$ are open and $\alpha \in \Omega^k(V)$, then $d(\alpha|_U) = (d\alpha)|_U$.
 	\end{enumerate}
-	It can be proved that such a family exist and it is unique.
 \end{definition}
+
+\begin{remark}
+	It can be proved that a family of mappings as in Definition \ref{def:ext-der} exist and it is unique.
+\end{remark}
 
 A crucial feature of the exterior derivative is its commutation with the pullback, a property that ensures the geometric consistency of coordinate transformations and symmetries. While the pushforward linearly transports velocities along a map, the pullback naturally acts in the opposite direction, transporting observables and differential forms.
 
@@ -244,9 +247,9 @@ A crucial feature of the exterior derivative is its commutation with the pullbac
 \end{definition}
 
 \begin{remark}
-	The case $k = 1$ recovers the pullback of covectors: for $\omega \in T_{F(p)}^*N$ and $X \in T_pM$,
+	The case $k = 1$ recovers the pullback of covectors: for $\omega \in T_{F(p)}^*N$ and $v \in T_pM$,
 	\[
-	(F^*\omega)(X) = \omega(F_*X).
+	(F^*\omega)(v) = \omega(F_*v).
 	\]
 \end{remark}
 
@@ -266,8 +269,11 @@ Having described how differential forms and covectors transform under smooth map
 		\theta_t(\theta_s(p)) = \theta_{t+s}(p).
 		\]
 	\end{enumerate}
-	If $\mathcal{D} = \R \times M$, the vector field $X$ is called \textit{complete} and the maps $\theta_t: M \to M$ constitute a global one-parameter group of diffeomorphisms.
 \end{definition}
+
+\begin{proposition}
+	Let $M$ be a smooth manifold and let $X$ be a vector flow with $\theta: \mathcal{D} \to M$ its flow as in Definition \ref{def:flow}. If $\mathcal{D} = \R \times M$, the vector field $X$ is called \textit{complete} and the maps $\theta_t: M \to M$ constitute a global one-parameter group of diffeomorphisms.
+\end{proposition}
 
 The concept of flow translates the analytical problem of solving systems of differential equations into the geometric action of a one-parameter group of diffeomorphisms. In the context of dynamics, if $X$ is the Hamiltonian vector field governing a mechanical system, its integral curves represent the physical trajectories in phase space, and the associated flow $\theta_t$ corresponds to the time evolution operator, which inherently preserves the symplectic structure. This will be analysed later in \ref{sec:1-ham}
 
@@ -277,7 +283,7 @@ The concept of flow translates the analytical problem of solving systems of diff
 \section{Lie Algebras and Representations}
 In this section we develop the algebraic component of classical mechanics. We first introduce Lie algebras in the abstract. We then specialize to Lie groups, smooth manifolds carrying a compatible group structure, and show how every Lie group determines a Lie algebra through its left-invariant vector fields, with the exponential map providing the bridge back from the algebra to the group. Finally, we introduce the notion of a representation, which realizes the abstract elements of a Lie algebra or Lie group as concrete linear operators on a vector space. This last step is what will allow us, in later chapters, to identify the continuous symmetries of a quantum system with observables that can actually be measured.
 
-\textit{Note: In this chapter, $\K$ denotes an arbitrary commutative field with characteristic zero.}
+\textit{Note: In this chapter, $\K$ denotes an arbitrary commutative field with characteristic zero, following \cite{humphreysIntroductionLieAlgebras2010}.}
 
 \begin{definition}[Lie algebra]\label{def:lie-algebra}
 	A \emph{Lie algebra} over $\mathbb{K}$ is a $\mathbb{K}$-vector space $\mathfrak{g}$ equipped with a bilinear map $[\cdot,\cdot]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ satisfying
@@ -285,7 +291,7 @@ In this section we develop the algebraic component of classical mechanics. We fi
 	[X,Y] = -[Y,X], \qquad &\text{antisymmetry} \\
 	[[X,Y],Z]+[[Y,Z],X]+[[Z,X],Y]=0, \qquad &\text{Jacobi identity}
 	\end{align}
-	for all $X,Y,Z\in\mathfrak{g}$. \cite{humphreysIntroductionLieAlgebras2010}
+	for all $X,Y,Z\in\mathfrak{g}$. 
 \end{definition}
 
 \begin{remark}
@@ -298,7 +304,7 @@ In this section we develop the algebraic component of classical mechanics. We fi
 \end{remark}
 
 \begin{example}[Vector fields as a Lie algebra]\label{ex:lie-fields}
-	Let $M$ be a smooth manifold. The space of smooth vector fields $\mathfrak{X}(M)$, introduced in Definition \ref{def:vector-field}, forms an infinite-dimensional Lie algebra over $\R$. Since vector fields act as derivations on the algebra of smooth functions $C^\infty(M)$, we can define the Lie bracket of two vector fields $X, Y \in \mathfrak{X}(M)$ as their operator commutator:
+	Let $M$ be a smooth manifold. The space of smooth vector fields $\mathfrak{X}(M)$, introduced in Definition \ref{def:vector-field}, forms an infinite-dimensional Lie algebra over $\R$. Since vector fields act as derivations on the algebra of smooth functions $C^\infty(M)$, we can define the Lie bracket of two vector fields $X, Y \in \mathfrak{X}(M)$ as their commutator:
 	\[
 	[X, Y](f) := X(Y(f)) - Y(X(f)), \qquad \forall f \in C^\infty(M).
 	\]
@@ -330,7 +336,7 @@ Let \(\mathfrak{g}\) and \(\mathfrak{h}\) be Lie algebras over the same field $\
 \end{definition}
 
 \subsection*{Lie Groups}
-To benefit from the algebraic structure of Lie algebras within the framework of differential geometry, we must introduce manifolds equipped with compatible smooth group operations. In order to canonically endow the tangent space at the identity element with a non-trivial Lie algebra structure induced by left-invariant vector fields, the manifold must globally be a Lie group.
+To benefit from the algebraic structure of Lie algebras within the framework of differential geometry, we must introduce manifolds equipped with compatible smooth group operations. In order to canonically endow the tangent space at the identity element with a non-trivial Lie algebra structure, the manifold must globally be a Lie group.
 
 To formalize this relationship, we first define a Lie group by requiring the group operations to be smooth.
 
@@ -341,22 +347,22 @@ To formalize this relationship, we first define a Lie group by requiring the gro
 \noindent We can specialize Definition \ref{def:lie-homo} in the case of Lie groups.
 
 \begin{definition}[Homomorphism of Lie Groups]\label{def:lie-grhomo}
-	A map $F: G \to H$ where G and H are Lie groups is called a homomorphism if it is a smooth map and a homomorphism between groups.
+	Let $G$ be a Lie group as in Definition \ref{def:lie-group}, the map $F: G \to H$ where G and H are Lie groups is called a homomorphism if it is a smooth map and a homomorphism between groups.
 \end{definition}
 
-Consider the tangent space of a Lie group. For every $g \in G$, we can define a map $L_g \in C^\infty(G;G)$ by $L_g(h) = gh$ called the \textit{"left multiplication"}. The differential $dL_g$ at a point $h \in G$ is a linear map from $T_h(G)$ to $T_{gh}(G)$ as stated in Definition \ref{def:pushforward}. A vector field X on G is called \textit{left-invariant} if
+Consider the tangent space of a Lie group. For every $g \in G$, we can define a map $L_g \in C^\infty(G;G)$ by $L_g(h) = gh$ called the \textit{"left multiplication"}. The differential $dL_g$ at a point $h \in G$ is a linear map from $T_hG$ to $T_{gh}G$ as stated in Definition \ref{def:pushforward}. A vector field X on G is called \textit{left-invariant} if
 \[
 	dL_g (X_h) = X_{gh} \qquad \forall g,h \in G.
 \]
-It is also true that, for any given vector $v \in T_e(G)$, there exists a unique smooth left-invariant vector field $X^v$. It can be constructed starting from the vector tangent to the identity by setting $X^v_e = v$. We can then use $L_g$ to define:
+It is also true that, for any given vector $v \in T_eG$, there exists a unique smooth left-invariant vector field $X^v$. It can be constructed starting from the vector tangent to the identity by setting $X^v_e = v$. We can then use $L_g$ to define:
 \[
 	X^v_g = dL_g (X^v_e) = dL_g(v).
 \]
 By construction, this is left-invariant and smooth.
-It is not difficult to show that the commutator of two left-invariant vector fields is, again, a left-invariant vector field. Also, it is worth noting that left-invariant vector fields form a linear subspace of $\mathfrak{M}$ closed respect to the commutator, called a \textit{Lie subalgebra} and thus they inherit the property of a Lie algebra. 
+It is not difficult to show that the commutator of two left-invariant vector fields is, again, a left-invariant vector field. Also, it is worth noting that left-invariant vector fields form a linear subspace of $\mathfrak{X}(G)$ closed respect to the commutator, called a \textit{Lie subalgebra} and thus they inherit the property of a Lie algebra. 
 
 \begin{definition}[Lie algebra of a Lie group]\label{def:lie-gralg}
-	The Lie algebra $\mathfrak{g}$ of a Lie group G is the tangent space at the identity with the bracket operation defined by
+	Let $G$ be a Lie group, the Lie algebra $\mathfrak{g}$ of $G$ is the tangent space at the identity with the bracket operation defined by
 	\[
 		[v, w] := [X^v, X^w]_e.
 	\] 
@@ -381,14 +387,16 @@ Completeness alone does not yet reveal the full algebraic content of the flow. T
 These concepts naturally converge to establish a canonical correspondence between a Lie algebra and its associated Lie group. The mathematical tool enacting this exact correspondence is the exponential map.
 
 \begin{definition}[Exponential map]\label{def:exp}
-	The exponential map of $G$ is
+	Let $G$ be a Lie group and let $\gamma_v:\R \to G$ be the integral curve of $X^v$ through $e$, the exponential map of $G$ is
 	\[
 	\exp: \mathfrak{g} \to G, \qquad \exp(v) := \gamma_v(1).
 	\]
 \end{definition}
 
+Thanks to the completeness granted by Proposition \ref{prop:complete}, the integral curve $\gamma_v$ is extended globally $\forall t \in \R$. This makes well-defined Definition \ref{def:exp} and the next properties we discuss.
+
 \begin{proposition}[Properties of exponential map]\label{prop:exp-props}
-	It can be shown that
+	Let $G$ be a Lie group, it can be shown that
 	\begin{enumerate}
 		\item $\exp(tv) = \gamma_v(t)$ $\forall t\in\R$.
 		\item $\exp(0)=e$ and $d(\exp)_0 = \mathrm{id}_{\mathfrak g}$.
@@ -399,7 +407,7 @@ These concepts naturally converge to establish a canonical correspondence betwee
 	\end{enumerate}
 \end{proposition}
 
-The naturality property is particularly restrictive: it forces the exponential map to commute with any homomorphism of Lie groups. Before exploiting this, it is worth noting a subtlety in the global behaviour of $\exp$.
+The naturality property is particularly restrictive. It forces the exponential map to commute with any homomorphism of Lie groups. Before exploiting this, it is worth noting a subtlety in the global behaviour of $\exp$.
 
 \begin{remark}
 	Global surjectivity of $\exp$ is not automatic in general, it fails e.g.\ for $SL(2,\R)$, yet it is verified for $G$ compact and connected. Thus covers the classical groups used in this thesis ($SU(2)$, $U(n)$).
@@ -442,7 +450,7 @@ The naturality property is particularly restrictive: it forces the exponential m
 \subsection*{Representations of groups}
 Lie groups and Lie algebras are abstract mathematical structures. To use them in physics, we need to identify their elements with linear operators acting on a vector space. This identification is called a representation. In quantum mechanics and quantum information theory the relevant state space is a Hilbert space, and representation theory gives us the dictionary between abstract symmetry generators and concrete linear operators. This is what turns continuous symmetries into observables we can actually measure. 
 
-In this section, we start with the general definition of a representation for arbitrary groups, then specialize to Lie groups and Lie algebras. \cite{hallLieGroupsLie2003}
+In this section, we start with the general definition of a representation for arbitrary groups, then specialize to Lie groups and Lie algebras, following \cite{hallLieGroupsLie2003}.
 
 \begin{definition}[Representation of a group]\label{def:group-rep}
 	Let G be a group and V a vector space over $\K$. A representation of G on V is a homomorphism between groups:
@@ -480,7 +488,7 @@ One of the most relevant properties of a representation is faithfulness.
 	where $e$ is the identity element of the group.
 \end{definition}
 
-Establishing whether a representation is faithful determines if it captures the full algebraic structure of the original group without redundancy. However, physical systems may realize the identical abstract symmetry through fundamentally different matrix formulations, reflecting a diverse choice of basis for the underlying state space. Therefore, before attempting to systematically decompose these spaces, it is strictly necessary to formulate a formal criterion to identify when two representations are mathematically equivalent and physically indistinguishable.
+Establishing whether a representation is faithful determines if it captures the full algebraic structure of the original group without redundancy. However, physical systems may realize the identical abstract symmetry through fundamentally different matrix formulations, reflecting a different choice of basis for the underlying state space. Therefore, before attempting to systematically decompose these spaces, it is strictly necessary to formulate a rule to identify when two representations are mathematically equivalent and physically indistinguishable.
 
 \begin{definition}[Equivalent representations] \label{def:rep-equiv}
 	Let $(V, \rho)$ and $(W, \pi)$ be two representations of a group $G$, with V and W two $\K$-vector spaces. The representations are said to be equivalent if there exists a vector space isomorphism $T: V \to W$ such that:
@@ -519,7 +527,7 @@ Establishing whether a representation is faithful determines if it captures the 
 	\end{enumerate}
 \end{lemma}
 
-The profound physical implication of Schur's Lemma manifests prominently in the study of Casimir operators. Those are generically non-linear algebraic invariants constructed from the generators of the Lie algebra that, by definition, commute with all elements of the algebra itself. Since a Casimir operator commutes with the entire representation, Schur's Lemma dictates that it must act as a scalar multiple of the identity on any irreducible representation space. This scalar value ultimately furnishes the exact quantum numbers necessary to classify the fundamental multiplets of a quantum system. This lemma can be extended to Lie Algebras as well, we can show an example of its application on $\mathfrak{su}(2)$.
+The profound physical implication of Schur's Lemma manifests prominently in the study of Casimir operators. Those are generically non-linear algebraic invariants constructed from the generators of the Lie algebra that, by definition, commute with all elements of the algebra itself. Since a Casimir operator commutes with the entire representation, Schur's Lemma dictates that it must act as a scalar multiple of the identity on any irreducible representation space. This scalar value yields the exact quantum numbers necessary to classify the fundamental multiplets of a quantum system. This lemma can be extended to Lie Algebras as well, we can show an example of its application on $\mathfrak{su}(2)$.
 
 \begin{example}[Schur's Lemma on $\mathfrak{su}(2)$]
 	Let $\pi: \mathfrak{su}(2) \to \mathrm{End}(V)$ be a finite-dimensional irreducible representation, let $J_i := i T_i$ for $i = x,y,z$ as shown in Example \ref{ex:su-n} and define:
@@ -533,7 +541,7 @@ The profound physical implication of Schur's Lemma manifests prominently in the 
 	\hat J^2 = \lambda\, \Id, \qquad \text{for some } \lambda \in \R.
 	\]
 	
-	\noindent In this simple case we see how Schur's Lemma guarantees $\hat J^2$ takes one fixed value on the whole representation, not just on individual states.
+	\noindent In this simple case, we see how Schur's Lemma guarantees $\hat J^2$ takes one fixed value on the whole representation, not just on individual states.
 \end{example}
 
 \noindent To conclude, we state an important definition that will be needed in the next chapters.
@@ -547,7 +555,7 @@ The profound physical implication of Schur's Lemma manifests prominently in the 
 
 \section{Elements of symplectic geometry}
 
-In the previous sections, we established the formalism of differential geometry and the theory of Lie groups, which are essential tools for describing the global symmetries and the topology of physical systems. However, the manifold describing just the positions of the particles, called \textit{the configuration manifold} turns out to be insufficient. Dynamical evolution naturally arises from the phase space, mathematically identified with the cotangent space of the base manifold. This structure is complete enough to yield a way to state an isomorphism between covectors and vector fields. The framework provided is called symplectic geometry. 
+In the previous sections, we established the formalism of differential geometry and the theory of Lie groups, which are essential tools for describing the global symmetries and the topology of physical systems. However, the configuration manifold turns out to be insufficient. Dynamical evolution naturally arises from the phase space, mathematically identified with the cotangent space of the base manifold. This structure is complete enough to yield a way to compute an isomorphism between covectors and vector fields. The framework provided is called symplectic geometry. 
 
 In this section, we will introduce the foundations of symplectic manifolds, starting from the fundamental notion of a closed and non-degenerate $2$-form, which constitutes the mathematical core required to define canonical transformations and govern Hamiltonian dynamics.
 
@@ -593,7 +601,7 @@ The next proposition shows that any skew-symmetric two-form, degenerate or not, 
 	\end{itemize}
 \end{corollary}
 
-Beyond restricting the dimension and providing a canonical volume measure, the non-degeneracy of $\omega$ plays a far more active role in the formulation of mechanics. Specifically, a non-degenerate bilinear form naturally induces a point-wise vector space isomorphism between the tangent and cotangent spaces. This duality is the fundamental mathematical machinery required to translate the differential of an observable (such as the Hamiltonian) into a unique vector field that generates the dynamics.
+Beyond restricting the dimension and providing a canonical volume measure, the non-degeneracy of $\omega$ plays a far more active role in the formulation of mechanics. Specifically, a non-degenerate bilinear form naturally induces a point-wise vector space isomorphism between the tangent and cotangent spaces. This duality is the fundamental mathematical machinery required to translate the differential of an observable into a unique vector field that generates the dynamics.
 
 \begin{definition}[Musical isomorphisms]\label{def:musical}
 	Let M be a smooth manifold and $\omega \in \Omega^2(M)$ be non-degenerate by Definition \ref{def:non-deg}. Then define the map $\flat :\mathfrak{X}(M) \to \Omega^1(M)$ so that a vector field $$X \mapsto X^\flat = \iota_X\omega = \omega(X, \cdot).$$ 
@@ -637,7 +645,7 @@ Having in hand the geometric framework of the phase space, it is natural to inve
 	If $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds with $\dim M = \dim N$ and $F:M \to N$ symplectic, then F is volume preserving, $$F^*\Omega_\rho=\Omega_\omega,$$ with $\Omega_\omega$ defined as in \ref{cor:omega-prop}, and F is a local diffeomorphism.
 \end{proposition}
 
-The next theorem is notationally dense, but it is central to this introduction to symplectic geometry. The problem is the following: Constructing a 1-form on a manifold M, requires a rule that assign a real number to any tangent vector. When M is already a cotangent space of another manifold Q (as in the case of the phase space in Hamiltonian mechanics), there is a natural way to accomplish this.
+The next theorem is notationally dense, but it is central to this introduction to symplectic geometry. The problem we are facing is the following. Constructing a 1-form on a manifold M, requires a rule that assign a real number to any tangent vector. When M is already a cotangent space of another manifold Q $M = T^*Q$, as in the case of the phase space in Hamiltonian mechanics, there is a natural way to accomplish this.
 
 \medskip 
 Fix a $q \in Q$, from the perspective of Q, every point in M is a 1-form, which we denote as $\alpha_q$. From the perspective of M, we can instead consider the tangent vector at the point $\alpha_q$, calling it $w_{\alpha_q}$. 

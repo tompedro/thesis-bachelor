@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  16 JUL 2026 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  18 JUL 2026 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1380,21 +1380,15 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 5.76004pt on input line 349.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 374.
+(Font)              scaled to size 7.68005pt on input line 376.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 374.
+(Font)              scaled to size 5.76004pt on input line 376.
  [7] [8] [9] [10] (./bozza10.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-Package rerunfilecheck Warning: File `bozza10.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `bozza10.out':
-(rerunfilecheck)             Before: 69D61FDFA26E3AD1D24CCFF68F18C7E4;953
-(rerunfilecheck)             After:  7034502F9A563DA2522B22BD5F94E520;567.
+Package rerunfilecheck Info: File `bozza10.out' has not changed.
+(rerunfilecheck)             Checksum: 7034502F9A563DA2522B22BD5F94E520;567.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                bozza10
@@ -1405,41 +1399,29 @@ Package logreq Info: Writing requests to 'bozza10.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33290 strings out of 478268
- 632290 string characters out of 5846347
+ 33284 strings out of 478268
+ 632188 string characters out of 5846347
  1422090 words of memory out of 5000000
- 50891 multiletter control sequences out of 15000+600000
+ 50888 multiletter control sequences out of 15000+600000
  519270 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,15n,106p,1232b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.1.5.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.1.1.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-ch
-r7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch
-/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesig
-n/mdbch/md-chrma.pfb>
-Output written on bozza10.pdf (10 pages, 125014 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-
+chr7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdb
+ch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdes
+ign/mdbch/md-chrma.pfb>
+Output written on bozza10.pdf (10 pages, 125139 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
- 67 named destinations out of 1000 (max. 500000)
- 53 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 
