@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  18 JUL 2026 09:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 JUL 2026 10:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1340,7 +1340,7 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 10.51207pt on input line 11.
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 48.
+(Font)              scaled to size 10.51207pt on input line 47.
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
@@ -1349,115 +1349,96 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 57.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.5886pt on input line 94.
+(Font)              scaled to size 10.5886pt on input line 93.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.73596pt on input line 94.
+(Font)              scaled to size 7.73596pt on input line 93.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.80197pt on input line 94.
+(Font)              scaled to size 5.80197pt on input line 93.
 
 [2]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 154.
+(Font)              scaled to size 11.52008pt on input line 153.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 154.
+(Font)              scaled to size 11.52008pt on input line 153.
  [3] [4]
 LaTeX Font Info:    Font shape `T1/mdbch/b/it' will be
-(Font)              scaled to size 10.51207pt on input line 267.
+(Font)              scaled to size 10.51207pt on input line 266.
 
 
-LaTeX Warning: Reference `sec:1-ham' on page 5 undefined on input line 278.
+LaTeX Warning: Reference `sec:1-ham' on page 5 undefined on input line 277.
 
 [5]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 293.
+(Font)              scaled to size 7.68005pt on input line 292.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 293.
+(Font)              scaled to size 5.76004pt on input line 292.
+ [6] [7] [8]
 
-Overfull \hbox (32.9903pt too wide) detected at line 302
-\OT1/mdbch/m/n/10.95 [[\OML/mdbch/m/it/10.95 a; b\OT1/mdbch/m/n/10.95 ]\OML/mdb
-ch/m/it/10.95 ; c\OT1/mdbch/m/n/10.95 ] = (\OML/mdbch/m/it/10.95 abc \OMS/mdbch
-/m/n/10.95 ^^@ \OML/mdbch/m/it/10.95 bac\OT1/mdbch/m/n/10.95 ) \OMS/mdbch/m/n/1
-0.95 ^^@ \OML/mdbch/m/it/10.95 c\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 ab 
-\OMS/mdbch/m/n/10.95 ^^@ \OML/mdbch/m/it/10.95 ba\OT1/mdbch/m/n/10.95 ) = \OML/
-mdbch/m/it/10.95 abc \OMS/mdbch/m/n/10.95 ^^@ \OML/mdbch/m/it/10.95 bac \OT1/md
-bch/m/n/10.95 + (\OMS/mdbch/m/n/10.95 ^^@\OML/mdbch/m/it/10.95 cab \OT1/mdbch/m
-/n/10.95 + \OML/mdbch/m/it/10.95 cba\OT1/mdbch/m/n/10.95 ) + (\OML/mdbch/m/it/1
-0.95 bca \OMS/mdbch/m/n/10.95 ^^@ \OML/mdbch/m/it/10.95 bca\OT1/mdbch/m/n/10.95
- ) + (\OML/mdbch/m/it/10.95 acb \OMS/mdbch/m/n/10.95 ^^@ \OML/mdbch/m/it/10.95 
-acb\OT1/mdbch/m/n/10.95 ) = \OMS/mdbch/m/n/10.95 ^^@\OT1/mdbch/m/n/10.95 [[\OML
-/mdbch/m/it/10.95 b; c\OT1/mdbch/m/n/10.95 ]\OML/mdbch/m/it/10.95 ; a\OT1/mdbch
-/m/n/10.95 ] \OMS/mdbch/m/n/10.95 ^^@ \OT1/mdbch/m/n/10.95 [[\OML/mdbch/m/it/10
-.95 c; a\OT1/mdbch/m/n/10.95 ]\OML/mdbch/m/it/10.95 ; b\OT1/mdbch/m/n/10.95 ]\O
-ML/mdbch/m/it/10.95 :
- []
-
-[6] [7] [8]
-
-Package hyperref Warning: No autoref name for `definition' on input line 471.
+Package hyperref Warning: No autoref name for `definition' on input line 470.
 
 
-Package hyperref Warning: No autoref name for `definition' on input line 501.
+Package hyperref Warning: No autoref name for `definition' on input line 500.
 
 [9]
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 513.
+ 512.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 513.
+(Font)              scaled to size 10.51207pt on input line 512.
 [10] [11]
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 619.
+(Font)              scaled to size 10.51207pt on input line 618.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 619.
+(Font)              scaled to size 7.68005pt on input line 618.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 619.
+(Font)              scaled to size 5.76004pt on input line 618.
  [12] [13]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 706.
+(Font)              scaled to size 23.88496pt on input line 705.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 706.
+(Font)              scaled to size 23.88496pt on input line 705.
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 706.
+(Font)              scaled to size 10.51207pt on input line 705.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 706.
+(Font)              scaled to size 11.73846pt on input line 705.
  [14
 
 ] (./bozza.aux)
@@ -1476,13 +1457,13 @@ Package logreq Info: Writing requests to 'bozza.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33485 strings out of 478268
- 635419 string characters out of 5846347
- 1417993 words of memory out of 5000000
- 51026 multiletter control sequences out of 15000+600000
+ 33486 strings out of 478268
+ 635435 string characters out of 5846347
+ 1418035 words of memory out of 5000000
+ 51027 multiletter control sequences out of 15000+600000
  536735 words of font info for 127 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,10n,106p,1078b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,10n,106p,1085b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
@@ -1500,10 +1481,10 @@ dbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathd
 esign/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
 c/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
 /public/cm-super/sftt1095.pfb>
-Output written on bozza.pdf (14 pages, 194075 bytes).
+Output written on bozza.pdf (14 pages, 193757 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
+ 323 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
  110 named destinations out of 1000 (max. 500000)
  37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

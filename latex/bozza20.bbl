@@ -1,0 +1,172 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{bratteliOperatorAlgebrasQuantum1981}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=5bdad1e8881d241508992d86f9adfef9}{%
+           family={Bratteli},
+           familyi={B\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0e65107932ea41e3207ae249522b1100}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Derek\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{fullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{bibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorbibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-540-10381-3}
+      \field{langid}{english}
+      \field{pagetotal}{505}
+      \field{shorttitle}{Operator Algebras and Quantum Statistical Mechanics. 2}
+      \field{title}{Operator Algebras and Quantum Statistical Mechanics. 2: {{Equilibrium}} States ; Models in Quantum Statistical Mechanics}
+      \field{year}{1981}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/44JKBCVF/cirelli_kahler_algebraic.pdf;/Users/tommasopedroni/Zotero/storage/BCPE8WYY/geometrical_formulation_qm.pdf;/Users/tommasopedroni/Zotero/storage/R39SQJQT/Bratteli e Robinson - 1981 - Operator algebras and quantum statistical mechanics. 2 Equilibrium states \; models in quantum stati.pdf;/Users/tommasopedroni/Zotero/storage/UU2QB243/BZ-on-compact-kahler.pdf;/Users/tommasopedroni/Zotero/storage/ZXI6SLR5/RQM on Kahler space.pdf
+      \endverb
+    \endentry
+    \entry{reedMethodsModernMathematical2003}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a3df488eb434e4eefcbaa7c9a62c89c5}{%
+           family={Reed},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7269c7c834dddf30f6b8e7cb7b0d4790}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Beijing}%
+      }
+      \list{publisher}{1}{%
+        {World Published Corporation}%
+      }
+      \strng{namehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{fullhash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{bibnamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authorbibnamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authornamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authorfullhash}{957d82a72e39507187acf84770b1bfa7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{OCLC: 659934039}
+      \field{isbn}{978-7-5062-5931-6}
+      \field{langid}{english}
+      \field{title}{Methods of Modern Mathematical Physics. {{I}}, {{Functional}} Analysis}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/YAFRZYB6/Methods of modern mathematical physics (Michael Reed, Barry Simon) (z-library.sk, 1lib.sk, z-lib.sk).pdf
+      \endverb
+    \endentry
+    \entry{bratteliOperatorAlgebrasQuantum}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5bdad1e8881d241508992d86f9adfef9}{%
+           family={Bratteli},
+           familyi={B\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0e65107932ea41e3207ae249522b1100}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Derek\bibnamedelima W},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{fullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{bibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorbibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Operator Algebras and Quantum Statistical Mechanics}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/7I5D7UAK/Bratteli e Robinson - Operator algebras and quantum statistical mechanics.pdf
+      \endverb
+    \endentry
+    \entry{strocchiIntroductionMathematicalStructure2005}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f0fd3a0c94648b9cb81b5c5b8f4defe6}{%
+           family={Strocchi},
+           familyi={S\bibinitperiod},
+           given={Franco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hackensack, NJ}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{fullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{bibnamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authorbibnamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authornamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authorfullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-981-256-431-3}
+      \field{langid}{english}
+      \field{number}{27}
+      \field{pagetotal}{146}
+      \field{series}{Advanced Series in Mathematical Physics}
+      \field{shorttitle}{An Introduction to the Mathematical Structure of Quantum Mechanics}
+      \field{title}{An Introduction to the Mathematical Structure of Quantum Mechanics: A Short Course for Mathematicians}
+      \field{year}{2005}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/I4BT6HJH/Strocchi - 2005 - An introduction to the mathematical structure of quantum mechanics a short course for mathematician.pdf;/Users/tommasopedroni/Zotero/storage/WRNKUFG2/An Introduction to the Mathematical Structure of Quantum Mechanics A Short Course for Mathematicians, Second Edition (F. Strocchi) (Z-Library).pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
