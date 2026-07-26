@@ -166,6 +166,40 @@
       \verb /Users/tommasopedroni/Zotero/storage/I4BT6HJH/Strocchi - 2005 - An introduction to the mathematical structure of quantum mechanics a short course for mathematician.pdf;/Users/tommasopedroni/Zotero/storage/WRNKUFG2/An Introduction to the Mathematical Structure of Quantum Mechanics A Short Course for Mathematicians, Second Edition (F. Strocchi) (Z-Library).pdf
       \endverb
     \endentry
+    \entry{landsmanMathematicalTopicsClassical1998}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fa9d87631d9792e37049c30d224c84eb}{%
+           family={Landsman},
+           familyi={L\bibinitperiod},
+           given={Nicholas\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{fullhash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{bibnamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authorbibnamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authornamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authorfullhash}{fa9d87631d9792e37049c30d224c84eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4612-7242-7}
+      \field{langid}{english}
+      \field{series}{Springer Monographs in Mathematics}
+      \field{title}{Mathematical Topics between Classical and Quantum Mechanics}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/SXXYEA9S/mathematical_topics_landsman.pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 JUL 2026 16:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  26 JUL 2026 14:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1329,6 +1329,10 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 5.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 6.72005pt on input line 5.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 9.60007pt on input line 5.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 6.72005pt on input line 5.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1365,6 +1369,12 @@ LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 6.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 5.76004pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
 (Font)              scaled to size 10.51207pt on input line 6.
@@ -1403,77 +1413,87 @@ LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 11.52008pt on input line 8.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 11.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 11.
+(Font)              scaled to size 10.51207pt on input line 13.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.5886pt on input line 12.
+(Font)              scaled to size 10.5886pt on input line 14.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.73596pt on input line 12.
+(Font)              scaled to size 7.73596pt on input line 14.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.80197pt on input line 12.
+(Font)              scaled to size 5.80197pt on input line 14.
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 15.
+ 20.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 15.
+(Font)              scaled to size 10.51207pt on input line 20.
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 55.
+(Font)              scaled to size 10.51207pt on input line 54.
 
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 11.60394pt on input line 69.
+(Font)              scaled to size 11.60394pt on input line 114.
 
+[2]
 
-LaTeX Warning: Reference `def:phase-space' on page 2 undefined on input line 70
-.
+LaTeX Warning: Reference `def:phase_space' on page 3 undefined on input line 12
+1.
 
-[2] [3]
-Overfull \hbox (12.72925pt too wide) in paragraph at lines 136--137
- [] 
- []
+[3]
+
+LaTeX Warning: Reference `def:phase_space' on page 4 undefined on input line 19
+5.
 
 [4]
 
-LaTeX Warning: Reference `def:poi-fun' on page 5 undefined on input line 193.
+LaTeX Warning: Reference `def:phase_space' on page 5 undefined on input line 23
+5.
 
-[5] [6] (./bozza20.aux)
+[5] [6] [7]
+
+LaTeX Warning: Reference `def:poi-fun' on page 8 undefined on input line 381.
+
+[8] [9] [10] [11]
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 515.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 515.
+ [12] (./bozza20.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `bozza20.out' has not changed.
-(rerunfilecheck)             Checksum: 915C36F748E91640593371273D384BE9;295.
+(rerunfilecheck)             Checksum: 56539B75D2F80B0B612D7C7B8510B11F;1517.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                bozza20
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'bozza20.run.xml'.
 \openout1 = `bozza20.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33342 strings out of 478268
- 633116 string characters out of 5846347
- 1416730 words of memory out of 5000000
- 50965 multiletter control sequences out of 15000+600000
- 520784 words of font info for 127 fonts, out of 8000000 for 9000
+ 33426 strings out of 478268
+ 634191 string characters out of 5846347
+ 1416824 words of memory out of 5000000
+ 51005 multiletter control sequences out of 15000+600000
+ 532379 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,8n,106p,1157b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,9n,106p,850b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{cite.0@strocchiIntroductionMathematicalStructure200
-5} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@bratteliOperatorAlgebrasQuantum} has been re
-ferenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@landsmanMathematicalTopicsClassical1998} has
+ been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{cite.0@reedMethodsModernMathematical2003} has been 
 referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{cite.0@bratteliOperatorAlgebrasQuantum1981} has bee
-n referenced but does not exist, replaced by a fixed one
+pdfTeX warning (dest): name{cite.0@bratteliOperatorAlgebrasQuantum} has been re
+ferenced but does not exist, replaced by a fixed one
 
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
@@ -1488,10 +1508,10 @@ r7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch
 /md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign
 /mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mat
 hdesign/mdbch/md-chrma.pfb>
-Output written on bozza20.pdf (6 pages, 104868 bytes).
+Output written on bozza20.pdf (12 pages, 138160 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 263 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

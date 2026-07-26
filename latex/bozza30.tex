@@ -1,0 +1,749 @@
+\input{preambolo_bozza}
+\setcounter{chapter}{2}
+\setcounter{section}{0}
+\begin{document}
+\section{Introduction to the Algebraic Formulation of Quantum Theories}
+
+The classical description of a physical system rests on the commutativity of the observable algebra $\A = C^0(\Gamma)$, a feature of the phase space picture rather than of the operational content of the theory. The algebraic formulation of quantum theories, developed starting from the pioneering work of von Neumann and Segal, prescinds from the nature of the quantum system and may be stated for systems with finitely many degrees of freedom as well as for quantum field theories. This framework has been developed to address the existence of non-equivalent representations of the canonical commutation relations with an infinite number of degrees of freedom, where a formulation in a fixed Hilbert space is inadequate. 
+
+Following the physical motivations underlying the algebraic formulation, we isolate the physical postulates on observables and states that generate a $C^*$-algebraic structure directly, without assuming commutativity or a phase space realisation. The resulting framework applies equally to classical and quantum systems.
+
+\subsection{Physical Postulates}
+
+The algebraic formulation falls back on two assumptions \cite[AA1, AA2]{moretti_alg}.
+
+\begin{definition}[Algebra of Observables]\label{def:obs-alg}
+	A physical system $\mathcal S$ is described by its observables, viewed now as self-adjoint elements in a certain $C^*$-algebra $\A_{\mathcal S}$ with unit $\Id$ associated to $\mathcal S$.
+\end{definition}
+
+\begin{definition}[Algebraic State]\label{def:state}
+	An algebraic state on $\A_{\mathcal S}$ is a linear functional $\omega : \A_{\mathcal S} \to \mathbb C$ such that
+	\[
+	\omega(a^*a) \ge 0 \quad \forall a \in \A_{\mathcal S}, \qquad \omega(\Id) = 1,
+	\]
+	that is, positive and normalised to 1.
+\end{definition}
+
+We stress that $\A_{\mathcal S}$ is not seen as a concrete $C^*$-algebra of operators on a given Hilbert space, but remains an abstract $C^*$-algebra. Physically, $\omega(a)$ is the expectation value of the observable $a \in \A_{\mathcal S}$ in state $\omega$.
+
+\subsection{Motivations for the Algebraic Approach}
+
+The most evident justification of the algebraic approach lies in its powerfulness. There have been a host of attempts to account for the above assumptions and their physical meaning, in full generality, yet none seems to be definitive. There are at least two interrelated basic issues to consider when attempting to justify them physically.
+
+\subsubsection{States and Expectation Values}
+
+The identification of the notions of state and expectation value would be natural within the Hilbert space formulation, where the class of observables includes orthogonal projectors corresponding to "yes-no" statements. The expectation value of one such observable coincides with the probability that the outcome of the measurement is "yes". The set of all those probabilities defines, in fact, a quantum state of the system. The analogues of these elementary propositions, however, generally do not belong to the $C^*$-algebra of observables in the algebraic formulation.
+
+Nevertheless, all experimental information on the measurement of $A$ in state $\omega$—the probabilities in particular—is recorded in the expectation values of the polynomials of $A$. Here, $p(A)$ is the observable whose values are given by the $p(a)$, for all values $a$ of $A$. To adopt this paradigm, therefore, we must assume that the set of observables must include all real polynomials $p(A)$ whenever it contains the observable $A$. This is in agreement with the much stronger requirement that observables form a $C^*$-algebra.
+
+Within the algebraic formulation, it is natural to suppose that the full set of observables and the whole set of states together encompass the maximum amount of information available on the physical system. As a byproduct of this assumption and of the identification of the notion of state with that of expectation value, we are committed to conclude that:
+
+\begin{enumerate}
+	\item States separate observables: two observables $A,B$ coincide if and only if the corresponding expectation values coincide: $A = B \iff \omega(A) = \omega(B)$ for all states $\omega$.
+	\item Observables separate states: two states $\omega,\omega'$ coincide if and only if the corresponding expectation values coincide: $\omega = \omega' \iff \omega(A) = \omega'(A)$ for all observables $A$.
+\end{enumerate}
+
+\subsubsection{Observables as a $C^*$-Algebra}
+
+An observable $A$ is defined in terms of a concrete experimental apparatus, which yields the numerical results of measurements in any state $\omega$. Since each concrete experimental apparatus has inevitable limitations that imply a scale bound independent of the state on which measurements are performed, the results of measurements of $A$ on the various states is a bounded set of real numbers. It is then natural to associate to each observable $A$ a finite bound:
+\[
+\|A\| := \sup_{\omega \in \Omega} |\omega(A)| < +\infty,
+\]
+where $\Omega$ is the set of all possible states. As the notation suggests, this bound can be interpreted as a norm.
+
+\subsection{Jordan Algebra Structure of Observables}
+
+Following the same route of the operational construction, objects like real linear combinations $\alpha A + \beta B$ of observables can be made physically meaningful even if $A$ and $B$ cannot be measured simultaneously: $\alpha A + \beta B$ is the observable whose expectation values verify $\omega(\alpha A + \beta B) = \alpha \omega(A) + \beta \omega(B)$ for every state $\omega$. Notice that, from the physical point of view, we are enlarging the class of observables, for we are assuming that new observables verifying the previous constraint exist (and thus they are uniquely determined, since their expectation values are known).
+
+The extension to complex combinations is now straightforward. All that on the one hand justifies the appearance of a complex vector space structure, equipped with an antilinear bijective and involutive operation (extending the previous one), $(\alpha A + \beta B)^* := \overline{\alpha} A + \overline{\beta} B$, and with a norm that extends the operational norm. This structure becomes a fully fledged normed $^*$-algebra if the construction is supplemented by an associative product that extends the one defined in each algebra of polynomials $p(A)$ generated by any fixed element $A$.
+
+However, before assuming associativity, the procedure gives rise to a generally non-distributive and non-associative Jordan product:
+\[
+A \circ B := \frac{1}{2}\left((A+B)^2 - A^2 - B^2\right).
+\]
+
+\begin{definition}[Jordan Algebra]\label{def:jordan-algebra}
+	A \emph{Jordan algebra} is a real vector space equipped with a commutative product $\circ$ that is distributive and weakly associative:
+	\[
+	A^2 \circ (B \circ A) = (A^2 \circ B) \circ A.
+	\]
+	No topology is assumed.
+\end{definition}
+
+Using the operational norm, one can prove the following properties.
+
+\begin{proposition}[Square of the Norm]\label{prop:norm-square}
+	For every observable $A \in \mathcal O$,
+	\[
+	\|A^2\| = \|A\|^2.
+	\]
+\end{proposition}
+
+\begin{proof}
+	Fix a state $\omega$. By definition of the norm $\|A\|\pm\omega(A) \ge \|A\| - |\omega(A)| \ge 0$, so the observables $\|A\|\Id \pm A$ are positive. Their product is a positive polynomial of $A$, and
+	\[
+	\|A\|^2 - \omega(A^2) = \omega\big((\|A\|\Id - A)(\|A\|\Id + A)\big) \ge 0 \qquad \forall \omega,
+	\]
+	which gives $\|A\|^2 \ge \|A^2\|$.
+	
+	Conversely $(\|A\|\Id \pm A)^2 = \|A\|^2\Id + A^2 \pm 2\|A\|A$ is positive, so for every state $\omega$
+	\[
+	2\|A\|\,|\omega(A)| \le \|A\|^2 + \omega(A^2) \le \|A\|^2 + \|A^2\|.
+	\]
+	Taking the supremum over $\omega$ on the left side gives $2\|A\|^2 \le \|A\|^2 + \|A^2\|$, hence $\|A\|^2 \le \|A^2\|$. The two inequalities together give the claim.
+\end{proof}
+
+\begin{proposition}[Jordan Cauchy-Schwarz Inequality]\label{prop:jordan-cs}
+	For all $A,B \in \mathcal O$ and every state $\omega$,
+	\[
+	|\omega(A\circ B)| \le \omega(A^2)^{1/2}\,\omega(B^2)^{1/2},
+	\]
+	and consequently,
+	\[
+	\|A\circ B\| \le \|A\|\,\|B\|.
+	\]
+\end{proposition}
+
+\begin{proof}
+	For real $\lambda$, positivity of the state $\omega$ applied to $(A+\lambda B)^2$ gives
+	\[
+	0 \le \omega\big((A+\lambda B)^2\big) = \omega(A^2) + \lambda^2 \omega(B^2) + 2\lambda\,\omega(A\circ B) \qquad \forall \lambda \in \R.
+	\]
+	The right side is a quadratic in $\lambda$ that never becomes negative, so its discriminant is non-positive, which is exactly the first inequality. Taking the supremum over $\omega$ and using Proposition \ref{prop:norm-square} on $\|A\|^2$ and $\|B\|^2$ gives the second.
+\end{proof}
+
+Weak associativity of $\circ$ is a further consequence, shown by Jordan, von Neumann and Wigner to follow from $A^{n+1}=A\circ A^n$ together with formal reality. The resulting structure carries a distributive weakly associative Jordan product on a Banach space.
+
+\begin{definition}[Jordan Banach Algebra]\label{def:jb-algebra}
+	A \emph{Jordan Banach algebra}, or \emph{JB algebra}, is a Jordan algebra $\mathcal O$ equipped with a norm making it a Banach space and satisfying
+	\[
+	\|A\circ B\| \le \|A\|\,\|B\|, \qquad \|A^2\| = \|A\|^2, \qquad \|A^2\| \le \|A^2+B^2\|
+	\]
+	for all $A,B \in \mathcal O$.
+\end{definition}
+
+\subsection{Lie-Jordan Algebras}
+
+Similarly to what happens in the Hilbert space formulation, if $p$ denotes a general polynomial with two entries, and $A$ and $B$ are observables that cannot be measured simultaneously, the interpretation of $p(A,B)$ turns out to be very difficult. Certainly, the product of the $C^*$-algebra provides a sound mathematical meaning to $p(A,B)$, though it does not elucidate its physical meaning in terms of $A$ and $B$. That said, it is difficult to justify the existence of a $C^*$-algebra product in the complex vector space of extended observables, even assuming the existence of a meaningful Jordan product and norm.
+
+Another, much stronger, possibility is to assume—without any true physical justification—that the real linear space of observables is also equipped with a Lie-algebra structure of pure quantum nature, and that the two products enjoy the properties below.
+
+\begin{definition}[Lie-Jordan Algebra]\label{def:lie-jordan}
+	A (real) Jordan algebra $\mathcal O$ equipped with a Lie bracket $\{\cdot,\cdot\}$ is called a (real) \emph{Lie-Jordan algebra} when, for a constant $c \in \mathbb R$, it satisfies:
+	\[
+	(A\circ B)\circ C - A\circ (B\circ C) = \frac{c}{4}\{\{A,C\}, B\} \quad \text{for all } A,B,C \in \mathcal O,
+	\]
+	and furthermore the Leibniz rule is valid:
+	\[
+	\{A, B\circ C\} = \{A,B\}\circ C + \{A,C\}\circ B \quad \text{for all } A,B,C \in \mathcal O.
+	\]
+\end{definition}
+
+From the physical side, in our context it is natural to assume $c = \hbar^2$. Moreover, if we look at the Hamiltonian formulations of classical physics, $\{\cdot,\cdot\}$ could be interpreted as the quantum analogue of the Poisson bracket. In other words, the Lie bracket should be understood as the standard commutator of (self-adjoint) observables multiplied by $i\hbar$:
+\[
+\{A,B\} := \frac{i}{\hbar}[A,B].
+\]
+
+A posteriori, the Lie-Jordan structure arises quite naturally when one knows that (complexified) observables form a $^*$-algebra. In fact, given a complex $^*$-algebra, by defining the Lie bracket in terms of the standard commutator and setting
+\[
+A\circ B = \frac{1}{2}(AB + BA),
+\]
+one finds a natural real Lie-Jordan algebra when restricting to the real space of self-adjoint elements. In particular:
+\[
+AB = A\circ B + \frac{i\hbar}{2}\{A,B\}.
+\]
+
+The procedure can be reversed if we assume that observables possess a Lie-Jordan structure. Given a real Lie-Jordan algebra $\mathcal O$ with $c = \hbar^2$, requiring the above relation produces an associative complex $^*$-algebra. We can perform this on $\mathcal O^{\mathbb C} := \mathbb C \otimes \mathcal O$: the involution $^*$ is $(a\otimes A)^* = \overline{a}\otimes A$ for every $a \in \mathbb C$ and $A \in \mathcal O$, and the associative product is given by extending the relation $\mathbb C$-linearly.
+
+It is important to notice that the Lie-Jordan algebra structure can be equipped with a natural norm. After completion, this will generate an associated $C^*$-algebra. Coming back to physics, it is finally worth stressing that with this formulation both the non-commutativity and non-associativity underlying the algebra of observables appear to have a quantum nature, and seem to realise quantum deformations of classical structures, in the sense that commutativity and associativity are restored as soon as $\hbar \rightarrow 0$. However, a relic of quantum non-commutativity remains in the Poisson bracket even at classical level.
+
+\subsection{From JB Algebras to C*-Algebras}
+
+A Segal system or JB algebra admitting an embedding into a C*-algebra is called \emph{special}, and \emph{exceptional} otherwise. The classification of exceptional JB algebras shows that every JB algebra contains a unique exceptional ideal which is characterised by the property that every factor representation is onto the 27-dimensional Albert algebra. The Albert algebra is too small to accommodate the observables of a physical system, so we assume the observables define a special distributive Segal system, equivalently a JC algebra, and therefore generate a C*-algebra.
+
+\begin{definition}[JC Algebra]\label{def:jc-algebra}
+	A JB algebra $\mathcal O$ isometrically isomorphic to a Jordan subalgebra of self-adjoint elements of a $C^*$-algebra is called a \emph{JC algebra}.
+\end{definition}
+
+The full mathematical setting of quantum mechanics can in fact be recovered from the C*-algebraic structure of the observables together with the operational information of non-commutativity encoded in the Heisenberg uncertainty relations, through the GNS construction, the Gelfand-Naimark theorem, and von Neumann's theorem.
+
+\begin{definition}[Physical System]\label{def:physical-system}
+	A physical system is defined by
+	\begin{enumerate}
+		\item a $C^*$-algebra $\A$ of observables with identity $\Id$,
+		\item a set $\mathcal S$ of physical states, namely normalized positive linear functionals on $\A$, such that $\mathcal S$ separates the observables and the observables separate $\mathcal S$.
+	\end{enumerate}
+\end{definition}
+
+The set $\mathcal S$ is called full when it separates the observables. In the mathematical literature every normalized positive linear functional on $\A$ is by definition a state, while here $\mathcal S$ is only required to be full, and may in principle be a proper subset of all such functionals. This definition generalises the classical picture beyond the commutative case, and in the commutative case it recovers the classical picture through the Gelfand-Naimark representation of $\A$ as $C^0(X)$ on the Gelfand spectrum $X$.
+
+Positivity in $\A$ admits a purely algebraic characterisation: $\omega(A) \ge 0$ for every $\omega \in \mathcal S$ if and only if $A = B^*B$ for some $B \in \A$, and every positive linear functional is automatically bounded by the norm and its own value at the identity:
+\[
+|\omega(A)| \le \|A\|\,\omega(\Id).
+\]
+
+\begin{definition}[Spectrum and Normal Elements]\label{def:spectrum}
+	The \emph{spectrum} of $A \in \A$ is
+	\[
+	\sigma(A) = \{\lambda \in \mathbb C \mid \lambda\Id - A \text{ has no two-sided inverse in } \A\}.
+	\]
+	An element $A$ is \emph{normal} if it commutes with its adjoint, $AA^* = A^*A$.
+\end{definition}
+
+If $A$ is normal and $\lambda \in \sigma(A)$, there exists a positive linear functional $\omega$ on $\A$ with $\omega(A) = \lambda$. The spectrum of a normal element is therefore a set of possible expectations, and the positive linear functionals separate the normal elements of $\A$. Since every $A \in \A$ decomposes into self-adjoint, in particular normal, parts
+\[
+A = \frac{A+A^*}{2} - i\,\frac{iA-iA^*}{2},
+\]
+the states separate the whole of $\A$, closing the duality between observables and states with which this construction began.
+	\newpage
+	\subsection*{$\mathbf{C^*}$-algebra description of General Physical Systems}
+	
+	The classical description obtained above rests on the commutativity of the observable algebra $\A = C^0(\Gamma)$, a feature of the phase space picture rather than of the operational content of the theory. Following \cite[Sect. 1.3]{strocchiIntroductionMathematicalStructure2005}, we isolate the physical postulates on observables and states that generate a $C^*$-algebraic structure directly, without assuming commutativity or a phase space realisation. The resulting framework applies equally to classical and quantum systems and justifies Definition \ref{def:obs-alg} and Definition \ref{def:state} on operational grounds rather than by assumption.
+	
+	An observable is understood operationally, as a physical quantity measured by a concrete apparatus. For a real number $\lambda$ the observable $\lambda A$ is measured by rescaling the apparatus associated to $A$, for instance by rescaling a pointer scale. Squaring the apparatus scale defines the observable $A^2$, and more generally the powers $A^m$ satisfy $A^mA^n = A^{m+n}$. The zeroth power $A^0$ always returns the value $1$ regardless of the state of the system, so every zeroth power is identified with a single element denoted $\Id$. A polynomial of $A$ is defined by taking the corresponding polynomial function of the apparatus scale as the new apparatus.
+	
+	\begin{definition}[Positive Observable]\label{def:positive-observable}
+		Let $A$ be an observable. $A$ is \emph{positive} if every result of a measurement of $A$ is a non-negative real number. Equivalently $A$ is positive if $A = B^2$ for some observable $B$.
+	\end{definition}
+	
+	If $\mathcal P_1(A)$ and $\mathcal P_2(A)$ are positive polynomials of the same observable $A$, their product $\mathcal P_1(A)\mathcal P_2(A)$ is again positive, since it is itself a polynomial of $A$ built from squares.
+	
+	\medskip
+	A state $\omega$ of the system is identified through the average of repeated measurements of an observable in that state, exactly as in the classical case. Restricted to the still purely operational set $\mathcal O$ of observables, before any linear structure is imposed, this average is homogeneous
+	\[
+	\omega(\lambda A) = \lambda\, \omega(A), \qquad \forall \lambda \in \R,
+	\]
+	and additive on powers of a single observable
+	\[
+	\omega(A^n + A^m) = \omega(A^n) + \omega(A^m).
+	\]
+	A physical state is completely determined by its expectations, so two states agreeing on every observable must coincide.
+	
+	\begin{definition}[Completeness of the States]\label{def:completeness-states}
+		The set of physical states is \emph{complete} with respect to the observables if for any two states $\omega_1, \omega_2$
+		\[
+		\omega_1(A) = \omega_2(A) \quad \forall A \in \mathcal O \ \implies\ \omega_1 = \omega_2.
+		\]
+	\end{definition}
+	
+	The same completeness runs in the other direction. If two observables $A$ and $B$ satisfy $\omega(A)=\omega(B)$ for every physical state $\omega$, no experiment can tell them apart, and they must be identified. This defines an equivalence relation $A \sim B$ on $\mathcal O$, and from here on $\mathcal O$ denotes the set of equivalence classes under $\sim$. Since $\omega(A^0) = 1$ for every state, all zeroth powers fall into a single class $\Id$, and every state satisfies the normalisation $\omega(\Id) = 1$. A state is therefore a normalized real functional on $\mathcal O$.
+	
+	Positivity of $A=B^2$ under a state follows from the meaning of expectation as an average of non-negative numbers
+	\[
+	\omega(A) = \omega(B^2) \ge 0.
+	\]
+	By completeness this correspondence can be reversed. Positivity of $A$ is equivalent to positivity of all its expectations, and a polynomial $\mathcal P(A)$ of $A$ is positive precisely when $\omega(\mathcal P(A)) \ge 0$ for every physical state $\omega$.
+	
+	\medskip
+	Every concrete apparatus has a bounded scale, so the results of measuring $A$ across all states form a bounded set of real numbers. This motivates a norm on $\mathcal O$.
+	
+	\begin{definition}[Operational Norm]\label{def:operational-norm}
+		For an observable $A \in \mathcal O$ the norm of $A$ is
+		\[
+		\|A\| := \sup_\omega |\omega(A)| < \infty.
+		\]
+	\end{definition}
+	
+	Homogeneity of the states gives $\|\lambda A\| = |\lambda|\,\|A\|$ for every real $\lambda$, and completeness of the states guarantees that $\|A\|=0$ forces $A=0$, so $\|\cdot\|$ is indeed a norm.
+	
+	\begin{proposition}[Square of the Norm]\label{prop:norm-square}
+		For every observable $A \in \mathcal O$,
+		\[
+		\|A^2\| = \|A\|^2.
+		\]
+	\end{proposition}
+	\begin{proof}
+		Fix a state $\omega$. By definition of the norm $\|A\|\pm\omega(A) \ge \|A\| - |\omega(A)| \ge 0$, so the observables $\|A\|\Id \pm A$ are positive. Their product is a positive polynomial of $A$, and
+		\[
+		\|A\|^2 - \omega(A^2) = \omega\big((\|A\|\Id - A)(\|A\|\Id + A)\big) \ge 0 \qquad \forall \omega,
+		\]
+		which gives $\|A\|^2 \ge \|A^2\|$.
+		
+		Conversely $(\|A\|\Id \pm A)^2 = \|A\|^2\Id + A^2 \pm 2\|A\|A$ is positive, so for every state $\omega$
+		\[
+		2\|A\|\,|\omega(A)| \le \|A\|^2 + \omega(A^2) \le \|A\|^2 + \|A^2\|.
+		\]
+		Taking the supremum over $\omega$ on the left side gives $2\|A\|^2 \le \|A\|^2 + \|A^2\|$, hence $\|A\|^2 \le \|A^2\|$. The two inequalities together give the claim.
+	\end{proof}
+	
+	\noindent The norm just constructed makes $\mathcal O$ a normed set, not yet a vector space. Some pairs of observables do admit a well defined sum with a direct operational meaning, the kinetic and the potential energy being the standard example, in the sense that an observable $C$ exists with
+	\[
+	\omega(C) = \omega(A) + \omega(B) \qquad \forall \omega,
+	\]
+	so that $C = A+B$ by the duality between states and observables. For a generic pair this sum need not correspond to any element of $\mathcal O$, and extending $\mathcal O$ so that every pair admits a sum, with the states becoming positive linear functionals on the enlarged set, is a genuine extrapolation beyond the strictly operational content of the theory. The same applies to the powers $(A+B)^n$ of a sum, postulated to satisfy the same algebraic identities as the powers of a single observable. We keep the name $\mathcal O$ for the resulting extension.
+	
+	With this extension the triangle inequality $\|A+B\|\le\|A\|+\|B\|$ follows from the definition of the norm, so $\mathcal O$ is a normed real vector space. Every state is continuous in the norm topology, since $|\omega(A)|\le\|A\|$, and therefore extends uniquely to the completion of $\mathcal O$, a real Banach space still denoted $\mathcal O$.
+	
+	\medskip
+	\begin{definition}[Jordan Product]\label{def:jordan-product}
+		On the real Banach space $\mathcal O$ the \emph{Jordan product} of two observables $A,B$ is
+		\[
+		A \circ B := \frac{1}{2}\big((A+B)^2 - A^2 - B^2\big) = B \circ A.
+		\]
+	\end{definition}
+	
+	On the polynomial subalgebra generated by a single observable $A$ the Jordan product reduces to the ordinary algebraic product, $A \circ A^n = A^{n+1}$, but distributivity and associativity of $\circ$ are not guaranteed in general.
+	
+	\begin{definition}[Jordan Algebra]\label{def:jordan-algebra}
+		A \emph{Jordan algebra} is a real vector space equipped with a commutative product $\circ$ that is distributive and weakly associative
+		\[
+		A^2 \circ (B \circ A) = (A^2 \circ B) \circ A.
+		\]
+		No topology is assumed.
+	\end{definition}
+	
+	Distributivity of the Jordan product follows already from its homogeneity
+	\[
+	A \circ (\lambda B) = \lambda (A \circ B), \qquad \lambda \in \R,
+	\]
+	together with the symmetry of $\circ$, which gives $(\lambda A) \circ B = \lambda (A \circ B)$ as well.
+	
+	\begin{proposition}[Homogeneity Implies Distributivity]\label{prop:homog-distr}
+		Let $\circ$ be a homogeneous Jordan product on $\mathcal O$ as above. Then for all $A,B,C \in \mathcal O$
+		\[
+		(A+B)\circ C = A \circ C + B \circ C.
+		\]
+	\end{proposition}
+	\begin{proof}
+		From Definition \ref{def:jordan-product},
+		\[
+		(A+B)^2 = A^2+B^2+2A\circ B, \qquad (A-B)^2 = A^2+B^2-2A\circ B,
+		\]
+		so that
+		\[
+		A \circ B = \frac14\big((A+B)^2-(A-B)^2\big), \qquad A^2+B^2 = \frac12\big((A+B)^2+(A-B)^2\big).
+		\]
+		Applying the first identity three times,
+		\[
+		2(A+B)\circ C - 2A\circ C - 2B \circ C = \big[(A+B+C)^2+A^2\big]+\big[B^2+C^2\big]-\big[(A+B)^2+(A+C)^2\big]-(B+C)^2.
+		\]
+		The second identity applied to each bracketed sum of squares on the right side shows it vanishes identically, so $(A+B)\circ C = A\circ C+B\circ C$.
+	\end{proof}
+	
+	\begin{proposition}[Jordan Cauchy-Schwarz Inequality]\label{prop:jordan-cs}
+		For all $A,B \in \mathcal O$ and every state $\omega$
+		\[
+		|\omega(A\circ B)| \le \omega(A^2)^{1/2}\,\omega(B^2)^{1/2},
+		\]
+		and consequently
+		\[
+		\|A\circ B\| \le \|A\|\,\|B\|.
+		\]
+	\end{proposition}
+	\begin{proof}
+		For real $\lambda$, positivity of the state $\omega$ applied to $(A+\lambda B)^2$ gives
+		\[
+		0 \le \omega\big((A+\lambda B)^2\big) = \omega(A^2) + \lambda^2 \omega(B^2) + 2\lambda\,\omega(A\circ B) \qquad \forall \lambda \in \R.
+		\]
+		The right side is a quadratic in $\lambda$ that never becomes negative, so its discriminant is non-positive, which is exactly the first inequality. Taking the supremum over $\omega$ and using Proposition \ref{prop:norm-square} on $\|A\|^2$ and $\|B\|^2$ gives the second.
+	\end{proof}
+	
+	Weak associativity of $\circ$ is a further consequence, shown by Jordan, von Neumann and Wigner to follow from $A^{n+1}=A\circ A^n$ together with formal reality, the property that a sum of squares $\sum_i A_i^2 = 0$ forces every $A_i = 0$ \cite[Sect. 1.3]{strocchiIntroductionMathematicalStructure2005}. The resulting structure carries a distributive weakly associative Jordan product on a Banach space.
+	
+	\begin{definition}[Jordan Banach Algebra]\label{def:jb-algebra}
+		A \emph{Jordan Banach algebra}, or \emph{JB algebra}, is a Jordan algebra $\mathcal O$ equipped with a norm making it a Banach space and satisfying
+		\[
+		\|A\circ B\| \le \|A\|\,\|B\|, \qquad \|A^2\| = \|A\|^2, \qquad \|A^2\| \le \|A^2+B^2\|
+		\]
+		for all $A,B \in \mathcal O$.
+	\end{definition}
+	
+	\medskip
+	A related structure was proposed by Segal for the description of quantum systems, in which distributivity of $\circ$ is dropped in favour of two weaker continuity requirements on the powers.
+	
+	\begin{definition}[Segal System]\label{def:segal-system}
+		A \emph{Segal system} is a real Banach space $\mathcal O$ equipped with a squaring operation $A \mapsto A^2$ such that
+		\begin{enumerate}
+			\item the map $A \mapsto A^2$ is continuous in the norm topology.
+			\item $\|A^2-B^2\| \le \max(\|A\|^2,\|B\|^2)$ for all $A,B \in \mathcal O$.
+		\end{enumerate}
+	\end{definition}
+	
+	\begin{proposition}\label{prop:jb-is-segal}
+		Every JB algebra is a Segal system.
+	\end{proposition}
+	\begin{proof}
+		For the first axiom, distributivity gives $A_n^2 - A^2 = (A_n+A)\circ(A_n-A)$, so
+		\[
+		\|A_n^2-A^2\| \le \|A_n-A\|\,(\|A_n-A\|+\|2A\|),
+		\]
+		and $A_n \to A$ forces $A_n^2 \to A^2$. For the second axiom, positivity of the squares and of the states gives, for every $\omega$,
+		\[
+		|\omega(A^2)-\omega(B^2)| \le \max(\omega(A^2),\omega(B^2)) \le \max(\|A^2\|,\|B^2\|) = \max(\|A\|^2,\|B\|^2),
+		\]
+		and taking the supremum over $\omega$ on the left side yields the claim.
+	\end{proof}
+	
+	A Segal system already recovers much of the mathematical apparatus needed for quantum mechanics, including compatible observables and their joint probability distributions \cite[Sect. 1.3]{strocchiIntroductionMathematicalStructure2005}, but the language simplifies considerably if the distributive case, the JB algebra $\mathcal O$, is embedded into an associative $C^*$-algebra $\A$ generated by $\mathcal O$.
+	
+	Such an embedding requires an associative, not necessarily commutative, product on $\A$ recovering the Jordan product
+	\[
+	A \circ B = \frac12 (AB+BA) \qquad \forall A,B \in \mathcal O,
+	\]
+	an involution $*$ on $\A$ extending the identity on $\mathcal O$ and satisfying
+	\[
+	(\lambda A + \mu B)^* = \bar\lambda A + \bar\mu B, \qquad (AB)^* = BA, \qquad \forall A,B\in\mathcal O,\ \lambda,\mu\in\mathbb C,
+	\]
+	and positivity of $A^*A$ for every $A \in \A$, together with an extension of the states to $\A$ by linearity satisfying
+	\[
+	\omega(A^*A) \ge 0, \qquad \|AB\| \le \|A\|\,\|B\|, \qquad \|A^*A\| = \|A^*\|\,\|A\| \qquad \forall A,B \in \A.
+	\]
+	
+	\begin{proposition}[Positivity and the Involution]\label{prop:involution-positivity}
+		For every $A \in \A$ and every state $\omega$
+		\[
+		\omega(A^*) = \overline{\omega(A)}, \qquad \|A^*\| = \|A\|.
+		\]
+	\end{proposition}
+	\begin{proof}
+		Positivity gives $\omega((A+\Id)^*(A+\Id)) \ge 0$ and $\omega((iA+\Id)^*(iA+\Id))\ge 0$, both real numbers. Expanding the first,
+		\[
+		\omega(A^*A) + \omega(A^*)+\omega(A)+1 \in \R \ \implies\ \operatorname{Im}\,\omega(A^*) = -\operatorname{Im}\,\omega(A),
+		\]
+		and expanding the second,
+		\[
+		\omega(A^*A) - i\,\omega(A^*)+i\,\omega(A)+1 \in \R \ \implies\ \operatorname{Re}\,\omega(A^*) = \operatorname{Re}\,\omega(A).
+		\]
+		Together these give $\omega(A^*)=\overline{\omega(A)}$. Taking the supremum over $\omega$ then gives $\|A^*\|=\|A\|$.
+	\end{proof}
+	
+	The resulting extension $\A$ carries the structure of a $C^*$-algebra with identity $\Id$ as in Definition \ref{def:unital-c-star-algebra}, the original set $\mathcal O$ sits inside $\A$ as the subset of self-adjoint elements, and $\A$ is generated by $\mathcal O$.
+	
+	\begin{definition}[JC Algebra]\label{def:jc-algebra}
+		A JB algebra $\mathcal O$ isometrically isomorphic to a Jordan subalgebra of self-adjoint elements of a $C^*$-algebra is called a \emph{JC algebra}. A Segal system or JB algebra admitting such an embedding is \emph{special}, and \emph{exceptional} otherwise.
+	\end{definition}
+	
+	\medskip
+	To discuss which JB algebras admit such an embedding it is convenient to complexify $\mathcal O$.
+	
+	\begin{definition}[Complexification]\label{def:complexification}
+		The \emph{complexification} of $\mathcal O$ is
+		\[
+		\mathcal O^{\mathbb C} = \{A+iB \mid A,B \in \mathcal O\}.
+		\]
+		The Jordan product extends by distributivity
+		\[
+		(A+iB)\circ(C+iD) = (A\circ C - B \circ D) + i(A\circ D+B\circ C),
+		\]
+		the states extend by linearity $\omega(A+iB)=\omega(A)+i\,\omega(B)$, and the involution is $(A+iB)^* = A-iB$.
+	\end{definition}
+	
+	The extended states satisfy $\omega(A+iB) = \overline{\omega(A-iB)}$ and $\omega\big((A+iB)\circ(A-iB)\big) = \omega(A^2+B^2) \ge 0$, and the norm on $\mathcal O^{\mathbb C}$ is invariant under the involution, $\|C\|=\|C^*\|$ for every $C \in \mathcal O^{\mathbb C}$.
+	
+	\begin{theorem}[Classification of Exceptional JB Algebras]\label{thm:exceptional-classification}
+		Every JB algebra $\mathcal O$ contains a unique exceptional ideal $J$ such that $\mathcal O/J$ is a JC algebra, and $J$ is characterized by the property that every factor representation of $J$ is onto the $27$-dimensional Albert algebra.
+	\end{theorem}
+	
+	The Albert algebra is too small to accommodate the observables of a physical system, so from here on we assume the observables define a special distributive Segal system, equivalently a JC algebra, and therefore generate a $C^*$-algebra.
+	
+	\medskip
+	The full mathematical setting of quantum mechanics can in fact be recovered from the $C^*$-algebraic structure of the observables together with the operational information of non-commutativity encoded in the Heisenberg uncertainty relations, through the GNS construction, the Gelfand-Naimark theorem, and von Neumann's theorem \cite[Theorem 2.2.4, Theorem 2.3.1]{strocchiIntroductionMathematicalStructure2005}. This provides an alternative to the Dirac-von Neumann axioms, and motivates the following framework, adopted for the remainder of this thesis.
+	
+	\begin{definition}[Physical System]\label{def:physical-system}
+		A physical system is defined by
+		\begin{enumerate}
+			\item a $C^*$-algebra $\A$ of observables with identity $\Id$, as in Definition \ref{def:unital-c-star-algebra}.
+			\item a set $\mathcal S$ of physical states, namely normalized positive linear functionals on $\A$ as in Definition \ref{def:state}, such that $\mathcal S$ separates the observables and the observables separate $\mathcal S$.
+		\end{enumerate}
+	\end{definition}
+	
+	The set $\mathcal S$ is called full when it separates the observables. In the mathematical literature every normalized positive linear functional on $\A$ is by definition a state, while here $\mathcal S$ is only required to be full, and may in principle be a proper subset of all such functionals. Definition \ref{def:physical-system} generalises Definition \ref{def:obs-alg} beyond the commutative case, and in the commutative case it recovers the classical picture through the Gelfand-Naimark representation of $\A$ as $C^0(X)$ on the Gelfand spectrum $X$.
+	
+	The same content is packaged, in the algebraic quantum field theory literature, into two formal axioms, recorded here for later use.
+	
+	\begin{definition}[Algebraic Axioms AA1-AA2]\label{def:AA-axioms}
+		A physical system $S$ is described, following \cite[Sect. 14.1.1]{morettiSpectralTheoryQuantum2017}, by
+		\begin{enumerate}
+			\item[\textnormal{AA1.}] the self-adjoint elements of a unital $C^*$-algebra $\A_S$, called the observables of $S$.
+			\item[\textnormal{AA2.}] the algebraic states, namely the linear functionals $\omega \colon \A_S \to \mathbb C$ satisfying
+			\[
+			\omega(A^*A) \ge 0 \quad \forall A \in \A_S, \qquad \omega(\Id) = 1.
+			\]
+		\end{enumerate}
+	\end{definition}
+	
+	Axiom AA1 recovers Definition \ref{def:physical-system} once the observables of $S$ are identified with the self-adjoint part of $\A_S$, and axiom AA2 is precisely Definition \ref{def:state}. Crucially $\A_S$ is not assumed to act on any fixed Hilbert space and remains an abstract $C^*$-algebra, a concrete representation being recovered only afterwards through the GNS construction. Two separation properties follow from AA1-AA2 and deserve to be singled out.
+	
+	\begin{proposition}[Mutual Separation]\label{prop:mutual-separation}
+		Let $\A_S$ be a unital $C^*$-algebra of observables with state space $\mathcal S$.
+		\begin{enumerate}
+			\item Observables separate states, $\omega=\omega'$ if and only if $\omega(A)=\omega'(A)$ for every $A \in \A_S$.
+			\item States separate observables, $A=B$ if and only if $\omega(A)=\omega(B)$ for every $\omega \in \mathcal S$.
+		\end{enumerate}
+	\end{proposition}
+	\begin{proof}
+		The first property follows at once from linearity of the states, since every element of $\A_S$, self-adjoint or not, is a complex linear combination of self-adjoint elements. The second property is a consequence of the Gelfand-Naimark representation of $\A_S$ as an algebra of Hilbert space operators, in which distinct self-adjoint operators are separated by vector states \cite[Sect. 14.1.2]{morettiSpectralTheoryQuantum2017}.
+	\end{proof}
+	
+	\medskip
+	Positivity in $\A$ admits a purely algebraic characterisation, $\omega(A) \ge 0$ for every $\omega \in \mathcal S$ if and only if $A=B^*B$ for some $B \in \A$ \cite[Appendix C, Proposition 1.6.2]{strocchiIntroductionMathematicalStructure2005}, and every positive linear functional is automatically bounded by the norm and its own value at the identity
+	\[
+	|\omega(A)| \le \|A\|\,\omega(\Id) \qquad \text{\cite[Appendix C, Proposition 1.6.3]{strocchiIntroductionMathematicalStructure2005}}.
+	\]
+	
+	\begin{definition}[Spectrum and Normal Elements]\label{def:spectrum}
+		The \emph{spectrum} of $A \in \A$ is
+		\[
+		\sigma(A) = \{\lambda \in \mathbb C \mid \lambda\Id - A \text{ has no two-sided inverse in } \A\}.
+		\]
+		An element $A$ is \emph{normal} if it commutes with its adjoint, $AA^* = A^*A$.
+	\end{definition}
+	
+	\begin{proposition}\label{prop:spectrum-expectation}
+		If $A$ is normal and $\lambda \in \sigma(A)$, there exists a positive linear functional $\omega$ on $\A$ with $\omega(A) = \lambda$ \cite[Appendix C]{strocchiIntroductionMathematicalStructure2005}.
+	\end{proposition}
+	
+	The spectrum of a normal element is therefore a set of possible expectations, and Proposition \ref{prop:spectrum-expectation} shows the positive linear functionals separate the normal elements of $\A$. Since every $A \in \A$ decomposes into self-adjoint, in particular normal, parts
+	\[
+	A = \frac{A+A^*}{2} - i\,\frac{iA-iA^*}{2},
+	\]
+	the states separate the whole of $\A$, closing the duality between observables and states with which this construction began.
+	
+	\medskip
+	The Jordan product alone does not exhaust the algebraic content of a quantum system. Whenever $\mathcal O$ arises, as above, from the self-adjoint part of an associative complex $*$-algebra, a further bracket is available, and its interplay with the Jordan product is the genuinely quantum ingredient of the theory \cite[Sect. 14.1.2]{morettiSpectralTheoryQuantum2017}.
+	
+	\begin{definition}[Lie-Jordan Algebra]\label{def:lie-jordan}
+		A real Jordan algebra $\mathcal O$ as in Definition \ref{def:jordan-algebra}, equipped with a Lie bracket $\{\cdot,\cdot\}$, is a \emph{Lie-Jordan algebra} if there is a constant $c \in \R$ such that
+		\[
+		(A\circ B)\circ C - A \circ (B \circ C) = \frac{c}{4}\{\{A,C\},B\} \qquad \forall A,B,C \in \mathcal O,
+		\]
+		and the Leibniz rule holds
+		\[
+		\{A, B\circ C\} = \{A,B\}\circ C + \{A,C\}\circ B \qquad \forall A,B,C \in \mathcal O.
+		\]
+	\end{definition}
+	
+	Physically the constant $c$ fixes the scale of the non-commutativity, and in a quantum system $c=\hbar^2$, with $\{\cdot,\cdot\}$ playing the role of the quantum analogue of the Poisson bracket, understood through Dirac's correspondence principle as the commutator of self-adjoint observables rescaled by $\hbar$.
+	
+	\begin{proposition}\label{prop:cstar-lie-jordan}
+		Let $\A$ be an associative complex $*$-algebra, and set on its self-adjoint part $\mathcal O$
+		\[
+		A \circ B := \frac12(AB+BA), \qquad \{A,B\} := \frac{1}{i\hbar}(AB-BA).
+		\]
+		Then $\mathcal O$ is a Lie-Jordan algebra with $c=\hbar^2$, and
+		\[
+		AB = A \circ B + \frac{i\hbar}{2}\{A,B\} \qquad \forall A,B \in \mathcal O.
+		\]
+	\end{proposition}
+	\begin{proof}
+		Both $A\circ B$ and $\{A,B\}$ are self-adjoint whenever $A,B$ are, so $\circ$ and $\{\cdot,\cdot\}$ close on $\mathcal O$. Writing $[A,B]:=AB-BA=i\hbar\{A,B\}$, associativity of $\A$ gives
+		\[
+		(A\circ B)\circ C - A\circ(B\circ C) = \frac14\big(BAC+CAB-ACB-BCA\big) = \frac14\big(B[A,C]-[A,C]B\big) = -\frac14[[A,C],B].
+		\]
+		Substituting $[A,C]=i\hbar\{A,C\}$ twice gives $[[A,C],B] = -\hbar^2\{\{A,C\},B\}$, so
+		\[
+		(A\circ B)\circ C - A\circ(B\circ C) = \frac{\hbar^2}{4}\{\{A,C\},B\},
+		\]
+		which is Definition \ref{def:lie-jordan} with $c=\hbar^2$. The last identity follows from $AB=\frac12(AB+BA)+\frac12(AB-BA) = A\circ B + \frac{i\hbar}{2}\{A,B\}$.
+	\end{proof}
+	
+	The construction can be reversed. Given a real Lie-Jordan algebra $\mathcal O$ with $c=\hbar^2$, extending
+	\[
+	AB := A \circ B + \frac{i\hbar}{2}\{A,B\}
+	\]
+	$\mathbb C$-linearly to the complexification $\mathcal O^{\mathbb C}$ of Definition \ref{def:complexification} produces an associative $*$-algebra, and after completion this generates a $C^*$-algebra \cite[Sect. 14.1.2]{morettiSpectralTheoryQuantum2017}.
+	
+	Both the non-commutativity and the non-associativity of the observable algebra are therefore of order $\hbar$, and the ordinary product becomes commutative and associative in the limit $\hbar \to 0$, while the bracket $\{\cdot,\cdot\}$ survives as the classical Poisson bracket. A relic of the quantum structure thus persists at the classical level, in the Poisson bracket itself, even once the associative product has become commutative. This deformative reading of the passage between $\A$ and $\mathcal O$ anticipates the strict deformation quantisation programme developed later in this thesis.
+	\newpage
+	\section{Hilbert Spaces and Linear Operators}
+	The mathematical framework of quantum mechanics and many areas of analysis rests on the theory of linear operators on Hilbert spaces. This document collects the essential definitions and theorems that form the foundation of the subject. We begin with the inner product structure, then proceed through bounded and unbounded operators, their adjoints, and the crucial Riesz representation theorem. Special attention is given to the distinction between pre-Hilbert and Hilbert spaces, and the completion process that bridges the gap. We also introduce the notion of cyclic vectors, which play a role in the spectral theory of operators.
+	
+	\subsection*{Inner Product Spaces and Hilbert Spaces}
+	
+	The concept of an inner product generalises the dot product of Euclidean space to arbitrary complex vector spaces, allowing us to define lengths and angles.
+	
+	\begin{definition}[Hermitian Inner Product]
+		Let \(V\) be a complex vector space. A Hermitian inner product is a map \(S:V\times V\to \mathbb C\) satisfying for all \(v,w,v',u\in V\) and \(\alpha,\beta\in\mathbb C\):
+		\begin{enumerate}
+			\item \(S(v,v)\ge 0\) for all \(v\in V\).
+			\item \(S(v,\alpha v' + \beta w) = \alpha S(v,v') + \beta S(v,w)\).
+			\item \(S(v,w) = \overline{S(w,v)}\).
+			\item \(S(v,v)=0\) if and only if \(v=0\).
+		\end{enumerate}
+		We usually write \((\cdot,\cdot)\) for the inner product.
+	\end{definition}
+	
+	An inner product induces a norm via \(\|v\| = \sqrt{(v,v)}\). This norm satisfies the Cauchy-Schwarz inequality, which is fundamental for all subsequent developments.
+	
+	\begin{definition}[Pre-Hilbert Space]
+		A complex vector space \(V\) equipped with a Hermitian inner product is called a pre-Hilbert space. The induced norm makes it a normed space, but it may not be complete.
+	\end{definition}
+	
+	Completeness is a crucial requirement for many analytic results, so we introduce Hilbert spaces.
+	
+	\begin{definition}[Hilbert Space]
+		A Hilbert space \(\mathcal H\) is a pre-Hilbert space that is complete with respect to the norm induced by the inner product. That is, every Cauchy sequence converges to an element of \(\mathcal H\).
+	\end{definition}
+	
+	Pre-Hilbert spaces that are not complete arise naturally, for example, the space of continuous functions on an interval with the \(L^2\) inner product. However, every pre-Hilbert space can be completed to a Hilbert space, much like the completion of \(\mathbb Q\) to \(\mathbb R\).
+	
+	\begin{theorem}[Completion of a Pre-Hilbert Space]
+		Let \((V,(\cdot,\cdot))\) be a pre-Hilbert space. Then there exists a Hilbert space \(\mathcal H\) and an injective linear isometry \(J:V\to\mathcal H\) such that \(J(V)\) is dense in \(\mathcal H\). Moreover, this completion is unique up to unitary isomorphism. The inner product on \(\mathcal H\) extends that of \(V\) in the sense that \((Jv,Jw)_{\mathcal H} = (v,w)_V\) for all \(v,w\in V\).
+	\end{theorem}
+	
+	\begin{proof}
+		This is a special case of the completion of normed spaces, as given in \cite[Theorem 2.15]{ReedSimon1980}. The inner product extends by continuity.
+	\end{proof}
+	
+	\subsection*{Linear Operators and Dual Spaces}
+	
+	We now introduce the objects that act on these spaces: linear operators.
+	
+	\begin{definition}[Linear Operator]
+		Let \(V\) and \(V'\) be complex vector spaces. A linear operator \(T:V\to V'\) is a map satisfying
+		\[
+		T(\alpha v + \beta w) = \alpha T(v) + \beta T(w)
+		\]
+		for all \(v,w\in V\) and \(\alpha,\beta\in\mathbb C\). The collection of all such operators is denoted by \(\mathcal L(V,V')\).
+	\end{definition}
+	
+	When the spaces are normed, we distinguish between algebraic and topological duals.
+	
+	\begin{definition}[Algebraic and Topological Dual]
+		Let \(X\) be a complex vector space. The algebraic dual \(X^*\) is the vector space of all linear functionals \(f:X\to\mathbb C\). If \(X\) is a normed space, the topological dual \(X'\) is the subspace of continuous linear functionals, i.e., \(X' = \mathcal B(X,\mathbb C)\), where \(\mathcal B(X,\mathbb C)\) denotes the bounded linear functionals.
+	\end{definition}
+	
+	\section{Bounded Operators}
+	
+	The most tractable operators are those that are bounded, equivalently continuous. This equivalence is a cornerstone of functional analysis.
+	
+	\begin{definition}[Operator Norm and Boundedness]
+		Let \(X,Y\) be normed spaces over \(\mathbb C\). An operator \(T\in\mathcal L(X,Y)\) is bounded if there exists \(K\ge 0\) such that
+		\[
+		\|T(v)\|_Y \le K\|v\|_X \quad \text{for all } v\in X.
+		\]
+		The operator norm is defined as
+		\[
+		\|T\| = \sup_{v\neq 0} \frac{\|T(v)\|_Y}{\|v\|_X} = \sup_{\|v\|_X=1} \|T(v)\|_Y.
+		\]
+		The set of all bounded linear operators from \(X\) to \(Y\) is denoted by \(\mathcal B(X,Y)\).
+	\end{definition}
+	
+	The following theorem justifies the term ``bounded'' as equivalent to continuity.
+	
+	\begin{theorem}[Continuity iff Boundedness]
+		Let \(T:X\to Y\) be a linear operator between normed spaces. The following are equivalent:
+		\begin{enumerate}
+			\item \(T\) is continuous at \(0\in X\).
+			\item \(T\) is continuous everywhere.
+			\item \(T\) is bounded.
+		\end{enumerate}
+	\end{theorem}
+	
+	\begin{proof}
+		See \cite[Theorem 2.24]{ReedSimon1980}. The proof uses the linearity of \(T\) and the definition of continuity in terms of \(\epsilon\)-\(\delta\).
+	\end{proof}
+	
+	A useful extension property holds for bounded operators defined on dense subspaces.
+	
+	\begin{proposition}[Extension of Bounded Operators]
+		Let \(X\) be a normed space, \(Y\) a Banach space, and \(W\subset X\) a dense subspace. If \(T\in\mathcal B(W,Y)\), then there exists a unique \(\widetilde T\in\mathcal B(X,Y)\) such that \(\widetilde T|_W = T\) and \(\|\widetilde T\| = \|T\|\).
+	\end{proposition}
+	
+	\begin{proof}
+		For \(x\in X\), choose a sequence \(\{w_n\}\subset W\) with \(w_n\to x\). Since \(T\) is bounded, \(\{T(w_n)\}\) is Cauchy in \(Y\), hence converges. Define \(\widetilde T(x)\) as the limit. This is well-defined and extends \(T\). The norm equality follows by taking limits of the norm inequality.
+	\end{proof}
+	
+	\subsection*{The Adjoint Operator}
+	
+	The adjoint is a fundamental operation on operators between Hilbert spaces, generalising the conjugate transpose of matrices.
+	
+	\begin{proposition}[Adjoint of Bounded Operators]
+		Let \(\mathcal H_1,\mathcal H_2\) be Hilbert spaces, and let \(T\in\mathcal B(\mathcal H_1,\mathcal H_2)\). Then there exists a unique operator \(T^*:\mathcal H_2\to\mathcal H_1\) such that
+		\[
+		(\phi,T\psi)_2 = (T^*\phi,\psi)_1
+		\]
+		for all \(\psi\in\mathcal H_1\), \(\phi\in\mathcal H_2\). Moreover, \(T^*\in\mathcal B(\mathcal H_2,\mathcal H_1)\) and \(\|T^*\|=\|T\|\).
+	\end{proposition}
+	
+	\begin{proof}
+		For fixed \(\phi\), the map \(\psi\mapsto(\phi,T\psi)_2\) is a continuous linear functional, so by the Riesz representation theorem (see Section \ref{sec:riesz}) there exists a unique \(T^*\phi\in\mathcal H_1\) representing it. The linearity and boundedness follow.
+	\end{proof}
+	
+	The adjoint operation allows us to single out important subclasses of operators.
+	
+	\begin{definition}[Special Classes of Bounded Operators]\label{def:special}
+		Let \(\mathcal H\) be a Hilbert space and \(T\in\mathcal B(\mathcal H)\). We call
+		\begin{enumerate}
+			\item \(T\) normal if \(TT^* = T^*T\).
+			\item \(T\) self-adjoint if \(T=T^*\).
+			\item \(T\) isometric if \(\|T\psi\|=\|\psi\|\) for all \(\psi\in\mathcal H\), equivalently \(T^*T=\mathbb I\).
+			\item \(T\) unitary if it is isometric and surjective, equivalently \(T^*T = TT^* = \mathbb I\).
+			\item \(T\) positive if \((\psi,T\psi)\ge 0\) for all \(\psi\in\mathcal H\), denoted \(T\ge 0\).
+		\end{enumerate}
+	\end{definition}
+	
+	Self-adjoint operators have real eigenvalues and are the natural observables in quantum mechanics. Positive operators are a subset of self-adjoint ones and admit unique positive square roots.
+	
+	\subsection*{Unbounded Operators}
+	
+	Not all physically relevant operators are bounded; the position and momentum operators are prime examples. We must therefore extend our framework to operators defined only on a dense domain.
+	
+	\begin{definition}[Unbounded Operator]
+		Let \(V\) be a complex vector space. A linear operator \(T:D(T)\subseteq V\to V\) is defined on its domain \(D(T)\). The graph of \(T\) is
+		\[
+		G(T) = \{(v,T(v)) \in V\oplus V \mid v\in D(T)\}.
+		\]
+	\end{definition}
+	
+	For such operators, the adjoint is defined only if the domain is dense.
+	
+	\begin{definition}[Adjoint of Unbounded Operators]
+		Let \(\mathcal H\) be a Hilbert space and \(T:D(T)\subseteq\mathcal H\to\mathcal H\) be densely defined. The adjoint \(T^*\) has domain
+		\[
+		D(T^*) = \{\phi\in\mathcal H \mid \exists \Psi_\phi\in\mathcal H \text{ such that } (\phi,T\psi)=(\Psi_\phi,\psi)\ \forall \psi\in D(T)\}.
+		\]
+		For \(\phi\in D(T^*)\), we set \(T^*\phi = \Psi_\phi\).
+	\end{definition}
+	
+	The adjoint may not be densely defined, but if it is, we can iterate the operation.
+	
+	\begin{definition}[Classification of Densely Defined Operators]\label{def:unbounded}
+		Let \(\mathcal H\) be a Hilbert space and \(T:D(T)\subseteq\mathcal H\to\mathcal H\) be densely defined.
+		\begin{enumerate}
+			\item \(T\) is Hermitian if \((\phi,T\psi)=(T\phi,\psi)\) for all \(\phi,\psi\in D(T)\).
+			\item \(T\) is symmetric if it is Hermitian and \(D(T)\) is dense.
+			\item \(T\) is self-adjoint if \(T=T^*\).
+			\item \(T\) is essentially self-adjoint if it is symmetric, \(D(T^*)\) is dense, and \(T^{**}=T^*\).
+			\item \(T\) is normal if \(T^*T = TT^*\) on their standard domains.
+		\end{enumerate}
+	\end{definition}
+	
+	The Hellinger-Toeplitz theorem highlights the obstruction to defining Hermitian operators everywhere.
+	
+	\begin{theorem}[Hellinger-Toeplitz]
+		If \(T\) is a Hermitian operator defined on all of a Hilbert space \(\mathcal H\), then \(T\) is bounded and self-adjoint.
+	\end{theorem}
+	
+	\begin{proof}
+		See \cite[Theorem 2.25]{ReedSimon1980}. The proof uses the closed graph theorem and the uniform boundedness principle.
+	\end{proof}
+	
+	Thus, any unbounded Hermitian operator must have a proper domain, and the choice of domain is essential.
+	
+	\subsection*{The Riesz Representation Theorem and Cyclic Vectors}
+	
+	The Riesz representation theorem is a cornerstone of Hilbert space theory, identifying the continuous dual with the space itself.
+	
+	\begin{theorem}[Riesz Representation Theorem]\label{sec:riesz}
+		Let \(\mathcal H\) be a Hilbert space. For every continuous linear functional \(F:\mathcal H\to\mathbb C\), there exists a unique \(\psi_F\in\mathcal H\) such that
+		\[
+		F(\psi) = (\psi_F,\psi) \quad \text{for all } \psi\in\mathcal H.
+		\]
+		Moreover, the map \(F\mapsto\psi_F\) is a conjugate-linear isometry from the dual \(\mathcal H'\) onto \(\mathcal H\).
+	\end{theorem}
+	
+	\begin{proof}
+		If \(F\equiv 0\), take \(\psi_F=0\). Otherwise, let \(K=\Ker F\), which is a closed hyperplane. Choose \(\phi\in K^\perp\) with \(F(\phi)\neq 0\). Then set \(\psi_F = \overline{F(\phi)}/\|\phi\|^2\,\phi\). For any \(\psi\in\mathcal H\), write \(\psi = k + \lambda\phi\) with \(k\in K\), \(\lambda = F(\psi)/F(\phi)\). Then \((\psi_F,\psi) = (\psi_F,\lambda\phi) = \lambda F(\phi) = F(\psi)\). Uniqueness follows by taking differences.
+	\end{proof}
+	
+	This theorem allows us to identify the adjoint of a bounded operator as above. It also underpins the notion of cyclic vectors.
+	
+	\begin{definition}[Cyclic Vector]
+		Let \(\mathcal H\) be a Hilbert space and let \(\mathcal A\) be a collection of operators on \(\mathcal H\). A vector \(v\in\mathcal H\) is cyclic for \(\mathcal A\) if the linear span of \(\{A v : A\in\mathcal A\}\) is dense in \(\mathcal H\). In the context of a single operator \(T\), \(v\) is cyclic if \(\Span\{T^n v : n\ge 0\}\) is dense.
+	\end{definition}
+	
+	Cyclic vectors are instrumental in the spectral theorem and in the study of irreducible representations.
+	
+	The structures presented here—inner products, Hilbert spaces, bounded and unbounded operators, adjoints, and the Riesz theorem—form the essential language of quantum mechanics and modern analysis. The completion of pre-Hilbert spaces ensures that we can always work in a complete setting, while the notion of cyclic vectors is useful for diagonalizing operators. For further reading and detailed proofs of the statements given without full derivation, we refer to the classic text \cite{ReedSimon1980}.
+\end{document}

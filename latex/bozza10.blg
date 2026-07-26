@@ -1,15 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bozza10.blg'
-[100] biber-darwin:340> INFO - === Thu Jul 16, 2026, 17:15:41
-[123] Biber.pm:418> INFO - Reading 'bozza10.bcf'
-[215] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
-[228] Biber.pm:4383> INFO - Processing section 0
-[243] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[248] bibtex.pm:1713> INFO - LaTeX decoding ...
-[307] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[375] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[376] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[376] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[377] bbl.pm:654> INFO - Writing 'bozza10.bbl' with encoding 'UTF-8'
-[378] bbl.pm:757> INFO - Output to bozza10.bbl
+[97] biber-darwin:340> INFO - === Wed Jul 22, 2026, 10:09:28
+[113] Biber.pm:418> INFO - Reading 'bozza10.bcf'
+[202] Biber.pm:972> INFO - Found 2 citekeys in bib section 0
+[215] Biber.pm:4383> INFO - Processing section 0
+[226] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[231] bibtex.pm:1713> INFO - LaTeX decoding ...
+[300] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[353] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[353] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[353] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[353] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[355] bbl.pm:654> INFO - Writing 'bozza10.bbl' with encoding 'UTF-8'
+[357] bbl.pm:757> INFO - Output to bozza10.bbl
+[357] Biber.pm:130> WARN - Entry 'leeIntroductionSmoothManifolds2013' (bib.bib): Invalid format '2013' of date field 'date' - ignoring
+[357] Biber.pm:130> WARN - ISBN '978-1-4899-9475-2 978-1-4419-9981-8' in entry 'leeIntroductionSmoothManifolds2013' is invalid - run biber with '--validate_datamodel' for details.
+[357] Biber.pm:130> WARN - Entry 'abrahamFoundationsMechanics2008' (bib.bib): Invalid format '2008' of date field 'date' - ignoring
+[357] Biber.pm:132> INFO - WARNINGS: 3

@@ -2344,20 +2344,20 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
+    <bcf:citekey order="1">bratteliOperatorAlgebrasQuantum</bcf:citekey>
     <bcf:citekey order="2">reedMethodsModernMathematical2003</bcf:citekey>
     <bcf:citekey order="3">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="4">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="5">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="6">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="7">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="4">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="5">reedMethodsModernMathematical2003</bcf:citekey>
+    <bcf:citekey order="6">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="7">reedMethodsModernMathematical2003</bcf:citekey>
     <bcf:citekey order="8">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="9">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="10">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="11">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
-    <bcf:citekey order="12">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="13">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="14">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="9">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="10">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="11">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="12">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="13">reedMethodsModernMathematical2003</bcf:citekey>
+    <bcf:citekey order="14">landsmanMathematicalTopicsClassical1998</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

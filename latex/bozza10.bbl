@@ -19,6 +19,42 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{leeIntroductionSmoothManifolds2013}{book}{}
+      \name{author}{1}{}{%
+        {{hash=36896354ee3aedc1a13d683ea773634e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{fullhash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{bibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
+      \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. edition}
+      \field{isbn}{978-1-4899-9475-2 978-1-4419-9981-8}
+      \field{langid}{english}
+      \field{number}{218}
+      \field{pagetotal}{708}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Introduction to Smooth Manifolds}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/5M93NE72/Lee-Intro-to-Smooth-Manifolds.pdf
+      \endverb
+      \warn{\item Entry 'leeIntroductionSmoothManifolds2013' (bib.bib): Invalid format '2013' of date field 'date' - ignoring}
+    \endentry
     \entry{abrahamFoundationsMechanics2008}{book}{}
       \name{author}{2}{}{%
         {{hash=a662cea2e646a5fd5025f8ebbdaaae10}{%
@@ -44,20 +80,19 @@
       \strng{authorbibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
       \strng{authornamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
       \strng{authorfullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2nd ed}
       \field{isbn}{978-0-8218-4438-0}
       \field{pagetotal}{826}
       \field{title}{Foundations of Mechanics}
-      \field{year}{2008}
-      \field{dateera}{ce}
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/V5A2HTA2/ABRAHAM MECCANICA RAZIONALE.pdf
       \endverb
       \keyw{Celestial mechanics,Geometry Differential,Mechanics Analytic}
+      \warn{\item Entry 'abrahamFoundationsMechanics2008' (bib.bib): Invalid format '2008' of date field 'date' - ignoring}
     \endentry
   \enddatalist
 \endrefsection

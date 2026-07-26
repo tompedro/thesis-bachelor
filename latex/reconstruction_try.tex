@@ -1,0 +1,131 @@
+\subsection*{Reconstruction of the Symplectic Manifold}
+
+The Gelfand isomorphism identifies the pure states of a commutative C*-algebra with the points of the Gelfand spectrum \(X\). At this stage, \(X\) is only a compact Hausdorff topological space. The observables in \(\A\) correspond to continuous functions \(C_0(X)\), which are structurally insufficient to formulate differential dynamics. To rigorously reconstruct the symplectic manifold, one must introduce a differential structure via a dense subalgebra as proved in \cite{landsmanMathematicalTopicsClassical1998}.
+
+\begin{definition}[Smooth Dense Subalgebra]\label{def:smooth-subalgebra}
+	Let \(\A\) be a commutative unital C*-algebra as in Definition \ref{def:c-star-algebra} with Gelfand spectrum \(X\) as in Definition \ref{def:character}. A \emph{smooth dense subalgebra} is a self-adjoint subalgebra \(\A^\infty \subset \A\) satisfying
+	\begin{enumerate}
+		\item \(\A^\infty\) is dense in \(\A\) with respect to the uniform norm.
+		\item There exists a smooth manifold \(M\) such that \(\A^\infty \cong C^\infty_0(M)\) as algebras.
+		\item \(\A^\infty\) is closed under the Poisson bracket \(\{\cdot,\cdot\}_M\) induced by the symplectic structure on \(M\) following Definition \ref{def:poi-fun}.
+	\end{enumerate}
+\end{definition}
+
+The differential structure on the Gelfand spectrum \(X\) is induced by the smooth dense subalgebra \(\A^\infty\) from Definition \ref{def:smooth-subalgebra}. Since \(\A^\infty\) is dense in \(\A\), the restriction map \(\sigma(\A) \to \sigma(\A^\infty)\) is a bijection. Hence we canonically identify \(X \equiv \sigma(\A^\infty)\). By construction, \(\A^\infty \cong C_0^\infty(M)\) for some smooth manifold \(M\), and the character space of \(C_0^\infty(M)\) is homeomorphic to \(M\) via point evaluations. Consequently, \(X\) is homeomorphic to \(M\). Pulling back the smooth atlas of \(M\) through this homeomorphism endows \(X\) with a differentiable structure. This standard identification is a cornerstone of the algebraic approach to classical mechanics.
+
+The commutativity of the C*-algebra \(\A\) implies that the standard algebraic commutator trivially vanishes, precluding the generation of dynamical evolution. A Hamiltonian formulation requires an additional Lie algebra structure, which is introduced strictly on \(\A^\infty\).
+
+\begin{definition}[Poisson Algebra]\label{def:poi-alg}
+	A Poisson algebra is an associative, commutative algebra \(\mathfrak{P}\) equipped with a Lie bracket \(\{\cdot,\cdot\}\) that acts as a derivation with respect to the associative product. Namely, it satisfies the Leibniz rule:
+	\[
+	\{f, gh\} = \{f, g\}h + g\{f, h\} \qquad \forall f, g, h \in \mathfrak{P}.
+	\]
+\end{definition}
+
+The Poisson bracket acts as a first-order differential operator. Consequently, it is intrinsically unbounded and discontinuous with respect to the uniform supremum norm of the C*-algebra \(\A\). Therefore, the Poisson structure cannot be extended to the full norm completion \(C_0(X)\). This topological obstruction necessitates that the Poisson algebra be identified strictly with the incomplete dense subalgebra \(\A^\infty\), deliberately sacrificing Banach completeness to preserve the Leibniz rule.
+
+By endowing \(\A^\infty\) with the structure of Definition \ref{def:poi-alg}, the space \(X\) is elevated to a Poisson manifold, a slightly different version of a symplectic manifold previously Defined in \ref{def:sympl-man}. On top of that, we will see that every self-adjoint element \(H \in \A^\infty\), the derivation \(\{H,\cdot\}\) uniquely induces a smooth Hamiltonian vector field on \(X\), recovering the classical Hamiltonian dynamics.
+
+\subsubsection*{Poisson Manifolds and Symplectic Leaves}
+
+The endowment of the dense subalgebra with a Poisson bracket naturally extends the geometric structure of the Gelfand spectrum, elevating it to a space more general than a symplectic manifold. The following definitions formalize the geometric objects that arise from this algebraic Poisson structure.
+
+\begin{definition}[Poisson Manifold]\label{def:poisson-manifold}
+	A \emph{Poisson manifold} is a smooth manifold \(M\) equipped with a Poisson bracket \(\{\cdot,\cdot\}\) on \(C^\infty(M)\) that satisfies Definition \ref{def:poi-alg}.
+\end{definition}
+
+\begin{definition}[Symplectic Leaf]\label{def:symplectic-leaf}
+	On a Poisson manifold \((M, \{\cdot,\cdot\})\), an equivalence relation is defined by declaring two points to be equivalent if they can be connected by a piecewise smooth curve whose tangent vectors are Hamiltonian vector fields \(X_f = \{f, \cdot\}\) for some \(f \in C^\infty(M)\). The equivalence classes are called \emph{symplectic leaves}. 
+\end{definition}
+
+\begin{remark}
+	Given a Poisson manifold \((M, \{\cdot,\cdot\})\) and symplectic leaves, as in Definition \ref{def:symplectic-leaf}, we can state that each symplectic leaf \(S \subset M\), carries a natural symplectic form \(\omega_S\) uniquely determined by
+	\[
+	\omega_S(X_f|_S, X_g|_S) = \{f,g\}|_S \qquad \forall f,g \in C^\infty(M).
+	\]
+	Therefore, on a Poisson manifold, there exists a family of symplectic leaves $\{S_\alpha\}$ each one of them is a symplectic manifold. 
+	The complete proof of this result is provided by \cite[Theorem 2.4.7]{landsmanMathematicalTopicsClassical1998}.
+\end{remark}
+
+Observe that a symplectic manifold \((M,\omega)\) is a special case of a Poisson manifold where the Poisson bracket is non-degenerate. In this case, the entire manifold is a single symplectic leaf. In general, a Poisson manifold decomposes into a disjoint union of symplectic leaves, each of which may have different dimensions, as shown in \cite[Definition 2.6.2 and 2.6.3, Theorem 2.4.7]{landsmanMathematicalTopicsClassical1998}. This decomposition is the geometric manifestation of the Casimir functions. As we have seen in Example \ref{ex:schur}, these functions \(C \in C^\infty(M)\) satisfy \(\{C,f\} = 0\) for all \(f\), which are constant on each symplectic leaf. 
+
+The classical spin system of Section \ref{sec:1-example} provides a concrete example. In fact, we will endow \(\mathbb{R}^3\) with the \(\mathfrak{so}(3)\)-Poisson bracket. This will become a Poisson manifold whose symplectic leaves are the spheres \(\mathbb{S}^2\) (and the origin), with the Casimir \(C = x_1^2+x_2^2+x_3^2\) constant on each leaf.
+
+\subsubsection*{The Algebraic Reconstruction Theorem}
+The preceding discussion can be formalised through the representation theory of Poisson algebras. As established above, given a commutative unital C*-algebra \(\A\) with a smooth dense subalgebra \(\A^\infty\), we have \(\A^\infty \cong C_0^\infty(P)\) for some Poisson manifold \(P\), and the Gelfand spectrum \(X \equiv P\) inherits the Poisson structure. Thus, in this setting, the relevant Poisson algebra is precisely \(\mathfrak P = C_0^\infty(P)\).
+
+The transition from such Poisson algebras to phase spaces is formalised through representation theory (see \cite[Definition 2.6.1]{landsmanMathematicalTopicsClassical1998}).
+
+\begin{definition}[Representation of a Poisson Algebra]\label{def:poisson-rep}
+	Let  \((S,\omega)\) be a symplectic manifold as in Definition \ref{def:sympl-man}. A \emph{representation} of a Poisson algebra \((\mathfrak{P}, \{\cdot,\cdot\})\) on S is a linear map 
+	\[
+	\pi: \mathfrak{P} \to C^\infty(S),
+	\]
+	satisfying:
+	\begin{enumerate}
+		\item \(\pi(fg) = \pi(f)\pi(g)\) (preserves the associative product),
+		\item \(\{\pi(f), \pi(g)\}_S = \pi(\{f,g\})\) (preserves the Poisson bracket),
+		\item completeness: if \(f \in \mathfrak{P}\) is complete (its Hamiltonian flow exists for all times), then \(\pi(f)\) is also complete.
+	\end{enumerate}
+\end{definition}
+
+\noindent The equivalence of representations captures the physical requirement that two representations that differ only by a symplectic transformation describe the same system.
+
+\begin{definition}[Equivalence of representations]\label{def:poi-rep-equiv}
+	Two representations \(\pi_1: \mathfrak{P} \to C^\infty(S_1)\) and \(\pi_2: \mathfrak{P} \to C^\infty(S_2)\) are \emph{equivalent} if there exists a symplectomorphism \(\varphi: S_1 \to S_2\) such that \(\pi_1(f) = \pi_2(f) \circ \varphi\) for all \(f \in \mathfrak{P}\).
+\end{definition}
+
+\noindent We now state the analogous definition of the irreducible representation presented in Definition \ref{def:irreps}.
+
+\begin{definition}[Irreducible Representation of a Poisson Algebra]\label{def:poisson-irrep}
+	Let \((S,\omega)\) be a symplectic manifold as in Definition \ref{def:sympl-man}, and let $\mathfrak{P}$ be a Poisson algebra.  Given $\pi: \mathfrak{P} \to C^\infty(S)$ a representation as in Definition \ref{def:poisson-rep}, it induces an action of \(\mathfrak{P}\) on \(S\) via the Hamiltonian vector fields \(X_{\pi(f)}\) for \(f \in \mathfrak{P}\), using Definition \ref{def:ham-fields}.  
+	
+	The representation is called \emph{irreducible} if the only invariant subsets of \(S\) under the action induced by $\pi$ are \(\varnothing\) and \(S\) itself. 
+\end{definition}
+
+With these definitions in place, we can state the central result of the algebraic reconstruction program. This theorem establishes that the symplectic leaves of the reconstructed Poisson manifold are precisely the irreducible representations of the smooth Poisson algebra.
+
+\begin{theorem}[Irreducible Representations of Smooth Poisson Algebras]\label{thm:poisson-rep}
+	Let \(P\) be a Poisson manifold and let \(\mathfrak P = C^\infty(P)\) be its Poisson algebra of smooth functions. Then, up to equivalence, every irreducible representation of \(\mathfrak P\) on a finite-dimensional symplectic manifold is given by restriction to a symplectic leaf \(S_\alpha \subset P\). Conversely, for each symplectic leaf \(S_\alpha \subset P\), the restriction map
+	\[
+	\pi_\alpha: \mathfrak P \to C^\infty(S_\alpha), \qquad f \mapsto f|_{S_\alpha},
+	\]
+	is an irreducible representation.
+	
+	In other words, the symplectic leaves of \(P\) are, up to symplectomorphism, exactly the irreducible representation spaces of \(\mathfrak P\).
+	STAI ANCORA RAPPRESENTANDO P SU P??
+\end{theorem}
+\begin{remark} Note that the theorem is stated in this simplified form for the purposes of the present work. The core bijective correspondence between irreducible representations and symplectic leaves is the essential structure. The complete proof, which relies on a chain of auxiliary results \cite[Propositions 2.3.5, 2.3.7, 2.6.4 and Corollary 2.6.5]{landsmanMathematicalTopicsClassical1998}, is given in \cite[Theorem 2.6.7]{landsmanMathematicalTopicsClassical1998} , where the general statement includes more complex scenarios.
+\end{remark}
+
+The symplectic leaves therefore play the role of the elementary building blocks of the classical phase space. \textbf{Classical Phase Space} is the \textbf{Space of Irreducible Representations} of the Poisson Algebra.
+
+\noindent When the Poisson bracket on \(\A^\infty\) vanishes identically. That is, when \(\{f,g\} = 0\) for all \(f,g \in \A^\infty\), the algebra is said to be \emph{a commutative Poisson Algebra}. In this case:
+
+\begin{enumerate}
+	\item The symplectic leaves of the associated Poisson manifold are just \textbf{points},
+	\item The irreducible representations of the Poisson algebra reduce to \textbf{characters},
+	\item The space of irreducible representations is precisely the \textbf{Gelfand spectrum} \(X = \sigma(\A)\).
+\end{enumerate}
+This is exactly the content of Gelfand's theorem applied to the dense subalgebra. Thus, the representation theory of Poisson algebras provides a \emph{geometric extension} of Gelfand duality: it replaces points by symplectic leaves, and characters by symplectic representations.
+
+\subsection*{Summary and Physical Interpretation}
+This algebraic reconstruction reveals a fundamental principle. \textbf{The geometry of phase space emerges from the representation theory of the algebra of observables}. 
+That is no longer viewed as a fundamental entity but rather as an emergent structure that arises from the representation theory of the algebra of observables. This principle will unify the classical and quantum descriptions and provide a common framework for both theories.
+
+To end up this chapter, let us clarify and summarize what we have found.
+\begin{enumerate}
+	\item Starting from a commutative unital C*-algebra $\A$, Gelfand's theorem \ref{thm:gelfand} identifies $\A$ with $C_0(X)$, where $X$ is the compact Hausdorff spectrum of characters.
+	
+	\item To encode differential geometry, a smooth dense subalgebra \(\A^\infty \subset \A\) is introduced via Definition \ref{def:smooth-subalgebra}. The subalgebra \(\A^\infty \cong C^\infty(X)\) endows \(X\) with a smooth structure.
+	
+	\item The commutative product of $\A$ cannot generate time evolution, so a Poisson bracket is imposed on $\A^\infty$ according to Definition \ref{def:poi-alg}, turning $\A^\infty$ into a Poisson algebra. This bracket is unbounded and hence cannot extend to the full C*-algebra.
+	
+	\item The Poisson algebra structure on $\A^\infty$ endows the smooth manifold $X$ with the geometry of a Poisson manifold as in Definition \ref{def:poisson-manifold}. 
+	
+	\item The irreducible representations of the Poisson algebra $\A^\infty$, as defined in Definitions \ref{def:poisson-rep} and \ref{def:poisson-irrep}, are classified by Theorem \ref{thm:poisson-rep}: They are in bijective correspondence with the symplectic leaves of the Poisson manifold.
+	
+	\item Consequently, the classical phase space is identified with the space of irreducible representations, which is precisely the disjoint union of symplectic leaves. In the case of a non-degenerate Poisson bracket the entire manifold is a single symplectic leaf, while for a vanishing Poisson bracket the leaves reduce to points and the reconstruction reproduces the original Gelfand spectrum $X$.
+\end{enumerate}
+
+It is also needed to give a physical meaning to the functional spaces seen in this section.
