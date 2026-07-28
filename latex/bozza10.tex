@@ -265,9 +265,9 @@ In addition to all these important properties, we can finally observe that the e
 The Jacobi identity just proved a structural link between the algebra of observables and the algebra of vector fields. Specifically, the bracket of the Hamiltonian vector fields corresponding to two functions should correspond to the Hamiltonian vector field of their Poisson bracket. The following theorem formalizes this correspondence, showing that the mapping from functions to vector fields is a Lie algebra homomorphism up to a sign.
 
 \begin{theorem}[Lie Algebra Homomorphism of Hamiltonian Vector Fields]\label{thm:ham-homomorphism}
-	Let $(M, \omega)$ be a symplectic manifold. The mapping $\mathcal{H}: C^\infty(M) \to \mathfrak{X}(M)$ defined by $f \mapsto \mathcal{H}_f = -X_f$, where $\iota_{\mathcal{H}_f}\omega = -df$, relates the Poisson algebra of smooth functions to the Lie algebra of vector fields via the identity:
+	Let $(M, \omega)$ be a symplectic manifold. The map $\mathcal{H}: C^\infty(M) \to \mathfrak{X}(M)$ defined by $f \mapsto \mathcal{H}_f = -X_f$, where $\iota_{\mathcal{H}_f}\omega = -df$, relates the Poisson algebra of smooth functions to the Lie algebra of vector fields via the identity
 	\[
-	\mathcal{H}_{\{f, g\}} = -[\mathcal{H}_f, \mathcal{H}_g] \qquad \forall f, g \in C^\infty(M).
+	\mathcal{H}_{\{f, g\}} = [\mathcal{H}_f, \mathcal{H}_g] \qquad \forall f, g \in C^\infty(M).
 	\]
 	Consequently, the map $f \mapsto -X_f$ constitutes a strict Lie algebra homomorphism from $(C^\infty(M), \{\cdot, \cdot\})$ to $(\mathfrak{X}(M), [\cdot, \cdot])$.
 \end{theorem}

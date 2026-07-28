@@ -3,15 +3,15 @@
 \setcounter{section}{6}
 \begin{document}
 	\section{Classical Mechanics as a Commutative $\mathbf{C^*}$-algebra}
-	The standard description of a physical system establishes geometry as the primary structure by defining the coordinate space before the algebra of continuous functions. The Gelfand theory of abelian $C^*$-algebras introduces a deep change of perspective for Hamiltonian mechanics. By exploiting the Gelfand-Naimark representation theorem one can completely reverse this relation and construct the theory starting from the abstract algebra of observables. The underlying compact Hausdorff topological space is then mathematically reconstructed as the intrinsic Gelfand spectrum of the algebra. This paradigm establishes that the algebraic encoding of physical quantities comes first while the geometrical description emerges consequently.
+	The standard description of a classical system establishes geometry as the primary source of the whole framework. The Gelfand theory of commutative $C^*$-algebras introduces a change of perspective for the foundation of Hamiltonian mechanics. By exploiting the Gelfand-Naimark representation theorem one can reverse this relation and construct the theory starting from the abstract algebra of observables. However, this framework reconstructs only a Hausdorff topological space through the Gelfand spectrum of the algebra. In fact, the full picture will be recovered adding missing structure to enrich the topological space with properties such as differentiability. This approach dictates that the algebra of physical observables can provide a self-contained axiomatic basis for the formulation of classical mechanics.
 	
 	\subsection*{Basic topics in $\mathbf{C^*}$-algebras theory}
-	To reconstruct classical theory using only the algebra of observables, we first need to present $C^*$-algebras. This abstract mathematical structure recurs in both classical and quantum descriptions of observables. As explained in Brattelli and Robinson \cite{bratteliOperatorAlgebrasQuantum}, this theory has profound applications in broad areas of mathematical physics. Here, we will present only the basic definitions to permit the reader to understand why Hamiltonian mechanics is the theory of abelian $C^*$-algebras.
+	To reconstruct classical theory algebraically, we first need to present $C^*$-algebras. This abstract mathematical structure recurs in both classical and quantum descriptions of observables. Specifically, we adopt this framework because involution naturally models the complex conjugation or the adjoint of physical quantities, while the underlying metric completeness ensures that the approximation of observables is rigorously well-defined. Here, we will present only the basic definitions to introduce the reader to the theory of commutative $C^*$-algebras following the approach of Brattelli and Robinson \cite[Chapter 2]{bratteliOperatorAlgebrasQuantum}.
 	
-	\noindent We begin by constructing the definition of a $^*$-algebra.
+	\noindent We begin by introducing the notion of an algebra, the basic structure on which the involution defining a $^*$-algebra will be built.
 	
 	\begin{definition}[Algebra]\label{def:algebra}
-		An algebra $\A$ is a $\C$-vector space equipped with an associative and distributive multiplication law which is compatible with the other vector space operations. 
+		An algebra $\A$ is a $\C$-vector space equipped with an associative and distributive multiplication law which is compatible with the other vector space operations.
 	\end{definition}
 	
 	\begin{definition}[$^*$-algebra]\label{def:star-alg}
@@ -24,84 +24,68 @@
 		An algebra equipped with an involution map is called a $^*$-algebra. 
 	\end{definition}
 	
-	Within a $^*$-algebra it is natural to isolate subsets that remain stable under the involution, since such subsets will later correspond to physically meaningful collections of observables. We therefore introduce the following notion of a selfadjoint subset.
+	Within a $^*$-algebra it is natural to isolate subsets that remain stable under the involution, since they will later correspond to physically meaningful collections of observables, as we will present in Definition \ref{def:smooth-subalgebra}. Therefore, we introduce the following notion of a selfadjoint subset.
 	
 	\begin{definition}[Selfadjoint subset]\label{def:selfadj-subset}
-		Let $\A$ be a $^*$-algebra in the sense of Definition \ref{def:star-alg}. A subset $\mathfrak{B}$ of $\A$ is called \emph{selfadjoint} if $A \in \mathfrak{B}$ implies that $A^* \in \mathfrak{B}$.
+		Let $\A$ be a $^*$-algebra in the sense of Definition \ref{def:star-alg}. A subset $\mathfrak{B} \subset \A$ is called \emph{selfadjoint} if $A \in \mathfrak{B}$ implies that $A^* \in \mathfrak{B}$.
 	\end{definition}
 	
-	\noindent Some particular elements of this subset are the adjoint of themselves, those are called selfadjoint elements.
+	\noindent Some particular elements of this subset are the adjoint of themselves. As we will see later in Definition \ref{def:obs-alg}, selfadjoint elements have a particular meaning in algebraic classical mechanics.
 	
 	\begin{definition}[Selfadjoint element]\label{def:selfadj-element}
-		Let $\A$ be a $^*$-algebra in the sense of Definition \ref{def:star-alg}. An element $A \in \A$ is selfadjoint if $A = A^*$.
+		Let $\A$ be a $^*$-algebra in the sense of Definition \ref{def:star-alg}. An element $A \in \A$ is selfadjoint if $A = A^*$. The set of all the selfadjoint elements will be referred as \emph{selfadjoint sector}.
 	\end{definition}
 	
-	\noindent We are now ready to endow an algebra with an operation that works as a measure of length of their element. 
+	\noindent Now, we endow the algebra with an additional structure that measures the length of its elements, called \emph{a norm}. This operation will let us control convergence and continuity within the algebra.
 	
 	\begin{definition}[Normed algebra]\label{def:norm-alg}
-		An algebra $\A$, defined in Definition \ref{def:algebra}, is a normed algebra if to each element $A \in \A$ there is an associated real number $\|A\| \in \R$, called the norm of $A$, satisfying the requirements:
+		An algebra $\A$, as in Definition \ref{def:algebra}, endowed with a map $A \in \A \mapsto \|A\| \in \R$ satisfying the requirements:
 		\begin{itemize}
 			\item $\|A\| \geq 0$ and $\|A\| = 0$ if, and only if, $A = 0$,
 			\item $\|\alpha A\| = |\alpha| \|A\|$,
 			\item $\|A + B\| \leq \|A\| + \|B\| \quad$ the triangle inequality,
-			\item $\|AB\| \leq \|A\| \|B\| \quad $ the product inequality.
+			\item $\|AB\| \leq \|A\| \|B\| \quad $ the product inequality,
 		\end{itemize}
+        is called a normed algebra, while the map is called a norm.
 	\end{definition}
 	
-	\noindent Normed algebras are fundamental objects inside our construction, since the norm endows each of them with a notion of a particular topology called \emph{uniform topology}.
+	\noindent Normed algebras are relevant objects inside our construction, since the norm endows each of them with a notion of a particular topology called \emph{uniform topology}.
 	
 	\begin{definition}[Uniform topology]\label{def:uni-top}
-		Let $\A$ be a normed algebra as in Definition \ref{def:norm-alg}. The norm defines a metric topology on $\A$ which is referred to as the uniform topology. The neighborhoods of an element $A \in \A$ in this topology are given by $$\mathscr{U}_{A, \varepsilon} = \{B \in \A \ | \ \|B - A\| < \varepsilon\},$$ where $\varepsilon \in \R^+$. 
-	\end{definition}
-	
-	Having defined the norm, we can now endow a vector space with that operation and consequently generate an algebra. A vector space equipped with a norm is called a \emph{normed vector space} and adding completeness makes a normed vector space a Banach space.
-	
-	\begin{definition}[Banach Space on $\C$]\label{def:banach-space}
-		A \emph{Banach space} is a normed $\C$-vector space $(X, \|\cdot\|)$ such that the metric induced by the norm, defined by 
-		\[
-		d(x,y) := \|x - y\|, \qquad x,y \in X,
-		\]
-		is complete.
+		Let $\A$ be a normed algebra as in Definition \ref{def:norm-alg}. The norm defines a metric topology on $\A$ which is referred to as the uniform topology. The neighborhoods of an element $A \in \A$ are given by $$\mathscr{U}_{A, \varepsilon} = \{B \in \A \ | \ \|B - A\| < \varepsilon\},$$ where $\varepsilon \in \R^+$. 
 	\end{definition}
 
-	\noindent Equipping a Banach space with a compatible associative multiplication yields the notion of a Banach algebra. This combination is what will later allow observables to be manipulated algebraically while still controlling limiting procedures such as sequences of approximating observables.
+	\noindent Analogously, endowing a vector space with a norm makes it a \emph{normed vector space}, and the uniform topology just introduced allows us to speak of convergent sequences within it. However, in a generic normed space, such sequences are not guaranteed to converge to an element within the space. Imposing the requirement of completeness leads to the concept of a \emph{Banach space}.
+
+    \begin{definition}[Banach Space on $\C$]\label{def:banach-space}
+    A \emph{Banach space} is a normed $\C$-vector space $(X, \|\cdot\|)$ which is complete to the metric induced by its norm.
+    \end{definition}
+    
+    \noindent A Banach space can be provided with a multiplication law and an involution creating a Banach $^*$-algebra.
+
+    \begin{definition}[Banach algebra]\label{def:banach-alg}
+    A Banach algebra is a normed algebra $\mathfrak{B}$ over a $\C$-vector space, as in Definition \ref{def:norm-alg}, which is complete with respect to the metric induced by its norm.
+    \end{definition}
+    
+    \noindent Since physical observables also carry an involution, we further require compatibility between this operation and the norm.
+    
+    \begin{definition}[Banach $^*$-algebra]\label{def:banach-star-alg}
+    A Banach $^*$-algebra is a Banach algebra $\A$, as in Definition \ref{def:banach-alg}, equipped with an involution, as in Definition \ref{def:star-alg}, such that the norm satisfies the isometric property $$\|A\| = \|A^*\|, \qquad \forall A \in \A.$$
+    \end{definition}
 	
-	\begin{definition}[Banach algebra]\label{def:banach-alg}
-		Let $\A$ be a normed algebra as in Definition \ref{def:norm-alg}. If $\A$ is complete with respect to the uniform topology, as in Definition \ref{def:uni-top}, it is called \emph{a Banach algebra}. 
-	\end{definition}
-	
-	\noindent A Banach algebra alone still lacks any notion of adjunction between its elements, a feature that will be needed to encode the passage from an observable to its complex conjugate at the algebraic level. So, we can endow a Banach algebra with an involution as following.
-	
-	\begin{definition}[Banach *-algebra]\label{def:banach-star-alg}
-		A \emph{Banach *-algebra} is a complete normed algebra $\A$ as in Definition \ref{def:norm-alg} equipped with an involution, as in Definition \ref{def:star-alg}, such that the norm satisfies the isometric property 
-		\[
-		\|A\| = \|A^*\|, \qquad \forall A \in \A.
-		\]
-	\end{definition}
-	
-	Completeness assures that every Cauchy sequence in the space converges to an element thereof, thus guaranteeing that approximations of observables are well-defined. In a Banach $^*$-algebra, the norm and involution are only constrained by $\|A\|=\|A^*\|$. Imposing the stronger identity $\|A^*A\|=\|A\|^2$ makes the norm compatible with the algebraic structure and defines a $C^*$-algebra.
+	Completeness assures that every Cauchy sequence in the space converges to an element thereof, thus guaranteeing that approximations of observables are well-defined. In a Banach $^*$-algebra, the norm and involution are constrained by $\|A\|=\|A^*\|$. Imposing the stronger identity $\|A^*A\|=\|A\|^2$ makes the norm compatible with the algebraic structure and defines a $C^*$-algebra.
 	
 	\begin{definition}[$C^*$-algebra]\label{def:c-star-algebra}
-		A $C^*$-algebra is a Banach *-algebra $\A$, as in Definition \ref{def:banach-star-alg} with the property $\|A^* A\| = \|A\|^2$ $\forall A \in \A$.
+		A $C^*$-algebra is a Banach *-algebra $\A$, as in Definition \ref{def:banach-star-alg}, with the property $\|A^* A\| = \|A\|^2$ $\forall A \in \A$.
 	\end{definition}
 	
-	C*-algebras constitute a fundamental framework in mathematical physics where algebraic structures are canonically endowed with a complete metric topology. The abstraction of bounded operators leads to the systematic study of Banach algebras and their involutions. This rigorous topological approach allows the characterization of states and observables in both classical and quantum theories.
-	%
-	%\begin{proposition}
-	%	Let $\A$ be a C*-algebra. The norm property combined with the product inequality yields $\|A^*\| = \|A\|$ automatically for all $A \in \A$.
-	%\end{proposition}
-	%
-	%\begin{proof}
-	%	The defining norm property of a C*-algebra states that $\|A\|^2 = \|A^* A\|$. This equality combined with the product inequality yields $\|A\|^2 = \|A^* A\| \leq \|A^*\| \|A\|$ and hence one obtains $\|A\| \leq \|A^*\|$. Interchanging the roles of $A$ and $A^*$ one concludes that $\|A^*\| \leq \|A^{**}\|$. Since the double involution yields $A^{**} = A$ this implies $\|A^*\| \leq \|A\|$. Consequently one deduces that $\|A\| = \|A^*\|$ for all $A \in \A$.
-	%\end{proof}
-	%
-	The most important classification of $C^*$-algebras is represented by those in which there is an element behaving exactly like a unit. Those algebras are called \emph{unital}.
+	C*-algebras constitute a key framework in mathematical physics where algebraic structures are canonically endowed with a complete metric topology. The abstraction of bounded operators leads, both in classical and in quantum physics, to the study of Banach algebras and their involutions. This approach allows the characterization of states and observables in both theories. A key class of $C^*$-algebras, particularly relevant for this reconstruction, consists of those possessing an identity element.
 	
 	\begin{definition}[Unital $C^*$-algebra]\label{def:unital-c-star-algebra}
 		A unital C*-algebra is a C*-algebra $\A$, as in Definition \ref{def:c-star-algebra}, containing an identity element $\Id$ such that $A = \Id A = A \Id$ for all $A \in \A$.
 	\end{definition}
 	
-	The identity element introduced above plays the role of a distinguished observable acting trivially on every other one. Before relying on this notion, it is worth verifying that, when it exists, it is uniquely determined by the algebra.
+	The identity introduced above plays the role of a distinguished element acting trivially on every other one. Before relying on this notion, it is worth verifying that, when it exists, it is uniquely determined by the algebra.
 	
 	\begin{proposition}
 		A C*-algebra $\A$ can possess at most one identity element.
@@ -111,63 +95,59 @@
 		If a second identity element $\Id'$ exists it must satisfy $\Id' = \Id \Id' = \Id$.
 	\end{proof}
 	
-	\subsection*{$\mathbf{C^*}$-algebra description of Hamiltonian Mechanics}
-	We now apply the abstract framework developed above to the specific case of Hamiltonian mechanics. In the classical setting, physical intuition suggests starting from the phase space and only afterward considering functions defined on it. Our goal will be to indicate that the reverse order is equally legitimate and, in fact, more fundamental. We now carry out this reconstruction explicitly, showing how the familiar objects of classical mechanics, observables, states, and dynamics, all arise once the phase space is replaced by its associated commutative $C^*$-algebra.
+	\subsection*{Algebraic description of Hamiltonian Mechanics}
+	We now apply the abstract framework developed above to the specific case of Hamiltonian mechanics. In the classical setting, physical intuition suggests starting from the phase space and only afterward considering functions defined on it. Our goal will be to indicate that the reverse order is equally legitimate. We now carry out this reconstruction explicitly, showing how the familiar objects of classical mechanics, observables, states, and dynamics, can be redescribed in the framework of commutative $C^*$-algebras.
 	 
-	\noindent \textit{Throughout this section, we will refer to $X$ as a compact Hausdorff topological space.}
+    \smallskip
+    \paragraph{Observables.}
 	
-	\medskip
+	We begin by algebraically characterizing the observables used in Hamiltonian mechanics. Let $\Gamma$ be a generic compact phase space, in the sense of Definition \ref{def:phase_space}, for simplicity, we assume that there exist global coordinates $(q,p)$ on $\Gamma$. Let $\mathcal{P}$ be the algebra of \emph{polynomial observables} generated by the phase space coordinates $q$ and $p$. These, operationally, correspond to the measurement of position or momentum of a physical system. Given that the coordinates have different values for different points on $\Gamma$, they separate points. $\mathcal{P}$ also includes constant functions, consequently it fulfills the hypotheses of the Stone-Weierstrass Theorem \cite[Theorem IV.9]{reedMethodsModernMathematical2003}. This result establishes that $\mathcal{P}$ is dense within $C^0(\Gamma; \R)$ under the uniform norm topology that, in this space, is defined analytically as:  \begin{equation}
+    \| f \|_\infty = \sup_{p \in \Gamma} |f(p)| \qquad \forall f \in \mathcal{P}.\label{eq:sup-norm} 
+    \end{equation} Taking the closure with respect to this norm exactly recovers the full space $\overline{\mathcal{P}}^{\| \cdot \|_\infty} = C^0(\Gamma; \R)$.  
 	
-	We begin by algebraically characterizing the observables on a generic compact phase space $\Gamma$, in the sense of Definition \ref{def:phase_space}. Let $\mathcal{P}$ be the algebra of \emph{polynomial observables} generated by the phase space coordinates $q$ and $p$. Those represent the act of measuring position or momentum of a physical system. These coordinates have different values for different points on $\Gamma$, namely, they separate points. $\mathcal{P}$ also includes constant functions. Consequently it  fulfills the hypotheses of the Stone-Weierstrass Theorem
-	\cite[Theorem IV.9]{reedMethodsModernMathematical2003}. This fundamental result establishes that $\mathcal{P}$ is dense within $C^0(\Gamma; \R)$ under the uniform norm topology that, in this space, is defined analytically as:  $$\| f \|_\infty = \sup_{x \in \Gamma} |f(x)| \qquad \forall f \in \mathcal{P}.$$  
-	Taking the closure with respect to this norm exactly recovers the full space $\overline{\mathcal{P}}^{\| \cdot \|_\infty} = C^0(\Gamma; \R)$.  
+    In a general \emph{classical scenario}, the phase space $\Gamma$ is abstracted to a compact Hausdorff space $X$, replacing $C^0(\Gamma; \R)$ with the classical continuous algebra in Definition \ref{def:gel-alg}. Physical observables are then directly recovered as the selfadjoint elements invariant under complex conjugation via Definition \ref{def:obs-alg}.
 	
-	Since the subsequent algebraic machinery relies on Banach algebras over $\mathbb{C}$, we must complexify the space to the $C^*$-algebra $C^0(\Gamma; \mathbb{C})$. The original real observables are then recovered as the elements invariant under complex conjugation, a procedure that motivates the general axiomatic framework.
-	
-	\begin{definition}[Classical Gelfand Algebra]\label{def:gel-alg}
-		Let $X$ be a compact Hausdorff space. The \emph{classical Gelfand algebra} is the commutative unital $C^*$-algebra, as in Definition \ref{def:unital-c-star-algebra}, $\A = C^0(X)$, equipped with:
-		\begin{enumerate}
-			\item pointwise multiplication $(fh)(x)=f(x)h(x)$,
-			\item the identity element $\Id(x)=1$,
-			\item the involution $f^*(x)=\overline{f(x)}$,
-			\item the supremum norm $\|f\|_\infty = \sup_{x\in X}|f(x)|$.
-		\end{enumerate}
+	\begin{definition}[Classical Continuous Algebra]\label{def:gel-alg}
+		Let $X$ be a compact Hausdorff space. The \emph{classical continuous algebra} is the commutative unital $C^*$-algebra $\A = C^0(X; \C)$, as in Definition \ref{def:unital-c-star-algebra}.
 	\end{definition}
-	\noindent In the present case $X=\Gamma$, it descends that $\A = C^0(\Gamma)$ and the $C^*$-algebra condition follows from $\|f^*f\|_\infty = \|f\|_\infty^2$.
-	
-	Inside this algebra there are elements yielding a complex valued when evaluated. This is problematic for the physical interpretation of the quantity associated with those elements. Because of this, we will refer to \emph{observables} as the selfadjoint elements of the classical Gelfand algebra presented in Definition \ref{def:gel-alg}. 
+
+    \noindent In the case above, $X=\Gamma$ and $\A = C^0(\Gamma)$.
+
+    \begin{remark}
+        The space $C^0(X; \C)$ is a commutative unital $C^*$-algebra equipped with a pointwise multiplication $(fh)(x)=f(x)h(x)$, the identity element $\Id(x)=1$, the involution $f^*(x)=\overline{f(x)}$ and the supremum norm in Equation \eqref{eq:sup-norm}. While the $C^*$-algebra condition follows from $\|f^*f\|_\infty = \|f\|_\infty^2$.
+    \end{remark}
+    
+    This construction establishes that the algebra of classical observables can be modeled by a commutative unital $C^*$-algebra. Later in this section, this will constitute a fundamental component for the algebraic reconstruction of classical mechanics, as seen in Definition \ref{def:cas}. Since complex-valued elements lack a direct physical interpretation, physical \emph{observables} are strictly identified with the selfadjoint elements of the algebra.
 	
 	\begin{definition}[Classical Observable Algebra]\label{def:obs-alg}
-		Let $\A$ be a classical Gelfand algebra, as in Definition \ref{def:gel-alg}. The classical observable algebra $\A_{sa}$ is the subset of selfadjoint elements of $\A$ as seen in Definition \ref{def:selfadj-element}.
+		Let $\A$ be a commutative unital $C^*$-algebra, as in Definition \ref{def:unital-c-star-algebra}. The classical observable algebra $\A_{sa}$ is the selfadjoint sector, as seen in Definition \ref{def:selfadj-element}.
 	\end{definition}
 	
-	A more detailed discussion about the physical quantities really measurable will be done at the end of this chapter.
+	\noindent A more detailed discussion about the physical quantities really measurable will be done in Subsection \ref{sec:interpret-phys}.
 	
 	\medskip
-	Having analysed the algebraic nature of observables, we now turn to states. In an operational point of view, if we prepare the system to be in a particular state $\omega$ and we measure an observable $f \in \A_{sa}$ $n$ times, we can define its mean value with
+    \paragraph{States.}
+	Having analysed the algebraic nature of observables, we now turn to states. From an operational point of view, if we prepare the system in a particular state $\omega$ and we measure an observable $n$ times, then we can define its mean value as
 	\[
-		< f >^{(\omega)}_n := \frac{1}{n}\sum_{i=1}^n m^{(\omega)}_i(f),
+		< f >^{(\omega)}_n \ := \frac{1}{n}\sum_{i=1}^n m^{(\omega)}_i(f) \qquad \forall f \in \A_{sa},
 	\]
-	where $m^{(\omega)}_i(f)$ represent the $i$-th measurement. The limit of this expression, assuming that it converges experimentally, can be defined dually as
+	where $m^{(\omega)}_i(f)$ represent the $i$-th measurement and $\A_{sa}$ is the classical observable algebra in Definition \ref{def:obs-alg}. The limit of this expression, assuming that it converges experimentally, can be defined dually as
 	\[
-		\omega(f) := \lim_{n \to \infty} < f > ^{(\omega)}_n \qquad \forall f \in \A_{sa}
+		\omega(f) := \lim_{n \to \infty} < f > ^{(\omega)}_n \qquad \forall f \in \A_{sa}.
 	\]
-	In this picture, a state $\omega$ acts on observables, yielding the average of the measurements. However, we can extend this definition to a generic unital $C^*$-algebra $\A$, presented in Definition \ref{def:unital-c-star-algebra}, without attaching a physical interpretation. This functional must be linear and must preserve the positivity of observables. It descends that $\omega(f^*f) \geq 0$ for all $f \in \A$. It can be also shown that positivity implies the Cauchy-Schwartz Inequality, namely
-	\[
-		|\omega(A^*B)| \leq (\omega(A^*A) \ \omega(B^*B))^{1/2} \quad \forall A,B \in \A.
-	\]
-	Therefore, if $\A$ is unital, we can impose $B = \Id$ and square both members. By positivity we obtain that $\omega(\Id) > 0$, if $\omega$ is non-trivial. This proves that one can always normalize a state, unless $\omega = 0$, through
- 	\[
- 		\omega \mapsto \omega_{norm} = \omega(\Id)^{-1} \omega.
- 	\]
+	In this picture, a state $\omega$, acting on observables, yields the average of the measurements. This definition can however be extended to the whole unital commutative $C^*$-algebra $\A$. The state $\omega$ becomes a linear functional that must preserve positivity $\omega(f^*f) \geq 0$ for all $f \in \A$. In addition, it can be shown that positivity implies the Cauchy-Schwartz Inequality, as proved by \cite[Lemma 2.3.10]{bratteliOperatorAlgebrasQuantum}, namely
+	\begin{equation}
+	    |\omega(A^*B)| \leq (\omega(A^*A) \ \omega(B^*B))^{1/2} \quad \forall A,B \in \A.\label{eq:cs-ineq}
+	\end{equation}
+	Therefore, if $\A$ is unital, we can set $B = \Id$ in Equation \eqref{eq:cs-ineq} to obtain $|\omega(A^*)|^2 \leq \omega(A^*A) \, \omega(\Id)$ for all $A \in \A$. If $\omega(\Id)$ were zero, this inequality would imply $\omega(A^*) = 0$ for every $A \in \A$, thus forcing the functional $\omega$ to be identically zero. Consequently, for any non-trivial positive linear functional, it must strictly hold that $\omega(\Id) > 0$. This ensures that one can always normalize such a functional to define a proper state via the map $$\omega \mapsto \omega_{norm} = \omega(\Id)^{-1} \omega.$$
  	
- 	We can formalize this concept in the following definition.
+ 	\noindent We can formalize this concept in the following definition.
  	
  	\begin{definition}[State on a $C^*$-Algebra]\label{def:state}
  		Let $\A$ be a unital $C^*$-algebra as in Definition \ref{def:unital-c-star-algebra}. A \emph{state} on $\A$ is a linear functional $\omega:\A\to\mathbb{C}$ such that
  		\begin{enumerate}
  			\item $\omega(A^*A)\ge 0$ for all $A\in\A$ $\quad$ positivity,
- 			\item $\omega(\Id)=1$  $\quad$ normalisation.
+ 			\item $\omega(\Id)=1$  $\quad$ normalization.
  		\end{enumerate}
  		The set of all states is denoted by $\mathcal{S}(\A)$.
  	\end{definition}
@@ -179,30 +159,29 @@
  	\end{proposition}
  	
  	\begin{proof}
- 		Let $\omega_1,\omega_2 \in \mathcal{S}(\A)$ and let $t \in [0,1]$. Define $\omega = t\omega_1 + (1-t)\omega_2$. Linearity is immediate. Positivity follows because for any $A\in\A$,
- 		\[
- 			\omega(A^*A) = t\,\omega_1(A^*A) + (1-t)\,\omega_2(A^*A) \ge 0.
- 		\]
-	 	Normalisation holds since $\omega(\Id) = t\,\omega_1(\Id) + (1-t)\,\omega_2(\Id) = t + (1-t) = 1$. Thus $\omega \in \mathcal{S}(\A)$. Hence $\mathcal{S}(\A)$ is convex.
+ 		Let $\omega_1,\omega_2 \in \mathcal{S}(\A)$ and let $t \in [0,1]$. Define $\omega = t\omega_1 + (1-t)\omega_2$ which is linear on $\A$. Positivity follows because for any $A\in\A$,$\omega(A^*A) = t\,\omega_1(A^*A) + (1-t)\,\omega_2(A^*A) \ge 0.$
+	 	normalization holds since $\omega(\Id) = t\,\omega_1(\Id) + (1-t)\,\omega_2(\Id) = t + (1-t) = 1$. Thus $\omega \in \mathcal{S}(\A)$ and $\mathcal{S}(\A)$ is convex.
  	\end{proof}
+
+    \paragraph{Probabilistic interpretation of states.}
  	
- 	Given $X$, a compact Hausdorff space, a state $\omega$ on the unital $C^*$-algebra $C^0(X)$ is automatically continuous and therefore by the Riesz-Markov Representation Theorem \cite[Theorem IV.14]{reedMethodsModernMathematical2003} it defines a unique Borel measure $\mu_\omega$ on $X$ such that
+ 	One can ask which is the usual physical interpretation of such an abstract object. The solution comes from considering the classical scenario given by $X$, a compact Hausdorff space and $C^0(X)$ the associated classical continuous algebra as in Definition \ref{def:gel-alg}. It is proved by \cite[Proposition 2.3.11]{bratteliOperatorAlgebrasQuantum} that a state $\omega \in \mathcal{S}(C^0(X))$ is continuous. Therefore, by the Riesz-Markov Representation Theorem \cite[Theorem IV.14]{reedMethodsModernMathematical2003}, it defines a unique Borel measure $\mu_\omega$ on $X$ such that
  	\begin{equation}
  		\omega(f) = \int_X f \, d\mu_\omega, \quad \mu_\omega(X) = \omega(\Id) = 1.
  	\end{equation}
- 	Thus, if we restrict a state to act only on the classical observable algebra defined in Definition \ref{def:obs-alg}, then we can interpret it as probability distribution on the phase space, and observables become random variables. This probabilistic interpretation is essential in statistical mechanics.
+ 	Thus, we can interpret the state as a probability distribution on the state space and observables as random variables. This probabilistic interpretation represents the core statistical mechanics.
  	
- 	In this description, classical mechanics is recovered as a special case. In fact, we can take $\mu_{P_0}$ as the probability measure concentrated on the point $P_0 = \{q_0, p_0\}$ of a compact phase space $\Gamma$, in the sense of Definition \ref{def:phase_space}. Then $\mu_{P_0}$ is a Dirac $\delta$ function and  the corresponding state $\omega_{P_0}$ is
+ 	In this description, Hamiltonian mechanics is recovered as a special case. In fact, we can take $\mu_{P_0}$ as the probability measure concentrated on the point $P_0 = \{q_0, p_0\}$ of a compact phase space $\Gamma$, in the sense of Definition \ref{def:phase_space}. Then $\mu_{P_0}$ is a Dirac measure and the corresponding state $\omega_{P_0}$ is
  	\begin{equation}
  		\omega_{P_0}(f) = \int_\Gamma f \, d\mu_{P_0} = f(P_0).
  	\end{equation}
- 	Such states are also called \textit{pure states} since they cannot be written as convex non-trivial linear combinations of other states. All the measurements yield the same result, $f_\omega = \omega(f)$, so there is no dispersion and probabilistically speaking the variance of that state vanishes. We can formalize these concepts generally in the following way.
+ 	Such states are also called \textit{pure states} since they cannot be written as convex non-trivial linear combinations of other states. Measurements on pure states always yield the same result $f_\omega = \omega(f)$, so there is no dispersion and, probabilistically speaking, the variance of that state vanishes. We can formalize these concepts generally in the following way.
  	
  	\begin{definition}[Pure State]\label{def:pure-state}
- 		A state $\omega\in\mathcal{S}(\A)$, as in Definition \ref{def:state}, is called \emph{pure} if it is an extreme point of the convex set $\mathcal{S}(\A)$. That is, whenever $\omega = t\omega_1+(1-t)\omega_2$ with $0<t<1$ and $\omega_1,\omega_2\in\mathcal{S}(\A)$, then $\omega_1=\omega_2=\omega$.
+ 		Let $\A$ be a commutative unital $C^*$-algebra. A state $\omega\in\mathcal{S}(\A)$, as in Definition \ref{def:state}, is called \emph{pure} if it is an extreme point of the convex set $\mathcal{S}(\A)$. That is, whenever $\omega = t\omega_1+(1-t)\omega_2$ with $0<t<1$ and $\omega_1,\omega_2\in\mathcal{S}(\A)$, then $\omega_1=\omega_2=\omega$.
  	\end{definition}
  	
- 	\noindent Now, we extend the statistical definition of variance to our algebraic framework. This notion will provide the precise sense in which pure states correspond to dispersion-free measurements, independently of their characterization as extreme points of the state space.
+ 	\noindent Now, we extend the statistical definition of variance to our algebraic framework. This notion will provide the precise sense in which pure states correspond to dispersion-free measurements.
  	
  	\begin{definition}[Variance of a State]\label{def:variance}
  		Let $\A$ be a unital $C^*$-algebra, as in Definition \ref{def:unital-c-star-algebra}, and let $\omega \in \mathcal{S}(\A)$ be a state, defined in Definition \ref{def:state}. The \emph{variance} of an element $A \in \A$ in the state $\omega$ is defined as
@@ -211,7 +190,7 @@
  		\]
  	\end{definition}
  	
- 	The quantity is non-negative by the Cauchy--Schwarz inequality applied to the positive linear functional $\omega$. In particular, since the dispersion-free character of their measurements, pure states show a strong form of this property.
+ 	The quantity is non-negative by the Cauchy--Schwarz inequality \cite[Lemma 2.3.10]{bratteliOperatorAlgebrasQuantum}. In particular, since their measurements are dispersion-free, pure states show a strong form of this property.
  	
  	\begin{proposition}[Zero Variance for Pure States]\label{prop:pure-zero-var}
  	Let $\A$ be a commutative unital $C^*$-algebra as in Definition \ref{def:unital-c-star-algebra} and let $\omega \in \mathcal{S}(\A)$ be a pure state, shown in Definition \ref{def:pure-state}. Then
@@ -220,22 +199,23 @@
  	\]
  	\end{proposition}
 	\begin{proof}
-		By a standard result for commutative $C^*$-algebras, every pure state is multiplicative, see, \textit{e.g.}, \cite[Proposition 2.3.27]{bratteliOperatorAlgebrasQuantum}. Hence $\omega(AB)=\omega(A)\omega(B)$ for all $A,B\in\A$. In particular, $\omega(A^*A)=\omega(A^*)\omega(A)$. Substituting into Definition \ref{def:variance} yields $\operatorname{Var}_\omega(A)=0$ for every $A\in\A$.
+		By a standard result for commutative $C^*$-algebras, every pure state is multiplicative, that is, $\omega(AB)=\omega(A)\omega(B)$ for all $A,B\in\A$, see \cite[Proposition 2.3.27]{bratteliOperatorAlgebrasQuantum}. In particular, $\omega(A^*A)=\omega(A^*)\omega(A)$. Substituting into Definition \ref{def:variance} yields $\operatorname{Var}_\omega(A)=0$ for every $A\in\A$.
 	\end{proof}
-	\noindent Later, in Proposition \ref{prop:equivalence_states_characters}, this proposition will be extended to an equivalent definition of pure state.
 	
  	\medskip
- 	To conclude the excursus on observables and states, we establish a fundamental duality between these two notions. On one hand, given $\A$ a unital commutative $C^*$-algebra, every state $\omega \in \mathcal{S}(\A)$ induces an evaluation functional which, when restricted to the classical observable algebra $\A_{sa}$ introduced in Definition \ref{def:obs-alg}, yields strictly real values. This property is mathematically guaranteed by the positivity of the state, ensuring that $f = f^*$ implies $\omega(f) \in \mathbb{R}$. Crucially, because every element $A \in \A$ admits a unique decomposition into selfadjoint components as $A = A_1 + iA_2$, with $A_1, A_2 \in \A_{sa}$, the action of a state on the entire complex $C^*$-algebra is completely and uniquely determined by its values on the physical observables. 
+    \paragraph{Duality between states and observables.}
+    
+ 	To conclude the excursus on observables and states, we establish an intrinsic duality between these two notions in classical scenarios. On one hand, given $\A$ the classical continuous $C^*$-algebra, defined in Definition \ref{def:gel-alg}, every state $\omega \in \mathcal{S}(\A)$ induces an evaluation. When that map is restricted to its classical observable algebra $\A_{sa}$ introduced in Definition \ref{def:obs-alg} it yields strictly real values. This property is mathematically guaranteed by the positivity of the state, ensuring that $A = A^* \in \A_{sa}$ implies $\omega(A) \in \mathbb{R}$. Consequently, because every element $A \in \A$ admits a unique decomposition into selfadjoint components as $A = A_1 + iA_2$, with $A_1, A_2 \in \A_{sa}$, the action of a state on the entire complex $C^*$-algebra is completely and uniquely determined by its values on the physical classical observables. 
  	
- 	Conversely, the uniqueness of a state given its observable values relies on the topological properties of the Gelfand spectrum $X$. Since $X$ is compact and Hausdorff, it satisfies the hypothesis of Urysohn's lemma \cite[Theorem IV.7]{reedMethodsModernMathematical2003}. It states that for any two distinct points $P$ and $Q$ in $X$, there exists a strictly real-valued function $f \in C^0(X; \mathbb{R}) \cong \A_{sa}$ such that $f(P)=0$ and $f(Q)=1$. In terms of pure states, this yields $\omega_P(f)=0$ and $\omega_Q(f)=1$. Thus, the classical observable algebra $\A_{sa}$ separates points on $X$. If $\omega_P(f)=\omega_Q(f)$ for every observable $f \in \A_{sa}$, then necessarily $P=Q$. 
+ 	Conversely, the uniqueness of a state given its observable values relies on the topological properties of the space $X$ associated with the classical continuous algebra $\A$. Since $X$ is compact and Hausdorff, it satisfies the hypothesis of Urysohn's lemma \cite[Theorem IV.7]{reedMethodsModernMathematical2003}. It states that for any two distinct points $p$ and $q$ in $X$, there exists a strictly real-valued function $f \in C^0(X; \mathbb{R}) \cong \A_{sa}$ such that $f(p)=0$ and $f(q)=1$. In terms of pure states, this yields $\omega_p(f)=0$ and $\omega_q(f)=1$. Thus, the classical observable algebra $\A_{sa}$ separates points on $X$. 
  	
- 	Combining these algebraic and topological findings yields a fundamental duality relation: a physical state is completely characterized by the collection of its values on the selfadjoint observables, and the algebra of such observables is structurally sufficient to reconstruct the points of the underlying state space.
+ 	Combining these findings yields a duality relation. A physical state is completely characterized by the collection of its values on the selfadjoint observables, and the algebra of such observables is structurally sufficient to reconstruct the points of the underlying state space.
  	\medskip
-	
- 	Having established observables and states, we now investigate dynamics on a compact phase space $\Gamma$ as in Definition \ref{def:phase_space}. Time evolution of the system $\{q, p\} \to \{q_t, p_t\}$ is continuous in time $t \in \R$, with a continuous dependence on the initial data at time $t_0$ and therefore it defines a one-parameter family of continuous invertible maps $\alpha_{t_0, t}$ of $C^0(\Gamma; \R)$ into itself. These maps preserve all the algebraic relations, including the $^*$-operation. Such maps are called $^*$-automorphisms. Thus, the dynamics is encoded by a one-parameter group of automorphisms of the observable algebra.
+	\paragraph{Time evolution.}
+ 	Having established observables and states, we now algebraically investigate dynamics in Hamiltonian mechanics. Let $\Gamma$ be a compact phase space, as in Definition \ref{def:phase_space}. In this framework, time evolution of the system $\{q, p\} \to \{q_t, p_t\}$ is continuous in time $t \in \R$, with a continuous dependence on the initial data at time $t_0$. Therefore it defines a one-parameter family of continuous invertible maps $\alpha_{t_0, t}$ of $C^0(\Gamma; \R)$ into itself. These maps preserve all the algebraic relations, including the $^*$-operation. Such maps are called $^*$-automorphisms. Thus, the dynamics is encoded by a one-parameter group of automorphisms of the observable algebra.
  	
  	\begin{definition}[Time Evolution]\label{def:time-evolution}
- 		Let $\A$ be a unital $C^*$-algebra as in Definition \ref{def:unital-c-star-algebra}. A \emph{time evolution} is a strongly continuous one-parameter group of \emph{$^*$-automorphisms} $\alpha_t:\A\to\A$, $t\in\mathbb{R}$, such that:
+ 		Let $\A$ be a unital $C^*$-algebra as in Definition \ref{def:unital-c-star-algebra}. A \emph{time evolution} is a strongly continuous one-parameter group of \emph{$^*$-automorphisms} $\alpha_t:\A\to\A$, $t\in\mathbb{R}$, such that
  		\begin{enumerate}
  			\item $\alpha_0=\mathrm{id}$,
  			\item $\alpha_{s+t}=\alpha_s\circ\alpha_t$ for all $s,t\in\mathbb{R}$,
@@ -244,167 +224,171 @@
  		\end{enumerate}
  	\end{definition}
  	
- 	By duality, the time evolution of states is given by $(\alpha_t^*\omega)(A)=\omega(\alpha_t(A))$ for all $A\in\A$. In addition, since $\alpha_t$ are $^*$-automorphisms, they automatically preserve every selfadjoint sector $\A_{sa}$, ensuring that real physical observables evolve into real physical observables.
+ 	By duality, the time evolution of states is given by $(\alpha_t^*\omega)(A)=\omega(\alpha_t(A))$ for all $A\in\A$. In addition, since $\alpha_t$ are $^*$-automorphisms, they preserve every selfadjoint sector $\A_{sa}$, ensuring that real physical observables evolve into real physical observables.
  	
- 	\medskip
- 	Consequently, we can state the conclusion that: \emph{A classical system is completely defined by the pair $(\A,\alpha_t)$ where $\A$ is a classical Gelfand algebra as in Definition \ref{def:gel-alg} and $\alpha_t$ is a time evolution on it, as in Definition \ref{def:time-evolution}. To fix the initial conditions, it must also be given a state $\omega \in \mathcal{S}(\A)$, as in Definition \ref{def:state}.}
- 	
- 	%\begin{center}
- 	%\fbox{
- 	%	\parbox{\textwidth}{A classical system is completely defined by the pair $(\A,\alpha_t)$ together with a state $\omega$ that fixes the initial conditions.
-	 %	}%
-	 %}
-	 %\end{center}
+ 	\smallskip
+ 	\paragraph{Conclusion.} \emph{The physics of a classical system can be rewritten algebraically as the pair $(\A,\alpha_t)$ where $\A$ is a commutative unital $C^*$-algebra as in Definition \ref{def:unital-c-star-algebra} and $\alpha_t$ is a time evolution on it, as in Definition \ref{def:time-evolution}. To fix the initial conditions, it is given a state $\omega \in \mathcal{S}(\A)$, as in Definition \ref{def:state}.}
 	 
-	 \subsection*{Abelian $\mathbf{C^*}$-algebras and Gelfand's Theorem}
+\subsection*{Characters of a $C^*$-algebra and Gelfand-Naimark Theorem}
+In the previous discussion, we have concluded that Hamiltonian mechanics can be rewritten in algebraic terms. In this section, we discuss in detail the methods required to derive a state space from a $C^*$-algebra. We demonstrate how the definition of a commutative $C^*$-algebra can be exploited to obtain a topological space through the Gelfand-Naimark theorem, which will act as the state space of the system. We achieve this using a class of multiplicative linear functionals called characters. These characters coincide with the pure states and their space will coincide with the actual state space.
+
+\begin{definition}[Character of a commutative $C^*$-Algebra]\label{def:character}
+	Let $\A$ be a commutative $C^*$-algebra, as in Definition \ref{def:c-star-algebra}. A \emph{character} $\omega$ of $\A$ is a nonzero linear functional $\omega: \A \to \C$ that preserves algebraic multiplication, meaning
+	$$
+	\omega(AB) = \omega(A)\omega(B),
+	$$
+	for all $A, B \in \A$. The \emph{Gelfand spectrum} $\sigma(\A)$ is the set of all characters on $\A$.
+\end{definition}
+
+Characters map observables to complex numbers and naturally belong to the dual space of the algebra. To analyse their geometric properties, we must equip this dual space with a metric structure.
+
+\begin{definition}[Dual Operator Norm]\label{def:dual-norm}
+	Let $\A$ be a $C^*$-algebra as in Definition \ref{def:c-star-algebra}. The dual space $\A^*$ is a Banach space as in Definition \ref{def:banach-space} equipped with the dual operator norm, defined for any functional $\alpha \in \A^*$ as
+	$$
+	\|\alpha\| = \sup_{A \in \A} \{\  |\alpha(A)| \ | \ \|A\| \le 1 \}.
+	$$
+\end{definition}
+
+\noindent This definition is needed to understand the boundedness and continuity of characters that make the Gelfand's spectrum a unit ball.
+
+\begin{lemma}[Boundedness of characters]\label{lemma:bound_char}
+    Let $\A$ be a commutative $C^*$-algebra, as in Definition \ref{def:c-star-algebra}, and its Gelfand spectrum $\sigma(\A)$ per Definition \ref{def:character}. We have $\sigma(\A) \subseteq \A^*$ and for any $\omega \in \sigma(A)$, $\|\omega\| = 1$. Furthermore, if $\A$ is unital then $\omega(\Id_\A) = 1$.
+\end{lemma}
+
+For a complete proof of this lemma, we refer to \cite[Lemma C.9]{landsmanFoundationsQuantumTheory2017}. So far, characters have been defined only abstractly, but, in fact, they are exactly what we earlier called pure states. To establish this, we need the following result proved in \cite[Proposition 2.3.27]{bratteliOperatorAlgebrasQuantum}.
+
+\begin{proposition}[Equivalence of Pure States and Characters]\label{prop:equivalence_states_characters}
+	Let $\omega$ be a nonzero linear functional over the commutative $C^*$-algebra $\A$. Then $\omega$ is a pure state if and only if $\omega \in \sigma(\A)$.
+\end{proposition}
+
+Now, we need a topological structure for the spectrum to behave as a classical state space. The uniform topology induced by the dual norm is inadequate because in any infinite dimensional Banach space, the closed unit ball is never compact with respect to the uniform norm, see Riesz Lemma \cite[Theorem II.4]{reedMethodsModernMathematical2003}. We therefore introduce a coarser topology designed to recover this required compactness.
+
+\begin{definition}[Weak$^*$ Topology]\label{def:weak_topologies}
+	Let $\A^*$ be the topological dual space of a $C^*$-algebra $\A$, as in Definition \ref{def:c-star-algebra}. The \emph{weak$^*$ topology} on $\A^*$ is the coarsest topology such that for every fixed $A \in \A$ the evaluation map $\hat{A} : \A^* \to \C$ defined by $\hat{A}(\alpha) = \alpha(A)$ is continuous $\forall \alpha \in \A^*$.
+\end{definition}
+
+This topology controls pointwise convergence. A sequence of functionals converges if and only if the expectation value of every individual observable converges. By relaxing the strict requirement of uniform convergence across the entire algebra, this topology restores the geometric compactness essential for a well defined physical phase space.
+
+\begin{proposition}[Weak$^*$ Compactness of the Spectrum]\label{prop:spectrum-compactness}
+	Let $\A$ be a unital commutative $C^*$-algebra as in Definition \ref{def:c-star-algebra}. The Gelfand spectrum $\sigma(\A)$, defined in Definition \ref{def:character}, is a compact Hausdorff space with respect to the weak$^*$ topology.
+\end{proposition}
+\noindent The complete proof of this result can be found in \cite[Lemma C.10]{landsmanFoundationsQuantumTheory2017}.
 	 
-	 The duality between states and observables is not yet fully explicit, because we have assumed the space $X$ rather than derived it from the algebra. We now fill this gap by reconstructing $X$ directly from $\A$, using a special class of linear maps called characters. Since these characters turn out to be the pure states we have already discussed, this construction provides the missing algebraic definition to reconstruct the phase space. It thereby completes the reversal of perspective announced at the beginning of the chapter.
+	 \noindent Now, we present the central result of this chapter. This theorem allows us to completely reconstruct the topological state space of a physical classical system directly from its abstract commutative algebra, establishing a correspondence between algebraic structures and geometry.
 	 
-	 \begin{definition}[Character of an Abelian $C^*$-Algebra]\label{def:character}
-	 	Let $\A$ be an abelian $C^*$-algebra as in Definition \ref{def:c-star-algebra}. A \emph{character} $\omega$ of $\A$ is a nonzero linear map, $\omega: \A \to \C$ such that
-	 	\[
-	 	\omega(AB) = \omega(A)\omega(B)
-	 	\]
-	 	for all $A, B \in \A$. The \emph{Gelfand spectrum} or just \emph{spectrum} $\sigma(\A)$ is the set of all characters on $\A$.
-	 \end{definition}
-	 
-	By now, characters are only an abstract definition but, in fact, those are exactly what we have called earlier pure states. To establish this, we need the following result.
-	
-	 \begin{proposition}[Equivalence of Pure States and Characters]\label{prop:equivalence_states_characters}
-	 	Let $\omega$ be a nonzero linear functional over the abelian $C^*$-algebra $\A$, seen in Definition \ref{def:c-star-algebra}. The following conditions are equivalent
-	 	\begin{enumerate}
-	 		\item $\omega$ is a pure state
-	 		\item $\omega$ is a character
-	 	\end{enumerate}
-	 	Hence the spectrum $\sigma(\A) \subseteq \A^*$.
-	 \end{proposition}
-	 
-	 See \cite[Proposition 2.3.27]{bratteliOperatorAlgebrasQuantum} for a complete proof of this equivalence. 
-	 Having introduced characters as an equivalent way to identify pure states on a $C^*$-algebra, we now address a more abstract matter. The uniform topology considered before in Definition \ref{def:uni-top} is excessively fine for the character space. Consequently, we seek a formalisation of pointwise convergence, coarser than the uniform topology and more practical.
-	 
-	 \begin{definition}[Weak and Weak$^*$ Topologies]\label{def:weak_topologies}
-	 	Let $\Omega$ be a Banach space as in Definition \ref{def:banach-space} and let $\Omega^*$ be its topological dual space. The weak topology on $X$ is the coarsest topology such that every linear functional $f$ in $\Omega^*$ is continuous. 
-	 	
-	 	Analogously, the weak$^*$ topology on $\Omega^*$ is the coarsest topology such that for every element $x \in \Omega$ the evaluation map $f : \Omega^* \to \C$ such that $f \mapsto f(x)$ is continuous. 
-	 \end{definition}
-	 
-	 \begin{remark}
-	 	Weak$^*$ topology, stated in Definition \ref{def:weak_topologies}, induces a notion of convergence in $\Omega^*$. A sequence $f_\alpha$ in $\Omega^*$ converges to a functional $f$ in the weak$^*$ topology if and only if $f_\alpha(x) \to f(x)$ $\forall x \in \Omega$.
-	 \end{remark}
-	 
- 	The primary motivation for introducing these topologies lies in their compactness properties. The standard norm topology on an infinite dimensional space is rigorously too fine to allow bounded sets to be compact and leads to unexpected results. By coarsening the topology of $\A^*$ to only control pointwise convergence, the Banach-Alaoglu theorem \cite[Theorem IV.21]{reedMethodsModernMathematical2003} guarantees that a closed unit ball of the dual space $\A^*$ is strictly compact under the weak$^*$ topology. This feature ensures that the state space of a $C^*$-algebra is compact allowing the application of the representations theorems and guaranteeing the existence of states in thermodynamic limits.
- 	
- 	\medskip
-	 
-	 \noindent The compactness properties of the weak topology are essential for the Gelfand-Naimark representation theorem which is the central result of this section.
-	 
-	 \begin{theorem}[Gelfand-Naimark representation theorem]\label{thm:gelfand}
-	 	Let $\A$ be an abelian $C^*$-algebra and $X$ be the spectrum of $\A$, as in Definition \ref{def:character}, equipped with the weak$^*$ topology induced by $\A^*$. Then $\A$ is isomorphic to the algebra $C_0(X)$ of continuous functions over $X$ which vanish at infinity. 
+	 \begin{theorem}[Gelfand-Naimark Representation Theorem]\label{thm:gelfand}
+	 	Let $\A$ be a commutative $C^*$-algebra and $X$ be the Gelfand spectrum of $\A$, as in Definition \ref{def:character}, equipped with the weak$^*$ topology induced by $\A^*$ as in Definition \ref{def:weak_topologies}. Then $\A$ is isomorphic to the algebra $C_0(X)$ of continuous functions over $X$ which vanish at infinity. 
 	 \end{theorem}
 	 
-	 \noindent A complete proof of this theorem is provided in \cite[Theorem 2.1.11]{bratteliOperatorAlgebrasQuantum}. As a special case we state this corollary that is also proved in \cite[Theorem 2.1.11B]{bratteliOperatorAlgebrasQuantum}.
-	 \begin{corollary}
-	 	It follows from Theorem \ref{thm:gelfand} that $X$ is a locally compact Hausdorff space which is compact if, and only if, $\A$ is unital, as in Definition \ref{def:unital-c-star-algebra}. This makes $\A \cong C^0(X)$ the space of continuous functions over $X$.
+	 \noindent A complete proof of this theorem is provided in \cite[Theorem 2.1.11]{bratteliOperatorAlgebrasQuantum}. As a special case we state this corollary that is also proved in \cite[Theorem 2.1.11A]{bratteliOperatorAlgebrasQuantum}.
+	 \begin{corollary}\label{cor:gelfand}
+	 	Given the hypothesis of Theorem \ref{thm:gelfand}, $X$ is a locally compact Hausdorff space which is compact if, and only if, $\A$ is unital, as in Definition \ref{def:unital-c-star-algebra}. Thus, we have $\A \cong C^0(X)$, \textit{i.e.}, the space of continuous functions over $X$.
 	 \end{corollary}
 	 
-	 The Gelfand-Naimark Theorem \ref{thm:gelfand} establishes a duality between algebraic structures and topology, serving as the fundamental bridge to reconstruct classical mechanics starting from an arbitrary commutative $C^*$-algebra. This framework allows the extraction of a locally compact Hausdorff space $X$, known as the Gelfand spectrum, which is topologically formed by the characters of the algebra. By virtue of Proposition \ref{prop:equivalence_states_characters}, these characters coincide exactly with the pure states of the system. 
-	 
-	 The topological nature of $X$ is intimately tied to the algebraic properties. As we have seen earlier, if the algebra is unital, the closed unit ball of $\A^*$ is compact in the weak$^*$ topology. The presence of the identity element forces the spectrum to be closed and bounded away from the trivial zero functional, rendering $X$ strictly compact. Consequently, the algebraic isomorphism uniquely maps the abstract algebra to the space $C_0(X)$ of continuous functions vanishing at infinity, which naturally reduces to the full space $C^0(X)$ in the compact, unital case.
+The Gelfand-Naimark Theorem \ref{thm:gelfand} establishes the duality necessary to reconstruct the state space from any commutative $C^*$-algebra. It yields a locally compact Hausdorff space $X$ that matches the Gelfand spectrum formed by the characters of the algebra. In addition, this spectrum is isomorphic to the classical continuous algebra, seen in Definition \ref{def:gel-alg}.
+
+The topology of $X$ directly reflects the algebraic structure of $\A$.
+As formalized in Proposition \ref{prop:spectrum-compactness}, the existence of
+the identity element ensures that the Gelfand spectrum forms a weak$^*$ closed
+subset of the dual unit ball, which guarantees its strict compactness via the
+Banach-Alaoglu Theorem \cite[Theorem IV.21]{reedMethodsModernMathematical2003}. Consequently, the Gelfand isomorphism maps the abstract
+algebra to the space $C_0(X)$ of continuous functions vanishing at infinity,
+which identically reduces to the full space of continuous functions $C^0(X)$
+in this compact setting, as stated in Corollary \ref{cor:gelfand}.
 
 
 \subsection*{Reconstruction of the Symplectic Manifold}
 
-The Gelfand isomorphism identifies the topological spectrum $X$ purely as a compact Hausdorff space, discarding all differentiable and symplectic information. To recover the phase space of classical mechanics, the $C^*$-algebraic framework must be augmented with additional algebraic structures. These structures are precisely captured by the two following definitions. The Poisson algebra formalizes the Lie bracket of observables, while the smooth dense subalgebra supplies the required differentiability. The compatibility between them, enforced by the Leibniz rule, ensures that the resulting geometry is coherent. Crucially, the choice of such a subalgebra is not inherent to $\A$ itself and constitutes the central external input of the reconstruction procedure.
+The Gelfand isomorphism identifies the topological spectrum $X$ purely as a Hausdorff space, discarding all differentiable and symplectic information. To recover the phase space of classical mechanics, the $C^*$-algebraic framework must be augmented with additional algebraic structures. These structures are captured by the following two definitions. The Poisson algebra formalizes the Lie bracket of observables onto the $C^*$-algebra itself, while the smooth dense subalgebra supplies the required differentiability in a subset of $\A$. The compatibility between them, enforced by the Leibniz rule, ensures that the resulting geometry is coherent. However, the choice of such a subalgebra is not inherent to $\A$ itself and constitutes the central external input of this reconstruction procedure.
 
-We begin by defining the main structure that permits to recover the Lie algebra characteristic to classical mechanics.
+We begin by defining the main structure that allows us to recover the Lie algebra characteristic of classical mechanics.
 
 \begin{definition}[Poisson Algebra]\label{def:poi-alg}
-	A Poisson algebra is an associative commutative algebra \(\mathfrak P\) equipped with a Lie bracket \(\{\cdot,\cdot\}\) acting as a derivation with respect to the associative product. Namely it satisfies the Leibniz rule
+	A Poisson algebra is an associative commutative algebra \(\mathfrak P\), as in Definition \ref{def:algebra}, equipped with a Lie bracket \(\{\cdot,\cdot\}\), per Definition \ref{def:lie-algebra}, acting as a derivation with respect to the associative product. Namely it satisfies the Leibniz rule
 	\[
 	\{f, lh\} = \{f, l\}h + l\{f, h\} \qquad \forall f, h, l \in \mathfrak P.
 	\]
 \end{definition}
 
-In order to reconstruct classical mechanics in an algebraic way, the structure defined in Definition \ref{def:poi-alg} must be given and must be a subalgebra of $\A$ as defined in Definition \ref{def:obs-alg}. In addition, to recover the smooth structure of the phase space, we need an isomorphism to a particular $C^\infty_0(M)$. These strong requirements are coded inside the following definition.
+In addition, to recover the smooth structure of the phase space, we need an isomorphism from, at least, a subalgebra of $\A$ to a particular $C^\infty_0(M)$ where $M$ is a smooth manifold. These strong requirements are coded inside the following definition.
 
 \begin{definition}[Smooth Dense Poisson Subalgebra]\label{def:smooth-subalgebra}
-	Let \(\A\) be a commutative unital C*-algebra as in Definition \ref{def:c-star-algebra} with Gelfand spectrum \(X\) as in Definition \ref{def:character}. A \emph{smooth dense Poisson subalgebra} is a Poisson subalgebra $(\A^\infty, \{\cdot,\cdot\})$ with \(\A^\infty \subset \A\) satisfying
+	Let \(\A\) be a commutative unital C*-algebra as in Definition \ref{def:unital-c-star-algebra} with Gelfand spectrum \(X\) as in Definition \ref{def:character}. A \emph{smooth dense Poisson subalgebra} is a Poisson subalgebra $(\A^\infty, \{\cdot,\cdot\})$, seen in Definition \ref{def:poi-alg}, with \(\A^\infty \subset \A\) satisfying
 	\begin{enumerate}
 		\item  \(\A^\infty\) is a selfadjoint subset as in Definition \ref{def:selfadj-subset},
 		\item \(\A^\infty\) is dense in \(\A\) with respect to the uniform norm,
-		\item there exists a smooth manifold \(M\) such that \(\A^\infty \cong C^\infty_0(M)\) as algebras,
-		\item \(\A^\infty\) is closed under the Poisson bracket \(\{\cdot,\cdot\}\).
+		\item there exists a smooth manifold \(M\) such that \(\A^\infty \cong C^\infty_0(M)\) as algebras.
 	\end{enumerate}
 \end{definition}
 
-We can now ask if the Poisson and the smooth structure can be extended to the whole space of characters $X$. The first answer is negative due to the behaviour of the Poisson brackets presented in Definition \ref{def:poi-alg}.
+ We can now ask if the Poisson and the smooth structure defined on $\A^\infty$ can be transported and extended to the whole space of characters $\sigma(\A) \equiv X$. The first answer is negative due to the behaviour of the Poisson brackets, as explained in the next Remark \ref{rmk:obstruction-poi-strc}.
 
-\begin{remark}[Topological Obstruction to Poisson Structure]
-	The Poisson bracket, as seen in Definition \ref{def:poi-alg}, acts as a first-order differential operator. This makes it intrinsically unbounded and discontinuous with respect to the uniform supremum norm of the C*-algebra $\A$. This obstruction necessitates restricting the Poisson structure strictly to the incomplete dense subalgebra $\A^\infty$, sacrificing Banach completeness to preserve the Leibniz rule.
+\begin{remark}[Topological Obstruction to Poisson Structure]\label{rmk:obstruction-poi-strc}
+	The Poisson bracket on the Poisson subalgebra, as seen in Definition \ref{def:poi-alg}, acts as a first-order differential operator. This makes it generally unbounded and discontinuous with respect to the uniform supremum norm of the C*-algebra $\A$. This obstruction restricts the Poisson algebra strictly to the incomplete dense subalgebra $\A^\infty$, sacrificing Banach completeness to preserve the Leibniz rule.
 \end{remark}
 
-On the other hand, investigating the smooth property, we can find that there is a technical way to extend that structure. In fact, if $M$ is compact, we can prove the following result.
+On the other hand, when we examine the smooth structure instead, we find that there is a technical way to extend it. In fact, if there exists a smooth structure $M$, as in Definition \ref{def:smooth-subalgebra}, and it is compact, we can prove the following result.
 
 \begin{proposition}
-	Let \(\A\) be a commutative unital C*-algebra as in Definition \ref{def:c-star-algebra} with Gelfand spectrum \(X\) as in Definition \ref{def:character}. Given \((\A^\infty, \{\cdot,\cdot\})\) the smooth dense Poisson subalgebra, as in Definition \ref{def:smooth-subalgebra}, with \(\A^\infty \cong C_0^\infty(M)\). If \(M\) is compact, \(X\) is a smooth manifold.
+	Let \(\A\) be a commutative unital C*-algebra as in Definition \ref{def:unital-c-star-algebra} with Gelfand spectrum \(X\) as in Definition \ref{def:character}. Let \((\A^\infty, \{\cdot,\cdot\})\) be the smooth dense Poisson subalgebra of $\A$, as in Definition \ref{def:smooth-subalgebra}, with \(\A^\infty \cong C_0^\infty(M)\). If \(M\) is compact, then \(X\) is a smooth manifold.
 \end{proposition}
 
 \begin{proof}
-	DA RISCRIVERE!!
-	Since \(M\) is compact, \(C_0^\infty(M) = C^\infty(M)\) contains the constant functions, so via the isomorphism of Definition \ref{def:smooth-subalgebra} we have \(\Id_\A \in \A^\infty\). In particular \(\A^\infty\) is a unital subalgebra of \(\A\).
-	
-	Define the evaluation map
-	\[
-	\mathrm{ev}: X \to \sigma(\A^\infty), \qquad \mathrm{ev}(x) = \mathrm{ev}_x := x|_{\A^\infty}, \quad \mathrm{ev}_x(f) = f(x) \ \ \forall f \in \A^\infty,
-	\]
-	which is well defined and continuous, being dual to the inclusion \(\A^\infty \hookrightarrow \A\).
-	
-	\emph{Injectivity.} If \(x_1|_{\A^\infty} = x_2|_{\A^\infty}\), then \(x_1\) and \(x_2\) agree on the dense subset \(\A^\infty\) (Definition \ref{def:smooth-subalgebra}) and are both norm-continuous, so \(x_1 = x_2\) on \(\A\).
-	
-	\emph{Surjectivity.} Under \(\A^\infty \cong C_0^\infty(M)\), every character of \(\A^\infty\) is evaluation at some \(p \in M\), and its value is bounded by the sup norm on \(M\), namely by the \(\A\)-norm restricted to \(\A^\infty\). Being a bounded multiplicative functional on the dense subalgebra \(\A^\infty \subset \A\), it extends uniquely to a bounded multiplicative functional on \(\A\), becoming an element of \(X\). Hence \(\mathrm{ev}\) is surjective.
-	
-	Thus \(\mathrm{ev}\) is a continuous bijection. Since \(\A\) is unital, \(X\) is compact; since \(\sigma(\A^\infty) \cong M\) is Hausdorff, a continuous bijection from a compact space to a Hausdorff space is automatically closed, hence a homeomorphism. Composing with \(\sigma(\A^\infty) \cong M\) gives a homeomorphism \(X \cong M\).
-	
-	Transporting the smooth atlas of \(M\) along this homeomorphism equips \(X\) with a smooth structure, making it a smooth manifold diffeomorphic to \(M\).
+Since $M$ is compact, $C_0^\infty(M) = C^\infty(M)$ contains the constant functions. By the isomorphism of Definition \ref{def:smooth-subalgebra}, it descends that $\Id_{\A} \in \A^\infty$. In particular $\A^\infty$ is a unital subalgebra of $\A$. Let $\sigma(\A^\infty)$ denote the set of linear multiplicative non-trivial functionals on $\A^\infty$, and define an evaluation map as
+\[
+\mathrm{ev} : X \to \sigma(\A^\infty), \qquad
+\mathrm{ev}(x) = \mathrm{ev}_x := x|_{\A^\infty}, \qquad
+\mathrm{ev}_x(f) = f(x) \quad \forall f \in \A^\infty.
+\]
+That is well defined and continuous by \cite[Construction p.~92]{landsmanFoundationsQuantumTheory2017} being dual to the inclusion $\mathfrak{A}^\infty \hookrightarrow \mathfrak{A}$.
+
+\noindent Since $\A^\infty$is dense in $\A$ and multiplication is jointly continuous, two continuous maps out of $\A$ that agree on $\A^\infty$ must coincide, and likewise two continuous maps out of $\A \times \A$ that agree on $\A^\infty \times \A^\infty$ must coincide, via \cite[Exercise 13, \S 18]{munkresTopology2018}.
+
+\begin{description}[wide=0pt, leftmargin=*, font=\normalfont\itshape]
+	\item[Injectivity.] If $x_1|_{\A^\infty} = x_2|_{\A^\infty}$, the above result yields $x_1 = x_2$ on $\A$.
+	\item[Surjectivity.] Under $\A^\infty \cong C_0^\infty(M)$, every $\omega \in \sigma(\A^\infty)$ induces an evaluation by duality $\omega(f) = f(p)$ $\forall f \in C_0^\infty(M)$ for a particular $p \in M$. Since all $f \in \A^\infty$ are bounded by the supremum norm inherited from $\A$, $\omega$ is bounded. Thus the B.L.T.\ Theorem \cite[Theorem I.7]{reedMethodsModernMathematical2003} extends the functionals uniquely to a bounded linear $\tilde\omega \in \A^*$. Since the maps $(A,B) \mapsto \tilde\omega(AB)$ and $(A,B) \mapsto \tilde\omega(A)\tilde\omega(B)$, $\forall A,B \in \A$, agree on the dense subset $\A^\infty \times \A^\infty$, the same above fact yields $\tilde\omega(AB) = \tilde\omega(A)\tilde\omega(B)$. It descends that $\tilde\omega \in \sigma(\A)$ and $\mathrm{ev}$ is surjective.
+\end{description}
+
+\noindent It descends that $\mathrm{ev}$ is a continuous bijection. It remains to identify $M$ with $X$. Under $\A^\infty \cong C^\infty(M)$, the evaluation map
+\[
+\mathrm{ev}^M : M \to \sigma(\A^\infty), \qquad
+p \mapsto \mathrm{ev}^M_p, \qquad
+\mathrm{ev}^M_p(f) = f(p) \quad \forall f \in \A^\infty,
+\]
+is a bijection \cite[Proposition~C.21]{landsmanFoundationsQuantumTheory2017}. Continuity follows since the evaluation $\mathrm{ev}^M_p(f) = f(p)$ acts on smooth, hence continuous, functions $f \in \A^\infty$. Since $M$ is compact and $\sigma(\A^\infty)$ is Hausdorff, $\mathrm{ev}^M$ is a homeomorphism by \cite[Theorem~26.6]{munkresTopology2018}:
+$$M \cong \sigma(\A^\infty).$$
+\noindent Since $\A$ is unital, $X$ is compact by Gelfand Theorem Corollary \ref{cor:gelfand}. Also, since $\sigma(\A^\infty)$ is Hausdorff, the continuous bijection $\mathrm{ev}$ is likewise a homeomorphism via \cite[Theorem 26.6]{munkresTopology2018}:
+$$X \cong \sigma(\A^\infty).$$
+Composing the two homeomorphisms yields $X \cong M$. Now, transporting the smooth atlas of $M$ along this homeomorphism equips $X$ with a smooth structure, making it a smooth manifold diffeomorphic to $M$.
 \end{proof}
 
-\begin{remark}
-	The hypothesis \(M\) compact is equivalent to \(1_\A \in \A^\infty\), and is generally easy to check directly on the manifold underlying \(\A^\infty\) — e.g. for the qubit, \(M = S^2\) is compact, so the hypothesis holds automatically.
-\end{remark}
+\noindent Having discussed the limitations and possible extension of the smooth subalgebra $\A^\infty$, we can collect the components identified so far into a single, self-contained structure.
 
-\noindent After all this discussion, we can collect the algebraic and differential ingredients identified so far into a single, self-contained structure. 
-
-\begin{definition}[Classical Algebraic System]
-	A classical mechanical system is completely characterized by the triplet $(\A, \A^\infty, \{\cdot,\cdot\})$, where:
+\begin{definition}[Classical Algebraic System]\label{def:cas}
+	A classical mechanical system is completely characterized by the triplet $(\A, \A^\infty, \{\cdot,\cdot\})$, where
 	\begin{enumerate}
-		\item $\A \cong C^0(X)$ is a commutative unital C*-algebra, as in Definition \ref{def:unital-c-star-algebra}, determining the topological phase space $X$, its Gelfand spectrum.
-		\item $\A^\infty \subset \A$ is a smooth dense Poisson subalgebra, as in Definition \ref{def:smooth-subalgebra}, inducing the differential structure.
-		\item $\{\cdot,\cdot\}$ is a Poisson bracket, as in Definition \ref{def:poi-fun}, defined exclusively on $\A^\infty$.
+		\item $\A \cong C^0(X)$ is a commutative unital C*-algebra, as in Definition \ref{def:unital-c-star-algebra}, determining the topological state space $X$, its Gelfand spectrum.
+		\item $(\A^\infty \subset \A, \{\cdot, \cdot\})$ is a smooth dense Poisson subalgebra, as in Definition \ref{def:smooth-subalgebra}, inducing the differential and dynamical structure.
 	\end{enumerate}
 \end{definition}
 
-The last step is to show that this is sufficient to recover the complete symplectic manifold. This can be done invoking the representation theory of Poisson algebras. Rather than imposing the symplectic structure externally, one can use Landsman's representation theorem \cite[Theorem 2.6.7]{landsmanMathematicalTopicsClassical1998}. It establishes that the irreducible representations of this triplet are classified by the symplectic manifolds obtained from the restriction of the Poisson bracket on submanifolds of the Poisson structure.This recovers the full phase space construction seen before. 
+The last step is to show that this is sufficient to recover the complete structure of a  symplectic manifold. This can be done invoking the representation theory of Poisson algebras. The complete explanation of this theory is outside the scope of this work, however we can refer the reader to the representation theorem presented in \cite[Theorem 2.6.7]{landsmanMathematicalTopicsClassical1998}. The key idea is to use the Poisson bracket defined on the smooth dense subalgebra to endow the smooth manifold $M$ with a dynamical structure. The theorem establishes that irreducible representations of the Poisson subalgebra, presented in Definition \ref{def:smooth-subalgebra}, correspond to realizations of the algebra on spaces where the Poisson brackets become strictly non-degenerate. Geometrically, this implies evaluating the global Poisson structure of $M$ on invariant submanifolds that inherit a well-defined symplectic form. By restricting the dynamics to these irreducible geometric domains, one exactly recovers the full symplectic phase space formulation of Hamiltonian mechanics without additional postulates.
 
-The representation theory of Poisson algebras has been explained further in \cite[Section 2.6]{landsmanMathematicalTopicsClassical1998}.
-
-\subsection*{Physical Observables and Dynamics}
-Before ending this chapter, we must clarify the physical interpretation of the algebraic structures introduced so far. We previously established the classical Gelfand algebra $\A \cong C^0(X)$ in Definition \ref{def:gel-alg} to reconstruct the topological space, and we isolated the measurable physical quantities within its selfadjoint sector $\A_{sa}$ in Definition \ref{def:obs-alg}. However, to formulate Hamiltonian mechanics, we also required the smooth dense Poisson subalgebra $\A^\infty$ from Definition \ref{def:smooth-subalgebra}.
-
-We can assemble these topological, algebraic, and differential requirements in the following way:
+\subsection*{Physical Observables and Dynamics}\label{sec:interpret-phys}
+Before ending this chapter, we clarify the physical interpretation of the algebras introduced so far. We start with a unital commutative $C^*$-algebra $\A$, per Definition \ref{def:c-star-algebra}. Using Gelfand Theorem \ref{thm:gelfand}, one can reconstruct the topological space $X$. The selfadjoint sector $\A_{sa}$, already seen in Definition \ref{def:obs-alg}, isolates the measurable physical quantities. The smooth dense Poisson subalgebra $\A^\infty$ of Definition \ref{def:smooth-subalgebra} is required to formulate Hamiltonian mechanics. These topological, algebraic, and differential requirements combine as follows.
 \begin{itemize}
-	\item The space of all continuous measurable observables is the selfadjoint sector of the full classical Gelfand algebra $\A$, namely $\A_{sa} = \{f \in \A \mid f^* = f\}$. This space is sufficient to define states, probability measures, and continuous symmetries, but structurally inadequate to generate differential dynamics since it lacks a Poisson bracket.
-	\item Hamiltonian mechanics requires smoothness to formulate the equations of motion. Consequently, the Hamiltonian function $H$ must belong to the smooth selfadjoint sector, defined as $\A^\infty_{sa} := \A^\infty \cap \A_{sa}$. This exact requirement guarantees that the Hamiltonian vector field $X_H = \{H, \cdot\}$ generates a well-defined, strictly real one-parameter group of symplectomorphisms $\alpha_t : \A^\infty \to \A^\infty$.
+	\item The continuous measurable observables form the selfadjoint sector $\A_{sa} = \{f \in \A \mid f^* = f\}$. This space suffices to define states, probability measures, and continuous symmetries, but lacks a Poisson bracket and so cannot generate differential dynamics.
+	\item Hamiltonian mechanics further requires smoothness to formulate the equations of motion, so the Hamiltonian $H$ must belong to the smooth selfadjoint sector $\A^\infty_{sa} := \A^\infty \cap \A_{sa}$. This guarantees that the Hamiltonian vector field $X_H = -\{H, \cdot\}$ generates a well-defined, strictly real one-parameter group of $^*$-automorphisms $\alpha_t : \A^\infty \to \A^\infty$.
 \end{itemize}
-
-A non-selfadjoint Hamiltonian, or one lacking smoothness, would either produce complex flows or exit the domain of the Poisson bracket, yielding unphysical dynamics. Thus, restricting the dynamical generators to the selfadjoint part of $\A^\infty$ ensures the simultaneous preservation of the real structure of physical observables and the symplectic geometry of the underlying phase space. 
+A non-selfadjoint or non-smooth Hamiltonian would produce complex flows or exit the domain of the Poisson bracket, yielding unphysical dynamics. Restricting dynamical generators to the selfadjoint part of $\A^\infty$, preserves both the real structure of physical observables and the symplectic geometry of the underlying phase space.
 
 \newpage
 \section{Example I: Classical Spin System}\label{sec:1-example}
-In this section, we apply the algebraic tools developed in the first chapter to the classical spin system. This example provides an important test case for our framework, since it is a non-trivial Poisson algebra whose reduction yields a compact curved manifold, the sphere, allowing every abstract construction introduced so far, from the Gelfand spectrum to the Poisson bracket, to be verified explicitly on a concrete and geometrically intuitive example. Working through this case in detail also illustrates how symmetries of a physical system translate, via Noether's theorem, into conserved quantities within the same algebraic language.
+In this section, we apply the algebraic tools developed in the first chapter to the classical spin system. This example provides an interesting test case for our framework, since it is a non-trivial Poisson algebra whose reduction yields a compact curved manifold, the sphere. This allows every abstract construction introduced so far, from the Gelfand spectrum to the Poisson bracket, to be verified explicitly on a concrete and geometrically intuitive example. Working through this case in detail also illustrates how symmetries of a physical system translate, via Noether's Theorem, into conserved quantities within the same algebraic language.
 
 \subsection{The Poisson Algebra and Gelfand's Theorem}
 
-Consider the polynomial algebra \(\A \) generated by three elements \(x_1, x_2, x_3\), equipped with the \(\mathfrak{so}(3)\)-Poisson bracket
+Consider the polynomial algebra \(\A \), as in Definition \ref{def:algebra}, generated by three elements \(x_1, x_2, x_3\), equipped with the \(\mathfrak{so}(3)\)-Poisson bracket
 \[
 \{x_i, x_j\} = \epsilon_{ijk} x_k, \qquad i,j,k \in \{1,2,3\},
 \]
@@ -413,83 +397,81 @@ where \(\epsilon_{ijk}\) is the Levi-Civita symbol. This bracket is skew-symmetr
 C = x_1^2 + x_2^2 + x_3^2, \qquad \{C, A\} = 0 \quad \forall A \in \A.
 \]
 
-Since \(\A\) is purely abstract, we must first extract a space from it. Fix \(C=1\) by identifying \(A \sim A'\) whenever \(A-A' = Q(C-1)\) for some \(Q\in\A\). Call \(\A_1\) the resulting quotient. This identification respects the bracket precisely because \(C\) is a Casimir, that is, if \(A-A'=Q(C-1)\), then \(\{A,B\}-\{A',B\} = (C-1)\{Q,B\}\), which again vanishes in the quotient. So \(\A_1\) inherits a well-defined Poisson bracket.
+Since \(\A\) is abstract, we must first extract a space from it. In order to fix \(C=1\), we identify \(A \sim A'\) whenever \(A-A' = Q(C-1)\) for some \(A, A', Q \in \A\). Call the resulting quotient \(\A_1\). This identification respects the bracket because \(C\) is a Casimir operator that acts as a scalar through the Poisson brackets. It descends that \(\{A,B\}-\{A',B\} = (C-1)\{Q,B\}\) for $B \in \A$, which again vanishes in the quotient. It descends that \(\A_1\) inherits a well-defined Poisson brackets.
 
-The points of \(\A_1\) are the multiplicative linear functionals \(\omega:\A_1\to\R\) in the dual space \(\A_1^*\). We call \(X\) their collection. Since \(x_1,x_2,x_3\) generate \(\A_1\), each \(\omega\in X\) is fixed by the triple \((\omega(x_1),\omega(x_2),\omega(x_3))\in\R^3\). Multiplicativity and \(x_1^2+x_2^2+x_3^2=1\) in \(\A_1\) force this triple onto \(\mathbb S^2\); conversely every point of \(\mathbb S^2\) defines such a functional by evaluation. Hence
+The points of \(\A_1\) are the multiplicative linear functionals \(\omega:\A_1\to\R\) in the dual space \(\A_1^*\). We call their collection \(X\). Since \(x_1,x_2,x_3\) generates \(\A_1\), each \(\omega\in X\) is fixed by the triple \((\omega(x_1),\omega(x_2),\omega(x_3))\in\R^3\). Multiplicativity and \(C=1\) in \(\A_1\) force this triple onto \(\mathbb S^2\). In contrast, every point of \(\mathbb S^2\) defines such a functional by evaluation. Hence,
 \[
-X \cong \mathbb{S}^2,
+X \cong \mathbb{S}^2.
 \]
-obtained here as a consequence of the algebra, not assumed from the start. Completing \(\A_1\) in the uniform norm on \(X\) gives a commutative $C^*$-algebra isomorphic to \(C^0(\mathbb S^2)\), consistent with Gelfand's Theorem \ref{thm:gelfand}, and the bracket descends with it, making \(\mathbb S^2\) a natural candidate for a symplectic manifold.
+Completing \(\A_1\) in the uniform norm on \(X\) yields a commutative $C^*$-algebra isomorphic to \(C^0(\mathbb S^2)\), consistent with Gelfand's Theorem \ref{thm:gelfand}. Moreover, the brackets descend with it, making \(\mathbb S^2\) a natural candidate for a symplectic manifold, seen in Definition \ref{def:sympl-man}.
 
-\subsection{Construction of the Symplectic Leaf}
-We now equip the leaf with coordinates and explicitly construct the symplectic form. Use standard spherical coordinates
+\subsection{Construction of the Symplectic Manifold}
+We now equip $\mathbb{S}^2$ with coordinates and explicitly construct the symplectic form. In cartesian coordinates, the symplectic form in $\R^3$ is given by 
+
+$$\omega =  x_1 dx_2 \wedge dx_3 + x_2 dx_3 \wedge dx_1 + x_3 dx_1 \wedge dx_2. $$
+
+\noindent Now we restrict the form to $\mathbb{S}^2$ using the standard spherical coordinates
 \[
 	x_1 = \sin\theta \cos\phi, \qquad x_2 = \sin\theta \sin\phi, \qquad x_3 = \cos\theta,
 \]
-where \(\theta \in [0,\pi] \) and \(\phi \in [0, 2\pi)\).Now we must compute the bracket \(\{\theta, \phi\}\). From \(\{x_1, x_2\} = x_3 = \cos\theta\), we have
-\[
-	\{x_1, x_2\} = \frac{\partial x_1}{\partial \theta}\frac{\partial x_2}{\partial \phi}\{\theta,\phi\} + \frac{\partial x_1}{\partial \phi}\frac{\partial x_2}{\partial \theta}\{\phi,\theta\}.
-\]
-Substituting the partial derivatives yields
+where \(\theta \in [0,\pi] \) and \(\phi \in [0, 2\pi)\). Now we must compute the bracket \(\{\theta, \phi\}\). Using the chain rule and computing the partial derivatives we get%From \(\{x_1, x_2\} = x_3 = \cos\theta\), we have
+%\[
+%	\{x_1, x_2\} = \frac{\partial x_1}{\partial \theta}\frac{\partial x_2}{\partial \phi}\%{\theta,\phi\} + \frac{\partial x_1}{\partial \phi}\frac{\partial x_2}{\partial \theta}\%{\phi,\theta\}.
+%\]
+%Substituting the partial derivatives yields
 \[
 	\{x_1, x_2\} = \sin\theta \cos\theta \{\theta,\phi\}.
 \]
-We equate this to \(x_3 = \cos\theta\) getting
+Equating this to \(x_3 = \cos\theta\) yields
 \begin{equation}
-	\boxed{\{\theta, \phi\} = \frac{1}{\sin\theta}}.\label{eq:poi-sphere}
+	\boxed{\{\theta, \phi\} = \frac{1}{\sin\theta}.}\label{eq:poi-sphere}
 \end{equation}
 \noindent This formula is valid away from the poles. Its extension to \(\sin\theta=0\) is given by the Cartesian expression, ensuring global non-degeneracy.
-\subsubsection{Inversion to the Symplectic Form}
-For a two-dimensional manifold, we can invert the commutator found in Equation \eqref{eq:poi-sphere} to obtain the symplectic form
+Given that the manifold is two-dimensional, to compute the symplectic form in spherical coordinates, we invert the commutator found in Equation \eqref{eq:poi-sphere} to obtain
 \begin{equation}
-	\boxed{\omega = \sin\theta \, d\theta \wedge d\phi}. \label{eq:omega-sphere}
+	\boxed{\omega = \sin\theta \, d\theta \wedge d\phi.} \label{eq:omega-sphere}
 \end{equation}
-Equivalently, in Cartesian coordinates restricted to \(\mathbb{S}^2\), this is the standard area form
-\[
-	\omega = x_1 \, dx_2 \wedge dx_3 + x_2 \, dx_3 \wedge dx_1 + x_3 \, dx_1 \wedge dx_2 \big|_{S^2}.
-\]
-This form is closed (\(d\omega = 0\)) and non-degenerate, thus \((\mathbb{S}^2, \omega)\) is a symplectic manifold.
+\noindent This form is closed \(d\omega = 0\) and non-degenerate, thus \((\mathbb{S}^2, \omega)\) is a symplectic manifold as in Definition \ref{def:sympl-man}.
 
 \subsection{Hamiltonian Action and the Moment Map}
 
-The group \(G = SO(3)\) acts on \(\mathbb{S}^2\) by rotations. For each \(\xi \in \mathfrak{so}(3) \cong \mathbb{R}^3\), the infinitesimal generator is given by
+The group \(G = SO(3)\) acts on \(\mathbb{S}^2\) by rotations. For each \(\xi \in \mathfrak{so}(3) \cong \mathbb{R}^3\), the infinitesimal generator, seen in Definition \ref{def:inf-gen}, is given by
 \[
 	X_\xi(x) = x \times \xi,
 \]
-where \(\times\) denotes the standard cross product. We seek a moment map \(\mu: \mathbb{S}^2 \to \mathfrak{so}(3)^*\) satisfying the fundamental relation
+where \(\times\) denotes the standard cross product. We seek a moment map \(\mu: \mathbb{S}^2 \to \mathfrak{so}(3)^*\), as in Definition \ref{def:mom-map}, satisfying the relation
 \[
 	d\langle \mu(x), \xi \rangle = \iota_{X_\xi} \omega, \qquad \forall \xi \in \mathfrak{so}(3).
 \]
-Identifying \(\mathfrak{so}(3)^* \cong \mathbb{R}^3\) via the dot product, we test the candidate \(\mu(x) = -x\). Take \(\xi = e_1 = (1,0,0)\). Then \(X_{e_1} = (0, x_3, -x_2)\). Contracting \(\omega\) with \(X_{e_1}\)
+Identifying \(\mathfrak{so}(3)^* \cong \mathbb{R}^3\) via the dot product, we test the candidate \(\mu(x) = -x\). Given \(\xi = e_1 = (1,0,0)\), then \(X_{e_1} = (0, x_3, -x_2)\) and contracting \(\omega\) with \(X_{e_1}\) yields
 \begin{align*}
 	\iota_{X_{e_1}} \omega 
 	&= \iota_{(0,x_3,-x_2)} \left( x_1 dx_2 \wedge dx_3 + x_2 dx_3 \wedge dx_1 + x_3 dx_1 \wedge dx_2 \right) \nonumber \\
 	&= x_1(x_3 dx_3 + x_2 dx_2) - (x_2^2+x_3^2) dx_1.
 \end{align*}
 
-\noindent Using the constraint \(x_2 dx_2 + x_3 dx_3 = -x_1 dx_1\), we get
+\noindent Using the constraint \(x_2 dx_2 + x_3 dx_3 = -x_1 dx_1\), given by the restriction on the sphere, we get
 \[
 	\iota_{X_{e_1}} \omega = -dx_1.
 \]
-Thus, \(d\langle \mu, e_1 \rangle = d(-x_1)\), which implies
+\noindent Thus, \(d\langle \mu, e_1 \rangle = d(-x_1)\), which implies
 \begin{equation}
 	\boxed{\mu(x) = -x.}\label{eq:mom-map}
 \end{equation}
-Physically, this is the negative of the position vector, which corresponds to the angular momentum vector, up to a sign convention.
+\noindent Physically, this is the negative of the position vector, which corresponds to the angular momentum vector, up to a sign convention.
 
 \subsection{Noether's Theorem in Practice}
-The moment map constructed above is the precise algebraic counterpart of a conserved quantity associated with a continuous symmetry, in the sense of Noether's theorem. We now illustrate this correspondence concretely through two physically motivated examples, the precession of a classical system in a magnetic field and the symmetric spinning top, both governed by the same underlying symplectic structure on the sphere.
-
-\subsubsection{Example 1: Precession in a Magnetic Field}
+The moment map constructed above is the algebraic counterpart of a conserved quantity associated with a continuous symmetry, in the sense of Noether's Theorem \ref{thm:noether}. We now illustrate this correspondence through the example of the precession of a classical system that is governed by the same underlying symplectic structure on the sphere.
+\medskip
 Consider the Hamiltonian
 \[
 	H = x_3,
 \]
-which is invariant under rotations about the \(z\)-axis. The symmetry generator is \(\xi = e_3 = (0,0,1)\). The associated Noether charge is
+which is invariant under rotations about the \(z\)-axis. The symmetry generator is \(\xi = e_3 = (0,0,1)\). The associated Noether invariant is
 \[
 	\langle \mu, \xi \rangle = \langle -x, e_3 \rangle = -x_3.
 \]
-as calculated in Equation \eqref{eq:mom-map} Noether's theorem guarantees \(x_3\) is conserved. The equations of motion are
+As calculated in Equation \eqref{eq:mom-map}, Noether's theorem guarantees \(x_3\) is conserved. In fact, the equations of motion are
 \begin{align*}
 	\dot{x}_1 &= \{x_1, H\} = -x_2, \\
 	\dot{x}_2 &= \{x_2, H\} = x_1, \\
@@ -500,21 +482,5 @@ Solving yields a uniform precession around the \(z\)-axis:
 	x_1(t) + i x_2(t) = e^{it} \big(x_1(0) + i x_2(0)\big), \qquad x_3(t) = x_3(0).
 \]
 
-\subsubsection{Example 2: The Symmetric Rigid Body}
-Now take the Hamiltonian
-\[
-	H = \frac{1}{2}(x_1^2 + x_2^2) = \frac{1}{2}(1 - x_3^2).
-\]
-This is also invariant under the \(z\)-axis rotations, so the conserved charge remains \(-x_3\). However, the dynamics become richer. The equations of motion are
-\begin{align*}
-	\dot{x}_1 &= \{x_1, H\} = x_2 x_3, \\
-	\dot{x}_2 &= \{x_2, H\} = -x_1 x_3, \\
-	\dot{x}_3 &= 0.
-\end{align*}
-The solution is again a rotation about the \(z\)-axis, but with an angular velocity that depends on the conserved quantity:
-\[
-	\dot{\phi} = -x_3 = \text{const}.
-\]
-This matches the behavior of a symmetric Euler top.
-
+\printbibliography
 \end{document}
