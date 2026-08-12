@@ -2344,33 +2344,29 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="2">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="3">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="4">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="5">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="6">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="7">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="8">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="9">landsmanFoundationsQuantumTheory2017</bcf:citekey>
-    <bcf:citekey order="10">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="11">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="12">landsmanFoundationsQuantumTheory2017</bcf:citekey>
-    <bcf:citekey order="13">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="14">bratteliOperatorAlgebrasQuantum</bcf:citekey>
+    <bcf:citekey order="1">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="2">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="3">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="4">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="5">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="6">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="7">reedMethodsModernMathematical2003</bcf:citekey>
+    <bcf:citekey order="8">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="9">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="10">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="11">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
+    <bcf:citekey order="12">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="13">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="14">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
     <bcf:citekey order="15">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="16">landsmanFoundationsQuantumTheory2017</bcf:citekey>
-    <bcf:citekey order="17">munkresTopology2018</bcf:citekey>
-    <bcf:citekey order="18">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="19">landsmanFoundationsQuantumTheory2017</bcf:citekey>
-    <bcf:citekey order="20">munkresTopology2018</bcf:citekey>
-    <bcf:citekey order="21">munkresTopology2018</bcf:citekey>
-    <bcf:citekey order="22">landsmanMathematicalTopicsClassical1998</bcf:citekey>
-    <bcf:citekey order="23">bratteliOperatorAlgebrasQuantum</bcf:citekey>
-    <bcf:citekey order="24">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="25">landsmanFoundationsQuantumTheory2017</bcf:citekey>
-    <bcf:citekey order="26">munkresTopology2018</bcf:citekey>
-    <bcf:citekey order="27">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="16">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="17">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="18">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="19">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="20">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="21">reedMethodsModernMathematical2003</bcf:citekey>
+    <bcf:citekey order="22">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="23">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

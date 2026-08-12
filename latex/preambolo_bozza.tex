@@ -11,6 +11,7 @@
 \usepackage{mathtools}
 \usepackage{physics}
 \usepackage{graphicx}
+\usepackage{enumitem}
 \usepackage{tikz-cd}
 \usepackage[margin=2cm]{geometry}
 \usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
@@ -26,6 +27,8 @@
 \newtheorem{remark}[definition]{Remark}
 \newtheorem{example}[definition]{Example}
 
+\let\mathcal\relax
+\newcommand{\mathcal}[1]{\text{\usefont{OMS}{cmsy}{m}{n}#1}}
 \DeclareMathOperator{\Spec}{Spec}
 \DeclareMathOperator{\Ad}{Ad}
 \DeclareMathOperator{\ad}{ad}

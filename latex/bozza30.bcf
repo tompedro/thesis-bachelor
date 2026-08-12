@@ -2344,29 +2344,32 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">moretti_alg</bcf:citekey>
-    <bcf:citekey order="2">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="3">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="4">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="5">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="6">morettiSpectralTheoryQuantum2017</bcf:citekey>
-    <bcf:citekey order="7">morettiSpectralTheoryQuantum2017</bcf:citekey>
-    <bcf:citekey order="8">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="9">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="9">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="9">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="9">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="10">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="11">morettiSpectralTheoryQuantum2017</bcf:citekey>
-    <bcf:citekey order="12">morettiSpectralTheoryQuantum2017</bcf:citekey>
-    <bcf:citekey order="13">ReedSimon1980</bcf:citekey>
-    <bcf:citekey order="14">ReedSimon1980</bcf:citekey>
-    <bcf:citekey order="15">ReedSimon1980</bcf:citekey>
-    <bcf:citekey order="16">ReedSimon1980</bcf:citekey>
-    <bcf:citekey order="17">moretti_alg</bcf:citekey>
-    <bcf:citekey order="18">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="19">morettiSpectralTheoryQuantum2017</bcf:citekey>
-    <bcf:citekey order="20">ReedSimon1980</bcf:citekey>
+    <bcf:citekey order="1">schilppAlbertEinsteinPhilosopherscientist1991</bcf:citekey>
+    <bcf:citekey order="2">peresQuantumTheoryConcepts2002</bcf:citekey>
+    <bcf:citekey order="3">peresQuantumTheoryConcepts2002</bcf:citekey>
+    <bcf:citekey order="4">jammerPhilosophyQuantumMechanics1974</bcf:citekey>
+    <bcf:citekey order="5">bohrCanQuantumMechanicalDescription1935</bcf:citekey>
+    <bcf:citekey order="6">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="7">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="8">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="9">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
+    <bcf:citekey order="10">murphyCalgebrasOperatorTheory1990</bcf:citekey>
+    <bcf:citekey order="11">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="12">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="13">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="14">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="15">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="16">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="17">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="18">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="19">schilppAlbertEinsteinPhilosopherscientist1991</bcf:citekey>
+    <bcf:citekey order="20">peresQuantumTheoryConcepts2002</bcf:citekey>
+    <bcf:citekey order="21">jammerPhilosophyQuantumMechanics1974</bcf:citekey>
+    <bcf:citekey order="22">bohrCanQuantumMechanicalDescription1935</bcf:citekey>
+    <bcf:citekey order="23">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="24">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="25">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
+    <bcf:citekey order="26">murphyCalgebrasOperatorTheory1990</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2375,4 +2378,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

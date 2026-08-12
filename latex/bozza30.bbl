@@ -19,6 +19,164 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{schilppAlbertEinsteinPhilosopherscientist1991}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8f686a01aa39d455bf35cc2b1b5e0bdf}{%
+           family={Schilpp},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima Arthur},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {La Salle (Ill.)}%
+      }
+      \list{publisher}{1}{%
+        {Open court}%
+      }
+      \strng{namehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{fullhash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{bibnamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authorbibnamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authornamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authorfullhash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-87548-286-6}
+      \field{langid}{english}
+      \field{number}{7}
+      \field{series}{The Library of Living Philosophers}
+      \field{shorttitle}{Albert {{Einstein}}}
+      \field{title}{Albert {{Einstein}}: Philosopher-Scientist}
+      \field{year}{1991}
+      \field{dateera}{ce}
+    \endentry
+    \entry{peresQuantumTheoryConcepts2002}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9fc737e2158b7231de1c864a26497567}{%
+           family={Peres},
+           familyi={P\bibinitperiod},
+           given={Asher},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Imprint: Springer}%
+      }
+      \strng{namehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{fullhash}{9fc737e2158b7231de1c864a26497567}
+      \strng{bibnamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authorbibnamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authornamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authorfullhash}{9fc737e2158b7231de1c864a26497567}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{1st ed. 2002}
+      \field{isbn}{978-0-306-47120-9}
+      \field{langid}{english}
+      \field{number}{57}
+      \field{pagetotal}{1}
+      \field{series}{Fundamental {{Theories}} of {{Physics}}}
+      \field{shorttitle}{Quantum {{Theory}}}
+      \field{title}{Quantum {{Theory}}: {{Concepts}} and {{Methods}}}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1007/0-306-47120-5
+      \endverb
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/CARNRWRI/Peres - 2002 - Quantum Theory Concepts and Methods.pdf
+      \endverb
+    \endentry
+    \entry{jammerPhilosophyQuantumMechanics1974}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3457fde46d50f50946628b51edbde55c}{%
+           family={Jammer},
+           familyi={J\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{fullhash}{3457fde46d50f50946628b51edbde55c}
+      \strng{bibnamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authorbibnamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authornamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authorfullhash}{3457fde46d50f50946628b51edbde55c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-471-43958-5}
+      \field{langid}{english}
+      \field{pagetotal}{536}
+      \field{series}{A {{Wiley-Interscience Publications}}}
+      \field{shorttitle}{The Philosophy of Quantum Mechanics}
+      \field{title}{The Philosophy of Quantum Mechanics: The Interpretations of Quantum Mechanics in Historical Perspective}
+      \field{year}{1974}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/PW84ADUT/Jammer - 1974 - The philosophy of quantum mechanics the interpretations of quantum mechanics in historical perspect.pdf
+      \endverb
+    \endentry
+    \entry{bohrCanQuantumMechanicalDescription1935}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a0bed8dbeec8d1cc48216777bb7dae35}{%
+           family={Bohr},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{fullhash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{bibnamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authorbibnamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authornamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authorfullhash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{issn}{0031-899X}
+      \field{journaltitle}{Physical Review}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{8}
+      \field{shortjournal}{Phys. Rev.}
+      \field{title}{Can {{Quantum-Mechanical Description}} of {{Physical Reality}} Be {{Considered Complete}}?}
+      \field{urlday}{8}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{48}
+      \field{year}{1935}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{696\bibrangedash 702}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1103/PhysRev.48.696
+      \endverb
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/ZC7KLJXZ/Bohr - 1935 - Can Quantum-Mechanical Description of Physical Reality be Considered Complete.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.48.696
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.48.696
+      \endverb
+    \endentry
     \entry{strocchiIntroductionMathematicalStructure2005}{book}{}
       \name{author}{1}{}{%
         {{hash=f0fd3a0c94648b9cb81b5c5b8f4defe6}{%
@@ -39,8 +197,8 @@
       \strng{authorbibnamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
       \strng{authornamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
       \strng{authorfullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{isbn}{978-981-256-431-3}
@@ -55,6 +213,100 @@
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/I4BT6HJH/Strocchi - 2005 - An introduction to the mathematical structure of quantum mechanics a short course for mathematician.pdf;/Users/tommasopedroni/Zotero/storage/WRNKUFG2/An Introduction to the Mathematical Structure of Quantum Mechanics A Short Course for Mathematicians, Second Edition (F. Strocchi) (Z-Library).pdf
       \endverb
+    \endentry
+    \entry{morettiSpectralTheoryQuantum}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c0752a0dca220b387d6c6d4be1aad288}{%
+           family={Moretti},
+           familyi={M\bibinitperiod},
+           given={Valter},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{fullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{bibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorbibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authornamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorfullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Spectral {{Theory}} and {{Quantum Mechanics}}}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/VEHTVFAC/Moretti - Spectral Theory and Quantum Mechanics.pdf
+      \endverb
+    \endentry
+    \entry{bratteliOperatorAlgebrasQuantum1981}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=5bdad1e8881d241508992d86f9adfef9}{%
+           family={Bratteli},
+           familyi={B\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0e65107932ea41e3207ae249522b1100}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Derek\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{fullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{bibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorbibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-3-540-10381-3}
+      \field{langid}{english}
+      \field{pagetotal}{505}
+      \field{shorttitle}{Operator Algebras and Quantum Statistical Mechanics. 2}
+      \field{title}{Operator Algebras and Quantum Statistical Mechanics. 2: {{Equilibrium}} States ; Models in Quantum Statistical Mechanics}
+      \field{year}{1981}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/44JKBCVF/cirelli_kahler_algebraic.pdf;/Users/tommasopedroni/Zotero/storage/BCPE8WYY/geometrical_formulation_qm.pdf;/Users/tommasopedroni/Zotero/storage/R39SQJQT/Bratteli e Robinson - 1981 - Operator algebras and quantum statistical mechanics. 2 Equilibrium states \; models in quantum stati.pdf;/Users/tommasopedroni/Zotero/storage/UU2QB243/BZ-on-compact-kahler.pdf;/Users/tommasopedroni/Zotero/storage/ZXI6SLR5/RQM on Kahler space.pdf
+      \endverb
+    \endentry
+    \entry{murphyCalgebrasOperatorTheory1990}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6e3af3f6526b3a6092b9b2fc4866abab}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Gerard\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Diego New York London [etc.]}%
+      }
+      \list{publisher}{1}{%
+        {Academic press}%
+      }
+      \strng{namehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{fullhash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{bibnamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authorbibnamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authornamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authorfullhash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-12-511360-1}
+      \field{langid}{english}
+      \field{title}{C*-Algebras and Operator Theory}
+      \field{year}{1990}
+      \field{dateera}{ce}
     \endentry
   \enddatalist
 \endrefsection

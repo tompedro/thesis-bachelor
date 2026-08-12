@@ -1,15 +1,22 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'bozza20.blg'
-[112] biber-darwin:340> INFO - === Mon Jul 20, 2026, 14:48:18
-[145] Biber.pm:418> INFO - Reading 'bozza20.bcf'
-[241] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
-[254] Biber.pm:4383> INFO - Processing section 0
-[269] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[273] bibtex.pm:1713> INFO - LaTeX decoding ...
-[335] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[427] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[428] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[428] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[428] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[432] bbl.pm:654> INFO - Writing 'bozza20.bbl' with encoding 'UTF-8'
-[434] bbl.pm:757> INFO - Output to bozza20.bbl
+[1] Config.pm:310> INFO - Logfile is 'bozza20.blg'
+[112] biber-darwin:340> INFO - === Tue Aug 11, 2026, 15:23:14
+[143] Biber.pm:418> INFO - Reading 'bozza20.bcf'
+[251] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[277] Biber.pm:4383> INFO - Processing section 0
+[293] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[298] bibtex.pm:1713> INFO - LaTeX decoding ...
+[368] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[453] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[454] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[454] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[454] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[468] bbl.pm:654> INFO - Writing 'bozza20.bbl' with encoding 'UTF-8'
+[471] bbl.pm:757> INFO - Output to bozza20.bbl
+[471] Biber.pm:130> WARN - Entry 'reedMethodsModernMathematical2003' (bib.bib): Invalid format '2003' of date field 'date' - ignoring
+[472] Biber.pm:130> WARN - Entry 'landsmanFoundationsQuantumTheory2017' (bib.bib): Invalid format '2017' of date field 'date' - ignoring
+[472] Biber.pm:130> WARN - Entry 'landsmanFoundationsQuantumTheory2017' (bib.bib): Invalid format '2026-06-14' of date field 'urldate' - ignoring
+[472] Biber.pm:130> WARN - ISBN '978-3-319-51776-6 978-3-319-51777-3' in entry 'landsmanFoundationsQuantumTheory2017' is invalid - run biber with '--validate_datamodel' for details.
+[472] Biber.pm:130> WARN - Entry 'landsmanMathematicalTopicsClassical1998' (bib.bib): Invalid format '1998' of date field 'date' - ignoring
+[472] Biber.pm:130> WARN - I didn't find a database entry for 'munkresTopology2018' (section 0)
+[472] Biber.pm:132> INFO - WARNINGS: 6
