@@ -1,19 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bozza40.blg'
-[79] biber-darwin:340> INFO - === Tue Aug 11, 2026, 12:04:14
-[100] Biber.pm:418> INFO - Reading 'bozza40.bcf'
-[170] Biber.pm:972> INFO - Found 4 citekeys in bib section 0
-[183] Biber.pm:4383> INFO - Processing section 0
-[195] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[202] bibtex.pm:1713> INFO - LaTeX decoding ...
-[250] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[309] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[309] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[309] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[309] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[312] bbl.pm:654> INFO - Writing 'bozza40.bbl' with encoding 'UTF-8'
-[314] bbl.pm:757> INFO - Output to bozza40.bbl
-[314] Biber.pm:130> WARN - Entry 'strocchiIntroductionMathematicalStructure2005' (bib.bib): Invalid format '2005' of date field 'date' - ignoring
-[314] Biber.pm:130> WARN - Entry 'bratteliOperatorAlgebrasQuantum1981' (bib.bib): Invalid format '1981' of date field 'date' - ignoring
-[314] Biber.pm:130> WARN - Entry 'reedMethodsModernMathematical2003' (bib.bib): Invalid format '2003' of date field 'date' - ignoring
-[314] Biber.pm:132> INFO - WARNINGS: 3
+[66] biber-darwin:340> INFO - === Fri Aug 14, 2026, 12:18:59
+[83] Biber.pm:418> INFO - Reading 'bozza40.bcf'
+[153] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[166] Biber.pm:4383> INFO - Processing section 0
+[176] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[181] bibtex.pm:1713> INFO - LaTeX decoding ...
+[234] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[303] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[303] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[303] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[303] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[310] bbl.pm:654> INFO - Writing 'bozza40.bbl' with encoding 'UTF-8'
+[313] bbl.pm:757> INFO - Output to bozza40.bbl
+[313] Biber.pm:130> WARN - ISBN '978-1-4419-2313-4 978-0-387-21554-9' in entry 'hallLieGroupsLie2003' is invalid - run biber with '--validate_datamodel' for details.
+[313] Biber.pm:132> INFO - WARNINGS: 1

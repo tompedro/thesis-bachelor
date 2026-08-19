@@ -81,10 +81,11 @@
       \field{isbn}{978-7-5062-5931-6}
       \field{langid}{english}
       \field{title}{Methods of Modern Mathematical Physics. {{I}}, {{Functional}} Analysis}
+      \field{year}{2003}
+      \field{dateera}{ce}
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/YAFRZYB6/Methods of modern mathematical physics (Michael Reed, Barry Simon) (z-library.sk, 1lib.sk, z-lib.sk).pdf
       \endverb
-      \warn{\item Entry 'reedMethodsModernMathematical2003' (bib.bib): Invalid format '2003' of date field 'date' - ignoring}
     \endentry
     \entry{landsmanFoundationsQuantumTheory2017}{book}{}
       \name{author}{1}{}{%
@@ -115,7 +116,13 @@
       \field{langid}{english}
       \field{series}{Fundamental {{Theories}} of {{Physics}}}
       \field{title}{Foundations of {{Quantum Theory}}}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{volume}{188}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
       \verb{doi}
       \verb 10.1007/978-3-319-51777-3
       \endverb
@@ -128,8 +135,37 @@
       \verb{url}
       \verb http://link.springer.com/10.1007/978-3-319-51777-3
       \endverb
-      \warn{\item Entry 'landsmanFoundationsQuantumTheory2017' (bib.bib): Invalid format '2017' of date field 'date' - ignoring}
-      \warn{\item Entry 'landsmanFoundationsQuantumTheory2017' (bib.bib): Invalid format '2026-06-14' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{munkresTopology2000}{book}{}
+      \name{author}{1}{}{%
+        {{hash=429635b6b1c6fa6f9b3253b90f49143b}{%
+           family={Munkres},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima Raymond},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River (N. J.)}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \strng{fullhash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \strng{bibnamehash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \strng{authorbibnamehash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \strng{authornamehash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \strng{authorfullhash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd ed}
+      \field{isbn}{978-0-13-181629-9}
+      \field{langid}{english}
+      \field{title}{Topology}
+      \field{year}{2000}
+      \field{dateera}{ce}
     \endentry
     \entry{landsmanMathematicalTopicsClassical1998}{book}{}
       \name{author}{1}{}{%
@@ -160,13 +196,13 @@
       \field{langid}{english}
       \field{series}{Springer Monographs in Mathematics}
       \field{title}{Mathematical Topics between Classical and Quantum Mechanics}
+      \field{year}{1998}
+      \field{dateera}{ce}
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/SXXYEA9S/mathematical_topics_landsman.pdf
       \endverb
-      \warn{\item Entry 'landsmanMathematicalTopicsClassical1998' (bib.bib): Invalid format '1998' of date field 'date' - ignoring}
     \endentry
   \enddatalist
-  \missing{munkresTopology2018}
 \endrefsection
 \endinput
 

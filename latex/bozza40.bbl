@@ -50,10 +50,50 @@
       \field{series}{Advanced Series in Mathematical Physics}
       \field{shorttitle}{An Introduction to the Mathematical Structure of Quantum Mechanics}
       \field{title}{An Introduction to the Mathematical Structure of Quantum Mechanics: A Short Course for Mathematicians}
+      \field{year}{2005}
+      \field{dateera}{ce}
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/I4BT6HJH/Strocchi - 2005 - An introduction to the mathematical structure of quantum mechanics a short course for mathematician.pdf;/Users/tommasopedroni/Zotero/storage/WRNKUFG2/An Introduction to the Mathematical Structure of Quantum Mechanics A Short Course for Mathematicians, Second Edition (F. Strocchi) (Z-Library).pdf
       \endverb
-      \warn{\item Entry 'strocchiIntroductionMathematicalStructure2005' (bib.bib): Invalid format '2005' of date field 'date' - ignoring}
+    \endentry
+    \entry{reedMethodsModernMathematical2003}{book}{}
+      \name{author}{2}{}{%
+        {{hash=a3df488eb434e4eefcbaa7c9a62c89c5}{%
+           family={Reed},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7269c7c834dddf30f6b8e7cb7b0d4790}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Beijing}%
+      }
+      \list{publisher}{1}{%
+        {World Published Corporation}%
+      }
+      \strng{namehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{fullhash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{bibnamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authorbibnamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authornamehash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{authorfullhash}{957d82a72e39507187acf84770b1bfa7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{OCLC: 659934039}
+      \field{isbn}{978-7-5062-5931-6}
+      \field{langid}{english}
+      \field{title}{Methods of Modern Mathematical Physics. {{I}}, {{Functional}} Analysis}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/YAFRZYB6/Methods of modern mathematical physics (Michael Reed, Barry Simon) (z-library.sk, 1lib.sk, z-lib.sk).pdf
+      \endverb
     \endentry
     \entry{morettiSpectralTheoryQuantum}{article}{}
       \name{author}{1}{}{%
@@ -69,8 +109,8 @@
       \strng{authorbibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
       \strng{authornamehash}{c0752a0dca220b387d6c6d4be1aad288}
       \strng{authorfullhash}{c0752a0dca220b387d6c6d4be1aad288}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{langid}{english}
@@ -104,8 +144,8 @@
       \strng{authorbibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
       \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
       \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{isbn}{978-3-540-10381-3}
@@ -113,48 +153,59 @@
       \field{pagetotal}{505}
       \field{shorttitle}{Operator Algebras and Quantum Statistical Mechanics. 2}
       \field{title}{Operator Algebras and Quantum Statistical Mechanics. 2: {{Equilibrium}} States ; Models in Quantum Statistical Mechanics}
+      \field{year}{1981}
+      \field{dateera}{ce}
       \verb{file}
       \verb /Users/tommasopedroni/Zotero/storage/44JKBCVF/cirelli_kahler_algebraic.pdf;/Users/tommasopedroni/Zotero/storage/BCPE8WYY/geometrical_formulation_qm.pdf;/Users/tommasopedroni/Zotero/storage/R39SQJQT/Bratteli e Robinson - 1981 - Operator algebras and quantum statistical mechanics. 2 Equilibrium states \; models in quantum stati.pdf;/Users/tommasopedroni/Zotero/storage/UU2QB243/BZ-on-compact-kahler.pdf;/Users/tommasopedroni/Zotero/storage/ZXI6SLR5/RQM on Kahler space.pdf
       \endverb
-      \warn{\item Entry 'bratteliOperatorAlgebrasQuantum1981' (bib.bib): Invalid format '1981' of date field 'date' - ignoring}
     \endentry
-    \entry{reedMethodsModernMathematical2003}{book}{}
-      \name{author}{2}{}{%
-        {{hash=a3df488eb434e4eefcbaa7c9a62c89c5}{%
-           family={Reed},
-           familyi={R\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=7269c7c834dddf30f6b8e7cb7b0d4790}{%
-           family={Simon},
-           familyi={S\bibinitperiod},
-           given={Barry},
-           giveni={B\bibinitperiod}}}%
+    \entry{hallLieGroupsLie2003}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b805c00e09278506b061111d904aa5c8}{%
+           family={Hall},
+           familyi={H\bibinitperiod},
+           given={Brian\bibnamedelima C.},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Beijing}%
+        {New York, NY}%
       }
       \list{publisher}{1}{%
-        {World Published Corporation}%
+        {Springer New York}%
       }
-      \strng{namehash}{957d82a72e39507187acf84770b1bfa7}
-      \strng{fullhash}{957d82a72e39507187acf84770b1bfa7}
-      \strng{bibnamehash}{957d82a72e39507187acf84770b1bfa7}
-      \strng{authorbibnamehash}{957d82a72e39507187acf84770b1bfa7}
-      \strng{authornamehash}{957d82a72e39507187acf84770b1bfa7}
-      \strng{authorfullhash}{957d82a72e39507187acf84770b1bfa7}
+      \strng{namehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{fullhash}{b805c00e09278506b061111d904aa5c8}
+      \strng{bibnamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authorbibnamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authornamehash}{b805c00e09278506b061111d904aa5c8}
+      \strng{authorfullhash}{b805c00e09278506b061111d904aa5c8}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{annotation}{OCLC: 659934039}
-      \field{isbn}{978-7-5062-5931-6}
+      \field{isbn}{978-1-4419-2313-4 978-0-387-21554-9}
       \field{langid}{english}
-      \field{title}{Methods of Modern Mathematical Physics. {{I}}, {{Functional}} Analysis}
-      \verb{file}
-      \verb /Users/tommasopedroni/Zotero/storage/YAFRZYB6/Methods of modern mathematical physics (Michael Reed, Barry Simon) (z-library.sk, 1lib.sk, z-lib.sk).pdf
+      \field{series}{Graduate {{Texts}} in {{Mathematics}}}
+      \field{title}{Lie {{Groups}}, {{Lie Algebras}}, and {{Representations}}}
+      \field{urlday}{10}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{volume}{222}
+      \field{year}{2003}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-0-387-21554-9
       \endverb
-      \warn{\item Entry 'reedMethodsModernMathematical2003' (bib.bib): Invalid format '2003' of date field 'date' - ignoring}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/MW2IE2DT/Hall - 2003 - Lie Groups, Lie Algebras, and Representations.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-0-387-21554-9
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-0-387-21554-9
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

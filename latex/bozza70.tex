@@ -1,0 +1,271 @@
+\input{preambolo_bozza}
+\setcounter{chapter}{3}
+\setcounter{section}{0}
+\begin{document}
+
+\section{Poisson Manifolds and Symplectic Leaves}
+
+\begin{definition}[Poisson manifold]\label{def:poisson-manifold}
+	A \emph{Poisson manifold} is a pair $(P,\{\cdot,\cdot\})$, where $P$ is a smooth manifold and $\{\cdot,\cdot\}: C^\infty(P,\R) \times C^\infty(P,\R) \to C^\infty(P,\R)$ is $\R$-bilinear, antisymmetric, satisfies the Jacobi identity, and the Leibniz rule
+	\[
+	\{f,hk\} = \{f,h\}k + h\{f,k\}, \qquad f,h,k \in C^\infty(P,\R).
+	\]
+\end{definition}
+
+\begin{definition}[Hamiltonian vector field on a Poisson manifold]\label{def:hamiltonian-vf-poisson}
+	Let $(P,\{\cdot,\cdot\})$ be a Poisson manifold and $h \in C^\infty(P,\R)$. The \emph{Hamiltonian vector field} $\xi_h \in \mathfrak{X}(P)$ is defined by
+	\[
+	\xi_h f := \{f,h\}, \qquad f \in C^\infty(P,\R).
+	\]
+\end{definition}
+
+\begin{definition}[Symplectic leaf]\label{def:symplectic-leaf}
+	Let $(P,\{\cdot,\cdot\})$ be a Poisson manifold. A \emph{symplectic leaf} $S_\alpha \subset P$ is a maximal connected immersed submanifold such that
+	\[
+	T_\sigma S_\alpha = \{\xi_h(\sigma) \mid h \in C^\infty(P,\R)\}, \qquad \sigma \in S_\alpha,
+	\]
+	and $\{\cdot,\cdot\}$ restricts to a nondegenerate bracket on $S_\alpha$.
+\end{definition}
+
+\begin{lemma}\label{lem:vanishing-bracket-leaf}
+	Let $S_\alpha \subset P$ be a symplectic leaf with inclusion $\iota_\alpha: S_\alpha \hookrightarrow P$. If $f \in C^\infty(P,\R)$ vanishes on $S_\alpha$, then $\{f,h\}(\sigma) = 0$ for every $\sigma \in S_\alpha$, $h \in C^\infty(P,\R)$.
+\end{lemma}
+
+\begin{proof}
+	$\xi_h$ is tangent to $S_\alpha$ by Definition \ref{def:symplectic-leaf}, and $f|_{S_\alpha} = 0$, so $\{f,h\}(\sigma) = \xi_h f(\sigma) = 0$.
+\end{proof}
+
+\begin{definition}[Poisson bracket on a symplectic leaf]\label{def:leaf-bracket}
+	For $f,h \in C^\infty(P,\R)$, the \emph{Poisson bracket on $S_\alpha$} is
+	\begin{equation}
+		\{\iota_\alpha^*f, \iota_\alpha^*h\}_\alpha := \iota_\alpha^*\{f,h\}, \label{eq:leaf-bracket}
+	\end{equation}
+	well defined by Lemma \ref{lem:vanishing-bracket-leaf}, independently of the extensions $f,h$.
+\end{definition}
+
+\begin{theorem}[Symplectic foliation]\label{thm:symplectic-foliation}
+	Every finite-dimensional Poisson manifold $P$ decomposes as a disjoint union $P = \bigcup_\alpha \iota_\alpha(S_\alpha)$ of symplectic leaves as in Definition \ref{def:symplectic-leaf}, each $\iota_\alpha$ a Poisson immersion with respect to the bracket \eqref{eq:leaf-bracket}. The value $\{f,h\}(\sigma)$ depends only on the restrictions of $f,h$ to the leaf through $\sigma$.
+\end{theorem}
+
+\begin{proof}
+	Existence of the leaves follows from the singular Frobenius theorem applied to the distribution spanned by the Hamiltonian vector fields, see \cite[Theorem 2.4.7]{landsmanMathematicalTopicsBetween1998}. That $\iota_\alpha$ is Poisson is \eqref{eq:leaf-bracket}. If $f'|_{S_\alpha} = f|_{S_\alpha}$, then $\{f,h\}(\sigma) = \{f',h\}(\sigma)$ for $\sigma \in S_\alpha$ by Lemma \ref{lem:vanishing-bracket-leaf}, and symmetrically for $h$.
+\end{proof}
+
+\section{Projective Hilbert Spaces as Symplectic Manifolds}
+
+\begin{definition}[Compact operators]\label{def:compact-operators}
+	Let $\mathcal{H}$ be a Hilbert space as in Definition \ref{def:hilbert-space}. $A \in \mathfrak{B}(\mathcal{H})$ as in Definition \ref{def:bounded-operators} is \emph{compact} if it is a norm-limit of finite-rank operators. The compact operators form a closed two-sided ideal $\mathfrak{B}_0(\mathcal{H}) \subset \mathfrak{B}(\mathcal{H})$.
+\end{definition}
+
+\begin{definition}[Projective Hilbert space]\label{def:projective-hilbert-space}
+	Let $\mathcal{H}$ be a Hilbert space. On $\mathcal{H}^* := \mathcal{H}\setminus\{0\}$ define $\Psi \sim \Phi :\Leftrightarrow \exists z \in \C\setminus\{0\}: \Phi = z\Psi$. The \emph{projective Hilbert space} is
+	\[
+	\mathbb{P}\mathcal{H} := \mathcal{H}^*/\sim,
+	\]
+	with $[\Psi]$ the equivalence class of $\Psi \in \mathcal{H}^*$.
+\end{definition}
+
+\begin{proposition}\label{prop:ph-quotient-pure-states}
+	Let $S\mathcal{H} := \{\Psi \in \mathcal{H} \mid (\Psi,\Psi)=1\}$. Restricting $\sim$ to $S\mathcal{H}$ gives $U(1)$-orbits, and $[\Psi] \mapsto \tau(\Psi)$ is a bijection $\mathbb{P}\mathcal{H} \to S\mathcal{H}/U(1)$. Under it, $\mathbb{P}\mathcal{H}$ is identified with the pure state space of $\mathfrak{B}_0(\mathcal{H})$ as in Definition \ref{def:pure-state-space}, and embeds strictly into the pure state space of $\mathfrak{B}(\mathcal{H})$ when $\dim\mathcal{H} = \infty$.
+\end{proposition}
+
+\begin{proof}
+	Every $[\Psi] \in \mathbb{P}\mathcal{H}$ has a unit representative, unique up to $z \in U(1)$, so $\tau: S\mathcal{H} \to \mathbb{P}\mathcal{H}$ is surjective with fibers the $U(1)$-orbits. The identification with pure states of $\mathfrak{B}_0(\mathcal{H})$ and $\mathfrak{B}(\mathcal{H})$ follows from the correspondence between vector states and rank-one projections, \cite[Section 2.5]{landsmanMathematicalTopicsBetween1998}.
+\end{proof}
+
+\begin{definition}[Local chart of $\mathbb{P}\mathcal{H}$]\label{def:ph-chart}
+	For $\psi \in \mathbb{P}\mathcal{H}$, $\Psi \in S\mathcal{H}$ a representative, and $N_\psi := \{\varphi \in \mathbb{P}\mathcal{H} \mid (\Psi,\Phi) \neq 0\}$ with $\Phi$ any representative of $\varphi$,
+	\begin{equation}
+		F_\psi(\varphi) := \frac{\Phi}{(\Psi,\Phi)} - \Psi. \label{eq:ph-chart}
+	\end{equation}
+\end{definition}
+
+\begin{proposition}\label{prop:ph-chart-homeomorphism}
+	$F_\psi$ is well defined, $F_\psi(\psi)=0$, $F_\psi$ takes values in $\Psi^\perp$, and $F_\psi: N_\psi \to \Psi^\perp$ is a homeomorphism.
+\end{proposition}
+
+\begin{proof}
+	$\Phi/(\Psi,\Phi)$ is invariant under $\Phi \mapsto z\Phi$, $z \neq 0$, so $F_\psi$ is well defined, and $F_\psi(\psi) = \Psi/(\Psi,\Psi) - \Psi = 0$. Also $(\Psi,F_\psi(\varphi)) = (\Psi,\Phi)/(\Psi,\Phi) - 1 = 0$. The map $\chi \mapsto \tau(\Psi+\chi)$, $\chi \in \Psi^\perp$, is a well-defined two-sided continuous inverse, since $\Psi+\chi \neq 0$ and both maps are built from continuous algebraic operations on the domain $(\Psi,\Phi)\neq 0$.
+\end{proof}
+
+\noindent Varying $\psi$ over a spanning set and fixing, for each, an isomorphism $\Psi^\perp \cong \mathcal{H}'$ with $\mathcal{H}'$ a reference Hilbert space of real dimension $\dim_\R\mathcal{H} - 2$, gives an atlas making $\mathbb{P}\mathcal{H}$ a Hilbert manifold modeled on $\mathcal{H}'$. We call the resulting topology the \emph{manifold topology} of $\mathbb{P}\mathcal{H}$.
+
+\begin{proposition}\label{prop:ph-topologies-coincide}
+	The manifold topology on $\mathbb{P}\mathcal{H}$ coincides with the $w^*$-topologies relative to $\mathbb{P}\mathcal{H} \subset \mathfrak{B}_0(\mathcal{H})^*$ and $\mathbb{P}\mathcal{H} \subset \mathfrak{B}(\mathcal{H})^*$ as in Definition \ref{def:wstar-topology}.
+\end{proposition}
+
+\begin{proof}
+	$\mathfrak{B}_0(\mathcal{H})$ is generated by rank-one projections, so its $w^*$-topology on $\mathbb{P}\mathcal{H}$ agrees with the weak topology on $\mathcal{H}$, which coincides with the strong topology on $S\mathcal{H}$, hence with the $\mathfrak{B}(\mathcal{H})^*$ $w^*$-topology. For $\varphi \in N_\psi$, $A \in \mathfrak{B}(\mathcal{H})$,
+	\begin{equation}
+		\frac{\varphi(A)}{\varphi([\Psi])} = \big(F_\psi(\varphi),AF_\psi(\varphi)\big) + \big(\Psi,AF_\psi(\varphi)\big) + \big(F_\psi(\varphi),A\Psi\big) + (\Psi,A\Psi). \label{eq:ph-topology-expansion}
+	\end{equation}
+	Strong convergence $F_\psi(\varphi_n) \to F_\psi(\varphi)$ gives $\varphi_n(A) \to \varphi(A)$ for all $A$ through \eqref{eq:ph-topology-expansion}, so the manifold topology is finer. Conversely $\varphi_n(A) \to \varphi(A)$ for all $A$ forces weak convergence $F_\psi(\varphi_n) \to F_\psi(\varphi)$, and, taking $A=\Id$, norm convergence, hence strong convergence. The two topologies coincide.
+\end{proof}
+
+\begin{corollary}\label{cor:pure-state-b0h-ph}
+	The pure state space of $\mathfrak{B}_0(\mathcal{H})$ with the $w^*$-topology is homeomorphic to $\mathbb{P}\mathcal{H}$ with the manifold topology.
+\end{corollary}
+
+\begin{proof}
+	Combine Proposition \ref{prop:ph-quotient-pure-states} with Proposition \ref{prop:ph-topologies-coincide}.
+\end{proof}
+
+\begin{theorem}[Pure state decomposition]\label{thm:pure-state-decomposition}
+	The pure state space $\mathcal{P}(\mathfrak{A})$ of a C*-algebra $\mathfrak{A}$ as in Definition \ref{def:pure-state-space} is a disjoint union $\mathcal{P}(\mathfrak{A}) = \bigcup_\alpha \mathbb{P}\mathcal{H}_\alpha$, where $\mathcal{H}_\alpha$ is the Hilbert space of the irreducible GNS representation, Definition \ref{def:gns-construction}, of a state in $\mathbb{P}\mathcal{H}_\alpha$. States in the same $\mathbb{P}\mathcal{H}_\alpha$ are equivalent, states in different $\mathbb{P}\mathcal{H}_\alpha$ are inequivalent, and each inclusion $\mathbb{P}\mathcal{H}_\alpha \hookrightarrow \mathcal{P}(\mathfrak{A})$ is continuous.
+\end{theorem}
+
+\begin{proof}
+	Set-theoretic part: correspondence between pure states and irreducible GNS representations, together with Corollary \ref{cor:pure-state-b0h-ph}. Continuity: Proposition \ref{prop:ph-topologies-coincide}. Full argument in \cite[Theorem 2.5.4]{landsmanMathematicalTopicsBetween1998}.
+\end{proof}
+
+\noindent Regard $\mathcal{H}$ as a real vector space, with $T_\Psi\mathcal{H} \cong \mathcal{H}$ through the directional derivative of Remark \ref{remark:vec-der}.
+
+\begin{definition}\label{def:hilbert-directional-derivative}
+	For $\Phi \in \mathcal{H}$, $V(\Phi) \in \mathfrak{X}(\mathcal{H})$ is given by
+	\[
+	V(\Phi)_\Psi f := \frac{d}{dt}\Big|_{t=0} f(\Psi+t\Phi), \qquad \Psi \in \mathcal{H}, \ f \in C^\infty(\mathcal{H},\R).
+	\]
+	If $V(\Phi)$ is tangent to $S\mathcal{H}$ at $\Psi$, its image under $\tau_*$ as in Definition \ref{def:differential-map} is $v(\Phi) \in T_\psi\mathbb{P}\mathcal{H}$.
+\end{definition}
+
+\begin{proposition}\label{prop:tangent-space-ph}
+	For $\psi = \tau(\Psi) \in \mathbb{P}\mathcal{H}$,
+	\begin{equation}
+		T_\psi\mathbb{P}\mathcal{H} = \{v(iA\Psi) \mid A \in \mathfrak{B}(\mathcal{H})_\R\}. \label{eq:tangent-space-ph}
+	\end{equation}
+\end{proposition}
+
+\begin{proof}
+	By Proposition \ref{prop:ph-chart-homeomorphism}, $T_\psi\mathbb{P}\mathcal{H} \cong \Psi^\perp$ through $dF_\psi$. Given $\Omega \in \Psi^\perp$, $A_\Omega := -i(|\Omega)(\Psi| - |\Psi)(\Omega|)$ is self-adjoint and $A_\Omega\Psi = -i\Omega$, so $iA_\Omega\Psi = \Omega$, giving $\Psi^\perp \subset \{iA\Psi\}$. Conversely, for self-adjoint $A$, $(\Psi,iA\Psi) = i(\Psi,A\Psi)$ equals $\overline{i(A\Psi,\Psi)}$ by self-adjointness, forcing $\Re(\Psi,iA\Psi)=0$, so $iA\Psi \in \Psi^\perp$. Equation \eqref{eq:tangent-space-ph} follows.
+\end{proof}
+
+\begin{proposition}\label{prop:hilbert-symplectic}
+	For $\hbar \in \R\setminus\{0\}$,
+	\begin{equation}
+		\omega\big(V(\Phi),V(\Omega)\big) := 2\hbar\,\Im(\Phi,\Omega) \label{eq:hilbert-symplectic-form}
+	\end{equation}
+	is a symplectic form on $\mathcal{H}$ as in Definition \ref{def:sympl-man}.
+\end{proposition}
+
+\begin{proof}
+	Antisymmetry: $\overline{(\Phi,\Omega)}=(\Omega,\Phi)$. Closedness: constant coefficients. Nondegeneracy: $\omega(V(\Phi),V(i\Phi)) = 2\hbar\,\Im(i(\Phi,\Phi)) = 2\hbar\|\Phi\|^2$, zero only if $\Phi=0$.
+\end{proof}
+
+\begin{definition}\label{def:quadratic-observable}
+	For $H \in \mathfrak{B}(\mathcal{H})_\R$, $\tilde{H} \in C^\infty(\mathcal{H},\R)$ is
+	\begin{equation}
+		\tilde{H}(\Psi) := (\Psi,H\Psi). \label{eq:quadratic-observable}
+	\end{equation}
+\end{definition}
+
+\begin{proposition}\label{prop:hamiltonian-vf-quadratic}
+	The Hamiltonian vector field of $\tilde{H}$ with respect to $\omega$, as in Definition \ref{def:ham-field}, is
+	\begin{equation}
+		\xi_{\tilde{H}}(\Psi) = -V\Big(\frac{i}{\hbar}H\Psi\Big). \label{eq:hamiltonian-vf-quadratic}
+	\end{equation}
+\end{proposition}
+
+\begin{proof}
+	Self-adjointness of $H$ gives
+	\begin{equation}
+		d\tilde{H}(\Psi)\big(V(\Phi)\big) = (\Phi,H\Psi) + (\Psi,H\Phi) = 2\Re(\Phi,H\Psi). \label{eq:diff-quadratic}
+	\end{equation}
+	For $\xi(\Psi) := V(cH\Psi)$, $\omega(\xi(\Psi),V(\Phi)) = 2\hbar\,\Im(\bar{c}(H\Psi,\Phi))$. Taking $c=-i/\hbar$ gives $\bar c = i/\hbar$, $\Im(i(H\Psi,\Phi)) = \Re(H\Psi,\Phi)$, so $\omega(\xi(\Psi),V(\Phi)) = 2\Re(H\Psi,\Phi) = 2\Re(\Phi,H\Psi)$, matching \eqref{eq:diff-quadratic}. By $\iota_{\xi_{\tilde H}}\omega = d\tilde H$, $\xi_{\tilde H}(\Psi) = V(-iH\Psi/\hbar)$.
+\end{proof}
+
+\begin{proposition}\label{prop:schrodinger-and-commutator}
+	The integral curve of $\xi_{\tilde H}$ through $\Psi_0$ solves the \emph{Schrödinger equation}
+	\begin{equation}
+		i\hbar\,\dot\Psi(t) = H\Psi(t), \qquad \Psi(t) = e^{-itH/\hbar}\Psi_0. \label{eq:schrodinger}
+	\end{equation}
+	For $A,B \in \mathfrak{B}(\mathcal{H})_\R$, the Poisson bracket of Definition \ref{def:poi-fun} satisfies
+	\begin{equation}
+		\{\tilde A,\tilde B\} = -\frac{i}{\hbar}\widetilde{[A,B]}. \label{eq:poisson-bracket-commutator}
+	\end{equation}
+\end{proposition}
+
+\begin{proof}
+	\eqref{eq:hamiltonian-vf-quadratic} gives $\dot\Psi = -iH\Psi/\hbar$, i.e. \eqref{eq:schrodinger}. For \eqref{eq:poisson-bracket-commutator}, by \eqref{eq:diff-quadratic} and \eqref{eq:hamiltonian-vf-quadratic},
+	\[
+	\{\tilde A,\tilde B\}(\Psi) = d\tilde A(\Psi)(\xi_{\tilde B}(\Psi)) = 2\Re\Big(-\frac{i}{\hbar}B\Psi,A\Psi\Big) = -\frac{2}{\hbar}\Im(B\Psi,A\Psi).
+	\]
+	Since $(\Psi,[A,B]\Psi) = (A\Psi,B\Psi)-(B\Psi,A\Psi) = -2i\,\Im(B\Psi,A\Psi)$, this is $\frac{i}{\hbar}(\Psi,[A,B]\Psi) \cdot(-1) = -\frac{i}{\hbar}(\Psi,[A,B]\Psi)$.
+\end{proof}
+
+\begin{remark}
+	Sign opposite to \cite[Equation (2.38)]{landsmanMathematicalTopicsBetween1998}, due to the orientation $\iota_{X_H}\omega=dH$ of Definition \ref{def:ham-field}. Check against the canonical commutation relation convention of the Weyl algebra chapter.
+\end{remark}
+
+\begin{remark}\label{rem:unitary-poisson-map}
+	For $U$ unitary as in Definition \ref{def:unitary-operator}, $U^*\tilde A = \widetilde{U^{-1}AU}$, so $U$ acts on $(\mathcal{H},\omega)$ as a symplectic map, Definition \ref{def:symp-ham-fields}.
+\end{remark}
+
+\begin{proposition}\label{prop:leaves-hstar-u1}
+	$U(1)$ acts freely on $\mathcal{H}^*$, so $\mathcal{H}^*/U(1)$ is a Poisson manifold as in Definition \ref{def:poisson-manifold}, with symplectic leaves $S_r := \mathcal{H}_r/U(1)$, $\mathcal{H}_r := \{\Psi \mid (\Psi,\Psi)=r^2\}$, as in Theorem \ref{thm:symplectic-foliation}. $\mathbb{P}\mathcal{H} \cong S_1$, symplectic, with
+	\begin{equation}
+		\omega_\psi\big(v(iA\Psi),v(iB\Psi)\big) = -i\hbar\,\widehat{[A,B]}(\psi). \label{eq:ph-symplectic-explicit}
+	\end{equation}
+\end{proposition}
+
+\begin{proof}
+	$z\Psi=\Psi$, $\Psi\neq0$ forces $z=1$, so the action is free. $\Psi \mapsto (\Psi,\Psi)$ descends and its level sets are the $\mathcal{H}_r$. The Poisson tensor of $(\mathcal{H},\omega)$ descends since $U(1)$ acts by symplectic maps, Remark \ref{rem:unitary-poisson-map}, and its symplectic leaves are the $S_r$ by Theorem \ref{thm:symplectic-foliation}. $S\mathcal{H}/U(1) = S_1$ by $(\Psi,\Psi)=1$. Explicit form \eqref{eq:ph-symplectic-explicit}, \cite[Proposition 2.5.6]{landsmanMathematicalTopicsBetween1998}.
+\end{proof}
+
+\begin{definition}\label{def:hat-h}
+	For $H \in \mathfrak{B}(\mathcal{H})_\R$, $\hat H \in C^\infty(\mathbb{P}\mathcal{H},\R)$ is $\hat H(\tau(\Psi)) := \tilde H(\Psi)$, $\Psi \in S\mathcal{H}$.
+\end{definition}
+
+\begin{remark}
+	Well defined since $\tilde H(z\Psi) = \tilde H(\Psi)$ for $z\in U(1)$. $\|H\| = \|\hat H\|_\infty$, the Gelfand transform of $H$, Theorem \ref{thm:gelfand-transform}. $\xi_{\hat H}(\tau(\Psi)) = -v(iH\Psi/\hbar)$, $\{\hat A,\hat B\} = -\frac{i}{\hbar}\widehat{[A,B]}$, every unitary acts as a symplectic map on $\mathbb{P}\mathcal{H}$. For $\mathcal{H}=\C^N$, \eqref{eq:ph-symplectic-explicit} is $\hbar$ times the Fubini-Study form.
+\end{remark}
+
+\begin{proposition}\label{prop:schrodinger-ph}
+	$\psi(t) := \tau(\Psi(t))$, with $\Psi(t)$ as in \eqref{eq:schrodinger}, is the complete flow of $\xi_{\hat H}$:
+	\[
+	\frac{d\psi(t)}{dt} = \xi_{\hat H}(\psi(t)), \qquad \psi(t) = e^{-it\hat H/\hbar}\psi(0).
+	\]
+\end{proposition}
+
+\begin{proof}
+	$\tau$ is a submersion on $S\mathcal{H}$, so $\dot\psi(t) = v(\dot\Psi(t)) = \xi_{\hat H}(\psi(t))$. Completeness: $\Psi(t)=e^{-itH/\hbar}\Psi(0)$ is defined for all $t \in \R$.
+\end{proof}
+
+\begin{proposition}\label{prop:eigenvector-critical-point}
+	$\Psi \in S\mathcal{H}$ is an eigenvector of $H \in \mathfrak{B}(\mathcal{H})_\R$ iff $\psi=\tau(\Psi)$ is a critical point of $\hat H$, $d\hat H(\psi)=0$, with eigenvalue $\hat H(\psi)$.
+\end{proposition}
+
+\begin{proof}
+	By Proposition \ref{prop:tangent-space-ph}, $d\hat H(\psi)=0$ iff $\Re(\Psi,(HA-AH)\Psi)=0$ for all self-adjoint $A$, that is, $(\Psi,AH\Psi) \in \R$ for all such $A$. By the surjectivity in the proof of Proposition \ref{prop:tangent-space-ph}, every $\Phi \in \Psi^\perp$ equals $A\Psi$ for some self-adjoint $A$, and every $i\Phi$ equals $A'\Psi$ for some self-adjoint $A'$, forcing $(\Psi,H\Phi) \in \R$ and $i(\Psi,H\Phi) \in \R$, hence $(\Psi,H\Phi)=0$ for all $\Phi \in \Psi^\perp$. This means $H\Psi \in (\Psi^\perp)^\perp = \C\Psi$, that is, $\Psi$ is an eigenvector with eigenvalue $(\Psi,H\Psi) = \hat H(\psi)$.
+\end{proof}
+
+\section{Representations of Poisson Algebras}
+
+\begin{definition}[Representation of a Poisson algebra]\label{def:representation-poisson-algebra}
+	Let $(\mathfrak{A}_\R,\circ,\{\cdot,\cdot\})$ be a Poisson algebra with Jordan product $\circ$, Definition \ref{def:jordan-product}. A \emph{representation} is a linear map $\pi: \mathfrak{A}_\R \to C^\infty(S,\R)$, $S$ symplectic as in Definition \ref{def:sympl-man}, such that
+	\begin{align}
+		\pi(f \circ h) &= \pi(f)\pi(h), \label{eq:rep-jordan} \\
+		\{\pi(f),\pi(h)\}_S &= \pi(\{f,h\}), \label{eq:rep-poisson}
+	\end{align}
+	for $f,h \in \mathfrak{A}_\R$, and such that $\pi$ preserves completeness: the flow of $\xi_{\pi(h)}$ is defined for all times whenever $h$ is complete in $\mathfrak{A}_\R$.
+\end{definition}
+
+\begin{definition}[Equivalence of representations]\label{def:equivalent-representations}
+	$\pi_1: \mathfrak{A}_\R \to C^\infty(S_1,\R)$ and $\pi_2: \mathfrak{A}_\R \to C^\infty(S_2,\R)$ are \emph{equivalent} if there is a symplectomorphism $J: S_1 \to S_2$ with $J^*\pi_2(f) = \pi_1(f)$ for all $f \in \mathfrak{A}_\R$.
+\end{definition}
+
+\begin{definition}[Poisson space]\label{def:poisson-space}
+	A \emph{Poisson space} $P$ is a Hausdorff space with a linear subspace $\mathfrak{A}_\R \subset C(P,\R)$ and symplectic manifolds $\{S_\alpha\}$, Definition \ref{def:sympl-man}, the \emph{symplectic leaves} of $P$, with continuous injections $\iota_\alpha: S_\alpha \hookrightarrow P$, such that:
+	\begin{enumerate}
+		\item[(1)] $P = \bigcup_\alpha \iota_\alpha(S_\alpha)$, disjoint union;
+		\item[(2)] $\mathfrak{A}_\R$ separates points of $P$;
+		\item[(3)] $\mathfrak{A}_\R \subset C^\infty_L(P,\R) := \{f \in C(P,\R) \mid \iota_\alpha^*f \in C^\infty(S_\alpha,\R) \ \forall \alpha\}$;
+		\item[(4)] $\mathfrak{A}_\R$ is closed under
+		\begin{equation}
+			\{f,h\}(\iota_\alpha(\sigma)) := \{\iota_\alpha^*f,\iota_\alpha^*h\}_\alpha(\sigma), \qquad \sigma \in S_\alpha, \label{eq:poisson-space-bracket}
+		\end{equation}
+		with $\{\cdot,\cdot\}_\alpha$ as in Definition \ref{def:leaf-bracket}.
+	\end{enumerate}
+\end{definition}
+	
+	
+\end{document}

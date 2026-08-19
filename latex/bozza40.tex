@@ -2,30 +2,34 @@
 \setcounter{chapter}{2}
 \setcounter{section}{2}
 \begin{document}
-\section{The GNS Construction}
+\section{The Gelfand-Naimark-Segal Construction}
 \label{sec:states-representations-gns}
 
-In Chapter~\ref{ch:classical-mechanics} we showed that the observables of a classical system generate a commutative $C^*$-algebra, as per Definition~\ref{def:cstar-algebra}, and that the Gelfand spectrum of this algebra allows the classical phase space to be reconstructed, together with its algebra of continuous functions, out of the algebraic structure of the observables alone. The operational considerations of Section~\ref{sec:non-abelian-observables} carried the same point of view into the quantum regime, and led to the conclusion that the observables of a quantum system generate a $C^*$-algebra as well, only a non-commutative one. This raises the question addressed in the present section. Once the abelian case is set aside, an abstract $C^*$-algebra carries no Hilbert space with it, so it is not obvious how such an algebra can be turned into the Dirac-Von Neumann formalism in which quantum mechanics is ordinarily phrased. The Gelfand-Naimark-Segal construction answers this question completely. It shows that every state on a $C^*$-algebra $\A$ canonically determines a Hilbert space $\H_\omega$ and a representation $\pi_\omega$ of $\A$ as bounded operators on $\H_\omega$, in which the state itself is recovered as the expectation value in a distinguished cyclic vector. This is the result that allows the algebraic description of a quantum system to be converted into the familiar Hilbert space formalism without postulating the existence of that Hilbert space by hand, and it is the non-commutative counterpart of the Gelfand construction used in Chapter~\ref{ch:classical-mechanics} for the classical case. We start by stating the definition of a representation of a $C^*$-algebra given next.
+The operational construction presented in Section~\ref{sec:non-commutative-observables} led to the conclusion that quantum observables can be embedded inside a unital non-commutative $C^*$-algebra. However, such an object carries no Hilbert space with it, so it is not obvious how this new formalism connects with the Dirac-Von Neumann axiomatization. The Gelfand-Naimark-Segal construction shows that every state on a $C^*$-algebra $\A$ determines a Hilbert space $\H_\omega$ and a representation $\pi_\omega$ of $\A$ as bounded operators $\mathcal{B}(\H_\omega)$, in which the state itself is reconstructed as the expectation value in a particular cyclic vector. This can be seen as the non-commutative counterpart of the Gelfand construction used in Chapter~\ref{ch:classical-mechanics} for the classical case. 
+
+Before stating the definition of a representation, we isolate the class of maps between $^*$-algebras that preserve all the algebraic relations. 
 
 \begin{definition}[$*$-Homomorphism, $*$-isomorphism, $*$-automorphism]
 	\label{def:star-homomorphism}
-	Let $\A$ and $\mathfrak{B}$ be two $*$-algebras with identity, as per Definition~\ref{def:star-algebra}. A $*$-homomorphism $\pi \colon \A \to \mathfrak{B}$ is a map preserving all the algebraic relations of the $*$-algebra structure: it is linear, multiplicative and $*$-preserving. To wit $\pi(A^*) = \pi(A)^*$ for every $A \in \A$.
+	Let $\A$ and $\mathfrak{B}$ be two $*$-algebras with identity, as per Definition~\ref{def:star-algebra}. A $*$-homomorphism $\pi : \A \to \mathfrak{B}$ is a map preserving all the algebraic relations of the $*$-algebra structure: It is linear, multiplicative and $*$-preserving, that is $\pi(A^*) = \pi(A)^*$ for every $A \in \A$.
 	A bijective $*$-homomorphism is called a $*$-isomorphism, and a $*$-isomorphism of $\A$ onto itself is called a $*$-automorphism.
 \end{definition}
 
-A $*$-homomorphism becomes especially significant once the target algebra $\mathfrak{B}$ is taken to be the algebra of bounded operators on a Hilbert space, since in that case it turns the abstract elements of $\A$ into concrete linear operators acting on a space equipped with an inner product. This is precisely the structure needed to speak of a representation of a $C^*$-algebra, the notion introduced next.
+\noindent A $*$-homomorphism gains importance once the target algebra $\mathfrak{B}$ is taken to be that of bounded operators on a Hilbert space. 
 
 \begin{definition}[Representation, faithful and irreducible representation]
 	\label{def:representation-c-star}
 	Let $\A$ be a $C^*$-algebra, as per Definition~\ref{def:cstar-algebra}, and let $\H$ be a Hilbert space as in Definition \ref{def:hilbert-space}. A representation $\pi$ of $\A$ on $\H$ is a $*$-homomorphism, as per Definition~\ref{def:star-homomorphism}, of $\A$ into the $C^*$-algebra $\mathcal{B}(\H)$ of bounded operators on $\H$. The representation $\pi$ is called faithful when $\ker \pi = \{0\}$, and it is called irreducible when the only closed subspaces of $\H$ invariant under $\pi(\A)$ are $\{0\}$ and $\H$ itself.
 \end{definition}
 
+Having established representations, we return to the notion of cyclic vectors, introduced in Definition \ref{def:cyclic-vector}. In fact, note that such vectors serves as a physical reference state from which the entire spectrum of accessible states is generated through the action of the observable algebra. Imposing cyclicity disconnects mathematical subspaces not physically accessible, as shown in the next remark.
+
 \begin{remark}[Cyclic vectors]
 	\label{rem:cyclic-vector}
-	A vector $\Psi \in \H$ is called cyclic for a representation $\pi$ when $\pi(\A)\Psi$ is dense in $\H$, as seen in Definition \ref{def:cyclic-family}. We can show that, in an irreducible representation, every nonzero vector is cyclic. In fact, the closure of $\pi(\A)\Psi$ is, by construction, a closed subspace invariant under $\pi(\A)$, so irreducibility forces it to coincide either with $\{0\}$ or with the whole of $\H$, and it cannot be $\{0\}$ because it contains $\Psi = \pi(\Id)\Psi$. A representation $\pi$ on a Hilbert space $\H$ together with a chosen cyclic vector $\Psi$ is denoted, in short, by the triple $(\H, \pi, \Psi)$.
+	Recolling Definition \ref{def:cyclic-family}, a vector $\Psi \in \H$ is called cyclic for a representation $\pi$ when $\pi(\A)\Psi$ is dense in $\H$.  In an irreducible representation, every non-zero vector is cyclic. In fact, the closure of $\pi(\A)\Psi$ is, by construction, a closed subspace invariant under $\pi(\A)$. Therefore, irreducibility forces it to coincide either with $\{0\}$ or with the whole of $\H$, but it cannot be $\{0\}$ because it contains at least  $\Psi = \pi(\Id)\Psi$.
 \end{remark}
 
-Both isomorphisms between $C^*$-algebras and representations are, in particular, $*$-homomorphisms, so it is worth recording already at this level a basic norm property that depends only on this weaker structure. In addition, we show that a $*$-homomorphism can only decrease norms, becoming norm preserving exactly when it is injective.
+A representation $\pi$ on a Hilbert space $\H$ together with a chosen cyclic vector $\Psi$ is denoted by the triple $(\H, \pi, \Psi)$. Before presenting the key result of this section, we show that a $*$-homomorphism can only decrease norms, becoming norm preserving when it is injective.
 
 \begin{proposition}
 	\label{prop:homomorphism-norm-bound}
@@ -45,7 +49,7 @@ Both isomorphisms between $C^*$-algebras and representations are, in particular,
 %	\begin{equation}
 %		\sigma_{\mathfrak{B}}(\pi(A)) \subseteq \sigma_{\A}(A).
 %	\end{equation}
-%	The elements $\Id$ and $A$ generate an abelian $C^*$-subalgebra of $\A$, and likewise $\Id_{\mathfrak{B}}$ and $\pi(A)$ generate an abelian $C^*$-subalgebra of $\mathfrak{B}$. For a selfadjoint element of an abelian $C^*$-algebra, the norm coincides with the spectral radius, as per Theorem~\ref{thm:spectral-radius-formula}. Applying this fact on both sides together with the spectral inclusion above yields
+%	The elements $\Id$ and $A$ generate an commutative $C^*$-subalgebra of $\A$, and likewise $\Id_{\mathfrak{B}}$ and $\pi(A)$ generate an commutative $C^*$-subalgebra of $\mathfrak{B}$. For a selfadjoint element of an commutative $C^*$-algebra, the norm coincides with the spectral radius, as per Theorem~\ref{thm:spectral-radius-formula}. Applying this fact on both sides together with the spectral inclusion above yields
 %	\begin{equation}
 %		\|\pi(A)\|_{\mathfrak{B}} = \sup_{\lambda \in \sigma_{\mathfrak{B}}(\pi(A))} |\lambda| \le \sup_{\lambda \in \sigma_{\A}(A)} |\lambda| = \|A\|_{\A}.
 %	\end{equation}
@@ -56,10 +60,10 @@ Both isomorphisms between $C^*$-algebras and representations are, in particular,
 %	\end{equation}
 %	where the inequality is the selfadjoint case proved above, applied to $A^*A$, and the last equality is the $C^*$-identity, as per Definition~\ref{def:cstar-algebra}. Taking the square root establishes~\eqref{eq:homom-norm-bound} for a generic element of $\A$.
 %	
-%	If $\pi$ is a $*$-isomorphism, it is invertible, and its inverse $\pi^{-1} \colon \mathfrak{B} \to \A$ is itself a $*$-homomorphism. Applying~\eqref{eq:homom-norm-bound}, already proved, to $\pi^{-1}$ gives $\|A\|_{\A} = \|\pi^{-1}(\pi(A))\|_{\A} \le \|\pi(A)\|_{\mathfrak{B}}$, which combined with the reverse inequality shows $\|\pi(A)\|_{\mathfrak{B}} = \|A\|_{\A}$ for every $A \in \A$.
+%	If $\pi$ is a $*$-isomorphism, it is invertible, and its inverse $\pi^{-1} : \mathfrak{B} \to \A$ is itself a $*$-homomorphism. Applying~\eqref{eq:homom-norm-bound}, already proved, to $\pi^{-1}$ gives $\|A\|_{\A} = \|\pi^{-1}(\pi(A))\|_{\A} \le \|\pi(A)\|_{\mathfrak{B}}$, which combined with the reverse inequality shows $\|\pi(A)\|_{\mathfrak{B}} = \|A\|_{\A}$ for every $A \in \A$.
 %\end{proof}
 %
-The norm bound established above already indicates that any representation of a $C^*$-algebra is realized by bounded operators, so the search for concrete representations reduces to the search for a Hilbert space on which the algebra can act boundedly. The theorem stated next, due to Gelfand and Naimark and later reformulated by Segal, shows that this search always succeeds. Out of the purely algebraic datum of a state on $\A$ it produces an explicit Hilbert space, together with a representation in which the state itself becomes the expectation value in a distinguished vector.
+The norm bound stated above indicates that any representation of a $C^*$-algebra must be realized by bounded operators. The theorem stated next, due to Gelfand and Naimark and later reformulated by Segal, shows that this quest always succeeds. 
 
 \begin{theorem}[Gelfand-Naimark-Segal]
 	\label{thm:gns}
@@ -67,12 +71,12 @@ The norm bound established above already indicates that any representation of a 
 	\begin{enumerate}
 		\item[i)] $\H_\omega$ contains a cyclic vector $\Psi_\omega$, as per Definition~\ref{def:cyclic-vector},
 		\item[ii)] $\omega(A) = \big(\Psi_\omega, \pi_\omega(A)\Psi_\omega\big)$ for every $A \in \A$,
-		\item[iii)] every other representation $\pi$ on a Hilbert space $\H_\pi$ with a cyclic vector $\Psi$ such that
+		\item[iii)] every other representation $(\H, \pi, \Psi)$ such that
 		\begin{equation}
 			\label{eq:gns-hypothesis}
 			\omega(A) = \big(\Psi, \pi(A)\Psi\big), \qquad \forall A \in \A,
 		\end{equation}
-		is unitarily equivalent to $\pi_\omega$: there exists an isometry $U \colon \H_\pi \to \H_\omega$ such that
+		is unitarily equivalent to $\pi_\omega$: There exists an isometry $U : \H_\pi \to \H_\omega$ such that
 		\begin{equation}
 			\label{eq:gns-unitary-equivalence}
 			U\pi(A)U^{-1} = \pi_\omega(A), \qquad U\Psi = \Psi_\omega.
@@ -84,52 +88,52 @@ The norm bound established above already indicates that any representation of a 
 	\textit{Part~i)} The state $\omega$ turns the algebra $\A$, regarded as a vector space, into a space with a semidefinite inner product, setting
 	\begin{equation}
 		\label{eq:gns-inner-product}
-		(A,B) := \omega(A^*B), \qquad A,B \in \A,
+		(A,B) := \omega(A^*B), \qquad A,B \in \A.
 	\end{equation}
-	positivity of $\omega$ yields $(A,A) = \omega(A^*A) \ge 0$ for every $A \in \A$, while sesquilinearity of Equation~\eqref{eq:gns-inner-product} follows directly from antilinearity  of $\omega$ and of the involution. 
+	Positivity of $\omega$ yields $(A,A) = \omega(A^*A) \ge 0$ for every $A \in \A$, while sesquilinearity of Equation~\eqref{eq:gns-inner-product} follows directly from antilinearity  of $\omega$ and of the involution. 
 	
 	\noindent Consider the set
 	\begin{equation}
 		\label{eq:gns-ideal}
-		J \equiv \{A \in \A : \omega(B^*A) = 0, \ \forall B \in \A\}.
+		J := \{A \in \A : \omega(B^*A) = 0, \ \forall B \in \A\}.
 	\end{equation}
-	By construction, $A \in J$ exactly when $A$ is orthogonal to the whole of $\A$ with respect to $(\cdot,\cdot)$, and taking $B=A$ shows in particular that $(A,A) = \omega(A^*A) = 0$. That makes $J$ the set of null vectors of the semidefinite inner product~Equation \eqref{eq:gns-inner-product}. We claim that $J$ is a left ideal of $\A$. 
+	By definition, $A \in J$ when $A$ is orthogonal to the whole of $\A$ with respect to $(\cdot,\cdot)$, and taking $B=A$ shows in particular that $(A,A) = \omega(A^*A) = 0$. That makes $J$ the set of vanishing vectors of the semidefinite inner product as in Equation \eqref{eq:gns-inner-product}. We claim that $J$ is a left ideal of $\A$. 
 	
-	Recall that a left ideal of an algebra $\A$ is a linear subspace $J \subseteq \A$ that absorbs left multiplication by an arbitrary element of the algebra $\A J \subseteq J$. That is, $CA \in J$ $\forall C \in \A$ and $\forall A \in J$. To verify this property for the set in Equation \eqref{eq:gns-ideal}, take $C \in \A$, $A \in J$, and an arbitrary $B \in \A$. The Cauchy-Schwarz inequality associated with the semidefinite inner product from Equation \eqref{eq:gns-inner-product} yields
+	Recall that a left ideal of an algebra $\A$ is a linear subspace $J \subseteq \A$ that absorbs left multiplication by an arbitrary element of the algebra $\A J \subseteq J$. That means that $CA \in J$ $\forall C \in \A$ and $\forall A \in J$. To verify this property for the set in Equation \eqref{eq:gns-ideal}, take $B,C \in \A$ and $A \in J$. The Cauchy-Schwarz inequality associated with the semidefinite inner product from Equation \eqref{eq:gns-inner-product} yields
 	\begin{equation}
 		|\omega(B^*(CA))| = |(B,CA)| = |(C^*B,A)| \le (C^*B,C^*B)^{1/2}(A,A)^{1/2} = 0,
 	\end{equation}
-	where the middle equality regroups $\omega(B^*CA) = \omega\big((C^*B)^*A\big)$, and the right-hand side vanishes because $(A,A) = 0$, as $A \in J$. Since $B \in \A$ was arbitrary, this shows $CA \in J$, which proves $\A J \subseteq J$. Being a left ideal is the algebraic property that allows multiplication by a fixed element of $\A$ to be defined consistently on equivalence classes modulo $J$. 
+	where the second equality regroups $\omega(B^*CA) = \omega\big((C^*B)^*A\big)$, while the right-hand side vanishes because $(A,A) = 0$, as $A \in J$. Since $B \in \A$ is arbitrary, this shows $CA \in J$, which proves $\A J \subseteq J$. Being a left ideal is the algebraic property that allows multiplication by a fixed element of $\A$ to be defined consistently on equivalence classes modulo $J$. 
 	
-	We can therefore consider the quotient vector space $\A / J$, whose elements are the equivalence classes $[A] = \{A + B : B \in J\}$, for $A \in \A$. The inner product from Equation \eqref{eq:gns-inner-product} descends to a well defined, strictly positive inner product on $\A/J$. That is, because the value $\omega(A^*B)$ is unchanged when $A$ or $B$ is modified by an element of $J$, since $J$ is exactly the set of null vectors identified above, and it is strictly positive because a class $[A]$ with $([A],[A]) = 0$ has $A \in J$ by definition, that is, $[A] = [0]$. The completion of $\A/J$ with respect to the norm induced by this inner product is a Hilbert space, denoted $\H_\omega$.
+	We can therefore consider the quotient vector space $\A / J$, whose elements are the equivalence classes $[A] = \{A + B : B \in J\}$, for $A \in \A$. The inner product from Equation \eqref{eq:gns-inner-product} descends to a well defined, strictly positive inner product on $\A/J$. That is, because the value $\omega(A^*B)$ is unchanged when $A$ or $B$ is modified by an element of $J$, since $J$ is the set of vanishing vectors identified above. It is strictly positive because a class $[A]$ with $([A],[A]) = 0$ has $A \in J$ by definition, that is, $[A] = [0]$. The completion of $\A/J$ with respect to the norm induced by this inner product is a Hilbert space, denoted $\H_\omega$.
 	
-	To each $A \in \A$ we associate an operator denoted as $\pi_\omega(A)$ acting on $\H_\omega$, defined on the dense subspace $\A/J$ by left multiplication,
+	To each $A \in \A$ we associate an operator denoted by $\pi_\omega(A)$ acting on $\H_\omega$, defined on the dense subspace $\A/J$ by left multiplication,
 	\begin{equation}
 		\label{eq:gns-pi-def}
 		\pi_\omega(A)[B] := [AB], \qquad [B] \in \A/J.
 	\end{equation}
-	Now, if $[B] = [C]$, that is, $B-C \in J$, then $A(B-C) = AB-AC$ belongs to $J$ as well, because $J$ absorbs left multiplication by $A$, and hence $[AB]=[AC]$. 
+	If $[B] = [C]$, that is, $B-C \in J$, then $A(B-C) = AB-AC$ belongs to $J$ as well, because $J$ absorbs left multiplication by $A$. Hence $[AB]=[AC]$. 
 	
 	The operator $\pi_\omega(A)$ is bounded on $\A/J$, with norm controlled by $\|A\|$. In fact, for every $B \in \A$,
 	\begin{equation}
 		\|\pi_\omega(A)[B]\|^2 = \big([AB],[AB]\big) = \omega(B^*A^*AB) =: \omega_B(A^*A),
 	\end{equation}
-	where $\omega_B(X) := \omega(B^*XB)$. The functional $\omega_B$ is itself positive and therefore continuous, as per \cite[Prop.~1.6.3, Appendix~C]{strocchiIntroductionMathematicalStructure2005}, and satisfies $\omega_B(\Id) = \omega(B^*B) = \|[B]\|^2$, so continuity of $\omega_B$ at the identity yields
+	where $\omega_B(X) := \omega(B^*XB)$. The functional $\omega_B$ is itself positive and therefore continuous, as per \cite[Prop.~1.6.3, Appendix~C]{strocchiIntroductionMathematicalStructure2005}, and it satisfies $\omega_B(\Id) = \omega(B^*B) = \|[B]\|^2$. Hence continuity of $\omega_B$ at the identity yields
 	\begin{equation}
-		\omega_B(A^*A) \le \omega_B(\Id)\, \|A\|^2 = \|[B]\|^2\, \|A\|^2,
+		\omega_B(A^*A) \le \omega_B(\Id)\, \|A\|^2 = \|[B]\|^2\, \|A\|^2.
 	\end{equation}
-	and therefore $\|\pi_\omega(A)[B]\| \le \|A\|\, \|[B]\|$ for every $[B] \in \A/J$. Hence $\pi_\omega(A)$ extends by continuity to a bounded operator on the whole of $\H_\omega$ by Theorem \ref{thm:blt}, still denoted $\pi_\omega(A)$, with
+	Therefore $\|\pi_\omega(A)[B]\| \le \|A\|\, \|[B]\|$ for every $[B] \in \A/J$. Hence $\pi_\omega(A)$ extends by continuity to a bounded operator on the whole of $\H_\omega$ by Theorem \ref{thm:blt}, still denoted $\pi_\omega(A)$, with
 	\begin{equation}
 		\label{eq:gns-norm-bound}
 		\|\pi_\omega(A)\| \le \|A\|.
 	\end{equation}
-	Linearity of $\pi_\omega$ in $A$ is immediate from~Equation \eqref{eq:gns-pi-def} and linearity of the product in $\A$. Multiplicativity follows from associativity of the product, since $$\pi_\omega(A)\pi_\omega(A')[B] = \pi_\omega(A)[A'B] = [AA'B] = \pi_\omega(AA')[B],$$ for all $A,A',B \in \A$, and the identity $\pi_\omega(A)^*[B] = \pi_\omega(A^*)[B]$ holds because $\big([AB],[C]\big) = \omega(B^*A^*C) = \big([B],[A^*C]\big)$ for all $B,C \in \A$. Together with~Equation \eqref{eq:gns-norm-bound}, this shows that $\pi_\omega$ is a representation of $\A$ on $\H_\omega$, as per Definition~\ref{def:representation-c-star}.
+	Linearity of $\pi_\omega$ in $A$ is immediate from~Equation \eqref{eq:gns-pi-def} and linearity of the product in $\A$. Multiplicativity follows from associativity of the product, since $$\pi_\omega(A)\pi_\omega(A')[B] = \pi_\omega(A)[A'B] = [AA'B] = \pi_\omega(AA')[B],$$ for all $A,A',B \in \A$ The identity $\pi_\omega(A)^*[B] = \pi_\omega(A^*)[B]$ holds because $\big([AB],[C]\big) = \omega(B^*A^*C) = \big([B],[A^*C]\big)$ for all $B,C \in \A$. Together with~Equation \eqref{eq:gns-norm-bound}, this shows that $\pi_\omega$ is a representation of $\A$ on $\H_\omega$, as per Definition~\ref{def:representation-c-star}.
 	
-	We now identify the vector $\Psi_\omega \equiv [\Id] \in \H_\omega$. By~Equation \eqref{eq:gns-pi-def}, $\pi_\omega(A)\Psi_\omega = [A\Id] = [A]$ for every $A \in \A$, so the orbit $\pi_\omega(\A)\Psi_\omega$ coincides with the whole of $\A/J$, which is dense in $\H_\omega$ by construction: $\Psi_\omega$ is a cyclic vector, proving part~i). 
+	We now identify the vector $\Psi_\omega := [\Id] \in \H_\omega$. By~Equation \eqref{eq:gns-pi-def}, $\pi_\omega(A)\Psi_\omega = [A\Id] = [A]$ for every $A \in \A$, so the orbit $\pi_\omega(\A)\Psi_\omega$ coincides with the whole of $\A/J$, which is dense in $\H_\omega$ by construction: $\Psi_\omega$ is a cyclic vector, proving part~i). 
 	
 	\vspace{0.5cm}
 	
-	\noindent \textit{Part~ii)} It follows from the same computation together with~Equation \eqref{eq:gns-inner-product},
+	\noindent \textit{Part~ii)} It follows from the same computation together with~Equation \eqref{eq:gns-inner-product} that
 	\begin{equation}
 		\big(\Psi_\omega, \pi_\omega(A)\Psi_\omega\big) = \big([\Id],[A]\big) = \omega(\Id^*A) = \omega(A).
 	\end{equation}
@@ -140,41 +144,41 @@ The norm bound established above already indicates that any representation of a 
 	\begin{equation}
 		U^{-1} \pi_\omega(A)\Psi_\omega := \pi(A)\Psi, \qquad A \in \A.
 	\end{equation}
-	This assignment is well defined on $\A/J$. If $[A]=[A']$, that is, $A-A' \in J$, then in particular $\omega\big((A-A')^*(A-A')\big) = 0$, taking $B=A-A'$ in~Equation \eqref{eq:gns-ideal}, and applying~Equation \eqref{eq:gns-hypothesis} to the element $(A-A')^*(A-A') \in \A$ yields
+	This assignment is well defined on $\A/J$. If $[A]=[A']$, that is, $A-A' \in J$, then in particular $\omega\big((A-A')^*(A-A')\big) = 0$. Taking $B=A-A'$ in~Equation \eqref{eq:gns-ideal}, and applying~Equation \eqref{eq:gns-hypothesis} to the element $(A-A')^*(A-A') \in \A$ yields
 	\begin{equation}
 		\big\|\pi(A)\Psi - \pi(A')\Psi\big\|^2 = \big(\Psi, \pi\big((A-A')^*(A-A')\big)\Psi\big) = \omega\big((A-A')^*(A-A')\big) = 0,
 	\end{equation}
 	so $\pi(A)\Psi = \pi(A')\Psi$, as required. The same computation, applied to $A^*A$ rather than to a difference, shows that $U^{-1}$ is norm preserving on $\A/J$,
 	\begin{equation}
-		\|\pi(A)\Psi\|^2 = \big(\Psi, \pi(A^*A)\Psi\big) = \omega(A^*A) = \big([A],[A]\big) = \|[A]\|^2.
+		\|\pi(A)\Psi\|^2 = \big(\Psi, \pi(A^*A)\Psi\big) = \omega(A^*A) = \big([A],[A]\big) = \|A\|^2.
 	\end{equation}
-	Since $\Psi$ is cyclic for $\pi$, the range of $U^{-1}$ is dense in $\H_\pi$, and $U^{-1}$ is an isometry defined on a dense subspace of $\H_\omega$. Therefore it extends uniquely to a unitary map $\H_\omega \to \H_\pi$, whose inverse is the required isometry $U \colon \H_\pi \to \H_\omega$. The intertwining relation~Equation \eqref{eq:gns-unitary-equivalence} holds by construction on the dense subspace $\pi_\omega(\A)\Psi_\omega$, since
+	Since $\Psi$ is cyclic for $\pi$, the range of $U^{-1}$ is dense in $\H_\pi$, and $U^{-1}$ is an isometry defined on a dense subspace of $\H_\omega$. Therefore it extends uniquely to a unitary map $\H_\omega \to \H_\pi$, whose inverse is the required isometry $U : \H_\pi \to \H_\omega$. Equation \eqref{eq:gns-unitary-equivalence} holds by construction on the dense subspace $\pi_\omega(\A)\Psi_\omega$, since
 	\begin{equation}
 		U^{-1}\pi_\omega(A')\pi_\omega(A)\Psi_\omega = U^{-1}\pi_\omega(A'A)\Psi_\omega = \pi(A'A)\Psi = \pi(A')\pi(A)\Psi = \pi(A')\,U^{-1}\pi_\omega(A)\Psi_\omega,
 	\end{equation}
-	for all $A,A' \in \A$, and it extends by continuity to the whole of $\H_\omega$. Taking $A=\Id$ in the definition of $U^{-1}$ yields $U^{-1}\Psi_\omega = \Psi$, that is, $U\Psi = \Psi_\omega$, which completes the proof.
+	for all $A,A' \in \A$. Furthermore it extends by continuity to the whole of $\H_\omega$. Taking $A=\Id$ in the definition of $U^{-1}$ yields $U^{-1}\Psi_\omega = \Psi$, that is, $U\Psi = \Psi_\omega$, which completes the proof.
 \end{proof}
 
 \begin{remark}[Significance of the GNS construction]
 	\label{rem:gns-significance}
-	The GNS construction reduces the existence of Hilbert space representations of a $C^*$-algebra to the existence of states on it, which is guaranteed in general by \cite[Prop.~1.6.4, Appendix~C]{strocchiIntroductionMathematicalStructure2005}. Beyond this structural role, GNS Theorem~\ref{thm:gns} shows that two basic postulates of the Dirac-von Neumann axiomatic formulation of quantum mechanics, namely that observables are represented by operators and that states are represented by vectors in a Hilbert space, need not be assumed independently.They follow from the $C^*$-algebra structure of the observables established at the start of this chapter, together with the fact that a state is, by its operational definition, a positive linear functional on that algebra, as per Definition~\ref{def:state}.
+	The GNS construction reduces the existence of Hilbert space representations of a $C^*$-algebra to that of states on it. That is guaranteed in general by \cite[Prop.~1.6.4, Appendix~C]{strocchiIntroductionMathematicalStructure2005}. In addition, GNS Theorem~\ref{thm:gns} shows the dependence of two postulates of the Dirac-von Neumann axiomatization, namely that observables are represented by operators and that states are represented by vectors in a Hilbert space.
 \end{remark}
 
-The decomposition into cyclic pieces just established shows that cyclic representations are, in a precise sense, the basic building blocks of the representation theory of a $C^*$-algebra, and the GNS construction of Theorem~\ref{thm:gns} is what produces one such building block out of a state. It is useful, before moving on, to record that construction in a compact, readily retrievable form.
+This theorem shows that cyclic representations are the basic building blocks of the representation theory of a $C^*$-algebra. In addition, the GNS construction of Theorem~\ref{thm:gns} is what produces it practically.
 
 \begin{remark}[Brief summary of the GNS construction]
 	\label{rem:gns-construction-recap}
 	Given a state $\omega$ on a $C^*$-algebra $\A$, as per Definition~\ref{def:state}, the proof of Theorem~\ref{thm:gns} produces the pair $(\H_\omega,\pi_\omega)$ through the following steps.
 	\begin{enumerate}
-		\item Define the sesquilinear form $(A,B) \equiv \omega(A^*B)$ on $\A$, positive semidefinite because $\omega$ is a state, as per~Equation \eqref{eq:gns-inner-product}.
-		\item Its null space $J = \{A \in \A : \omega(B^*A)=0,\ \forall B \in \A\}$, as per~Equation \eqref{eq:gns-ideal}, coincides with the smaller-looking set $\{A \in \A : \omega(A^*A)=0\}$, by the Cauchy-Schwarz inequality for $(\cdot,\cdot)$, and is a left ideal of $\A$.
-		\item The form $(\cdot,\cdot)$ descends to a genuine inner product on the quotient $\A/J$, whose completion is the Hilbert space $\H_\omega$.
-		\item The representation $\pi_\omega$ is defined on the dense subspace $\A/J \subset \H_\omega$ by left multiplication, $\pi_\omega(A)[B] \equiv [AB]$, as per~Equation \eqref{eq:gns-pi-def}, and extended to all of $\H_\omega$ by continuity.
-		\item The cyclic vector is $\Psi_\omega \equiv [\Id]$, and it reproduces the state, $\big(\Psi_\omega,\pi_\omega(A)\Psi_\omega\big) = \omega(A)$ for every $A \in \A$.
+		\item Define the sesquilinear form $(A,B) := \omega(A^*B)$ on $\A$, positive semidefinite because $\omega$ is a state, as per~Equation \eqref{eq:gns-inner-product}.
+		\item Its null space $J = \{A \in \A : \omega(B^*A)=0,\ \forall B \in \A\}$, as per~Equation \eqref{eq:gns-ideal}, coincides with the set $\{A \in \A : \omega(A^*A)=0\}$ on account of the Cauchy-Schwarz inequality for $(\cdot,\cdot)$. Furthermore it is a left ideal of $\A$.
+		\item The form $(\cdot,\cdot)$ descends to a inner product on the quotient $\A/J$, whose completion is the Hilbert space $\H_\omega$.
+		\item The representation $\pi_\omega$ is defined on the dense subspace $\A/J \subset \H_\omega$ by left multiplication, $\pi_\omega(A)[B] := [AB]$, as per~Equation \eqref{eq:gns-pi-def}. It is extended to all of $\H_\omega$ by continuity.
+		\item The cyclic vector is $\Psi_\omega := [\Id]$, and it reproduces the state, $\big(\Psi_\omega,\pi_\omega(A)\Psi_\omega\big) = \omega(A)$ for every $A \in \A$.
 	\end{enumerate}
 \end{remark}
 
-Theorem~\ref{thm:gns}~iii) compares an arbitrary representation with the specific GNS representation of the state it reproduces. The same argument, applied twice, yields a direct comparison between any two cyclic representations that reproduce the same expectation values on their respective cyclic vectors, without either one having to be identified with a GNS representation beforehand.
+Part iii) of Theorem~\ref{thm:gns} compares an arbitrary representation with the specific GNS representation of the state it reproduces. The same argument, applied twice, yields a direct comparison between any two cyclic representations that reproduce the same expectation values on their respective cyclic vectors.
 
 \begin{corollary}
 	\label{cor:cyclic-representations-same-expectations}
@@ -190,12 +194,12 @@ Theorem~\ref{thm:gns}~iii) compares an arbitrary representation with the specifi
 \end{proof}
 
 \subsection*{Pure and Mixed States}
-The construction above associates a Hilbert space vector to a single state $\omega$, but it in fact produces many more states than the one it started from. Every vector of $\H_\omega$, not only the distinguished cyclic vector $\Psi_\omega$, determines a state on $\A$ through the representation $\pi_\omega$. This observation is made precise by the following result, which shows that every vector $\Phi \in \H_\omega$ determines, through $\pi_\omega$, a positive linear functional on $\A$. The next definition then introduces the terminology needed to refer to such a vector as a state vector.
+The construction above produces many more states than the one it started from. In fact, every vector of $\H_\omega$, not only the distinguished cyclic vector $\Psi_\omega$, determines a state on $\A$ through the representation $\pi_\omega$. This observation is specified by the following result.
 
 \begin{proposition}\label{prop:state-vector}
 	Let $\omega$ be a state on a $C^*$-algebra $\A$, as in Definition \ref{def:state}, and let $(\H_\omega, \pi_\omega, \Psi_\omega)$ be its GNS representation, as per Theorem~\ref{thm:gns}. For every $\Phi \in \H_\omega$, the functional $\varphi: \A \to \C$ defined via
 	\begin{equation}
-		\varphi(A) \equiv \big(\Phi, \pi_\omega(A)\Phi\big),
+		\varphi(A) := \big(\Phi, \pi_\omega(A)\Phi\big),
 	\end{equation}
 	where $A \in \A$, is a positive linear functional on $\A$. 
 \end{proposition}
@@ -214,26 +218,27 @@ The construction above associates a Hilbert space vector to a single state $\ome
 	Since, by the GNS construction, vectors of the form $\pi_\omega(A)\Psi_\omega$, for $A \in \A$, are dense in $\H_\omega$, the state vectors obtained by acting with $\pi_\omega(\A)$ on $\Psi_\omega$ have the physical interpretation of states reached from $\omega$ through a physically realizable operation on the observables. If $\Phi \in \H_\omega$ is itself cyclic for $\pi_\omega$, the representation $(\H_\omega, \pi_\omega, \Phi)$ is unitarily equivalent, as per Theorem~\ref{thm:gns}~iii), to the GNS representation defined by $\varphi$.
 \end{remark}
 
-Distinct states on $\A$ can moreover be combined into new ones, simply by taking convex combinations of the corresponding positive linear functionals. This operation singles out, among all states, those that genuinely describe a definite physical situation rather than a statistical combination of several ones, a distinction made precise by the following definition.
+In addition, distinct states on $\A$ can be combined into new ones, simply by taking convex combinations of them. This operation identifies, among all states, those that describe a definite physical situation rather than a statistical combination of several ones.
 
 \begin{definition}[Mixture and pure state]
 	\label{def:pure-mixed-state}
 	Given two states $\omega_1,\omega_2$ on a $C^*$-algebra $\A$, as in Definition \ref{def:state}, the convex combination
 	\begin{equation}
 		\label{eq:mixture}
-		\omega \equiv \lambda\omega_1 + (1-\lambda)\omega_2, \qquad 0 < \lambda < 1,
+		\omega := \lambda\omega_1 + (1-\lambda)\omega_2, \qquad 0 < \lambda < 1,
 	\end{equation}
-	is again a state on $\A$, called a mixture of $\omega_1$ and $\omega_2$, or a mixed state. Alternatively, a state $\omega$ is called a pure state when it cannot be written as a convex combination~Equation \eqref{eq:mixture} of other states.
+	is again a state on $\A$, called a mixture of $\omega_1$ and $\omega_2$, or a mixed state. 
 \end{definition}
 
-These definitions are the correspondent ones to the classical case expressed in Definition \ref{def:pure-state}. We can state an equivalent definition of pure states using the following operation.
+Alternatively, a state $\omega$ is called a pure state when it cannot be written as a convex combination~Equation \eqref{eq:mixture} of other states. These definitions correspond to those of the classical case expressed in Definition \ref{def:pure-state}. We can state an equivalent definition of pure states using the following operation.
+
 \begin{definition}\label{def:majorization-states}
 	A state $\omega$ on a $C^*$-algebra $\A$, as in Definition \ref{def:state}, is said to majorize a positive linear functional $\phi$ on $\A$ when $\omega-\phi$ is itself a positive linear functional.
 \end{definition}
 
 Using Definition \ref{def:majorization-states}, we can state equivalently that a state $\omega$ is called pure if the only positive linear functionals majorized by $\omega$ are of the form $\lambda\omega$, with $0 < \lambda < 1$.
 
-The dichotomy between pure and mixed states has a direct counterpart at the level of GNS representations. In fact, purity of the state that generates the representation controls whether the representation itself is irreducible, as per Definition~\ref{def:representation-c-star}. This equivalence, stated next, is what excludes mixed states a priori from being represented by a single state vector in an irreducible representation.
+The dichotomy between pure and mixed states has a counterpart at the level of GNS representations. In fact, purity of the state that generates the representation controls whether the representation itself is irreducible, as per Definition~\ref{def:representation-c-star}. 
 
 \begin{proposition}
 	\label{prop:irreducible-iff-pure}
@@ -242,11 +247,11 @@ The dichotomy between pure and mixed states has a direct counterpart at the leve
 
 	\noindent For a complete proof see \cite[Appendix~D, Proposition 2.6.2]{strocchiIntroductionMathematicalStructure2005}. A mixed state can therefore never be represented by a state vector, as per Definition~\ref{def:state-vector}, of an irreducible representation.
 
-Mixed states nonetheless admit a concrete description inside an irreducible representation, once state vectors are replaced by a suitable convex combination of one dimensional projections. The next result makes this construction precise, and shows that it always yields a positive linear functional on $\A$.
+Mixed states admit a concrete description inside an irreducible representation. The next result specifies this construction. It shows that it always yields a positive linear functional on $\A$.
 
 \begin{proposition}
 	\label{prop:density-matrix-state}
-	Let $\pi$ be an irreducible representation of a $C^*$-algebra $\A$ on a Hilbert space $\H$ as in Definition \ref{def:representation-c-star}. Given orthonormal vectors $\Psi_i \in \H$, $i=1,\dots,N$, with $P_i \in \mathcal{B}(\H)$ the corresponding one dimensional orthogonal projections as in Definition \ref{def:one-dimensional-projector}, let
+	Let $\pi$ be an irreducible representation of a $C^*$-algebra $\A$ on a Hilbert space $\H$ as in Definition \ref{def:representation-c-star}. Given orthonormal vectors $\Psi_i \in \H$, $i=1,\dots,N$, with $P_i \in \mathcal{B}(\H)$ the corresponding one-dimensional orthogonal projections as in Definition \ref{def:one-dimensional-projector}, let
 	\begin{equation}
 		\label{eq:density-matrix}
 		\rho := \sum_{i=1}^N \lambda_i P_i, \quad \text{with} \quad \lambda_i \ge 0, \quad \sum_{i=1}^N \lambda_i = 1.
@@ -254,7 +259,7 @@ Mixed states nonetheless admit a concrete description inside an irreducible repr
 	Then the functional
 	\begin{equation}
 		\label{eq:density-matrix-state}
-		\omega_\rho(A) \equiv \Tr\big(\rho\,\pi(A)\big), \qquad A \in \A,
+		\omega_\rho(A) := \Tr\big(\rho\,\pi(A)\big), \qquad A \in \A,
 	\end{equation}
 	defines a state on $\A$.
 \end{proposition}
@@ -264,41 +269,41 @@ Mixed states nonetheless admit a concrete description inside an irreducible repr
 	\begin{equation}
 		\omega_\rho(A) = \sum_{n=1}^d \big(\Psi_n, \rho\,\pi(A)\Psi_n\big) = \sum_{i=1}^N \lambda_i \big(\Psi_i,\pi(A)\Psi_i\big) = \sum_{i=1}^N \lambda_i\,\omega_i(A),
 	\end{equation}
-	where $\omega_i(A) \equiv (\Psi_i,\pi(A)\Psi_i)$ is, as per Definition~\ref{def:state-vector}, the state vector associated to $\Psi_i$. Being a convex combination of the states $\omega_i$, the functional $\omega_\rho$ is itself a positive linear functional, and $\omega_\rho(\Id) = \sum_i \lambda_i\,\omega_i(\Id) = \sum_i \lambda_i = 1$: $\omega_\rho$ is a state on $\A$.
+	where $\omega_i(A) := (\Psi_i,\pi(A)\Psi_i)$ is, as per Definition~\ref{def:state-vector}, the state vector associated to $\Psi_i$. Being a convex combination of the states $\omega_i$, the functional $\omega_\rho$ is itself a positive linear functional, and $\omega_\rho(\Id) = \sum_i \lambda_i\,\omega_i(\Id) = \sum_i \lambda_i = 1$: $\omega_\rho$ is a state on $\A$.
 \end{proof}
 
-The operator $\rho$ used in the previous construction is subject only to the two conditions in~Equation \eqref{eq:density-matrix}, positivity of the coefficients $\lambda_i$ and their normalization to $1$, and these two conditions admit a characterization that does not refer to any particular choice of orthonormal vectors. This intrinsic characterization is what is taken as the definition of a density matrix, together with the terminology for the whole family of states obtained by varying $\rho$ inside a fixed representation.
+The operator $\rho$ used in the previous construction is subject to the two conditions in~Equation \eqref{eq:density-matrix}. These admit a characterization that does not refer to any particular choice of orthonormal vectors, stated in the next definition.
 
 \begin{definition}[Density matrix, folium of a representation]
 	\label{def:density-matrix-folium}
-	An operator $\rho: \H \to \H$ on a Hilbert space $\H$, as in~Equation \eqref{eq:density-matrix}, is called a density matrix when it is a positive trace class operator with $\Tr\rho=1$: $$\Tr|\rho|<\infty \qquad \Tr\rho=1.$$ Given a representation $\pi$ of a $C^*$-algebra $\A$ on $\H$, the set of states of the form $\omega_\rho(A) = \Tr(\rho\,\pi(A))$, for $\rho$ a density matrix on $\H$, is called the folium of the representation $\pi$.
+	An operator $\rho: \H \to \H$ on a Hilbert space $\H$, as in~Equation \eqref{eq:density-matrix}, is called a density matrix when it is a positive trace class operator with $\Tr\rho=1$. Given a representation $\pi$ of a $C^*$-algebra $\A$ on $\H$, the set of states of the form $\omega_\rho(A) = \Tr(\rho\,\pi(A))$, for $\rho$ a density matrix on $\H$, is called the folium of the representation $\pi$.
 \end{definition}
 
 \begin{remark}
-	When $\rho$ is a one dimensional projection, that is, $N=1$ in~Equation \eqref{eq:density-matrix}, the state $\omega_\rho$ of Proposition~\ref{prop:density-matrix-state} coincides with the state vector, as per Definition~\ref{def:state-vector}, associated to the corresponding unit vector, so state vectors form a special case of the folium of Definition~\ref{def:density-matrix-folium}. When $N>1$, $\omega_\rho$ is instead a mixed state, as per Definition~\ref{def:pure-mixed-state}, and quite generally every mixed state can be described by a density matrix in a suitable irreducible representation, through an equation of the form~Equation \eqref{eq:density-matrix-state}.
+	When $\rho$ is a one-dimensional projection, the state $\omega_\rho$ of Proposition~\ref{prop:density-matrix-state} coincides with the state vector, as per Definition~\ref{def:state-vector}, associated to the corresponding unit vector. Therefore, state vectors form a special case of the folium of Definition~\ref{def:density-matrix-folium}. When $N>1$, $\omega_\rho$ is instead a mixed state, as per Definition~\ref{def:pure-mixed-state}, and generally every mixed state can be described by a density matrix.
 \end{remark}
 
-One last notion of faithfulness, already introduced at the level of representations in Definition~\ref{def:representation-c-star}, has a natural counterpart for states themselves, and the two notions are directly related through the GNS construction.
+The notion of faithfulness, already introduced at the level of representations in Definition~\ref{def:representation-c-star}, has a natural counterpart for states themselves. The two notions are directly related through the GNS construction.
 
 \begin{definition}[Faithful state]
 	\label{def:faithful-state}
-	A state $\omega$ on a $C^*$-algebra $\A$ is called faithful when $\omega(A^*A) > 0$ for every nonzero $A \in \A$.
+	A state $\omega$ on a $C^*$-algebra $\A$ is called faithful when $\omega(A^*A) > 0$ for every non-zero $A \in \A$.
 \end{definition}
 
 \begin{remark}
-	The GNS representation, as per Theorem~\ref{thm:gns}, defined by a faithful state is itself faithful, as per Definition~\ref{def:representation-c-star}. Indeed, if $\pi_\omega(A)=0$ then, in particular, $\pi_\omega(A)\Psi_\omega = [A] = [0]$, that is, $A$ belongs to the ideal $J$ of~Equation \eqref{eq:gns-ideal}, so $\omega(A^*A)=0$, taking $B=A$ in~Equation \eqref{eq:gns-ideal}: faithfulness of $\omega$ then forces $A=0$, so $\ker\pi_\omega = \{0\}$.
+	The GNS representation, as per Theorem~\ref{thm:gns}, defined by a faithful state is itself faithful, as per Definition~\ref{def:representation-c-star}. Indeed, if $\pi_\omega(A)=0$ then, in particular, $\pi_\omega(A)\Psi_\omega = [A] = [0]$, that is, $A$ belongs to the ideal $J$ of~Equation \eqref{eq:gns-ideal}, so $\omega(A^*A)=0$, taking $B=A$ in~Equation \eqref{eq:gns-ideal}. Faithfulness of $\omega$ then forces $A=0$, so $\ker\pi_\omega = \{0\}$.
 \end{remark}
 
 
 \subsection*{Gelfand-Naimark Theorem for Observables}
 \label{sec:gelfand-naimark}
 
-The GNS theorem of Section~\ref{sec:states-representations-gns} attaches a concrete Hilbert space representation to every state on a $C^*$-algebra. However, its GNS representation can fail to be faithful, and elements of $\A$ that act differently as abstract algebra elements may be represented by the same, or even by the zero, operator. This would cause a failure of the separation property we presented in Definition \ref{def:state-space}. Recovering a genuinely faithful realization of $\A$ as an algebra of operators therefore requires working not with a single state but with a sufficiently large family of them at once. This is the content of the Gelfand-Naimark theorem, which shows that every $C^*$-algebra, abelian or not, is isomorphic to an algebra of bounded operators on some Hilbert space. Together with the abelian theorem of Chapter~\ref{ch:classical-mechanics}, which realizes a commutative $C^*$-algebra as continuous functions on its spectrum, this result completes the characterization of $C^*$-algebras announced in Section~\ref{sec:non-abelian-observables}. 
+ GNS representation, constructed in Theorem \ref{thm:gns}, can fail to be faithful. In fact, elements of $\A$ that act differently as abstract algebra elements may be represented by the same, or even by the zero, operator. This would cause a failure of the separation property we presented in Definition \ref{def:state-space}. Recovering a faithful realization of $\A$ as an algebra of operators therefore requires working not with a single state but with a sufficiently large family of them at once. This is the content of the Gelfand-Naimark theorem, which shows that every $C^*$-algebra is isomorphic to an algebra of bounded operators on some Hilbert space. 
 
-Before proving the Gelfand-Naimark Theorem, we need to assert an equivalent definition of a separating state space. Recalling Definition~\ref{def:state-space}, a state set $\mathcal{S}$ is said to be \emph{separating} when $\omega(A) = \omega(B)$ for all states $\omega \in \mathcal{S}$ implies $A = B$. By linearity and the fundamental properties of the states, this implies that $\omega(A^*A) = 0$ across all states if and only if $A = 0$. Hence, we can state an alternative operational definition more suitable for this framework.
+Before proving that theorem, we need to state an equivalent definition of a separating state space. Recalling Definition~\ref{def:state-space}, a state set $\mathcal{S}$ is said to be \emph{separating} when $\omega(A) = \omega(B)$ for all states $\omega \in \mathcal{S}$ implies $A = B$. By linearity and the fundamental properties of the states, this implies that $\omega(A^*A) = 0$ across all states if and only if $A = 0$. Hence, we can state an alternative operational definition more suitable for this framework.
 
 \begin{definition}[Separating property for a family of states]
-	Given a $C^*$-algebra $\A$ as in Definition \ref{def:c-star-algebra}. A family of states $\mathcal{F}$ is said to separate the algebra if, for every nonzero $A \in \A$, there exists $\omega \in \mathcal{F}$ such that the represented operator $\pi_\omega(A)$ is not the zero operator.
+	Given a $C^*$-algebra $\A$ as in Definition \ref{def:c-star-algebra}. A family of states $\mathcal{F}$ is said to separate the algebra if, for every non-zero $A \in \A$, there exists $\omega \in \mathcal{F}$ such that the represented operator $\pi_\omega(A)$ is not the zero operator.
 \end{definition}
 
 Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\omega$ if and only if the element $A$ lies in the Gelfand left ideal $J$ defined in Equation~\eqref{eq:gns-ideal}, which is the condition $\omega(A^*A) = 0$. Consequently, the two definitions coincide. We are ready to present the non-commutative counterpart of Theorem \ref{thm:gelfand}.
@@ -309,62 +314,64 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 \end{theorem}
 
 \begin{proof}
-	%A family $\mathcal F$ of states on $\A$ is said to separate $\A$ when, for every nonzero $A \in \A$, there exists $\omega \in \mathcal F$ such that $\pi_\omega(A) \neq 0$, where $\pi_\omega$ is the GNS representation, as per Theorem~\ref{thm:gns}, defined by $\omega$. 
+	%A family $\mathcal F$ of states on $\A$ is said to separate $\A$ when, for every non-zero $A \in \A$, there exists $\omega \in \mathcal F$ such that $\pi_\omega(A) \neq 0$, where $\pi_\omega$ is the GNS representation, as per Theorem~\ref{thm:gns}, defined by $\omega$. 
 	Using \cite[Prop.~1.6.5, Appendix~C]{strocchiIntroductionMathematicalStructure2005} we can state the existence of a family $\mathcal F$ of separating states for every $C^*$-algebra. That is the state set described in Definition \ref{def:quantum-system}. Fix one such family $\mathcal F$, and consider the direct sum of the corresponding GNS representations,
 	\begin{equation}
-		\H \equiv \bigoplus_{\omega \in \mathcal F} \H_\omega, \qquad \pi \equiv \bigoplus_{\omega \in \mathcal F} \pi_\omega.
+		\H := \bigoplus_{\omega \in \mathcal F} \H_\omega, \qquad \pi := \bigoplus_{\omega \in \mathcal F} \pi_\omega.
 	\end{equation}
 	Hence, $\H$ is the space of families $x=\{x_\omega\}_{\omega\in\mathcal F}$, with $x_\omega \in \H_\omega$ for every $\omega$, such that $\sum_\omega \|x_\omega\|^2 < \infty$, equipped with the inner product $\big(\{x_\omega\},\{y_\omega\}\big) := \sum_\omega (x_\omega,y_\omega)$, and $\pi$ acts on such a family term by term, $[\pi(A)x]_\omega := \pi_\omega(A)x_\omega$.
 	
-	The inner product on $\H$ is well defined and $\H$ is complete, by the construction of a direct sum of Hilbert spaces. In particular, convergence of $\sum_\omega (x_\omega,y_\omega)$ follows from the Cauchy-Schwarz inequality on each summand together with $\sum_\omega\|x_\omega\|^2<\infty$ and $\sum_\omega\|y_\omega\|^2<\infty$, and completeness of $\H$ is inherited coordinatewise from the completeness of each $\H_\omega$. The operator $\pi(A)$ is bounded on $\H$, since Proposition~\ref{prop:homomorphism-norm-bound} yields $\|\pi_\omega(A)\| \le \|A\|$ for every $\omega \in \mathcal F$, so
+	The inner product on $\H$ is well defined and $\H$ is complete, by construction. In particular, convergence of $\sum_\omega (x_\omega,y_\omega)$ follows from the Cauchy-Schwarz inequality on each summand together with $\sum_\omega\|x_\omega\|^2<\infty$ and $\sum_\omega\|y_\omega\|^2<\infty$, and completeness of $\H$ is inherited coordinatewise from the completeness of each $\H_\omega$. The operator $\pi(A)$ is bounded on $\H$, since Proposition~\ref{prop:homomorphism-norm-bound} yields $\|\pi_\omega(A)\| \le \|A\|$ for every $\omega \in \mathcal F$, that is
 	\begin{equation}
-		\|\pi(A)x\|^2 = \sum_{\omega\in\mathcal F} \|\pi_\omega(A)x_\omega\|^2 \le \|A\|^2 \sum_{\omega\in\mathcal F}\|x_\omega\|^2 = \|A\|^2\|x\|^2,
+		\|\pi(A)x\|^2 = \sum_{\omega\in\mathcal F} \|\pi_\omega(A)x_\omega\|^2 \le \|A\|^2 \sum_{\omega\in\mathcal F}\|x_\omega\|^2 = \|A\|^2\|x\|^2.
 	\end{equation}
-	and $\pi$ inherits linearity, multiplicativity, and the $*$-preserving property from each $\pi_\omega$, so $\pi$ is a representation of $\A$ on $\H$, as per Definition~\ref{def:representation-c-star}.
+	Furthermore $\pi$ inherits linearity, multiplicativity, and the $*$-preserving property from each $\pi_\omega$, hence $\pi$ is a representation of $\A$ on $\H$, as per Definition~\ref{def:representation-c-star}.
 	
-	Because $\mathcal F$ separates $\A$, for every nonzero $A \in \A$ there exists $\omega \in \mathcal F$ with $\pi_\omega(A) \neq 0$, hence $\pi(A) \neq 0$ and the representation $\pi$ is faithful, $\ker\pi = \{0\}$, as per Definition~\ref{def:representation-c-star}, so $\pi$ is a $*$-isomorphism of $\A$ onto the $C^*$-algebra $\pi(\A) \subseteq \mathcal{B}(\H)$. Applying Proposition~\ref{prop:homomorphism-norm-bound} to the $*$-isomorphism $\pi$ yields $\|\pi(A)\| = \|A\|$ for every $A \in \A$, so $\pi$ is an isometric $*$-isomorphism of $\A$ onto an algebra of bounded operators on the Hilbert space $\H$.
+	Since $\mathcal F$ separates $\A$, for every non-zero $A \in \A$ there exists $\omega \in \mathcal F$ with $\pi_\omega(A) \neq 0$, hence $\pi(A) \neq 0$ and the representation $\pi$ is faithful, $\ker\pi = \{0\}$, as per Definition~\ref{def:representation-c-star}, hence $\pi$ is a $*$-isomorphism of $\A$ onto the $C^*$-algebra $\pi(\A) \subseteq \mathcal{B}(\H)$. Applying Proposition~\ref{prop:homomorphism-norm-bound} to the $*$-isomorphism $\pi$ yields $\|\pi(A)\| = \|A\|$ for every $A \in \A$. This implies that $\pi$ is an isometric $*$-isomorphism of $\A$ onto an algebra of bounded operators on the Hilbert space $\H$.
 \end{proof}
 
-\begin{remark}[Recovering the abelian case]
-	\label{rem:abelian-recovery}
-	When $\A$ is abelian, Theorem~\ref{thm:gelfand-naimark} can be specialized to recover the Gelfand characterization of Chapter~\ref{ch:classical-mechanics}. For an abelian $C^*$-algebra, irreducible representations coincide with the GNS representations defined by pure states, as per Proposition~\ref{prop:irreducible-iff-pure}, and pure states on an abelian $C^*$-algebra are multiplicative, as per \cite[Prop.~2.6.3]{strocchiIntroductionMathematicalStructure2005}, so each such representation is one dimensional, $\pi_\omega(A) = \omega(A)\Id$. Given a family $\mathcal F$ of pairwise inequivalent irreducible representations, it coincides with the Gelfand spectrum of $\A$, as per Definition~\ref{def:gelfand-spectrum}, and the faithful representation $\pi(A) = \bigoplus_{\omega\in\mathcal F}\pi_\omega(A)$ is given by the collection $\{\omega(A) : \omega\in\mathcal F\}$, that is, by the Gelfand transform $\widetilde A(\omega) \equiv \omega(A)$, as per Definition~\ref{def:gelfand-transform}. The norm identity of Theorem~\ref{thm:gelfand-naimark} then reads $\|\widetilde A\|_\infty = \sup_\omega|\widetilde A(\omega)| = \sup_\omega|\omega(A)| = \|A\|$, and $\mathcal F$ is a compact Hausdorff space in the weak-$*$ topology, by the Alaoglu-Banach theorem, as per \cite[Theorem IV.21]{reedMethodsModernMathematical2003}, with each $\widetilde A$ continuous on it. This shows the structural difference between the abelian and the non-abelian case already announced in Section~\ref{sec:non-abelian-observables}: for an abelian algebra, the set of pure states is a genuine classical space, on which every observable takes a single, well defined value at each point, while for a non-abelian algebra the pure states index instead a family of Hilbert spaces, and at each of them an observable acts as an operator rather than taking a definite value.
+\begin{remark}[Recovering the commutative case]
+	\label{rem:commutative-recovery}
+	When $\A$ is commutative, Theorem~\ref{thm:gelfand-naimark} can be specialized to recover the Gelfand characterization of Chapter~\ref{ch:classical-mechanics}. For a commutative $C^*$-algebra, irreducible representations coincide with the GNS representations defined by pure states, as per Proposition~\ref{prop:irreducible-iff-pure}, and pure states on an commutative $C^*$-algebra are multiplicative, as per \cite[Prop.~2.6.3]{strocchiIntroductionMathematicalStructure2005}. Hence each such representation is one-dimensional, $\pi_\omega(A) = \omega(A)\Id$ $\forall A \in \A$. Given a family $\mathcal F$ of pairwise inequivalent irreducible representations, it coincides with the Gelfand spectrum of $\A$, as per Definition~\ref{def:gelfand-spectrum}, and the faithful representation 
+	\[\pi(A) := \bigoplus_{\omega\in\mathcal F}\pi_\omega(A) \qquad \forall A \in \A\]
+	is given by the collection $\{\omega(A) : \omega\in\mathcal F\}$ for every $A \in \A$. That is because the correspondent continuous function of the observable $A$ is given by $\omega(A)$, call it $\widetilde A$. The norm identity of Theorem~\ref{thm:gelfand-naimark} then reads $\|\widetilde A\|_\infty = \sup_\omega|\widetilde A(\omega)| = \sup_\omega|\omega(A)| = \|A\|$, and $\mathcal F$ is a compact Hausdorff space in the weak-$*$ topology, by the Alaoglu-Banach theorem, as per \cite[Theorem IV.21]{reedMethodsModernMathematical2003}, with each $\widetilde A$ continuous on it. This shows the structural difference between the commutative and the non-commutative case already announced in Section~\ref{sec:non-commutative-observables}. 
 \end{remark}
 
 	\section{The Weyl Algebra and its Representations}
 	
-	The previous chapter singled out a commutative $C^*$-algebra as the correct algebraic model for a classical particle, and the commutative Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand-naimark-commutative}, recovered phase space itself as the spectrum of that algebra. The present section carries the same programme one step further and asks what algebra should replace it once the canonical commutation relations between position and momentum are imposed. A naive answer, generating an algebra directly from the operators $q$ and $p$, turns out to be incompatible with the very notion of a $C^*$-algebra, since no finite norm can be assigned to either operator once the commutation relations hold. Weyl's resolution replaces $q$ and $p$ with the bounded unitary exponentials that they formally generate, and the resulting Weyl $C^*$-algebra becomes the correct object on which to invoke the noncommutative Gelfand-Naimark Theorem~\ref{thm:gelfand-naimark}, which guarantees a faithful representation by bounded operators on a Hilbert space. The von Neumann uniqueness theorem then shows that, once a mild continuity requirement called regularity is imposed, this representation is unique up to unitary equivalence, so that the quantum particle possesses, in a precise sense, a single state space. The section closes by exhibiting this representation concretely, the Schr\"odinger representation on $L^2(\mathbb{R})$, and by showing how the operators $q$ and $p$, excluded from the algebra at the outset, are recovered as the selfadjoint generators of the one-parameter unitary groups that the representation does contain. This last step is the mechanism that lets unbounded observables, momentum and energy among them, re-enter the algebraic framework of Section~\ref{sec:operational-framework} without threatening its $C^*$-algebraic foundations. The presentation of the material is based throughout on \cite[Chapter 3]{strocchiIntroductionMathematicalStructure2005}.
+	In the previous chapter, we characterized a commutative $C^*$-algebra as the correct algebraic model for a classical particle. The present section is devoted to find the algebra that embeds the canonical commutation relations between position and momentum in quantum mechanics. A naive answer, generating an algebra directly from the operators $q$ and $p$, turns out to be incompatible with the very notion of a $C^*$-algebra. In fact, we show that no finite norm can be assigned to either operator once the commutation relations hold. Weyl's resolution replaces $q$ and $p$ with the bounded unitary exponentials that they formally generate. The resulting Weyl $C^*$-algebra becomes the correct object on which to invoke the noncommutative Gelfand-Naimark Theorem~\ref{thm:gelfand-naimark}. In addition, von Neumann uniqueness theorem then shows that this representation, if it is regular, is unique up to unitary equivalence, so that the quantum particle possesses a single state space. The section closes by exhibiting the Schr\"odinger representation on $L^2(\mathbb{R})$. The following work in this section is based on \cite[Chapter 3]{strocchiIntroductionMathematicalStructure2005}.
 	
 	\subsection*{The Heisenberg relations and the boundedness obstruction}
 	
-	A classical particle in one space dimension is described by the algebra generated by the position $q$ and the momentum $p$, and the natural quantum analogue is obtained by requiring that the same two generators satisfy the Heisenberg commutation relations
+	A classical particle in one space dimension is described by the algebra generated by the position $q$ and the momentum $p$. The natural quantum analogue is obtained by requiring that the same two generators satisfy the following Heisenberg commutation relations.
 	\begin{equation}
 		[q,p]=i, \qquad [q,q]=0, \qquad [p,p]=0,
 		\label{eq:heisenberg-relations}
 	\end{equation}
-	where the value of $\hbar$ has been set to one by a suitable choice of units, and where the discussion is restricted to a single space dimension for definiteness. The word \emph{generated}, however, admits more than one reading, and making this reading precise is the first task of the section.
+	 The value of $\hbar$ has been set to one by a suitable choice of units. Note that the discussion is restricted to a single space dimension for definiteness. The word \emph{generated}, however, admits more than one interpretation, and this reading is specified the first task of the section.
 	
 	\begin{definition}[Heisenberg Lie algebra]
 		\label{def:heisenberg-lie-algebra}
 		The Heisenberg Lie algebra is the complex vector space spanned by $q$, $p$ and the identity element $\Id$, equipped with the Lie bracket determined by the commutation relations Equation \eqref{eq:heisenberg-relations} together with $[q,\Id]=[p,\Id]=0$.
 	\end{definition}
 	
-	\noindent The Lie bracket alone does not specify how $q$ and $p$ multiply as operators, and the Heisenberg formulation of quantum mechanics requires exactly such a product structure to build an algebra of observables out of them. The associative completion obtained in this way, rather than the Lie algebra of Definition~\ref{def:heisenberg-lie-algebra} itself, is the object usually meant by the term Heisenberg algebra, and it is this object whose relation to the operational framework of Section~\ref{sec:operational-framework} needs to be examined.
+	\noindent The Lie bracket alone does not specify how $q$ and $p$ act as operators. The associative completion obtained in this way, rather than the Lie algebra of Definition~\ref{def:heisenberg-lie-algebra} itself, is the structure usually meant with Heisenberg algebra. We need to examine the relations of this object to the operational framework of Section~\ref{sec:operational-framework}.
 	
 	\begin{definition}[Heisenberg algebra]
 		\label{def:heisenberg-algebra}
 		The Heisenberg algebra is the associative algebra generated, through sums and products, by $q$ and $p$, with commutation relations fixed by Equation \eqref{eq:heisenberg-relations}.
 	\end{definition}
 	
-	\noindent The Heisenberg algebra of Definition~\ref{def:heisenberg-algebra} does not fit into the operational framework of Section~\ref{sec:operational-framework}, because $q$ and $p$ cannot be realized as bounded, or selfadjoint, elements of a $C^*$-algebra. The proposition below makes this obstruction precise and quantifies exactly how badly $q$ and $p$ fail to admit a finite $C^*$-norm.
+	\noindent The Heisenberg algebra of Definition~\ref{def:heisenberg-algebra} does not fit into the operational framework of Section~\ref{sec:operational-framework}. The reason why is that $q$ and $p$ cannot be realized as bounded, or selfadjoint, elements of a $C^*$-algebra. The proposition below specifies this obstruction and quantifies how badly $q$ and $p$ fail to admit a finite $C^*$-norm.
 	
 	\begin{proposition}
 		\label{prop:boundedness-obstruction}
 		Let $q$ and $p$ satisfy the Heisenberg commutation relations Equation \eqref{eq:heisenberg-relations}. If a $C^*$-norm could be assigned to $q$ and $p$, then
 		\begin{equation}
-			\|q\|\,\|p\| \geq \frac{n}{2}, \qquad \forall\, n \in \mathbb{N},
+			\|q\|\,\|p\| \geq \frac{n}{2}, \qquad \forall\, n \in \mathbb{N}.
 			\label{eq:obstruction-inequality}
 		\end{equation}
-		so that $\|q\|$ and $\|p\|$ cannot both be finite.
+		Hence $\|q\|$ and $\|p\|$ cannot both finite.
 	\end{proposition}
 	
 	\begin{proof}
@@ -377,14 +384,14 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		\begin{equation}
 			n\,\|q^{n-1}\| \leq \|p\,q^n\| + \|q^n\,p\| \leq 2\,\|p\|\,\|q\|\,\|q^{n-1}\|.
 		\end{equation}
-		The quantity $\|q^{n-1}\|$ equals $\|q\|^{n-1}$ by the $C^*$-identity and cannot vanish for any $n$, since $\|q\|=0$ would force $q=0$, contradicting Equation \eqref{eq:heisenberg-relations}. Dividing by $\|q^{n-1}\|$ therefore yields Equation \eqref{eq:obstruction-inequality} for every $n \in \mathbb{N}$, and letting $n$ grow without bound shows that $\|q\|$ and $\|p\|$ cannot both be finite.
+		Since $\|q^{n-1}\| = \|q\|^{n-1}$ by the $C^*$-identity and since it cannot vanish for any $n$. We are contradicting Equation \eqref{eq:heisenberg-relations}. Dividing by $\|q^{n-1}\|$ therefore yields Equation \eqref{eq:obstruction-inequality} for every $n \in \mathbb{N}$, and letting $n$ grow without bound shows that $\|q\|$ and $\|p\|$ cannot both be finite.
 	\end{proof}
 	
 	\begin{remark}
-		The mathematical obstruction identified in Proposition~\ref{prop:boundedness-obstruction} has a direct operational counterpart. Because any experimental apparatus is subject to scale bounds, what is actually measured is never $q$ or $p$ themselves but bounded functions of them, the position within the region accessible to the apparatus and the momentum within an interval set by the available energy. A formulation built on the Heisenberg algebra of Definition~\ref{def:heisenberg-algebra} therefore involves an extrapolation beyond what is operationally accessible in the sense of Section~\ref{sec:operational-framework}, an extrapolation that carries no physical consequence yet forces a change of strategy at the algebraic level.
+			The mathematical obstruction identified in Proposition~\ref{prop:boundedness-obstruction} has a direct operational counterpart. Since any experimental apparatus is subject to scale bounds, what is actually measured is never $q$ or $p$ themselves rather bounded functions of them. Among this we include the position within the region accessible to the apparatus and the momentum within an interval set by the available energy. A formulation built on the Heisenberg algebra of Definition~\ref{def:heisenberg-algebra} therefore involves an extrapolation beyond what is operationally accessible in the sense of Section~\ref{sec:operational-framework}. Such an extrapolation that carries no physical consequence yet forces a change of strategy at the algebraic level.
 	\end{remark}
 	
-	\noindent Proposition~\ref{prop:boundedness-obstruction} is, in fact, an elementary instance of a considerably more general fact, one that makes no reference to the specific value of the commutator between $q$ and $p$ and holds for an arbitrary pair of bounded operators. 
+	\noindent Proposition~\ref{prop:boundedness-obstruction} is, in fact, an elementary instance of a considerably more general fact. This result makes no reference to the specific value of the commutator between $q$ and $p$ and holds for an arbitrary pair of bounded operators. 
 	
 	\begin{theorem}[Wintner's Obstruction Theorem]\label{thm:wintner}
 		Let $\H$ be a Hilbert space, as in Definition \ref{def:hilbert}, and let $A,B \in \mathcal{B}(\H)$. Then
@@ -393,12 +400,14 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		\end{equation}
 	\end{theorem}
 	
-	\noindent The result was first proved by Wintner, with an independent proof given shortly afterwards by Wielandt, and it in fact holds more generally for bounded operators on any Banach space. The proof is not reproduced here, and the reader is referred to \cite[Proposition 11.32]{morettiSpectralTheoryQuantum}. Taking $A=q$ and $B=p$ in Theorem~\ref{thm:wintner} recovers the impossibility already established by direct computation in Proposition~\ref{prop:boundedness-obstruction}, this time as a special case of a statement about arbitrary bounded operators on an arbitrary Hilbert space.
+	\noindent The result was first proved by Wintner, with an independent proof given shortly afterwards by Wielandt. The proof is not reproduced here, and the reader is referred to \cite[Proposition 11.32]{morettiSpectralTheoryQuantum}. Taking $A=q$ and $B=p$ in Theorem~\ref{thm:wintner} recovers the impossibility already established by direct computation in Proposition~\ref{prop:boundedness-obstruction}.
 	
 	\subsection*{The Weyl Operators and the Weyl Algebra}
-	Weyl's proposal replaces the problematic extrapolation with a family of operators that are bounded by construction, namely the formal exponentials of $q$ and $p$. In addition, it is on these exponentials that a $C^*$-algebra can be built.
+	Weyl's proposal replaces the problematic extrapolation with a family of operators that are bounded by construction, namely the formal exponentials of $q$ and $p$. In addition, it is on these that a $C^*$-algebra can be built.
 	
-	\noindent \textit{Note from from now on, $s \in \N$ will denote a finite number of dimensions.}
+	\begin{remark}
+		Note from from now on, $s \in \N$ will denote a finite number of dimensions.
+	\end{remark}
 	
 	\begin{definition}[Weyl operators]
 		\label{def:weyl-operators}
@@ -420,7 +429,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		\end{equation}
 	\end{lemma}
 	
-	\noindent A complete proof of this lemma can be found in \cite[p.61]{strocchiIntroductionMathematicalStructure2005}. Equation \eqref{eq:baker-hausdorff} applies to $q$ and $p$ as soon as the commutator between the two exponents is a scalar, which is exactly the situation produced by the Heisenberg relations \eqref{eq:heisenberg-relations}, and it translates the commutation relations \eqref{eq:heisenberg-relations} into a statement about the Weyl operators themselves.
+	\noindent A complete proof of this lemma can be found in \cite[p.61]{strocchiIntroductionMathematicalStructure2005}. Equation \eqref{eq:baker-hausdorff} applies to $q$ and $p$ as soon as the commutator between the two exponents is a scalar. That is the situation encompassed by the Heisenberg relations \eqref{eq:heisenberg-relations}.
 	
 	\begin{proposition}[Weyl relations]
 		\label{prop:weyl-relations}
@@ -434,16 +443,16 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	\begin{proof}
 		The element $[i\alpha q,\, i\beta p] = -i\alpha\beta$ is a scalar multiple of the identity by Equation \eqref{eq:heisenberg-relations}, hence commutes with both $i\alpha q$ and $i\beta p$, and Lemma~\ref{lem:baker-hausdorff} applies to the pair $A=i\alpha q$, $B=i\beta p$. It yields
 		\begin{equation}
-			U(\alpha)\,V(\beta) = e^{i\alpha q + i\beta p - i\alpha\beta/2},
+			U(\alpha)\,V(\beta) = e^{i\alpha q + i\beta p - i\alpha\beta/2}.
 		\end{equation}
-		and exchanging the roles of $A$ and $B$ yields, by the same argument,
+		Exchanging the roles of $A$ and $B$ yields, by the same argument,
 		\begin{equation}
 			V(\beta)\,U(\alpha) = e^{i\alpha q + i\beta p + i\alpha\beta/2} = U(\alpha)\,V(\beta)\,e^{i\alpha\beta},
 		\end{equation}
-		which is Equation \eqref{eq:weyl-rel-1}. Equations \eqref{eq:weyl-rel-2} follow from Equation \eqref{eq:heisenberg-relations}, since $q$ commutes with itself and $p$ with itself, so that no correction term of the form $[A,B]/2$ appears in Lemma~\ref{lem:baker-hausdorff} when both operators belong to the same one-parameter family.
+		which is Equation \eqref{eq:weyl-rel-1}. Equations \eqref{eq:weyl-rel-2} follow from Equation \eqref{eq:heisenberg-relations}, since $q$ commutes with itself and $p$ with itself. Hence no correction term of the form $[A,B]/2$ appears in Lemma~\ref{lem:baker-hausdorff} when both operators belong to the same one-parameter family.
 	\end{proof}
 	
-	\noindent The relations of Proposition~\ref{prop:weyl-relations}, referred to as the Weyl form of the canonical commutation relations, no longer make reference to unbounded operators and can therefore be taken as the defining relations of an abstract algebra.
+	\noindent The relations of Proposition~\ref{prop:weyl-relations}, referred to as the Weyl form of the canonical commutation relations, no longer make reference to unbounded operators. It can therefore be taken as the defining relations of an abstract algebra.
 	
 	\begin{definition}[Weyl algebra]
 		\label{def:weyl-algebra}
@@ -454,14 +463,14 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		A natural involution on $\A_W$ is fixed by declaring $U(\alpha)^* = U(-\alpha)$ and $V(\beta)^* = V(-\beta)$, matching the selfadjointness that $q$ and $p$ would carry at the formal level. The Weyl relations then force $U(\alpha)$ and $V(\beta)$ to be unitary, and consequently every monomial in $U$ and $V$ has unit norm as well, since the Weyl relations reduce any such monomial to a single product $U(\alpha)V(\beta)$ up to a phase.
 	\end{remark}
 	
-	\noindent Assigning a norm to the remaining elements of $\A_W$, so as to obtain a $C^*$-algebra, is a nontrivial step, resolved by the following result.
+	\noindent Assigning a norm to the remaining elements of $\A_W$, so as to obtain a $C^*$-algebra, is a nontrivial step, shown in the following result.
 	
 	\begin{proposition}
 		\label{prop:unique-C-star-norm}
 		There exists a unique $C^*$-norm on $\A_W$, and the completion of $\A_W$ with respect to it is a $C^*$-algebra.
 	\end{proposition}
 	
-	\noindent This proposition is not reproved here, and the interested reader is referred to \cite[Theorem 5.2.8]{bratteliOperatorAlgebrasQuantum1981}. With a unique $C^*$-norm available on $\A_W$, its completion can now be regarded as a $C^*$-algebra in its own right. The next definition fixes the notation for this completed algebra, the object to which the noncommutative Gelfand-Naimark theorem will be applied below.
+	\noindent This proposition is not proved here, and we refer the reader to \cite[Theorem 5.2.8]{bratteliOperatorAlgebrasQuantum1981}. With a unique $C^*$-norm available on $\A_W$, its completion can now be regarded as a $C^*$-algebra. The next definition fixes the notation for this completed algebra, the object to which the noncommutative Gelfand-Naimark theorem will be applied below.
 	
 	\begin{definition}[Weyl $C^*$-algebra]
 		\label{def:weyl-c-star-algebra}
@@ -472,10 +481,10 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	
 	\begin{remark}
 		\label{rem:link-to-gelfand-naimark}
-		The states of the quantum particle are identified with the representations of $\A_W$, exactly as the states of the classical particle were identified in Section~\ref{sec:classical-observable-algebra} with the representations of the corresponding commutative algebra. What Theorem~\ref{thm:gelfand-naimark} does not by itself provide is uniqueness, since a $C^*$-algebra can admit inequivalent representations, and it is this question that occupies the remainder of the section.
+		The states of the quantum particle are identified with the representations of $\A_W$, as the states of the classical particle were identified in Section~\ref{sec:classical-observable-algebra} with the representations of the corresponding commutative algebra. What Theorem~\ref{thm:gelfand-naimark} does not by itself provide is uniqueness, since a $C^*$-algebra can admit inequivalent representations, and it is this question that occupies the remainder of the section.
 	\end{remark}
 	
-	\noindent Before turning to uniqueness, it is worth recording the group-theoretic structure implicit in the Weyl relations, since it offers an equivalent description of representations of $\A_W$ that will resurface in the discussion of the Heisenberg group representations.
+	\noindent Before turning to uniqueness, it is worth recording the structure implicit in the Weyl relations, since it offers an equivalent description of representations of $\A_W$.
 	
 	\begin{definition}[Heisenberg Lie group]
 		\label{def:heisenberg-lie-group}
@@ -487,44 +496,46 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	\end{definition}
 	
 	\begin{remark}
-		The group law Equation \eqref{eq:heisenberg-group-law} is obtained from the identification $(\alpha,\beta,\lambda) \leftrightarrow \exp\,i(\alpha q + \beta p + \lambda \Id)$ together with the Weyl relations of Proposition~\ref{prop:weyl-relations}, and it exhibits the Heisenberg Lie group as the Lie group associated, through the exponential map, with the Heisenberg Lie algebra of Definition~\ref{def:heisenberg-lie-algebra}. It is a noncompact group. Determining the representations of the Weyl $C^*$-algebra $\A_W$ is therefore equivalent to determining the unitary representations of the Heisenberg Lie group.
+		The group law Equation \eqref{eq:heisenberg-group-law} is obtained from the identification $(\alpha,\beta,\lambda) \leftrightarrow \exp\,i(\alpha q + \beta p + \lambda \Id)$ together with the Weyl relations of Proposition~\ref{prop:weyl-relations}. It exhibits the Heisenberg Lie group as the Lie group associated, through the exponential map, with the Heisenberg Lie algebra of Definition~\ref{def:heisenberg-lie-algebra}. Determining the representations of the Weyl $C^*$-algebra $\A_W$ is therefore equivalent to determining the unitary representations of the Heisenberg Lie group.
 	\end{remark}
 	
 	\subsection*{Regularity and the von Neumann Uniqueness Theorem}
 	
-	Theorem~\ref{thm:gelfand-naimark} guarantees at least one representation of $\A_W$ on a Hilbert space, yet it says nothing about how many inequivalent ones exist. An infinite multiplicity of inequivalent representations would mean that the algebraic characterization of the quantum particle given in Definition~\ref{def:weyl-c-star-algebra} fails to determine its physics uniquely, and it is exactly this possibility that the regularity condition introduced below is designed to rule out.
+	Theorem~\ref{thm:gelfand-naimark} guarantees the existence at least one representation of $\A_W$ on a Hilbert space. Yet it carries no informations about how many inequivalent ones exist. An infinite multiplicity of inequivalent representations would mean that the algebraic characterization of the quantum particle given in Definition~\ref{def:weyl-c-star-algebra} fails to determine its physics uniquely. That is this possibility that the regularity condition introduced below is planned to rule out.
 	
 	\begin{definition}[Regular representation]
 		\label{def:regular-representation}
-		A representation $\pi$ of the Weyl algebra $\A_W$, equivalently a unitary representation of the Heisenberg group of Definition~\ref{def:heisenberg-lie-group}, on a separable Hilbert space $\H$ is regular if $\pi(U(\alpha))$ and $\pi(V(\beta))$ are strongly continuous one-parameter groups of unitary operators in $\alpha$ and $\beta$, respectively as per Definition \ref{def:unitary-reps}.
+		A representation $\pi$ of the Weyl algebra $\A_W$, as in Definition \ref{def:weyl-algebra}, on a separable Hilbert space $\H$, as in Definition \ref{def:hilbert}, is regular if $\pi(U(\alpha))$ and $\pi(V(\beta))$ are strongly continuous one-parameter groups of unitary operators in $\alpha$ and $\beta$, respectively as per Definition \ref{def:unitary-reps}.
 	\end{definition}
 	
-	\noindent Regularity is useful precisely because strongly continuous one-parameter unitary groups admit self-adjoint generators, by the following theorem.
+	\noindent Regularity is useful because strongly continuous one-parameter unitary groups admit self-adjoint generators, by the following theorem.
 	
 	\begin{theorem}[Stone's theorem]
 		\label{thm:stone}
-		Let $t \mapsto U(t)$ be a strongly continuous one-parameter group of unitary operators on a Hilbert space $\H$, as per Definition \ref{def:unitary-reps}. Then there exists a unique self-adjoint operator $A$ on $\H$, generally unbounded and densely defined as per Definition \ref{def:unbounded-operator}, such that
+		Let $t \mapsto U(t)$ be a strongly continuous one-parameter group of unitary operators on a Hilbert space $\H$, as per Definition \ref{def:unitary-reps}. Then there exists a unique selfadjoint operator $A$ on $\H$, generally unbounded and densely defined as per Definition \ref{def:unbounded-operator}, such that
 		\begin{equation}
 			U(t) = e^{itA}, \qquad \forall\, t \in \mathbb{R}.
 		\end{equation}
 		Conversely, every self-adjoint operator $A$ on $\H$ generates in this way a strongly continuous one-parameter unitary group.
 	\end{theorem}
 	
-	\noindent The operator $A$ is called the generator of $U$. The proof combines the spectral theorem for self-adjoint operators with the elementary properties of strongly continuous unitary groups, and is not reproduced here, the reader being referred to 
+	\noindent The operator $A$ is called the generator of $U$. The proof combines the spectral theorem for self-adjoint operators with the properties of strongly continuous unitary groups. The reader is referred to 
 	\cite[Theorem 9.33]{morettiSpectralTheoryQuantum} for a complete textbook treatment.
 	
 	\begin{remark}
 		\label{rem:regularity-consequences}
-		Although regularity is formally defined by requiring the strong continuity of the one-parameter unitary groups $\pi(U(\alpha))$ and $\pi(V(\beta))$, it constitutes a remarkably mild condition that is naturally satisfied in non pathological physical models. For families of unitary operators, strong continuity is equivalent to the weak continuity. This equivalence is a consequence of the identity
+		Although regularity is formally defined by requiring the strong continuity of the one-parameter unitary groups $\pi(U(\alpha))$ and $\pi(V(\beta))$, it constitutes a mild condition that is satisfied in non pathological physical models. For families of unitary operators, strong continuity is equivalent to the weak one. This is a consequence of the following identity.
 		\begin{equation}
-			\|(U(t)-\Id)\Psi\|^2 = 2\|\Psi\|^2 - 2\,\mathrm{Re}\,(\Psi,U(t)\Psi) \ ,
+			\|(U(t)-\Id)\Psi\|^2 = 2\|\Psi\|^2 - 2\,\mathrm{Re}\,(\Psi,U(t)\Psi).
 		\end{equation}
-		which demonstrates that the strong limit exists provided the real part of the transition amplitude $(\Psi,U(t)\Psi)$ approaches $\|\Psi\|^2$ as $t \to 0$, that is the weak continuity condition. Furthermore, on a separable Hilbert space, weak continuity is strictly equivalent to the simple weak measurability of the scalar mappings $t \mapsto (\Phi,U(t)\Psi)$. Therefore, verifying regularity in practice reduces to checking the Lebesgue measurability of these matrix elements $(\Psi,U(t)\Psi)$.
+		That demonstrates that the strong limit exists provided the real part of the transition amplitude $(\Psi,U(t)\Psi)$ approaches $\|\Psi\|^2$ as $t \to 0$. That is the weak continuity condition. Furthermore, on a separable Hilbert space, weak continuity is strictly equivalent to weak measurability of the scalar mappings $t \mapsto (\Phi,U(t)\Psi)$. Therefore, verifying regularity reduces to checking the Lebesgue measurability of these matrix elements $(\Psi,U(t)\Psi)$.
 	\end{remark}
 	
-	A central physical consequence of regularity concerns the treatment of unbounded observables. By Stone's theorem, strong continuity is the key hypothesis for the one-parameter unitary groups to admit unique self-adjoint generators on the Hilbert space $\H$. These generators, which are intrinsically unbounded, correspond precisely to the momentum and position operators, $p$ and $q$, within the representation $\pi$. Regularity also ensures that these operators share a common, dense, invariant domain. Consequently, this condition provides the framework necessary to reconstruct the foundational unbounded observables of the quantum particle, which were initially discarded in favor of the bounded Weyl operators.
+	A key physical consequence of regularity concerns the unbounded observables. By Stone's theorem, strong continuity is the hypothesis for one-parameter unitary groups to admit unique self-adjoint generators on the Hilbert space $\H$. These generators, which are unbounded, correspond to the momentum and position operators, $p$ and $q$, within the representation $\pi$. Regularity also shows that these operators share a common, dense, invariant domain. Therefore, this condition provides the framework necessary to reconstruct the foundational unbounded observables of the quantum particle.
+	
 	\vspace{0.4cm}
-	\noindent With regularity in place, the classification of representations of $\A_W$ becomes remarkably simple, as shown in the next theorem.
+	
+	\noindent Having established regularity, we can state the next theorem to classify representations.
 	
 	\begin{theorem}[von Neumann uniqueness theorem]
 		\label{thm:von-neumann-uniqueness}
@@ -533,12 +544,12 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	\noindent A complete proof of this statement can be found in \cite[Theorem 3.2.2]{strocchiIntroductionMathematicalStructure2005}.
 	
 	\begin{remark}[The Fock state and unbounded generators]
-		The constructive argument of the proof basically relies on identifying a distinguished state on $\A_W$, known as the \emph{Fock state} $\omega_F$. It is unambiguously defined by its expectation values on the generating elements of the algebra in the following way
+		The constructive argument of the proof identifies a distinguished state on $\A_W$, known as the \emph{Fock state} $\omega_F$. It is unambiguously defined by its expectation values on the generating elements of the algebra in the following way
 		\begin{equation}
 			\omega_F\left(e^{i\alpha\beta/2}\,U(\alpha)\,V(\beta)\right) = e^{-(|\alpha|^2+|\beta|^2)/4}.
 			\label{eq:fock-state}
 		\end{equation}
-		The GNS construction associated with $\omega_F$ yields the \emph{Fock representation}, and its corresponding cyclic vector $\Psi_0$ is called the \emph{Fock vector}. By exploiting the regularity of the representation, differentiating Equation~\eqref{eq:fock-state} at $\alpha=\beta=0$ shows that $\Psi_0$ satisfies $(q+ip)\Psi_0=0$ within the representation space. This is an unbounded equation obtained from a statement that only ever involved bounded operators, providing an explicit instance of the mechanism described earlier. The unbounded operators $q$ and $p$ act on $\Psi_0$ although they are not themselves elements of $\A_W$. Their action is recovered by differentiating the bounded representation along the directions that regularity keeps under control.
+		The GNS construction associated with $\omega_F$ yields the \emph{Fock representation}, and its corresponding cyclic vector $\Psi_0$ is called the \emph{Fock vector}. By exploiting the regularity of the representation, differentiating Equation~\eqref{eq:fock-state} at $\alpha=\beta=0$ shows that $\Psi_0$ satisfies $$(q+ip)\Psi_0=0.$$ This is an unbounded equation obtained from a statement that only ever involved bounded operators, providing an instance of the mechanism described earlier. The unbounded operators $q$ and $p$ act on $\Psi_0$ although they are not themselves elements of $\A_W$. Their action is recovered by differentiating the bounded representation along the directions that regularity keeps under control.
 	\end{remark}
 	
 	\subsection*{The Schr\"odinger representation}
@@ -565,79 +576,46 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	
 	\begin{remark}
 		\label{rem:schrodinger-generators}
-		The physical states of a quantum particle are, in this representation, the vectors of $L^2(\mathbb{R}^s)$, customarily called Schr\"odinger wave functions. By Stone's theorem, Theorem~\ref{thm:stone}, the strong continuity of $U(\alpha)$ and $V(\beta)$ established in Proposition~\ref{prop:schrodinger-regular-irreducible} guarantees the existence, as strong limits on a dense domain, of the selfadjoint generators
+		The physical states of a quantum particle are, in this representation, the vectors of $L^2(\mathbb{R}^s)$, usually called Schr\"odinger wave functions. By Stone's Theorem~\ref{thm:stone}, the strong continuity of $U(\alpha)$ and $V(\beta)$ established in Proposition~\ref{prop:schrodinger-regular-irreducible} guarantees the existence, as strong limits on a dense domain, of the selfadjoint generators
 		\begin{equation}
-			(q\psi)(x) = x\,\psi(x), \qquad \psi \in D_q = \{\psi \in L^2 : x\psi \in L^2\},
+			(q\psi)(x) = x\,\psi(x), \qquad \psi \in D_q = \{\psi \in L^2(\R) : x\psi \in L^2(\R)\},
 			\label{eq:q-schrodinger}
 		\end{equation}
 		\begin{equation}
-			(p\psi)(x) = -i\,\frac{d\psi}{dx}(x), \qquad \psi \in D_p = \{\psi \in L^2 : \psi' \in L^2\},
+			(p\psi)(x) = -i\,\frac{d\psi}{dx}(x), \qquad \psi \in D_p = \{\psi \in L^2(\R) : \psi' \in L^2(\R)\},
 			\label{eq:p-schrodinger}
 		\end{equation}
-		where the derivative in Equation \eqref{eq:p-schrodinger} is understood, that is, taken in the sense of distributions. The Schwartz space $\mathcal{S} := \mathcal{S}(\mathbb{R}^s)$ of smooth functions of fast decrease is a common dense domain of essential selfadjointness for $q$ and $p$, following \cite[Chapter VIII, Section 2]{reedMethodsModernMathematical2003}, and the Heisenberg relations Equation \eqref{eq:heisenberg-relations} hold on $\mathcal{S}$.
+		The derivative in Equation \eqref{eq:p-schrodinger} is understood in the weak sense. The Schwartz space $\mathcal{S} := \mathcal{S}(\mathbb{R}^s)$ of smooth functions of fast decrease is a common dense domain of essential selfadjointness for $q$ and $p$, following \cite[Chapter VIII, Section 2]{reedMethodsModernMathematical2003}. The Heisenberg relations Equation \eqref{eq:heisenberg-relations} hold on $\mathcal{S}$.
 		
-		Equations \eqref{eq:q-schrodinger} and \eqref{eq:p-schrodinger} are the concrete, unbounded realization of the operators that Proposition~\ref{prop:boundedness-obstruction} excluded from the Weyl $C^*$-algebra $\A_W$ from the outset. They are not the image under $\pi_S$ of any element of $\A_W$, since $\pi_S$ takes values in $\mathcal{B}(\H)$ by Theorem~\ref{thm:gelfand-naimark}, while $q$ and $p$ are unbounded. What Theorem~\ref{thm:stone} provides instead is a reconstruction of $q$ and $p$ as the infinitesimal generators, as per Definition \ref{def:infinitesimal-gen}, of the bounded one-parameter groups $\pi_S(U(\alpha))$ and $\pi_S(V(\beta))$.
+		Equations \eqref{eq:q-schrodinger} and \eqref{eq:p-schrodinger} are the concrete, unbounded realization of the operators that Proposition~\ref{prop:boundedness-obstruction} excluded from the Weyl $C^*$-algebra $\A_W$ from the outset. In fact, theorem~\ref{thm:stone} provides a reconstruction of $q$ and $p$ as the infinitesimal generators, as per Definition \ref{def:infinitesimal-gen}, of the bounded one-parameter groups $\pi_S(U(\alpha))$ and $\pi_S(V(\beta))$.
 	\end{remark}
-	
-	\noindent A last remark records how observables built from $q$ alone admit a genuinely probabilistic reading in the Schr\"odinger representation, a property that does not extend to observables built from $p$.
-	
-	\begin{remark}
-		An observable is represented, within $\pi_S$, by a bounded selfadjoint operator $A$ on $\H$, and its expectation value on a state $\psi$ is
-		\begin{equation}
-			\omega_\psi(A) = \int dx\ \overline{\psi}(x)\,(A\psi)(x).
-		\end{equation}
-		When $A$ is a bounded function $F(q)$ of the position alone, it acts as the multiplication operator $F(x)$, so that
-		\begin{equation}
-			\omega_\psi(F(q)) = \int dx\ \overline{\psi}(x)\,F(x)\,\psi(x),
-		\end{equation}
-		and $F(q)$ can be regarded as a random variable with probability distribution $|\psi(x)|^2\,dx$. This interpretation does not extend to functions of the momentum, kinetic energy among them, since
-		\begin{equation}
-			\omega_\psi(p) = \int dx\ \overline{\psi}(x)\,\left(-i\,\frac{d\psi}{dx}(x)\right),
-		\end{equation}
-		an expression of a different form from that of $\omega_\psi(F(q))$ above, one that cannot be cast as an integral against the single distribution $|\psi(x)|^2\,dx$.
-	\end{remark}
-	
-	The argument of this section can be read as a single answer to a single question, namely how an algebra generated by two operators that admit no finite norm, as established in Proposition~\ref{prop:boundedness-obstruction}, can still be treated within the $C^*$-algebraic framework that the Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand-naimark}, requires. The answer proceeds in three stages. First, $q$ and $p$ are replaced by the bounded Weyl operators of Definition~\ref{def:weyl-operators}, which do generate a $C^*$-algebra, the Weyl $C^*$-algebra $\A_W$ of Definition~\ref{def:weyl-c-star-algebra}. Second, Theorem~\ref{thm:gelfand-naimark} is invoked on $\A_W$ rather than on $q$ and $p$ directly, producing a representation $\pi \colon \A_W \to \mathcal{B}(\H)$ by bounded operators, unique up to unitary equivalence within the regular class by Theorem~\ref{thm:von-neumann-uniqueness}. Third, Stone's theorem, Theorem~\ref{thm:stone}, is applied to the strongly continuous unitary groups $\pi(U(\alpha))$ and $\pi(V(\beta))$ contained in the representation, recovering $q$ and $p$ as their unbounded selfadjoint generators on a common dense domain, made explicit in Equation \eqref{eq:q-schrodinger} and Equation \eqref{eq:p-schrodinger}. Unbounded operators never appear as elements of the represented algebra, and they re-enter the discussion only at the analytic level, as derivatives of a representation of the bounded algebra along the directions that regularity keeps under control.
+
 	
 	\section{The Dirac-von Neumann Axioms Revisited}
 	\label{sec:concl-dvn-axioms}
 	
-	The reconstruction carried out in Section~\ref{sec:intro-alg-quant} and Section~\ref{sec:states-representations-gns} started from purely operational data, namely preparations and tests, and arrived, through the Jordan-Banach algebra of Definition~\ref{def:jb-algebra} and its embedding of Definition~\ref{def:jb-embedding}, at the pair of a unital $C^*$-algebra $\A$ and a separating family of states $S$ adopted as the definition of a quantum system in Definition~\ref{def:physical-system}. Historically, however, quantum mechanics reached this level of rigor along the opposite route. Heisenberg's matrix mechanics of 1925 was cast by Dirac into a first systematic formulation set directly at the level of a Hilbert space, and von Neumann later refined it into the package of postulates that most textbooks still adopt today, stating from the outset that states are vectors or density matrices and observables are self-adjoint operators. Before turning, in Section~\ref{sec:concl-limits}, to the limitations of the operational approach followed in this chapter, it is worth recording this historical formulation and matching each of its postulates against the results already established above. The comparison shows that every Dirac-von Neumann axiom finds a precise counterpart among the theorems proved earlier in the chapter, with one important difference in status. What Dirac and von Neumann had to introduce as five independent postulates, the operational reconstruction obtains instead as consequences of the single set of hypotheses on preparations and tests laid down at the beginning of the chapter, deriving the Hilbert space, the operator representation, and the specific unitary realization of the canonical commutation relations rather than assuming them.
+	The reconstruction carried out in Section~\ref{sec:intro-alg-quant} and Section~\ref{sec:states-representations-gns} started from purely operational data, namely preparations and tests. Consequently, we show the embedding of Definition~\ref{def:jb-embedding} into a unital $C^*$-algebra $\A$. Historically, however, quantum mechanics reached this level of rigor along the opposite route. Heisenberg's matrix mechanics of 1925 was cast by Paul Dirac into a first systematic formulation set directly at the level of a Hilbert space. Von Neumann later refined it into the set of postulates that most textbooks still adopt today. Therefore, it is worth recording this historical formulation and matching each of its postulates against the results already established above. The comparison shows that every Dirac-von Neumann axiom finds a counterpart among the theorems proved earlier in the chapter. Following \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}, we state the axioms of the Hilbert space formulation of quantum mechanics.
 	
 	\begin{definition}[Dirac-von Neumann axioms]
 		\label{def:concl-dvn-axioms}
-		Following \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}, the Dirac-von Neumann formulation of quantum mechanics rests on the following postulates.
+		The Dirac-von Neumann formulation of quantum mechanics rests on the following postulates:
 		\begin{enumerate}
-			\item[I.] \emph{States.} The states of a physical system are described by density matrices $\rho=\sum_i\lambda_i P_i$, with $\lambda_i\ge0$, $\sum_i\lambda_i=1$, and $P_i$ one-dimensional projections, in a separable complex Hilbert space $\H$.
-			\item[II.] \emph{Observables.} The observables of a physical system are described by the set of bounded self-adjoint operators in $\H$.
+			\item[I.] \emph{States.} The states of a quantum system are described by density matrices $\rho=\sum_i\lambda_i P_i$, as in Definition \ref{def:density-matrix-folium}, with $\lambda_i\ge0$, $\sum_i\lambda_i=1$, each is a $P_i$ one-dimensional projections, in a separable complex Hilbert space $\H$, as in Definition \ref{def:hilbert}.
+			\item[II.] \emph{Observables.} The observables of a quantum system are described by the set of bounded self-adjoint operators in $\H$, as in Definition \ref{def:selfadjoint}.
 			\item[III.] \emph{Expectations.} If a state $\omega$ is described by the vector $\Psi_\omega\in\H$, the expectation value of an observable $A$ is the Hilbert space matrix element $\omega(A)=(\Psi_\omega,A\Psi_\omega)$, or more generally $\omega(A)=\Tr(\rho_\omega A)$ for a state described by the density matrix $\rho_\omega$.
-			\item[IV.] \emph{Canonical quantization.} For a system with finitely many degrees of freedom, the canonical coordinates and momenta satisfy $[q_i,q_j]=0=[p_i,p_j]$ and $[q_i,p_j]=i\hbar\delta_{ij}$.
+			\item[IV.] \emph{Canonical quantization.} For a system with finitely many degrees of freedom, the canonical coordinates and momenta satisfy $[q_i,q_j]=0=[p_i,p_j]$ and $[q_i,p_j]=i\hbar\delta_{ij}$, as in Equation \eqref{eq:heisenberg-relations}.
 			\item[V.] \emph{Schr\"odinger representation.} The commutation relations of Axiom IV are represented on $\H=L^2(\R^s,dx)$ by $(q_i\psi)(x)=x_i\psi(x)$ and $(p_j\psi)(x)=-i\hbar\,\partial\psi/\partial x_j(x)$.
 		\end{enumerate}
 	\end{definition}
 	
-	\noindent Axiom II is stated above in its original form, exactly as first proposed. In practice, an amendment to it is required almost immediately.
+	\noindent The five constructions that follow take up each axiom in the order in which Definition~\ref{def:concl-dvn-axioms} lists them. We compare it against what already developed in this chapter. 
 	
-	\begin{remark}[Superselection and the amendment of Axiom II]
-		\label{rem:concl-axiom-ii-prime}
-		Dirac's original formulation required neither boundedness of the observables nor a restriction to a proper subset of the self-adjoint operators, see \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}. The restriction to a subset becomes necessary once one admits self-adjoint operators commuting with every observable, called superselection operators, whose presence gives the algebra of observables a nontrivial centre and prevents every ray of $\H$ from describing a physically realizable state. Section~\ref{sec:concl-limits} returns to this phenomenon, since it becomes considerably more severe once the number of degrees of freedom of the system is allowed to grow without bound.
-	\end{remark}
+	\paragraph{Recovering Axiom I.}\label{rem:concl-axiom-i} The state space $S$ of Definition~\ref{def:state-space}, together with the identification of pure and mixed states of Definition~\ref{def:pure-mixed-state}, plays the role of Axiom I. A pure state is represented, through the GNS construction of Theorem~\ref{thm:gns}, by a unit vector in the Hilbert space $\H_\omega$, since Proposition~\ref{prop:irreducible-iff-pure} identifies purity of $\omega$ with irreducibility of the associated representation $\pi_\omega$. A mixed state is instead represented by a density matrix on $\H_\omega$ as per Definition~\ref{def:density-matrix-folium}, and Proposition~\ref{prop:density-matrix-state} shows that every such density matrix defines a state. Separability of $\H_\omega$, required by Axiom I, is not automatic in this construction, and the next subsection discusses the circumstances under which it can fail. However, in most of physical systems, this hypothesis can be verified.
 	
-	The five remarks that follow take up each axiom in turn, in the order in which Definition~\ref{def:concl-dvn-axioms} lists them, and compare it against the material already developed in this chapter. The aim is to clarify exactly where the historical and the operational formulation coincide, and where the latter adds genuine mathematical content of its own.
+	\paragraph{Recovering Axiom II}\label{rem:concl-axiom-ii}
+		The embedding of Definition~\ref{def:jb-embedding} identifies the observable set $\mathcal{O}$ of Definition~\ref{def:obs-set} with the selfadjoint sector $\A_{sa}$ of the ambient $C^*$-algebra, matching Axiom II directly. Boundedness of the observables, absent from Dirac's original formulation according to \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}, is not an additional postulate in the present reconstruction. It descends from Definition~\ref{def:normed-obs-set} that assigns a finite norm to every observable. In fact, in the previous subsection, we showed that even unbounded operators like position and momentum can be represented as bounded operators using Weyl's algebra of Definition \ref{def:weyl-algebra}.
 	
-	\begin{remark}[Recovering Axiom I]
-		\label{rem:concl-axiom-i}
-		The state space $S$ of Definition~\ref{def:state-space}, together with the identification of pure and mixed states of Definition~\ref{def:pure-mixed-state}, plays the role of Axiom I. A pure state is represented, through the GNS construction of Theorem~\ref{thm:gns}, by a unit vector in the Hilbert space $\H_\omega$, since Proposition~\ref{prop:irreducible-iff-pure} identifies purity of $\omega$ with irreducibility of the associated representation $\pi_\omega$. A mixed state is instead represented by a density matrix on $\H_\omega$ as per Definition~\ref{def:density-matrix-folium}, and Proposition~\ref{prop:density-matrix-state} shows that every such density matrix defines a state. Separability of $\H_\omega$, required by Axiom I, is not automatic in this construction, and Section~\ref{sec:concl-limits} discusses the circumstances under which it can fail.
-	\end{remark}
-	
-	\noindent Once states have been matched against Axiom I, the observables of Axiom II admit an equally direct identification. The embedding of Definition~\ref{def:jb-embedding}, introduced earlier in the chapter to reach a genuine associative product, supplies exactly the self-adjoint operators that Axiom II requires.
-	
-	\begin{remark}[Recovering Axiom II]
-		\label{rem:concl-axiom-ii}
-		The embedding of Definition~\ref{def:jb-embedding} identifies the observable set $\mathcal{O}$ of Definition~\ref{def:obs-set} with the self-adjoint sector $\A_{sa}$ of the ambient $C^*$-algebra, matching Axiom II directly. Boundedness of the observables, absent from Dirac's original formulation according to \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}, is not an additional postulate in the present reconstruction, since Definition~\ref{def:normed-obs-set} assigns a finite norm to every observable from the very fact that a measuring apparatus carries an inevitable scale bound. The restriction discussed in Remark~\ref{rem:concl-axiom-ii-prime} corresponds here to the possible presence of a nontrivial centre in $\A$, left implicit in Definition~\ref{def:physical-system} but fully consistent with it.
-	\end{remark}
-	
-	\noindent The passage from an abstract state on a $C^*$-algebra to a genuine Hilbert space matrix element, postulated outright in Axiom III, is instead a theorem of the operational construction. The Gelfand-Naimark-Segal machinery of Theorem~\ref{thm:gns} supplies the Hilbert space and the matrix element simultaneously, as the following corollary records.
+	\noindent Hopping from an abstract state on a $C^*$-algebra to a Hilbert space matrix element, postulated outright in Axiom III, is instead a theorem of the operational construction. 
 	
 	\begin{corollary}[Expectation values from the GNS construction]
 		\label{cor:concl-axiom-iii}
@@ -652,241 +630,244 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		Equation~\eqref{eq:concl-axiom-iii-pure} is part ii) of Theorem~\ref{thm:gns}. The general statement is Equation~\eqref{eq:density-matrix-state} of Proposition~\ref{prop:density-matrix-state}, applied to the representation $\pi_\omega$.
 	\end{proof}
 	
-	\noindent The last two axioms stand apart from the first three, a distinction Strocchi draws explicitly, since I to III describe general mathematical structures common to every quantum system while IV and V refer to one specific realization, restricted from the outset to finitely many canonical coordinates. The remaining two remarks take up this specific realization in turn, beginning with the commutation relations imposed by Axiom IV.
+	\noindent The last two axioms stand apart from the first three. The axioms I to III describe general mathematical structures common to every quantum system while IV and V refer to one specific realization. The remaining two remarks take up this starting from the commutation relations imposed by Axiom IV.
 	
-	\begin{remark}[Recovering Axiom IV]
-		\label{rem:concl-axiom-iv}
-		The commutation relations of Axiom IV are exactly Equation~\eqref{eq:heisenberg-relations} of Definition~\ref{def:heisenberg-lie-algebra}. They are not postulated as a universal feature of every quantum system, but rather define a single instance among the class of Definition~\ref{def:physical-system}, namely the quantum particle whose algebra of observables is the Weyl $C^*$-algebra $\A_W$ of Definition~\ref{def:weyl-c-star-algebra}. Every other choice of Jordan-Banach algebra as per Definition~\ref{def:jb-algebra} defines an equally legitimate quantum system, to which Axiom IV, stated as a universal law, simply does not apply.
-	\end{remark}
+	\paragraph{Recovering Axiom IV.}\label{rem:concl-axiom-iv}
+		The commutation relations of Axiom IV are Equation~\eqref{eq:heisenberg-relations} of Definition~\ref{def:heisenberg-lie-algebra}. They identify a single instance among the class of Definition~\ref{def:physical-system}. That is the quantum particle whose algebra of observables is the Weyl $C^*$-algebra $\A_W$ of Definition~\ref{def:weyl-c-star-algebra}.
 	
-	\noindent Once the commutation relations of Axiom IV single out the quantum particle among all possible quantum systems, Axiom V goes one step further and commits to a specific Hilbert space representation of those relations. Whether this specific choice is forced or merely conventional is exactly the question the von Neumann uniqueness theorem answers.
+	\paragraph{Recovering Axiom V.}\label{rem:concl-axiom-v}
+		The Schr\"odinger representation of Axiom V coincides with Definition~\ref{def:schrodinger-representation}. Axiom V in Definition \ref{def:concl-dvn-axioms}, however, postulates the use of this representation. However, in the algebraic reconstruction, the von Neumann uniqueness Theorem~\ref{thm:von-neumann-uniqueness}, shows that it is, up to unitary equivalence, the only regular irreducible representation of $\A_W$. Note that the restriction to a finite number $s$ of dimensions, introduced ahead of Definition~\ref{def:weyl-operators}, is an hypothesis of the uniqueness theorem itself. In the next subsection, it is discussed what becomes of Axiom V once this hypothesis is dropped.
 	
-	\begin{remark}[Recovering Axiom V]
-		\label{rem:concl-axiom-v}
-		The Schr\"odinger representation of Axiom V coincides with Definition~\ref{def:schrodinger-representation}. Strocchi's Axiom V, however, singles out this representation by fiat, while the von Neumann uniqueness theorem, Theorem~\ref{thm:von-neumann-uniqueness}, shows that it is, up to unitary equivalence, the only regular irreducible representation of $\A_W$ that exists. The restriction to a finite number $s$ of dimensions, introduced ahead of Definition~\ref{def:weyl-operators}, is not a simplifying assumption but a structural hypothesis of the uniqueness theorem itself, and Section~\ref{sec:concl-limits} discusses what becomes of Axiom V once this hypothesis is dropped.
-	\end{remark}
+	\subsection*{Limits of the GNS Construction and the Infinite-Dimensional Case} \label{sec:concl-limits}
 	
-	\noindent Taken together, these five remarks show that the Dirac-von Neumann formulation of quantum mechanics can be recovered in full from the operational hypotheses of Section~\ref{sec:intro-alg-quant}. Axioms I to III, general in scope, are theorems about every quantum system as per Definition~\ref{def:physical-system}, while Axioms IV and V describe the additional, non generic, choice of algebra corresponding to a system with finitely many canonical degrees of freedom.
+	The construction in Section~\ref{rem:concl-axiom-v} isolated the hypothesis on which the whole uniqueness statement of Theorem~\ref{thm:von-neumann-uniqueness} rests. This restriction to a finite number of degrees of freedom is the boundary between the general postulates I to III and the special postulates IV and V. Note that theories like quantum field theory, quantum statistical mechanics, and quantum many-body systems all require infinitely many degrees of freedom. In fact, the regime in which the Schr\"odinger representation of Definition~\ref{def:schrodinger-representation} ceases to be available, see \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}.
 	
-	\section{Limits of the GNS Construction and the Infinite-Dimensional Case}
-	\label{sec:concl-limits}
-	
-	Remark~\ref{rem:concl-axiom-v} already isolated the hypothesis on which the whole uniqueness statement of Theorem~\ref{thm:von-neumann-uniqueness} rests, namely that the number $s$ of canonical degrees of freedom is finite. Strocchi himself flags this restriction as the boundary between the general postulates I to III and the special postulates IV and V, and notes that quantum field theory, quantum statistical mechanics, and quantum many body systems all require infinitely many degrees of freedom, precisely the regime in which the Schr\"odinger representation of Definition~\ref{def:schrodinger-representation} ceases to be available, see \cite[Sect.~3.6]{strocchiIntroductionMathematicalStructure2005}. The present section records, briefly and without proof, the main way in which the algebraic framework built in this chapter is affected by this limit, together with a related mismatch already announced in Remark~\ref{rem:concl-axiom-i}.
-	
-	\begin{remark}[Proliferation of inequivalent representations]
+	\begin{remark}[Inequivalent representations]
 		\label{rem:concl-inequivalent-reps}
-		The GNS construction of Theorem~\ref{thm:gns} makes no reference to the number of degrees of freedom of $\A$, and remains valid without modification for the algebra of a field theory or of an infinite spin chain. What fails once $\A$ describes infinitely many degrees of freedom is instead the uniqueness statement of Theorem~\ref{thm:von-neumann-uniqueness}. In the infinite-dimensional analogue of the Weyl algebra of Definition~\ref{def:weyl-algebra}, regular irreducible representations as per Definition~\ref{def:regular-representation} are no longer unitarily equivalent to one another, and inequivalent choices, for instance different equilibrium temperatures or different values of a mass parameter, correspond to physically distinct situations rather than to a single Hilbert space picture. The centre of the observable algebra discussed for Axiom II in Remark~\ref{rem:concl-axiom-ii-prime} reappears here on a considerably larger scale, since selecting a folium as per Definition~\ref{def:density-matrix-folium} out of the many inequivalent ones becomes itself part of the physical input, rather than following automatically from $\A$ as it does through Theorem~\ref{thm:gelfand-naimark}.
+		The GNS construction of Theorem~\ref{thm:gns} remains valid without modification for the algebra of a field theory or of an infinite spin chain. In the infinite-dimensional analogue of the Weyl algebra of Definition~\ref{def:weyl-algebra}, regular irreducible representations as per Definition~\ref{def:regular-representation} are no longer unitarily equivalent to one another. In particular, different equilibrium temperatures or different values of a mass parameter, correspond to physically distinct situations rather than to a single Hilbert space picture. 
 	\end{remark}
 	
-	\noindent A second, more technical mismatch concerns the separability required by Axiom I itself. Remark~\ref{rem:concl-axiom-i} already flagged this point in passing, and it is worth stating precisely how the algebraic construction can fail to deliver it.
+	\noindent A second, more technical mismatch concerns the separability required by Axiom I itself. Remark~\ref{rem:concl-axiom-i} already presented this point. It is worth stating how the algebraic construction can fail to prove it.
 	
 	\begin{remark}[Separability]
 		\label{rem:concl-separability}
-		Axiom I of Definition~\ref{def:concl-dvn-axioms} requires $\H$ to be separable. When $\A$ is itself separable in the norm topology, the GNS space $\H_\omega$ inherits separability from the quotient $\A/J$ used in the proof of Theorem~\ref{thm:gns}, so a single physically relevant state always leads to a Hilbert space compatible with Axiom I. Theorem~\ref{thm:gelfand-naimark}, however, assembles the faithful representation as the direct sum $\H=\bigoplus_{\omega\in\mathcal F}\H_\omega$ over an entire separating family $\mathcal F$ of states, and once inequivalent representations proliferate as in Remark~\ref{rem:concl-inequivalent-reps}, no countable subfamily of $\mathcal F$ typically suffices to separate $\A$. The resulting direct sum $\H$ is then non separable, precisely the situation Axiom I excludes by hypothesis. Domain problems of the kind treated for a single unbounded operator in Definition~\ref{def:unbounded-op} and Definition~\ref{def:ess-selfadjoint} resurface as well, now for infinite families of generators required to share a common invariant dense domain, a condition that regularity as per Definition~\ref{def:regular-representation} secures only in the finite-dimensional setting of Theorem~\ref{thm:von-neumann-uniqueness}.
+		 When $\A$ is itself separable in the norm topology, the GNS space $\H_\omega$ inherits separability from the quotient $\A/J$ used in the proof of Theorem~\ref{thm:gns}. Hence, a single physically relevant state always leads to a Hilbert space compatible with Axiom I. Theorem~\ref{thm:gelfand-naimark}, however, assembles the faithful representation as the direct sum $\H=\bigoplus_{\omega\in\mathcal F}\H_\omega$ over an entire separating family $\mathcal F$ of states. When inequivalent representations proliferate as in Remark~\ref{rem:concl-inequivalent-reps}, no countable subfamily of $\mathcal F$ typically suffices to separate $\A$. The resulting direct sum $\H$ is then non separable.
 	\end{remark}
 	
-	None of this affects the classical construction of Chapter~\ref{ch:classical-mechanics} in the same way, since a commutative algebra of continuous functions carries no analogue of an inequivalent representation once its Gelfand spectrum is fixed. Section~\ref{sec:concl-comparison} takes up this asymmetry as part of a broader comparison between the classical and the quantum reconstruction.
+	None of this affects the classical construction of Chapter~\ref{ch:classical-mechanics} in the same way, since a commutative algebra of continuous functions carries no analogue of an inequivalent representation once its Gelfand spectrum is fixed.
 	
-	\section{Classical and Quantum Algebraic Reconstructions: a Comparison}
+	\section{A Comparison between Classical and Quantum Algebraic Reconstructions}
 	\label{sec:concl-comparison}
 	
-	Chapter~\ref{ch:classical-mechanics} reconstructed Hamiltonian mechanics from a commutative unital $C^*$-algebra through the Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand}, while the present chapter carried out the analogous reconstruction without assuming commutativity, culminating in the noncommutative Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand-naimark}. The two constructions share the same starting vocabulary, algebra, states, norm, and representation, yet the order in which these ingredients become available, and the amount of external structure that has to be supplied by hand, differ sharply between the two cases. This section collects a systematic comparison of the two constructions, first at the level of the foundational objects, algebra, states, product, and bracket, and then at the level of the representation theorems that recover a geometric or Hilbert space picture from the bare algebraic data. Particular attention is paid to the bracket used to encode dynamics, since Chapter~\ref{ch:classical-mechanics} had to postulate the Poisson bracket as a structure external to the $C^*$-algebra, while the present chapter obtained a Lie bracket directly from noncommutativity of the associative product.
+	The two classical and quantum constructions share the same starting vocabulary, algebra, states, norm, and representation, yet the order in which these structures arise is different between the two cases. We compare the two constructions, first at the level of the foundational objects and then at the level of the representation theorems that recover a geometric or Hilbert space picture. Particular attention is paid to the bracket. In fact, Chapter~\ref{ch:classical-mechanics} had to postulate the Poisson bracket as a structure external to the $C^*$-algebra, while the present chapter obtained a Lie bracket directly from noncommutativity of the associative product.
 	
 	\subsection*{Foundational objects}
 	
-	The most immediate difference between the two constructions concerns the order in which the algebraic operations become available. Chapter~\ref{ch:classical-mechanics} starts from a fully formed associative commutative product, while the present chapter has to build one from more primitive operations, as the following remark makes precise.
+	The first difference between the two constructions concerns the order in which the algebraic operations arise. Chapter~\ref{ch:classical-mechanics} starts from a fully formed associative commutative product. Differently, the present chapter has to build one from more primitive operations, as the following remark specifies.
 	
 	\begin{remark}[The associative product, given or constructed]
 		\label{rem:concl-product-comparison}
-		The classical continuous algebra of Definition~\ref{def:gel-alg} is, from the outset, an associative commutative algebra of functions under pointwise multiplication, and the reconstruction of Section~\ref{sec:1-example} can rely on this product without further justification. The observable set $\mathcal{O}$ of Definition~\ref{def:obs-set}, in contrast, starts with only rescaling and squaring, and an associative product becomes available only at the end of a multistep construction: sums are introduced first, through the postulated linear extension of $\mathcal{O}$, then the Jordan product $\circ$ of Definition~\ref{def:jordan-product}, whose distributivity requires the extra hypothesis that $\circ$ be homogeneous, and whose associativity is only ever weak, in the sense recorded ahead of Definition~\ref{def:jb-algebra}. Full associativity is recovered only through the embedding of Definition~\ref{def:jb-embedding} into an ambient $C^*$-algebra. What is given for free on the classical side has to be built, one operation at a time, on the quantum side.
+		The classical continuous algebra of Definition~\ref{def:gel-alg} is an associative commutative algebra of functions under pointwise multiplication. The observable set $\mathcal{O}$ of Definition~\ref{def:obs-set}, in contrast, starts with only rescaling and squaring, and an associative product becomes available only at the end of the whole setting.
 	\end{remark}
 	
-	\noindent The norm undergoes a parallel inversion between the two constructions. What is postulated as part of the function algebra on one side becomes, on the other, a consequence of the positivity already required of the states.
+	\noindent The norm, instead, is postulated as part of the function algebra on one side becomes. On the other, it is a consequence of the positivity already required of the states.
 	
 	\begin{remark}[The norm, given or derived]
 		\label{rem:concl-norm-comparison}
-		The supremum norm of Equation~\eqref{eq:sup-norm} is inherited directly from the function algebra $C^0(X;\C)$ underlying Definition~\ref{def:gel-alg}. The norm of Definition~\ref{def:normed-obs-set}, by contrast, is derived from the operational bound on measurement outcomes across all states, and its compatibility with the algebraic square, $\|A\|^2=\|A^2\|$ of Proposition~\ref{prop:comp-squares}, is proved rather than assumed. This identity is precisely the $C^*$-identity of Definition~\ref{def:c-star-algebra}, so the defining property of a $C^*$-algebra, postulated for the classical case, is a consequence of positivity of the states for the quantum case.
+		The supremum norm of Equation~\eqref{eq:sup-norm} is inherited directly from the function algebra $C^0(X;\C)$ underlying Definition~\ref{def:gel-alg}. The norm of Definition~\ref{def:normed-obs-set}, by contrast, is derived from the operational bound on measurement outcomes across all states. Furthermore, the defining property of a $C^*$-algebra, postulated for the classical case, is a consequence of positivity of the states for the quantum case as shown in Proposition \ref{prop:squared-norm-norm-squared}.
 	\end{remark}
 	
-	\noindent States display the same inversion once more, this time concerning how the separating property is established. Both constructions require their states to separate the algebra, yet the topological and the purely algebraic route to this property could hardly be more different.
+	\noindent Both constructions require their states to separate the algebra, yet the topological and the purely algebraic route to this property follows a completely different path.
 	
 	\begin{remark}[States and the separating property]
 		\label{rem:concl-states-comparison}
-		Definition~\ref{def:state} characterizes a state, on either side, by positivity and normalization on an already given algebra. Separation of the algebra by its states, however, is established very differently. In the classical setting, the classical observable algebra $\A_{sa}$ separates the points of the Gelfand spectrum $X$ as a consequence of Urysohn's lemma, once $X$ is known to be a compact Hausdorff space, as recorded in the paragraph on the duality between states and observables. In the quantum setting there is no topological space available yet at the point where separation is needed, so Definition~\ref{def:state-space} postulates the separating property directly as part of the definition of the state space $S$, and it is only afterward, through the family $\mathcal F$ of Theorem~\ref{thm:gelfand-naimark}, that a faithful representation, and hence an indirect geometric picture, is obtained.
+		Definition~\ref{def:state} characterizes a state, on either side, by positivity and normalization on an already given algebra. In the classical setting, the classical observable algebra $\A_{sa}$ separates the points of the Gelfand spectrum $X$ as a consequence of Urysohn's lemma, once $X$ is known to be a compact Hausdorff space. In the quantum picture, there is no topological space available yet at the point where separation is needed. Therefore, Definition~\ref{def:state-space} postulates the separating property as part of the definition of the state space $S$. It is only afterward, through the family $\mathcal F$ of Theorem~\ref{thm:gelfand-naimark}, that a faithful representation, and hence an indirect geometric picture, is obtained.
 	\end{remark}
 	
-	\noindent None of the differences recorded so far is more consequential than the one concerning the bracket used to encode the dynamics of the two theories. The following elementary proposition isolates, at the purely algebraic level, the reason why a bracket cannot be recovered from a commutative algebra alone.
+	\noindent The most concerning difference between the construction is given by the appearance of Lie bracket and commutator. The following proposition isolates the reason why a bracket cannot be recovered from a commutative algebra alone.
 	
-	\begin{proposition}[The bracket vanishes on an abelian algebra]
+	\begin{proposition}[The bracket vanishes on an commutative algebra]
 		\label{prop:concl-bracket-vanishes}
-		Let $\A$ be an abelian $C^*$-algebra embedding a Jordan-Banach algebra $\mathcal{O}$ as per Definition~\ref{def:jb-embedding}. Then the bracket $\{A,B\}=\frac{1}{i\hbar}[A,B]$ defined for $A,B\in\mathcal{O}$ vanishes identically.
+		Let $\A$ be an commutative $C^*$-algebra embedding a Jordan-Banach algebra $\mathcal{O}$ as per Definition~\ref{def:jb-embedding}. Then the bracket $\{A,B\}=\frac{1}{i\hbar}[A,B]$ defined for $A,B\in\mathcal{O}$ vanishes identically.
 	\end{proposition}
 	\begin{proof}
-		Since $\A$ is abelian, $[A,B]=AB-BA=0$ for every $A,B\in\A$, and in particular for every $A,B\in\mathcal{O}\subset\A_{sa}$. Hence $\{A,B\}=0$.
+		Since $\A$ is commutative, $[A,B]=AB-BA=0$ for every $A,B\in\A$, and in particular for every $A,B\in\mathcal{O}\subset\A_{sa}$. Hence $\{A,B\}=0$.
 	\end{proof}
-	
-	\noindent Proposition~\ref{prop:concl-bracket-vanishes} is elementary, yet its consequence for the two chapters is significant enough to deserve a remark of its own. It shows precisely why the two reconstructions cannot follow the same path once a bracket is required.
 	
 	\begin{remark}[The Poisson bracket, imposed or free]
 		\label{rem:concl-bracket-comparison}
-		Proposition~\ref{prop:concl-bracket-vanishes} explains, at the algebraic level, why Chapter~\ref{ch:classical-mechanics} cannot obtain a Poisson bracket from the bare classical continuous algebra of Definition~\ref{def:gel-alg} alone. Since $C^0(X;\C)$ is commutative, the natural candidate for a bracket built from the commutator is identically zero, and a Poisson bracket has to be supplied as a genuinely new piece of data, namely the smooth dense Poisson subalgebra $\A^\infty$ of Definition~\ref{def:smooth-subalgebra}, whose bracket is moreover discontinuous with respect to the uniform norm and therefore confined to a proper dense subalgebra, as Remark~\ref{rmk:obstruction-poi-strc} makes explicit. This is precisely the sense in which the choice of $\A^\infty$ constitutes the central external input of the classical reconstruction, exactly as stated after Definition~\ref{def:smooth-subalgebra}.
+		Since $C^0(X;\C)$ is commutative, the natural candidate for a bracket built from the commutator is identically zero. Poisson bracket has to be supplied as a new piece of data, namely the smooth dense Poisson subalgebra $\A^\infty$ of Definition~\ref{def:smooth-subalgebra}. Hence, the choice of $\A^\infty$ constitutes the external input of the classical reconstruction, as stated after Definition~\ref{def:smooth-subalgebra}.
 		
-		The quantum case follows the opposite pattern. As soon as $\mathcal{O}$ is realized inside a noncommutative associative algebra through Definition~\ref{def:jb-embedding}, the commutator $[A,B]$ is generally nonzero, and the rescaled bracket $\{A,B\}$ is defined on the whole of $\mathcal{O}$, with no restriction to a dense subalgebra and no discontinuity, since it is built from the norm-continuous associative product of a $C^*$-algebra. The identities of Definition~\ref{def:lie-jordan} then hold as theorems, proved in Theorem~\ref{thm:lie-jordan-to-cstar} rather than postulated, exactly the reversal already observed for the norm in Remark~\ref{rem:concl-norm-comparison}. Noncommutativity, which forces the elaborate detour through the Jordan product recorded in Remark~\ref{rem:concl-product-comparison}, is at the same time what supplies the bracket free of charge.
-	\end{remark}
-	
-	\noindent A last asymmetry, of a more expository nature rather than a substantive one, concerns dynamics. Both chapters could in principle state the definition of time evolution in the same terms, yet only one of them does so explicitly.
-	
-	\begin{remark}[Dynamics]
-		\label{rem:concl-dynamics-comparison}
-		Chapter~\ref{ch:classical-mechanics} formalizes time evolution as a strongly continuous one-parameter group of $^*$-automorphisms of $\A$, Definition~\ref{def:time-evolution}, generated on the smooth subalgebra $\A^\infty$ by the Hamiltonian vector field associated with $H\in\A^\infty_{sa}$. The present chapter has not stated the corresponding definition for the noncommutative case, even though nothing in Definition~\ref{def:time-evolution} refers to commutativity of $\A$, and the same notion of a one-parameter group of $^*$-automorphisms, generated in the regular case by Stone's theorem, Theorem~\ref{thm:stone}, applies to $\A_W$ of Definition~\ref{def:weyl-c-star-algebra} without modification.
+		The quantum case follows the opposite path. As soon as $\mathcal{O}$ is realized inside a noncommutative associative algebra through Definition~\ref{def:jb-embedding}, the commutator $[A,B]$ is generally non-zero. This construction constitutes the way to repair to the innatural choice made in the classical case and to understand that all the structures derived from the Lie algebra follow from noncommutativity.
 	\end{remark}
 	
 	\subsection*{Representation theorems}
 	
-	Once the algebra, the norm, the states, and the bracket have been compared, the reconstruction of a concrete geometric object out of purely algebraic data is the natural next point of comparison. It is here that the relation between the two chapters is closest, since Remark~\ref{rem:abelian-recovery} already identifies the classical construction as a special case of the quantum one rather than a merely analogous procedure. The proposition below makes this relation precise.
+	 Remark~\ref{rem:commutative-recovery} already identifies the classical construction as a special case of the quantum one rather than an analogous procedure. The proposition below specifies this relation.
 	
-	\begin{proposition}[The classical Gelfand-Naimark theorem as an abelian corollary]
+	\begin{proposition}[The classical Gelfand-Naimark theorem as an commutative corollary]
 		\label{prop:concl-gelfand-corollary}
-		Let $\A$ be an abelian unital $C^*$-algebra as per Definition~\ref{def:unital-c-star-algebra}, and let $\mathcal F$ be a separating family of pure states on $\A$ as per Definition~\ref{def:pure-state} and Proposition~\ref{prop:equivalence_states_characters}. The faithful representation $\pi=\bigoplus_{\omega\in\mathcal F}\pi_\omega$ of Theorem~\ref{thm:gelfand-naimark} is unitarily equivalent to the Gelfand isomorphism of Theorem~\ref{thm:gelfand}, under the identification of $\mathcal F$ with the Gelfand spectrum $\sigma(\A)$ of Definition~\ref{def:character}.
+		Let $\A$ be an commutative unital $C^*$-algebra as per Definition~\ref{def:unital-c-star-algebra}, and let $\mathcal F$ be a separating family of pure states on $\A$ as per Definition~\ref{def:pure-state} and Proposition~\ref{prop:equivalence_states_characters}. The faithful representation $\pi=\bigoplus_{\omega\in\mathcal F}\pi_\omega$ of Theorem~\ref{thm:gelfand-naimark} is unitarily equivalent to the Gelfand isomorphism of Theorem~\ref{thm:gelfand}, under the identification of $\mathcal F$ with the Gelfand spectrum $\sigma(\A)$ of Definition~\ref{def:character}.
 	\end{proposition}
-	\begin{proof}
-		See Remark~\ref{rem:abelian-recovery}, where each GNS representation $\pi_\omega$ defined by a pure, hence multiplicative, state is shown to be one dimensional, $\pi_\omega(A)=\omega(A)\Id$. Consequently $\pi(A)$ coincides with the family $\{\omega(A)\}_{\omega\in\mathcal F}$, that is, with the Gelfand transform $\widetilde A$ of Definition~\ref{def:gelfand-transform}.
-	\end{proof}
 	
-	\noindent The proof relies entirely on results already established, yet its conceptual content deserves to be spelled out independently of the formal statement. The remark below makes explicit what changes, and what does not, once commutativity is dropped.
+	For a proof of this statement, see Remark~\ref{rem:commutative-recovery}. Consequently $\pi(A)$ coincides with the family $\{\omega(A)\}_{\omega\in\mathcal F}$. This relies on results already established, yet its content deserves to be observed independently of the formal statement.
 	
 	\begin{remark}[Points versus Hilbert spaces]
 		\label{rem:concl-points-vs-hilbert}
-		Proposition~\ref{prop:concl-gelfand-corollary} shows that the two representation theorems are not two independent results proved by analogous methods, but a single theorem, Theorem~\ref{thm:gelfand-naimark}, specialized to the commutative case. What changes between the two cases is the meaning attached to a pure state, a character of Definition~\ref{def:character} evaluating every observable to an ordinary number in the abelian case, and a full irreducible representation on a generally infinite-dimensional Hilbert space, per Proposition~\ref{prop:irreducible-iff-pure}, in the general case. Every value $\omega(A)$ that a classical observable takes at a point of $X$ becomes, once commutativity is dropped, an operator $\pi_\omega(A)$ acting on $\H_\omega$, and it is exactly this passage from numbers to operators that the whole of Section~\ref{sec:states-representations-gns} was devoted to constructing.
+		Proposition~\ref{prop:concl-gelfand-corollary} shows that the two representation theorems are a single Theorem~\ref{thm:gelfand-naimark}, one of them specialized to the commutative case. What changes between the two cases is the meaning attached to a pure state. On one hand, it assumes the meaning of a character as in Definition~\ref{def:character}, evaluating every observable to a real number. On the other hand, it represents a full irreducible representation on a generally infinite-dimensional Hilbert space, per Proposition~\ref{prop:irreducible-iff-pure}. Every value $\omega(A)$ that a classical observable takes at a point of $X$ becomes, once commutativity is dropped, an operator $\pi_\omega(A)$ acting on $\H_\omega$, and it is this passage from numbers to operators that the whole of Section~\ref{sec:states-representations-gns} was devoted to constructing.
 	\end{remark}
-	
-	\noindent The two constructions differ again once the underlying topology enters the argument. Recovering a genuine topological space from the bare algebra is comparatively costly on one side and immediate on the other.
 	
 	\begin{remark}[Topology, compactness versus completeness]
 		\label{rem:concl-topology-comparison}
-		Turning the Gelfand spectrum $\sigma(\A)$ into a genuine compact Hausdorff space, as required by Theorem~\ref{thm:gelfand}, needs the weak-$*$ topology of Definition~\ref{def:weak_topologies} together with the Banach-Alaoglu compactness of Proposition~\ref{prop:spectrum-compactness}. No analogous step appears in the construction of $\H_\omega$, since the inner product of Equation~\eqref{eq:gns-inner-product} already supplies a genuine metric topology on the quotient $\A/J$, completed directly into a Hilbert space by the same procedure as Theorem~\ref{thm:completion}, with no compactness argument involved. The classical reconstruction recovers a topological space from an algebraic datum through a nontrivial functional-analytic theorem, while the quantum reconstruction recovers a metric space through the comparatively elementary process of completing a pre-Hilbert space as per Definition~\ref{def:pre-hilbert}.
+		Turning the Gelfand spectrum $\sigma(\A)$ into a compact Hausdorff space, as required by Theorem~\ref{thm:gelfand}, requires the weak-$*$ topology of Definition~\ref{def:weak_topologies} together with the Banach-Alaoglu compactness of Proposition~\ref{prop:spectrum-compactness}. No analogous step appears in the construction of $\H_\omega$, since the inner product of Equation~\eqref{eq:gns-inner-product} already supplies a metric topology on the quotient $\A/J$, completed directly into a Hilbert space by the same procedure as Theorem~\ref{thm:completion}. 
 	\end{remark}
 	
-	\noindent A related pair of results, expressing the uniqueness of the reconstructed identity on each side, confirms this correspondence rather than adding a genuinely new instance of it. On the classical side, uniqueness is expressed through Corollary~\ref{cor:gelfand}, tying compactness of $X$ to unitality of $\A$. On the quantum side, the corresponding statement is Corollary~\ref{cor:cyclic-representations-same-expectations}, which identifies any two cyclic representations reproducing the same expectation values on their cyclic vectors.
+	\noindent Table~\ref{tab:concl-comparison} collects every point of comparison drawn in this section into a single overview.
 	
-	\noindent Before the overall comparison is drawn to a close, it is worth setting the two chapters' worked examples side by side. Both illustrate the abstract uniqueness statements just discussed on genuinely concrete geometric objects.
+	\begin{table}[h!]
+		\centering
+		\small
+		\renewcommand{\arraystretch}{1.3}
+		\begin{tabular}{|p{0.18\textwidth}|p{0.39\textwidth}|p{0.39\textwidth}|}
+			\hline
+			\textbf{Aspect} & \textbf{Classical reconstruction, Chapter~\ref{ch:classical-mechanics}} & \textbf{Quantum reconstruction, present chapter} \\
+			\hline
+			Associative product & Given from the start, pointwise multiplication on $C^0(X;\C)$, Definition~\ref{def:gel-alg} & Constructed step by step, from squares to the Jordan product of Definition~\ref{def:jordan-product}, to full associativity through the embedding of Definition~\ref{def:jb-embedding} \\
+			\hline
+			Norm & Given, the supremum norm of Equation~\eqref{eq:sup-norm} & Derived from the states, $\|A\|^2=\|A^2\|$ proved in Proposition~\ref{prop:comp-squares} \\
+			\hline
+			Bracket & Imposed externally, smooth dense Poisson subalgebra of Definition~\ref{def:smooth-subalgebra}, discontinuous in the uniform norm as per Remark~\ref{rmk:obstruction-poi-strc} & Intrinsic, $\{A,B\}=\tfrac{1}{i\hbar}[A,B]$ as per Definition~\ref{def:lie-jordan}, defined on all of $\mathcal{O}$ and proved via Theorem~\ref{thm:lie-jordan-to-cstar} \\
+			\hline
+			Separation of states & Via Urysohn's lemma, once $X$ is known to be compact Hausdorff & Postulated directly as part of Definition~\ref{def:state-space} \\
+			\hline
+			Representation theorem & Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand}, giving $\A\cong C_0(X)$ & Noncommutative Gelfand-Naimark theorem, Theorem~\ref{thm:gelfand-naimark}, via the GNS construction of Theorem~\ref{thm:gns} \\
+			\hline
+			Topology required & Weak-$*$ topology and Banach-Alaoglu compactness, Definition~\ref{def:weak_topologies} and Proposition~\ref{prop:spectrum-compactness} & None beyond the Hilbert space completion of Theorem~\ref{thm:completion} \\
+			\hline
+			
+		\end{tabular}
+		\caption{Summary of the comparison between the classical reconstruction of Chapter~\ref{ch:classical-mechanics} and the quantum reconstruction of the present chapter.}
+		\label{tab:concl-comparison}
+	\end{table}
 	
-	\begin{remark}[Two worked examples]
-		\label{rem:concl-examples-comparison}
-		Section~\ref{sec:1-example}, on the classical spin system, and the section on the Weyl algebra preceding Definition~\ref{def:schrodinger-representation}, play parallel expository roles, each instantiating the general representation theorem of its chapter on a concrete example. The classical spin system fixes the Casimir $C=1$ inside the abstract Poisson algebra generated by $x_1,x_2,x_3$ and recovers the sphere $\mathbb S^2$ as the Gelfand spectrum $X$ of the completed algebra, so that uniqueness there means a homeomorphism between $X$ and $\mathbb S^2$. The Weyl algebra $\A_W$ of Definition~\ref{def:weyl-c-star-algebra} instead fixes the Heisenberg commutation relations of Equation~\eqref{eq:heisenberg-relations} and recovers the Schr\"odinger representation on $L^2(\R^s,dx)$ through Theorem~\ref{thm:von-neumann-uniqueness}, so that uniqueness there means unitary equivalence of representations. Both examples single out one canonical geometric object from algebraic data, a manifold in the classical case and a Hilbert space in the quantum case, and the notion of uniqueness invoked, homeomorphism against unitary equivalence, tracks exactly the distinction between points and Hilbert spaces drawn in Remark~\ref{rem:concl-points-vs-hilbert}.
-	\end{remark}
+	\noindent The comparison collected in Table~\ref{tab:concl-comparison} can be summarized in a single statement. Hopping from the commutative to the noncommutative case replaces points of a topological space with Hilbert spaces carrying a representation. It also replaces evaluation of a function at a point with the action of an operator on a cyclic vector. Furthermore, it replaces an externally imposed Poisson bracket, confined to a dense subalgebra, with a Lie bracket intrinsic to the whole algebra, as shown in Remark~\ref{rem:concl-bracket-comparison}. Every new piece of mathematics required for the noncommutative case, the Jordan product, the GNS construction, and the Lie-Jordan identities of Theorem~\ref{thm:lie-jordan-to-cstar}, exists to compensate for the loss of commutativity and a given geometric space.
 	
-	\noindent The comparison carried out in this section can be summarized in a single statement. Passing from the commutative to the noncommutative case replaces points of a topological space with Hilbert spaces carrying a representation, replaces evaluation of a function at a point with the action of an operator on a cyclic vector, and replaces an externally imposed Poisson bracket, confined to a dense subalgebra by Remark~\ref{rmk:obstruction-poi-strc}, with a Lie bracket intrinsic to the whole algebra, as shown in Remark~\ref{rem:concl-bracket-comparison}. Every genuinely new piece of mathematics required for the noncommutative case, the Jordan product, the GNS construction, and the Lie-Jordan identities of Theorem~\ref{thm:lie-jordan-to-cstar}, exists to compensate for the loss of the two features, commutativity and an a priori given geometric space, that the classical reconstruction of Chapter~\ref{ch:classical-mechanics} could take for granted from the start.
+	\newpage 
 	
 	\section{Example II: The Quantum Spin System}
 	\label{sec:2-example}
 	
-	In this section we apply the noncommutative Gelfand-Naimark Theorem and the GNS construction to a concrete quantum system. The example of the quantum spin provides an ideal testing ground for the algebraic framework developed in Section~\ref{sec:states-representations-gns}. Unlike the classical spin system of Section~\ref{sec:1-example}, where the Poisson algebra generated by three coordinates yielded the sphere as a commutative phase space, the quantum spin is generated by three operators that satisfy non-abelian commutation relations. The GNS construction of Theorem~\ref{thm:gns} attaches to this algebra a Hilbert space representation in which the abstract operators become concrete selfadjoint matrices, and the Gelfand-Naimark Theorem of Section~\ref{sec:gelfand-naimark} guarantees that this representation is faithful. Working through this example explicitly illustrates how the noncommutative framework replaces the symplectic manifold of the classical case with a Hilbert space of states, and how the representation theory of the algebra encodes the physical content of the system.
+	This example illustrates the GNS construction of Section~\ref{sec:states-representations-gns} and the noncommutative Gelfand-Naimark Theorem. The quantum spin is generated by three operators satisfying the $\mathfrak{su}(2)$ commutation relations. In contrast with the classical spin of Section~\ref{sec:1-example} where the same Lie algebra was realised as a Poisson bracket on the sphere. The comparison shows how the same algebraic relations yield a symplectic manifold in the commutative case and a Hilbert space of states in the noncommutative one.
+ 	
+ 	\subsection*{The Pauli Algebra and the GNS Representation}
+ 	
+ 	The quantum spin system is modeled by the complex unital $C^*$-algebra $\A$, as in Definition~\ref{def:unital-c-star-algebra}, generated by three selfadjoint elements $J_1, J_2, J_3$ and equipped with the usual $C^*$-norm and involution. These three generators are required to satisfy the $\mathfrak{su}(2)$ commutation relations
+ 	\begin{equation}
+ 		[J_i,J_j] = i\,\epsilon_{ijk}\,J_k, \qquad i,j,k\in\{1,2,3\}.
+ 		\label{eq:su2-commutation}
+ 	\end{equation}
+ 	This is the same Lie algebra that generated the classical spin system of Section~\ref{sec:1-example} through a Poisson bracket rather than through a commutator. A spin-$1/2$ system is identified among all the representations of these relations by fixing the value of the Casimir operator $C := J_1^2+J_2^2+J_3^2$ to $\frac34\Id$. Passing to the quotient algebra $\A_0 := \A/(C-\frac34\Id)$ then restricts attention to this sector alone, as the analogous restriction did in the classical case of Section~\ref{sec:1-example}. The quotient $\A_0$ remains a unital $C^*$-algebra as in Definition~\ref{def:unital-c-star-algebra}.
+ 	A state $\omega_0$ on $\A_0$, as in Definition~\ref{def:state}, is fixed by prescribing its values on the identity and on products of at most two generators
+ 	\begin{equation}
+ 		\omega_0(\Id)=1,\qquad \omega_0(J_i)=0,\qquad \omega_0(J_iJ_j)=\frac14\delta_{ij},
+ 		\label{eq:trace-state-spin}
+ 	\end{equation}
+ 	extended to the whole of $\A_0$ by linearity. The coefficient $\frac14$ appearing in Equation \eqref{eq:trace-state-spin} is fixed by the Casimir relation itself. In fact, applying $\omega_0$ to the Casimir identity $\sum_i J_i^2 = \frac34\Id$ and using isotropy yields $3\,\omega_0(J_i^2) = \frac34$. It descends that $\omega_0(J_i^2)=\frac14$ for every $i$. The resulting functional is positive and normalized, hence it defines a state on $\A_0$ by Definition~\ref{def:state}. Because the three directions $J_1$, $J_2$, $J_3$ are indistinguishable for $\omega_0$, it is the unique $SO(3)$ invariant state on $\A_0$. Physically, this symmetry is what identifies $\omega_0$ as the state of complete ignorance about the orientation of the spin.
+ 	
+ 	 We carry out this construction explicitly to represent concretly $\omega_0$. It is worth following Remark \ref{rem:gns-construction-recap} in order to keep the space of abstract observables $\A_0$ on one side and the Hilbert space of state vectors that the construction produces on the other.
+ 	
+ 	\begin{enumerate}
+ 		\item The first step defines on $\A_0$ itself the sesquilinear form $(A,B) := \omega_0(A^*B)$, as in Equation \eqref{eq:gns-inner-product}, which is positive semidefinite because $\omega_0$ is a state.
+ 		
+ 		\item The second step isolates the null space of this form, $J := \{A\in\A_0 \mid \omega_0(B^*A)=0 \text{ for every } B\in\A_0\}$, as in Equation \eqref{eq:gns-ideal}, which coincides, by the Cauchy-Schwarz inequality for $(\cdot,\cdot)$, with the smaller looking set $\{A\in\A_0 \mid \omega_0(A^*A)=0\}$ and is a left ideal of $\A_0$. We identify $\A_0$ concretely below, showing that this ideal will vanish $J=\{0\}$, so that the algebraic state $\omega_0$ turns out to be faithful.
+ 		
+ 		\item Since $J=\{0\}$, the form $(\cdot,\cdot)$ is already a inner product on the whole of $\A_0$, and no further quotient is needed before completing it. The \emph{Hilbert space of state vectors} $\H_{\omega_0}$ is obtained by completing $\A_0$ with respect to the norm induced by this inner product. Note that an element $B \in \A_0$, which up to this point has only played the role of an abstract observable, is now reinterpreted as a state vector $[B] \in \H_{\omega_0}$. The same mathematical object, an element of $\A_0$, is thus made to carry two different physical meanings depending on which of the two spaces, $\A_0$ or $\H_{\omega_0}$, it is regarded as belonging to.
+ 		
+ 		\item The fourth step supplies the \emph{space of physical operators} $\mathcal{B}(\H_{\omega_0})$, the algebra of bounded linear operators on $\H_{\omega_0}$. The representation $\pi_{\omega_0} : \A_0 \to \mathcal{B}(\H_{\omega_0})$ of Theorem~\ref{thm:gns} is defined by left multiplication. It is through $\pi_{\omega_0}$ that an abstract observable $A \in \A_0$ is instantiated as the concrete physical operator $\pi_{\omega_0}(A)$. This operator acts on a state vector $[B] \in \H_{\omega_0}$ by
+ 		\begin{equation}
+ 			\pi_{\omega_0}(A)[B]:=[AB],
+ 		\end{equation}
+ 		as in Equation \eqref{eq:gns-pi-def}. That shows in a single formula the two roles just distinguished, $A$ on the left of the product enters as the observable being represented, while $B$ inside the bracket enters as the state vector it acts on.
+ 		
+ 		\item The fifth and last step identifies the cyclic vector, as per Definition~\ref{def:cyclic-vector}, with $\Psi_{\omega_0}:=[\Id]$. The state vector corresponding to the identity element of $\A_0$. This vector closes the construction by reproducing the original algebraic state through the Hilbert space inner product,
+ 		\begin{equation}
+ 			\big(\Psi_{\omega_0},\pi_{\omega_0}(A)\Psi_{\omega_0}\big)=\omega_0(A), \qquad \forall A\in\A_0.
+ 		\end{equation}
+ 		Hence that the whole of $\omega_0$ is recovered as an expectation value in $\Psi_{\omega_0}$.
+ 	\end{enumerate}
+ 	
+ 	\subsection*{The Gelfand-Naimark Theorem and the Operator Algebra}
+ 	
+ 	Determining the dimension of $\A_0$ requires classifying the representations of the $\mathfrak{su}(2)$ Equation \eqref{eq:su2-commutation} that are compatible with the fixed value of the Casimir element, $C = \frac34\Id$. Representation theory of $\mathfrak{su}(2)$ associates the two-dimensional irreducible representation the following
+ 	\begin{equation}
+ 		\pi_{1/2}(J_i) = \frac12\,\sigma_i.
+ 		\label{eq:pauli-representation}
+ 	\end{equation}
+ 	 In which $\sigma_i$ denote the Pauli matrices. Fixing the Casimir at $\frac34$ forces every $*$-representation of Equation \eqref{eq:su2-commutation} to be built out of copies of this single representation alone. This identification of representations translates into an identification of algebras showing that $\A_0 \cong M_2(\C)$. The full argument behind this identification is developed in \cite[Section 4.4]{hallLieGroupsLie2003}.
+ 	
+ 	Since the identity together with the three Pauli matrices form a basis of $M_2(\C)$, the image of $\pi_{1/2}$ already exhausts the whole of $M_2(\C)$. The commutant of $M_2(\C)$ inside $\mathcal{B}(\C^2)$ consists only of the scalar multiples of the identity. Schur's Lemma~\ref{lemma:schur} states that a representation is irreducible when its commutant reduces to scalars in this way. Combining the two facts shows that $\pi_{1/2}$ is irreducible. Irreducibility of $\pi_{1/2}$ has an immediate consequence for the states it defines. By Proposition~\ref{prop:irreducible-iff-pure}, every vector state
+ 	\begin{equation}
+ 		\omega_\psi(A)=\big(\psi,\pi_{1/2}(A)\psi\big), \qquad \forall\,\psi\in\C^2,
+ 	\end{equation}
+ 	is pure, and $\pi_{1/2}$ is, up to unitary equivalence, the unique irreducible representation of $\A_0$.
+ 	
+ 	Having established an irreducible representation of $\mathfrak{su}(2)$, we continue by write the state $\omega_0$ analytically. The basis $\{\Id,\sigma_1,\sigma_2,\sigma_3\}$ of $M_2(\C)$ satisfies $\Tr(\Id)=2$, $\Tr(\sigma_i)=0$, and $\Tr(\sigma_i\sigma_j)=2\delta_{ij}$. These are the values of Equation \eqref{eq:trace-state-spin}, up to a factor $\tfrac12$, used to define $\omega_0$, and by linearity the two functionals coincide on the whole of $\A_0$,
+ 	\begin{equation}
+ 		\omega_0(A)=\frac12\Tr(A), \qquad \forall A \in \A_0.
+ 	\end{equation}
+ 	
+ 	The trace of a strictly positive operator on $\C^2$ is itself strictly positive, that is $\omega_0(A^*A)=\frac12\Tr(A^*A) > 0$ for every non-zero $A \in \A_0$. Therefore, the state $\omega_0$ is a faithful state by Definition \ref{def:faithful-state}. This confirms the vanishing of the left kernel anticipated in the second step above, $J=\{0\}$. The construction above then yields
+ 	\begin{equation}
+ 		\H_{\omega_0} \cong \A_0 \cong \C^4.
+ 	\end{equation}
+ 	This identification of $\H_{\omega_0}$ with $\C^4$ has to be read with care, since the four-dimensional space $\C^4$ appearing here does not describe a new physical system with four levels. It is instead $M_2(\C)$ of all linear operators on $\C^2$, now regarded as a Hilbert space of state vectors rather than as an algebra of observables because it includes also density matrices, as in Definition~\ref{def:density-matrix-folium}.
+ 	
+ 	Faithfulness of $\omega_0$ has another consequence, it makes the representation $\pi_{\omega_0}$ itself injective. Consequently, Proposition~\ref{prop:homomorphism-norm-bound} shows that an injective representation is isometric. That is the property that the Gelfand-Naimark Theorem of Section~\ref{sec:gelfand-naimark} guarantees in general. Making $\pi_{\omega_0}$ explicit is the remaining task of this subsection. 
+ 	
+ 	To achieve that, we first recall the canonical vector space isomorphism $M_2(\C) \cong \C^2 \otimes \C^2$. Let $\{e_1,e_2\} \in \C^2$ be the standard orthonormal basis of $\C^2$, and let $E_{ij} \in M_2(\C)$ denote the matrix units, defined by their action $E_{ij}e_k = \delta_{jk}e_i$. The isomorphism $M_2(\C)\cong\C^2\otimes\C^2$ is fixed by the linear extension of the map $E_{ij} \mapsto e_i \otimes e_j$. Then, every abstract observable of $\A_0$ acquires, once identified with its matrix representation, a corresponding vector in $\C^2\otimes\C^2$.
+ 	
+ 	Under the isomorphism just fixed, left multiplication acts only on the first tensor factor. For any observable $A \in \A_0$, with matrix representation $\pi_{1/2}(A) \in M_2(\C)$,
+ 	\begin{equation}
+ 		\pi_{1/2}(A)\,E_{ij} \longleftrightarrow \big(\pi_{1/2}(A) \otimes \Id_{\C^2}\big)(e_i \otimes e_j).
+ 	\end{equation}
+ 	By contrast, right multiplication by an arbitrary matrix $B \in M_2(\C)$ acts only on the second factor,
+ 	\begin{equation}
+ 		E_{ij}\,B \longleftrightarrow \big(\Id_{\C^2} \otimes B^T\big)(e_i \otimes e_j),
+ 	\end{equation}
+ 	where $B^T$ denotes the transpose of $B$ with respect to the basis $\{e_1,e_2\}$. We observe that the first one carries the physical degrees of freedom of the spin. In fact, it is on this factor alone that the observable algebra acts through $\pi_{\omega_0}$.  Given that, for every $B \in M_2(\C)$, the operators $\Id_{\C^2} \otimes B^T$ commute with every operator $\pi_{1/2}(A) \otimes \Id_{\C^2}$ with $A \in \A_0$, the second factor is what generates the commutant of the observable algebra inside $\mathcal{B}(\H_{\omega_0})$. Therefore, we can write the representation $\pi_{\omega_0}$ in the following way
+ 	\begin{equation}
+ 		\pi_{\omega_0}(A) = \pi_{1/2}(A) \otimes \Id_{\C^2}, \qquad A \in \A_0.
+ 	\end{equation}
+ 	
+ 	The cyclic vector, as in Definition \ref{def:cyclic-vector}, is identified above as $\Psi_{\omega_0} = [\Id]$. The identity matrix decomposes as $\Id = E_{11}+E_{22}$. Under the map shown earlier, we can express the cyclic vector as
+ 	\begin{equation}
+ 		\Psi_{\omega_0} \longleftrightarrow \frac{1}{\sqrt2}\big(e_1\otimes e_1 + e_2\otimes e_2\big).
+ 	\end{equation}
+ 	This vector embodies the mechanism of purification. The state $\omega_0$, which on $\C^2$ alone requires the density matrix $\rho=\frac12\Id$ as in Equation \eqref{eq:density-matrix-state}, is here represented instead as a vector state in the enlarged space $\C^2\otimes\C^2$. That is engineered so that its expectation value on every physical observable $\pi_{1/2}(A)\otimes\Id_{\C^2}$ reproduces the evaluation already dictated by the original density matrix $\rho=\frac12\Id$.
 	
-	\subsection{The Pauli Algebra and the GNS Representation}
+	\subsection*{The Bloch Sphere and Mixed States}
 	
-	Consider the complex algebra $\A$ generated by three elements $J_1, J_2, J_3$ subject to the commutation relations of $\mathfrak{su}(2)$,
+	The pure states of the system are the rays of $\C^2$. That is the equivalence classes of unit vectors modulo multiplication by a phase. The space of such rays is the complex projective line $\mathbb{P} \C^1$, subject of work in the next Chapter. Each vector $\psi \in \C^2$ identifies a ray $[\psi] \in \mathbb{P} \C^1$. That is parametrised by the expectation values of the Pauli matrices given by $\mathbf{r}=(\psi,\boldsymbol{\sigma}\psi) \in \C^3$, which satisfy $|\mathbf{r}|=1$ to determine the ray uniquely. Therefore $\mathbb{P}\C^1\cong\mathbb S^2$, and this identification is called the Bloch sphere. States on this projective space are defined via
 	\begin{equation}
-		[J_i, J_j] = i\,\epsilon_{ijk}\,J_k, \qquad i,j,k \in \{1,2,3\},
-		\label{eq:su2-commutation}
+		\omega_\psi(A) = \big(\psi,\pi_{1/2}(A)\psi\big), \qquad \forall\,\psi\in\C^2,\ \|\psi\|=1.
+		\label{eq:pure-state-spin}
 	\end{equation}
-	where $\epsilon_{ijk}$ is the Levi-Civita symbol and the identity element $\Id$ is included. The algebra is completed to a $C^*$-algebra by taking the closure in the unique $C^*$-norm determined by the relations, and the involution is fixed by declaring $J_i^* = J_i$ for each generator. This is the noncommutative analogue of the Poisson algebra of the classical spin, and it is precisely the algebra of observables of a quantum mechanical spin system.
-	
-	We introduce the Casimir element
+	More generally, every state of $\A_0$ is
 	\begin{equation}
-		C = J_1^2 + J_2^2 + J_3^2,
-		\label{eq:casimir-spin}
+		\omega_\rho(A) = \Tr\big(\rho\,\pi_{1/2}(A)\big), \qquad \rho = \tfrac12(\Id+\mathbf r\cdot\boldsymbol\sigma),\ \ |\mathbf r|\le 1,
+		\label{eq:mixed-state-spin}
 	\end{equation}
-	which commutes with every element of $\A$ by virtue of the commutation relations Equation~\eqref{eq:su2-commutation}. For a spin-$1/2$ system, the Casimir assumes the fixed value $C = \frac{3}{4}\,\Id$, and we therefore pass to the quotient $\A_0 = \A/(C - \frac{3}{4}\Id)$, where elements differing by a multiple of $C - \frac{3}{4}\Id$ are identified. This quotient is a unital $C^*$-algebra as in Definition~\ref{def:unital-c-star-algebra}, and the commutation relations Equation~\eqref{eq:su2-commutation} descend to it without obstruction because $C$ is central.
+	and its space is called the Bloch ball. Pure states are identified with points at the boundary $|\mathbf r|=1$, where $\omega_0$ is the centre $\mathbf r=0$ representing the maximally mixed state.
 	
-	We now construct the GNS representation of $\A_0$ associated with a distinguished state. Define the trace state $\omega_0$ on $\A_0$ by linear extension of
-	\begin{equation}
-		\omega_0(\Id) = 1, \qquad \omega_0(J_i) = 0, \qquad \omega_0(J_i J_j) = \frac{1}{2}\,\delta_{ij},
-		\label{eq:trace-state-spin}
-	\end{equation}
-	with higher order products evaluated by the commutation relations and the reduction $J_1 J_2 J_3 = \frac{i}{4}\,\Id$ which follows from Equation~\eqref{eq:su2-commutation} and the Casimir value. The functional $\omega_0$ is positive and normalized, so it is a state on $\A_0$ in the sense of Definition~\ref{def:state}. The GNS construction of Theorem~\ref{thm:gns} applied to $\omega_0$ produces a Hilbert space $\H_{\omega_0}$ and a representation $\pi_{\omega_0} : \A_0 \to \mathcal{B}(\H_{\omega_0})$ as in Definition~\ref{def:representation-c-star} with a cyclic vector $\Psi_{\omega_0}$ such that
-	\begin{equation}
-		\omega_0(A) = \big(\Psi_{\omega_0}, \pi_{\omega_0}(A)\Psi_{\omega_0}\big), \qquad \forall A \in \A_0.
-		\label{eq:gns-spin-expectation}
-	\end{equation}
+	By Theorem~\ref{thm:gns}, every state, pure or mixed, has a \emph{cyclic} GNS vector. What changes with $\mathbf r$ is the irreducibility of the representation for Proposition~\ref{prop:irreducible-iff-pure}. For $|\mathbf r|<1$, $\rho$ is invertible and $\omega_\rho$ is faithful, so the argument used above for $\omega_0$ applies. Only at $|\mathbf r|=1$ does it collapse to the irreducible $\pi_{1/2}$ on $\C^2$.
 	
-	To determine the structure of $\H_{\omega_0}$, we examine the null space of the inner product $(A,B) = \omega_0(A^*B)$. The state $\omega_0$ is faithful, as a direct computation from Equation~\eqref{eq:trace-state-spin} shows $\omega_0(A^*A) = 0$ implies $A=0$, so the Gelfand ideal $J$ of Equation~\eqref{eq:gns-ideal} is trivial. The GNS Hilbert space is therefore the completion of $\A_0$ itself with respect to the inner product
-	\begin{equation}
-		(A,B) = \omega_0(A^*B).
-		\label{eq:inner-product-spin}
-	\end{equation}
-	The dimension of $\H_{\omega_0}$ is the number of linearly independent elements of $\A_0$ modulo the relations, which is four, with a basis given by $\Id, J_1, J_2, J_3$. The representation $\pi_{\omega_0}$ acts by left multiplication on this four-dimensional space, and it is unitarily equivalent to the standard spin-$1/2$ representation on $\H = \C^2$ with
-	\begin{equation}
-		\pi_{\omega_0}(J_i) = \frac{1}{2}\,\sigma_i,
-		\label{eq:pauli-representation}
-	\end{equation}
-	where $\sigma_i$ are the Pauli matrices
-	\begin{equation}
-		\sigma_1 = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad
-		\sigma_2 = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad
-		\sigma_3 = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
-		\label{eq:pauli-matrices}
-	\end{equation}
-	The cyclic vector $\Psi_{\omega_0}$ corresponds to the vector $(1,0)^T \in \C^2$, and the expectation values of Equation~\eqref{eq:gns-spin-expectation} are recovered as
-	\begin{equation}
-		\omega_0(J_i) = \big(\Psi_{\omega_0}, \pi_{\omega_0}(J_i)\Psi_{\omega_0}\big) = 0.
-		\label{eq:spin-expectations}
-	\end{equation}
+	\subsection*{Comparison with the Classical Spin System}
 	
-	\subsection{The Gelfand-Naimark Theorem and the Operator Algebra}
+	The classical spin of Section~\ref{sec:1-example}, generated by $x_1,x_2,x_3$ with $\{x_i,x_j\}=\epsilon_{ijk}x_k$ yields the commutative algebra $C(\mathbb S^2)$.  Its Gelfand spectrum, which was the sphere itself, is a continuum of pure states. The quantum spin uses the same Lie algebra noncommutatively admitting a \emph{unique} irreducible representation $\pi_{1/2}$ up to unitary equivalence. Its pure states reproduce the same sphere $\mathbb S^2$. But the full quantum state space, the Bloch ball, is strictly richer. In fact, it contains mixed states with no counterpart in $C(\mathbb S^2)$. The GNS construction and the Gelfand-Naimark Theorem are what let the same $\mathfrak{su}(2)$ algebra generate a symplectic manifold commutatively and a Hilbert space noncommutatively.
 	
-	The GNS representation of the previous subsection provides a concrete realization of $\A_0$ as an algebra of $2\times 2$ matrices. The representation $\pi_{\omega_0}$ is faithful because $\omega_0$ is faithful, so by Proposition~\ref{prop:homomorphism-norm-bound} we have $\|\pi_{\omega_0}(A)\| = \|A\|$ for every $A \in \A_0$. The image $\pi_{\omega_0}(\A_0)$ is therefore a $C^*$-subalgebra of $\mathcal{B}(\C^2)$. Since $\mathcal{B}(\C^2) \cong M_2(\C)$, the Gelfand-Naimark Theorem of Section~\ref{sec:gelfand-naimark} reduces in this finite-dimensional case to the statement that $\A_0$ is isomorphic to the full matrix algebra $M_2(\C)$. The isomorphism is given explicitly by Equation~\eqref{eq:pauli-representation}, and it identifies the abstract elements $J_i$ with the Pauli matrices up to the factor $1/2$.
+	These extra features arise from the difference in the \emph{geometry} of the two state spaces. The classical state space, representing probability measures on $\mathbb S^2$, as show in Section \ref{sec:1-strocchi}, is a generally simplex. Moreover, every classical mixed state decomposes uniquely into pure ones. However, the Bloch ball is strictly convex, and this uniqueness fails completely. This makes $\omega_0$ at its centre an equal mixture of $\omega_\psi$ and $\omega_{\psi^\perp}$ for \emph{every} unit vector $\psi\in\C^2$. A classical mixed state can always be read as an ignorance about which pure state actually obtains. Instead, a generic quantum mixed state cannot be given such a reading at all. It is this loss of a unique "ignorance interpretation" that foundational frameworks take as the operational signature of nonclassicality. 
 	
-	This realization is the noncommutative analogue of the commutative reconstruction of Section~\ref{sec:1-example}. Whereas the classical spin system had the sphere $\mathbb S^2$ as its Gelfand spectrum, the quantum spin system has no spectrum of points because the algebra is noncommutative. Instead, the representation theory supplies a Hilbert space $\C^2$ on which the algebra acts irreducibly. The irreducible representation $\pi_{\omega_0}$ is the unique irreducible representation of $M_2(\C)$ up to unitary equivalence, by Proposition~\ref{prop:irreducible-iff-pure}, since the state $\omega_0$ is pure. This uniqueness mirrors the classical case where the Gelfand spectrum was a single connected manifold, but the mathematical object is fundamentally different: the quantum system is described not by a symplectic manifold but by a Hilbert space of states.
-	
-	The states of the quantum spin system are obtained from the folium of the representation $\pi_{\omega_0}$ as in Definition~\ref{def:density-matrix-folium}. A density matrix $\rho$ on $\C^2$ defines a state
-	\begin{equation}
-		\omega_\rho(A) = \Tr\big(\rho\,\pi_{\omega_0}(A)\big), \qquad A \in \A_0.
-		\label{eq:density-state-spin}
-	\end{equation}
-	When $\rho$ is a one-dimensional projection $P_\psi$ onto a unit vector $\psi \in \C^2$, the state is pure and is represented by the vector $\psi$ itself,
-	\begin{equation}
-		\omega_\psi(A) = \big(\psi, \pi_{\omega_0}(A)\psi\big).
-		\label{eq:vector-state-spin}
-	\end{equation}
-	When $\rho$ is a convex combination of orthogonal projections with weights $\lambda_i$, the state is mixed and corresponds to a statistical ensemble of pure states. This is precisely the noncommutative analogue of the probability measures on the sphere that appeared in the classical case: the density matrix replaces the probability distribution, and the Hilbert space vectors replace the points of the phase space.
-	
-	\subsection{Hamiltonian Dynamics and the Quantum Noether Theorem}
-	
-	The dynamics of the quantum spin system is generated by a selfadjoint Hamiltonian $H \in \A_0$. In the GNS representation $\pi_{\omega_0}$, the Hamiltonian becomes a selfadjoint matrix acting on $\C^2$, and the time evolution of an observable $A \in \A_0$ is given by the Heisenberg equation
-	\begin{equation}
-		\frac{d}{dt}\,\pi_{\omega_0}(A(t)) = i\,\big[H, \pi_{\omega_0}(A(t))\big],
-		\label{eq:heisenberg-spin}
-	\end{equation}
-	where the commutator is taken in the matrix algebra. Equivalently, the dynamics is implemented by the one-parameter group of $^*$-automorphisms
-	\begin{equation}
-		\alpha_t(A) = e^{itH}\,A\,e^{-itH}, \qquad t \in \mathbb R,
-		\label{eq:automorphism-spin}
-	\end{equation}
-	which is strongly continuous because the representation is finite-dimensional. This is the direct noncommutative generalisation of the Hamiltonian flow of the classical case.
-	
-	Consider the Hamiltonian
-	\begin{equation}
-		H = J_3,
-		\label{eq:hamiltonian-spin}
-	\end{equation}
-	which in the Pauli representation becomes $H = \frac{1}{2}\sigma_3$. The time evolution of the generators is obtained from Equation~\eqref{eq:heisenberg-spin},
-	\begin{align}
-		\dot J_1 &= -J_2, \label{eq:spin-eom1}\\
-		\dot J_2 &= J_1, \label{eq:spin-eom2}\\
-		\dot J_3 &= 0, \label{eq:spin-eom3}
-	\end{align}
-	which are the Heisenberg equations of motion for a spin precessing about the third axis. The solution is
-	\begin{equation}
-		J_1(t) + i J_2(t) = e^{it}\,\big(J_1(0) + i J_2(0)\big), \qquad J_3(t) = J_3(0),
-		\label{eq:spin-solution}
-	\end{equation}
-	and in the representation $\pi_{\omega_0}$ this corresponds to the unitary evolution of the Pauli matrices.
-	
-	The Hamiltonian $H = J_3$ is invariant under rotations about the third axis, implemented by the automorphism group $\beta_s(A) = e^{isJ_3} A e^{-isJ_3}$. The generator of this symmetry is $J_3$ itself, and the commutation relation $[H, J_3] = 0$ implies that $J_3$ is a conserved quantity. This is the quantum mechanical analogue of Noether's theorem: to each continuous symmetry of the Hamiltonian there corresponds a conserved observable, and in the GNS representation this observable is represented by a selfadjoint operator that commutes with the Hamiltonian. In the present example, the conserved quantity is $J_3$, the spin projection along the symmetry axis.
-	
-	The algebraic structure of the quantum spin system can be compared directly with the classical case of Section~\ref{sec:1-example}. Both systems are generated by three dynamical variables satisfying a Lie algebra bracket, but the bracket in the quantum case is the commutator of operators rather than the Poisson bracket of functions. The classical system has a Casimir function that fixes a two-dimensional symplectic manifold, the sphere, on which the Hamiltonian flow is a rotation. The quantum system has a Casimir operator that fixes a finite-dimensional Hilbert space, $\C^2$, on which the same Hamiltonian flow is implemented by a unitary transformation. The GNS construction of Theorem~\ref{thm:gns} is the bridge that turns the abstract algebra into this concrete Hilbert space representation, and the Gelfand-Naimark Theorem of Section~\ref{sec:gelfand-naimark} guarantees that this representation is faithful and unique up to unitary equivalence. The example thus illustrates how the algebraic formalism of Section~\ref{sec:states-representations-gns} replaces the geometry of the classical phase space with the representation theory of a noncommutative $C^*$-algebra, while preserving the essential physical content of the system.
-	
+	The next Example \ref{sec:ex-three} will continue this formulation leading the discussion to time evolution, symmetries and Quantum Noether's Theorem \ref{thm:quantum-noether} that will be presented in the next chapter.
 	\printbibliography
 
 \end{document}

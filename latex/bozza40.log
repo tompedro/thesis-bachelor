@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  12 AUG 2026 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,31 +1232,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'bozza40.bbl' found.
 
-(./bozza40.bbl
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'strocchiIntroductionMathematicalStructure2005':
-
-(biblatex)                - Entry 'strocchiIntroductionMathematicalStructure200
-5' (bib.bib): Invalid format '2005' of date field 'date' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'bratteliOperatorAlgebrasQuantum1981':
-(biblatex)                - Entry 'bratteliOperatorAlgebrasQuantum1981' (bib.bi
-b): Invalid format '1981' of date field 'date' - ignoring.
-
-
-Package biblatex Warning: Biber reported the following issues
-(biblatex)                with 'reedMethodsModernMathematical2003':
-(biblatex)                - Entry 'reedMethodsModernMathematical2003' (bib.bib)
-: Invalid format '2003' of date field 'date' - ignoring.
-
-)
+(./bozza40.bbl)
 Package biblatex Info: Reference section=0 on input line 4.
 Package biblatex Info: Reference segment=0 on input line 4.
 Package hyperref Info: Link coloring ON on input line 4.
- (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1283,8 +1264,8 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 10.51207pt on input line 8.
 
 
-LaTeX Warning: Reference `ch:classical-mechanics' on page 1 undefined on input 
-line 8.
+LaTeX Warning: Reference `sec:non-commutative-observables' on page 1 undefined 
+on input line 8.
 
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
  8.
@@ -1363,15 +1344,6 @@ LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 8.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 8.
-
-
-LaTeX Warning: Reference `def:cstar-algebra' on page 1 undefined on input line 
-8.
-
-
-LaTeX Warning: Reference `sec:non-abelian-observables' on page 1 undefined on i
-nput line 8.
-
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
 (Font)              scaled to size 10.5886pt on input line 8.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
@@ -1383,530 +1355,648 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 8.
 
+
 LaTeX Warning: Reference `ch:classical-mechanics' on page 1 undefined on input 
 line 8.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 12.
 
 LaTeX Warning: Reference `def:star-algebra' on page 1 undefined on input line 1
-2.
+4.
 
 
 LaTeX Warning: Reference `def:cstar-algebra' on page 1 undefined on input line 
-20.
+22.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 20.
+(Font)              scaled to size 7.68005pt on input line 22.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 20.
+(Font)              scaled to size 5.76004pt on input line 22.
 
 LaTeX Warning: Reference `def:hilbert-space' on page 1 undefined on input line 
-20.
+22.
 
 
-LaTeX Warning: Reference `def:cyclic-family' on page 1 undefined on input line 
+LaTeX Warning: Reference `def:cyclic-vector' on page 1 undefined on input line 
 25.
 
 
+LaTeX Warning: Reference `def:cyclic-family' on page 1 undefined on input line 
+29.
+
+
 LaTeX Warning: Reference `def:unital-c-star-algebra' on page 1 undefined on inp
-ut line 32.
+ut line 36.
+
+
+LaTeX Warning: Reference `def:unital-c-star-algebra' on page 1 undefined on inp
+ut line 70.
+
+
+LaTeX Warning: Reference `def:state' on page 1 undefined on input line 70.
+
+
+LaTeX Warning: Reference `def:cyclic-vector' on page 1 undefined on input line 
+72.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 64.
+(Font)              scaled to size 10.51207pt on input line 83.
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 
-LaTeX Warning: Reference `def:unital-c-star-algebra' on page 2 undefined on inp
-ut line 66.
+LaTeX Warning: Reference `thm:blt' on page 2 undefined on input line 125.
 
 
-LaTeX Warning: Reference `def:state' on page 2 undefined on input line 66.
-
-
-LaTeX Warning: Reference `def:cyclic-vector' on page 2 undefined on input line 
-68.
-
-
-LaTeX Warning: Reference `thm:blt' on page 2 undefined on input line 121.
+Overfull \hbox (8.33185pt too wide) in paragraph at lines 130--131
+\T1/mdbch/m/n/10.95 for all $\OML/mdbch/m/it/10.95 A; A[]; B \OMS/mdbch/m/n/10.
+95 2 \U/xmdeuf/m/n/10.95 A$ \T1/mdbch/m/n/10.95 The iden-tity $\OML/mdbch/m/it/
+10.95 ^^Y[]\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 A\OT1/mdbch/m/n/10.95 )[
+][\OML/mdbch/m/it/10.95 B\OT1/mdbch/m/n/10.95 ] = \OML/mdbch/m/it/10.95 ^^Y[]\O
+T1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 A[]\OT1/mdbch/m/n/10.95 )[\OML/mdbch/
+m/it/10.95 B\OT1/mdbch/m/n/10.95 ]$ \T1/mdbch/m/n/10.95 holds be-cause $[]\OT1/
+mdbch/m/n/10.95 [\OML/mdbch/m/it/10.95 AB\OT1/mdbch/m/n/10.95 ]\OML/mdbch/m/it/
+10.95 ; \OT1/mdbch/m/n/10.95 [\OML/mdbch/m/it/10.95 C\OT1/mdbch/m/n/10.95 ][] =
+ \OML/mdbch/m/it/10.95 !\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 B[]A[]C\OT1
+/mdbch/m/n/10.95 ) = [][\OML/mdbch/m/it/10.95 B\OT1/mdbch/m/n/10.95 ]\OML/mdbch
+/m/it/10.95 ; \OT1/mdbch/m/n/10.95 [\OML/mdbch/m/it/10.95 A[]C\OT1/mdbch/m/n/10
+.95 ][]$
+ []
 
 [2]
 
-LaTeX Warning: Reference `def:state' on page 3 undefined on input line 160.
+LaTeX Warning: Reference `def:state' on page 3 undefined on input line 171.
+
+
+Overfull \hbox (1.21536pt too wide) in paragraph at lines 176--177
+[]\T1/mdbch/m/n/10.95 The rep-re-sen-ta-tion $\OML/mdbch/m/it/10.95 ^^Y[]$ \T1/
+mdbch/m/n/10.95 is de-fined on the dense sub-space $\U/xmdeuf/m/n/10.95 A\OML/m
+dbch/m/it/10.95 =J \OMS/mdbch/m/n/10.95 ^^Z [][]$ \T1/mdbch/m/n/10.95 by left m
+ul-ti-pli-ca-tion, $\OML/mdbch/m/it/10.95 ^^Y[]\OT1/mdbch/m/n/10.95 (\OML/mdbch
+/m/it/10.95 A\OT1/mdbch/m/n/10.95 )[\OML/mdbch/m/it/10.95 B\OT1/mdbch/m/n/10.95
+ ] :=
+ []
 
 [3]
 
-LaTeX Warning: Reference `def:state' on page 4 undefined on input line 167.
-
-
 LaTeX Warning: Reference `def:cyclic-vector' on page 4 undefined on input line 
-181.
+185.
 
 
 LaTeX Warning: Reference `def:equivalent-representations' on page 4 undefined o
-n input line 185.
+n input line 189.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 192.
+(Font)              scaled to size 11.52008pt on input line 196.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 192.
+(Font)              scaled to size 11.52008pt on input line 196.
 
-LaTeX Warning: Reference `def:state' on page 4 undefined on input line 196.
-
-
-LaTeX Warning: Reference `def:state' on page 4 undefined on input line 210.
-
-[4]
-
-LaTeX Warning: Reference `def:state' on page 5 undefined on input line 221.
+LaTeX Warning: Reference `def:state' on page 4 undefined on input line 200.
 
 
-LaTeX Warning: Reference `def:pure-state' on page 5 undefined on input line 229
+LaTeX Warning: Reference `def:state' on page 4 undefined on input line 214.
+
+
+LaTeX Warning: Reference `def:state' on page 4 undefined on input line 225.
+
+
+LaTeX Warning: Reference `def:pure-state' on page 4 undefined on input line 233
 .
 
 
-LaTeX Warning: Reference `def:state' on page 5 undefined on input line 231.
+LaTeX Warning: Reference `def:state' on page 4 undefined on input line 236.
 
+[4]
 
 LaTeX Warning: Reference `def:one-dimensional-projector' on page 5 undefined on
- input line 249.
+ input line 254.
 
 [5]
 
-LaTeX Warning: Reference `def:state-space' on page 6 undefined on input line 29
-6.
+LaTeX Warning: Reference `def:state-space' on page 6 undefined on input line 30
+1.
 
 
-LaTeX Warning: Reference `ch:classical-mechanics' on page 6 undefined on input 
-line 296.
-
-
-LaTeX Warning: Reference `sec:non-abelian-observables' on page 6 undefined on i
-nput line 296.
-
-
-LaTeX Warning: Reference `def:state-space' on page 6 undefined on input line 29
-8.
+LaTeX Warning: Reference `def:state-space' on page 6 undefined on input line 30
+3.
 
 
 LaTeX Warning: Reference `def:c-star-algebra' on page 6 undefined on input line
- 301.
-
-[6]
-
-LaTeX Warning: Reference `thm:gelfand' on page 7 undefined on input line 304.
+ 306.
 
 
-LaTeX Warning: Reference `def:c-star-algebra' on page 7 undefined on input line
- 308.
+LaTeX Warning: Reference `thm:gelfand' on page 6 undefined on input line 309.
 
 
-LaTeX Warning: Reference `def:hilbert' on page 7 undefined on input line 308.
-
-
-LaTeX Warning: Reference `def:quantum-system' on page 7 undefined on input line
+LaTeX Warning: Reference `def:c-star-algebra' on page 6 undefined on input line
  313.
 
 
-LaTeX Warning: Reference `ch:classical-mechanics' on page 7 undefined on input 
-line 330.
+LaTeX Warning: Reference `def:hilbert' on page 6 undefined on input line 313.
 
 
-LaTeX Warning: Reference `def:gelfand-spectrum' on page 7 undefined on input li
-ne 330.
+LaTeX Warning: Reference `def:quantum-system' on page 6 undefined on input line
+ 318.
 
 
-LaTeX Warning: Reference `def:gelfand-transform' on page 7 undefined on input l
-ine 330.
+LaTeX Warning: Reference `ch:classical-mechanics' on page 6 undefined on input 
+line 335.
 
 
-LaTeX Warning: Reference `sec:non-abelian-observables' on page 7 undefined on i
-nput line 330.
+LaTeX Warning: Reference `def:gelfand-spectrum' on page 6 undefined on input li
+ne 335.
 
+[6]
 
-LaTeX Warning: Reference `thm:gelfand-naimark-commutative' on page 7 undefined 
-on input line 335.
+LaTeX Warning: Reference `sec:non-commutative-observables' on page 7 undefined 
+on input line 337.
 
 
 LaTeX Warning: Reference `sec:operational-framework' on page 7 undefined on inp
-ut line 335.
+ut line 358.
+
+
+LaTeX Warning: Reference `sec:operational-framework' on page 7 undefined on inp
+ut line 365.
 
 [7]
 
 LaTeX Warning: Reference `sec:operational-framework' on page 8 undefined on inp
-ut line 351.
+ut line 391.
 
 
-LaTeX Warning: Reference `sec:operational-framework' on page 8 undefined on inp
-ut line 358.
+LaTeX Warning: Reference `def:hilbert' on page 8 undefined on input line 397.
+
+
+LaTeX Warning: Reference `def:unbounded-operators' on page 8 undefined on input
+ line 425.
 
 [8]
 
-LaTeX Warning: Reference `sec:operational-framework' on page 9 undefined on inp
-ut line 384.
-
-
-LaTeX Warning: Reference `def:hilbert' on page 9 undefined on input line 390.
-
-
-LaTeX Warning: Reference `def:unbounded-operators' on page 9 undefined on input
- line 416.
+LaTeX Warning: Reference `sec:classical-observable-algebra' on page 9 undefined
+ on input line 484.
 
 [9]
 
-LaTeX Warning: Reference `sec:classical-observable-algebra' on page 10 undefine
-d on input line 475.
+LaTeX Warning: Reference `def:hilbert' on page 10 undefined on input line 508.
+
+
+LaTeX Warning: Reference `def:unitary-reps' on page 10 undefined on input line 
+508.
+
+
+LaTeX Warning: Reference `def:unitary-reps' on page 10 undefined on input line 
+515.
+
+
+LaTeX Warning: Reference `def:unbounded-operator' on page 10 undefined on input
+ line 515.
 
 [10]
 
-LaTeX Warning: Reference `def:unitary-reps' on page 11 undefined on input line 
-499.
+LaTeX Warning: Reference `def:infinitesimal-gen' on page 11 undefined on input 
+line 590.
 
 
-LaTeX Warning: Reference `def:unitary-reps' on page 11 undefined on input line 
-506.
+LaTeX Warning: Reference `sec:intro-alg-quant' on page 11 undefined on input li
+ne 597.
 
 
-LaTeX Warning: Reference `def:unbounded-operator' on page 11 undefined on input
- line 506.
+LaTeX Warning: Reference `def:jb-embedding' on page 11 undefined on input line 
+597.
 
 [11]
 
-LaTeX Warning: Reference `def:infinitesimal-gen' on page 12 undefined on input 
-line 579.
+LaTeX Warning: Reference `def:hilbert' on page 12 undefined on input line 603.
+
+
+LaTeX Warning: Reference `def:selfadjoint' on page 12 undefined on input line 6
+04.
+
+
+LaTeX Warning: Reference `def:state-space' on page 12 undefined on input line 6
+13.
+
+
+LaTeX Warning: Reference `def:jb-embedding' on page 12 undefined on input line 
+616.
+
+
+LaTeX Warning: Reference `def:obs-set' on page 12 undefined on input line 616.
+
+
+LaTeX Warning: Reference `def:normed-obs-set' on page 12 undefined on input lin
+e 616.
+
+
+LaTeX Warning: Reference `def:state' on page 12 undefined on input line 622.
 
 [12]
 
-LaTeX Warning: Reference `sec:intro-alg-quant' on page 13 undefined on input li
-ne 605.
-
-
-LaTeX Warning: Reference `def:jb-algebra' on page 13 undefined on input line 60
-5.
-
-
-LaTeX Warning: Reference `def:jb-embedding' on page 13 undefined on input line 
-605.
-
-
 LaTeX Warning: Reference `def:physical-system' on page 13 undefined on input li
-ne 605.
+ne 636.
+
+
+LaTeX Warning: Reference `ch:classical-mechanics' on page 13 undefined on input
+ line 657.
+
+
+LaTeX Warning: Reference `ch:classical-mechanics' on page 13 undefined on input
+ line 662.
 
 [13]
 
-LaTeX Warning: Reference `def:state-space' on page 14 undefined on input line 6
-30.
+LaTeX Warning: Reference `ch:classical-mechanics' on page 14 undefined on input
+ line 666.
 
 
-LaTeX Warning: Reference `def:jb-embedding' on page 14 undefined on input line 
-633.
+LaTeX Warning: Reference `def:gel-alg' on page 14 undefined on input line 670.
 
 
-LaTeX Warning: Reference `def:jb-embedding' on page 14 undefined on input line 
-637.
+LaTeX Warning: Reference `def:obs-set' on page 14 undefined on input line 670.
 
 
-LaTeX Warning: Reference `def:obs-set' on page 14 undefined on input line 637.
+LaTeX Warning: Reference `eq:sup-norm' on page 14 undefined on input line 677.
+
+
+LaTeX Warning: Reference `def:gel-alg' on page 14 undefined on input line 677.
 
 
 LaTeX Warning: Reference `def:normed-obs-set' on page 14 undefined on input lin
-e 637.
+e 677.
 
 
-LaTeX Warning: Reference `def:physical-system' on page 14 undefined on input li
-ne 637.
+LaTeX Warning: Reference `prop:squared-norm-norm-squared' on page 14 undefined 
+on input line 677.
 
 
-LaTeX Warning: Reference `def:state' on page 14 undefined on input line 644.
+LaTeX Warning: Reference `def:state' on page 14 undefined on input line 684.
 
 
-LaTeX Warning: Reference `def:physical-system' on page 14 undefined on input li
-ne 659.
+LaTeX Warning: Reference `def:state-space' on page 14 undefined on input line 6
+84.
 
 
-LaTeX Warning: Reference `def:jb-algebra' on page 14 undefined on input line 65
-9.
-
-[14]
-
-LaTeX Warning: Reference `sec:intro-alg-quant' on page 15 undefined on input li
-ne 669.
+LaTeX Warning: Reference `def:jb-embedding' on page 14 undefined on input line 
+691.
 
 
-LaTeX Warning: Reference `def:physical-system' on page 15 undefined on input li
-ne 669.
+LaTeX Warning: Reference `def:smooth-subalgebra' on page 14 undefined on input 
+line 699.
 
 
-LaTeX Warning: Reference `def:unbounded-op' on page 15 undefined on input line 
-685.
+LaTeX Warning: Reference `def:smooth-subalgebra' on page 14 undefined on input 
+line 699.
 
 
-LaTeX Warning: Reference `def:ess-selfadjoint' on page 15 undefined on input li
-ne 685.
-
-[15]
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 16 undefined on input
- line 688.
-
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 16 undefined on input
- line 693.
-
-
-LaTeX Warning: Reference `thm:gelfand' on page 16 undefined on input line 693.
-
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 16 undefined on input
- line 693.
-
-
-Overfull \hbox (7.52348pt too wide) in paragraph at lines 693--694
-\T1/mdbch/m/n/10.95 Chapter [] re-con-structed Hamil-to-nian me-chan-ics from a
- com-mu-ta-tive uni-tal $\OML/mdbch/m/it/10.95 C[]$\T1/mdbch/m/n/10.95 -algebra
- through the Gelfand-
- []
-
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 16 undefined on input
- line 697.
-
-
-LaTeX Warning: Reference `def:gel-alg' on page 16 undefined on input line 701.
-
-
-LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 701
-.
-
-
-LaTeX Warning: Reference `def:obs-set' on page 16 undefined on input line 701.
-
-
-LaTeX Warning: Reference `def:jordan-product' on page 16 undefined on input lin
-e 701.
-
-
-LaTeX Warning: Reference `def:jb-algebra' on page 16 undefined on input line 70
-1.
-
-
-LaTeX Warning: Reference `def:jb-embedding' on page 16 undefined on input line 
+LaTeX Warning: Reference `def:jb-embedding' on page 14 undefined on input line 
 701.
 
 
-LaTeX Warning: Reference `eq:sup-norm' on page 16 undefined on input line 708.
+LaTeX Warning: Reference `def:unital-c-star-algebra' on page 14 undefined on in
+put line 710.
 
 
-LaTeX Warning: Reference `def:gel-alg' on page 16 undefined on input line 708.
-
-
-LaTeX Warning: Reference `def:normed-obs-set' on page 16 undefined on input lin
-e 708.
-
-
-LaTeX Warning: Reference `prop:comp-squares' on page 16 undefined on input line
- 708.
-
-
-LaTeX Warning: Reference `def:c-star-algebra' on page 16 undefined on input lin
-e 708.
-
-[16]
-
-LaTeX Warning: Reference `def:state' on page 17 undefined on input line 715.
-
-
-LaTeX Warning: Reference `def:state-space' on page 17 undefined on input line 7
-15.
-
-
-LaTeX Warning: Reference `def:jb-embedding' on page 17 undefined on input line 
-722.
-
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 17 undefined on input
- line 732.
-
-
-LaTeX Warning: Reference `def:gel-alg' on page 17 undefined on input line 732.
-
-
-LaTeX Warning: Reference `def:smooth-subalgebra' on page 17 undefined on input 
-line 732.
-
-
-LaTeX Warning: Reference `rmk:obstruction-poi-strc' on page 17 undefined on inp
-ut line 732.
-
-
-LaTeX Warning: Reference `def:smooth-subalgebra' on page 17 undefined on input 
-line 732.
-
-
-LaTeX Warning: Reference `def:jb-embedding' on page 17 undefined on input line 
-734.
-
-
-LaTeX Warning: Reference `def:lie-jordan' on page 17 undefined on input line 73
-4.
-
-
-LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 17 undefined on inpu
-t line 734.
-
-
-LaTeX Warning: Reference `ch:classical-mechanics' on page 17 undefined on input
- line 741.
-
-
-LaTeX Warning: Reference `def:time-evolution' on page 17 undefined on input lin
-e 741.
-
-
-LaTeX Warning: Reference `def:time-evolution' on page 17 undefined on input lin
-e 741.
-
-
-LaTeX Warning: Reference `def:unital-c-star-algebra' on page 17 undefined on in
-put line 750.
-
-
-LaTeX Warning: Reference `def:pure-state' on page 17 undefined on input line 75
+LaTeX Warning: Reference `def:pure-state' on page 14 undefined on input line 71
 0.
 
 
-LaTeX Warning: Reference `prop:equivalence_states_characters' on page 17 undefi
-ned on input line 750.
+LaTeX Warning: Reference `prop:equivalence_states_characters' on page 14 undefi
+ned on input line 710.
 
 
-LaTeX Warning: Reference `thm:gelfand' on page 17 undefined on input line 750.
+LaTeX Warning: Reference `thm:gelfand' on page 14 undefined on input line 710.
 
 
-LaTeX Warning: Reference `def:character' on page 17 undefined on input line 750
+LaTeX Warning: Reference `def:character' on page 14 undefined on input line 710
 .
 
-[17]
+[14]
+Overfull \hbox (7.79129pt too wide) in paragraph at lines 713--714
+[]\T1/mdbch/m/n/10.95 For a proof of this state-ment, see Re-mark [][]2.3.20[][
+]. Con-se-quently $\OML/mdbch/m/it/10.95 ^^Y\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/
+it/10.95 A\OT1/mdbch/m/n/10.95 )$ \T1/mdbch/m/n/10.95 co-in-cides with the fam-
+ily $\OMS/mdbch/m/n/10.95 f\OML/mdbch/m/it/10.95 !\OT1/mdbch/m/n/10.95 (\OML/md
+bch/m/it/10.95 A\OT1/mdbch/m/n/10.95 )\OMS/mdbch/m/n/10.95 g[]$\T1/mdbch/m/n/10
+.95 .
+ []
 
-LaTeX Warning: Reference `def:gelfand-transform' on page 18 undefined on input 
-line 753.
 
-
-LaTeX Warning: Reference `def:character' on page 18 undefined on input line 760
+LaTeX Warning: Reference `def:character' on page 15 undefined on input line 717
 .
 
 
-LaTeX Warning: Reference `thm:gelfand' on page 18 undefined on input line 767.
+LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 724.
 
 
-LaTeX Warning: Reference `def:weak_topologies' on page 18 undefined on input li
-ne 767.
+LaTeX Warning: Reference `def:weak_topologies' on page 15 undefined on input li
+ne 724.
 
 
-LaTeX Warning: Reference `prop:spectrum-compactness' on page 18 undefined on in
-put line 767.
+LaTeX Warning: Reference `prop:spectrum-compactness' on page 15 undefined on in
+put line 724.
 
 
-LaTeX Warning: Reference `thm:completion' on page 18 undefined on input line 76
+LaTeX Warning: Reference `thm:completion' on page 15 undefined on input line 72
+4.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 731.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 9.66995pt on input line 733.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 6.76897pt on input line 733.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 4.83498pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 733.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 733.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 733.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 9.60007pt on input line 735.
+
+LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
+ line 735.
+
+
+LaTeX Warning: Reference `def:gel-alg' on page 15 undefined on input line 737.
+
+
+LaTeX Warning: Reference `def:jordan-product' on page 15 undefined on input lin
+e 737.
+
+
+LaTeX Warning: Reference `def:jb-embedding' on page 15 undefined on input line 
+737.
+
+
+LaTeX Warning: Reference `eq:sup-norm' on page 15 undefined on input line 739.
+
+
+LaTeX Warning: Reference `prop:comp-squares' on page 15 undefined on input line
+ 739.
+
+
+LaTeX Warning: Reference `def:smooth-subalgebra' on page 15 undefined on input 
+line 741.
+
+
+LaTeX Warning: Reference `rmk:obstruction-poi-strc' on page 15 undefined on inp
+ut line 741.
+
+
+Underfull \hbox (badness 1231) in paragraph at lines 741--741
+[]\T1/mdbch/m/n/10 Imposed ex-ter-nally, smooth dense Pois-son
+ []
+
+
+LaTeX Warning: Reference `def:lie-jordan' on page 15 undefined on input line 74
+1.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 741.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 741.
+
+LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 15 undefined on inpu
+t line 741.
+
+
+Underfull \hbox (badness 1033) in paragraph at lines 741--742
+[]\T1/mdbch/m/n/10 Intrinsic, $\OMS/mdbch/m/n/10 f\OML/mdbch/m/it/10 A; B\OMS/m
+dbch/m/n/10 g \OT1/mdbch/m/n/10 = [][\OML/mdbch/m/it/10 A; B\OT1/mdbch/m/n/10 ]
+$ \T1/mdbch/m/n/10 as per Def-i-ni-
+ []
+
+
+LaTeX Warning: Reference `def:state-space' on page 15 undefined on input line 7
+43.
+
+
+LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 745.
+
+
+LaTeX Warning: Reference `def:weak_topologies' on page 15 undefined on input li
+ne 747.
+
+
+LaTeX Warning: Reference `prop:spectrum-compactness' on page 15 undefined on in
+put line 747.
+
+
+LaTeX Warning: Reference `thm:completion' on page 15 undefined on input line 74
 7.
 
 
-LaTeX Warning: Reference `def:pre-hilbert' on page 18 undefined on input line 7
-67.
+Overfull \hbox (16.64798pt too wide) in paragraph at lines 733--751
+ [][] 
+ []
 
 
-LaTeX Warning: Reference `cor:gelfand' on page 18 undefined on input line 770.
+LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
+ line 751.
 
 
-LaTeX Warning: Reference `sec:1-example' on page 18 undefined on input line 776
+LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
+ line 751.
+
+
+LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 15 undefined on inpu
+t line 755.
+
+[15]
+
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 762
 .
 
 
-LaTeX Warning: Reference `rmk:obstruction-poi-strc' on page 18 undefined on inp
-ut line 779.
+LaTeX Warning: Reference `def:unital-c-star-algebra' on page 16 undefined on in
+put line 766.
 
 
-LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 18 undefined on inpu
-t line 779.
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 771
+.
 
 
-LaTeX Warning: Reference `ch:classical-mechanics' on page 18 undefined on input
- line 779.
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 771
+.
+
+
+LaTeX Warning: Reference `def:unital-c-star-algebra' on page 16 undefined on in
+put line 771.
+
+
+LaTeX Warning: Reference `def:state' on page 16 undefined on input line 772.
+
+
+LaTeX Warning: Reference `def:state' on page 16 undefined on input line 777.
+
+[16]
+
+LaTeX Warning: Reference `def:cyclic-vector' on page 17 undefined on input line
+ 794.
+
+
+LaTeX Warning: Reference `lemma:schur' on page 17 undefined on input line 810.
+
+[17]
+
+LaTeX Warning: Reference `def:cyclic-vector' on page 18 undefined on input line
+ 844.
+
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 852.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 852.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 852.
+
+LaTeX Warning: Reference `sec:1-example' on page 18 undefined on input line 868
+.
+
+
+LaTeX Warning: Reference `sec:1-strocchi' on page 18 undefined on input line 87
+0.
 
 [18]
 
-LaTeX Warning: Reference `sec:1-example' on page 19 undefined on input line 784
-.
+LaTeX Warning: Reference `sec:ex-three' on page 19 undefined on input line 872.
 
 
-LaTeX Warning: Reference `def:unital-c-star-algebra' on page 19 undefined on in
-put line 800.
 
-
-LaTeX Warning: Reference `def:state' on page 19 undefined on input line 807.
+LaTeX Warning: Reference `thm:quantum-noether' on page 19 undefined on input li
+ne 872.
 
 [19]
-
-LaTeX Warning: Reference `sec:1-example' on page 20 undefined on input line 840
-.
-
-[20]
-
-LaTeX Warning: Reference `sec:1-example' on page 21 undefined on input line 888
-.
-
-[21]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 890.
+(Font)              scaled to size 23.88496pt on input line 873.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 890.
+(Font)              scaled to size 23.88496pt on input line 873.
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 890.
- [22
+(Font)              scaled to size 10.51207pt on input line 873.
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 11.73846pt on input line 873.
+ [20
 
 ] (./bozza40.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `bozza40.out' has not changed.
-(rerunfilecheck)             Checksum: 6F42C1B0B5ECE25BCBD46DDDE7A1921C;2627.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                bozza40
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 618DAA796A2EF8E8B2F438CC35A2ECD8;1389.
 Package logreq Info: Writing requests to 'bozza40.run.xml'.
 \openout1 = `bozza40.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33938 strings out of 478268
- 643933 string characters out of 5846347
- 1430986 words of memory out of 5000000
- 51425 multiletter control sequences out of 15000+600000
- 523546 words of font info for 100 fonts, out of 8000000 for 9000
+ 33998 strings out of 478268
+ 644633 string characters out of 5846347
+ 1431101 words of memory out of 5000000
+ 51462 multiletter control sequences out of 15000+600000
+ 561122 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,9n,106p,2071b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr
-7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/
-md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/
-mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/math
-design/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publ
-ic/mathdesign/mdbch/md-chrma.pfb>
-Output written on bozza40.pdf (22 pages, 223623 bytes).
+ 103i,18n,106p,1286b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chbi7m.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7
+v.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
+d-chr7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/m
+dbch/md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
+sign/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
+/mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
+public/cm-super/sftt1095.pfb>
+Output written on bozza40.pdf (20 pages, 241831 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 568 compressed objects within 6 object streams
- 177 named destinations out of 1000 (max. 500000)
- 85 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 521 compressed objects within 6 object streams
+ 174 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

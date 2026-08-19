@@ -2344,30 +2344,12 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="2">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="3">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="4">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="5">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="6">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="7">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="8">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="9">morettiSpectralTheoryQuantum</bcf:citekey>
-    <bcf:citekey order="10">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="11">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
-    <bcf:citekey order="12">morettiSpectralTheoryQuantum</bcf:citekey>
-    <bcf:citekey order="13">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="14">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="15">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="16">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="17">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="18">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="19">hallLieGroupsLie2003</bcf:citekey>
-    <bcf:citekey order="20">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="21">reedMethodsModernMathematical2003</bcf:citekey>
-    <bcf:citekey order="22">morettiSpectralTheoryQuantum</bcf:citekey>
-    <bcf:citekey order="23">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
-    <bcf:citekey order="24">hallLieGroupsLie2003</bcf:citekey>
+    <bcf:citekey order="1">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="2">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="3">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="4">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="5">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="6">landsmanMathematicalTopicsBetween1998</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2376,13 +2358,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

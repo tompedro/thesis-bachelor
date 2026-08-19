@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 11:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bozza20.tex
-(./bozza20.tex
+**bozza70.tex
+(./bozza70.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (./preambolo_bozza.tex
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
@@ -1125,8 +1125,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./bozza20.aux)
-\openout1 = `bozza20.aux'.
+ (./bozza70.aux)
+\openout1 = `bozza70.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
@@ -1227,17 +1227,24 @@ File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `bozza20.bcf'.
+\openout4 = `bozza70.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'bozza20.bbl' found.
+Package biblatex Info: ... file 'bozza70.bbl' found.
 
-(./bozza20.bbl)
+(./bozza70.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                landsmanMathematicalTopicsBetween1998
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 4.
 Package biblatex Info: Reference segment=0 on input line 4.
 Package hyperref Info: Link coloring ON on input line 4.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1252,300 +1259,267 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
 LaTeX Info: Redefining \nameref on input line 4.
- (./bozza20.out) (./bozza20.out)
+ (./bozza70.out) (./bozza70.out)
 \@outlinefile=\write5
-\openout5 = `bozza20.out'.
+\openout5 = `bozza70.out'.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 13.82408pt on input line 6.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 13.82408pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 8.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 8.
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
 LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
- 5.
+ 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 5.
+(Font)              scaled to size 10.51207pt on input line 9.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
+(Font)              scaled to size 7.68005pt on input line 9.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 5.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 6.72005pt on input line 5.
+(Font)              scaled to size 5.76004pt on input line 9.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 10.5886pt on input line 16.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 7.73596pt on input line 16.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 5.80197pt on input line 16.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5.
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 1 undef
+ined on input line 51.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 5.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5.
-
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 6.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 6.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 6.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 8.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 13.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.5886pt on input line 14.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.73596pt on input line 14.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.80197pt on input line 14.
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 20.
-(/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
-File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
-)
-LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 20.
-LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 54.
+(Font)              scaled to size 7.68005pt on input line 57.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 57.
 
+LaTeX Warning: Reference `def:hilbert-space' on page 1 undefined on input line 
+57.
+
+
+LaTeX Warning: Reference `def:bounded-operators' on page 1 undefined on input l
+ine 57.
+
+
+LaTeX Warning: Reference `def:pure-state-space' on page 1 undefined on input li
+ne 69.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 73.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 73.
+
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 1 undef
+ined on input line 73.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
+(Font)              scaled to size 10.51207pt on input line 84.
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
+
+LaTeX Warning: Reference `def:wstar-topology' on page 2 undefined on input line
+ 94.
+
+
+LaTeX Warning: Reference `def:pure-state-space' on page 2 undefined on input li
+ne 114.
+
+
+LaTeX Warning: Reference `def:gns-construction' on page 2 undefined on input li
+ne 114.
+
+
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 2 undef
+ined on input line 118.
+
+
+Overfull \hbox (82.49974pt too wide) in paragraph at lines 118--119
+\T1/mdbch/m/n/10.95 gether with Corol-lary [][]3.2.7[][]. Con-ti-nu-ity: Propo-
+si-tion [][]3.2.6[][]. Full ar-gu-ment in [[]].
+ []
+
+
+LaTeX Warning: Reference `remark:vec-der' on page 2 undefined on input line 121
+.
+
+
+LaTeX Warning: Reference `def:differential-map' on page 2 undefined on input li
+ne 128.
+
+
+LaTeX Warning: Reference `def:sympl-man' on page 2 undefined on input line 147.
+
+
 [2]
+Overfull \hbox (9.72269pt too wide) in paragraph at lines 151--152
+[]\T1/mdbch/m/n/10.95 Antisymmetry: $[] \OT1/mdbch/m/n/10.95 = (\OML/mdbch/m/n/
+10.95 
+\OML/mdbch/m/it/10.95 ; \OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m/n/10.95 )$\T1/mdbc
+h/m/n/10.95 . Closed-ness: con-stant co-ef-fi-cients. Non-de-gen-er-acy: $\OML/
+mdbch/m/it/10.95 !\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 V\OT1/mdbch/m/n/1
+0.95 (\OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m/n/10.95 )\OML/mdbch/m/it/10.95 ; V\O
+T1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 i\OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m
+/n/10.95 )) =
+ []
 
-LaTeX Warning: Reference `def:phase_space' on page 3 undefined on input line 11
-5.
 
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 115.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 115.
+LaTeX Warning: Reference `def:ham-field' on page 3 undefined on input line 162.
+
+
+
+LaTeX Warning: Reference `def:poi-fun' on page 3 undefined on input line 181.
+
+
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 3 undef
+ined on input line 196.
+
+
+LaTeX Warning: Reference `def:ham-field' on page 3 undefined on input line 196.
+
+
+
+LaTeX Warning: Reference `def:unitary-operator' on page 3 undefined on input li
+ne 200.
+
+
+LaTeX Warning: Reference `def:symp-ham-fields' on page 3 undefined on input lin
+e 200.
+
+
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 3 undef
+ined on input line 211.
+
+
+LaTeX Warning: Reference `thm:gelfand-transform' on page 3 undefined on input l
+ine 219.
+
 [3]
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 164.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 164.
+
+LaTeX Warning: Reference `def:jordan-product' on page 4 undefined on input line
+ 244.
 
 
-LaTeX Warning: Reference `def:phase_space' on page 4 undefined on input line 18
-6.
-
-[4]
-
-LaTeX Warning: Reference `def:phase_space' on page 5 undefined on input line 22
-7.
-
-[5]
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 11.60394pt on input line 244.
- [6] [7]
-
-LaTeX Warning: Reference `def:lie-algebra' on page 8 undefined on input line 31
-9.
+LaTeX Warning: Reference `def:sympl-man' on page 4 undefined on input line 244.
 
 
-Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 359.
 
-[8] [9] [10]
-
-LaTeX Warning: Reference `def:sympl-man' on page 11 undefined on input line 418
-.
-
-[11]
-
-LaTeX Warning: Reference `def:sympl-man' on page 12 undefined on input line 446
-.
+LaTeX Warning: Reference `def:sympl-man' on page 4 undefined on input line 257.
 
 
-LaTeX Warning: Reference `def:inf-gen' on page 12 undefined on input line 450.
-
-
-LaTeX Warning: Reference `def:mom-map' on page 12 undefined on input line 454.
-
-
-LaTeX Warning: Reference `thm:noether' on page 12 undefined on input line 476.
-
-[12]
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 497.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 497.
-LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 497.
-LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 497.
- [13
-
-] (./bozza20.aux)
+[4] (./bozza70.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `bozza20.out' has not changed.
-(rerunfilecheck)             Checksum: 39D46D00FA53C855AC98A8D5A658CF43;1471.
-Package logreq Info: Writing requests to 'bozza20.run.xml'.
-\openout1 = `bozza20.run.xml'.
+Package rerunfilecheck Info: File `bozza70.out' has not changed.
+(rerunfilecheck)             Checksum: D4309047E8588AF5AB74E87C37D96FB2;786.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                bozza70
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'bozza70.run.xml'.
+\openout1 = `bozza70.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33817 strings out of 478268
- 641425 string characters out of 5846347
- 1426214 words of memory out of 5000000
- 51376 multiletter control sequences out of 15000+600000
- 548426 words of font info for 144 fonts, out of 8000000 for 9000
+ 33674 strings out of 478268
+ 638885 string characters out of 5846347
+ 1431478 words of memory out of 5000000
+ 51290 multiletter control sequences out of 15000+600000
+ 510139 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,9n,106p,1223b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr
-7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/
-md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/
-mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/math
-design/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
-c/cm-super/sftt1095.pfb>
-Output written on bozza20.pdf (13 pages, 182275 bytes).
+ 103i,8n,106p,740b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-c
+hr7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbc
+h/md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesig
+n/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ma
+thdesign/mdbch/md-chrma.pfb>
+Output written on bozza70.pdf (4 pages, 115389 bytes).
 PDF statistics:
- 358 PDF objects out of 1000 (max. 8388607)
- 313 compressed objects within 4 object streams
- 91 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

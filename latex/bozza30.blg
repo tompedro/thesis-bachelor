@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bozza30.blg'
-[107] biber-darwin:340> INFO - === Mon Aug 10, 2026, 10:41:22
-[130] Biber.pm:418> INFO - Reading 'bozza30.bcf'
-[238] Biber.pm:972> INFO - Found 8 citekeys in bib section 0
-[258] Biber.pm:4383> INFO - Processing section 0
-[271] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[281] bibtex.pm:1713> INFO - LaTeX decoding ...
-[350] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[471] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[471] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[471] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[483] bbl.pm:654> INFO - Writing 'bozza30.bbl' with encoding 'UTF-8'
-[489] bbl.pm:757> INFO - Output to bozza30.bbl
+[115] biber-darwin:340> INFO - === Wed Aug 19, 2026, 11:07:43
+[148] Biber.pm:418> INFO - Reading 'bozza30.bcf'
+[260] Biber.pm:972> INFO - Found 8 citekeys in bib section 0
+[283] Biber.pm:4383> INFO - Processing section 0
+[298] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[307] bibtex.pm:1713> INFO - LaTeX decoding ...
+[380] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[495] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[495] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[495] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[495] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[512] bbl.pm:654> INFO - Writing 'bozza30.bbl' with encoding 'UTF-8'
+[517] bbl.pm:757> INFO - Output to bozza30.bbl
