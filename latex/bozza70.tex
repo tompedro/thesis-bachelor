@@ -2,270 +2,1546 @@
 \setcounter{chapter}{3}
 \setcounter{section}{0}
 \begin{document}
+	
+%TODO: HOOK INIZIALE SUL CAPITOLO
+	
+\section{Kähler Geometry}
+\label{sec:almost-kahler-hilbertian}
+The mathematical framework used in this chapter is generalization of the one used in Chapter \ref{chp:1}. We see that differential manifolds can be stated substituting open sets of $\R^n$ as the image of charts of the maximal atlas. In fact, to generalize differential geometry to complex numbers, we need an operation that mimics the complex unit, called a complex structure. Together with a particular metric and manifold, this will create the key structure of the chapter, a Kähler manifold. This mathematical concept is rich enough to accommodate the whole framework of quantum mechanics, as we will see in the next sections.
 
-\section{Poisson Manifolds and Symplectic Leaves}
+We start by modeling a smooth manifold onto an Hilbert space, as per Definition \ref{def:hilbert}. This statement follows Definition \ref{def:smooth-man}, still we need to ensure compatibility with the structures already imposed on the Hilbert space. 
 
-\begin{definition}[Poisson manifold]\label{def:poisson-manifold}
-	A \emph{Poisson manifold} is a pair $(P,\{\cdot,\cdot\})$, where $P$ is a smooth manifold and $\{\cdot,\cdot\}: C^\infty(P,\R) \times C^\infty(P,\R) \to C^\infty(P,\R)$ is $\R$-bilinear, antisymmetric, satisfies the Jacobi identity, and the Leibniz rule
+\begin{definition}[Hilbertian manifold]
+	\label{def:hilbert-manifold}
+	A real smooth Hilbertian manifold $\mathcal{M}$ modeled on a real Hilbert space $\mathbb{H}$, as per Definition \ref{def:hilbert}, is a smooth manifold, as per Definition \ref{def:smooth-man}, whose maximal atlas $\mathcal{A} = \{(U_\alpha, \phi_\alpha)\}_{\alpha \in I}$, as in Definition \ref{def:maximal-atlas}, satisfies the following conditions.
+	\begin{enumerate}
+		\item For every $\alpha \in I$, the image $\phi_\alpha(U_\alpha)$ is an open subset of $\mathbb{H}$.
+		\item For every $\alpha, \beta \in I$ such that $U_\alpha \cap U_\beta \neq \emptyset$, the transition map $\phi_\beta \circ \phi_\alpha^{-1}$ is of class $C^\infty$ in the sense of the Fréchet derivative.
+	\end{enumerate}
+\end{definition}
+
+For a real smooth Hilbertian manifold $\mathcal{M}$, the following notation for
+bundles of multilinear maps is used throughout.
+
+\begin{definition}[Families of multilinear maps]
+	\label{def:families-multilinear}
+	Let $\mathcal{M}$ be a real smooth Hilbertian manifold, as per Definition \ref{def:hilbert-manifold}. For each $x \in \mathcal{M}$, consider the Banach spaces of bounded linear operators on $T_x\mathcal{M}$, of bounded linear maps $T_x^*\mathcal{M}\to T_x\mathcal{M}$, and of bounded $n$-linear forms on $T_x\mathcal{M}$. The disjoint unions of these spaces over all $x \in \mathcal{M}$ are denoted, respectively, by
 	\[
-	\{f,hk\} = \{f,h\}k + h\{f,k\}, \qquad f,h,k \in C^\infty(P,\R).
+		\B(T\mathcal{M}) = \bigsqcup_{x \in \mathcal{M}} \B(T_x\mathcal{M}), \qquad \B(T^*\mathcal{M},T\mathcal{M}) = \bigsqcup_{x \in \mathcal{M}} \B(T_x^*\mathcal{M},T_x\mathcal{M}) , \qquad \B_n(T\mathcal{M},\R) =  \bigsqcup_{x \in \mathcal{M}}\B_n(T_x\mathcal{M},\R).
 	\]
 \end{definition}
 
-\begin{definition}[Hamiltonian vector field on a Poisson manifold]\label{def:hamiltonian-vf-poisson}
-	Let $(P,\{\cdot,\cdot\})$ be a Poisson manifold and $h \in C^\infty(P,\R)$. The \emph{Hamiltonian vector field} $\xi_h \in \mathfrak{X}(P)$ is defined by
+\noindent With this notation available, the almost complex structures
+needed to define an almost Kähler manifold can be introduced as smooth
+sections of $\B(T\mathcal{M})$ squaring to $-1$.
+
+\begin{definition}[Almost complex structure]
+	\label{def:almost-complex-structure}
+	Let $\mathcal{M}$ be a real smooth Hilbert manifold, as per Definition \ref{def:hilbert-manifold}. An almost complex structure on $\mathcal{M}$ is a smooth section $J: \mathcal{M} \to \B(T\mathcal{M})$, as per Definition \ref{def:smooth-section}, which is required that for every $x \in \mathcal{M}$, the image operator $J_x \in \B(T\mathcal{M})$ satisfies the property $$J_x \circ J_x = -\Id_{T_x\mathcal{M}}.$$
+\end{definition}
+
+Consequently, the map $J$ endows each real tangent space with the algebraic structure of a complex vector space playing the role of the imaginary unit.
+
+\begin{example}
+	On $\R^{2n}\cong\C^n$ with real coordinates $(x^1,\dots,x^n,y^1,\dots,y^n)$
+	and $z^j=x^j+iy^j$, the linear map defined pointwise by
+	$J\partial_{x^j}=\partial_{y^j}$, $J\partial_{y^j}=-\partial_{x^j}$
+	satisfies $J^2=-\Id$, so it is an almost complex structure as per
+	Definition~\ref{def:almost-complex-structure}. It is the
+	endomorphism induced by multiplication by $i$ on $\C^n$ under the identification $T_z\C^n\cong\C^n$, and its integrability, in the sense of Definition~\ref{def:integrable-acs} comes from the trivial holomorphic atlas of $\C^n$.
+\end{example}
+
+Not every almost complex structure comes from an underlying complex
+manifold structure. The obstruction is measured by a torsion tensor,
+and the case in which it vanishes deserves its own name because it is
+the case relevant to Kähler geometry.
+
+\begin{definition}[Integrable almost complex structure]
+	\label{def:integrable-acs}
+	Let $\mathcal{M}$ be a real smooth Hilbert manifold, as per Definition \ref{def:hilbert-manifold}. An almost complex structure $J$ as per Definition~\ref{def:almost-complex-structure} is integrable if its torsion vanishes. That is, if for every open set $\mathcal{U}\subset\mathcal{M}$ and every pair of smooth vector fields $X,Y$ on $\mathcal{U}$,
 	\[
-	\xi_h f := \{f,h\}, \qquad f \in C^\infty(P,\R).
+		[JX,JY]-[X,Y]-J[X,JY]-J[JX,Y]=0.
 	\]
 \end{definition}
 
-\begin{definition}[Symplectic leaf]\label{def:symplectic-leaf}
-	Let $(P,\{\cdot,\cdot\})$ be a Poisson manifold. A \emph{symplectic leaf} $S_\alpha \subset P$ is a maximal connected immersed submanifold such that
-	\[
-	T_\sigma S_\alpha = \{\xi_h(\sigma) \mid h \in C^\infty(P,\R)\}, \qquad \sigma \in S_\alpha,
-	\]
-	and $\{\cdot,\cdot\}$ restricts to a nondegenerate bracket on $S_\alpha$.
+\noindent The compatibility condition between an almost complex structure and a Riemannian metric that defines an almost Kähler manifold can now be stated.
+
+\begin{definition}[Riemannian metric]
+	\label{def:riemannian-metric}
+	Let $\mathcal{M}$ be a real smooth Hilbertian manifold, as per Definition \ref{def:hilbert-manifold}. A Riemannian metric on $\mathcal{M}$ is a smooth section $g: \mathcal{M} \to \B_2(T\mathcal{M}, \R)$, as in Definition \ref{def:families-multilinear}, that, for each $x \in \mathcal{M}$, the evaluation $g_x : T_x\mathcal{M} \times T_x\mathcal{M} \to \R$ is a symmetric, continuous, and positive-definite bilinear form. 
 \end{definition}
 
-\begin{lemma}\label{lem:vanishing-bracket-leaf}
-	Let $S_\alpha \subset P$ be a symplectic leaf with inclusion $\iota_\alpha: S_\alpha \hookrightarrow P$. If $f \in C^\infty(P,\R)$ vanishes on $S_\alpha$, then $\{f,h\}(\sigma) = 0$ for every $\sigma \in S_\alpha$, $h \in C^\infty(P,\R)$.
-\end{lemma}
-
-\begin{proof}
-	$\xi_h$ is tangent to $S_\alpha$ by Definition \ref{def:symplectic-leaf}, and $f|_{S_\alpha} = 0$, so $\{f,h\}(\sigma) = \xi_h f(\sigma) = 0$.
-\end{proof}
-
-\begin{definition}[Poisson bracket on a symplectic leaf]\label{def:leaf-bracket}
-	For $f,h \in C^\infty(P,\R)$, the \emph{Poisson bracket on $S_\alpha$} is
+\begin{remark}[Local coordinate expression and line element]
+	\label{rem:metric-coordinates}
+	In a local coordinate chart $(U, x)$ with real coordinates $(x^1, \dots, x^n)$, the Riemannian metric $g$ is a symmetric $(0,2)$-tensor field, as in Definition \ref{def:tensor-field}. It is expressed via the tensor product as
 	\begin{equation}
-		\{\iota_\alpha^*f, \iota_\alpha^*h\}_\alpha := \iota_\alpha^*\{f,h\}, \label{eq:leaf-bracket}
+		g = \sum_{i,j=1}^n g_{ij} dx^i \otimes dx^j,
 	\end{equation}
-	well defined by Lemma \ref{lem:vanishing-bracket-leaf}, independently of the extensions $f,h$.
+	where $g_{ij} := g\left(\frac{\partial}{\partial x^i}, \frac{\partial}{\partial x^j}\right)$ are the smooth metric components and $\{dx^i\}$ constitutes the dual basis of the cotangent space. In physics literature, the metric is conventionally denoted by the infinitesimal line element $ds^2$:
+	\begin{equation}
+		ds^2 = \sum_{i,j=1}^n g_{ij} dx^i dx^j.
+	\end{equation}
+	In this notation, the juxtaposition $dx^i dx^j$ is a formal abbreviation for the symmetric tensor product $\frac{1}{2}(dx^i \otimes dx^j + dx^j \otimes dx^i)$. Consequently, expressions such as $dx^2$ strictly denote the rank-two tensor $dx \otimes dx$. When evaluated on a tangent vector field, this tensor returns the square of the vector's spatial projection along the associated coordinate axis.
+\end{remark}
+
+Having set all the structures needed, we are ready to enrich an Hilbertian manifold with an almost complex structure and a Riemannian metric. This generates an almost Kähler manifold.
+
+\begin{definition}[Almost Kähler manifold]
+	\label{def:almost-kahler-manifold}
+	An almost Kähler manifold is a triple $(\mathcal{M},J,g)$, where $\mathcal{M}$ is a real
+	smooth Hilbertian manifold,as per Definition \ref{def:hilbert-manifold}, $J$ is an almost complex structure as per Definition~\ref{def:almost-complex-structure}, and $g$ is a Riemann metric, as in Definition \ref{def:riemannian-metric} such that
+	\begin{enumerate}[label=(\roman*)]
+		\item $g$ is $J$-invariant, that is $g_x(J_xX_x,J_xY_x)=g_x(X_x,Y_x)$ for all $x\in\mathcal{M}$, $X_x,Y_x\in T_x\mathcal{M}$.
+		\item The fundamental form defined via $\omega_x(X_x,Y_x):=g_x(J_xX_x,Y_x)$ is closed.
+	\end{enumerate}
 \end{definition}
 
-\begin{theorem}[Symplectic foliation]\label{thm:symplectic-foliation}
-	Every finite-dimensional Poisson manifold $P$ decomposes as a disjoint union $P = \bigcup_\alpha \iota_\alpha(S_\alpha)$ of symplectic leaves as in Definition \ref{def:symplectic-leaf}, each $\iota_\alpha$ a Poisson immersion with respect to the bracket \eqref{eq:leaf-bracket}. The value $\{f,h\}(\sigma)$ depends only on the restrictions of $f,h$ to the leaf through $\sigma$.
+\begin{remark}\label{rem:almost-kahler-meaning}
+	Definition \ref{def:almost-kahler-manifold} intertwines Riemannian, complex, and symplectic structures. 
+	\begin{itemize}
+		\item Condition (i) makes $J$ a metric isometry, yielding an almost Hermitian structure. 
+		\item Condition (ii) ensures the fundamental $2$-form $\omega=g(J\cdot,\cdot)$ is closed and hence non-degenerate, elevating it to a symplectic form. Thus an almost Kähler manifold is a symplectic manifold, as in Definition \ref{def:sympl-man}, with compatible $J$ and metric $g$.
+	\end{itemize} 
+	Physically, the triad $(g,J,\omega)$ unifies Hamiltonian mechanics, via $\omega$, quantum state distances/transition probabilities via $g$, and complex phase via $J$. The qualifier “almost” reflects that $J$ need not be integrable, \textit{i.e.}, its torsion tensor need not vanish.
+\end{remark}
+
+Once the almost complex structure of an almost Kähler manifold is required to be integrable in the sense of Definition~\ref{def:integrable-acs}, the manifold acquires an underlying holomorphic structure and deserves the sharper name of Kähler manifold, which is the setting in which the projective Hilbert space of a quantum system will be placed.
+
+\begin{definition}[Kähler manifold]
+	\label{def:kahler-manifold-hilbertian}
+	An almost Kähler manifold $(\mathcal{M},J,g)$ as per
+	Definition~\ref{def:almost-kahler-manifold} is called a Kähler
+	manifold if its almost complex structure $J$ is integrable, as per
+	Definition~\ref{def:integrable-acs}.
+\end{definition}
+
+\noindent The fundamental form $\omega$ and the metric $g$ of an
+almost Kähler manifold each induce an isomorphism from the cotangent
+to the tangent space at every point, and it is these two musical
+isomorphisms, rather than $\omega$ and $g$ themselves, that will enter
+directly into the definition of the Poisson and Riemann brackets.
+
+\begin{definition}[Musical isomorphisms of an almost Kähler manifold]
+	\label{def:musical-isomorphisms}
+	Let $(\mathcal{M},J,g)$ be an almost Kähler manifold as per
+	Definition~\ref{def:almost-kahler-manifold}, with fundamental form
+	$\omega$. The musical isomorphisms $I_x,G_x:T_x^*\mathcal{M}\to T_x\mathcal{M}$, for
+	$x\in\mathcal{M}$, are the topological-linear isomorphisms defined implicitly
+	by
+	\begin{equation}
+		\omega_x(I_x\alpha_x,X_x)=\langle\alpha_x,X_x\rangle,\qquad g_x(G_x\alpha_x,X_x)=\langle\alpha_x,X_x\rangle,
+	\end{equation}
+	for $\alpha_x\in T_x^*\mathcal{M}$, $X_x\in T_x\mathcal{M}$. The corresponding smooth
+	sections of $\B(T^*\mathcal{M},T\mathcal{M})$ are denoted $I,G$.
+\end{definition}
+
+\begin{remark}
+	\label{rem:G-JI}
+	The two musical isomorphisms of Definition~\ref{def:musical-isomorphisms}
+	are related by $G=J\circ I$. Indeed, for $\alpha_x\in T_x^*\mathcal{M}$ and
+	$X_x\in T_x\mathcal{M}$, the definitions of $\omega$ and $I_x$ yield
+	\begin{equation}
+		g_x(J_xI_x\alpha_x,X_x)=\omega_x(I_x\alpha_x,X_x)=\langle\alpha_x,X_x\rangle=g_x(G_x\alpha_x,X_x),
+	\end{equation}
+	and non-degeneracy of $g_x$ entails that $J_xI_x\alpha_x=G_x\alpha_x$
+	for every $\alpha_x$, that is, $G=J\circ I$.
+\end{remark}
+
+With the musical isomorphisms in place, two bilinear brackets between
+smooth functions can be defined, one recovering the ordinary
+symplectic Poisson bracket and the other, depending only on the
+metric, providing the dispersion structure that will later encode the
+probabilistic content of quantum mechanics.
+
+\begin{definition}[Poisson and Riemann brackets]
+	\label{def:poisson-riemann-bracket}
+	Let $(\mathcal{M},J,g)$ be an almost Kähler manifold as per
+	Definition~\ref{def:almost-kahler-manifold}, and let $f,l\in
+	C^\infty(\mathcal{M},\R)$. The Poisson bracket $\poisson{f}{l} \in C^\infty(\mathcal{M},\R)$ and the Riemann
+	bracket $((f,l)) \in C^\infty(\mathcal{M},\R)$ are defined via
+	\begin{equation}
+		\poisson{f}{l}:=\langle df,I\,dl\rangle,\qquad ((f,l)):=\langle df,G\,dl\rangle.
+	\end{equation}
+	In which, $I,G$ are the musical isomorphisms of
+	Definition~\ref{def:musical-isomorphisms}, and $\langle \cdot, \cdot \rangle$ is the inner product between forms and vectors. By bilinearity, both
+	extend to smooth complex-valued functions on $\mathcal{M}$.
+\end{definition}
+
+\begin{example}
+	On $\R^2$, identified with $\C$ via $z=x+iy$, define a 2-form, as in Definition \ref{def:forms} via $\omega=dx\wedge dy$ and define a Riemannian metric, as in Definition \ref{def:riemannian-metric} as $g=dx^2+dy^2$. In addition, let $J$ be a complex structure, as in Definition \ref{def:almost-complex-structure}  via $J\partial_x=\partial_y$. 
+	
+	For $f=x$, $l=y$,
+	one has $df=dx$, $dl=dy$, and $I\,dl=-\partial_x$, $G\,dl=\partial_y$
+	from Definition~\ref{def:musical-isomorphisms}. Hence
+	$\poisson{f}{l}=\langle dx,-\partial_x\rangle=-1$ recovers, up to sign
+	convention, the canonical Poisson bracket, while
+	$((f,l))=\langle dx,\partial_y\rangle=0$, since $df$ and $dl$ are
+	$g$-orthogonal. The two coordinate functions are canonically
+	conjugate but statistically independent.
+\end{example}
+
+\begin{remark}
+	\label{rem:poisson-riemann-reformulation}
+	The Poisson bracket of Definition~\ref{def:poisson-riemann-bracket} is
+	the standard symplectic bracket associated with $\omega$ as in Definition \ref{def:poisson-bracket}, while the
+	Riemann bracket, depending only on $g$, is not a symplectic
+	invariant. Using $G=J\circ I$, as per Remark~\ref{rem:G-JI}, together
+	with the $J$-invariance of $\omega$ and $g$,
+	\begin{equation}
+		\poisson{f}{l}=\omega(Idf,Idl)=\omega(Gdf,Gdl),\qquad ((f,l))=g(Gdf,Gdl)=g(Idf,Idl).
+	\end{equation}
+\end{remark}
+
+\noindent The Poisson and Riemann brackets combine into a single
+complex-valued bracket, and together with the ordinary pointwise
+product they generate two further bilinear products on smooth
+functions, the $\circ_\nu$ and $*_\nu$ products, that will be the
+geometric counterpart of the anticommutator and of the operator
+product once the manifold is specialized to $\PH$.
+
+\begin{definition}[Kähler bracket, $\circ_\nu$ and $*_\nu$ products]
+	\label{def:kahler-bracket-products}
+	Let $(\mathcal{M},J,g)$ be an almost Kähler manifold as per
+	Definition~\ref{def:almost-kahler-manifold}, and let $f,l\in
+	C^\infty(\mathcal{M},\C)$. The Kähler bracket between $f$ and $l$ is
+	\begin{equation}
+		\langle f,l\rangle:=((f,l))+i\poisson{f}{l},
+	\end{equation}
+	where $\poisson{\cdot}{\cdot}$ and $((\cdot,\cdot))$ are the brackets
+	of Definition~\ref{def:poisson-riemann-bracket}. For $\nu\in\R$, the
+	$\circ_\nu$ product and the $*_\nu$ product between $f$ and $l$ are
+	the smooth complex functions
+	\begin{equation}
+		f\circ_\nu l:=\tfrac12\nu((f,l))+fl,\qquad f*_\nu l:=\tfrac12\nu\langle f,l\rangle+fl.
+	\end{equation}
+\end{definition}
+
+\begin{remark}
+	\label{rem:algebra-structures}
+	Equipped with the Riemann bracket, or alternatively with the
+	$\circ_\nu$ product, $C^\infty(\mathcal{M},\R)$, respectively $C^\infty(\mathcal{M},\C)$, is a real, respectively complex, commutative, nonassociative algebra. The Kähler bracket and the $*_\nu$ product provide two further complex,
+	nonassociative algebra structures on $C^\infty(\mathcal{M},\C)$. With either of
+	these two products and with complex conjugation as involution, $C^\infty(\mathcal{M},\C)$ is an involutive algebra \cite[p.~2892]{CirelliManiaPizzocchero1990}.
+\end{remark}
+
+\noindent The four products introduced in
+Definition~\ref{def:kahler-bracket-products} are not independent. Each
+can be recovered from any other two, a fact that will be used repeatedly to move between the symplectic and the Jordan-like descriptions of the same algebraic structure.
+
+\begin{proposition}
+	\label{prop:kahler-products-identities}
+	Let $(\mathcal{M},J,g)$ be an almost Kähler manifold as per
+	Definition~\ref{def:almost-kahler-manifold}, and let $f,l\in
+	C^\infty(\mathcal{M},\C)$. Then, with $\circ_\nu$, $*_\nu$ and
+	$\poisson{\cdot}{\cdot}$ as per Definitions~\ref{def:poisson-riemann-bracket}
+	and~\ref{def:kahler-bracket-products},
+	\begin{align}
+		f*_\nu l&=f\circ_\nu l+\tfrac{i}{2}\nu\poisson{f}{l},\\
+		f\circ_\nu l&=\tfrac12(f*_\nu l+l*_\nu f),\\
+		\poisson{f}{l}&=\tfrac{1}{i\nu}(f*_\nu l-l*_\nu f)
+	\end{align}
+	\cite[Eqs.~(2.10)--(2.12)]{CirelliManiaPizzocchero1990}.
+\end{proposition}
+
+\noindent Among the smooth functions on an almost Kähler manifold, a
+distinguished class is singled out by the requirement that its
+Hamiltonian flow preserve the metric, and not merely the symplectic
+form. This is the class that will be identified with the observables of a quantum system.
+
+\begin{definition}[Kählerian function]
+	\label{def:kahlerian-function}
+	Let $(\mathcal{M},J,g)$ be an almost Kähler manifold as per
+	Definition~\ref{def:almost-kahler-manifold}, let $f\in
+	C^\infty(\mathcal{M},\R)$, and let $\Ham{f}:=Idf$, with $I$ as per
+	Definition~\ref{def:musical-isomorphisms}. The function $f$ is
+	Kählerian if $\mathcal{L}_{\Ham{f}}g=0$, where $\mathcal{L}$ denotes the Lie derivative, as in Definition \ref{def:lie-dericative}.
+	If $f\in C^\infty(\mathcal{M},\C)$, $f$ is Kählerian if $\Re f$ and $\Im f$ are.
+	The set of Kählerian functions is denoted $\mathcal{K}(\mathcal{M},\R)$, respectively
+	$\mathcal{K}(\mathcal{M},\C)$.
+\end{definition}
+
+\begin{remark}
+	\label{rem:kahlerian-hamiltonian-flow}
+	The vector field $\Ham{f}=Idf$ of Definition~\ref{def:kahlerian-function}
+	is the Hamiltonian vector field of $f$, and the condition
+	$\mathcal{L}_{\Ham{f}}g=0$ states that the Hamiltonian flow of $f$ preserves the
+	metric $g$. The flow automatically preserves the fundamental form.
+	Since $\omega$ is closed and $\iota_{\Ham{f}}\omega=df$ by
+	Definition~\ref{def:hamiltonian-vec-field}, Cartan's formula Equation \eqref{eq:cartan} yields $$\mathcal{L}_{\Ham{f}}\omega=d\iota_{\Ham{f}}\omega+\iota_{\Ham{f}}d\omega=d(df)=0.$$ From $\mathcal{L}_{\Ham{f}}g=0$ it then follows that $\mathcal{L}_{\Ham{f}}J=0$ as well, because $J$ is determined by $\omega$ and $g$ through
+	Definition~\ref{def:almost-kahler-manifold}. Therefore, if $f$ is
+	Kählerian, its Hamiltonian flow preserves the whole Kähler structure.
+	If, moreover, the distance induced by $g$ on every connected component
+	of $\mathcal{M}$ is complete, the Hamiltonian flow of a real Kählerian
+	function is complete.
+\end{remark}
+
+\noindent The Kählerian functions of Definition~\ref{def:kahlerian-function} are compatible with the Poisson bracket in the strongest possible sense, closing under it.
+
+\begin{proposition}
+	\label{prop:kahlerian-lie-subalgebra}
+	$\mathcal{K}(\mathcal{M},\R)$, respectively $\mathcal{K}(\mathcal{M},\C)$, is a Lie subalgebra of $C^\infty(\mathcal{M},\R)$, respectively $C^\infty(\mathcal{M},\C)$, with respect to the Poisson bracket of Definition~\ref{def:poisson-riemann-bracket}. 
+\end{proposition}
+
+\subsection*{Complex manifolds and the Dolbeault operators}
+\label{sec:complex-manifolds-dolbeault}
+
+\begin{definition}[Complex manifold]
+	\label{def:complex-manifold}
+	A complex manifold of complex dimension $n$ is a smooth manifold $\mathcal{M}$
+	of real dimension $2n$ together with an atlas of charts
+	$\varphi_\alpha:U_\alpha\to\C^n$, $\mathcal{M}=\bigcup_\alpha U_\alpha$, such
+	that every transition map $\varphi_\beta\circ\varphi_\alpha^{-1}$,
+	between open subsets of $\C^n$, is holomorphic. Such an atlas is
+	called a holomorphic atlas for $\mathcal{M}$.
+\end{definition}
+
+\noindent A holomorphic atlas as per Definition~\ref{def:complex-manifold}
+determines an integrable almost complex structure on $\mathcal{M}$, obtained by
+transporting multiplication by $i$ on $\C^n$ through each chart. The
+converse, that every integrable almost complex structure arises this
+way, is the content of the Newlander-Nirenberg theorem, recalled here
+without proof.
+
+\begin{theorem}[Newlander-Nirenberg]
+	\label{thm:newlander-nirenberg}
+	Let $\mathcal{M}$ be a smooth manifold of real dimension $2n$ equipped with an
+	integrable almost complex structure $J$, as per
+	Definition~\ref{def:integrable-acs}. Then $\mathcal{M}$ admits a holomorphic
+	atlas, as per Definition~\ref{def:complex-manifold}, inducing $J$
+	\cite[Theorem~1.4]{Moroianu2004}.
 \end{theorem}
 
-\begin{proof}
-	Existence of the leaves follows from the singular Frobenius theorem applied to the distribution spanned by the Hamiltonian vector fields, see \cite[Theorem 2.4.7]{landsmanMathematicalTopicsBetween1998}. That $\iota_\alpha$ is Poisson is \eqref{eq:leaf-bracket}. If $f'|_{S_\alpha} = f|_{S_\alpha}$, then $\{f,h\}(\sigma) = \{f',h\}(\sigma)$ for $\sigma \in S_\alpha$ by Lemma \ref{lem:vanishing-bracket-leaf}, and symmetrically for $h$.
-\end{proof}
+\noindent Fix a complex manifold $\mathcal{M}$ of complex dimension $n$ as per
+Definition~\ref{def:complex-manifold}, and a local holomorphic chart
+$(U,\varphi)$ with complex coordinates $z=(z^1,\dots,z^n)\in\C^n$, so
+that $z^j=x^j+iy^j$, where $(x^1,\dots,x^n,y^1,\dots,y^n)$ are the
+corresponding local real coordinates on $U$. The complexified
+cotangent space at each point of $U$ then splits according to the
+holomorphic and antiholomorphic differentials, and this splitting is
+what allows differential forms to be assigned a bidegree.
 
-\section{Projective Hilbert Spaces as Symplectic Manifolds}
-
-\begin{definition}[Compact operators]\label{def:compact-operators}
-	Let $\mathcal{H}$ be a Hilbert space as in Definition \ref{def:hilbert-space}. $A \in \mathfrak{B}(\mathcal{H})$ as in Definition \ref{def:bounded-operators} is \emph{compact} if it is a norm-limit of finite-rank operators. The compact operators form a closed two-sided ideal $\mathfrak{B}_0(\mathcal{H}) \subset \mathfrak{B}(\mathcal{H})$.
+\begin{definition}[Forms of type $(p,q)$]
+	\label{def:pq-forms}
+	Let $(U,\varphi)$ be a local holomorphic chart on a complex manifold
+	$\mathcal{M}$, as per Definition~\ref{def:complex-manifold}, with complex
+	coordinates $z=(z^1,\dots,z^n)$. The subspaces $\Lambda^{1,0}$ and
+	$\Lambda^{0,1}$ of the complexified cotangent space $T^*\mathcal{M}\otimes\C$
+	at each point of $U$ are the spans of $\{dz^1,\dots,dz^n\}$ and of
+	$\{d\bar z^1,\dots,d\bar z^n\}$, respectively, and a differential
+	form on $U$ is of type $(p,q)$ if, at every point, it lies in
+	\begin{equation}
+		\Lambda^{p,q}:=\underbrace{\Lambda^{1,0}\wedge\cdots\wedge\Lambda^{1,0}}_{p}\wedge\underbrace{\Lambda^{0,1}\wedge\cdots\wedge\Lambda^{0,1}}_{q}.
+	\end{equation}
 \end{definition}
 
-\begin{definition}[Projective Hilbert space]\label{def:projective-hilbert-space}
-	Let $\mathcal{H}$ be a Hilbert space. On $\mathcal{H}^* := \mathcal{H}\setminus\{0\}$ define $\Psi \sim \Phi :\Leftrightarrow \exists z \in \C\setminus\{0\}: \Phi = z\Psi$. The \emph{projective Hilbert space} is
+\noindent The decomposition of forms by type, as per
+Definition~\ref{def:pq-forms}, is compatible with the exterior
+derivative, and this compatibility is what makes it possible to split
+$d$ into a holomorphic and an antiholomorphic piece.
+
+\begin{definition}[Dolbeault operators]
+	\label{def:dolbeault-operators}
+	Let $(U,\varphi)$ be a local holomorphic chart on a complex manifold
+	$\mathcal{M}$, as per Definition~\ref{def:complex-manifold}, with complex
+	coordinates $z=(z^1,\dots,z^n)$. On $C^\infty(U,\C)$, the Dolbeault
+	operators $\partial,\bar\partial$ are the linear differential
+	operators defined locally by
+	\begin{equation}
+		\partial f := \sum_{j=1}^n \frac{\partial f}{\partial z^j} dz^j, \qquad \bar{\partial} f := \sum_{j=1}^n \frac{\partial f}{\partial \bar{z}^j} d\bar{z}^j,
+	\end{equation}
+	extended to forms of type $(p,q)$, as per Definition~\ref{def:pq-forms},
+	by $d=\partial+\bar\partial$, with $\partial$ raising $p$ by one and
+	$\bar\partial$ raising $q$ by one.
+\end{definition}
+
+\begin{remark}
+	\label{rem:dolbeault-nilpotency}
+	The nilpotency of the exterior derivative, $d^2=0$, together with the
+	splitting $d=\partial+\bar\partial$ of Definition~\ref{def:dolbeault-operators},
+	yields $0=d^2=\partial^2+\bar\partial^2+(\partial\bar\partial+\bar\partial\partial)$.
+	Since $\partial^2$, $\bar\partial^2$ and $\partial\bar\partial+\bar\partial\partial$
+	raise the bidegree $(p,q)$ of a form to $(p+2,q)$, $(p,q+2)$ and
+	$(p+1,q+1)$ respectively, these three subspaces intersect trivially,
+	so each term vanishes separately:
+	\begin{equation}
+		\partial^2=0, \qquad \bar\partial^2=0, \qquad \partial\bar\partial+\bar\partial\partial=0.
+	\end{equation}
+\end{remark}
+
+\noindent A closed real $(1,1)$-form on a complex manifold, such as
+the fundamental form of a Kähler manifold, admits a strikingly simple
+local description in terms of the Dolbeault operators just introduced,
+which is the analytic fact underlying the notion of Kähler potential.
+
+\begin{theorem}[Local $\partial\bar\partial$-lemma]
+	\label{thm:ddbar-lemma}
+	Let $\omega$ be a real, closed differential form of type $(1,1)$, as
+	per Definition~\ref{def:pq-forms}, on a complex manifold $\mathcal{M}$, as per
+	Definition~\ref{def:complex-manifold}. For every point $p \in \mathcal{M}$,
+	there exists a contractible local holomorphic chart $(U, z)$
+	containing $p$ and a smooth real-valued function $K \in
+	C^\infty(U, \R)$ such that, on $U$,
+	\begin{equation}
+		\omega = i \partial \bar{\partial} K
+	\end{equation}
+	\cite[Proposition~2.8]{Moroianu2004}.
+\end{theorem}
+
+\begin{definition}[Kähler potential]
+	\label{def:kahler-potential}
+	Let $\omega$ be a real, closed $(1,1)$-form on a complex manifold
+	$\mathcal{M}$, as per Definition~\ref{def:complex-manifold}, and let $(U,z)$ be
+	a local holomorphic chart. A smooth function $K\in C^\infty(U,\R)$
+	such that $\omega=i\partial\bar\partial K$ on $U$, as provided by
+	Theorem~\ref{thm:ddbar-lemma}, is called a local Kähler potential for
+	$\omega$ on $(U,z)$.
+\end{definition}
+
+\begin{remark}
+	\label{rem:kahler-potential-uniqueness}
+	The local Kähler potential of Definition~\ref{def:kahler-potential} is
+	not unique: if $K$ and $K'$ are both local Kähler potentials for
+	$\omega$ on $(U,z)$, then $\partial\bar\partial(K-K')=0$ on $U$, so
+	that $K-K'$ is pluriharmonic and, after shrinking $U$ if necessary,
+	coincides with the real part of a holomorphic function. Conversely,
+	adding to $K$ the real part of any holomorphic function on $U$
+	produces another local Kähler potential for $\omega$.
+\end{remark}
+
+\noindent Once a local Kähler potential is available, the whole
+Riemannian metric tensor of a Kähler manifold in the sense of
+Definition~\ref{def:kahler-manifold-hilbertian}, restricted to a
+finite-dimensional holomorphic chart, is determined by the mixed
+second-order derivatives of that single scalar function.
+
+\begin{theorem}[Local coordinate expression of the metric]
+	\label{thm:metric-local-expression}
+	Let $(\mathcal{M}, J, g)$ be a Kähler manifold, as per
+	Definition~\ref{def:kahler-manifold-hilbertian}, of finite complex
+	dimension $n$, and let $K$ be a local Kähler potential, as per
+	Definition~\ref{def:kahler-potential}, for the fundamental form
+	$\omega$ on a chart $(U, z)$. The components of the metric tensor $g$
+	in the coordinates $(z^1, \dots, z^n)$ are given by
+	\begin{equation}
+		g_{j\bar{k}} = \frac{\partial^2 K}{\partial z^j \partial \bar{z}^k},
+	\end{equation}
+	and the resulting Hermitian matrix $(g_{j\bar{k}})$ is positive
+	definite everywhere on $U$
+	\cite[\S~5.2]{Moroianu2004}.
+\end{theorem}
+
+\begin{remark}
+	\label{rem:metric-positive-definite}
+	The positive definiteness recorded in
+	Theorem~\ref{thm:metric-local-expression} is not an independent input:
+	it is a direct restatement, in the coordinates $(z^1,\dots,z^n)$, of
+	the requirement $g(X,X)>0$ for every nonzero tangent vector $X$, which
+	is already part of $g$ being a Riemannian metric on $\mathcal{M}$ as per
+	Definition~\ref{def:almost-kahler-manifold}.
+\end{remark}
+
+The local coordinate expression of
+Theorem~\ref{thm:metric-local-expression} closes the loop with the
+algebraic structures of Section~\ref{sec:almost-kahler-hilbertian}: it
+shows that the fundamental form $\omega$ and the metric $g$ of a
+finite-dimensional Kähler manifold, and hence the musical isomorphisms
+$I,G$ of Definition~\ref{def:musical-isomorphisms} and the whole
+family of brackets and products of
+Definitions~\ref{def:poisson-riemann-bracket} and
+\ref{def:kahler-bracket-products}, are entirely determined by the
+single scalar field $K$. This local, potential-based description will
+be used in the following sections to compute the Poisson and Riemann
+brackets explicitly in finite-dimensional examples, complementing the
+intrinsic, chart-free treatment of $\PH$ given in
+Section~\ref{sec:almost-kahler-hilbertian}.
+
+\section{The Projective Hilbert Space as a Kähler Manifold}
+\label{sec:ph-kahler}
+
+Example~\ref{ex:projective-hilbert-space} introduced the state manifold of a
+Schrödinger system informally, as the set of rays of a Hilbert space $\H$.
+This section makes that identification precise, equips $\PH$ with an
+explicit holomorphic atlas, and constructs on it a Kähler structure in the
+sense of Definition~\ref{def:kahler-manifold-hilbertian}.
+
+\begin{definition}[Projective Hilbert space]
+	\label{def:projective-hilbert-space}
+	Let $\H$ be a Hilbert space. On $\H^*:=\H\setminus\{0\}$ define
+	$\Psi\sim\Phi$ if $\Phi=z\Psi$ for some $z\in\C\setminus\{0\}$. The
+	\emph{projective Hilbert space} is
 	\[
-	\mathbb{P}\mathcal{H} := \mathcal{H}^*/\sim,
+	\PH:=\H^*/\sim,
 	\]
-	with $[\Psi]$ the equivalence class of $\Psi \in \mathcal{H}^*$.
+	with $[\Psi]$ the equivalence class of $\Psi\in\H^*$.
 \end{definition}
 
-\begin{proposition}\label{prop:ph-quotient-pure-states}
-	Let $S\mathcal{H} := \{\Psi \in \mathcal{H} \mid (\Psi,\Psi)=1\}$. Restricting $\sim$ to $S\mathcal{H}$ gives $U(1)$-orbits, and $[\Psi] \mapsto \tau(\Psi)$ is a bijection $\mathbb{P}\mathcal{H} \to S\mathcal{H}/U(1)$. Under it, $\mathbb{P}\mathcal{H}$ is identified with the pure state space of $\mathfrak{B}_0(\mathcal{H})$ as in Definition \ref{def:pure-state-space}, and embeds strictly into the pure state space of $\mathfrak{B}(\mathcal{H})$ when $\dim\mathcal{H} = \infty$.
+\begin{theorem}[Pure state decomposition]\label{thm:pure-state-decomposition}
+	The pure state space $\mathcal{P}(\A)$ of a C*-algebra $\A$ as in Definition \ref{def:pure-state-space} is a disjoint union $\mathcal{P}(\A) = \bigcup_\alpha \PH_\alpha$, where $\H_\alpha$ is the Hilbert space of the irreducible GNS representation, Definition \ref{def:gns-construction}, of a state in $\PH_\alpha$. States in the same $\PH_\alpha$ are equivalent, states in different $\PH_\alpha$ are inequivalent, and each inclusion $\PH_\alpha \hookrightarrow \mathcal{P}(\A)$ is continuous.
+\end{theorem}
+
+\begin{definition}[Compact operators]
+	\label{def:compact-operators}
+	An operator $A\in\BH$, as per Definition~\ref{def:op-norm-bdd}, is
+	\emph{compact} if it is a norm limit of finite-rank operators. The compact
+	operators form a closed two-sided ideal $\mathfrak{B}_0(\H)\subset\BH$; in
+	finite dimension $\mathfrak{B}_0(\H)=\BH$.
+\end{definition}
+
+\begin{proposition}
+	\label{prop:ph-quotient-pure-states}
+	Let $S\H:=\{\Psi\in\H\mid(\Psi,\Psi)=1\}$. Restricting $\sim$ to $S\H$
+	gives $U(1)$-orbits, and $[\Psi]\mapsto\tau(\Psi)$ is a bijection
+	$\PH\to S\H/U(1)$. Under this bijection, $\PH$ is identified with the
+	pure state space of $\mathfrak{B}_0(\H)$.
 \end{proposition}
 
 \begin{proof}
-	Every $[\Psi] \in \mathbb{P}\mathcal{H}$ has a unit representative, unique up to $z \in U(1)$, so $\tau: S\mathcal{H} \to \mathbb{P}\mathcal{H}$ is surjective with fibers the $U(1)$-orbits. The identification with pure states of $\mathfrak{B}_0(\mathcal{H})$ and $\mathfrak{B}(\mathcal{H})$ follows from the correspondence between vector states and rank-one projections, \cite[Section 2.5]{landsmanMathematicalTopicsBetween1998}.
+	Every $[\Psi]\in\PH$ has a unit representative, unique up to a phase
+	$z\in U(1)$, so $\tau:S\H\to\PH$ is surjective with fibers the
+	$U(1)$-orbits. The identification with the pure states of
+	$\mathfrak{B}_0(\H)$ follows from the correspondence between vector
+	states and rank-one projections \cite[Section 2.5]{landsmanMathematicalTopicsBetween1998}.
 \end{proof}
 
-\begin{definition}[Local chart of $\mathbb{P}\mathcal{H}$]\label{def:ph-chart}
-	For $\psi \in \mathbb{P}\mathcal{H}$, $\Psi \in S\mathcal{H}$ a representative, and $N_\psi := \{\varphi \in \mathbb{P}\mathcal{H} \mid (\Psi,\Phi) \neq 0\}$ with $\Phi$ any representative of $\varphi$,
+\begin{definition}[Local chart of $\PH$]
+	\label{def:ph-chart}
+	For $\psi\in\PH$, $\Psi\in S\H$ a representative, and
+	$N_\psi:=\{\varphi\in\PH\mid(\Psi,\Phi)\neq0\}$ with $\Phi$ any
+	representative of $\varphi$, set
 	\begin{equation}
-		F_\psi(\varphi) := \frac{\Phi}{(\Psi,\Phi)} - \Psi. \label{eq:ph-chart}
+		F_\psi(\varphi):=\frac{\Phi}{(\Psi,\Phi)}-\Psi. \label{eq:ph-chart}
 	\end{equation}
 \end{definition}
 
-\begin{proposition}\label{prop:ph-chart-homeomorphism}
-	$F_\psi$ is well defined, $F_\psi(\psi)=0$, $F_\psi$ takes values in $\Psi^\perp$, and $F_\psi: N_\psi \to \Psi^\perp$ is a homeomorphism.
+\begin{proposition}
+	\label{prop:ph-chart-homeomorphism}
+	$F_\psi$ is well defined, $F_\psi(\psi)=0$, $F_\psi$ takes values in
+	$\Psi^\perp$, and $F_\psi:N_\psi\to\Psi^\perp$ is a homeomorphism.
 \end{proposition}
 
 \begin{proof}
-	$\Phi/(\Psi,\Phi)$ is invariant under $\Phi \mapsto z\Phi$, $z \neq 0$, so $F_\psi$ is well defined, and $F_\psi(\psi) = \Psi/(\Psi,\Psi) - \Psi = 0$. Also $(\Psi,F_\psi(\varphi)) = (\Psi,\Phi)/(\Psi,\Phi) - 1 = 0$. The map $\chi \mapsto \tau(\Psi+\chi)$, $\chi \in \Psi^\perp$, is a well-defined two-sided continuous inverse, since $\Psi+\chi \neq 0$ and both maps are built from continuous algebraic operations on the domain $(\Psi,\Phi)\neq 0$.
+	$\Phi/(\Psi,\Phi)$ is invariant under $\Phi\mapsto z\Phi$, $z\neq0$, so
+	$F_\psi$ is well defined, and $F_\psi(\psi)=\Psi/(\Psi,\Psi)-\Psi=0$.
+	Also $(\Psi,F_\psi(\varphi))=(\Psi,\Phi)/(\Psi,\Phi)-1=0$. The map
+	$\chi\mapsto\tau(\Psi+\chi)$, $\chi\in\Psi^\perp$, is a well-defined
+	two-sided continuous inverse, since $\Psi+\chi\neq0$ and both maps are
+	built from continuous algebraic operations on the domain
+	$(\Psi,\Phi)\neq0$.
 \end{proof}
 
-\noindent Varying $\psi$ over a spanning set and fixing, for each, an isomorphism $\Psi^\perp \cong \mathcal{H}'$ with $\mathcal{H}'$ a reference Hilbert space of real dimension $\dim_\R\mathcal{H} - 2$, gives an atlas making $\mathbb{P}\mathcal{H}$ a Hilbert manifold modeled on $\mathcal{H}'$. We call the resulting topology the \emph{manifold topology} of $\mathbb{P}\mathcal{H}$.
-
-\begin{proposition}\label{prop:ph-topologies-coincide}
-	The manifold topology on $\mathbb{P}\mathcal{H}$ coincides with the $w^*$-topologies relative to $\mathbb{P}\mathcal{H} \subset \mathfrak{B}_0(\mathcal{H})^*$ and $\mathbb{P}\mathcal{H} \subset \mathfrak{B}(\mathcal{H})^*$ as in Definition \ref{def:wstar-topology}.
+\begin{proposition}[Holomorphic atlas]
+	\label{prop:ph-atlas}
+	The collection of charts $\{(N_\psi,F_\psi,\Psi^\perp)\}_{[\Psi]\in\PH}$
+	endows $\PH$ with the structure of a complex manifold.
 \end{proposition}
 
 \begin{proof}
-	$\mathfrak{B}_0(\mathcal{H})$ is generated by rank-one projections, so its $w^*$-topology on $\mathbb{P}\mathcal{H}$ agrees with the weak topology on $\mathcal{H}$, which coincides with the strong topology on $S\mathcal{H}$, hence with the $\mathfrak{B}(\mathcal{H})^*$ $w^*$-topology. For $\varphi \in N_\psi$, $A \in \mathfrak{B}(\mathcal{H})$,
+	Let $\psi_1,\psi_2\in\PH$ have normalized representatives
+	$\Psi_1,\Psi_2$, with $N_{\psi_1}\cap N_{\psi_2}\neq\emptyset$. For
+	$v\in\Psi_1^\perp$ such that $[\Psi_1+v]\in N_{\psi_2}$, the transition
+	map $F_{\psi_2}\circ F_{\psi_1}^{-1}:\Psi_1^\perp\to\Psi_2^\perp$ is
+	\[
+	\big(F_{\psi_2}\circ F_{\psi_1}^{-1}\big)(v)=\frac{\Psi_1+v}{(\Psi_2,\Psi_1+v)}-\Psi_2.
+	\]
+	The denominator $(\Psi_2,\Psi_1)+(\Psi_2,v)$ is a nonvanishing continuous
+	affine function of $v$ on the overlap, so the transition map is a
+	rational composition of linear maps, hence holomorphic.
+\end{proof}
+
+\begin{proposition}
+	\label{prop:ph-topologies-coincide}
+	The manifold topology on $\PH$ coincides with the $w^*$-topologies
+	induced by $\PH\subset\mathfrak{B}_0(\H)^*$ and $\PH\subset\BH^*$, as
+	per Definition~\ref{def:weak_topologies}.
+\end{proposition}
+
+\begin{proof}
+	$\mathfrak{B}_0(\H)$ is generated by rank-one projections, so its
+	$w^*$-topology on $\PH$ agrees with the weak topology on $\H$, which
+	coincides with the strong topology on $S\H$, hence with the $\BH^*$
+	$w^*$-topology. For $\varphi\in N_\psi$, $A\in\BH$,
 	\begin{equation}
-		\frac{\varphi(A)}{\varphi([\Psi])} = \big(F_\psi(\varphi),AF_\psi(\varphi)\big) + \big(\Psi,AF_\psi(\varphi)\big) + \big(F_\psi(\varphi),A\Psi\big) + (\Psi,A\Psi). \label{eq:ph-topology-expansion}
+		\frac{\varphi(A)}{\varphi([\Psi])}=\big(F_\psi(\varphi),AF_\psi(\varphi)\big)+\big(\Psi,AF_\psi(\varphi)\big)+\big(F_\psi(\varphi),A\Psi\big)+(\Psi,A\Psi). \label{eq:ph-topology-expansion}
 	\end{equation}
-	Strong convergence $F_\psi(\varphi_n) \to F_\psi(\varphi)$ gives $\varphi_n(A) \to \varphi(A)$ for all $A$ through \eqref{eq:ph-topology-expansion}, so the manifold topology is finer. Conversely $\varphi_n(A) \to \varphi(A)$ for all $A$ forces weak convergence $F_\psi(\varphi_n) \to F_\psi(\varphi)$, and, taking $A=\Id$, norm convergence, hence strong convergence. The two topologies coincide.
+	Strong convergence $F_\psi(\varphi_n)\to F_\psi(\varphi)$ gives
+	$\varphi_n(A)\to\varphi(A)$ for every $A$ through
+	\eqref{eq:ph-topology-expansion}, so the manifold topology is finer.
+	Conversely $\varphi_n(A)\to\varphi(A)$ for every $A$ forces weak
+	convergence $F_\psi(\varphi_n)\to F_\psi(\varphi)$, and, taking
+	$A=\Id$, norm convergence, hence strong convergence. The two
+	topologies coincide.
 \end{proof}
 
-\begin{corollary}\label{cor:pure-state-b0h-ph}
-	The pure state space of $\mathfrak{B}_0(\mathcal{H})$ with the $w^*$-topology is homeomorphic to $\mathbb{P}\mathcal{H}$ with the manifold topology.
+\begin{corollary}
+	\label{cor:pure-state-b0h-ph}
+	The pure state space of $\mathfrak{B}_0(\H)$, with the $w^*$-topology,
+	is homeomorphic to $\PH$ with the manifold topology.
 \end{corollary}
 
 \begin{proof}
-	Combine Proposition \ref{prop:ph-quotient-pure-states} with Proposition \ref{prop:ph-topologies-coincide}.
+	Combine Proposition~\ref{prop:ph-quotient-pure-states} with
+	Proposition~\ref{prop:ph-topologies-coincide}.
 \end{proof}
 
-\begin{theorem}[Pure state decomposition]\label{thm:pure-state-decomposition}
-	The pure state space $\mathcal{P}(\mathfrak{A})$ of a C*-algebra $\mathfrak{A}$ as in Definition \ref{def:pure-state-space} is a disjoint union $\mathcal{P}(\mathfrak{A}) = \bigcup_\alpha \mathbb{P}\mathcal{H}_\alpha$, where $\mathcal{H}_\alpha$ is the Hilbert space of the irreducible GNS representation, Definition \ref{def:gns-construction}, of a state in $\mathbb{P}\mathcal{H}_\alpha$. States in the same $\mathbb{P}\mathcal{H}_\alpha$ are equivalent, states in different $\mathbb{P}\mathcal{H}_\alpha$ are inequivalent, and each inclusion $\mathbb{P}\mathcal{H}_\alpha \hookrightarrow \mathcal{P}(\mathfrak{A})$ is continuous.
+\noindent This is the concrete, Hilbert space incarnation of the pure
+state space appearing in the $C^*$-algebraic
+Definition~\ref{def:physical-system} of a quantum system.
+
+\subsection*{The Fubini--Study Kähler structure}
+
+Let $\psi\in\PH$ and let $\Psi\in S\H$ be a normalized representative. By
+Proposition~\ref{prop:ph-chart-homeomorphism}, the holomorphic tangent
+space $T_\psi\PH$ is canonically isomorphic to the complex subspace
+$\Psi^\perp\subset\H$. Realifying $\Psi^\perp$, that is, restricting
+scalars from $\C$ to $\R$, multiplication by $i$ defines a real-linear
+endomorphism
+\[
+J:\Psi^\perp\to\Psi^\perp,\qquad JV:=iV,
+\]
+satisfying $J^2=-\Id$: this is an almost complex structure on $\PH$ as
+per Definition~\ref{def:almost-complex-structure}, integrable as per
+Definition~\ref{def:integrable-acs} since it is induced by the
+holomorphic atlas of Proposition~\ref{prop:ph-atlas}.
+
+The Hilbert space inner product $(\cdot,\cdot)$ restricts to a
+Hermitian inner product on $\Psi^\perp$. Its real and imaginary parts,
+\begin{equation}
+	g_0(U,V):=\Re(U,V), \qquad \omega_0(U,V):=\Im(U,V), \label{eq:g0-omega0}
+\end{equation}
+define a Riemannian metric $g_0$ on $\PH$, as per
+Definition~\ref{def:riemannian-metric}, and a real bilinear form
+$\omega_0$, with $(U,V)=g_0(U,V)+i\omega_0(U,V)$. Since scalars are
+conjugate-linear in the first argument, $(iU,iV)=(U,V)$, so
+$g_0(JU,JV)=g_0(U,V)$: this is condition (i) of
+Definition~\ref{def:almost-kahler-manifold}. Evaluating instead on
+$(U,JV)$,
+\[
+(U,JV)=(U,iV)=i(U,V)=-\omega_0(U,V)+ig_0(U,V),
+\]
+and comparing real parts with $(U,V)=g_0(U,V)+i\omega_0(U,V)$ gives the
+compatibility identity
+\begin{equation}
+	\omega_0(U,V)=g_0(JU,V). \label{eq:GJomega-ph}
+\end{equation}
+Closedness of $\omega_0$, condition (ii) of
+Definition~\ref{def:almost-kahler-manifold}, is verified below through
+its local expression via a Kähler potential. Granting it,
+$(\PH,J,g_0)$ is a Kähler manifold as per
+Definition~\ref{def:kahler-manifold-hilbertian}: this is the
+Fubini--Study structure of $\PH$, normalized here so that $g_0$
+restricts on each tangent space to the Hilbert space inner product
+itself.
+
+\begin{theorem}[Hawley--Igusa]
+	\label{thm:hawley-igusa}
+	Up to isomorphism, projective spaces are the only connected, simply
+	connected, complete Kähler manifolds of constant, positive holomorphic
+	sectional curvature \cite{KobayashiNomizu1969}.
+\end{theorem}
+
+\noindent Theorem~\ref{thm:hawley-igusa} underlies the characterization
+of $\PH$ purely through its Kähler geometry and curvature,
+independently of the underlying Hilbert space $\H$, used in
+Definition~\ref{def:schrodinger-quantum-system} below.
+
+\subsection*{Local coordinate expression via the Kähler potential}
+
+The function $\Phi\mapsto\|\Phi\|^2$ on $\H^*$ is the natural invariant
+of the quotient defining $\PH$: for $\lambda\in\C\setminus\{0\}$,
+\[
+\ln\|\lambda\Phi\|^2=\ln\lambda+\ln\bar\lambda+\ln\|\Phi\|^2,
+\]
+and $\partial\bar\partial$ annihilates the purely holomorphic term
+$\ln\lambda$ and the purely antiholomorphic term $\ln\bar\lambda$, so
+$\partial\bar\partial\ln\|\lambda\Phi\|^2=\partial\bar\partial\ln\|\Phi\|^2$.
+Hence $K_0:=\ln\|\Phi\|^2$ descends to a local Kähler potential, as per
+Definition~\ref{def:kahler-potential}, unique up to the real part of a
+holomorphic function by Remark~\ref{rem:kahler-potential-uniqueness}.
+
+We compute Theorem~\ref{thm:metric-local-expression} on the chart
+$N_\psi\simeq\Psi^\perp\simeq\C^n$ of Definition~\ref{def:ph-chart}. A
+nearby state is represented by $\Phi=\Psi+\sum_{m=1}^nz^me_m$, with
+$\{e_m\}$ an orthonormal basis of $\Psi^\perp$ and
+$z=(z^1,\dots,z^n)\in\C^n$; since $\Psi$ is normalized and orthogonal
+to each $e_m$,
+\[
+\|\Phi\|^2=1+\|z\|^2.
+\]
+The local Kähler potential is therefore $K_0(z,\bar z)=\ln(1+\|z\|^2)$,
+and
+\[
+\frac{\partial K_0}{\partial z^j}=\frac{\bar z^j}{1+\|z\|^2},
+\qquad
+g_{0,j\bar k}=\frac{\partial^2K_0}{\partial z^j\partial\bar z^k}=\frac{\delta_{jk}(1+\|z\|^2)-\bar z^jz^k}{(1+\|z\|^2)^2}.
+\]
+At $z=0$ this gives $g_{0,j\bar k}=\delta_{jk}$, matching $g_0$ of
+\eqref{eq:g0-omega0} evaluated on the orthonormal basis $\{e_m\}$. The
+fundamental form is $\omega_0=i\sum_{j,k}g_{0,j\bar k}\,dz^j\wedge
+d\bar z^k$, which is closed by Remark~\ref{rem:dolbeault-nilpotency},
+completing the verification that $(\PH,J,g_0)$ is Kähler.
+
+\section{Dynamics}
+\label{sec:dynamics}
+
+The Kähler structure $(J,g_0)$ of Section~\ref{sec:ph-kahler} is fixed
+only up to an overall positive rescaling of $g_0$: replacing $g_0$ by
+$\lambda g_0$, for any $\lambda>0$, again satisfies
+Definition~\ref{def:almost-kahler-manifold}, since $J$-invariance and
+closedness of the fundamental form survive positive rescaling. This
+section fixes $\lambda$ by requiring the resulting Hamiltonian flow to
+reproduce the Schrödinger equation, and shows that the value obtained
+is exactly the one already implicit, on the algebraic side, in the
+convention $\qcomm{A}{B}$ fixed for the Lie--Jordan algebra of
+Definition~\ref{def:lie-jordan}.
+
+Let $\pi:\H\setminus\{0\}\to\PH$, $x\mapsto[x]$, be the quotient map.
+
+\begin{definition}[Mean value function]
+	\label{def:mean-value}
+	For $A\in\BH$, the \emph{mean value function} of $A$ is
+	\[
+	\langle A\rangle : \PH \to \C, \qquad
+	\langle A\rangle([x]) := \frac{(x,Ax)}{\|x\|^2}.
+	\]
+	If $A$ is self-adjoint, $\langle A\rangle$ is real valued; it descends
+	from $\H\setminus\{0\}$ by homogeneity of numerator and denominator.
+\end{definition}
+
+\noindent General symmetries and their associated momentum maps are
+treated in Section~\ref{sec:quantum-momentum-map}; here we focus on
+the one-parameter flow generated by a single self-adjoint Hamiltonian.
+
+\subsection*{Constructive derivation of the dynamics}
+
+By Stone's theorem, a self-adjoint operator $H\in\BH$ generates the
+one-parameter unitary group $U_t=e^{-itH/\hbar}$, and the physical
+postulate of Schrödinger dynamics is that a state $[x]\in\PH$ evolves
+along
+\[
+\gamma(t):=[U_tx]=[e^{-itH/\hbar}x], \qquad t\in\R.
+\]
+We determine the normalization $\lambda$ of $g_0$ for which $\gamma$ is
+the integral curve of the Hamiltonian vector field $\Ham{\langle
+	H\rangle}$ of Definition~\ref{def:kahlerian-function}, with respect to
+$\omega=\lambda\omega_0$.
+
+Let $v\in T_{[x]}\PH$ be represented by $\eta\in x^\perp$. The
+differential of $\langle H\rangle$ at $[x]$ is
+\[
+d\langle H\rangle_{[x]}(v)=(\eta,Hx)+(x,H\eta)=2\Re(\eta,Hx).
+\]
+Set $\eta_H:=-\tfrac{i}{\hbar}Hx$; since $\eta\in x^\perp$, only the
+component of $\eta_H$ orthogonal to $x$ contributes to the pairings
+below, so $\eta_H$ may represent the candidate vector field at $[x]$
+directly. Using $\omega=\lambda\omega_0$ and $\omega_0(U,V)=\Im(U,V)$,
+and conjugate-linearity of $(\cdot,\cdot)$ in the first argument,
+\[
+\omega_{[x]}(\eta_H,\eta)=\lambda\,\Im\big(-\tfrac{i}{\hbar}Hx,\eta\big)=\frac{\lambda}{\hbar}\,\Im\big(i(Hx,\eta)\big)=\frac{\lambda}{\hbar}\,\Re(Hx,\eta)=\frac{\lambda}{\hbar}\,\Re(\eta,Hx).
+\]
+Comparing with $d\langle H\rangle_{[x]}(v)=2\Re(\eta,Hx)$ shows that
+$\eta_H$ represents $\Ham{\langle H\rangle}([x])$, that is,
+$\iota_{\eta_H}\omega=d\langle H\rangle$, exactly when
+\begin{equation}
+	\lambda=2\hbar. \label{eq:lambda-fixed}
+\end{equation}
+
+Equation~\eqref{eq:lambda-fixed} fixes the free normalization of
+Section~\ref{sec:ph-kahler}. From here on,
+\begin{equation}
+	g:=2\hbar\,g_0, \qquad \omega:=2\hbar\,\omega_0, \label{eq:physical-kahler-structure}
+\end{equation}
+denote the physical Fubini--Study metric and symplectic form of $\PH$,
+with $I,G$ the associated musical isomorphisms of
+Definition~\ref{def:musical-isomorphisms}. By linearity of the
+potential in its normalization, the local Kähler potential and metric
+of Section~\ref{sec:ph-kahler} rescale to
+\[
+K=2\hbar\ln(1+\|z\|^2), \qquad
+g_{j\bar k}=2\hbar\,g_{0,j\bar k}=2\hbar\,\frac{\delta_{jk}(1+\|z\|^2)-\bar z^jz^k}{(1+\|z\|^2)^2}.
+\]
+
+\begin{proposition}[Hamiltonian flow equals Schrödinger flow]
+	\label{prop:hamiltonian-schrodinger}
+	Let $H\in\BH$ be self-adjoint. The Hamiltonian flow of $\langle
+	H\rangle$ with respect to $\omega$ is
+	\[
+	\Phi_t([x])=[e^{-itH/\hbar}x], \qquad t\in\R,
+	\]
+	which satisfies the Schrödinger equation
+	$i\hbar\frac{d}{dt}\big(e^{-itH/\hbar}x\big)=He^{-itH/\hbar}x$.
+\end{proposition}
+
+\begin{proof}
+	This is the content of the derivation above, once the normalization
+	$\lambda=2\hbar$ of \eqref{eq:lambda-fixed} is adopted for $\omega$.
+\end{proof}
+
+\begin{remark}
+	The value $\lambda=2\hbar$ in \eqref{eq:physical-kahler-structure} is
+	the only normalization compatible with the Stone evolution
+	$e^{-itH/\hbar}$: had the flow been posited as $e^{-itH/\nu}$ for some
+	$\nu\neq\hbar$, the computation above would have fixed $\lambda=2\nu$
+	instead.
+\end{remark}
+
+\noindent This same normalization is what identifies, via
+Definition~\ref{def:kahler-bracket-products}, the geometric $*_\nu$
+product at $\nu=\hbar$ with the associative product
+$AB=A\circ B+\tfrac{i\hbar}{2}\{A,B\}$ of the Lie--Jordan algebra
+of Definition~\ref{def:lie-jordan}. Proposition~\ref{prop:poisson-comm}
+below, and Theorem~\ref{thm:lie-jordan-kahler-isomorphism}, make this
+correspondence precise.
+
+\begin{proposition}[Poisson bracket and commutator]
+	\label{prop:poisson-comm}
+	For self-adjoint $A,B\in\BH$,
+	\[
+	\poisson{\langle A\rangle}{\langle B\rangle}= \big\langle \{A,B \} \big\rangle= \big\langle\qcomm{A}{B}\big\rangle.
+	\]
+\end{proposition}
+
+\begin{proof}
+	By Definition~\ref{def:poisson-riemann-bracket} and
+	Definition~\ref{def:kahlerian-function}, $\poisson{f}{l}=df(\Ham{l})$,
+	so, using the representative of $\Ham{\langle B\rangle}$ found above,
+	\[
+	\poisson{\langle A\rangle}{\langle B\rangle}([x])=d\langle A\rangle_{[x]}\big(\Ham{\langle B\rangle}([x])\big)=2\Re\Big(-\tfrac{i}{\hbar}Bx,Ax\Big)=-\tfrac{2}{\hbar}\Im(Bx,Ax).
+	\]
+	Since $A,B$ are self-adjoint,
+	\[
+	(x,[A,B]x)=(Ax,Bx)-(Bx,Ax)=-2i\,\Im(Bx,Ax),
+	\]
+	so $\big\langle\qcomm{A}{B}\big\rangle([x])=\frac{1}{i\hbar}(x,[A,B]x)=-\frac{2}{\hbar}\Im(Bx,Ax)$,
+	which agrees with $\poisson{\langle A\rangle}{\langle B\rangle}([x])$.
+\end{proof}
+
+\begin{remark}
+	The map $A\mapsto\langle A\rangle$ is thus a Lie algebra homomorphism
+	from the self-adjoint part of $\BH$, with bracket $\qcomm{\cdot}{\cdot}$,
+	to $C^\infty(\PH,\R)$, with Poisson bracket $\poisson{\cdot}{\cdot}$:
+	the geometric incarnation of the Dirac quantization condition, with no
+	extra numerical factor once the normalization~\eqref{eq:lambda-fixed}
+	is in place.
+\end{remark}
+
+\subsection*{Geometry of the flow}
+
+The flow of Proposition~\ref{prop:hamiltonian-schrodinger} is generated
+by the unitaries $U_t=e^{-itH/\hbar}$. Since each unitary preserves the
+Hilbert space inner product, its projectivization preserves $g$ and
+$\omega$, so each $\Phi_t$ is a Kähler isomorphism of $(\PH,\omega,g)$.
+
+\begin{proposition}[Kähler isomorphisms and their generators]
+	\label{prop:kahler-isomorphisms}
+	For every unitary operator $U$ on $\H$, the induced map $[x]\mapsto[Ux]$
+	is a Kähler isomorphism of $(\PH,\omega,g)$. Conversely, every Kähler
+	isomorphism of $\PH$ arises this way from a unitary $U$, unique up to a
+	phase.
+	
+	For every self-adjoint $H\in\BH$, the one-parameter group
+	$\Phi_t([x])=[e^{-itH/\hbar}x]$, $t\in\R$, is a continuous group of
+	Kähler isomorphisms. Conversely, every continuous one-parameter group
+	of Kähler isomorphisms of $\PH$ is of this form, generated by a unique
+	self-adjoint operator $H$, up to an additive real constant.
+\end{proposition}
+
+\begin{proof}
+	The first statement follows because unitaries preserve the inner
+	product, hence their projectivization preserves both $\omega$ and $g$;
+	the converse is standard: any Kähler automorphism of $\PH$ lifts to a
+	unitary or antiunitary operator on $\H$ by Wigner's theorem, and
+	restricting to continuous paths through the identity selects the
+	unitary lifts. For the second statement, $e^{-itH/\hbar}$ is a strongly
+	continuous one-parameter unitary group by Stone's theorem, so its
+	projectivization is a continuous group of Kähler isomorphisms.
+	Conversely, any such group lifts to a strongly continuous
+	one-parameter unitary group $U_t$, up to phases, whose self-adjoint
+	generator $H$ satisfies $U_t=e^{-itH/\hbar}$ by Stone's theorem, unique
+	up to an additive real constant, which does not affect the
+	projectivized flow.
+\end{proof}
+
+\begin{remark}
+	A quantum system is thus, in particular, a Hamiltonian system: a
+	symplectic manifold $(\PH,\omega)$ together with a distinguished
+	one-parameter group of symplectic, indeed Kähler, isomorphisms
+	generated by the Hamiltonian function $\langle H\rangle$.
+\end{remark}
+
+\section{Riemannian Geometry and Statistical Distinguishability}
+\label{sec:riemannian-geometry}
+
+The Kähler structure $(\omega,g,J)$ of $\PH$ was intrinsically constructed in Section~\ref{sec:ph-kahler}. While the symplectic form $\omega$ dictates the Hamiltonian dynamics of the quantum system, as discussed in Section~\ref{sec:dynamics}, the Riemannian metric $g$ encodes its statistical structure. The metric captures notions of dispersion, covariance, and transition probability directly on the state manifold.
+
+Following Definition~\ref{def:poisson-riemann-bracket} applied to the Kähler manifold $(\PH,\omega,g)$, the state space carries a symmetric Riemann bracket. For any two smooth functions $f,k \in C^\infty(\PH,\R)$, this bracket is defined by $((f,k)) = \langle df, G dk\rangle$, where $G$ is the musical isomorphism associated with the Fubini--Study metric $g$. Equivalently, by Kähler compatibility, this can be expressed as $((f,k)) = g(G df, G dk)$. We consistently employ the notation $((\cdot,\cdot))$, whether the arguments are general smooth functions on $\PH$ or mean value functions of quantum observables.
+
+The following proposition establishes that the Jordan product of two self-adjoint operators (the symmetric part of their associative algebra) is deeply intertwined with the Riemannian structure of $\PH$, requiring no reference to the underlying linear Hilbert space.
+
+\begin{lemma}[Metric and form via ambient representatives]
+	\label{lem:g-omega-ambient}
+	Let $\psi=[\Psi]\in\PH$, $\|\Psi\|=1$, and let $\eta,\eta'\in\H$ be
+	arbitrary. Write $\eta_\Psi:=\eta-(\Psi,\eta)\Psi\in\Psi^\perp$ for the
+	component of $\eta$ tangent to $\PH$ at $\psi$, under the identification
+	$T_\psi\PH\cong\Psi^\perp$ of Proposition~\ref{prop:ph-chart-homeomorphism}.
+	Then
+	\begin{equation}
+		(\eta_\Psi,\eta'_\Psi)=(\eta,\eta')-(\eta,\Psi)(\Psi,\eta'), \label{eq:ambient-inner-product}
+	\end{equation}
+	and, by \eqref{eq:g-omega-scaled},
+	\begin{equation}
+		g(\eta_\Psi,\eta'_\Psi)=2\hbar\,\Re\big[(\eta,\eta')-(\eta,\Psi)(\Psi,\eta')\big], \qquad
+		\omega(\eta_\Psi,\eta'_\Psi)=2\hbar\,\Im\big[(\eta,\eta')-(\eta,\Psi)(\Psi,\eta')\big]. \label{eq:g-omega-ambient}
+	\end{equation}
+\end{lemma}
+\begin{proof}
+	Since $\|\Psi\|=1$, $\eta_\Psi$ is the orthogonal projection of $\eta$ onto
+	$\Psi^\perp$, and likewise for $\eta'_\Psi$. Writing $a:=(\Psi,\eta)$,
+	$b:=(\Psi,\eta')$ and expanding by conjugate-linearity in the first
+	argument,
+	\begin{equation*}
+		(\eta_\Psi,\eta'_\Psi)=(\eta-a\Psi,\eta'-b\Psi)
+		=(\eta,\eta')-b(\eta,\Psi)-\bar a\,b+\bar a\,b
+		=(\eta,\eta')-(\eta,\Psi)(\Psi,\eta'),
+	\end{equation*}
+	which is \eqref{eq:ambient-inner-product}; \eqref{eq:g-omega-ambient}
+	follows applying \eqref{eq:g-omega-scaled}.
+\end{proof}
+
+\noindent In particular, for $A\in\BH$ self-adjoint, $x=\Psi$ normalized,
+and $\eta:=-\frac i\hbar Ax$, one has $(\Psi,\eta)=-\frac
+i\hbar\langle A\rangle([x])$ and $\eta_\Psi=-\frac i\hbar(A-\langle
+A\rangle)x$: this recovers the vector field $\Ham{\langle A\rangle}([x])
+=[-\frac i\hbar Ax]$ of Section~\ref{sec:dynamics}, the bracket there
+denoting exactly the projection onto $x^\perp$ of
+Lemma~\ref{lem:g-omega-ambient}.
+
+\begin{proposition}[Intrinsic Jordan decomposition]
+	\label{prop:symmetric-bracket-intrinsic}
+	Let $A,K\in\BH$ be self-adjoint operators, and let $f = \langle A\rangle$ and $k = \langle K\rangle$ be their corresponding mean value functions on $\PH$. The mean value of their Jordan product $A \circ K$ is uniquely determined by the Riemann bracket on $\PH$ via the relation:
+	\begin{equation}
+		\langle A \circ K \rangle = \frac{\hbar}{2}((f,k)) +fk.
+	\end{equation}
+\end{proposition}
+\begin{proof}
+	Fix $[x]\in\PH$ and a normalized representative $\Psi=x$. By the remark
+	following Lemma~\ref{lem:g-omega-ambient}, $\Ham f$ and $\Ham k$ are
+	represented, under $T_{[x]}\PH\cong x^\perp$, by the projections of
+	$\eta:=-\frac i\hbar Ax$ and $\eta':=-\frac i\hbar Kx$. By Kähler
+	compatibility (Remark~\ref{rem:poisson-riemann-reformulation}),
+	$((f,k))_\omega=g(\Ham f,\Ham k)=g(\eta_x,\eta'_x)$, and
+	Lemma~\ref{lem:g-omega-ambient} applies. Using $(\eta,x)=\frac
+	i\hbar\langle A\rangle([x])$, $(x,\eta')=-\frac i\hbar\langle K\rangle([x])$,
+	self-adjointness of $A,K$, and $\Re(Ax,Kx)=\big(x,\tfrac12(AK+KA)x\big)
+	=\langle A\circ K\rangle([x])$,
+	\begin{align*}
+		((f,k))_\omega([x]) &= 2\hbar\,\Re\left[\frac1{\hbar^2}(Ax,Kx)-\frac{1}{\hbar^2}\langle A\rangle([x])\langle K\rangle([x])\right]
+		=\frac2\hbar\big[\langle A\circ K\rangle([x])-f([x])k([x])\big],
+	\end{align*}
+	which is \eqref{eq:jordan-riemann}. Equation~\eqref{eq:riemann-dispersion}
+	is the case $K=A$, since $A\circ A=A^2$.
+\end{proof}
+
+\noindent The dispersions of two observable functions are controlled
+jointly, through the metric and the symplectic form, by the Kähler
+counterpart of the Robertson--Schrödinger uncertainty relation.
+ 
+\begin{definition}[Dispersion]
+	\label{def:dispersion}
+	Let $f\in\mathcal K(\PH,\R)$ be a Kählerian function, as per Definition~\ref{def:kahlerian-function}, and let $p\in\PH$. The \emph{dispersion} of $f$ at $p$ is
+	\[
+	\Delta f(p) := \sqrt{\hbar/2}\,\sqrt{((f,f))(p)}.
+	\]
+	If $f=\langle A\rangle$ for a self-adjoint $A\in\BH$, $\Delta f(p)$ coincides with the usual quantum-mechanical standard deviation of $A$ in the state $p$, by Remark~\ref{rem:dispersion-variance} below.
+\end{definition}
+
+\begin{remark}
+	\label{rem:dispersion-variance}
+	Setting $A=K$ and $f=k=\langle A\rangle$ in Proposition~\ref{prop:symmetric-bracket-intrinsic} gives $\langle A^2\rangle = \frac{\hbar}{2}((f,f))+ f^2$, that is,
+	\begin{equation}
+		\label{eq:riemann-bracket-variance}
+		((f,f)) = \frac{2}{\hbar}\Big(\langle A^2 \rangle - \langle A \rangle^2\Big) = \frac{2}{\hbar}(\Delta f)^2,
+	\end{equation}
+	consistently with Definition~\ref{def:dispersion}. While $((f,k))$ alone does not generally represent the expectation value of a single observable, it serves as the rigorous geometric formulation of the quantum covariance between $f$ and $k$ at any given state $p \in \PH$.
+\end{remark}
+
+This purely geometric interpretation of variances and covariances paves the way to formulate the most general uncertainty relations without invoking the linear structure of $\H$.
+
+This purely geometric interpretation of variances and covariances yields the uncertainty relations without invoking the linear structure of $\H$.
+
+\begin{theorem}[Robertson--Schrödinger relation, geometric form]
+	\label{thm:robertson-schrodinger}
+	For any pair of observable functions $f,k\in\mathcal{K}(\PH,\R)$, their statistical dispersions evaluated at any state $p \in \PH$ satisfy the fundamental bound:
+	\begin{equation}
+		(\Delta f)(\Delta k) \geq \frac{\hbar}{2}\sqrt{\poisson{f}{k}^2 + ((f,k))^2}.
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	Fix $[x]\in\PH$. Since $\Ham f,\Ham k\in x^\perp$ are already tangent,
+	\eqref{eq:g-omega-scaled} gives directly
+	\begin{equation*}
+		((f,k))_\omega+i\,\poisson{f}{k}_\omega = g(\Ham f,\Ham k)+i\,\omega(\Ham f,\Ham k) = 2\hbar\,(\Ham f,\Ham k).
+	\end{equation*}
+	By \eqref{eq:riemann-dispersion}, $\|\Ham f\|^2=(\Ham f,\Ham
+	f)=\frac1{2\hbar}((f,f))_\omega=\frac{(\Delta f)^2}{\hbar^2}$, and likewise
+	for $k$. The Cauchy--Schwarz inequality on $\H$ then gives
+	\begin{equation*}
+		\sqrt{((f,k))_\omega^2+\poisson{f}{k}_\omega^2}=2\hbar\,|(\Ham f,\Ham k)|
+		\leq 2\hbar\,\|\Ham f\|\,\|\Ham k\|=\frac2\hbar(\Delta f)(\Delta k),
+	\end{equation*}
+	which is the stated inequality.
+\end{proof}
+
+\begin{remark}
+	The weaker Heisenberg relation $(\Delta f)(\Delta k)\geq\frac\hbar2\left|\poisson{f}{k}_\omega\right|$
+	follows dropping the Riemann bracket term. Equality in
+	Theorem~\ref{thm:robertson-schrodinger} holds at $[x]\in\PH$ if and only if
+	$\Ham f$ and $\Ham k$ are proportional over $\C$ there, $\Ham f=a\,\Ham
+	k+b\,J\Ham k$ for some $a,b\in\R$: the extreme cases $b=0$ and $a=0$
+	correspond, respectively, to the vanishing of the Poisson bracket and of
+	the covariance $((f,k))_\omega$ at $[x]$.
+\end{remark}
+
+\begin{example}
+	For $f=\langle\sigma_x\rangle$, $k=\langle\sigma_y\rangle$ on the Bloch
+	sphere, at the state $[x]=[(1,0)^T]$ one computes
+	$\poisson{f}{k}=\tfrac{2}{\hbar}\langle\sigma_z\rangle=\tfrac{2}{\hbar}$
+	and $((f,k))=0$, so Theorem~\ref{thm:robertson-schrodinger} gives
+	$(\Delta f)(\Delta k)\geq 1$, saturated exactly at this state since
+	$\langle\sigma_x\rangle=\langle\sigma_y\rangle=0$ there force
+	$\Delta f=\Delta k=1$, matching the standard spin uncertainty relation.
+\end{example}
+
+\begin{example}[Anandan--Aharonov relation]
+	For a bounded Hamiltonian $H$ with observable function $h=\langle H\rangle$, the energy variance takes the form $(\Delta h)^2 = \frac{\hbar}{2}((h,h))$. By the Kähler compatibility outlined in Remark~\ref{rem:poisson-riemann-reformulation}, $((h,h)) = g(\Ham{h},\Ham{h})$. Thus, the energy uncertainty $\Delta h$ equals, up to a fundamental constant, the Riemannian length of the Hamiltonian vector field generating time evolution. The energy dispersion dictates the Riemannian speed at which the state traverses the projective manifold $\PH$ during unitary dynamics.
+\end{example}
+
+\noindent The Riemannian metric $g$ studied so far governs the infinitesimal
+statistical structure of $\PH$. Its global role is expressed through the
+distance it induces, whose extremal curves are the geodesics.
+
+\begin{definition}[Geodesic]
+	\label{def:geodesic}
+	Let $(\mathcal{M},g)$ be a Riemannian manifold, as per
+	Definition~\ref{def:riemannian-metric}. For a piecewise $C^1$ curve
+	$\gamma:[a,b]\to\mathcal{M}$, its length is
+	\begin{equation}
+		L(\gamma):=\int_a^b\sqrt{g(\dot\gamma(t),\dot\gamma(t))}\,dt.
+	\end{equation}
+	A curve $\gamma:[a,b]\to\mathcal{M}$, parametrized proportionally to arc
+	length, is a \emph{geodesic} if every $t_0\in[a,b]$ has a neighborhood
+	$[t_0-\varepsilon,t_0+\varepsilon]\cap[a,b]$ on which $\gamma$ minimizes
+	$L$ among piecewise $C^1$ curves with the same endpoints.
+\end{definition}
+
+\noindent Geodesics are the Riemannian analogue of straight lines, and their
+lengths define a genuine distance function on $\mathcal{M}$, compatible with
+its manifold topology.
+
+\begin{definition}[Riemannian distance]
+	\label{def:riemannian-distance}
+	Let $(\mathcal{M},g)$ be a Riemannian manifold, as per
+	Definition~\ref{def:riemannian-metric}. The Riemannian distance between
+	$p,q\in\mathcal{M}$ is
+	\begin{equation}
+		d_g(p,q):=\inf_\gamma L(\gamma),
+	\end{equation}
+	where the infimum runs over piecewise $C^1$ curves
+	$\gamma:[a,b]\to\mathcal{M}$ with $\gamma(a)=p$, $\gamma(b)=q$, and $L$ is
+	as in Definition~\ref{def:geodesic}. If $\mathcal{M}$ is connected, $d_g$
+	is a metric inducing the manifold topology, and, when attained, the
+	infimum is realized by a geodesic of Definition~\ref{def:geodesic}.
+\end{definition}
+
+\begin{remark}
+	\label{rem:geodesic-distance-importance}
+	On $\PH$, equipped with the Fubini--Study metric $g$ of
+	\eqref{eq:physical-kahler-structure}, the distance $d_g$ of
+	Definition~\ref{def:riemannian-distance} is not a mere geometric
+	refinement: Theorem~\ref{thm:born-rule-geodesic} below identifies it
+	with the Born rule transition probability between pure states, and
+	Definition~\ref{def:eigenspace-submanifold} together with
+	Proposition~\ref{prop:geometric-projection} identify state vector
+	reduction with a geodesic projection onto an eigenspace submanifold.
+	The metric $g$ thus governs, through $d_g$, both the statistical
+	distinguishability of states and the outcome of measurement.
+\end{remark}
+
+\noindent Among submanifolds of $\mathcal{M}$, those on which the ambient and
+intrinsic geodesics coincide play a distinguished role: for these, the
+intrinsic distance agrees with the distance measured in the ambient
+manifold.
+
+\begin{definition}[Totally geodesic submanifold]
+	\label{def:totally-geodesic-submanifold}
+	Let $(\mathcal{M},g)$ be a Riemannian manifold, as per
+	Definition~\ref{def:riemannian-metric}, and let $N\subset\mathcal{M}$ be a
+	submanifold, equipped with the induced metric $g|_N$. $N$ is
+	\emph{totally geodesic} if every geodesic of $(N,g|_N)$, as per
+	Definition~\ref{def:geodesic}, is also a geodesic of $(\mathcal{M},g)$.
+\end{definition}
+
+\begin{remark}
+	\label{rem:totally-geodesic-distance}
+	If $N\subset\mathcal{M}$ is totally geodesic as per
+	Definition~\ref{def:totally-geodesic-submanifold} and $\mathcal{M}$ is
+	connected, the Riemannian distance $d_{g|_N}$ induced on $N$ by
+	Definition~\ref{def:riemannian-distance} coincides with the restriction
+	of $d_g$ to $N\times N$.
+\end{remark}
+
+\subsection*{Transition Probabilities}
+The same metric $g$ also has an operational meaning independent of any
+fixed observable: it measures the statistical distinguishability of
+nearby pure states.
+
+\begin{theorem}[Provost--Vallee, quantum Fisher information]
+	\label{thm:provost-vallee}
+	Let $\theta\mapsto x(\theta)\in\H\setminus\{0\}$ be a smooth curve,
+	$\psi(\theta):=[x(\theta)]\in\PH$, and $\dot x:=\partial_\theta x$. Then
+	\begin{equation}
+		g\left(\frac{d\psi}{d\theta},\frac{d\psi}{d\theta}\right)
+		= 2\hbar\left(\frac{(\dot x,\dot x)}{(x,x)}-\frac{(x,\dot x)(\dot x,x)}{(x,x)^2}\right).
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	Both sides are invariant under $x(\theta)\mapsto\lambda(\theta)x(\theta)$,
+	$\lambda(\theta)\in\C\setminus\{0\}$, which leaves $\psi(\theta)$
+	unchanged, so it suffices to treat a normalized curve, $\|x(\theta)\|=1$.
+	At $\theta_0$, Proposition~\ref{prop:ph-chart-homeomorphism} identifies
+	$d\psi/d\theta$ with the projection $\dot x(\theta_0)_{x(\theta_0)}$ of
+	$\dot x(\theta_0)$ onto $x(\theta_0)^\perp$, and
+	Lemma~\ref{lem:g-omega-ambient} with $\Psi=x(\theta_0)$,
+	$\eta=\eta'=\dot x(\theta_0)$ gives $g(d\psi/d\theta,d\psi/d\theta)
+	=2\hbar\big[(\dot x,\dot x)-|(x,\dot x)|^2\big]$ at $\theta_0$, which is the
+	stated formula since $(x,x)=1$ there.
+\end{proof}
+
+\begin{remark}
+	The quantity
+	\begin{equation}
+		\mathcal F(\theta):=4\left(\frac{(\dot x,\dot x)}{(x,x)}-\frac{(x,\dot x)(\dot x,x)}{(x,x)^2}\right)
+	\end{equation}
+	is, by definition, the quantum Fisher information of the family of pure
+	states $\psi(\theta)$ with respect to $\theta$. Theorem~\ref{thm:provost-vallee}
+	identifies it with the pulled-back metric, $g(\dot\psi,\dot\psi)
+	=\frac\hbar2\mathcal F(\theta)$: the Riemannian line element of $\PH$ is,
+	up to the constant $\hbar/2$, the statistical distance between
+	infinitesimally separated pure states.
+\end{remark}
+
+\noindent The infinitesimal statement of Theorem~\ref{thm:provost-vallee}
+integrates, along a geodesic, to a global statement relating the
+distinguishability of two arbitrary pure states to their Riemannian
+distance.
+
+The metric $g$ extends beyond infinitesimal statistical dispersion to govern the macroscopic distinguishability of quantum states. Integrating the metric distance across the manifold yields the fundamental postulate of quantum measurement.
+
+\begin{theorem}[Born rule as geodesic distance]
+	\label{thm:born-rule-geodesic}
+	Let $d_g : \PH \times \PH \to \R$ denote the Riemannian distance function induced by the Fubini--Study metric $g$ on $\PH$. For any two pure states $[x], [y] \in \PH$, the quantum mechanical transition probability $P([x], [y])$ satisfies
+	\begin{equation}
+		P([x], [y]) := \frac{|(x, y)|^2}{\|x\|^2\|y\|^2} = \cos^2\left(\frac{d_g([x], [y])}{\sqrt{2\hbar}}\right).
+	\end{equation}
+\end{theorem}
+
+Theorem II.2 \cite{ashtekar}.
+
+\begin{example}[Qubit]
+	For $\H=\C^2$, the projective space $\PH$ is identified with $\C
+	P^1$, the Bloch sphere of radius $\sqrt{\hbar/2}$ in the Fubini--Study
+	metric $g$ of \eqref{eq:physical-kahler-structure}. Antipodal points
+	on the sphere correspond to orthogonal states $[x],[y]$, for which
+	$P([x],[y])=|(x,y)|^2/(\|x\|^2\|y\|^2)=0$; by
+	Theorem~\ref{thm:born-rule-geodesic} this forces
+	$d_g([x],[y])=\pi\sqrt{\hbar/2}$, the diameter of the sphere, matching
+	the maximal geodesic distance recorded in the remark following
+	Theorem~\ref{thm:hawley-igusa}. Conversely, identical states sit at
+	$d_g=0$, where $P=1$, so $\cos^2$ interpolates continuously between
+	certainty and mutual exclusivity as the geodesic distance ranges over
+	$[0,\pi\sqrt{\hbar/2}]$.
+\end{example}
+
+\begin{remark}
+	The metric $g$ completely determines the probabilistic structure of quantum mechanics. Orthogonal states, representing mutually exclusive measurement outcomes, correspond to points separated by the maximum geodesic distance $d_g = \pi \sqrt{\hbar/2}$.
+\end{remark}
+
+\begin{remark}[Symmetry rigidity]
+	The interplay between the symplectic and Riemannian structures restricts quantum observables. The infinitesimal isometries of $g$ (the Killing vector fields of $\PH$) exactly characterize the Hamiltonian vector fields of physical observable functions among all smooth scalar fields on $\PH$. This structural result is the central focus of Section~\ref{sec:observables}.
+\end{remark}
+
+\section{Observables}
+\label{sec:observables}
+
+In classical mechanics, the space of physical observables is naturally identified with the entire commutative algebra of smooth real-valued functions on the symplectic phase space. In the quantum setting, however, the rigid interplay between the symplectic structure $\omega$ and the Riemannian metric $g$ severely constrains the admissible observables. The physical observables are precisely those functions whose Hamiltonian flow respects the full Kähler geometry of the state manifold.
+
+\begin{definition}[Observable function]
+	\label{def:observable-function}
+	A smooth function $f:\PH\to\R$ is an \emph{observable function} if there exists a self-adjoint operator $A\in\BH$ such that $f = \langle A\rangle$.
+\end{definition}
+
+\begin{definition}[Spectrum of an observable function]
+	\label{def:observable-spectrum}
+	Let $f = \langle A \rangle \in \mathcal{K}(\PH,\R)$ be an observable function associated with the self-adjoint operator $A \in \BH$. The \emph{spectrum} of $f$, denoted $\sigma(f)$, is the spectrum of the underlying operator $A$, defined algebraically as the set of values $\lambda \in \R$ such that the operator $A - \lambda \Id$ lacks a bounded two-sided inverse in $\BH$. Geometrically, the pure point spectrum of $f$ (the set of eigenvalues) coincides exactly with the set of critical values of the smooth function $f$ on $\PH$. These spectral values are attained precisely at the states where the Hamiltonian vector field vanishes, $\Ham{f} = 0$.
+\end{definition}
+
+\begin{remark}
+	Restricting the observables to bounded self-adjoint operators is a technical convenience that entails no loss of physical generality: any realistic experiment probes a finite range of spectral values, allowing unbounded operators to be truncated. Thus, physical observables are faithfully represented by observable functions on $\PH$.
+\end{remark}
+
+
+By Proposition~\ref{prop:kahler-isomorphisms}, the flow generated by a self-adjoint operator $A$ via the Schrödinger equation acts on $\PH$ as a continuous one-parameter group of Kähler isomorphisms. Consequently, the Hamiltonian vector field $\Ham{f}$ of an observable function $f = \langle A \rangle$ preserves not only the symplectic form $\omega$ but also the Fubini--Study metric $g$.
+
+\begin{definition}[Killing vector field]
+	\label{def:killing-vector-field}
+	Let $(\mathcal{M}, g)$ be a Riemannian manifold. A vector field $X \in \mathfrak{X}(\mathcal{M})$ is a \emph{Killing vector field} if the Lie derivative of the metric tensor $g$ with respect to $X$ vanishes identically on $\mathcal{M}$:
+	\begin{equation}
+		\mathcal{L}_X g = 0.
+	\end{equation}
+\end{definition}
+
+\begin{example}
+	On the Bloch sphere $\PH\cong\C P^1$ with the Fubini--Study metric $g$,
+	the one-parameter group $[x]\mapsto[e^{-it\sigma_z/2}x]$ rotates the
+	sphere about its polar axis at constant angular speed. Since rotations
+	preserve the round metric, the generating vector field
+	$\Ham{\langle\sigma_z\rangle}$ is Killing, illustrating
+	Definition~\ref{def:killing-vector-field} concretely and confirming,
+	via Theorem~\ref{thm:observable-iff-killing}, that $\langle\sigma_z\rangle$
+	is an observable function.
+\end{example}
+
+\begin{theorem}[Geometric characterization of observables]
+	\label{thm:observable-iff-killing}
+	A smooth function $f\in C^\infty(\PH,\R)$ is an observable function if and only if its Hamiltonian vector field $\Ham{f}$ is a Killing vector field for the Fubini--Study metric $g$.
+\end{theorem}
+
+\begin{remark}[Symmetry data and finite-dimensionality]
+	A fundamental property of Killing vector fields on a connected Riemannian manifold is that they are uniquely determined globally by their value and their first covariant derivative at a single point. Through the symplectic duality $\Ham{f} = I df$, this implies that an observable function is completely specified everywhere on $\PH$ by its value, its first differential, and its Hessian evaluated at any single reference state $[x] \in \PH$. The space of observables is therefore finite-dimensional whenever $\H$ is finite-dimensional, contrasting sharply with the infinite-dimensional classical algebra $C^\infty(\PH, \R)$.
+\end{remark}
+
+Theorem~\ref{thm:observable-iff-killing} establishes that observables are precisely the Kählerian functions (Definition~\ref{def:kahlerian-function}) of the projective Hilbert space. They act as the generators of the structural symmetries of the state manifold. This profound geometric constraint allows the non-commutative algebraic operations of $\BH$ to be translated exactly into purely geometric operations on $\PH$.
+
+\begin{theorem}[Isomorphism of Lie--Jordan and Kähler algebras]
+	\label{thm:lie-jordan-kahler-isomorphism}
+	Let $(\mathcal{O},\circ,\{\cdot,\cdot\})$ be the Lie--Jordan algebra of bounded self-adjoint operators on $\H$, with $\{A,B\} := \frac{1}{i\hbar}[A,B]$ and $A \circ B := \frac{1}{2}(AB+BA)$. The expectation value map $A \mapsto \langle A \rangle$ is a strict algebraic-geometric isomorphism between $\mathcal{O}$ and the algebra of Kählerian functions $\mathcal{K}(\PH,\R)$ equipped with the geometric products $\circ_{\hbar}$ and $\poisson{\cdot}{\cdot}$.
 \end{theorem}
 
 \begin{proof}
-	Set-theoretic part: correspondence between pure states and irreducible GNS representations, together with Corollary \ref{cor:pure-state-b0h-ph}. Continuity: Proposition \ref{prop:ph-topologies-coincide}. Full argument in \cite[Theorem 2.5.4]{landsmanMathematicalTopicsBetween1998}.
-\end{proof}
-
-\noindent Regard $\mathcal{H}$ as a real vector space, with $T_\Psi\mathcal{H} \cong \mathcal{H}$ through the directional derivative of Remark \ref{remark:vec-der}.
-
-\begin{definition}\label{def:hilbert-directional-derivative}
-	For $\Phi \in \mathcal{H}$, $V(\Phi) \in \mathfrak{X}(\mathcal{H})$ is given by
-	\[
-	V(\Phi)_\Psi f := \frac{d}{dt}\Big|_{t=0} f(\Psi+t\Phi), \qquad \Psi \in \mathcal{H}, \ f \in C^\infty(\mathcal{H},\R).
-	\]
-	If $V(\Phi)$ is tangent to $S\mathcal{H}$ at $\Psi$, its image under $\tau_*$ as in Definition \ref{def:differential-map} is $v(\Phi) \in T_\psi\mathbb{P}\mathcal{H}$.
-\end{definition}
-
-\begin{proposition}\label{prop:tangent-space-ph}
-	For $\psi = \tau(\Psi) \in \mathbb{P}\mathcal{H}$,
-	\begin{equation}
-		T_\psi\mathbb{P}\mathcal{H} = \{v(iA\Psi) \mid A \in \mathfrak{B}(\mathcal{H})_\R\}. \label{eq:tangent-space-ph}
-	\end{equation}
-\end{proposition}
-
-\begin{proof}
-	By Proposition \ref{prop:ph-chart-homeomorphism}, $T_\psi\mathbb{P}\mathcal{H} \cong \Psi^\perp$ through $dF_\psi$. Given $\Omega \in \Psi^\perp$, $A_\Omega := -i(|\Omega)(\Psi| - |\Psi)(\Omega|)$ is self-adjoint and $A_\Omega\Psi = -i\Omega$, so $iA_\Omega\Psi = \Omega$, giving $\Psi^\perp \subset \{iA\Psi\}$. Conversely, for self-adjoint $A$, $(\Psi,iA\Psi) = i(\Psi,A\Psi)$ equals $\overline{i(A\Psi,\Psi)}$ by self-adjointness, forcing $\Re(\Psi,iA\Psi)=0$, so $iA\Psi \in \Psi^\perp$. Equation \eqref{eq:tangent-space-ph} follows.
-\end{proof}
-
-\begin{proposition}\label{prop:hilbert-symplectic}
-	For $\hbar \in \R\setminus\{0\}$,
-	\begin{equation}
-		\omega\big(V(\Phi),V(\Omega)\big) := 2\hbar\,\Im(\Phi,\Omega) \label{eq:hilbert-symplectic-form}
-	\end{equation}
-	is a symplectic form on $\mathcal{H}$ as in Definition \ref{def:sympl-man}.
-\end{proposition}
-
-\begin{proof}
-	Antisymmetry: $\overline{(\Phi,\Omega)}=(\Omega,\Phi)$. Closedness: constant coefficients. Nondegeneracy: $\omega(V(\Phi),V(i\Phi)) = 2\hbar\,\Im(i(\Phi,\Phi)) = 2\hbar\|\Phi\|^2$, zero only if $\Phi=0$.
-\end{proof}
-
-\begin{definition}\label{def:quadratic-observable}
-	For $H \in \mathfrak{B}(\mathcal{H})_\R$, $\tilde{H} \in C^\infty(\mathcal{H},\R)$ is
-	\begin{equation}
-		\tilde{H}(\Psi) := (\Psi,H\Psi). \label{eq:quadratic-observable}
-	\end{equation}
-\end{definition}
-
-\begin{proposition}\label{prop:hamiltonian-vf-quadratic}
-	The Hamiltonian vector field of $\tilde{H}$ with respect to $\omega$, as in Definition \ref{def:ham-field}, is
-	\begin{equation}
-		\xi_{\tilde{H}}(\Psi) = -V\Big(\frac{i}{\hbar}H\Psi\Big). \label{eq:hamiltonian-vf-quadratic}
-	\end{equation}
-\end{proposition}
-
-\begin{proof}
-	Self-adjointness of $H$ gives
-	\begin{equation}
-		d\tilde{H}(\Psi)\big(V(\Phi)\big) = (\Phi,H\Psi) + (\Psi,H\Phi) = 2\Re(\Phi,H\Psi). \label{eq:diff-quadratic}
-	\end{equation}
-	For $\xi(\Psi) := V(cH\Psi)$, $\omega(\xi(\Psi),V(\Phi)) = 2\hbar\,\Im(\bar{c}(H\Psi,\Phi))$. Taking $c=-i/\hbar$ gives $\bar c = i/\hbar$, $\Im(i(H\Psi,\Phi)) = \Re(H\Psi,\Phi)$, so $\omega(\xi(\Psi),V(\Phi)) = 2\Re(H\Psi,\Phi) = 2\Re(\Phi,H\Psi)$, matching \eqref{eq:diff-quadratic}. By $\iota_{\xi_{\tilde H}}\omega = d\tilde H$, $\xi_{\tilde H}(\Psi) = V(-iH\Psi/\hbar)$.
-\end{proof}
-
-\begin{proposition}\label{prop:schrodinger-and-commutator}
-	The integral curve of $\xi_{\tilde H}$ through $\Psi_0$ solves the \emph{Schrödinger equation}
-	\begin{equation}
-		i\hbar\,\dot\Psi(t) = H\Psi(t), \qquad \Psi(t) = e^{-itH/\hbar}\Psi_0. \label{eq:schrodinger}
-	\end{equation}
-	For $A,B \in \mathfrak{B}(\mathcal{H})_\R$, the Poisson bracket of Definition \ref{def:poi-fun} satisfies
-	\begin{equation}
-		\{\tilde A,\tilde B\} = -\frac{i}{\hbar}\widetilde{[A,B]}. \label{eq:poisson-bracket-commutator}
-	\end{equation}
-\end{proposition}
-
-\begin{proof}
-	\eqref{eq:hamiltonian-vf-quadratic} gives $\dot\Psi = -iH\Psi/\hbar$, i.e. \eqref{eq:schrodinger}. For \eqref{eq:poisson-bracket-commutator}, by \eqref{eq:diff-quadratic} and \eqref{eq:hamiltonian-vf-quadratic},
-	\[
-	\{\tilde A,\tilde B\}(\Psi) = d\tilde A(\Psi)(\xi_{\tilde B}(\Psi)) = 2\Re\Big(-\frac{i}{\hbar}B\Psi,A\Psi\Big) = -\frac{2}{\hbar}\Im(B\Psi,A\Psi).
-	\]
-	Since $(\Psi,[A,B]\Psi) = (A\Psi,B\Psi)-(B\Psi,A\Psi) = -2i\,\Im(B\Psi,A\Psi)$, this is $\frac{i}{\hbar}(\Psi,[A,B]\Psi) \cdot(-1) = -\frac{i}{\hbar}(\Psi,[A,B]\Psi)$.
-\end{proof}
-
-\begin{remark}
-	Sign opposite to \cite[Equation (2.38)]{landsmanMathematicalTopicsBetween1998}, due to the orientation $\iota_{X_H}\omega=dH$ of Definition \ref{def:ham-field}. Check against the canonical commutation relation convention of the Weyl algebra chapter.
-\end{remark}
-
-\begin{remark}\label{rem:unitary-poisson-map}
-	For $U$ unitary as in Definition \ref{def:unitary-operator}, $U^*\tilde A = \widetilde{U^{-1}AU}$, so $U$ acts on $(\mathcal{H},\omega)$ as a symplectic map, Definition \ref{def:symp-ham-fields}.
-\end{remark}
-
-\begin{proposition}\label{prop:leaves-hstar-u1}
-	$U(1)$ acts freely on $\mathcal{H}^*$, so $\mathcal{H}^*/U(1)$ is a Poisson manifold as in Definition \ref{def:poisson-manifold}, with symplectic leaves $S_r := \mathcal{H}_r/U(1)$, $\mathcal{H}_r := \{\Psi \mid (\Psi,\Psi)=r^2\}$, as in Theorem \ref{thm:symplectic-foliation}. $\mathbb{P}\mathcal{H} \cong S_1$, symplectic, with
-	\begin{equation}
-		\omega_\psi\big(v(iA\Psi),v(iB\Psi)\big) = -i\hbar\,\widehat{[A,B]}(\psi). \label{eq:ph-symplectic-explicit}
-	\end{equation}
-\end{proposition}
-
-\begin{proof}
-	$z\Psi=\Psi$, $\Psi\neq0$ forces $z=1$, so the action is free. $\Psi \mapsto (\Psi,\Psi)$ descends and its level sets are the $\mathcal{H}_r$. The Poisson tensor of $(\mathcal{H},\omega)$ descends since $U(1)$ acts by symplectic maps, Remark \ref{rem:unitary-poisson-map}, and its symplectic leaves are the $S_r$ by Theorem \ref{thm:symplectic-foliation}. $S\mathcal{H}/U(1) = S_1$ by $(\Psi,\Psi)=1$. Explicit form \eqref{eq:ph-symplectic-explicit}, \cite[Proposition 2.5.6]{landsmanMathematicalTopicsBetween1998}.
-\end{proof}
-
-\begin{definition}\label{def:hat-h}
-	For $H \in \mathfrak{B}(\mathcal{H})_\R$, $\hat H \in C^\infty(\mathbb{P}\mathcal{H},\R)$ is $\hat H(\tau(\Psi)) := \tilde H(\Psi)$, $\Psi \in S\mathcal{H}$.
-\end{definition}
-
-\begin{remark}
-	Well defined since $\tilde H(z\Psi) = \tilde H(\Psi)$ for $z\in U(1)$. $\|H\| = \|\hat H\|_\infty$, the Gelfand transform of $H$, Theorem \ref{thm:gelfand-transform}. $\xi_{\hat H}(\tau(\Psi)) = -v(iH\Psi/\hbar)$, $\{\hat A,\hat B\} = -\frac{i}{\hbar}\widehat{[A,B]}$, every unitary acts as a symplectic map on $\mathbb{P}\mathcal{H}$. For $\mathcal{H}=\C^N$, \eqref{eq:ph-symplectic-explicit} is $\hbar$ times the Fubini-Study form.
-\end{remark}
-
-\begin{proposition}\label{prop:schrodinger-ph}
-	$\psi(t) := \tau(\Psi(t))$, with $\Psi(t)$ as in \eqref{eq:schrodinger}, is the complete flow of $\xi_{\hat H}$:
-	\[
-	\frac{d\psi(t)}{dt} = \xi_{\hat H}(\psi(t)), \qquad \psi(t) = e^{-it\hat H/\hbar}\psi(0).
-	\]
-\end{proposition}
-
-\begin{proof}
-	$\tau$ is a submersion on $S\mathcal{H}$, so $\dot\psi(t) = v(\dot\Psi(t)) = \xi_{\hat H}(\psi(t))$. Completeness: $\Psi(t)=e^{-itH/\hbar}\Psi(0)$ is defined for all $t \in \R$.
-\end{proof}
-
-\begin{proposition}\label{prop:eigenvector-critical-point}
-	$\Psi \in S\mathcal{H}$ is an eigenvector of $H \in \mathfrak{B}(\mathcal{H})_\R$ iff $\psi=\tau(\Psi)$ is a critical point of $\hat H$, $d\hat H(\psi)=0$, with eigenvalue $\hat H(\psi)$.
-\end{proposition}
-
-\begin{proof}
-	By Proposition \ref{prop:tangent-space-ph}, $d\hat H(\psi)=0$ iff $\Re(\Psi,(HA-AH)\Psi)=0$ for all self-adjoint $A$, that is, $(\Psi,AH\Psi) \in \R$ for all such $A$. By the surjectivity in the proof of Proposition \ref{prop:tangent-space-ph}, every $\Phi \in \Psi^\perp$ equals $A\Psi$ for some self-adjoint $A$, and every $i\Phi$ equals $A'\Psi$ for some self-adjoint $A'$, forcing $(\Psi,H\Phi) \in \R$ and $i(\Psi,H\Phi) \in \R$, hence $(\Psi,H\Phi)=0$ for all $\Phi \in \Psi^\perp$. This means $H\Psi \in (\Psi^\perp)^\perp = \C\Psi$, that is, $\Psi$ is an eigenvector with eigenvalue $(\Psi,H\Psi) = \hat H(\psi)$.
-\end{proof}
-
-\section{Representations of Poisson Algebras}
-
-\begin{definition}[Representation of a Poisson algebra]\label{def:representation-poisson-algebra}
-	Let $(\mathfrak{A}_\R,\circ,\{\cdot,\cdot\})$ be a Poisson algebra with Jordan product $\circ$, Definition \ref{def:jordan-product}. A \emph{representation} is a linear map $\pi: \mathfrak{A}_\R \to C^\infty(S,\R)$, $S$ symplectic as in Definition \ref{def:sympl-man}, such that
-	\begin{align}
-		\pi(f \circ h) &= \pi(f)\pi(h), \label{eq:rep-jordan} \\
-		\{\pi(f),\pi(h)\}_S &= \pi(\{f,h\}), \label{eq:rep-poisson}
-	\end{align}
-	for $f,h \in \mathfrak{A}_\R$, and such that $\pi$ preserves completeness: the flow of $\xi_{\pi(h)}$ is defined for all times whenever $h$ is complete in $\mathfrak{A}_\R$.
-\end{definition}
-
-\begin{definition}[Equivalence of representations]\label{def:equivalent-representations}
-	$\pi_1: \mathfrak{A}_\R \to C^\infty(S_1,\R)$ and $\pi_2: \mathfrak{A}_\R \to C^\infty(S_2,\R)$ are \emph{equivalent} if there is a symplectomorphism $J: S_1 \to S_2$ with $J^*\pi_2(f) = \pi_1(f)$ for all $f \in \mathfrak{A}_\R$.
-\end{definition}
-
-\begin{definition}[Poisson space]\label{def:poisson-space}
-	A \emph{Poisson space} $P$ is a Hausdorff space with a linear subspace $\mathfrak{A}_\R \subset C(P,\R)$ and symplectic manifolds $\{S_\alpha\}$, Definition \ref{def:sympl-man}, the \emph{symplectic leaves} of $P$, with continuous injections $\iota_\alpha: S_\alpha \hookrightarrow P$, such that:
+	The proof proceeds by matching the algebraic operations in $\mathcal{O}$ with the geometric structures on the Kähler manifold $\PH$ evaluated on mean value functions.
+	
 	\begin{enumerate}
-		\item[(1)] $P = \bigcup_\alpha \iota_\alpha(S_\alpha)$, disjoint union;
-		\item[(2)] $\mathfrak{A}_\R$ separates points of $P$;
-		\item[(3)] $\mathfrak{A}_\R \subset C^\infty_L(P,\R) := \{f \in C(P,\R) \mid \iota_\alpha^*f \in C^\infty(S_\alpha,\R) \ \forall \alpha\}$;
-		\item[(4)] $\mathfrak{A}_\R$ is closed under
+		\item \textbf{Lie structure (Symplectic form):}
+		The Lie bracket $\{A,B\}$ in $\mathcal{O}$ maps to the Poisson bracket generated by the symplectic form $\omega$. By Proposition \ref{prop:poisson-comm}, substituting the scaled commutator yields:
 		\begin{equation}
-			\{f,h\}(\iota_\alpha(\sigma)) := \{\iota_\alpha^*f,\iota_\alpha^*h\}_\alpha(\sigma), \qquad \sigma \in S_\alpha, \label{eq:poisson-space-bracket}
+			\poisson{\langle A\rangle}{\langle B\rangle} = \langle \{A,B\} \rangle.
 		\end{equation}
-		with $\{\cdot,\cdot\}_\alpha$ as in Definition \ref{def:leaf-bracket}.
+		
+		\item \textbf{Jordan structure (Riemannian metric):}
+		The Jordan product $A \circ B$ in $\mathcal{O}$ corresponds to the $\circ_{\hbar}$ product on $\PH$. By Proposition \ref{prop:symmetric-bracket-intrinsic} and Definition \ref{def:kahler-bracket-products}, the geometric evaluation isolates the scaled Riemann bracket:
+		\begin{equation}
+			\langle A \circ B \rangle = \langle A \rangle \circ_{\hbar} \langle B \rangle = \frac{\hbar}{2}((\langle A \rangle, \langle B \rangle)) + \langle A \rangle \langle B \rangle.
+		\end{equation}
+		
+		\item \textbf{Associative product (Kähler form):}
+		The total associative product $AB = A \circ B + \frac{i\hbar}{2}\{A,B\}$ in the ambient algebra maps to the Kähler product $*_{\hbar}$. Applying the linearity of the expectation value map:
+		\begin{align}
+			\langle AB \rangle &= \langle A \circ B \rangle + \frac{i\hbar}{2}\langle \{A,B\} \rangle \nonumber \\
+			&= \left( \frac{\hbar}{2}((\langle A \rangle, \langle B \rangle)) + \langle A \rangle \langle B \rangle \right) + \frac{i\hbar}{2}\poisson{\langle A\rangle}{\langle B\rangle} \nonumber \\
+			&= \langle A \rangle *_{\hbar} \langle B \rangle.
+		\end{align}
 	\end{enumerate}
+	This establishes the exact structural equivalence between the abstract Lie--Jordan algebra of operators and the intrinsically geometric operations defined on $\PH$.
+\end{proof}
+
+\begin{example}
+	Let $A=\sigma_x$, $B=\sigma_y$ be Pauli matrices on $\H=\C^2$. Direct
+	computation gives $A\circ B=\tfrac12(\sigma_x\sigma_y+\sigma_y\sigma_x)=0$
+	and $\{A,B\}=\tfrac{1}{i\hbar}[\sigma_x,\sigma_y]=\tfrac{2}{\hbar}\sigma_z$,
+	so that $AB=A\circ B+\tfrac{i\hbar}{2}\{A,B\}=i\sigma_z$, matching the
+	familiar identity $\sigma_x\sigma_y=i\sigma_z$. Under the isomorphism
+	of Theorem~\ref{thm:lie-jordan-kahler-isomorphism}, this same identity
+	is recovered purely geometrically as
+	$\langle\sigma_x\rangle *_{\hbar}\langle\sigma_y\rangle=\langle
+	i\sigma_z\rangle$ on the Bloch sphere $\PH\cong\C P^1$, illustrating
+	how the noncommutative operator product becomes the $*_{\hbar}$ product
+	of Definition~\ref{def:kahler-bracket-products}.
+\end{example}
+
+\subsection*{Commutativity and Spectral Decomposition}
+
+The algebraic-geometric isomorphism of Theorem \ref{thm:lie-jordan-kahler-isomorphism} allows the translation of the spectral theory of self-adjoint operators into purely geometric properties of Kählerian functions.
+
+\begin{proposition}[Geometric commutativity]
+	\label{prop:geometric-commutativity}
+	Two observable functions $f, k \in \mathcal{K}(\PH, \R)$ represent simultaneously measurable observables if and only if their Poisson bracket vanishes identically: $\poisson{f}{k} = 0$. Geometrically, this holds if and only if their Hamiltonian vector fields commute, $[\Ham{f}, \Ham{k}] = 0$, implying that their respective isometries generate a strongly commuting Hamiltonian action on $\PH$.
+\end{proposition}
+
+\begin{example}
+	Let $f=\langle\sigma_z\rangle$, $k=\langle\Id\rangle\equiv1$. Since
+	$\{\sigma_z,\Id\}=0$, Proposition~\ref{prop:poisson-comm} gives
+	$\poisson{f}{k}=0$: the two observables commute, and their Hamiltonian
+	vector fields, $\Ham{f}$ and $\Ham{k}=0$, trivially commute as vector
+	fields. By contrast, for $f=\langle\sigma_x\rangle$, $k=\langle\sigma_y\rangle$,
+	$\poisson{f}{k}=\tfrac{2}{\hbar}\langle\sigma_z\rangle\not\equiv0$, so
+	the two spin components are not simultaneously measurable, in agreement
+	with Proposition~\ref{prop:geometric-commutativity}.
+\end{example}
+
+\begin{definition}[Geometric projector]
+	\label{def:geometric-projector}
+	An observable function $p \in \mathcal{K}(\PH, \R)$ is a \emph{geometric projector} if it is idempotent under the Jordan product: $p \circ_{\hbar} p = p$. By evaluating the $\circ_{\hbar}$ product, this imposes the strict metric constraint:
+	\begin{equation}
+		\frac{\hbar}{2}((p,p)) = p - p^2.
+	\end{equation}
 \end{definition}
-	
-	
+
+\begin{example}
+	For a two-level system $\H=\C^2$, let $\Pi$ be the rank-one orthogonal
+	projector onto a fixed eigenvector, and $p:=\langle\Pi\rangle$. Since
+	$\Pi^2=\Pi$, $p$ is a geometric projector in the sense of
+	Definition~\ref{def:geometric-projector}. On the corresponding
+	eigenspace submanifold $\mathbb{P}E_1\subset\PH$, a single point in
+	this case, $p=1$ and $((p,p))=0$; on the orthogonal eigenspace
+	$\mathbb{P}E_0$, $p=0$ and again $((p,p))=0$. At every other state
+	$[x]\in\PH$, $p([x])\in(0,1)$ strictly, and the metric constraint
+	$\tfrac{\hbar}{2}((p,p))=p-p^2$ forces $((p,p))>0$ there, in agreement
+	with the remark following Definition~\ref{def:geometric-projector}.
+\end{example}
+
+\begin{remark}
+	The metric constraint forces $p([x]) \in [0,1]$ for all $[x] \in \PH$, since the Riemann bracket $((p,p)) = g(\Ham{p}, \Ham{p})$ is strictly non-negative. The zero-variance loci where $((p,p)) = 0$ correspond precisely to the regions where the function $p$ attains the absolute values $1$ or $0$. These loci form exactly the totally geodesic eigenspace submanifolds associated with the projector.
+\end{remark}
+
+\begin{theorem}[Geometric Spectral Theorem]
+	\label{thm:geometric-spectral}
+	Let $f \in \mathcal{K}(\PH, \R)$ be an observable function possessing a finite discrete spectrum $\sigma(f) = \{a_1, \dots, a_m\}$. There exists a unique set of geometric projectors $\{p_1, \dots, p_m\} \subset \mathcal{K}(\PH, \R)$ such that:
+	\begin{enumerate}[label=(\roman*)]
+		\item $\sum_{j=1}^m p_j = 1$ (Resolution of the identity).
+		\item $p_j \circ_{\hbar} p_k = \delta_{jk} p_j$ (Mutual orthogonality).
+		\item $f = \sum_{j=1}^m a_j p_j$ (Spectral decomposition).
+	\end{enumerate}
+\end{theorem}
+
+\subsection*{State Vector Reduction}
+
+\begin{definition}[Eigenspace submanifold]
+	\label{def:eigenspace-submanifold}
+	Let $A \in \BH$ be a self-adjoint operator with discrete spectrum $\sigma(A)$. For each $a \in \sigma(A)$, let $E_a \subset \H$ be the corresponding closed eigenspace. The projectivization $\mathbb{P}E_a \subset \PH$ is a closed, totally geodesic, as per Definition~\ref{def:totally-geodesic-submanifold}, Kähler submanifold of $\PH$.
+\end{definition}
+
+\begin{example}
+	For $A=\sigma_z$ on $\H=\C^2$, the eigenspaces $E_{\pm1}$ are the two
+	one-dimensional subspaces spanned by the poles of the Bloch sphere, so
+	$\mathbb{P}E_{\pm1}$ are single points, trivially totally geodesic as
+	per Definition~\ref{def:eigenspace-submanifold}. For a degenerate
+	operator such as $A=\sigma_z\oplus\sigma_z$ on $\H=\C^2\otimes\C^2$
+	restricted to a two-dimensional eigenspace, $\mathbb{P}E_a$ is instead
+	a great circle of the higher-dimensional $\PH$, again totally geodesic,
+	illustrating that geometric multiplicity controls the dimension of the
+	submanifold, not merely its existence.
+\end{example}
+
+\begin{remark}[Physical meaning of totally geodesic submanifolds]
+	\label{rem:totally-geodesic-physical}
+	By Remark~\ref{rem:totally-geodesic-distance}, the Riemannian distance measured intrinsically within the submanifold $\mathbb{P}E_a$ matches the distance measured in the ambient space $\PH$. Physically, this guarantees that any quantum superposition of two degenerate eigenstates belonging to $\mathbb{P}E_a$ yields another valid eigenstate lying strictly within the same submanifold. The linear structure of the degenerate eigenspace is therefore preserved globally without geometric distortion.
+\end{remark}
+
+\begin{proposition}[Geometric measurement projection]
+	\label{prop:geometric-projection}
+	Let $p \in \PH$ be a pre-measurement state and $f = \langle A \rangle$ an observable function. Upon a single experimental measurement of $f$ yielding a single definite value $a \in \sigma(A)$, the state reduction $p \mapsto p_a$ is the unique geometric projection onto the eigenspace submanifold $\mathbb{P}E_a$ minimizing the Riemannian distance:
+	\begin{equation}
+		d_g(p, p_a) = \inf_{q \in \mathbb{P}E_a} d_g(p, q).
+	\end{equation}
+	The resulting reduced state $p_a$ is a single, deterministic physical state corresponding to the single obtained value, strictly distinct from a statistical sum or ensemble average.
+\end{proposition}
+
+\begin{theorem}[Born rule for state reduction]
+	\label{thm:born-rule-reduction}
+	Under the geometric measurement projection $p \mapsto p_a$ defined in Proposition \ref{prop:geometric-projection}, the quantum mechanical probability $P(a|p)$ of obtaining the specific outcome $a \in \sigma(A)$ is strictly determined by the minimized Riemannian distance between the pre-measurement state and the target eigenspace submanifold:
+	\begin{equation}
+		P(a|p) = \cos^2\left(\frac{d_g(p, p_a)}{\sqrt{2\hbar}}\right).
+	\end{equation}
+\end{theorem}
+
+\begin{remark}[Measurement vs. Unitary Dynamics]
+	\label{rem:measurement-vs-unitary}
+	The projection mapping $p \mapsto p_a$ constitutes a discontinuous, non-invertible geometric transformation. Unlike the Hamiltonian flow generated by an observable (Theorem \ref{thm:observable-iff-killing}), which acts via Kähler isometries and preserves the full geometric structure of $\PH$, the measurement projection collapses the symplectic form and strictly decreases the distance between non-orthogonal states. This geometric discontinuity rigorously encodes the difference between the deterministic unitary evolution and the quantum state reduction process.
+\end{remark}
+
+\section{Quantum Symmetries and the Momentum Map}
+\label{sec:quantum-momentum-map}
+
+In the classical Hamiltonian framework, continuous symmetries are defined by symplectic group actions, with the associated conserved quantities encoded algebraically in the momentum map, as established in Definition \ref{def:momentum_mapping}. Translating this apparatus into Geometric Quantum Mechanics requires enforcing the rigid constraints of the Kähler structure of the projective Hilbert space $\PH$.
+
+While a classical symmetry only requires the preservation of the symplectic form $\omega$, a physical quantum symmetry must act via Kähler isometries, thereby preserving the fundamental triad $(\omega, g, J)$. By Wigner's theorem, continuous groups of such isometries are induced by strongly continuous unitary representations on the underlying Hilbert space $\H$.
+
+\begin{proposition}[Quantum momentum map]
+	\label{prop:quantum-momentum-map}
+	Let $G \subseteq U(\H)$ be a connected Lie group acting on $\PH$ via projective unitary transformations. Let $\mathfrak{g}$ be its Lie algebra, consisting of skew-adjoint operators on $\H$. The induced action on $\PH$ is strongly Hamiltonian. The unique equivariant momentum map $\mu: \PH \to \mathfrak{g}^*$, satisfying $d\langle \mu, \xi \rangle = \iota_{\xi_{\PH}} \omega$ as per Definition \ref{def:momentum_mapping}, is given pointwise by
+	\begin{equation}
+		\langle \mu([x]), \xi \rangle = \langle i\hbar \xi \rangle([x]) = \frac{(x, i\hbar \xi x)}{\|x\|^2},
+	\end{equation}
+	where $i\hbar \xi$ is the corresponding self-adjoint generator in $\BH$, and $\langle \cdot \rangle$ is the mean value function.
+\end{proposition}
+
+\begin{example}
+	Let $G=U(1)$ act on $\H$ by $\Psi\mapsto e^{i\theta}\Psi$, with Lie
+	algebra generator $\xi=i\cdot\Id$. Since this action is trivial on
+	$\PH$ (it fixes every ray $[\Psi]$), the induced vector field
+	$\xi_{\PH}$ vanishes identically, and the momentum map of
+	Proposition~\ref{prop:quantum-momentum-map} reduces to the constant
+	$\langle\mu([x]),\xi\rangle=\langle i\hbar\xi\rangle([x])=-\hbar$,
+	consistent with the overall phase of $\Psi$ carrying no physical
+	content on the projective state space.
+\end{example}
+
+\begin{remark}[Topological exactness and structural rigidity]
+	\label{rem:momentum-differences}
+	The transition from classical phase spaces to $\PH$ introduces two fundamental geometric distinctions regarding the momentum map.
+	\begin{enumerate}
+		\item \emph{Non-exactness of the symplectic form:} Classical momentum maps are frequently constructed via the exactness of the symplectic form $\omega = -d\theta$, typical of cotangent bundles $T^*Q$. Conversely, the Fubini--Study form $\omega$ on $\PH$ is closed but not exact (for $\dim \H < \infty$, $\PH$ is compact, strictly prohibiting exact symplectic forms). The existence of the global momentum map $\mu$ on $\PH$ relies instead on the topological fact that $\PH$ is simply connected.
+		\item \emph{Metric constraints:} In classical mechanics, the component functions $\langle \mu, \xi \rangle$ are merely smooth real functions generating symplectic vector fields. In GQM, because the flow of $\xi_{\PH}$ preserves the Riemannian metric $g$, Theorem \ref{thm:observable-iff-killing} guarantees that the components of the momentum map are strictly Kählerian functions (Killing vector fields). The classical observable corresponding to a continuous symmetry direction $\xi$ maps identically to the expectation value of the quantum observable $i\hbar\xi$.
+	\end{enumerate}
+\end{remark}
+
+The classical Geometric Noether Theorem, Theorem \ref{thm:geometric_noether_iff}, translates directly into the quantum formalism. The structure of $\PH$ uniquely identifies the vanishing of the classical Poisson bracket with the vanishing of the quantum commutator.
+
+\begin{theorem}[Quantum Noether Theorem]
+	\label{thm:quantum-noether}
+	Let $H \in \BH$ be a self-adjoint Hamiltonian operator governing the dynamics on $\PH$ via $X_{\langle H \rangle}$. Let $G \subseteq U(\H)$ be a symmetry group acting on $\PH$ with momentum map $\mu: \PH \to \mathfrak{g}^*$. The momentum map is an integral of motion, meaning $\mu(\Phi_t([x])) = \mu([x])$ for all $t \in \R$, if and only if the algebra of generators strictly commutes with the Hamiltonian:
+	\begin{equation}
+		[H, i\hbar \xi] = 0 \qquad \forall \xi \in \mathfrak{g}.
+	\end{equation}
+\end{theorem}
+
+\begin{proof}
+	By Theorem \ref{thm:geometric_noether_iff}, $\mu$ is conserved along the flow of $X_{\langle H \rangle}$ if and only if the Poisson bracket vanishes: $\{ \langle H \rangle, \langle \mu, \xi \rangle \} = 0$ for all $\xi \in \mathfrak{g}$. Substituting the explicit form of the quantum momentum map from Proposition \ref{prop:quantum-momentum-map}, the condition becomes $\{ \langle H \rangle, \langle i\hbar \xi \rangle \} = 0$. Applying the algebraic-geometric correspondence of Proposition \ref{prop:correspondence}, this symplectic bracket maps exactly to the mean value of the operator commutator:
+	\begin{equation}
+		\{ \langle H \rangle, \langle i\hbar \xi \rangle \} = \left\langle \frac{1}{i\hbar} [H, i\hbar \xi] \right\rangle.
+	\end{equation}
+	The function $\langle \frac{1}{i\hbar} [H, i\hbar \xi] \rangle$ vanishes identically on $\PH$ if and only if the corresponding operator $[H, i\hbar \xi]$ is the zero operator in $\BH$.
+\end{proof}
+
+\section{Algebraic-Geometric Unification and Axiomatics}
+\label{sec:unification}
+
+The preceding chapter produced a reconstruction of quantum mechanics from primitive data wholly different from those used here. Starting from the operational notions of preparations and tests, Section~\ref{sec:intro-alg-quant} recovered a unital $C^*$-algebra $\A$ together with a separating state space $S$, the pair fixed as the definition of a quantum system in Definition~\ref{def:physical-system}. The GNS construction of Theorem~\ref{thm:gns}, and its faithful extension in the Gelfand--Naimark Theorem~\ref{thm:gelfand-naimark}, turned this algebraic datum into a genuine Hilbert-space representation, matched article by article against the Dirac--von Neumann axioms of Definition~\ref{def:concl-dvn-axioms}. Starting instead from the linear structure of a fixed Hilbert space $\H$, the present chapter built the Kähler manifold $\PH$ and showed that its symplectic form $\omega$, its Riemannian metric $g$, and the brackets and products of Definitions~\ref{def:poisson-riemann-bracket} and~\ref{def:kahler-bracket-products} reproduce, on mean value functions, the Lie--Jordan operations of the bounded self-adjoint operators on $\H$. This section makes precise how the two reconstructions attach to one another, states what carries over from one to the other and what does not, and collects the dynamical and measurement-theoretic results already proved in this chapter into a single geometric axiomatization, alongside the algebraic axioms it inherits rather than replaces.
+
+\subsection*{From the GNS representation to the geometry of pure states}
+
+The GNS Theorem~\ref{thm:gns} attaches to every state $\omega$ on $\A$ a Hilbert space $\H_\omega$, a representation $\pi_\omega$, and a cyclic vector $\Psi_\omega$ reproducing $\omega$ as a matrix element. Nothing in this construction singles out $\PH_\omega$: it fixes a point $\Psi_\omega\in\H_\omega$, not a manifold, and neither the associative product on $\A$ nor its GNS representation carries a symplectic form, a Riemannian metric, or a notion of Hamiltonian flow. These are supplied only once GNS is combined with purity.
+
+\begin{remark}[Vector states and cyclic vectors]
+	\label{rem:algebraic-geometric-states}
+	The state space $S$, defined operationally via positive linear functionals on the $C^*$-algebra $\A$, is geometrically realized through the GNS construction. For any pure state $\omega \in \mathcal{P}(\A)$, the GNS representation yields a Hilbert space $\H_\omega$ and a cyclic vector $\Psi_\omega \in \H_\omega$. The projective ray $[\Psi_\omega] \in \PH_\omega$ is the unique geometric point corresponding to the algebraic state $\omega$. The evaluation of the state functional maps identically to the mean value function:
+	\begin{equation}
+		\omega(A) = \frac{(\Psi_\omega, A \Psi_\omega)}{\|\Psi_\omega\|^2} = \langle A \rangle([\Psi_\omega]), \qquad \forall A \in \A.
+	\end{equation}
+\end{remark}
+
+\noindent By Proposition~\ref{prop:irreducible-iff-pure}, $\pi_\omega$ is irreducible exactly when $\omega$ is pure, and Theorem~\ref{thm:pure-state-decomposition} extends Remark~\ref{rem:algebraic-geometric-states} from a single state to the whole pure state space:
+\begin{equation}
+	\mathcal{P}(\A) = \bigcup_\alpha \PH_\alpha,
+\end{equation}
+a disjoint union indexed by the unitarily inequivalent irreducible representations of $\A$, with $\PH_\alpha$ the projective space of the corresponding GNS Hilbert space $\H_\alpha$: states lying in the same $\PH_\alpha$ correspond to equivalent representations, states in different $\PH_\alpha$ to inequivalent ones. Theorem~\ref{thm:pure-state-decomposition} exhibits $\mathcal P(\A)$ as stratified by superselection sector; it does not by itself supply a single manifold $\PH$.
+
+\noindent The construction of Section~\ref{sec:ph-kahler} onward specializes this decomposition to a single sector. Proposition~\ref{prop:ph-quotient-pure-states} shows directly that $\PH$, for a fixed Hilbert space $\H$, is in bijection with the whole pure state space $\mathcal P(\mathfrak B_0(\H))$ of the compact operators on $\H$; since Theorem~\ref{thm:pure-state-decomposition} partitions $\mathcal P(\mathfrak B_0(\H))$ into sectors indexed by irreducible representations, this bijection forces the partition to consist of the single term $\PH_\alpha=\PH$ for $\A=\mathfrak B_0(\H)$. Every construction from Section~\ref{sec:ph-kahler} to Section~\ref{sec:quantum-momentum-map} takes place inside this one sector. An algebra $\A$ with several such sectors would instead require one Kähler manifold $\PH_\alpha$ per sector, glued only at the level of the disjoint union $\mathcal P(\A)$ and not at the level of any single symplectic or Riemannian structure; this case falls outside the present formulation.
+
+\subsection*{The Lie--Jordan algebra and the Kähler algebra of observables}
+
+Once a single sector $\PH$ is fixed, the mean value map $A\mapsto\langle A\rangle$ turns algebraic operations on $\BH$ into differential-geometric operations on $\PH$. Proposition~\ref{prop:poisson-comm} identifies the geometric Poisson bracket of Definition~\ref{def:poisson-riemann-bracket} with the mean value of the rescaled commutator, $\poisson{\langle A\rangle}{\langle B\rangle}_\omega=\langle\{A,B\}\rangle$ for $\{A,B\}=\frac{1}{i\hbar}[A,B]$, and Proposition~\ref{prop:symmetric-bracket-intrinsic} identifies the Riemann bracket with the Jordan anticommutator, $\big\langle\tfrac12\{A,K\}_+\big\rangle=\tfrac\hbar2((\langle A\rangle,\langle K\rangle))_\omega+\langle A\rangle\langle K\rangle$. Theorem~\ref{thm:lie-jordan-kahler-isomorphism} assembles the two into a single statement: $A\mapsto\langle A\rangle$ is an isomorphism of the Lie--Jordan algebra $\mathcal O$ of bounded self-adjoint operators on $\H$, with Jordan product $\circ$ and bracket $\{A,B\}=\frac{1}{i\hbar}[A,B]$, onto the algebra of Kählerian functions $\mathcal K(\PH,\R)$ equipped with the geometric products $\circ_{\hbar}$ and $\poisson{\cdot}{\cdot}_\omega$. Theorem~\ref{thm:observable-iff-killing} identifies this target algebra exactly with the observable functions of Definition~\ref{def:observable-function}: a smooth $f\in C^\infty(\PH,\R)$ equals $\langle A\rangle$ for some self-adjoint $A\in\BH$ if and only if its Hamiltonian vector field $\Ham{f}$ is a Killing field for the Fubini--Study metric $g$, equivalently, if and only if $f$ is Kählerian in the sense of Definition~\ref{def:kahlerian-function}. The Poisson bracket by itself already closes on the strictly larger algebra $C^\infty(\PH,\R)$; it is the further, metric-preserving requirement built into the Kähler, rather than merely symplectic, compatibility of $g$ and $\omega$ that cuts this algebra down to exactly the mean value functions of $\BH$.
+
+The correspondence extends from the Jordan and Lie parts of the product to the full associative product once the mean value map is complexified.
+
+\begin{definition}[Geometric $C^*$-norm]
+	\label{def:geometric-norm}
+	For $f\in C^\infty(\PH,\C)$ such that the supremum below is finite, define the geometric norm
+	\begin{equation}
+		\|f\|_{\hbar} := \sqrt{ \sup_{[x]\in\PH}(\bar f *_{\hbar} f)([x])}.
+	\end{equation}
+\end{definition}
+
+\begin{theorem}[Isomorphism of $C^*$-algebras]
+	\label{thm:cstar-isomorphism}
+	Let $\A \subseteq \BH$ be a $C^*$-algebra, and let $\mathcal{K}_{\A}(\PH,\C)$ denote the space of complexified mean value functions $A\mapsto\langle A\rangle$ for all $A\in\A$. Equipped with the $*_{\hbar}$ product, pointwise complex conjugation, and the norm $\Vert\cdot\Vert_{\hbar}$, $\mathcal{K}_{\A}(\PH,\C)$ is a $C^*$-algebra. Furthermore, the map $A\mapsto\langle A\rangle$ is an isometric isomorphism of $C^*$-algebras between $\A$ and $\mathcal{K}_{\A}(\PH,\C)$.
+\end{theorem}
+
+\noindent Together with Theorem~\ref{thm:lie-jordan-kahler-isomorphism}, Theorem~\ref{thm:cstar-isomorphism} shows that the four geometric products of Definition~\ref{def:kahler-bracket-products}, the Riemann bracket, the Poisson bracket, the $\circ_\nu$ product, and the $*_\nu$ product, are not independent geometric conveniences: restricted to the image of a $C^*$-subalgebra $\A\subseteq\BH$ under the mean value map, they are the Jordan product, the rescaled commutator, and the associative product of $\A$ itself, rewritten in the geometric data supplied by $\PH$.
+
+\subsection*{Dynamics: from unitary evolution to Kähler automorphisms}
+
+None of the material recalled so far constrains time evolution. The Lie--Jordan structure of $\mathcal O$ and its Kähler counterpart on $\mathcal K(\PH,\R)$ are static algebraic data; a dynamics has to be added on top of them. Section~\ref{sec:dynamics} added it at the level of the linear Hilbert space, taking the physical evolution of a state vector under a self-adjoint Hamiltonian $H\in\BH$ to be $\dot x=-\tfrac i\hbar Hx$, and Proposition~\ref{prop:hamiltonian-schrodinger} showed by direct computation that the projected curve $\gamma(t)=[e^{-itH/\hbar}x_0]$ is exactly the integral curve of the Hamiltonian vector field $\Ham{\langle H\rangle}$ with respect to $\omega$. Symplectic geometry alone would not force this identification: any smooth function on $\PH$ generates a Hamiltonian flow with respect to $\omega$, and nothing about $(\PH,\omega)$ by itself privileges the flows generated by Kählerian functions over those generated by an arbitrary element of $C^\infty(\PH,\R)$. What Proposition~\ref{prop:kahler-isomorphisms} adds is the converse: a continuous one-parameter group of transformations of $\PH$ preserving the full Kähler triad $(\omega,g,J)$, and not merely $\omega$, is necessarily of Schrödinger form, generated by a self-adjoint operator unique up to an additive real constant, via Wigner's theorem and Stone's theorem. Requiring dynamics to be generated by an observable function, equivalently by a Kählerian one, equivalently by a Killing field for $g$, is therefore what singles out physically admissible time evolution among the far larger class of symplectic Hamiltonian flows on $\PH$; this requirement, not the symplectic structure by itself, is the geometric counterpart of postulating unitary evolution at the Hilbert-space level. Theorem~\ref{thm:quantum-noether} then reads the vanishing of the Poisson bracket $\poisson{\langle H\rangle}{\langle\mu,\xi\rangle}_\omega$, equivalently of the commutator $[H,i\hbar\xi]$, as the conservation of the momentum map component $\langle\mu,\xi\rangle$ along this flow, so that the algebraic and geometric statements of Noether's theorem coincide term by term through the isomorphism of Theorem~\ref{thm:lie-jordan-kahler-isomorphism}.
+
+\subsection*{Measurement: spectral values, the Born rule, and state reduction}
+
+The algebraic reconstruction already attaches a probabilistic reading to the spectrum of an observable: for a normal $A\in\A$, every $\lambda\in\sigma(A)$ is attained as the expectation value of some state, dispersion-free exactly at states supported on the corresponding eigenspace. The geometric counterpart of this fact is recorded below.
+
+\begin{remark}[Spectral attainment and totally geodesic submanifolds]
+	\label{rem:spectrum-submanifolds}
+	The algebraic attainment of spectral values for normal elements establishes that for every $\lambda \in \sigma(A)$ there exists a state yielding $\lambda$ with zero variance. This correlates strictly with the metric structure of $\PH$. Geometrically, the condition $\Delta \langle A \rangle = 0$ implies the Riemann bracket vanishes, $((\langle A \rangle, \langle A \rangle))_\omega = 0$. This occurs if and only if the Hamiltonian vector field $X_{\langle A \rangle}$ vanishes at the state $[x]$. The set of zeros of the Killing vector field $X_{\langle A \rangle}$ forms exactly the disjoint union of the totally geodesic eigenspace submanifolds $\mathbb{P}E_\lambda$.
+\end{remark}
+
+\noindent Beyond the location of dispersion-free states, two further rules of the standard formalism are external to the mathematics of $(\PH,\omega,g)$ as such, and are reformulated, rather than derived, by the results of Section~\ref{sec:riemannian-geometry} and Section~\ref{sec:observables}. Nothing in the definition of the Kähler structure forces the quantity $P([x],[y]):=|(x,y)|^2/(\|x\|^2\|y\|^2)$ to be read as a transition probability; once this reading is adopted, Theorem~\ref{thm:born-rule-geodesic} is the mathematical fact that $P([x],[y])=\cos^2\!\big(d_g([x],[y])/\sqrt{2\hbar}\big)$, so the Born rule becomes a statement purely about the Riemannian distance $d_g$ of the Fubini--Study metric. Likewise, that a measurement of $A$ yielding $a\in\sigma(A)$ leaves the system in the eigenspace of $a$ is itself a postulate of the standard formalism; Proposition~\ref{prop:geometric-projection} is the theorem that the resulting reduced state $p_a$ is the unique point of $\mathbb{P}E_a$, with $\mathbb{P}E_a$ as in Definition~\ref{def:eigenspace-submanifold}, minimizing the Riemannian distance $d_g(p,\cdot)$ from the pre-measurement state $p$. In both cases the physical content, that a specific algebraic quantity is a probability and that collapse selects a specific state, is inherited unchanged from the standard formulation; the geometry contributes an intrinsic, coordinate-free description of what these rules amount to on $\PH$, stated without reference back to $\H$.
+
+\begin{remark}[Topological completeness and continuous spectra]
+	\label{rem:completeness-spectra}
+	The necessity of topological completion for pre-Hilbert spaces and the bounded extension of operators dictate the metric limits of $\PH$. For observables with continuous spectra, exact eigenvectors do not exist within the physical Hilbert space $\H$. Consequently, the geometric measurement projection cannot target a closed submanifold within $\PH$. The rigorous geometric treatment of continuous spectra necessitates extending $\PH$ to a projective rigged Hilbert space, mirroring the algebraic extension of bounded operators to distributions.
+\end{remark}
+
+\subsection*{The axiomatic system}
+
+By the Hawley--Igusa Theorem~\ref{thm:hawley-igusa}, a connected, simply connected, complete Kähler manifold of constant positive holomorphic sectional curvature is, up to isomorphism, a complex projective space. Fixing the curvature to $2/\hbar$ therefore pins down the manifold itself, and not merely its local type, which is what makes it consistent to take the Kähler structure, rather than the ambient Hilbert space $\H$, as the primitive datum of the following definition, already introduced in this chapter.
+
+\begin{definition}[Schrödinger quantum system]
+	\label{def:schrodinger-quantum-system}
+	A \emph{Schrödinger quantum system} is a quadruple $(\mathcal{M},J,g,(\Phi_t)_{t\in\R})$, where $(\mathcal{M},J,g)$ is a connected, simply connected, complete Kähler manifold of constant holomorphic sectional curvature $2/\hbar$, and $(\Phi_t)_{t\in\R}$ is a continuous one-parameter group of Kähler isomorphisms of $(\mathcal{M},J,g)$.
+\end{definition}
+
+\noindent Definition~\ref{def:schrodinger-quantum-system} is purely differential-geometric, and by Theorem~\ref{thm:hawley-igusa} together with Proposition~\ref{prop:kahler-isomorphisms} it already forces $\mathcal M\cong\PH$ for some Hilbert space $\H$, and $\Phi_t([x])=[e^{-itH/\hbar}x]$ for some self-adjoint $H$ unique up to an additive constant, recovering the Hilbert-space data this chapter started from. It is not, however, a self-contained substitute for Definition~\ref{def:physical-system}, and the two should be read together rather than as competing formulations. What Definition~\ref{def:schrodinger-quantum-system} packages geometrically is: the kinematic content of Definition~\ref{def:physical-system}, restricted through Theorem~\ref{thm:pure-state-decomposition} and Proposition~\ref{prop:ph-quotient-pure-states} to a single sector; the observable algebra, recovered as $\mathcal K(\mathcal M,\R)\cong\mathcal O$ through Theorems~\ref{thm:observable-iff-killing} and~\ref{thm:lie-jordan-kahler-isomorphism}; and the dynamics, recovered as the requirement, argued in the previous subsection, that $(\Phi_t)$ preserve the full Kähler triad and not merely $\omega$. It packages nothing about measurement: the Born rule and the state reduction rule remain physical postulates external to $(\mathcal M,J,g,(\Phi_t))$, merely rewritten intrinsically by Theorem~\ref{thm:born-rule-geodesic} and Proposition~\ref{prop:geometric-projection}, and have to be adjoined to Definition~\ref{def:schrodinger-quantum-system} separately to obtain a complete physical theory rather than a geometric model of its kinematics and dynamics alone. What the geometric formulation adds to Definition~\ref{def:physical-system} is accordingly not a different physical content but a single object, the Kähler manifold $\mathcal M$, from which the algebra of observables, their Poisson and Jordan structure, the dynamics, and both measurement rules are all read off from one Riemannian and symplectic structure, in place of the separate algebraic, representation-theoretic, and spectral data of Definition~\ref{def:physical-system}, Theorem~\ref{thm:gns}, and the attainment of spectral values on which Remark~\ref{rem:spectrum-submanifolds} was based.
+
+\begin{remark}[Density operators and stratified spaces]
+	\label{rem:density-operators-stratified}
+	The geometric formulation on the projective Hilbert space restricts strictly to pure states. The space of mixed states, consisting of positive trace-class operators with unit trace on $\H$, does not possess the structure of a smooth global manifold. It constitutes a stratified space, where each stratum is a smooth manifold composed of density operators of a fixed constant rank. The Poisson bracket, the Riemann bracket, and the Kähler products extend differentiably only within individual strata. The algebraic isomorphism established in Theorem~\ref{thm:cstar-isomorphism} breaks down across topological boundaries separating strata of differing dimensions.
+\end{remark}
+
+\section{Example III: Dynamics and Symmetries on the Bloch Sphere}
+\label{sec:ex-three}
+
+We investigate time evolution and symmetries on the state space of a two-level quantum system. Restricting the space of density matrices to the boundary $|\mathbf{r}|=1$ yields the ray space $\mathbb{P}\C^2 \cong \mathbb{S}^2$, identified via Definition~\ref{def:projective-hilbert-space} with $\mathbb{P}\mathcal{H}$ for $\mathcal{H}=\C^2$. This manifold carries the Kähler structure $(J,g)$ introduced in Section~\ref{sec:ph-kahler}. The Bloch coordinates $\mathbf{r}$ coincide, componentwise, with the mean value functions $r_i := \langle\sigma_i\rangle$ of Definition~\ref{def:mean-value}. These functions serve as global coordinates on $\mathbb{P}\mathcal{H}(\C^2)$. Since mixed states do not form a manifold, only this boundary sphere admits a symplectic form $\omega$. We evaluate the Poisson and Riemann brackets between the mean value functions $r_i$ to verify the uncertainty relations.
+
+By Proposition~\ref{prop:poisson-comm} and the Pauli commutation relations $[\sigma_i,\sigma_j]=2i\epsilon_{ijk}\sigma_k$, we compute the Poisson bracket between the coordinate functions,
+\begin{equation}
+	\poisson{r_i}{r_j} = \big\langle\qcomm{\sigma_i}{\sigma_j}\big\rangle = \frac{2}{\hbar}\epsilon_{ijk}r_k. \label{eq:qubit-poisson}
+\end{equation}
+Up to the dimensional factor $2/\hbar$, this reproduces the $\mathfrak{so}(3)$-Poisson bracket $\{r_i,r_j\}=\epsilon_{ijk}r_k$ of the classical spin system of Section~\ref{sec:1-example}. For the Riemann bracket, Proposition~\ref{prop:symmetric-bracket-intrinsic} applied to $A=\sigma_i$ and $K=\sigma_j$, combined with the Pauli identity $\sigma_i\circ\sigma_j=\delta_{ij}\Id$, yields
+\begin{equation}
+	((r_i,r_j)) = \frac{2}{\hbar}\big(\delta_{ij}-r_ir_j\big). \label{eq:qubit-riemann}
+\end{equation}
+As per Definition~\ref{def:dispersion}, the dispersion of $r_i$ is $\Delta r_i = \sqrt{\hbar/2}\sqrt{((r_i,r_i))} = \sqrt{1-r_i^2}$, which represents the spin uncertainty. Evaluating \eqref{eq:qubit-poisson} and \eqref{eq:qubit-riemann} at the north pole $\mathbf{r}=(0,0,1)$ for $f=r_1$ and $h=r_2$ yields $((f,h))=0$ and $\poisson{f}{h}=2/\hbar$. It descends that $\Delta f = \Delta h = 1$, and Theorem~\ref{thm:robertson-schrodinger} reads $1\cdot 1 \geq \frac{\hbar}{2}\cdot\frac{2}{\hbar} = 1$. The bound is saturated at this state, illustrating the equality case discussed in the remark following Theorem~\ref{thm:robertson-schrodinger}.
+
+Having established the geometric structure and the uncertainty relations on the Bloch sphere, we turn to the Hamiltonian dynamics generated by these observables. We focus on the evolution of a spin in a uniform magnetic field.
+
+Consider the Hamiltonian $H=\frac{\hbar\omega}{2}\sigma_3$, describing a spin in a uniform magnetic field along the $z$-axis, and let $h=\langle H\rangle = \frac{\hbar\omega}{2}r_3$. Using \eqref{eq:qubit-poisson} and the relation $\dot{f}=\poisson{f}{h}$ descending from the proof of Proposition~\ref{prop:poisson-comm}, the equations of motion for the Bloch vector along the Hamiltonian flow of $h$ read
+\begin{equation}
+	\dot{r}_1 = \poisson{r_1}{h} = -\omega r_2, \qquad
+	\dot{r}_2 = \poisson{r_2}{h} = \omega r_1, \qquad
+	\dot{r}_3 = \poisson{r_3}{h} = 0. \label{eq:qubit-eom}
+\end{equation}
+The solution is a uniform precession about the $z$-axis at angular velocity $\omega$,
+\begin{equation}
+	r_1(t)+ir_2(t) = e^{i\omega t}\big(r_1(0)+ir_2(0)\big), \qquad r_3(t) = r_3(0), \label{eq:larmor-solution}
+\end{equation}
+in agreement with Proposition~\ref{prop:hamiltonian-schrodinger}. The Hamiltonian flow of $h$ on $(\mathbb{P}\mathcal{H},\omega)$ coincides with the Schrödinger evolution $[\psi]\mapsto[e^{-itH/\hbar}\psi]$, identifying the Larmor precession.
+
+The Larmor precession exhibits a conserved quantity along the $z$-axis. To formalize the relationship between this continuous symmetry and the associated conservation law, we compute the quantum momentum map.
+
+Let $G=SU(2)$ act on $\mathcal{H}=\C^2$ in the defining representation, with the Lie algebra $\mathfrak{su}(2)$ spanned by the skew-adjoint generators $\xi_j:=-\frac{i}{2}\sigma_j$, such that $i\hbar\xi_j = \frac{\hbar}{2}\sigma_j$ is the physical spin operator. By Proposition~\ref{prop:quantum-momentum-map}, the quantum momentum map for this action yields
+\begin{equation}
+	\langle\mu([\psi]),\xi_j\rangle = \big\langle i\hbar\xi_j\big\rangle([\psi]) = \frac{\hbar}{2}r_j([\psi]).
+\end{equation}
+Identifying $\mathfrak{su}(2)^*\cong\R^3$ yields $\mu = \frac{\hbar}{2}\mathbf{r}$. The momentum map corresponds to the quantum spin angular momentum vector, which acts as the $\hbar/2$-rescaled counterpart of the classical moment map $\mu_{\mathrm{cl}}(r)=-r$ of Section~\ref{sec:1-example}. For the Hamiltonian $H=\frac{\hbar\omega}{2}\sigma_3$ and the generator $\xi_3=-\frac{i}{2}\sigma_3$, we compute
+\begin{equation}
+	[H,i\hbar\xi_3] = \Big[\frac{\hbar\omega}{2}\sigma_3,\frac{\hbar}{2}\sigma_3\Big] = 0.
+\end{equation}
+Theorem~\ref{thm:quantum-noether} guarantees that the component $\mu_3=\frac{\hbar}{2}r_3$ of the momentum map is conserved along the flow, as verified in \eqref{eq:qubit-eom} where $\dot{r}_3=0$.
 \end{document}

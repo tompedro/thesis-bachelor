@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 11:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  21 AUG 2026 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1468,7 +1468,7 @@ Package logreq Info: Writing requests to 'bozza30.run.xml'.
 Here is how much of TeX's memory you used:
  33849 strings out of 478268
  642595 string characters out of 5846347
- 1427280 words of memory out of 5000000
+ 1427286 words of memory out of 5000000
  51369 multiletter control sequences out of 15000+600000
  529952 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1491,7 +1491,7 @@ bch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
 sign/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 public/cm-super/sftt1095.pfb>
-Output written on bozza30.pdf (14 pages, 202309 bytes).
+Output written on bozza30.pdf (14 pages, 202199 bytes).
 PDF statistics:
  415 PDF objects out of 1000 (max. 8388607)
  365 compressed objects within 4 object streams

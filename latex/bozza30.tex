@@ -256,7 +256,7 @@ In fact, fixing a constant $\hbar > 0$,  we can rescale the commutator and
 physically identify it with the reduced Planck constant. This rescaling preserves selfadjointness and it is the missing concept needed to recover the full associative
 product from $\mathcal{O}$.
 
-\begin{proposition}[Selfadjointness of the rescaled commutator]
+\begin{proposition}[Selfadjointness of the rescaled commutator]\label{prop:quantum-comm}
 	Let $\mathcal{O}$ be a JC algebra as in Definition \ref{def:jc-algebra} and let $A,B\in\mathcal{O}$. Then $[A,B]^*=-[A,B]$, and consequently
 	\[
 	\{A,B\} := \frac{1}{i\hbar}[A,B],
@@ -424,12 +424,12 @@ The discussion begins with the inner product and the completion of a pre-Hilbert
 We start with a complex vector space endowed with an inner product that yields a notion of length, distance, and orthogonality. A vector space with an inner product is called a pre-Hilbert space.If the normed space is complete under its induced metric, then it is a Hilbert space.
 
 \begin{definition}[Hermitian Inner Product]\label{def:hermitian-ip}
-	Let $V$ be a complex vector space. A Hermitian inner product on $V$ is a map $\langle\cdot,\cdot\rangle: V\times V\to \C$ satisfying the following properties for all $v,w,w'\in V$ and $\alpha,\beta\in\C$.
+	Let $V$ be a complex vector space. A Hermitian inner product on $V$ is a map $(\cdot,\cdot): V\times V\to \C$ satisfying the following properties for all $v,w,w'\in V$ and $\alpha,\beta\in\C$.
 	\begin{enumerate}
-		\item $\langle v,v\rangle\geq 0$.
-		\item $\langle v,v\rangle=0$ if and only if $v=0$.
-		\item $\langle v,\alpha w+\beta w'\rangle=\alpha\langle v,w\rangle+\beta\langle v,w'\rangle$.
-		\item $\langle v,w\rangle=\overline{\langle w,v\rangle}$.
+		\item $(v,v)\geq 0$.
+		\item $(v,v)=0$ if and only if $v=0$.
+		\item $( v,\alpha w+\beta w')=\alpha( v,w)+\beta( v,w')$.
+		\item $( v,w)=\overline{( w,v)}$.
 	\end{enumerate}
 \end{definition}
 
@@ -442,12 +442,12 @@ We start with a complex vector space endowed with an inner product that yields a
 \noindent The inner product induces a norm through its square root and makes the complex vector space normed.
 
 \begin{proposition}[The Inner Product Induces a Norm]\label{prop:induced-norm}
-	Let $V$ be a complex vector space equipped with a Hermitian inner product as per Definition~\ref{def:hermitian-ip}. The map $\|\cdot\|: V\to\mathbb{R}$ defined by $\|v\|=\sqrt{\langle v,v\rangle}$ is a norm on $V$.
+	Let $V$ be a complex vector space equipped with a Hermitian inner product as per Definition~\ref{def:hermitian-ip}. The map $\|\cdot\|: V\to\mathbb{R}$ defined by $\|v\|=\sqrt{( v,v)}$ is a norm on $V$.
 \end{proposition}
 
 \noindent A proof of this statement can be found in \cite[Proposition 3.3]{morettiSpectralTheoryQuantum}. 
 \begin{example}
-	The space $\C^n$ with $\langle v,w\rangle=\sum_{k=1}^n\bar v_kw_k$ is a finite-dimensional pre-Hilbert space. The space $\ell^2$ of square-summable sequences, with the analogous inner product, is an infinite-dimensional example used throughout this work.
+	The space $\C^n$ with $( v,w)=\sum_{k=1}^n\bar v_kw_k$ is a finite-dimensional pre-Hilbert space. The space $\ell^2$ of square-summable sequences, with the analogous inner product, is an infinite-dimensional example used throughout this work.
 \end{example}
 
 \noindent Before completeness enters the picture, it is useful to isolate the algebraic content of an inner product space on its own. This intermediate structure will serve as the domain on which the completion procedure of Theorem~\ref{thm:completion} acts.
@@ -463,7 +463,7 @@ We start with a complex vector space endowed with an inner product that yields a
 \end{definition}
 
 \begin{example}\label{ex:c01-incomplete}
-	The space $C([0,1])$ with $\langle f,h\rangle=\int_0^1\overline{f(x)}h(x)\,dx$ is a pre-Hilbert space that is not complete, since a sequence of continuous functions approximating a jump discontinuity is Cauchy without a continuous limit. Both $\C^n$ and $\ell^2$ are complete, hence genuine Hilbert spaces.
+	The space $C([0,1])$ with $( f,h)=\int_0^1\overline{f(x)}h(x)\,dx$ is a pre-Hilbert space that is not complete, since a sequence of continuous functions approximating a jump discontinuity is Cauchy without a continuous limit. Both $\C^n$ and $\ell^2$ are complete, hence genuine Hilbert spaces.
 \end{example}
 
 \noindent The preceding example demonstrates that pre-Hilbert spaces need not be complete. However, completeness is a requirement for many constructions in functional analysis and quantum mechanics. In analogy with the completion of the rationals to the reals, every pre-Hilbert space admits a completion obtained by adjoining the limit points of all Cauchy sequences. To formulate this procedure rigorously, we introduce the notions of dense subsets and linear isometries. The former characterizes how the original space is embedded into its extension, while the latter guarantees that the norm and inner-product structures are preserved under this embedding.
@@ -483,7 +483,7 @@ Both notions will enter the statement of the completion theorem below. Density d
 \begin{theorem}[Completion of a Pre-Hilbert Space]\label{thm:completion}
 	Let $V$ be a pre-Hilbert space as per Definition~\ref{def:pre-hilbert}. There exists a Hilbert space $\H$ as per Definition~\ref{def:hilbert} and an injective linear isometry $J: V\to\H$ as per Definition~\ref{def:isometry} such that $JV$ is dense in $\H$ as per Definition~\ref{def:dense}. The completion is unique up to unitary isomorphism, and
 	\begin{equation}
-		\langle Jv,Jw\rangle_{\H}=\langle v,w\rangle_V,
+		( Jv,Jw)_{\H}=( v,w)_V,
 	\end{equation}
 	for all $v,w\in V$.
 \end{theorem}
@@ -542,7 +542,7 @@ A complete proof can be found in \cite[Proposition 2.47]{morettiSpectralTheoryQu
 \begin{definition}[Orthogonal Complement]\label{def:orth-complement}
 	Let $\H$ be a Hilbert space as per Definition~\ref{def:hilbert} and let $K\subseteq\H$. The orthogonal complement of $K$ is
 	\begin{equation}
-		K^{\perp}=\{v\in\H\mid\langle v,w\rangle=0\text{ for every }w\in K\}.
+		K^{\perp}=\{v\in\H\mid( v,w)=0\text{ for every }w\in K\}.
 	\end{equation}
 \end{definition}
 
@@ -589,7 +589,7 @@ The proof of this theorem is available in \cite[Theorem 3.13]{morettiSpectralThe
 \begin{theorem}[Riesz Representation Theorem]\label{thm:riesz}
 	Let $\H$ be a Hilbert space as per Definition~\ref{def:hilbert} and let $\H'$ be its topological dual as per Definition~\ref{def:top-dual}. For every $F\in\H'$ there exists a unique vector $v_F\in\H$ such that
 	\begin{equation}
-		Fw=\langle v_F,w\rangle,
+		Fw=( v_F,w),
 	\end{equation}
 	for every $w\in\H$. The map $F\mapsto v_F$ is a conjugate-linear isometry from $\H'$ onto $\H$.
 \end{theorem}
@@ -597,7 +597,7 @@ The proof of this theorem is available in \cite[Theorem 3.13]{morettiSpectralThe
 \noindent This is proved in \cite[Theorem 3.16]{morettiSpectralTheoryQuantum}. We propose an example showing an application of Riesz Theorem \ref{thm:riesz}.
 
 \begin{example}\label{ex:riesz-l2}
-	On $\H=\ell^2$, fix $a\in\ell^2$ and define $Fw=\sum_{k=1}^{\infty}\bar a_kw_k$. Then $F$ is a bounded linear functional with $\|F\|=\|a\|$, and $Fw=\langle a,w\rangle$, so the Riesz vector representing $F$ is $a$ itself.
+	On $\H=\ell^2$, fix $a\in\ell^2$ and define $Fw=\sum_{k=1}^{\infty}\bar a_kw_k$. Then $F$ is a bounded linear functional with $\|F\|=\|a\|$, and $Fw=( a,w)$, so the Riesz vector representing $F$ is $a$ itself.
 \end{example}
 
 \noindent The Riesz theorem yields the adjoint of a bounded operator, defined in the next section.
@@ -605,12 +605,12 @@ The proof of this theorem is available in \cite[Theorem 3.13]{morettiSpectralThe
 \subsection*{The Adjoint Operation and Unbounded Operators}
 \label{sec:unbounded}
 
-The adjoint of a bounded operator follows from the Riesz representation Theorem \ref{thm:riesz}, applied to the functional $\psi\mapsto\langle\varphi,T\psi\rangle$ for fixed $\varphi$. Although we will not show the proof, the existence of $T^*$ follows directly from the Riesz representation theorem. In fact, it guarantees that the bounded functional \(\psi\mapsto\langle\varphi,T\psi\rangle\) is uniquely represented as \(\langle T^*\varphi,\psi\rangle\) for some vector \(T^*\varphi\). This unique representability is precisely what ensures the existence and well definedness of the adjoint operator \(T^*\).
+The adjoint of a bounded operator follows from the Riesz representation Theorem \ref{thm:riesz}, applied to the functional $\psi\mapsto(\varphi,T\psi)$ for fixed $\varphi$. Although we will not show the proof, the existence of $T^*$ follows directly from the Riesz representation theorem. In fact, it guarantees that the bounded functional \(\psi\mapsto(\varphi,T\psi)\) is uniquely represented as \(( T^*\varphi,\psi)\) for some vector \(T^*\varphi\). This unique representability is precisely what ensures the existence and well definedness of the adjoint operator \(T^*\).
 
 \begin{proposition}[Adjoint of Bounded Operators]\label{prop:adjoint-bdd}
 	Let $\H_1,\H_2$ be Hilbert spaces as per Definition~\ref{def:hilbert} and let $T\in\mathcal{B}(\H_1,\H_2)$ as per Definition~\ref{def:op-norm-bdd}. There exists a unique operator $T^{*}:\H_2\to\H_1$ such that
 	\begin{equation}
-		\langle\varphi,T\psi\rangle_{\H_2}=\langle T^{*}\varphi,\psi\rangle_{\H_1},
+		(\varphi,T\psi)_{\H_2}=( T^{*}\varphi,\psi)_{\H_1},
 	\end{equation}
 	for every $\psi\in\H_1$ and $\varphi\in\H_2$. Moreover $T^{*}\in\mathcal{B}(\H_2,\H_1)$ and $\|T^{*}\|=\|T\|$.
 \end{proposition}
@@ -624,7 +624,7 @@ This statement is proved in \cite[Proposition 3.38]{morettiSpectralTheoryQuantum
 		\item selfadjoint if $T=T^{*}$,
 		\item isometric if $\|T\psi\|=\|\psi\|$ for every $\psi\in\H$,
 		\item unitary if it is isometric and surjective,
-		\item positive, written $T\geq 0$, if $\langle\psi,T\psi\rangle\geq 0$ for every $\psi\in\H$.
+		\item positive, written $T\geq 0$, if $(\psi,T\psi)\geq 0$ for every $\psi\in\H$.
 	\end{enumerate}
 \end{definition}
 
@@ -656,7 +656,7 @@ Bounded operators are defined on the whole space. Position and momentum operator
 \begin{definition}[Adjoint of Unbounded Operators]\label{def:adjoint-unbdd}
 	Let $T: D(T)\to\H$ be an unbounded operator as per Definition~\ref{def:unbounded-op} with $D(T)$ dense in $\H$ as per Definition~\ref{def:dense}. The adjoint $T^{*}$ has domain
 	\begin{equation}
-		D(T^{*})=\{\varphi\in\H\mid\exists\,\omega_\varphi\in\H\text{ such that }\langle\varphi,T\psi\rangle=\langle\omega_\varphi,\psi\rangle \forall \psi\in D(T)\},
+		D(T^{*})=\{\varphi\in\H\mid\exists\,\omega_\varphi\in\H\text{ such that }(\varphi,T\psi)=(\omega_\varphi,\psi) \forall \psi\in D(T)\},
 	\end{equation}
 	and for $\varphi\in D(T^{*})$ the value $T^{*}\varphi$ is set equal to $\omega_\varphi$.
 \end{definition}
@@ -666,7 +666,7 @@ Bounded operators are defined on the whole space. Position and momentum operator
 \begin{definition}[Hermitian Operator]\label{def:hermitian-op}
 	Let $T: D(T)\to\H$ be an unbounded operator as per Definition~\ref{def:unbounded-op}. The operator $T$ is Hermitian if
 	\begin{equation}
-		\langle\varphi,T\psi\rangle=\langle T\varphi,\psi\rangle,
+		(\varphi,T\psi)=( T\varphi,\psi),
 	\end{equation}
 	for all $\varphi,\psi\in D(T)$.
 \end{definition}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 11:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  22 AUG 2026 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,227 +1264,395 @@ LaTeX Info: Redefining \nameref on input line 4.
 \openout5 = `bozza70.out'.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 6.
+(Font)              scaled to size 13.82408pt on input line 8.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 6.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 8.
+(Font)              scaled to size 13.82408pt on input line 8.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 8.
-LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
- 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 
+
+LaTeX Warning: Reference `chp:1' on page 1 undefined on input line 10.
+
+LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
+ 10.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
- 9.
+ 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
- 9.
+ 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
- 9.
+ 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 9.
+ 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
+(Font)              scaled to size 5.76004pt on input line 10.
 LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
- 9.
+ 10.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 9.
+(Font)              scaled to size 10.51207pt on input line 10.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 9.
+(Font)              scaled to size 7.68005pt on input line 10.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 9.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.5886pt on input line 16.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.73596pt on input line 16.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.80197pt on input line 16.
+(Font)              scaled to size 5.76004pt on input line 10.
 
 
-LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 1 undef
-ined on input line 51.
+LaTeX Warning: Reference `def:hilbert' on page 1 undefined on input line 12.
+
+
+LaTeX Warning: Reference `def:smooth-man' on page 1 undefined on input line 12.
+
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 57.
+(Font)              scaled to size 10.51207pt on input line 14.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 57.
+(Font)              scaled to size 7.68005pt on input line 16.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 16.
 
-LaTeX Warning: Reference `def:hilbert-space' on page 1 undefined on input line 
-57.
-
-
-LaTeX Warning: Reference `def:bounded-operators' on page 1 undefined on input l
-ine 57.
+LaTeX Warning: Reference `def:hilbert' on page 1 undefined on input line 16.
 
 
-LaTeX Warning: Reference `def:pure-state-space' on page 1 undefined on input li
-ne 69.
+LaTeX Warning: Reference `def:smooth-man' on page 1 undefined on input line 16.
+
+
+
+LaTeX Warning: Reference `def:maximal-atlas' on page 1 undefined on input line 
+16.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 73.
+(Font)              scaled to size 7.68005pt on input line 23.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 73.
+(Font)              scaled to size 5.76004pt on input line 23.
 
-LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 1 undef
-ined on input line 73.
+LaTeX Warning: Reference `def:smooth-section' on page 1 undefined on input line
+ 40.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 84.
+(Font)              scaled to size 10.51207pt on input line 72.
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 
-LaTeX Warning: Reference `def:wstar-topology' on page 2 undefined on input line
- 94.
+LaTeX Warning: Reference `def:tensor-field' on page 2 undefined on input line 7
+6.
+
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
+ 102.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
+File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
+)
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 102.
 
 
-LaTeX Warning: Reference `def:pure-state-space' on page 2 undefined on input li
-ne 114.
-
-
-LaTeX Warning: Reference `def:gns-construction' on page 2 undefined on input li
-ne 114.
-
-
-LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 2 undef
-ined on input line 118.
-
-
-Overfull \hbox (82.49974pt too wide) in paragraph at lines 118--119
-\T1/mdbch/m/n/10.95 gether with Corol-lary [][]3.2.7[][]. Con-ti-nu-ity: Propo-
-si-tion [][]3.2.6[][]. Full ar-gu-ment in [[]].
- []
-
-
-LaTeX Warning: Reference `remark:vec-der' on page 2 undefined on input line 121
-.
-
-
-LaTeX Warning: Reference `def:differential-map' on page 2 undefined on input li
-ne 128.
-
-
-LaTeX Warning: Reference `def:sympl-man' on page 2 undefined on input line 147.
+LaTeX Warning: Reference `def:sympl-man' on page 2 undefined on input line 103.
 
 
 [2]
-Overfull \hbox (9.72269pt too wide) in paragraph at lines 151--152
-[]\T1/mdbch/m/n/10.95 Antisymmetry: $[] \OT1/mdbch/m/n/10.95 = (\OML/mdbch/m/n/
-10.95 
-\OML/mdbch/m/it/10.95 ; \OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m/n/10.95 )$\T1/mdbc
-h/m/n/10.95 . Closed-ness: con-stant co-ef-fi-cients. Non-de-gen-er-acy: $\OML/
-mdbch/m/it/10.95 !\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 V\OT1/mdbch/m/n/1
-0.95 (\OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m/n/10.95 )\OML/mdbch/m/it/10.95 ; V\O
-T1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 i\OML/mdbch/m/n/10.95 ^^H\OT1/mdbch/m
-/n/10.95 )) =
- []
+
+LaTeX Warning: Reference `def:forms' on page 3 undefined on input line 171.
 
 
-LaTeX Warning: Reference `def:ham-field' on page 3 undefined on input line 162.
+LaTeX Warning: Reference `def:poisson-bracket' on page 3 undefined on input lin
+e 186.
 
 
-
-LaTeX Warning: Reference `def:poi-fun' on page 3 undefined on input line 181.
-
-
-LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 3 undef
-ined on input line 196.
-
-
-LaTeX Warning: Reference `def:ham-field' on page 3 undefined on input line 196.
-
-
-
-LaTeX Warning: Reference `def:unitary-operator' on page 3 undefined on input li
-ne 200.
-
-
-LaTeX Warning: Reference `def:symp-ham-fields' on page 3 undefined on input lin
-e 200.
-
-
-LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 3 undef
-ined on input line 211.
-
-
-LaTeX Warning: Reference `thm:gelfand-transform' on page 3 undefined on input l
-ine 219.
+LaTeX Warning: Citation 'CirelliManiaPizzocchero1990' on page 3 undefined on in
+put line 224.
 
 [3]
 
-LaTeX Warning: Reference `def:jordan-product' on page 4 undefined on input line
- 244.
+LaTeX Warning: Citation 'CirelliManiaPizzocchero1990' on page 4 undefined on in
+put line 243.
 
 
-LaTeX Warning: Reference `def:sympl-man' on page 4 undefined on input line 244.
+LaTeX Warning: Reference `def:lie-dericative' on page 4 undefined on input line
+ 257.
 
 
+LaTeX Warning: Reference `def:hamiltonian-vec-field' on page 4 undefined on inp
+ut line 270.
 
-LaTeX Warning: Reference `def:sympl-man' on page 4 undefined on input line 257.
+
+LaTeX Warning: Reference `eq:cartan' on page 4 undefined on input line 270.
 
 
-[4] (./bozza70.aux)
+Overfull \hbox (12.93704pt too wide) in paragraph at lines 282--283
+[][]\T1/mdbch/b/n/10.95 Proposition 3.1.21. []$[]\OT1/mdbch/m/n/10.95 ([]\OML/m
+dbch/m/it/10.95 ; \MDA/mdbch/m/n/10.95 R\OT1/mdbch/m/n/10.95 )$\T1/mdbch/m/it/1
+0.95 , re-spec-tively $[]\OT1/mdbch/m/n/10.95 ([]\OML/mdbch/m/it/10.95 ; \MDA/m
+dbch/m/n/10.95 C\OT1/mdbch/m/n/10.95 )$\T1/mdbch/m/it/10.95 , is a Lie sub-al-g
+e-bra of $\OML/mdbch/m/it/10.95 C[]\OT1/mdbch/m/n/10.95 ([]\OML/mdbch/m/it/10.9
+5 ; \MDA/mdbch/m/n/10.95 R\OT1/mdbch/m/n/10.95 )$\T1/mdbch/m/it/10.95 , re-spec
+-tively $\OML/mdbch/m/it/10.95 C[]\OT1/mdbch/m/n/10.95 ([]\OML/mdbch/m/it/10.95
+ ; \MDA/mdbch/m/n/10.95 C\OT1/mdbch/m/n/10.95 )$\T1/mdbch/m/it/10.95 ,
+ []
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 285.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 11.52008pt on input line 285.
+
+LaTeX Warning: Citation 'Moroianu2004' on page 4 undefined on input line 311.
+
+[4]
+
+LaTeX Warning: Citation 'Moroianu2004' on page 5 undefined on input line 387.
+
+
+LaTeX Warning: Citation 'Moroianu2004' on page 5 undefined on input line 430.
+
+[5]
+
+LaTeX Warning: Reference `ex:projective-hilbert-space' on page 6 undefined on i
+nput line 461.
+
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 10.5886pt on input line 479.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 7.73596pt on input line 479.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 5.80197pt on input line 479.
+
+LaTeX Warning: Reference `def:pure-state-space' on page 6 undefined on input li
+ne 479.
+
+
+LaTeX Warning: Reference `def:gns-construction' on page 6 undefined on input li
+ne 479.
+
+
+LaTeX Warning: Reference `def:op-norm-bdd' on page 6 undefined on input line 48
+4.
+
+
+LaTeX Warning: Citation 'landsmanMathematicalTopicsBetween1998' on page 6 undef
+ined on input line 503.
+
+[6]
+
+LaTeX Warning: Reference `def:weak_topologies' on page 7 undefined on input lin
+e 555.
+
+
+LaTeX Warning: Reference `def:physical-system' on page 7 undefined on input lin
+e 588.
+
+
+LaTeX Warning: Citation 'KobayashiNomizu1969' on page 7 undefined on input line
+ 639.
+
+[7]
+Overfull \hbox (24.02121pt too wide) in paragraph at lines 653--660
+\T1/mdbch/m/n/10.95 and $\OML/mdbch/m/it/10.95 @[]$ \T1/mdbch/m/n/10.95 an-ni-h
+i-lates the purely holo-mor-phic term $[] \OML/mdbch/m/it/10.95 ^^U$ \T1/mdbch/
+m/n/10.95 and the purely an-ti-holo-mor-phic term $[] []$, so $\OML/mdbch/m/it/
+10.95 @[] [] \OMS/mdbch/m/n/10.95 k\OML/mdbch/m/it/10.95 ^^U\OML/mdbch/m/n/10.9
+5 ^^H\OMS/mdbch/m/n/10.95 k[] \OT1/mdbch/m/n/10.95 =
+ []
+
+
+LaTeX Warning: Reference `def:lie-jordan' on page 8 undefined on input line 695
+.
+
+[8]
+
+LaTeX Warning: Reference `def:lie-jordan' on page 9 undefined on input line 791
+.
+
+[9]
+
+LaTeX Warning: Reference `eq:g-omega-scaled' on page 10 undefined on input line
+ 890.
+
+
+LaTeX Warning: Reference `eq:g-omega-scaled' on page 10 undefined on input line
+ 907.
+
+[10]
+
+LaTeX Warning: Reference `eq:jordan-riemann' on page 11 undefined on input line
+ 940.
+
+
+LaTeX Warning: Reference `eq:riemann-dispersion' on page 11 undefined on input 
+line 940.
+
+
+LaTeX Warning: Reference `eq:g-omega-scaled' on page 11 undefined on input line
+ 980.
+
+
+LaTeX Warning: Reference `eq:riemann-dispersion' on page 11 undefined on input 
+line 984.
+
+[11] [12]
+
+LaTeX Warning: Citation 'ashtekar' on page 13 undefined on input line 1147.
+
+[13] [14] [15]
+
+LaTeX Warning: Reference `def:momentum_mapping' on page 16 undefined on input l
+ine 1374.
+
+[16]
+
+LaTeX Warning: Reference `def:momentum_mapping' on page 17 undefined on input l
+ine 1380.
+
+
+LaTeX Warning: Reference `thm:geometric_noether_iff' on page 17 undefined on in
+put line 1407.
+
+
+LaTeX Warning: Reference `thm:geometric_noether_iff' on page 17 undefined on in
+put line 1418.
+
+
+LaTeX Warning: Reference `prop:correspondence' on page 17 undefined on input li
+ne 1418.
+
+
+LaTeX Warning: Reference `sec:intro-alg-quant' on page 17 undefined on input li
+ne 1428.
+
+
+LaTeX Warning: Reference `def:physical-system' on page 17 undefined on input li
+ne 1428.
+
+
+LaTeX Warning: Reference `thm:gns' on page 17 undefined on input line 1428.
+
+
+LaTeX Warning: Reference `thm:gelfand-naimark' on page 17 undefined on input li
+ne 1428.
+
+
+LaTeX Warning: Reference `def:concl-dvn-axioms' on page 17 undefined on input l
+ine 1428.
+
+[17]
+
+LaTeX Warning: Reference `thm:gns' on page 18 undefined on input line 1432.
+
+
+LaTeX Warning: Reference `prop:irreducible-iff-pure' on page 18 undefined on in
+put line 1442.
+
+
+Overfull \hbox (39.4099pt too wide) in paragraph at lines 1452--1453
+\T1/mdbch/m/n/10.95 and Propo-si-tion [][]3.4.2[][] iden-ti-fies the Rie-mann b
+racket with the Jor-dan an-ti-com-mu-ta-tor, $[][]\OMS/mdbch/m/n/10.95 f\OML/md
+bch/m/it/10.95 A; K\OMS/mdbch/m/n/10.95 g[][] \OT1/mdbch/m/n/10.95 = []((\OMS/m
+dbch/m/n/10.95 h\OML/mdbch/m/it/10.95 A\OMS/mdbch/m/n/10.95 i\OML/mdbch/m/it/10
+.95 ; \OMS/mdbch/m/n/10.95 h\OML/mdbch/m/it/10.95 K\OMS/mdbch/m/n/10.95 i\OT1/m
+dbch/m/n/10.95 ))[] +
+ []
+
+[18] [19]
+Overfull \hbox (31.21165pt too wide) in paragraph at lines 1497--1498
+[][]\T1/mdbch/b/n/10.95 Definition 3.7.5 \T1/mdbch/m/n/10.95 (Schrödinger quan-
+tum sys-tem)\T1/mdbch/b/n/10.95 . []\T1/mdbch/m/it/10.95 A \T1/mdbch/m/n/10.95 
+Schrödinger quan-tum sys-tem \T1/mdbch/m/it/10.95 is a quadru-ple $\OT1/mdbch/m
+/n/10.95 ([]\OML/mdbch/m/it/10.95 ; J; g; \OT1/mdbch/m/n/10.95 (\OML/mdbch/m/n/
+10.95 ^^H[]\OT1/mdbch/m/n/10.95 )[])$\T1/mdbch/m/it/10.95 ,
+ []
+
+
+LaTeX Warning: Reference `def:physical-system' on page 20 undefined on input li
+ne 1500.
+
+
+LaTeX Warning: Reference `def:physical-system' on page 20 undefined on input li
+ne 1500.
+
+
+LaTeX Warning: Reference `def:physical-system' on page 20 undefined on input li
+ne 1500.
+
+
+LaTeX Warning: Reference `def:physical-system' on page 20 undefined on input li
+ne 1500.
+
+
+LaTeX Warning: Reference `thm:gns' on page 20 undefined on input line 1500.
+
+[20]
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 1510.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 1510.
+
+
+LaTeX Warning: Reference `sec:1-example' on page 21 undefined on input line 151
+6.
+
+
+LaTeX Warning: Reference `sec:1-example' on page 21 undefined on input line 154
+2.
+
+[21] [22] (./bozza70.aux)
 
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `bozza70.out' has not changed.
-(rerunfilecheck)             Checksum: D4309047E8588AF5AB74E87C37D96FB2;786.
+(rerunfilecheck)             Checksum: FC6619418864D0202894B6AB8E443A35;1840.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                bozza70
@@ -1495,31 +1663,34 @@ Package logreq Info: Writing requests to 'bozza70.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33674 strings out of 478268
- 638885 string characters out of 5846347
- 1431478 words of memory out of 5000000
- 51290 multiletter control sequences out of 15000+600000
- 510139 words of font info for 92 fonts, out of 8000000 for 9000
+ 33947 strings out of 478268
+ 643401 string characters out of 5846347
+ 1434604 words of memory out of 5000000
+ 51401 multiletter control sequences out of 15000+600000
+ 520719 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,8n,106p,740b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,12n,106p,2295b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.p
-fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-c
-hr7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbc
-h/md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesig
-n/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/ma
-thdesign/mdbch/md-chrma.pfb>
-Output written on bozza70.pdf (4 pages, 115389 bytes).
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y
+.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md
+-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/md
+bch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
+sign/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
+/mathdesign/mdbch/md-chrma.pfb>
+Output written on bozza70.pdf (22 pages, 254253 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
