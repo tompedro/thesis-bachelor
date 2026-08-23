@@ -2362,14 +2362,15 @@
     <bcf:citekey order="16">morettiSpectralTheoryQuantum</bcf:citekey>
     <bcf:citekey order="17">morettiSpectralTheoryQuantum</bcf:citekey>
     <bcf:citekey order="18">morettiSpectralTheoryQuantum</bcf:citekey>
-    <bcf:citekey order="19">schilppAlbertEinsteinPhilosopherscientist1991</bcf:citekey>
-    <bcf:citekey order="20">peresQuantumTheoryConcepts2002</bcf:citekey>
-    <bcf:citekey order="21">jammerPhilosophyQuantumMechanics1974</bcf:citekey>
-    <bcf:citekey order="22">bohrCanQuantumMechanicalDescription1935</bcf:citekey>
-    <bcf:citekey order="23">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
-    <bcf:citekey order="24">morettiSpectralTheoryQuantum</bcf:citekey>
-    <bcf:citekey order="25">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
-    <bcf:citekey order="26">murphyCalgebrasOperatorTheory1990</bcf:citekey>
+    <bcf:citekey order="19">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="20">schilppAlbertEinsteinPhilosopherscientist1991</bcf:citekey>
+    <bcf:citekey order="21">peresQuantumTheoryConcepts2002</bcf:citekey>
+    <bcf:citekey order="22">jammerPhilosophyQuantumMechanics1974</bcf:citekey>
+    <bcf:citekey order="23">bohrCanQuantumMechanicalDescription1935</bcf:citekey>
+    <bcf:citekey order="24">strocchiIntroductionMathematicalStructure2005</bcf:citekey>
+    <bcf:citekey order="25">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="26">bratteliOperatorAlgebrasQuantum1981</bcf:citekey>
+    <bcf:citekey order="27">murphyCalgebrasOperatorTheory1990</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

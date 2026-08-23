@@ -293,7 +293,10 @@ Note that, on physical grounds, one sets $c=\hbar^2$,
 consistently with $\{\cdot,\cdot\}=\tfrac{1}{i\hbar}[\cdot,\cdot]$ above. The two products of $(\mathcal{O},\circ,\{\cdot,\cdot\})$ are not independent data once the embedding of Definition~\ref{def:jb-embedding} is in place. They recombine into the single associative product of the ambient algebra $\A$, in the precise sense made explicit by the following identity.
 
 \begin{proposition}[Recovery of the associative product]
-	Let $\mathcal{O}$ be a JC algebra as in Definition \ref{def:jc-algebra}. For all $A,B\in\mathcal{O}$,$$AB=A\circ B+\tfrac{i\hbar}{2}\{A,B\}.$$
+	Let $\mathcal{O}$ be a JC algebra as in Definition \ref{def:jc-algebra}. For all $A,B\in\mathcal{O}$,
+	\begin{equation}
+		AB=A\circ B+\tfrac{i\hbar}{2}\{A,B\}. \label{eq:jordan-ass-product}
+	\end{equation}
 \end{proposition}
 \begin{proof}
 	A direct computation shows that $A\circ B+\tfrac{i\hbar}{2}\{A,B\}
@@ -393,7 +396,7 @@ Every physical observable $A \in \mathcal{O}$ is selfadjoint by definition, and 
 \noindent This Proposition is proved in \cite[Theorem 3.3.6]{murphyCalgebrasOperatorTheory1990}.
 
 \begin{remark}
-	The attainment proposition mathematically crystallizes the physical interpretation of the spectrum. Operationally, $\sigma(A)$ constitutes the precise set of values that a measurement of $A$ will yield with zero variance when the system is prepared in a suitable, dispersion-free state. For a generic state $\omega$, the expectation value $\omega(A)$ is not necessarily a sharp reading but rather a statistical average over the spectrum, thereby falling within the convex hull of $\sigma(A)$.
+	The attainment proposition mathematically crystallizes the physical interpretation of the spectrum. Operationally, $\sigma(A)$ constitutes the set of values that a measurement of $A$ will yield with zero variance when the system is prepared in a suitable, dispersion-free state. For a generic state $\omega$, the expectation value $\omega(A)$ is not necessarily a sharp reading but rather a statistical average over the spectrum, thereby falling within the convex hull of $\sigma(A)$.
 \end{remark}
 
 \begin{corollary}
@@ -490,7 +493,7 @@ Both notions will enter the statement of the completion theorem below. Density d
 
 \noindent A complete proof of this statement is found in \cite[Theorem 3.11]{morettiSpectralTheoryQuantum}.
 
-\subsection*{Operators on Hilbert Spaces}
+\subsection*{Bounded Operators on Hilbert Spaces}
 
 In finite-dimensional linear algebra, every linear map is continuous. However, on normed spaces, continuity becomes a non-trivial property, the fundamental equivalence between continuity and boundedness makes the latter a convenient algebraic proxy for analytic regularity. This equivalence leads to the operator norm, which turns the space of operators into a metric setting and it allows us to quantify their size. Then, we will specialize to continuous linear functionals, whose collection forms the dual space. At the end, since many operators of interest are initially defined only on a proper dense subspace, we determine whether they can be extended to the whole space. The bounded extension theorem supplies this, guaranteeing a unique continuous extension whenever the operator is bounded on its dense domain. We start with defining boundedness.
 
@@ -537,7 +540,20 @@ The algebraic dual imposes no regularity on the functionals it contains, and in 
 	Let $X$ be a normed space, let $Y$ be a Banach space as in Definition \ref{def:banach-space}, and let $W\subseteq X$ be a dense subspace as per Definition~\ref{def:dense}. If $T\in\mathcal{B}(W,Y)$ as per Definition~\ref{def:op-norm-bdd}, there exists a unique $\widetilde T\in\mathcal{B}(X,Y)$ such that $\widetilde T|_W=T$ and $\|\widetilde T\|=\|T\|$.
 \end{proposition}
 
-A complete proof can be found in \cite[Proposition 2.47]{morettiSpectralTheoryQuantum}. Two vectors in a Hilbert space are orthogonal if their inner product vanishes. Every closed subspace splits $\H$ into two orthogonal pieces, which yields the Riesz representation theorem for continuous linear functionals. 
+A complete proof can be found in \cite[Proposition 2.47]{morettiSpectralTheoryQuantum}. 
+Now, we turn to a more strict class of bounded operators that will be used later.
+
+\begin{definition}[Compact operators]
+	\label{def:compact-operators}
+	An operator $A\in\BH$, as per Definition~\ref{def:op-norm-bdd}, is
+	\emph{compact} if it is a norm limit of finite-rank operators. 
+\end{definition}
+
+It can be showed that compact operators form a closed two-sided ideal $\mathfrak{B}_0(\H)\subset\BH$. In addition, in finite dimension $\mathfrak{B}_0(\H)=\BH$. A more detailed discussion can be found in \cite[Chapter 4]{morettiSpectralTheoryQuantum}.
+
+\subsection*{Orthogonal Decomposition of an Hilbert space}
+
+Two vectors in a Hilbert space are orthogonal if their inner product vanishes. Every closed subspace splits $\H$ into two orthogonal pieces, which yields the Riesz representation theorem for continuous linear functionals. 
 
 \begin{definition}[Orthogonal Complement]\label{def:orth-complement}
 	Let $\H$ be a Hilbert space as per Definition~\ref{def:hilbert} and let $K\subseteq\H$. The orthogonal complement of $K$ is

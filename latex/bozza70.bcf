@@ -2350,13 +2350,17 @@
     <bcf:citekey order="4">Moroianu2004</bcf:citekey>
     <bcf:citekey order="5">Moroianu2004</bcf:citekey>
     <bcf:citekey order="6">landsmanMathematicalTopicsBetween1998</bcf:citekey>
-    <bcf:citekey order="7">KobayashiNomizu1969</bcf:citekey>
-    <bcf:citekey order="8">ashtekar</bcf:citekey>
-    <bcf:citekey order="9">CirelliManiaPizzocchero1990</bcf:citekey>
-    <bcf:citekey order="10">Moroianu2004</bcf:citekey>
-    <bcf:citekey order="11">landsmanMathematicalTopicsBetween1998</bcf:citekey>
-    <bcf:citekey order="12">KobayashiNomizu1969</bcf:citekey>
-    <bcf:citekey order="13">ashtekar</bcf:citekey>
+    <bcf:citekey order="7">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="8">landsman</bcf:citekey>
+    <bcf:citekey order="9">landsman</bcf:citekey>
+    <bcf:citekey order="10">KobayashiNomizu1969</bcf:citekey>
+    <bcf:citekey order="11">ashtekar</bcf:citekey>
+    <bcf:citekey order="12">CirelliManiaPizzocchero1990</bcf:citekey>
+    <bcf:citekey order="13">Moroianu2004</bcf:citekey>
+    <bcf:citekey order="14">landsmanMathematicalTopicsBetween1998</bcf:citekey>
+    <bcf:citekey order="15">landsman</bcf:citekey>
+    <bcf:citekey order="16">KobayashiNomizu1969</bcf:citekey>
+    <bcf:citekey order="17">ashtekar</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

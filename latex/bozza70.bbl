@@ -19,47 +19,45 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{abrahamFoundationsMechanics2008}{book}{}
-      \name{author}{2}{}{%
-        {{hash=a662cea2e646a5fd5025f8ebbdaaae10}{%
-           family={Abraham},
-           familyi={A\bibinitperiod},
-           given={Ralph},
-           giveni={R\bibinitperiod}}}%
-        {{hash=ec03988d2dd9d918b4d7f236b192cc6a}{%
-           family={Marsden},
+    \entry{Moroianu2004}{book}{}
+      \name{author}{1}{}{%
+        {{hash=5f1ecd998d58900170bccfcb5600fa46}{%
+           family={Moroianu},
            familyi={M\bibinitperiod},
-           given={Jerrold\bibnamedelima E.},
-           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+           given={Andrei},
+           giveni={A\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Providence, R.I}%
+        {Cambridge}%
       }
       \list{publisher}{1}{%
-        {AMS Chelsea Pub./American Mathematical Society}%
+        {Cambridge University Press}%
       }
-      \strng{namehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \strng{fullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \strng{bibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \strng{authorbibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \strng{authornamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \strng{authorfullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \strng{namehash}{5f1ecd998d58900170bccfcb5600fa46}
+      \strng{fullhash}{5f1ecd998d58900170bccfcb5600fa46}
+      \strng{bibnamehash}{5f1ecd998d58900170bccfcb5600fa46}
+      \strng{authorbibnamehash}{5f1ecd998d58900170bccfcb5600fa46}
+      \strng{authornamehash}{5f1ecd998d58900170bccfcb5600fa46}
+      \strng{authorfullhash}{5f1ecd998d58900170bccfcb5600fa46}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{edition}{2nd ed}
-      \field{isbn}{978-0-8218-4438-0}
-      \field{pagetotal}{826}
-      \field{title}{Foundations of Mechanics}
-      \field{year}{2008}
+      \field{edition}{Second edition}
+      \field{isbn}{978-0-521-86891-4 978-0-521-68897-0}
+      \field{langid}{english}
+      \field{number}{69}
+      \field{pagetotal}{171}
+      \field{series}{London {{Mathematical Society}} Student Texts}
+      \field{title}{Lectures on {{Kähler}} Geometry}
+      \field{year}{2012}
       \field{dateera}{ce}
-      \verb{file}
-      \verb /Users/tommasopedroni/Zotero/storage/V5A2HTA2/ABRAHAM MECCANICA RAZIONALE.pdf
-      \endverb
-      \keyw{Celestial mechanics,Geometry Differential,Mechanics Analytic}
     \endentry
   \enddatalist
+  \missing{CirelliManiaPizzocchero1990}
+  \missing{KobayashiNomizu1969}
+  \missing{ashtekar}
+  \missing{landsman}
   \missing{landsmanMathematicalTopicsBetween1998}
 \endrefsection
 \endinput

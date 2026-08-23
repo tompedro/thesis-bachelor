@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'bozza40.blg'
-[66] biber-darwin:340> INFO - === Fri Aug 14, 2026, 12:18:59
-[83] Biber.pm:418> INFO - Reading 'bozza40.bcf'
-[153] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
-[166] Biber.pm:4383> INFO - Processing section 0
-[176] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[181] bibtex.pm:1713> INFO - LaTeX decoding ...
-[234] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[303] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[303] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[303] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[303] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[310] bbl.pm:654> INFO - Writing 'bozza40.bbl' with encoding 'UTF-8'
-[313] bbl.pm:757> INFO - Output to bozza40.bbl
-[313] Biber.pm:130> WARN - ISBN '978-1-4419-2313-4 978-0-387-21554-9' in entry 'hallLieGroupsLie2003' is invalid - run biber with '--validate_datamodel' for details.
-[313] Biber.pm:132> INFO - WARNINGS: 1
+[104] biber-darwin:340> INFO - === Sun Aug 23, 2026, 11:52:05
+[137] Biber.pm:418> INFO - Reading 'bozza40.bcf'
+[248] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[269] Biber.pm:4383> INFO - Processing section 0
+[284] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[290] bibtex.pm:1713> INFO - LaTeX decoding ...
+[361] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[468] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[468] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[468] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[482] bbl.pm:654> INFO - Writing 'bozza40.bbl' with encoding 'UTF-8'
+[486] bbl.pm:757> INFO - Output to bozza40.bbl
+[487] Biber.pm:130> WARN - ISBN '978-1-4419-2313-4 978-0-387-21554-9' in entry 'hallLieGroupsLie2003' is invalid - run biber with '--validate_datamodel' for details.
+[487] Biber.pm:132> INFO - WARNINGS: 1

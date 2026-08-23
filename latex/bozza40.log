@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  19 AUG 2026 10:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  23 AUG 2026 11:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1464,10 +1464,10 @@ LaTeX Warning: Reference `def:state' on page 4 undefined on input line 225.
 LaTeX Warning: Reference `def:pure-state' on page 4 undefined on input line 233
 .
 
-
-LaTeX Warning: Reference `def:state' on page 4 undefined on input line 236.
-
 [4]
+
+LaTeX Warning: Reference `def:state' on page 5 undefined on input line 236.
+
 
 LaTeX Warning: Reference `def:one-dimensional-projector' on page 5 undefined on
  input line 254.
@@ -1687,121 +1687,121 @@ LaTeX Warning: Reference `def:character' on page 15 undefined on input line 717
 .
 
 
-LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 724.
+LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 722.
 
 
 LaTeX Warning: Reference `def:weak_topologies' on page 15 undefined on input li
-ne 724.
+ne 722.
 
 
 LaTeX Warning: Reference `prop:spectrum-compactness' on page 15 undefined on in
-put line 724.
+put line 722.
 
 
 LaTeX Warning: Reference `thm:completion' on page 15 undefined on input line 72
-4.
+2.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 729.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 9.66995pt on input line 733.
+(Font)              scaled to size 9.66995pt on input line 731.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 6.76897pt on input line 733.
+(Font)              scaled to size 6.76897pt on input line 731.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 4.83498pt on input line 733.
+(Font)              scaled to size 4.83498pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 733.
+(Font)              scaled to size 9.60007pt on input line 731.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 733.
+(Font)              scaled to size 6.72005pt on input line 731.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 733.
+(Font)              scaled to size 4.80003pt on input line 731.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 735.
+(Font)              scaled to size 9.60007pt on input line 733.
 
 LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
- line 735.
+ line 733.
 
 
-LaTeX Warning: Reference `def:gel-alg' on page 15 undefined on input line 737.
+LaTeX Warning: Reference `def:gel-alg' on page 15 undefined on input line 735.
 
 
 LaTeX Warning: Reference `def:jordan-product' on page 15 undefined on input lin
-e 737.
+e 735.
 
 
 LaTeX Warning: Reference `def:jb-embedding' on page 15 undefined on input line 
-737.
+735.
 
 
-LaTeX Warning: Reference `eq:sup-norm' on page 15 undefined on input line 739.
+LaTeX Warning: Reference `eq:sup-norm' on page 15 undefined on input line 737.
 
 
 LaTeX Warning: Reference `prop:comp-squares' on page 15 undefined on input line
- 739.
+ 737.
 
 
 LaTeX Warning: Reference `def:smooth-subalgebra' on page 15 undefined on input 
-line 741.
+line 739.
 
 
 LaTeX Warning: Reference `rmk:obstruction-poi-strc' on page 15 undefined on inp
-ut line 741.
+ut line 739.
 
 
-Underfull \hbox (badness 1231) in paragraph at lines 741--741
+Underfull \hbox (badness 1231) in paragraph at lines 739--739
 []\T1/mdbch/m/n/10 Imposed ex-ter-nally, smooth dense Pois-son
  []
 
 
-LaTeX Warning: Reference `def:lie-jordan' on page 15 undefined on input line 74
-1.
+LaTeX Warning: Reference `def:lie-jordan' on page 15 undefined on input line 73
+9.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 741.
+(Font)              scaled to size 6.72005pt on input line 739.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 741.
+(Font)              scaled to size 4.80003pt on input line 739.
 
 LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 15 undefined on inpu
-t line 741.
+t line 739.
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 741--742
+Underfull \hbox (badness 1033) in paragraph at lines 739--740
 []\T1/mdbch/m/n/10 Intrinsic, $\OMS/mdbch/m/n/10 f\OML/mdbch/m/it/10 A; B\OMS/m
 dbch/m/n/10 g \OT1/mdbch/m/n/10 = [][\OML/mdbch/m/it/10 A; B\OT1/mdbch/m/n/10 ]
 $ \T1/mdbch/m/n/10 as per Def-i-ni-
@@ -1809,152 +1809,152 @@ $ \T1/mdbch/m/n/10 as per Def-i-ni-
 
 
 LaTeX Warning: Reference `def:state-space' on page 15 undefined on input line 7
-43.
+41.
 
 
-LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 745.
+LaTeX Warning: Reference `thm:gelfand' on page 15 undefined on input line 743.
 
 
 LaTeX Warning: Reference `def:weak_topologies' on page 15 undefined on input li
-ne 747.
+ne 745.
 
 
 LaTeX Warning: Reference `prop:spectrum-compactness' on page 15 undefined on in
-put line 747.
+put line 745.
 
 
 LaTeX Warning: Reference `thm:completion' on page 15 undefined on input line 74
-7.
+5.
 
 
-Overfull \hbox (16.64798pt too wide) in paragraph at lines 733--751
+Overfull \hbox (16.64798pt too wide) in paragraph at lines 731--749
  [][] 
  []
 
 
 LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
- line 751.
+ line 749.
 
 
 LaTeX Warning: Reference `ch:classical-mechanics' on page 15 undefined on input
- line 751.
+ line 749.
 
 
 LaTeX Warning: Reference `thm:lie-jordan-to-cstar' on page 15 undefined on inpu
-t line 755.
+t line 753.
 
 [15]
 
-LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 762
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 760
 .
 
 
 LaTeX Warning: Reference `def:unital-c-star-algebra' on page 16 undefined on in
-put line 766.
+put line 764.
 
 
-LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 771
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 769
 .
 
 
-LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 771
+LaTeX Warning: Reference `sec:1-example' on page 16 undefined on input line 769
 .
 
 
 LaTeX Warning: Reference `def:unital-c-star-algebra' on page 16 undefined on in
-put line 771.
+put line 769.
 
 
-LaTeX Warning: Reference `def:state' on page 16 undefined on input line 772.
+LaTeX Warning: Reference `def:state' on page 16 undefined on input line 770.
 
 
-LaTeX Warning: Reference `def:state' on page 16 undefined on input line 777.
+LaTeX Warning: Reference `def:state' on page 16 undefined on input line 775.
 
 [16]
 
 LaTeX Warning: Reference `def:cyclic-vector' on page 17 undefined on input line
- 794.
+ 792.
 
 
-LaTeX Warning: Reference `lemma:schur' on page 17 undefined on input line 810.
+LaTeX Warning: Reference `lemma:schur' on page 17 undefined on input line 808.
 
 [17]
 
 LaTeX Warning: Reference `def:cyclic-vector' on page 18 undefined on input line
- 844.
+ 842.
 
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 852.
+(Font)              scaled to size 10.51207pt on input line 850.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 852.
+(Font)              scaled to size 7.68005pt on input line 850.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 852.
+(Font)              scaled to size 5.76004pt on input line 850.
 
-LaTeX Warning: Reference `sec:1-example' on page 18 undefined on input line 868
+LaTeX Warning: Reference `sec:1-example' on page 18 undefined on input line 866
 .
 
 
-LaTeX Warning: Reference `sec:1-strocchi' on page 18 undefined on input line 87
-0.
+LaTeX Warning: Reference `sec:1-strocchi' on page 18 undefined on input line 86
+8.
 
 [18]
 
-LaTeX Warning: Reference `sec:ex-three' on page 19 undefined on input line 872.
+LaTeX Warning: Reference `sec:ex-three' on page 19 undefined on input line 870.
 
 
 
 LaTeX Warning: Reference `thm:quantum-noether' on page 19 undefined on input li
-ne 872.
+ne 870.
 
 [19]
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 23.88496pt on input line 873.
+(Font)              scaled to size 23.88496pt on input line 871.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 873.
+(Font)              scaled to size 23.88496pt on input line 871.
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 10.51207pt on input line 873.
+(Font)              scaled to size 10.51207pt on input line 871.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 11.73846pt on input line 873.
+(Font)              scaled to size 11.73846pt on input line 871.
  [20
 
 ] (./bozza40.aux)
@@ -1970,7 +1970,7 @@ Package logreq Info: Writing requests to 'bozza40.run.xml'.
 Here is how much of TeX's memory you used:
  33998 strings out of 478268
  644633 string characters out of 5846347
- 1431101 words of memory out of 5000000
+ 1431107 words of memory out of 5000000
  51462 multiletter control sequences out of 15000+600000
  561122 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1993,7 +1993,7 @@ dbch/md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
 sign/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
 /mathdesign/mdbch/md-chrma.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
 public/cm-super/sftt1095.pfb>
-Output written on bozza40.pdf (20 pages, 241831 bytes).
+Output written on bozza40.pdf (20 pages, 241978 bytes).
 PDF statistics:
  579 PDF objects out of 1000 (max. 8388607)
  521 compressed objects within 6 object streams
