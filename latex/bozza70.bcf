@@ -2344,23 +2344,34 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">bib.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">CirelliManiaPizzocchero1990</bcf:citekey>
-    <bcf:citekey order="2">CirelliManiaPizzocchero1990</bcf:citekey>
-    <bcf:citekey order="3">Moroianu2004</bcf:citekey>
+    <bcf:citekey order="1">cirelliQuantumMechanicsInfinitedimensional1990</bcf:citekey>
+    <bcf:citekey order="2">cirelliQuantumMechanicsInfinitedimensional1990</bcf:citekey>
+    <bcf:citekey order="3">cirelliQuantumMechanicsInfinitedimensional1990</bcf:citekey>
     <bcf:citekey order="4">Moroianu2004</bcf:citekey>
-    <bcf:citekey order="5">Moroianu2004</bcf:citekey>
-    <bcf:citekey order="6">landsmanMathematicalTopicsBetween1998</bcf:citekey>
-    <bcf:citekey order="7">landsmanMathematicalTopicsBetween1998</bcf:citekey>
-    <bcf:citekey order="8">landsman</bcf:citekey>
-    <bcf:citekey order="9">landsman</bcf:citekey>
-    <bcf:citekey order="10">KobayashiNomizu1969</bcf:citekey>
-    <bcf:citekey order="11">ashtekar</bcf:citekey>
-    <bcf:citekey order="12">CirelliManiaPizzocchero1990</bcf:citekey>
-    <bcf:citekey order="13">Moroianu2004</bcf:citekey>
-    <bcf:citekey order="14">landsmanMathematicalTopicsBetween1998</bcf:citekey>
-    <bcf:citekey order="15">landsman</bcf:citekey>
-    <bcf:citekey order="16">KobayashiNomizu1969</bcf:citekey>
-    <bcf:citekey order="17">ashtekar</bcf:citekey>
+    <bcf:citekey order="5">ballmannLecturesKahlerManifolds2006</bcf:citekey>
+    <bcf:citekey order="6">Moroianu2004</bcf:citekey>
+    <bcf:citekey order="7">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="8">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="9">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="10">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="11">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="12">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="13">bengtssonGeometryQuantumStates2017</bcf:citekey>
+    <bcf:citekey order="14">KobayashiNomizu1969</bcf:citekey>
+    <bcf:citekey order="15">provostRiemannianStructureManifolds1980</bcf:citekey>
+    <bcf:citekey order="16">ashtekarGeometricalFormulationQuantum1997</bcf:citekey>
+    <bcf:citekey order="17">ashtekarGeometricalFormulationQuantum1997</bcf:citekey>
+    <bcf:citekey order="18">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="19">bengtssonGeometryQuantumStates2017</bcf:citekey>
+    <bcf:citekey order="20">cirelliQuantumMechanicsInfinitedimensional1990</bcf:citekey>
+    <bcf:citekey order="21">Moroianu2004</bcf:citekey>
+    <bcf:citekey order="22">ballmannLecturesKahlerManifolds2006</bcf:citekey>
+    <bcf:citekey order="23">landsmanMathematicalTopicsClassical1998</bcf:citekey>
+    <bcf:citekey order="24">morettiSpectralTheoryQuantum</bcf:citekey>
+    <bcf:citekey order="25">bengtssonGeometryQuantumStates2017</bcf:citekey>
+    <bcf:citekey order="26">KobayashiNomizu1969</bcf:citekey>
+    <bcf:citekey order="27">provostRiemannianStructureManifolds1980</bcf:citekey>
+    <bcf:citekey order="28">ashtekarGeometricalFormulationQuantum1997</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2369,4 +2380,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{cirelliQuantumMechanicsInfinitedimensional1990}{article}{}
+      \name{author}{3}{}{%
+        {{hash=54e585ed6c665148e1469025c2eb4b23}{%
+           family={Cirelli},
+           familyi={C\bibinitperiod},
+           given={Renzo},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f7fd988c131fb119effe0ccc5c7a9a03}{%
+           family={Manià},
+           familyi={M\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d715ff13f6205b78ee19186db4e5de09}{%
+           family={Pizzocchero},
+           familyi={P\bibinitperiod},
+           given={Livio},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \strng{fullhash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \strng{bibnamehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \strng{authorbibnamehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \strng{authornamehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \strng{authorfullhash}{f3c15be293deaeff6f4b7454c3a0d5f1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Schrödinger quantum mechanics is formulated as an infinite-dimensional Hamiltonian system whose phase space carries an additional structure (uncertainty structure) to account for the probabilistic character of the theory. The algebra of observables is described as an algebra of smooth functions on the quantal phase space, with a product naturally induced by the geometrical structures living on that manifold. The possibility of generalizing Schrödinger mechanics along these lines is discussed.}
+      \field{day}{1}
+      \field{issn}{0022-2488, 1089-7658}
+      \field{journaltitle}{Journal of Mathematical Physics}
+      \field{langid}{english}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shortjournal}{J. Math. Phys.}
+      \field{shorttitle}{Quantum Mechanics as an Infinite-Dimensional {{Hamiltonian}} System with Uncertainty Structure}
+      \field{title}{Quantum Mechanics as an Infinite-Dimensional {{Hamiltonian}} System with Uncertainty Structure: {{Part I}}}
+      \field{urlday}{15}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{31}
+      \field{year}{1990}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2891\bibrangedash 2897}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1063/1.528941
+      \endverb
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/2J3G8YST/Cirelli et al. - 1990 - Quantum mechanics as an infinite-dimensional Hamiltonian system with uncertainty structure Part I.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://pubs.aip.org/jmp/article/31/12/2891/457438/Quantum-mechanics-as-an-infinite-dimensional
+      \endverb
+      \verb{url}
+      \verb https://pubs.aip.org/jmp/article/31/12/2891/457438/Quantum-mechanics-as-an-infinite-dimensional
+      \endverb
+    \endentry
     \entry{Moroianu2004}{book}{}
       \name{author}{1}{}{%
         {{hash=5f1ecd998d58900170bccfcb5600fa46}{%
@@ -39,8 +99,8 @@
       \strng{authorbibnamehash}{5f1ecd998d58900170bccfcb5600fa46}
       \strng{authornamehash}{5f1ecd998d58900170bccfcb5600fa46}
       \strng{authorfullhash}{5f1ecd998d58900170bccfcb5600fa46}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second edition}
@@ -53,12 +113,237 @@
       \field{year}{2012}
       \field{dateera}{ce}
     \endentry
+    \entry{ballmannLecturesKahlerManifolds2006}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d8ed5f7c8e26053b90363e21848bcc5c}{%
+           family={Ballmann},
+           familyi={B\bibinitperiod},
+           given={Werner},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zürich}%
+      }
+      \list{publisher}{1}{%
+        {European mathematical society}%
+      }
+      \strng{namehash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \strng{fullhash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \strng{bibnamehash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \strng{authorbibnamehash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \strng{authornamehash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \strng{authorfullhash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-03719-025-8}
+      \field{langid}{english}
+      \field{series}{{{ESI}} Lectures in Mathematics and Physics}
+      \field{title}{Lectures on {{Kähler Manifolds}}}
+      \field{year}{2006}
+      \field{dateera}{ce}
+    \endentry
+    \entry{landsmanMathematicalTopicsClassical1998}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fa9d87631d9792e37049c30d224c84eb}{%
+           family={Landsman},
+           familyi={L\bibinitperiod},
+           given={Nicholas\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{fullhash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{bibnamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authorbibnamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authornamehash}{fa9d87631d9792e37049c30d224c84eb}
+      \strng{authorfullhash}{fa9d87631d9792e37049c30d224c84eb}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4612-7242-7}
+      \field{langid}{english}
+      \field{series}{Springer Monographs in Mathematics}
+      \field{title}{Mathematical Topics between Classical and Quantum Mechanics}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/SXXYEA9S/mathematical_topics_landsman.pdf
+      \endverb
+    \endentry
+    \entry{morettiSpectralTheoryQuantum}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c0752a0dca220b387d6c6d4be1aad288}{%
+           family={Moretti},
+           familyi={M\bibinitperiod},
+           given={Valter},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{fullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{bibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorbibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authornamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorfullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{title}{Spectral {{Theory}} and {{Quantum Mechanics}}}
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/VEHTVFAC/Moretti - Spectral Theory and Quantum Mechanics.pdf
+      \endverb
+    \endentry
+    \entry{bengtssonGeometryQuantumStates2017}{book}{}
+      \name{author}{2}{}{%
+        {{hash=9dc10c8757450691af46f2a0a8f15ec6}{%
+           family={Bengtsson},
+           familyi={B\bibinitperiod},
+           given={Ingemar},
+           giveni={I\bibinitperiod}}}%
+        {{hash=b0f2cba45f2963de24c72f86c5acf97e}{%
+           family={Życzkowski},
+           familyi={Ż\bibinitperiod},
+           given={Karol},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cambridge, UK}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{bc8850085adc2e9cee9bd501899e080c}
+      \strng{fullhash}{bc8850085adc2e9cee9bd501899e080c}
+      \strng{bibnamehash}{bc8850085adc2e9cee9bd501899e080c}
+      \strng{authorbibnamehash}{bc8850085adc2e9cee9bd501899e080c}
+      \strng{authornamehash}{bc8850085adc2e9cee9bd501899e080c}
+      \strng{authorfullhash}{bc8850085adc2e9cee9bd501899e080c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{2nd ed}
+      \field{isbn}{978-1-107-02625-4}
+      \field{langid}{english}
+      \field{shorttitle}{Geometry of Quantum States}
+      \field{title}{Geometry of Quantum States: An Introduction to Quantum Entanglement}
+      \field{year}{2017}
+      \field{dateera}{ce}
+    \endentry
+    \entry{provostRiemannianStructureManifolds1980}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5351c126413483d91097f2b5a555fcd7}{%
+           family={Provost},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=dd77d7665c02e3ed8f3262af4ae4b5f3}{%
+           family={Vallee},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{fullhash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{bibnamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authorbibnamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authornamehash}{3442408cbf3eff933edec626e0109f1f}
+      \strng{authorfullhash}{3442408cbf3eff933edec626e0109f1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-3616, 1432-0916}
+      \field{journaltitle}{Communications in Mathematical Physics}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Commun. Math. Phys.}
+      \field{title}{Riemannian Structure on Manifolds of Quantum States}
+      \field{urlday}{24}
+      \field{urlmonth}{8}
+      \field{urlyear}{2026}
+      \field{volume}{76}
+      \field{year}{1980}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{289\bibrangedash 301}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1007/BF02193559
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/BF02193559
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/BF02193559
+      \endverb
+    \endentry
+    \entry{ashtekarGeometricalFormulationQuantum1997}{online}{}
+      \name{author}{2}{}{%
+        {{hash=e28cc3e6f7f6ef55fcce6814f02de871}{%
+           family={Ashtekar},
+           familyi={A\bibinitperiod},
+           given={Abhay},
+           giveni={A\bibinitperiod}}}%
+        {{hash=70507c46635aa545fb7af1de09d6055e}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={Troy\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \strng{fullhash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \strng{bibnamehash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \strng{authorbibnamehash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \strng{authornamehash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \strng{authorfullhash}{4b44097dd3597c8ced88bfbc2e629ce7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{States of a quantum mechanical system are represented by rays in a complex Hilbert space. The space of rays has, naturally, the structure of a Ka¨hler manifold. This leads to a geometrical formulation of the postulates of quantum mechanics which, although equivalent to the standard algebraic formulation, has a very different appearance. In particular, states are now represented by points of a symplectic manifold (which happens to have, in addition, a compatible Riemannian metric), observables are represented by certain realvalued functions on this space and the Schro¨dinger evolution is captured by the symplectic flow generated by a Hamiltonian function. There is thus a remarkable similarity with the standard symplectic formulation of classical mechanics. Features—such as uncertainties and state vector reductions—which are specific to quantum mechanics can also be formulated geometrically but now refer to the Riemannian metric—a structure which is absent in classical mechanics. The geometrical formulation sheds considerable light on a number of issues such as the second quantization procedure, the role of coherent states in semi-classical considerations and the WKB approximation. More importantly, it suggests generalizations of quantum mechanics. The simplest among these are equivalent to the dynamical generalizations that have appeared in the literature. The geometrical reformulation provides a unified framework to discuss these and to correct a misconception. Finally, it also suggests directions in which more radical generalizations may be found.}
+      \field{day}{23}
+      \field{eprinttype}{arXiv}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{pubstate}{prepublished}
+      \field{title}{Geometrical {{Formulation}} of {{Quantum Mechanics}}}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.gr-qc/9706069
+      \endverb
+      \verb{eprint}
+      \verb gr-qc/9706069
+      \endverb
+      \verb{file}
+      \verb /Users/tommasopedroni/Zotero/storage/TMVAX6ZW/Ashtekar e Schilling - 1997 - Geometrical Formulation of Quantum Mechanics.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/gr-qc/9706069
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/gr-qc/9706069
+      \endverb
+      \keyw{General Relativity and Quantum Cosmology,High Energy Physics - Theory,Quantum Physics}
+    \endentry
   \enddatalist
-  \missing{CirelliManiaPizzocchero1990}
   \missing{KobayashiNomizu1969}
   \missing{ashtekar}
-  \missing{landsman}
-  \missing{landsmanMathematicalTopicsBetween1998}
 \endrefsection
 \endinput
 
