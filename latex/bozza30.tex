@@ -1,8 +1,3 @@
-\input{preambolo_bozza}
-\setcounter{chapter}{2}
-\setcounter{section}{0}
-\begin{document}
-	
 Quantum phenomena force a redefinition of physical reality and thus require a new descriptive language. In fact, words like 'to measure' are used but their operational semantics shifts. This mirrors the adaptation of Newtonian terms like time, mass, and energy in special relativity. At the same time, some syntactically correct propositions lose physical meaning. An example in special relativity is the assertion that two events occurred simultaneously at different places.
 
 In order to find this new framework, we start by recalling that a physical theory partitions the world into the system and its environment. The framework described here treats only the system while the environment remains classical. This duality is underlined by Niels Bohr \cite{schilppAlbertEinsteinPhilosopherscientist1991}.
@@ -54,7 +49,7 @@ of its measurement is a nonnegative number. Operationally, this is realized when
 
 Consider the set of preparations given with a quantum system. Through the procedure described earlier, the equivalence classes of identical preparations are called \emph{states}, denoted by $\omega$. The expectation value $\omega(A) \in \mathbb{R}$ is obtained as the limit of sample means of replicated measurements of $A$ on identically prepared copies of the system. Since sample means are linear in the individual readings and intrinsically non-negative when evaluating squares of outcomes, we elevate these operational facts to defining axioms for the states.
 
-	\begin{definition}[State]\label{def:state}
+	\begin{definition}[State]\label{def:q-state}
 		A \emph{state} $\omega$ on the observable set $\mathcal{O}$, as per Definition \ref{def:obs-set}, is a real linear functional $\omega: \mathcal{O} \to \R$ satisfying two properties:
 		
 		\begin{itemize}
@@ -71,13 +66,13 @@ Consider the set of preparations given with a quantum system. Through the proced
 	
 	The separating property mathematically implements the operational completeness of the state space. The physical content of an observable is entirely exhausted by its expectations across all possible preparations. Two states that agree on every observable are identified as one and the same state. This mutual duality is  symmetric.
 	\begin{remark}
-		Definition \ref{def:state} guarantees by construction that every state evaluates non-negatively on the algebraic squares of observables. However, the converse implication, namely that state-positivity guarantees the existence of an exact square root within $\mathcal{O}$, fails. Establishing this strict equivalence requires endowing the observable set with a topological structure, such as norm completeness within a $C^*$-algebra. In this setting the continuous functional calculus ensures that such roots are always well defined.
+		Definition \ref{def:q-state} guarantees by construction that every state evaluates non-negatively on the algebraic squares of observables. However, the converse implication, namely that state-positivity guarantees the existence of an exact square root within $\mathcal{O}$, fails. Establishing this strict equivalence requires endowing the observable set with a topological structure, such as norm completeness within a $C^*$-algebra. In this setting the continuous functional calculus ensures that such roots are always well defined.
 	\end{remark}
 
 Every concrete apparatus has an inevitable scale bound, for instance a
 bounded pointer range, independent of the state being probed. Consequently,
 the outcomes of measuring a fixed observable $A$, across all possible
-states of Definition~\ref{def:state}, form a bounded set of real numbers,
+states of Definition~\ref{def:q-state}, form a bounded set of real numbers,
 and it is natural to record this bound as a norm.
 
 \begin{definition}[Norm on $\mathcal{O}$]\label{def:normed-obs-set}
@@ -194,7 +189,7 @@ $\circ$ becomes the symmetrization of the usual product.
 	A Jordan--Banach algebra $\mathcal{O}$, as in Definition~\ref{def:jb-algebra},
 	is \emph{embedded} in a $C^*$-algebra $\A$ if there exists an isometric linear map from $\mathcal{O}$ into $\A$ such that the image of $\mathcal{O}$ generates $\A$ as a $C^*$-algebra, and for all $A,B\in\mathcal{O}$
 	\begin{enumerate}
-		\item $A^* = A$ in $\A$, so that $\mathcal{O}$ is identified with a closed real subspace of the selfadjoint elements $\A_{sa}$ as per Definition \ref{def:selfadj-sector},
+		\item $A^* = A$ in $\A$, so that $\mathcal{O}$ is identified with a closed real subspace of the selfadjoint elements $\A_{sa}$ as per Definition \ref{def:selfadj-element},
 		\item the Jordan product corresponds to the symmetrized associative product, $A\circ B=\tfrac12(AB+BA)$.
 	\end{enumerate}
 \end{definition}
@@ -328,7 +323,7 @@ product.
 	The algebra $\A$ produced this way is the same pair obtained from the
 	JC-algebra embedding of Definition~\ref{def:jb-embedding}, and it is
 	exactly the algebra $\A$ of the quantum system of
-	Definition~\ref{def:physical-system} in the next subsection.
+	Definition~\ref{def:quantum-system} in the next subsection.
 \end{remark}
 
 Before stating the formal definition of a quantum system, we summarize the algebraic reconstruction developed in this section. The starting point consists of the operational procedures of preparations and tests, which define the states and the observables. The observable set is structured using rescaling and squaring operations. States are introduced as normalized positive linear functionals, representing the expectation values of measurements. By recording the bounds of these expectations, a norm is defined, and the observable set is completed into a real Banach space. The symmetric Jordan product is introduced to combine observables using only sums and squares. The addition of a real Lie bracket, corresponding to the rescaled commutator, turns the space into a Lie--Jordan algebra. Through Theorem \ref{thm:lie-jordan-to-cstar}, these products generate an associative product on the complexified space. This procedure yields a $C^*$-algebra whose selfadjoint elements coincide with the initial observable set, establishing the mathematical requirements for the axiomatic definition.
@@ -345,8 +340,7 @@ additional facts, automatic continuity of states, the spectrum, and
 separation by states, needed to use the definition as a working framework
 rather than just formal statement.
 
-\begin{definition}[Quantum system]
-	\label{def:physical-system}
+\begin{definition}[Quantum system]\label{def:quantum-system}
 	A quantum system is defined by the following two sets of data.
 	\begin{enumerate}
 		\item A unital $C^*$-algebra $\A$ of observables, its selfadjoint
@@ -376,7 +370,7 @@ This is proved in \cite[Proposition 2.3.11]{bratteliOperatorAlgebrasQuantum1981}
 The spectrum of an observable records, algebraically, the physical values it can legitimately yield upon measurement. We recall its formal definition for a general element of a $C^*$-algebra $\A$.
 
 \begin{definition}[Spectrum]
-	Let $\A$ be a $C^*$-algebra in the sense of Definition \ref{def:.c-star-algebra}. The spectrum of $A\in \A$ is defined as the set
+	Let $\A$ be a $C^*$-algebra in the sense of Definition \ref{def:c-star-algebra}. The spectrum of $A\in \A$ is defined as the set
 	$\sigma(A)=\{\lambda\in\C \mid \lambda\Id-A \text{ has no two-sided
 		inverse in } \A\}$.
 \end{definition}
@@ -390,7 +384,7 @@ The spectrum of an observable records, algebraically, the physical values it can
 Every physical observable $A \in \mathcal{O}$ is selfadjoint by definition, and therefore inherently normal. As we will see in the next sections, this framework establishes an isomorphism between the $C^*$-subalgebra generated by $A$ and the algebra of continuous functions on its spectrum, $C(\sigma(A))$. Operationally, this structural correspondence dictates that evaluating the observable behaves exactly like sampling points from $\sigma(A)$. Consequently, the elements of the spectrum represent the only possible deterministic outcomes of a measurement. For normal elements, the functional calculus guarantees that every spectral value corresponds to a sharp physical preparation.
 
 \begin{proposition}[Attainment of spectral values]
-	Let $\A$ be a $C^*$-algebra in the sense of Definition \ref{def:.c-star-algebra}. If $A\in\A$ is normal as in Definition \ref{def:normal-elements} and $\lambda\in\sigma(A)$, there exists a state $\omega\in S$ such that $\omega(A)=\lambda$.
+	Let $\A$ be a $C^*$-algebra in the sense of Definition \ref{def:c-star-algebra}. If $A\in\A$ is normal as in Definition \ref{def:normal-elements} and $\lambda\in\sigma(A)$, there exists a state $\omega\in S$ such that $\omega(A)=\lambda$.
 \end{proposition}
 
 \noindent This Proposition is proved in \cite[Theorem 3.3.6]{murphyCalgebrasOperatorTheory1990}.
@@ -472,13 +466,13 @@ We start with a complex vector space endowed with an inner product that yields a
 \noindent The preceding example demonstrates that pre-Hilbert spaces need not be complete. However, completeness is a requirement for many constructions in functional analysis and quantum mechanics. In analogy with the completion of the rationals to the reals, every pre-Hilbert space admits a completion obtained by adjoining the limit points of all Cauchy sequences. To formulate this procedure rigorously, we introduce the notions of dense subsets and linear isometries. The former characterizes how the original space is embedded into its extension, while the latter guarantees that the norm and inner-product structures are preserved under this embedding.
 
 \begin{definition}[Dense Subset]\label{def:dense}
-	Let $V$ be a normed space as per Definition \ref{def:normed-space}. A subset $W\subseteq V$ is dense in $V$ if for every $v\in V$ and for every $\varepsilon>0$ there exists $w\in W$ with $\|v-w\|<\varepsilon$.
+	Let $V$ be a normed space. A subset $W\subseteq V$ is dense in $V$ if for every $v\in V$ and for every $\varepsilon>0$ there exists $w\in W$ with $\|v-w\|<\varepsilon$.
 \end{definition}
 
 Both notions will enter the statement of the completion theorem below. Density describes how the original space sits inside its completion, while a linear isometry is precisely the kind of map under which such an embedding must be realized, since it preserves the norm and inner-product structure intact.
 
 \begin{definition}[Linear Isometry]\label{def:isometry}
-	Let $V,V'$ be normed spaces as per Definition \ref{def:normed-space}. A linear map $J: V\to V'$ is a linear isometry if $\|Jv\|_{V'}=\|v\|_V$ for every $v\in V$.
+	Let $V,V'$ be normed spaces. A linear map $J: V\to V'$ is a linear isometry if $\|Jv\|_{V'}=\|v\|_V$ for every $v\in V$.
 \end{definition}
 
 \noindent We can show that every pre-Hilbert space embeds densely into a Hilbert space, unique up to unitary isomorphism.
@@ -498,7 +492,7 @@ Both notions will enter the statement of the completion theorem below. Density d
 In finite-dimensional linear algebra, every linear map is continuous. However, on normed spaces, continuity becomes a non-trivial property, the fundamental equivalence between continuity and boundedness makes the latter a convenient algebraic proxy for analytic regularity. This equivalence leads to the operator norm, which turns the space of operators into a metric setting and it allows us to quantify their size. Then, we will specialize to continuous linear functionals, whose collection forms the dual space. At the end, since many operators of interest are initially defined only on a proper dense subspace, we determine whether they can be extended to the whole space. The bounded extension theorem supplies this, guaranteeing a unique continuous extension whenever the operator is bounded on its dense domain. We start with defining boundedness.
 
 \begin{definition}[Operator Norm and Boundedness]\label{def:op-norm-bdd}
-	Let $X,Y$ be normed spaces as in Definition \ref{def:normed-space} and let $T\in\mathcal{L}(X,Y)$ with $\mathcal{L}(X,Y)$ the space of linear maps between $X$ and $Y$. The operator $T$ is bounded if there exists $K\geq 0$ such that
+	Let $X,Y$ be normed spaces and let $T\in\mathcal{L}(X,Y)$ with $\mathcal{L}(X,Y)$ the space of linear maps between $X$ and $Y$. The operator $T$ is bounded if there exists $K\geq 0$ such that
 	\begin{equation}
 		\|Tv\|_Y\leq K\|v\|_X,
 	\end{equation}
@@ -738,6 +732,3 @@ A complete proof can be found in \cite[Theorem 5.14]{morettiSpectralTheoryQuantu
 \begin{example}\label{ex:cyclic-multiplication}
 	On $\H=L^2([0,1])$, with $(T\psi)(x)=x\psi(x)$, the constant function $v=1$ is cyclic for $T$ as per Definition~\ref{def:cyclic-single}, since $\{T^nv\mid n\geq0\}$ spans the polynomials, which is dense in $L^2([0,1])$ by the Weierstrass approximation theorem.
 \end{example}
-
-\printbibliography
-\end{document}

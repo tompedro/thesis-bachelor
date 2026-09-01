@@ -1,15 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'main.blg'
-[90] biber-darwin:340> INFO - === Wed Jul  8, 2026, 22:18:29
-[109] Biber.pm:418> INFO - Reading 'main.bcf'
-[196] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
-[210] Biber.pm:4383> INFO - Processing section 0
-[223] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[228] bibtex.pm:1713> INFO - LaTeX decoding ...
-[271] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[338] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[338] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[338] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[338] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[339] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[340] bbl.pm:757> INFO - Output to main.bbl
+[102] biber-darwin:340> INFO - === Tue Sep  1, 2026, 19:53:29
+[122] Biber.pm:418> INFO - Reading 'main.bcf'
+[256] Biber.pm:972> INFO - Found 35 citekeys in bib section 0
+[275] Biber.pm:4383> INFO - Processing section 0
+[289] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[294] bibtex.pm:1713> INFO - LaTeX decoding ...
+[385] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[652] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[652] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[652] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[652] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[684] bbl.pm:654> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[705] bbl.pm:757> INFO - Output to main.bbl
+[705] Biber.pm:130> WARN - Duplicate entry key: 'bratteliOperatorAlgebrasQuantum' in file 'bib.bib', skipping ...
+[705] Biber.pm:130> WARN - Duplicate entry key: 'hallLieGroupsLie2003' in file 'bib.bib', skipping ...
+[705] Biber.pm:130> WARN - ISBN '978-0-8218-5175-3 978-0-8218-7758-6' in entry 'gelfandImbeddingNormedRings1994' is invalid - run biber with '--validate_datamodel' for details.
+[705] Biber.pm:132> INFO - WARNINGS: 3

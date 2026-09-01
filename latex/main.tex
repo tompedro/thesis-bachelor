@@ -1,24 +1,44 @@
-\input{preambolo_main}
+\input{preambolo_bozza}
 
 \begin{document}
 
 \frontmatter
 \include{frontespizio}
+
+\chapter*{}
+\begin{center}
+	\textbf{Abstract}
+\end{center}
+	This thesis reconstructs classical and quantum mechanics from a common algebraic foundation showing that both theories share the same geometric core when expressed on this formulation. Classical phase space is recovered from a commutative $C^*$-algebra via the Gelfand-Naimark theorem, although a Poisson bracket requires the additional choice of a smooth subalgebra. Quantum theory is derived operationally from preparations and measurements. This yields a noncommutative $C^*$-algebra whose Hilbert space representations follow from the Gelfand-Naimark-Segal construction, while the Lie bracket emerges naturally from noncommutativity. The pure state space is then identified with projective Hilbert space, whose Kähler geometry unifies the two theories. The symplectic form on it generates Schrödinger dynamics, its metric governs the Born rule and uncertainty relations, and its momentum map provides a geometric formulation of Noether's theorem. This yields an algebraic-geometric axiomatization equivalent to the standard Dirac-von Neumann postulates.
+
+	Questa tesi ricostruisce la meccanica classica e quantistica da un comune fondamento algebrico e mostra che entrambe le teorie condividono lo stesso nucleo geometrico quando vengono espresse in questo formalismo. Lo spazio delle fasi classico viene recuperato da una $C^*$-algebra commutativa tramite il teorema di Gelfand-Naimark, sebbene una parentesi di Poisson richieda la scelta aggiuntiva di una sottoalgebra liscia. La teoria quantistica è derivata operativamente da preparazioni e misure, ottenendo una $C^*$-algebra non commutativa le cui rappresentazioni nello spazio di Hilbert seguono dalla costruzione di Gelfand-Naimark-Segal, mentre la parentesi di Lie emerge naturalmente dalla non commutatività. Lo spazio degli stati puri viene quindi identificato con lo spazio proiettivo di Hilbert, la cui geometria Kähleriana unifica le due teorie: la sua forma simplettica genera la dinamica di Schrödinger, la sua metrica governa la regola di Born e le relazioni di indeterminazione, e la sua mappa momento fornisce una formulazione geometrica del teorema di Noether. Ciò conduce a un'assiomatizzazione algebrico-geometrica equivalente ai postulati standard di Dirac-von Neumann.
+
 \tableofcontents
 
 % --- da qui in poi: margini stretti e corpo 10pt ("preambolo nuovo") ---
 % Frontespizio e indice sopra restano con i margini/12pt originali,
 % perché geometry non è ancora stata attivata (nessuna opzione al caricamento).
 \newgeometry{margin=2cm}
-\fontsize{10}{12}\selectfont
+\setlength{\headwidth}{\textwidth}
 
 \mainmatter
-\include{incipit}
-\include{cap1}
-\include{cap2}
-\include{cap3}
-\include{cap4}
-\include{conclusioni}
+\chapter*{Introduction}
+\markboth{Introduction}{Introduction}
+\addcontentsline{toc}{chapter}{Introduction}
+\input{incipit}
+\chapter{Algebraic Construction of Classical Mechanics}\label{cap:cm-c-star}
+\input{bozza}
+\input{bozza10}
+\input{bozza20}
+
+\chapter{Algebraic Construction of Quantum Mechanics}\label{cap:qm-algebraic}
+\input{bozza30}
+\input{bozza40}
+
+\chapter{Recovery of Hamiltonian Structures in the Projective State Space}\label{cap:kahler}
+\input{bozza70}
+
+\input{conclusioni}
 
 \backmatter
 \printbibliography

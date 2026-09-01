@@ -1,19 +1,18 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
-[0] Config.pm:310> INFO - Logfile is 'bozza70.blg'
-[75] biber-darwin:340> INFO - === Tue Aug 25, 2026, 16:29:37
-[94] Biber.pm:418> INFO - Reading 'bozza70.bcf'
-[162] Biber.pm:972> INFO - Found 10 citekeys in bib section 0
-[175] Biber.pm:4383> INFO - Processing section 0
-[187] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
-[192] bibtex.pm:1713> INFO - LaTeX decoding ...
-[249] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
-[351] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[351] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[351] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[351] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[369] bbl.pm:654> INFO - Writing 'bozza70.bbl' with encoding 'UTF-8'
-[374] bbl.pm:757> INFO - Output to bozza70.bbl
-[374] Biber.pm:130> WARN - ISBN '978-0-521-86891-4 978-0-521-68897-0' in entry 'Moroianu2004' is invalid - run biber with '--validate_datamodel' for details.
-[374] Biber.pm:130> WARN - I didn't find a database entry for 'KobayashiNomizu1969' (section 0)
-[374] Biber.pm:130> WARN - I didn't find a database entry for 'ashtekar' (section 0)
-[374] Biber.pm:132> INFO - WARNINGS: 3
+[1] Config.pm:310> INFO - Logfile is 'bozza70.blg'
+[107] biber-darwin:340> INFO - === Sat Aug 29, 2026, 11:37:07
+[130] Biber.pm:418> INFO - Reading 'bozza70.bcf'
+[247] Biber.pm:972> INFO - Found 9 citekeys in bib section 0
+[269] Biber.pm:4383> INFO - Processing section 0
+[290] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[296] bibtex.pm:1713> INFO - LaTeX decoding ...
+[433] bibtex.pm:1518> INFO - Found BibTeX data source 'bib.bib'
+[588] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[588] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[588] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[588] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[604] bbl.pm:654> INFO - Writing 'bozza70.bbl' with encoding 'UTF-8'
+[611] bbl.pm:757> INFO - Output to bozza70.bbl
+[612] Biber.pm:130> WARN - ISBN '978-0-521-86891-4 978-0-521-68897-0' in entry 'Moroianu2004' is invalid - run biber with '--validate_datamodel' for details.
+[612] Biber.pm:130> WARN - I didn't find a database entry for 'KobayashiNomizu1969' (section 0)
+[612] Biber.pm:132> INFO - WARNINGS: 2

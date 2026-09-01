@@ -1,7 +1,38 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Introduction}{1}{chapter*.2}%
-\contentsline {chapter}{\numberline {1}Classical Mechanics as a Commutative C*-Algebra}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Algebraic Construction of Quantum Mechanics}{3}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Kähler Geometry of $\mdmathbb {P}\mathcal {H}$ and Recovery of Classical Structures}{4}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Strict Deformation Quantization (Rieffel)}{5}{chapter.4}%
-\contentsline {chapter}{Conclusion}{6}{chapter*.3}%
+\contentsline {chapter}{Introduction}{1}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Algebraic Construction of Classical Mechanics}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}A Brief Introduction to Differential Geometry}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Lie Algebras and Representations}{10}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Elements of symplectic geometry}{15}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Hamiltonian Vector Fields and Poisson Brackets}{18}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Symmetries and Geometrical Noether's Theorem}{22}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Classical Mechanics as a Commutative C*-algebra}{27}{section.1.6}%
+\contentsline {paragraph}{Observables.}{29}{section*.13}%
+\contentsline {paragraph}{States.}{30}{section*.14}%
+\contentsline {paragraph}{Probabilistic interpretation of states.}{30}{section*.15}%
+\contentsline {paragraph}{Duality between states and observables.}{31}{section*.16}%
+\contentsline {paragraph}{Time evolution.}{32}{section*.17}%
+\contentsline {paragraph}{Conclusion.}{32}{section*.18}%
+\contentsline {section}{\numberline {1.7}Example I: Classical Spin System}{36}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Algebraic Construction of Quantum Mechanics}{39}{chapter.2}%
+\contentsline {section}{\numberline {2.1}General Mathematical Description of a Quantum Theory}{39}{section.2.1}%
+\contentsline {section}{\numberline {2.2}An Introduction to the Hilbert Space Formalism}{46}{section.2.2}%
+\contentsline {section}{\numberline {2.3}The Gelfand-Naimark-Segal Construction}{52}{section.2.3}%
+\contentsline {section}{\numberline {2.4}The Weyl Algebra and its Representations}{58}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The Dirac-von Neumann Axioms Revisited}{63}{section.2.5}%
+\contentsline {paragraph}{Recovering Axiom I.}{64}{section*.41}%
+\contentsline {paragraph}{Recovering Axiom II}{64}{section*.42}%
+\contentsline {paragraph}{Recovering Axiom IV.}{64}{section*.43}%
+\contentsline {paragraph}{Recovering Axiom V.}{64}{section*.44}%
+\contentsline {section}{\numberline {2.6}A Comparison between Classical and Quantum Algebraic Reconstructions}{65}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Example II: The Quantum Spin System}{67}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Recovery of Hamiltonian Structures in the Projective State Space}{71}{chapter.3}%
+\contentsline {section}{\numberline {3.1}A Brief Introduction to Kähler Geometry}{71}{section.3.1}%
+\contentsline {section}{\numberline {3.2}The Projective Hilbert Space as a Kähler Manifold}{78}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Schrödinger Equation as an Hamiltonian Flow}{81}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Riemannian Metric and Uncertainty Relations}{84}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Observable Functions on Kähler manifolds}{88}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Quantum Symmetries and the Momentum Map}{90}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Algebraic-Geometric Axiomatization of Quantum Mechanics}{91}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Example III: Dynamics and Symmetries on the Bloch Sphere}{95}{section.3.8}%
+\contentsline {chapter}{Conclusion}{97}{chapter*.72}%

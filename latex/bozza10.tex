@@ -1,79 +1,4 @@
-\input{preambolo_bozza}
-\setcounter{chapter}{1}
-\setcounter{section}{1}
-\begin{document}
-
-\subsection*{Lie derivative} %DA INSERIRE IN 1.1
-Directional derivatives of smooth functions on a manifold are defined via tangent vector acting as a derivation when applied to a real-valued function as shown in \ref{remark:vec-der}. In Euclidean spaces, the directional derivative of a vector field relies on the vector space structure of $\R^n$ and the identification of tangent vectors with elements of $\R^n$. On a general manifold, this identification fails. Replacing $v \in T_pM$ with $V \in \mathfrak{X}(M)$ overcomes this, as the flow of $V$ enables the pullback of $W$ to $p$ for differentiation. 
-Hence we adopt the following definition.
-
-\begin{definition}[Lie derivative]\label{def:lie-der}
-	Let $M$ be a smooth manifold, $V \in \mathfrak{X}(M)$, and let $\theta$ be the flow of $V$ as in Definition \ref{def:flow}. For $W \in \mathfrak{X}(M)$, the \emph{Lie derivative of $W$ with respect to $V$} is the vector field $\mathscr{L}_VW \in \mathfrak{X}(M)$ such that
-	\begin{equation}
-	(\mathscr{L}_VW)_p = \frac{d}{dt}\Big|_{t=0} d(\theta_{-t})_{\theta_t(p)}\big(W_{\theta_t(p)}\big) = \lim_{t\to 0} \frac{d(\theta_{-t})_{\theta_t(p)}\big(W_{\theta_t(p)}\big) - W_p}{t}. \label{eq:lie-der}
-	\end{equation}
-\end{definition}
-
-%The map $d(\theta_{-t})_{\theta_t(p)}$ is what pulls $W_{\theta_t(p)} \in T_{\theta_t(p)}M$ back into $T_pM$. Both terms of the quotient then sit in the same vector space. For $t \neq 0$ small enough, $\theta_t$ is defined near $p$ and $\theta_{-t}$ is its inverse there, so $d(\theta_{-t})_{\theta_t(p)}(W_{\theta_t(p)})$ and $W_p$ both lie in $T_pM$, and the difference quotient makes sense.
-
-If $\partial M \neq \emptyset$, the definition still goes through as long as $V$ is tangent to $\partial M$, since this entails that the flow of $V$ exists on all of $M$.
-
-\begin{lemma}
-	Suppose $M$ is a smooth manifold with or without boundary, and $V, W \in \mathfrak{X}(M)$. If $\partial M \neq \emptyset$, assume in addition that $V$ is tangent to $\partial M$. Then $(\mathscr{L}_VW)_p$ exists for every $p \in M$, and $\mathscr{L}_VW$ is a smooth vector field.
-\end{lemma}
-
-\noindent The proof of this result is stated in \cite[Lemma 9.36]{leeIntroductionSmoothManifolds2013}. The next theorem is crucial to understand the role of this construction throughout the thesis.
-
-\begin{theorem}[Lie derivative of vector fields]\label{thm:lie-der-comm}
-	If M is a smooth manifold and $V, W \in \mathfrak{X}(M)$, then $\mathscr{L}_VW = [V,W]$, the commutator between $V$ and $W$.
-\end{theorem}
-
-This theorem, proved in \cite[Theorem 9.38]{leeIntroductionSmoothManifolds2013}, provides a direct geometric interpretation of the Lie bracket. It establishes that the commutator $[V,W]$ measures the failure of the flows of $V$ and $W$ to commute. Equivalently, it quantifies the rate at which the vector field $W$ changes when observed from a point moving along the flow of $V$. This identity will be a cornerstone in the following sections, as it links the differential structure of the manifold to the algebraic properties of vector fields, and, later, to the Poisson bracket of observables.
-
-\begin{corollary}
-	Suppose $M$ is a smooth manifold with or without boundary, and $V, W, X \in \mathfrak{X}(M)$. 
-	\begin{enumerate}
-		\item[(a)] $\mathscr{L}_VW = -\mathscr{L}_WV$.
-		\item[(b)] $\mathscr{L}_V[W,X] = [\mathscr{L}_VW,X] + [W,\mathscr{L}_VX]$.
-		\item[(c)] $\mathscr{L}_{[V,W]}X = \mathscr{L}_V\mathscr{L}_WX - \mathscr{L}_W\mathscr{L}_VX$.
-		\item[(d)] If $h \in C^\infty(M)$, then $\mathscr{L}_V(hW) = (Vh)W + h\mathscr{L}_VW$.
-		\item[(e)] If $F : M \to N$ is a diffeomorphism, then $F_*(\mathscr{L}_VX) = \mathscr{L}_{F_*V}F_*X$.
-	\end{enumerate}
-\end{corollary}
-
-As established by \cite[Corollary 9.39]{leeIntroductionSmoothManifolds2013}, these properties highlight the algebraic role of the Lie derivative. In particular, (b) and (c) show that $\mathscr{L}_V$ acts as a derivation on the Lie algebra of vector fields, while (d) confirms its behavior as a derivation with respect to multiplication by smooth functions. Property (e) establishes the naturality of the Lie derivative under diffeomorphisms, ensuring that the construction is intrinsic to the manifold structure. 
-Now, we extend Definition \ref{def:lie-der} to differential forms.
-
-\begin{definition}[Lie derivative of a differential form]
-	Let $M$ be a smooth manifold, let $V \in \mathfrak{X}(M)$ have flow $\theta$, and let $\omega \in \Omega^k(M)$ be a smooth differential form on $M$. The \emph{Lie derivative of $\omega$ with respect to $V$} is $\mathscr{L}_V\omega \in \Omega^k(M)$ whose value at $p \in M$ is
-	\[
-	(\mathscr{L}_V\omega)_p = \frac{d}{dt}\Big|_{t=0} \big(\theta_t^*\omega\big)_p = \lim_{t\to 0} \frac{\big(\theta_t^*\omega\big)_p - \omega_p}{t},
-	\]
-	wherever this derivative exists, where $\theta_t^*\omega$ is the pullback of $\omega$ by the time-$t$ flow map of $V$.
-\end{definition}
-
-Lie differentiation satisfies a product rule with respect to wedge products.
-
-\begin{proposition}
-	Suppose $M$ is a smooth manifold, $V \in \mathfrak{X}(M)$, and $\omega, \eta \in \Omega^k(M)$. Then
-	\[
-	\mathscr{L}_V(\omega \wedge \eta) = (\mathscr{L}_V\omega) \wedge \eta + \omega \wedge (\mathscr{L}_V\eta).
-	\]
-\end{proposition}
-
-This product rule, as proved in \cite[Proposition 14.33]{leeIntroductionSmoothManifolds2013}, together with the fact that the Lie derivative commutes with the exterior derivative $d$, makes $\mathscr{L}_V$ a derivation of the algebra of differential forms. This algebraic compatibility is essential for deriving the fundamental identity that links Lie derivatives, exterior derivatives, and interior products, commonly known as Cartan's Magic Formula. 
-
-\begin{theorem}[Cartan's Magic Formula]\label{thm:cartan}
-	On a smooth manifold $M$, for any smooth vector field $V$ and any smooth differential form $\omega$,
-	\begin{equation}
-		\mathscr{L}_V\omega = \iota_V(d\omega) + d(\iota_V\omega).
-	\end{equation}
-\end{theorem}
-
-For a complete proof of this formula, see \cite[Theorem 14.35]{leeIntroductionSmoothManifolds2013}. As we will show, it is necessary for characterizing symplectic vector fields, and it will serve as a key tool in the proof of Liouville's Theorem and the construction of the momentum map.
-
-\setcounter{section}{3}
-\section{Hamiltonian Vector Fields and Poisson Brackets}
+\section{Hamiltonian Vector Fields and Poisson Brackets}\label{sec:1-ham}
 
 Having built the geometric picture of phase space, this section focuses on dynamics and symmetries in Hamiltonian mechanics, where the geometric and algebraic structures introduced in the previous chapters come together. We first show how a single observable, the Hamiltonian function, representing the total energy of a physical system, generates a flow on phase space via the symplectic form. This flow governs the time evolution of all observables. The Poisson bracket, which endows the space of observables with a Lie algebra structure, encodes the compatibility between the symplectic geometry and the algebra of functions. In the following sections, this algebraic framework will be essential for the systematic analysis of symmetries and their associated conserved quantities through Noether's theorem.
 
@@ -507,8 +432,3 @@ The proof of the geometric Noether theorem presented above reveals that the enti
 \begin{remark}[Conservation along the Flow]
 	The deeper geometrical meaning of this theorem can be seen from in its proof. The derivation demonstrates that the directional derivative of $H$ along the symmetry generator $\xi_P$ vanishes, $\mathscr{L}_{\xi_P} H = 0$. In turn, it holds that $\mathscr{L}_{X_H} \hat{J}(\xi) = 0$. Thus, the observable $\hat{J}(\xi)$ remains strictly constant when transported along the dynamical orbits generated by $X_H$.
 \end{remark}
-
-
-
-
-\end{document}
