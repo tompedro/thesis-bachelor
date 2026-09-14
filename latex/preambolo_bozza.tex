@@ -30,9 +30,14 @@
 	\fancyfoot[R]{\thepage} 
 }
 
-\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\usepackage[backend=biber, sorting=none, style=alphabetic]{biblatex}
 \addbibresource{bib.bib}
 \usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.5\textwidth}
+\renewcommand{\epigraphflush}{flushright}
+\renewcommand{\textflush}{flushright}
 
 \newtheorem{theorem}{Theorem}[chapter]
 \newtheorem{definition}{Definition}[section]

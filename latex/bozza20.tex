@@ -2,7 +2,7 @@
 	The standard description of a classical system establishes geometry as the primary source of the whole framework. The Gelfand theory of commutative $C^*$-algebras introduces a change of perspective for the foundation of Hamiltonian mechanics. By exploiting the Gelfand-Naimark representation theorem one can reverse this relation and construct the theory starting from an abstract algebra of observables. However, this framework reconstructs only a Hausdorff topological space through the Gelfand spectrum of the algebra. In fact, the full picture will be recovered adding missing structures to enrich the topological space with properties such as differentiability. This approach dictates that the algebra of physical observables can provide a self-contained axiomatic basis for the formulation of classical mechanics.
 	
 	\subsection*{Basic topics in $\mathbf{C^*}$-algebras theory}
-	To reconstruct a classical theory algebraically, we first need to introduce $C^*$-algebras. This abstract mathematical structure recurs in both classical and quantum descriptions of observables. Specifically, we adopt this framework because involution naturally models the complex conjugation or the adjoint of physical quantities, while the underlying metric completeness ensures that the approximation of observables is rigorously well-defined. Here, we will present only the basic definitions to introduce the reader to the theory of commutative $C^*$-algebras following the approach of Brattelli and Robinson \cite[Chapter 2]{bratteliOperatorAlgebrasQuantum}.
+	To reconstruct a classical theory algebraically, we first need to introduce $C^*$-algebras. This abstract mathematical structure recurs in both classical and quantum descriptions of observables. Specifically, we adopt this framework because involution naturally models the complex conjugation or the adjoint of physical quantities, while the underlying metric completeness ensures that the approximation of observables is rigorously well-defined. Here, we will present only the basic definitions to introduce the reader to the theory of commutative $C^*$-algebras following the approach of Bratteli and Robinson \cite[Chapter 2]{bratteliOperatorAlgebrasQuantum}.
 	
 	\noindent We begin by outlining the notion of an algebra, the basic structure on which the involution defining a $^*$-algebra will be built.
 	
@@ -143,7 +143,7 @@
 	\[
 	\omega(f) := \lim_{n \to \infty} \langle f \rangle ^{(\omega)}_n \qquad \forall f \in \A_{sa}.
 	\]
-	In this picture, a state $\omega$, acting on observables, yields the average of the measurements. This definition can however be extended to the whole unital commutative $C^*$-algebra $\A$. The state $\omega$ becomes a linear functional that must preserve positivity $\omega(f^*f) \geq 0$ for all $f \in \A$. In addition, it can be shown that positivity implies the Cauchy-Schwartz inequality, as proved in \cite[Lemma 2.3.10]{bratteliOperatorAlgebrasQuantum}, namely
+	In this picture, a state $\omega$, acting on observables, yields the average of the measurements. This definition can however be extended to the whole unital commutative $C^*$-algebra $\A$. The state $\omega$ becomes a linear functional that must preserve positivity $\omega(f^*f) \geq 0$ for all $f \in \A$. In addition, it can be shown that positivity implies the Cauchy-Schwarz inequality, as proved in \cite[Lemma 2.3.10]{bratteliOperatorAlgebrasQuantum}, namely
 	\begin{equation}
 		|\omega(A^*B)| \leq (\omega(A^*A) \ \omega(B^*B))^{1/2} \quad \forall A,B \in \A.\label{eq:cs-ineq}
 	\end{equation}
@@ -253,7 +253,7 @@
 	\begin{definition}[Dual Operator Norm]\label{def:dual-norm}
 		Let $\A$ be a $C^*$-algebra as in Definition \ref{def:c-star-algebra}. The dual space $\A^*$ is a Banach space as in Definition \ref{def:banach-space} equipped with the dual operator norm:
 		$$
-		\|\alpha\| = \sup_{A \in \A} \{\  |\alpha(A)| \ | \ \|A\| \le 1 \} \quad \alpha \in \A^*.
+		\|\alpha\| = \sup_{A \in \A} \{\  |\alpha(A)| \ | \ \|A\| \le 1 \}, \qquad \alpha \in \A^*.
 		$$
 	\end{definition}
 	

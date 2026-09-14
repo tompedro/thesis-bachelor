@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{petersenPhilosophyNielsBohr1963}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d3a20fe8d09f1020102f9aa7bb5a580c}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={Aage},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \strng{fullhash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \strng{bibnamehash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \strng{authorbibnamehash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \strng{authornamehash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \strng{authorfullhash}{d3a20fe8d09f1020102f9aa7bb5a580c}
+      \field{labelalpha}{Pet63}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the Atomic Scientists}
+      \field{month}{9}
+      \field{number}{7}
+      \field{title}{The {{Philosophy}} of {{Niels Bohr}}}
+      \field{volume}{19}
+      \field{year}{1963}
+      \field{dateera}{ce}
+      \field{pages}{8\bibrangedash 14}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1080/00963402.1963.11454520
+      \endverb
+    \endentry
     \entry{hardyQuantumTheoryFive2001}{online}{}
       \name{author}{1}{}{%
         {{hash=03c4c5f3544b02f003a35effb3edb1ab}{%
@@ -33,8 +65,9 @@
       \strng{authorbibnamehash}{03c4c5f3544b02f003a35effb3edb1ab}
       \strng{authornamehash}{03c4c5f3544b02f003a35effb3edb1ab}
       \strng{authorfullhash}{03c4c5f3544b02f003a35effb3edb1ab}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelalpha}{Har01}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The usual formulation of quantum theory is based on rather obscure axioms (employing complex Hilbert spaces, Hermitean operators, and the trace rule for calculating probabilities). In this paper it is shown that quantum theory can be derived from five very reasonable axioms. The first four of these are obviously consistent with both quantum theory and classical probability theory. Axiom 5 (which requires that there exists continuous reversible transformations between pure states) rules out classical probability theory. If Axiom 5 (or even just the word "continuous" from Axiom 5) is dropped then we obtain classical probability theory instead. This work provides some insight into the reasons quantum theory is the way it is. For example, it explains the need for complex numbers and where the trace formula comes from. We also gain insight into the relationship between quantum theory and classical probability theory.}
@@ -93,8 +126,9 @@
       \strng{editorbibnamehash}{66eb64e2e68c11717a80a6df8df0326e}
       \strng{editornamehash}{66eb64e2e68c11717a80a6df8df0326e}
       \strng{editorfullhash}{66eb64e2e68c11717a80a6df8df0326e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelalpha}{Von18}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{New edition}
@@ -120,8 +154,9 @@
       \strng{authorbibnamehash}{9fc737e2158b7231de1c864a26497567}
       \strng{authornamehash}{9fc737e2158b7231de1c864a26497567}
       \strng{authorfullhash}{9fc737e2158b7231de1c864a26497567}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelalpha}{Per02}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st ed. 2002}
@@ -144,8 +179,9 @@
       \strng{authorbibnamehash}{eb3f0bab24caee532a68b333553a36a0}
       \strng{authornamehash}{eb3f0bab24caee532a68b333553a36a0}
       \strng{authorfullhash}{eb3f0bab24caee532a68b333553a36a0}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelalpha}{Seg47}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Bulletin of the American Mathematical Society}
@@ -195,8 +231,9 @@
       \strng{editorbibnamehash}{026713982df803f6004a8af66791cb7b}
       \strng{editornamehash}{026713982df803f6004a8af66791cb7b}
       \strng{editorfullhash}{026713982df803f6004a8af66791cb7b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelalpha}{GN94}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Contemporary {{Mathematics}}}
@@ -236,8 +273,9 @@
       \strng{authorbibnamehash}{1883efffc08bdae3bc040fa63579aa40}
       \strng{authornamehash}{1883efffc08bdae3bc040fa63579aa40}
       \strng{authorfullhash}{1883efffc08bdae3bc040fa63579aa40}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelalpha}{Kib79}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications in Mathematical Physics}
@@ -272,8 +310,9 @@
       \strng{authorbibnamehash}{4b44097dd3597c8ced88bfbc2e629ce7}
       \strng{authornamehash}{4b44097dd3597c8ced88bfbc2e629ce7}
       \strng{authorfullhash}{4b44097dd3597c8ced88bfbc2e629ce7}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelalpha}{AS97}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{States of a quantum mechanical system are represented by rays in a complex Hilbert space. The space of rays has, naturally, the structure of a Ka¨hler manifold. This leads to a geometrical formulation of the postulates of quantum mechanics which, although equivalent to the standard algebraic formulation, has a very different appearance. In particular, states are now represented by points of a symplectic manifold (which happens to have, in addition, a compatible Riemannian metric), observables are represented by certain realvalued functions on this space and the Schro¨dinger evolution is captured by the symplectic flow generated by a Hamiltonian function. There is thus a remarkable similarity with the standard symplectic formulation of classical mechanics. Features—such as uncertainties and state vector reductions—which are specific to quantum mechanics can also be formulated geometrically but now refer to the Riemannian metric—a structure which is absent in classical mechanics. The geometrical formulation sheds considerable light on a number of issues such as the second quantization procedure, the role of coherent states in semi-classical considerations and the WKB approximation. More importantly, it suggests generalizations of quantum mechanics. The simplest among these are equivalent to the dynamical generalizations that have appeared in the literature. The geometrical reformulation provides a unified framework to discuss these and to correct a misconception. Finally, it also suggests directions in which more radical generalizations may be found.}
@@ -325,8 +364,9 @@
       \strng{authorbibnamehash}{c1b18ce0cf12108bd02cac482ff4da75}
       \strng{authornamehash}{c1b18ce0cf12108bd02cac482ff4da75}
       \strng{authorfullhash}{c1b18ce0cf12108bd02cac482ff4da75}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelalpha}{BH01}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Geometry and Physics}
@@ -363,6 +403,7 @@
       \strng{authornamehash}{fa9d87631d9792e37049c30d224c84eb}
       \strng{authorfullhash}{fa9d87631d9792e37049c30d224c84eb}
       \field{extraname}{1}
+      \field{labelalpha}{Lan98}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -387,6 +428,7 @@
       \strng{authorbibnamehash}{4d5898612741a35d822f301b52a6f32a}
       \strng{authornamehash}{4d5898612741a35d822f301b52a6f32a}
       \strng{authorfullhash}{4d5898612741a35d822f301b52a6f32a}
+      \field{labelalpha}{Gro46}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -426,6 +468,7 @@
       \strng{authorbibnamehash}{ce48986f8114cb8855f91fe64312d83f}
       \strng{authornamehash}{ce48986f8114cb8855f91fe64312d83f}
       \strng{authorfullhash}{ce48986f8114cb8855f91fe64312d83f}
+      \field{labelalpha}{WW09}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -451,6 +494,7 @@
       \strng{authornamehash}{8aab75d0204167b76dbcf81e2fd454c7}
       \strng{authorfullhash}{8aab75d0204167b76dbcf81e2fd454c7}
       \field{extraname}{1}
+      \field{labelalpha}{Str66}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -483,6 +527,7 @@
       \strng{authorbibnamehash}{83220473a64b79deb41c723f048d7326}
       \strng{authornamehash}{83220473a64b79deb41c723f048d7326}
       \strng{authorfullhash}{83220473a64b79deb41c723f048d7326}
+      \field{labelalpha}{Hes85}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -501,6 +546,35 @@
       \verb 10.1103/PhysRevD.31.1341
       \endverb
     \endentry
+    \entry{lagrangeMecaniqueAnalytique2009}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2f1b86dc45b8fc797ca1fcda98fa5403}{%
+           family={Lagrange},
+           familyi={L\bibinitperiod},
+           given={Joseph-Louis},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \strng{fullhash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \strng{bibnamehash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \strng{authorbibnamehash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \strng{authornamehash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \strng{authorfullhash}{2f1b86dc45b8fc797ca1fcda98fa5403}
+      \field{labelalpha}{Lag09}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{20}
+      \field{edition}{1}
+      \field{month}{7}
+      \field{title}{Mécanique {{Analytique}}}
+      \field{year}{2009}
+      \field{dateera}{ce}
+    \endentry
     \entry{humphreysIntroductionLieAlgebras2010}{book}{}
       \name{author}{1}{}{%
         {{hash=fffcf3523abd2080d6ffc75ac22de7f8}{%
@@ -518,6 +592,7 @@
       \strng{authorbibnamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
       \strng{authornamehash}{fffcf3523abd2080d6ffc75ac22de7f8}
       \strng{authorfullhash}{fffcf3523abd2080d6ffc75ac22de7f8}
+      \field{labelalpha}{Hum10}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -545,6 +620,7 @@
       \strng{authorbibnamehash}{36896354ee3aedc1a13d683ea773634e}
       \strng{authornamehash}{36896354ee3aedc1a13d683ea773634e}
       \strng{authorfullhash}{36896354ee3aedc1a13d683ea773634e}
+      \field{labelalpha}{Lee13}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -577,6 +653,7 @@
       \strng{authorbibnamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
       \strng{authornamehash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
       \strng{authorfullhash}{e61c0cc8fb22b5ea1d61fb2ba20c653e}
+      \field{labelalpha}{AM08}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -604,6 +681,7 @@
       \strng{authorbibnamehash}{b805c00e09278506b061111d904aa5c8}
       \strng{authornamehash}{b805c00e09278506b061111d904aa5c8}
       \strng{authorfullhash}{b805c00e09278506b061111d904aa5c8}
+      \field{labelalpha}{Hal03}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -622,8 +700,11 @@
         {{hash=0e65107932ea41e3207ae249522b1100}{%
            family={Robinson},
            familyi={R\bibinitperiod},
-           given={Derek\bibnamedelima W},
+           given={Derek\bibnamedelima W.},
            giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
       }
       \strng{namehash}{cfea015e113bc2bfaeae4513edf3129c}
       \strng{fullhash}{cfea015e113bc2bfaeae4513edf3129c}
@@ -632,11 +713,16 @@
       \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
       \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelalpha}{BR02}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Operator Algebras and Quantum Statistical Mechanics}
+      \field{edition}{2. ed., 2. [corr.] print}
+      \field{pagetotal}{505}
+      \field{title}{Operator Algebras and Quantum Statistical Mechanics. 1: {{C}}*- and {{W}}*-Algebras, Symmetry Groups, Decomposition of States}
+      \field{year}{2002}
+      \field{dateera}{ce}
     \endentry
     \entry{reedMethodsModernMathematical2003}{book}{}
       \name{author}{2}{}{%
@@ -660,6 +746,7 @@
       \strng{authorbibnamehash}{957d82a72e39507187acf84770b1bfa7}
       \strng{authornamehash}{957d82a72e39507187acf84770b1bfa7}
       \strng{authorfullhash}{957d82a72e39507187acf84770b1bfa7}
+      \field{labelalpha}{RS03}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -688,6 +775,7 @@
       \strng{authornamehash}{40eaa6550a3592f997eae49069662fbb}
       \strng{authorfullhash}{40eaa6550a3592f997eae49069662fbb}
       \field{extraname}{2}
+      \field{labelalpha}{Lan17}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -714,6 +802,7 @@
       \strng{authorbibnamehash}{429635b6b1c6fa6f9b3253b90f49143b}
       \strng{authornamehash}{429635b6b1c6fa6f9b3253b90f49143b}
       \strng{authorfullhash}{429635b6b1c6fa6f9b3253b90f49143b}
+      \field{labelalpha}{Mun00}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -741,6 +830,7 @@
       \strng{authorbibnamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
       \strng{authornamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
       \strng{authorfullhash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \field{labelalpha}{Sch91}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -768,6 +858,7 @@
       \strng{authorbibnamehash}{3457fde46d50f50946628b51edbde55c}
       \strng{authornamehash}{3457fde46d50f50946628b51edbde55c}
       \strng{authorfullhash}{3457fde46d50f50946628b51edbde55c}
+      \field{labelalpha}{Jam74}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -791,6 +882,7 @@
       \strng{authorbibnamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
       \strng{authornamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
       \strng{authorfullhash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \field{labelalpha}{Boh35}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -827,6 +919,7 @@
       \strng{authornamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
       \strng{authorfullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
       \field{extraname}{2}
+      \field{labelalpha}{Str05}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -853,6 +946,7 @@
       \strng{authorbibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
       \strng{authornamehash}{c0752a0dca220b387d6c6d4be1aad288}
       \strng{authorfullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \field{labelalpha}{Mor18}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -886,8 +980,9 @@
       \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
       \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelalpha}{BR81}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{pagetotal}{517}
@@ -912,6 +1007,7 @@
       \strng{authorbibnamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
       \strng{authornamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
       \strng{authorfullhash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \field{labelalpha}{Mur90}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -920,6 +1016,39 @@
       \field{title}{C*-Algebras and Operator Theory}
       \field{year}{1990}
       \field{dateera}{ce}
+    \endentry
+    \entry{diracFundamentalEquationsQuantum1925}{article}{}
+      \name{author}{1}{}{%
+        {{hash=59342ede3a101402b34939644b51ad06}{%
+           family={Dirac},
+           familyi={D\bibinitperiod},
+           given={Paul\bibnamedelimb Adrien\bibnamedelima Maurice},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{59342ede3a101402b34939644b51ad06}
+      \strng{fullhash}{59342ede3a101402b34939644b51ad06}
+      \strng{bibnamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authorbibnamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authornamehash}{59342ede3a101402b34939644b51ad06}
+      \strng{authorfullhash}{59342ede3a101402b34939644b51ad06}
+      \field{labelalpha}{Dir25}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{1}
+      \field{journaltitle}{Proceedings of the Royal Society of London. Series A, Containing Papers of a Mathematical and Physical Character}
+      \field{month}{12}
+      \field{number}{752}
+      \field{title}{The Fundamental Equations of Quantum Mechanics}
+      \field{volume}{109}
+      \field{year}{1925}
+      \field{dateera}{ce}
+      \field{pages}{642\bibrangedash 653}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1098/rspa.1925.0150
+      \endverb
     \endentry
     \entry{cirelliQuantumMechanicsInfinitedimensional1990}{article}{}
       \name{author}{3}{}{%
@@ -945,8 +1074,9 @@
       \strng{authorbibnamehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
       \strng{authornamehash}{f3c15be293deaeff6f4b7454c3a0d5f1}
       \strng{authorfullhash}{f3c15be293deaeff6f4b7454c3a0d5f1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelalpha}{CMP90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{1}
@@ -980,6 +1110,7 @@
       \strng{authorbibnamehash}{5f1ecd998d58900170bccfcb5600fa46}
       \strng{authornamehash}{5f1ecd998d58900170bccfcb5600fa46}
       \strng{authorfullhash}{5f1ecd998d58900170bccfcb5600fa46}
+      \field{labelalpha}{Mor12}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1007,6 +1138,7 @@
       \strng{authorbibnamehash}{d8ed5f7c8e26053b90363e21848bcc5c}
       \strng{authornamehash}{d8ed5f7c8e26053b90363e21848bcc5c}
       \strng{authorfullhash}{d8ed5f7c8e26053b90363e21848bcc5c}
+      \field{labelalpha}{Bal06}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1038,6 +1170,7 @@
       \strng{authorbibnamehash}{bc8850085adc2e9cee9bd501899e080c}
       \strng{authornamehash}{bc8850085adc2e9cee9bd501899e080c}
       \strng{authorfullhash}{bc8850085adc2e9cee9bd501899e080c}
+      \field{labelalpha}{BŻ17}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1073,6 +1206,7 @@
       \strng{authorbibnamehash}{97363635be4cb7d74fa61f56ee062738}
       \strng{authornamehash}{97363635be4cb7d74fa61f56ee062738}
       \strng{authorfullhash}{97363635be4cb7d74fa61f56ee062738}
+      \field{labelalpha}{KN96}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1104,6 +1238,7 @@
       \strng{authorbibnamehash}{3442408cbf3eff933edec626e0109f1f}
       \strng{authornamehash}{3442408cbf3eff933edec626e0109f1f}
       \strng{authorfullhash}{3442408cbf3eff933edec626e0109f1f}
+      \field{labelalpha}{PV80}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1120,50 +1255,6 @@
       \verb{doi}
       \verb 10.1007/BF02193559
       \endverb
-    \endentry
-    \entry{bloreOntologicalCompletionGeometric2026}{online}{}
-      \name{author}{1}{}{%
-        {{hash=2ac406064edda9e4d949ee1540171d83}{%
-           family={Blore},
-           familyi={B\bibinitperiod},
-           given={Zayn},
-           giveni={Z\bibinitperiod}}}%
-      }
-      \strng{namehash}{2ac406064edda9e4d949ee1540171d83}
-      \strng{fullhash}{2ac406064edda9e4d949ee1540171d83}
-      \strng{bibnamehash}{2ac406064edda9e4d949ee1540171d83}
-      \strng{authorbibnamehash}{2ac406064edda9e4d949ee1540171d83}
-      \strng{authornamehash}{2ac406064edda9e4d949ee1540171d83}
-      \strng{authorfullhash}{2ac406064edda9e4d949ee1540171d83}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{Decades of work in geometric quantum mechanics and decoherence theory have clarified how quantum behaviour arises from underlying symplectic and dynamical structures, yet both leave unresolved why measurements yield definite outcomes with |ψ|² frequencies. This paper proposes a deterministic geometric account that retains the strengths of those approaches while eliminating the need for stochastic collapse or multiple-world postulates. The result is a unified description in which observed statistics follow from conserved geometry rather than from probabilistic axioms. Physical reality is represented by a single trajectory ω(t) evolving under Hamiltonian flow on a compact symplectic manifold Σ. A measurement context supplies a physical interaction and readout whose deterministic dynamics carry the microstate into one context-indexed outcome sector, and outcome definiteness arises when that readout is fixed in a stable physical record. The Born weights are not posited as an axiom: unitary symmetry fixes the Fubini–Study reference measure on complex projective state space, and the toric moment map pushes it forward to the uniform measure on the probability simplex, so that the state-dependent barycentric regions have volumes exactly equal to the squared amplitudes of the state in the measurement basis. The framework further predicts a quantitative correspondence between interference visibility V and the dynamical separation I of outcome regions. In the macroscopic limit, V ≈ 1 − I, so high separation (I → 1) corresponds to classical definiteness and negligible remaining visibility. The exact functional form, together with parameter-free calculations and proposed experimental tests, is developed in Paper C and a companion note (2025–2026). The paper establishes a complete ontological basis for deterministic quantum measurement, defines how isolation and re-isolation govern the appearance of classicality, and clarifies compliance with Bell, Kochen–Specker, Fine, and PBR constraints. It shows that a finite, measure-preserving geometry can reproduce the statistical structure of quantum theory while remaining open to empirical refutation. This framework, termed Constraint-Surface Dynamics, thus offers a deterministic and falsifiable alternative foundation for quantum mechanics.}
-      \field{day}{31}
-      \field{eprinttype}{Zenodo}
-      \field{langid}{english}
-      \field{month}{8}
-      \field{pubstate}{prepublished}
-      \field{shorttitle}{An {{Ontological Completion}} of {{Geometric Quantum Mechanics}}}
-      \field{title}{An {{Ontological Completion}} of {{Geometric Quantum Mechanics}}: {{How Geometry Makes}} the {{Wavefunction Epistemic}}.}
-      \field{urlday}{1}
-      \field{urlmonth}{9}
-      \field{urlyear}{2026}
-      \field{version}{1.12}
-      \field{year}{2026}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.5281/ZENODO.17515369
-      \endverb
-      \verb{urlraw}
-      \verb https://zenodo.org/doi/10.5281/zenodo.17515369
-      \endverb
-      \verb{url}
-      \verb https://zenodo.org/doi/10.5281/zenodo.17515369
-      \endverb
-      \keyw{born rule,Constraint-Surface Dynamics,decoherence,determinism,geometric quantum mechanics,quantum foundations}
     \endentry
   \enddatalist
 \endrefsection

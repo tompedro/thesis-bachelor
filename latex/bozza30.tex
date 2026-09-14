@@ -1,3 +1,5 @@
+\epigraph{Nobody takes seriously quantum mechanics.}{Adán Cabello Quintero}
+
 Quantum phenomena force a redefinition of physical reality and thus require a new descriptive language. In fact, words like 'to measure' are used but their operational semantics shifts. This mirrors the adaptation of Newtonian terms like time, mass, and energy in special relativity. At the same time, some syntactically correct propositions lose physical meaning. An example in special relativity is the assertion that two events occurred simultaneously at different places.
 
 In order to find this new framework, we start by recalling that a physical theory partitions the world into the system and its environment. The framework described here treats only the system while the environment remains classical. This duality is underlined by Niels Bohr \cite{schilppAlbertEinsteinPhilosopherscientist1991}.
@@ -187,7 +189,7 @@ $\circ$ becomes the symmetrization of the usual product.
 
 \begin{definition}[Embedding of a JB algebra in a $C^*$-algebra]\label{def:jb-embedding}
 	A Jordan--Banach algebra $\mathcal{O}$, as in Definition~\ref{def:jb-algebra},
-	is \emph{embedded} in a $C^*$-algebra $\A$ if there exists an isometric linear map from $\mathcal{O}$ into $\A$ such that the image of $\mathcal{O}$ generates $\A$ as a $C^*$-algebra, and for all $A,B\in\mathcal{O}$
+	is \emph{embedded} in a $C^*$-algebra $\A$ if there exists an isometric linear map from $\mathcal{O}$ into $\A$ such that the image of $\mathcal{O}$ generates $\A$ as a $C^*$-algebra. In addition, for all $A,B\in\mathcal{O}$
 	\begin{enumerate}
 		\item $A^* = A$ in $\A$, so that $\mathcal{O}$ is identified with a closed real subspace of the selfadjoint elements $\A_{sa}$ as per Definition \ref{def:selfadj-element},
 		\item the Jordan product corresponds to the symmetrized associative product, $A\circ B=\tfrac12(AB+BA)$.
@@ -223,7 +225,7 @@ the real dimension while keeping every operation already defined.
 
 \begin{definition}[Complexification]
 	The complexification of a JC algebra $\mathcal{O}$ as in Definition \ref{def:jc-algebra} is
-	$\mathcal{O}^{\C}=\{A+iB : A,B\in\mathcal{O}\}$, with product
+	$\mathcal{O}^{\C}=\{A+iB \ | \ A,B\in\mathcal{O}\}$, with product
 	extended by distributivity,
 	\[
 	(A+iB)\circ(C+iD)=(A\circ C-B\circ D)+i(A\circ D+B\circ C),
@@ -641,8 +643,8 @@ This statement is proved in \cite[Proposition 3.38]{morettiSpectralTheoryQuantum
 \begin{remark}
 	Having set Definition \ref{def:special-classes}, observe the following.
 	\begin{itemize}
-		\item $T$ is isometric exactly when $T^{*}T=I$, with $I$ the identity on $\H$.
-		\item $T$ is unitary exactly when $T^{*}T=TT^{*}=I$.
+		\item $T$ is isometric when $T^{*}T=I$, with $I$ the identity on $\H$.
+		\item $T$ is unitary when $T^{*}T=TT^{*}=I$.
 		\item Every positive operator is selfadjoint, and admits a unique positive square root.
 	\end{itemize}
 	

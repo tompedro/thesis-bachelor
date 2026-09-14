@@ -1,3 +1,4 @@
+\epigraph{The reader will find no figures in this work. The methods which I set forth do not require either constructions or geometrical or mechanical reasonings: but only algebraic operations, subject to a regular and uniform rule of procedure.}{Giuseppe Luigi Lagrangia, Preface to Mécanique Analytique \cite{lagrangeMecaniqueAnalytique2009}}
 
 \noindent This chapter establishes the geometric and algebraic language of classical mechanics in an invariant form. Moving beyond the traditional Newtonian approach, we adopt a coordinate-free framework on smooth manifolds. The logical sequence of the chapter is as follows: First, we introduce Lie algebras, relying on Humphreys \cite{humphreysIntroductionLieAlgebras2010} and Lee \cite{leeIntroductionSmoothManifolds2013}, to provide the formal infrastructure for the algebraic brackets. Second, using the foundations of symplectic geometry, following Abraham and Marsden \cite{abrahamFoundationsMechanics2008}, we identify $C^\infty(M)$ as the natural space for observables. In this context, Poisson brackets endow the space with a Lie algebra structure. Finally, by applying the Gelfand theorem, we recognize $C_0(M)$ as a commutative $C^*$-algebra. This leads to our primary structural result, namely classical mechanics formally coincides with the theory of commutative $C^*$-algebras.
 
@@ -72,7 +73,7 @@ Most of the times it is convenient to write statements locally on a specific cha
 	A coordinate basis as in Definition \ref{def:coord}, forms a basis of $T_pM$. Hence $\dim T_pM = n$, and $v = v^i\, \partial_i |_p$ using the Einstein summation convention.
 \end{proposition}
 
-We can now assemble the tangent spaces at every point of $M$ into a single geometric object, endowed with its own smooth structure. In literature, it is used as the natural stage for the Lagrangian description of a mechanical system.
+A proof of this proposition can be found in \cite[Proposition 3.15]{leeIntroductionSmoothManifolds2013}. We can now assemble the tangent spaces at every point of $M$ into a single geometric object, endowed with its own smooth structure. In literature, it is used as the natural stage for the Lagrangian description of a mechanical system.
 
 \begin{definition}[Tangent space]\label{def:tan-space}
 	Let $M$ be a smooth manifold as in Definition \ref{def:smooth-man}. The tangent space of $M$ is
@@ -122,7 +123,7 @@ The next proposition follows from the Vector Bundle Construction Lemma \cite[Lem
 	are smooth manifolds of dimension $2n$.
 \end{proposition}
 
-It descends from Proposition \ref{prop:smooth-tm} that for $TM$ a coordinate basis $(U,\varphi=(x^1,\dots,x^n))$ on $M$ induces a counterpart on $\pi^{-1}(U)$ via $v = v^i \partial_i|_p \mapsto (x^1(p),\dots,x^n(p),v^1,\dots,v^n)$. The same construction can be extended to $T^*M$.
+It descends from Proposition \ref{prop:smooth-tm} that for $TM$ a coordinate basis $(U,\varphi=(x^1,\dots,x^n))$ on $M$ induces a counterpart on $\pi^{-1}(U)$ via $v = v^i \partial_i|_p \mapsto (x^1(p),\dots,x^n(p),v^1,\dots,v^n)$. A complete proof of this statement is shown in \cite[Proposition 3.18]{leeIntroductionSmoothManifolds2013}. The same construction can be extended to $T^*M$ and it can be found in \cite[Proposition 11.9]{leeIntroductionSmoothManifolds2013}.
 
 \noindent Now, we generalize the pointwise notion of covector to multilinear objects of arbitrary order, the building blocks from which differential forms are constructed.
 
@@ -254,7 +255,7 @@ Having described how differential forms and covectors transform under smooth map
 \begin{definition}[Flow of a Vector Field]\label{def:flow}
 	Let $X$ be a smooth vector field on a smooth manifold $M$. An \textit{integral curve} of $X$ is a smooth curve $\gamma: I \to M$, where $I \subseteq \R$ is an open interval, such that $\gamma'(t) = X(\gamma(t))$ for all $t \in I$.
 	
-	\noindent The \textit{(local) flow} of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \R \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties:
+	\noindent The \textit{(local) flow} of $X$ is a smooth map $\theta: \mathcal{D} \to M$, where $\mathcal{D} \subset \R \times M$ is an open neighborhood of $\{0\} \times M$ known as the \textit{flow domain}, satisfying the following properties
 	\begin{enumerate}
 		\item For each $p \in M$, the slice $\mathcal{D}^{(p)} = \{t \in \R : (t, p) \in \mathcal{D}\}$ is an open interval containing $0$, and the curve $\theta^{(p)}: \mathcal{D}^{(p)} \to M$ defined by $\theta^{(p)}(t) = \theta(t, p)$ is the unique maximal integral curve of $X$ satisfying the initial condition $\theta(0, p) = p$, namely
 		\[
@@ -271,7 +272,7 @@ Having described how differential forms and covectors transform under smooth map
 	Let $M$ be a smooth manifold and let $X$ be a vector flow with $\theta: \mathcal{D} \to M$ its flow as in Definition \ref{def:flow}. If $\mathcal{D} = \R \times M$, the vector field $X$ is called \textit{complete} and the maps $\theta_t: M \to M$ constitute a global one-parameter group of diffeomorphisms.
 \end{proposition}
 
-The concept of flow translates the analytical problem of solving systems of differential equations into the geometric action of a one-parameter group of diffeomorphisms. In the context of dynamics, if $X$ is the Hamiltonian vector field governing a mechanical system, its integral curves represent the physical trajectories in phase space, and the associated flow $\theta_t$ corresponds to the time evolution operator, which inherently preserves the symplectic structure. This will be analysed later in \ref{sec:1-ham}
+A proof of this statement can be constructed merging \cite[Proposition 9.7]{leeIntroductionSmoothManifolds2013} and \cite[Theorem 9.12]{leeIntroductionSmoothManifolds2013}. The concept of flow translates the analytical problem of solving systems of differential equations into the geometric action of a one-parameter group of diffeomorphisms. In the context of dynamics, if $X$ is the Hamiltonian vector field governing a mechanical system, its integral curves represent the physical trajectories in phase space, and the associated flow $\theta_t$ corresponds to the time evolution operator, which inherently preserves the symplectic structure. This will be analysed later in \ref{sec:1-ham}
 
 \subsection*{Lie derivative} 
 Directional derivatives of smooth functions on a manifold are defined via tangent vector acting as a derivation when applied to a real-valued function as shown in \ref{remark:vec-der}. In Euclidean spaces, the directional derivative of a vector field relies on the vector space structure of $\R^n$ and the identification of tangent vectors with elements of $\R^n$. On a general manifold, this identification fails. Replacing $v \in T_pM$ with $V \in \mathfrak{X}(M)$ overcomes this, as the flow of $V$ enables the pullback of $W$ to $p$ for differentiation. 
@@ -344,7 +345,7 @@ For a complete proof of this formula, see \cite[Theorem 14.35]{leeIntroductionSm
 \section{Lie Algebras and Representations}
 In this section we develop the algebraic component of classical mechanics. We first introduce Lie algebras abstractly. We then specialize to Lie groups, smooth manifolds carrying a compatible group structure, and show how every Lie group determines a Lie algebra through its left-invariant vector fields, with the exponential map provides the bridge back from the algebra to the group. Finally, we introduce the notion of a representation, which realizes the abstract elements of a Lie algebra or Lie group as concrete linear operators on a vector space. This last step is what will allow us, in later chapters, to identify the continuous symmetries of a quantum system with observables that can actually be measured.
 
-\textit{Note: In this chapter, $\K$ denotes an arbitrary commutative field with characteristic zero, following \cite{humphreysIntroductionLieAlgebras2010}.}
+\noindent \textit{Note that in this chapter, $\K$ denotes an arbitrary commutative field with characteristic zero, following \cite{humphreysIntroductionLieAlgebras2010}.}
 
 \begin{definition}[Lie algebra]\label{def:lie-algebra}
 	A \emph{Lie algebra} over $\mathbb{K}$ is a $\mathbb{K}$-vector space $\mathfrak{g}$ equipped with a bilinear map $[\cdot,\cdot]:\mathfrak{g}\times\mathfrak{g}\to\mathfrak{g}$ satisfying
@@ -415,7 +416,7 @@ Consider the tangent space of a Lie group. For every $g \in G$, we can define a 
 \[
 	dL_g (X_h) = X_{gh} \qquad \forall g,h \in G.
 \]
-It is also true that, for any given vector $v \in T_eG$, there exists a unique smooth left-invariant vector field $X^v$. It can be constructed starting from the vector tangent to the identity by setting $X^v_e = v$. We can then use $L_g$ to define:
+It is also true that, for any given vector $v \in T_eG$, there exists a unique smooth left-invariant vector field $X^v$. It can be constructed starting from the vector tangent to the identity by setting $X^v_e = v$. We can then use $L_g$ to define
 \[
 	X^v_g = dL_g (X^v_e) = dL_g(v).
 \]
@@ -445,7 +446,7 @@ The complete proof can be found in [\cite{leeIntroductionSmoothManifolds2013}, T
 	$\gamma_v :\R \to G$ is a Lie group homomorphism called a \emph{one-parameter subgroup}.
 \end{proposition}
 
-These concepts naturally converge to establish a canonical correspondence between a Lie algebra and its associated Lie group. The mathematical tool enacting this exact correspondence is the exponential map.
+This is proved in \cite[Theorem 20.1]{leeIntroductionSmoothManifolds2013}. These concepts naturally converge to establish a canonical correspondence between a Lie algebra and its associated Lie group. The mathematical tool enacting this exact correspondence is the exponential map.
 
 \begin{definition}[Exponential map]\label{def:exp}
 	Let $G$ be a Lie group and let $\gamma_v:\R \to G$ be the integral curve of $X^v$ through $e$. The exponential map of $G$ is
@@ -468,10 +469,10 @@ Thanks to the completeness granted by Proposition \ref{prop:complete}, the integ
 	\end{enumerate}
 \end{proposition}
 
-The naturality property is particularly restrictive. It forces the exponential map to commute with any homomorphism of Lie groups. Before exploiting this, it is worth noting a subtlety in the global behaviour of $\exp$.
+This statement is proved in \cite[Proposition 20.8]{leeIntroductionSmoothManifolds2013}. The naturality property is particularly restrictive. It forces the exponential map to commute with any homomorphism of Lie groups. Before exploiting this, it is worth noting a subtlety in the global behaviour of $\exp$.
 
 \begin{remark}
-	Global surjectivity of $\exp$ is not automatic in general, it fails ,\textit{e.g.}\, for $SL(2,\R)$. Yet it is verified for $G$ compact and connected. This covers the classical groups used in this thesis ($SU(2)$, $U(n)$).
+	Global surjectivity of $\exp$ is not automatic in general, it fails ,\textit{e.g.}, for $SL(2,\R)$. Yet it is verified for $G$ compact and connected. This covers the classical groups used in this thesis ($SU(2)$, $U(n)$).
 \end{remark}
 
 \begin{remark}[Matrix Lie groups]
@@ -483,9 +484,9 @@ The naturality property is particularly restrictive. It forces the exponential m
 	\[
 	\gamma(t) = e^{tv} := \sum_{k=0}^\infty \frac{(tv)^k}{k!}.
 	\]
-	Hence $\exp(v) = e^{v}$: the abstract exponential map of Definition \ref{def:exp} coincides with the ordinary matrix exponential whenever $G$ is realized as a matrix group. In particular
+	Hence $\exp(v) = e^{v}$. The abstract exponential map of Definition \ref{def:exp} coincides with the ordinary matrix exponential whenever $G$ is realized as a matrix group. In particular
 	\[
-	\mathfrak g = \{v \in M_n(\C) : e^{tv} \in G \ \forall t \in \R\}.
+	\mathfrak g = \{v \in M_n(\C) \ | \ e^{tv} \in G \ \forall t \in \R\}.
 	\]
 \end{remark}
 
@@ -497,7 +498,7 @@ The naturality property is particularly restrictive. It forces the exponential m
 	\]
 	using $\det e^{tv} = e^{t\,\operatorname{tr} v}$. It follows that
 	\[
-	\mathfrak{su}(2) = \{v \in M_2(\C) : v^\dagger = -v,\ \operatorname{tr}(v) = 0\},
+	\mathfrak{su}(2) = \{v \in M_2(\C) \ | \ v^\dagger = -v,\ \operatorname{tr}(v) = 0\},
 	\]
 	a $3$-dimensional real vector space. Take $v = -\tfrac{i\theta}{2}\sigma_3$, $\theta \in \R$, $\sigma_3 = \mathrm{diag}(1,-1)$. Since $\sigma_3^2 = \Id$, the series splits into even and odd powers:
 	\[
@@ -588,7 +589,7 @@ Establishing whether a representation is faithful determines if it captures the 
 	\end{enumerate}
 \end{lemma}
 
-The profound physical implication of Schur's Lemma manifests prominently in the study of Casimir operators. Those are possibly non-linear algebraic invariants constructed from the generators of the Lie algebra that, by definition, commute with all elements of the algebra itself. Since a Casimir operator commutes with the entire representation, Schur's Lemma dictates that it must act as a scalar multiple of the identity on any irreducible representation space. This scalar value yields the exact quantum numbers necessary to classify the fundamental multiplets of a quantum system. This lemma can be extended to Lie algebras as well. We can show an example of its application on $\mathfrak{su}(2)$.
+We will not show the proof of this lemma. The reader is referred to \cite[Theorem 4.26]{hallLieGroupsLie2003}. The physical implication of Schur's Lemma manifests prominently in the study of Casimir operators. Those are possibly non-linear algebraic invariants constructed from the generators of the Lie algebra that, by definition, commute with all elements of the algebra itself. Since a Casimir operator commutes with the entire representation, Schur's Lemma dictates that it must act as a scalar multiple of the identity on any irreducible representation space. This scalar value yields the exact quantum numbers necessary to classify the fundamental multiplets of a quantum system. This lemma can be extended to Lie algebras as well. We can show an example of its application on $\mathfrak{su}(2)$.
 
 \begin{example}[Schur's Lemma on $\mathfrak{su}(2)$]
 	Let $\pi: \mathfrak{su}(2) \to \mathrm{End}(V)$ be a finite-dimensional irreducible representation, let $J_i := i T_i$ for $i = x,y,z$ as shown in Example \ref{ex:su-n} and define:
@@ -645,6 +646,8 @@ The next proposition shows that any skew-symmetric two-form, degenerate or not, 
 	where $\Id$ is the $n_p \times n_p$ identity matrix and the bottom-right block has size $(d-2n_p)\times(d-2n_p)$, $d := \dim T_pM$.
 \end{proposition}
 
+\noindent A proof of this statement can be found in \cite[Proposition 3.1.2]{abrahamFoundationsMechanics2008}.
+
 \begin{remark}
 	Observe that $(e_i)_{i=1,...,2n}$ is a basis of $T_pM$ alone, chosen independently at each $p$, with no claim that $p \mapsto e_i(p)$ varies smoothly, or even continuously.
 \end{remark}
@@ -654,7 +657,7 @@ The next proposition shows that any skew-symmetric two-form, degenerate or not, 
 \begin{corollary}\label{cor:omega-prop}
 	Suppose $\omega$ is non-degenerate by Definition \ref{def:non-deg}. Then $r_p = \dim T_pM =: d$ for every $p \in M$, and $n_p \equiv n$ is the \emph{same} integer at every point. In particular:
 	\begin{itemize}
-		\item $d$ must be even: a skew-symmetric non-degenerate $2$-form can exist only on an even-dimensional manifold.
+		\item $d$ must be even, so a skew-symmetric non-degenerate $2$-form can exist only on an even-dimensional manifold.
 		\item we can define $\omega^n := \omega \wedge \cdots \wedge \omega$ with $n=d/2$ factors, which is nowhere-vanishing and, in the basis used above, it can be written as $\omega_p^{\,n} = n!\,\alpha^1\wedge\alpha^{n+1}\wedge\cdots\wedge\alpha^n\wedge\alpha^{2n} \neq 0$. So, $\omega^n$ is a volume form on $M$, that can be normalized as
 		\[
 		\Omega_\omega := \frac{(-1)^{n(n-1)/2}}{n!} \omega^n.
@@ -662,7 +665,7 @@ The next proposition shows that any skew-symmetric two-form, degenerate or not, 
 	\end{itemize}
 \end{corollary}
 
-Beyond restricting the dimension and providing a canonical volume measure, the non-degeneracy of $\omega$ plays a far more active role in the formulation of mechanics. Specifically, a non-degenerate bilinear form naturally induces a point-wise vector space isomorphism between the tangent and cotangent spaces. This duality is the fundamental mathematical machinery required to translate the differential of an observable into a unique vector field that generates the dynamics.
+This is proved in \cite[Proposition 3.1.5]{abrahamFoundationsMechanics2008}. Beyond restricting the dimension and providing a canonical volume measure, the non-degeneracy of $\omega$ plays a far more active role in the formulation of mechanics. Specifically, a non-degenerate bilinear form naturally induces a point-wise vector space isomorphism between the tangent and cotangent spaces. This duality is the fundamental mathematical machinery required to translate the differential of an observable into a unique vector field that generates the dynamics.
 
 \begin{definition}[Musical isomorphisms]\label{def:musical}
 	Let M be a smooth manifold and $\omega \in \Omega^2(M)$ be non-degenerate by Definition \ref{def:non-deg}. We define $\flat :\mathfrak{X}(M) \to \Omega^1(M)$ so that a vector field $$X \mapsto X^\flat = \iota_X\omega = \omega(X, \cdot).$$ 
@@ -676,12 +679,14 @@ Beyond restricting the dimension and providing a canonical volume measure, the n
 
 \noindent With the musical isomorphisms in hand, we are ready to state a central theorem that underlines the importance of the closure of the symplectic form.
 
-\begin{theorem}[Darboux Theorem]\label{thm:darboux}
+\begin{theorem}[Darboux]\label{thm:darboux}
 	Suppose $\omega$ is a non-degenerate two-form on a 2n-manifold M by Definition \ref{def:non-deg}. Then $\omega$ is closed, meaning $d \omega = 0$, where $d$ denotes the exterior derivative, if and only if there exists a chart $(U, \phi)$ at each $m \in M$ such that $\phi(m) = \boldsymbol{0}$ and $\phi(u) = (x^1(u),..,x^n(u), y^1(u),...,y^n(u))$ with
 	\[
 		\omega|_U = \sum_{i=1}^n dx^i \wedge dy^i.
 	\]
 \end{theorem}
+
+\noindent We will not show the proof of this theorem. We refer the reader to \cite[Theorem 3.2.2]{abrahamFoundationsMechanics2008}.
 
 \begin{remark}\label{rem:darboux-consequences}
 	One direction of the equivalence descend by direct inspection. If we start from the fact that the canonical local expression of the form is exact, then it is automatically closed. The true analytical depth of Darboux's Theorem, however, lies in its sufficiency. It proves that the closure of $\omega$ is the only requirement needed to guarantee the existence of a local canonical frame. Consequently, any two symplectic manifolds of the same dimension are locally diffeomorphic.
@@ -701,12 +706,11 @@ Having in hand the geometric framework of the phase space, it is natural to inve
 
 \noindent Since canonical transformations carry $\rho$ exactly onto $\omega$, they must preserve the associated volume form, which forces them to be local diffeomorphisms.
 
-
 \begin{proposition}
 	If $(M,\omega)$ and $(N,\rho)$ be symplectic manifolds with $\dim M = \dim N$ and $F:M \to N$ symplectic, then F is volume preserving, $$F^*\Omega_\rho=\Omega_\omega,$$ with $\Omega_\omega$ defined as in \ref{cor:omega-prop}, and F is a local diffeomorphism.
 \end{proposition}
 
-The next theorem is notationally dense, but it is central to this introduction to symplectic geometry. The problem we are facing is the following. Constructing a 1-form on a manifold M, requires a rule that assigns a real number to any tangent vector. When M is already a cotangent space of another manifold Q $M = T^*Q$, as in the case of the phase space in Hamiltonian mechanics, there is a natural way to accomplish this.
+This statement is proved in \cite[Proposition 3.2.6]{abrahamFoundationsMechanics2008}. The next theorem is notationally dense, but it is central to this introduction to symplectic geometry. The problem we are facing is the following. Constructing a 1-form on a manifold M, requires a rule that assigns a real number to any tangent vector. When M is already a cotangent space of another manifold Q, $M = T^*Q$, as in the case of the phase space in Hamiltonian mechanics, there is a natural way to accomplish this.
 
 \medskip 
 Fixing a $q \in Q$, from the perspective of Q, every point in M is a 1-form, which we denote as $\alpha_q$. From the perspective of M, we can instead consider the tangent vector at the point $\alpha_q$, calling it $w_{\alpha_q}$. 
@@ -720,6 +724,8 @@ At this point, the natural way to create a 1-form is to use $\alpha_q$ viewed as
 	and the map $\theta_0: \alpha_q \to \theta_{\alpha_q}$. In this case $\theta_0 \in \Omega^1(M)$ and $\omega_0=-d\theta_0$ is a symplectic form on M. The forms $\theta_0$ and $\omega_0$ are called the canonical forms on M.
 \end{theorem}
 
+\noindent This theorem is proved in \cite[Theorem 3.2.10]{abrahamFoundationsMechanics2008}.
+
 \begin{remark}
 	The superscript $*$ in $\tau^*_Q$ labels it as the \emph{cotangent}-space projection, as opposed to $\tau_Q: TQ \to Q$. It should not be confused with the pullback operator. 
 \end{remark}
@@ -731,7 +737,8 @@ At this point, the natural way to create a 1-form is to use $\alpha_q$ viewed as
 	\]
 \end{corollary}
 
-\noindent We can also prove that these canonical forms are not changed by any diffeomorphism on the manifold.
+\noindent The full construction of the canonical forms in local coordinates can be found in \cite[p.179]{abrahamFoundationsMechanics2008}. We can also prove that these canonical forms are not changed by any diffeomorphism on the manifold.
+
 \begin{theorem}[Invariance of the canonical forms]\label{thm:inv-canon}
 	Let Q be a smooth manifold and $f: Q \to Q$ a diffeomorphism. Define the lift of f as
 	\[
@@ -739,6 +746,8 @@ At this point, the natural way to create a 1-form is to use $\alpha_q$ viewed as
 	\]
 	Then $T^*f$ is symplectic and the canonical form $\theta_0$, defined in Theorem \ref{thm:canon}, is invariant under the application of the pulled-back lift:  $(T^*f)^*\theta_0 = \theta_0$.
 \end{theorem}
+
+\noindent We will not prove this theorem, instead, we refer the reader to \cite[Theorem 3.2.12]{abrahamFoundationsMechanics2008}.
 
 \begin{remark}
 	%The lift of diffeomorphisms are defined to make the following diagram commute.

@@ -91,7 +91,7 @@ The norm bound stated above indicates that any representation of a $C^*$-algebra
 	\noindent Consider the set
 	\begin{equation}
 		\label{eq:gns-ideal}
-		J := \{A \in \A : \omega(B^*A) = 0, \ \forall B \in \A\}.
+		J := \{A \in \A \ |\ \omega(B^*A) = 0, \ \forall B \in \A\}.
 	\end{equation}
 	By definition, $A \in J$ when $A$ is orthogonal to the whole of $\A$ with respect to $(\cdot,\cdot)$, and taking $B=A$ shows in particular that $(A,A) = \omega(A^*A) = 0$. That makes $J$ the set of vanishing vectors of the semidefinite inner product as in Equation \eqref{eq:gns-inner-product}. We claim that $J$ is a left ideal of $\A$. 
 	
@@ -328,9 +328,9 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 
 \begin{remark}[Recovering the commutative case]
 	\label{rem:commutative-recovery}
-	When $\A$ is commutative, Theorem~\ref{thm:gelfand-naimark} can be specialized to recover the Gelfand characterization of Chapter~\ref{cap:cm-c-star}. For a commutative $C^*$-algebra, irreducible representations coincide with the GNS representations defined by pure states, as per Proposition~\ref{prop:irreducible-iff-pure}, and pure states on an commutative $C^*$-algebra are multiplicative, as per \cite[Prop.~2.6.3]{strocchiIntroductionMathematicalStructure2005}. Hence each such representation is one-dimensional, $\pi_\omega(A) = \omega(A)\Id$ $\forall A \in \A$. Given a family $\mathcal F$ of pairwise inequivalent irreducible representations, it coincides with the Gelfand spectrum of $\A$, as per Definition~\ref{def:character}, and the faithful representation 
+	When $\A$ is commutative, Theorem~\ref{thm:gelfand-naimark} can be specialized to recover the Gelfand characterization of Chapter~\ref{cap:cm-c-star}. For a commutative $C^*$-algebra, irreducible representations coincide with the GNS representations defined by pure states, as per Proposition~\ref{prop:irreducible-iff-pure}, and pure states on a commutative $C^*$-algebra are multiplicative, as per \cite[Prop.~2.6.3]{strocchiIntroductionMathematicalStructure2005}. Hence each such representation is one-dimensional, $\pi_\omega(A) = \omega(A)\Id$ $\forall A \in \A$. Given a family $\mathcal F$ of pairwise inequivalent irreducible representations, it coincides with the Gelfand spectrum of $\A$, as per Definition~\ref{def:character}, and the faithful representation 
 	\[\pi(A) := \bigoplus_{\omega\in\mathcal F}\pi_\omega(A) \qquad \forall A \in \A\]
-	is given by the collection $\{\omega(A) : \omega\in\mathcal F\}$ for every $A \in \A$. That is because the correspondent continuous function of the observable $A$ is given by $\omega(A)$, call it $\widetilde A$. The norm identity of Theorem~\ref{thm:gelfand-naimark} then reads $\|\widetilde A\|_\infty = \sup_\omega|\widetilde A(\omega)| = \sup_\omega|\omega(A)| = \|A\|$, and $\mathcal F$ is a compact Hausdorff space in the weak-$*$ topology, by the Alaoglu-Banach theorem, as per \cite[Theorem IV.21]{reedMethodsModernMathematical2003}, with each $\widetilde A$ continuous on it. This shows the structural difference between the commutative and the non-commutative case already announced in Section~\ref{sec:intro-alg-quant}. 
+	is given by the collection $\{\omega(A) \ | \ \omega\in\mathcal F\}$ for every $A \in \A$. That is because the correspondent continuous function of the observable $A$ is given by $\omega(A)$, call it $\widetilde A$. The norm identity of Theorem~\ref{thm:gelfand-naimark} then reads $\|\widetilde A\|_\infty = \sup_\omega|\widetilde A(\omega)| = \sup_\omega|\omega(A)| = \|A\|$, and $\mathcal F$ is a compact Hausdorff space in the weak-$*$ topology, by the Alaoglu-Banach theorem, as per \cite[Theorem IV.21]{reedMethodsModernMathematical2003}, with each $\widetilde A$ continuous on it. This shows the structural difference between the commutative and the non-commutative case already announced in Section~\ref{sec:intro-alg-quant}. 
 \end{remark}
 
 	\section{The Weyl Algebra and its Representations}
@@ -344,7 +344,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		[q,p]=i, \qquad [q,q]=0, \qquad [p,p]=0,
 		\label{eq:heisenberg-relations}
 	\end{equation}
-	 The value of $\hbar$ has been set to one by a suitable choice of units. Note that the discussion is restricted to a single space dimension for definiteness. The word \emph{generated}, however, admits more than one interpretation, and this reading is specified the first task of the section.
+	 Here, the value of $\hbar$ has been set to one by a suitable choice of units for the sake of simplicity. Note that the discussion is restricted to a single space dimension for definiteness. The word \emph{generated}, however, admits more than one interpretation, and this reading is specified the first task of the section.
 	
 	\begin{definition}[Heisenberg Lie algebra]
 		\label{def:heisenberg-lie-algebra}
@@ -402,7 +402,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	Weyl's proposal replaces the problematic extrapolation with a family of operators that are bounded by construction, namely the formal exponentials of $q$ and $p$. In addition, it is on these that a $C^*$-algebra can be built.
 	
 	\begin{remark}
-		Note from from now on, $s \in \N$ will denote a finite number of dimensions.
+		Note that from now on, $s \in \N$ will denote a finite number of dimensions.
 	\end{remark}
 	
 	\begin{definition}[Weyl operators]
@@ -420,7 +420,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		\label{lem:baker-hausdorff}
 		Let $A$, $B$ be densely defined operators on a Hilbert space, as in Definition \ref{def:unbounded-op}, with a common dense domain on which $A$, $B$, $A+B$ and their exponentials can be freely applied. Suppose that $C := [A,B]$ commutes with both $A$ and $B$. Then
 		\begin{equation}
-			e^A\,e^B = e^{A+B+[A,B]/2}.
+			e^A\,e^B = e^{A+B+C/2}.
 			\label{eq:baker-hausdorff}
 		\end{equation}
 	\end{lemma}
@@ -574,11 +574,11 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 		\label{rem:schrodinger-generators}
 		The physical states of a quantum particle are, in this representation, the vectors of $L^2(\mathbb{R}^s)$, usually called Schr\"odinger wave functions. By Stone's Theorem~\ref{thm:stone}, the strong continuity of $U(\alpha)$ and $V(\beta)$ established in Proposition~\ref{prop:schrodinger-regular-irreducible} guarantees the existence, as strong limits on a dense domain, of the selfadjoint generators
 		\begin{equation}
-			(q\psi)(x) = x\,\psi(x), \qquad \psi \in D_q = \{\psi \in L^2(\R) : x\psi \in L^2(\R)\},
+			(q\psi)(x) = x\,\psi(x), \qquad \psi \in D_q = \{\psi \in L^2(\R) \ | \ x\psi \in L^2(\R)\},
 			\label{eq:q-schrodinger}
 		\end{equation}
 		\begin{equation}
-			(p\psi)(x) = -i\,\frac{d\psi}{dx}(x), \qquad \psi \in D_p = \{\psi \in L^2(\R) : \psi' \in L^2(\R)\},
+			(p\psi)(x) = -i\,\frac{d\psi}{dx}(x), \qquad \psi \in D_p = \{\psi \in L^2(\R) \ | \ \psi' \in L^2(\R)\},
 			\label{eq:p-schrodinger}
 		\end{equation}
 		The derivative in Equation \eqref{eq:p-schrodinger} is understood in the weak sense. The Schwartz space $\mathcal{S} := \mathcal{S}(\mathbb{R}^s)$ of smooth functions of fast decrease is a common dense domain of essential selfadjointness for $q$ and $p$, following \cite[Chapter VIII, Section 2]{reedMethodsModernMathematical2003}. The Heisenberg relations Equation \eqref{eq:heisenberg-relations} hold on $\mathcal{S}$.
@@ -682,9 +682,9 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	
 	\noindent The most concerning difference between the construction is given by the appearance of Lie bracket and commutator. The following proposition isolates the reason why a bracket cannot be recovered from a commutative algebra alone.
 	
-	\begin{proposition}[The bracket vanishes on an commutative algebra]
+	\begin{proposition}[The bracket vanishes on a commutative algebra]
 		\label{prop:concl-bracket-vanishes}
-		Let $\A$ be an commutative $C^*$-algebra embedding a Jordan-Banach algebra $\mathcal{O}$ as per Definition~\ref{def:jb-embedding}. Then the bracket $\{A,B\}=\frac{1}{i\hbar}[A,B]$ defined for $A,B\in\mathcal{O}$ vanishes identically.
+		Let $\A$ be a commutative $C^*$-algebra embedding a Jordan-Banach algebra $\mathcal{O}$ as per Definition~\ref{def:jb-embedding}. Then the bracket $\{A,B\}=\frac{1}{i\hbar}[A,B]$ defined for $A,B\in\mathcal{O}$ vanishes identically.
 	\end{proposition}
 	\begin{proof}
 		Since $\A$ is commutative, $[A,B]=AB-BA=0$ for every $A,B\in\A$, and in particular for every $A,B\in\mathcal{O}\subset\A_{sa}$. Hence $\{A,B\}=0$.
@@ -701,7 +701,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	
 	 Remark~\ref{rem:commutative-recovery} already identifies the classical construction as a special case of the quantum one rather than an analogous procedure. The proposition below specifies this relation.
 	
-	\begin{proposition}[The classical Gelfand-Naimark theorem as an commutative corollary]
+	\begin{proposition}[The classical Gelfand-Naimark theorem as a commutative corollary]
 		\label{prop:concl-gelfand-corollary}
 		Let $\A$ be an commutative unital $C^*$-algebra as per Definition~\ref{def:unital-c-star-algebra}, and let $\mathcal F$ be a separating family of pure states on $\A$ as per Definition~\ref{def:pure-state} and Proposition~\ref{prop:equivalence_states_characters}. The faithful representation $\pi=\bigoplus_{\omega\in\mathcal F}\pi_\omega$ of Theorem~\ref{thm:gelfand-naimark} is unitarily equivalent to the Gelfand isomorphism of Theorem~\ref{thm:gelfand}, under the identification of $\mathcal F$ with the Gelfand spectrum $\sigma(\A)$ of Definition~\ref{def:character}.
 	\end{proposition}
@@ -748,7 +748,7 @@ Using GNS Theorem \ref{thm:gns}, the operator $\pi_\omega(A)$ vanishes on $\H_\o
 	
 	\noindent The comparison collected in Table~\ref{tab:concl-comparison} can be summarized in a single statement. Hopping from the commutative to the noncommutative case replaces points of a topological space with Hilbert spaces carrying a representation. It also replaces evaluation of a function at a point with the action of an operator on a cyclic vector. Furthermore, it replaces an externally imposed Poisson bracket, confined to a dense subalgebra, with a Lie bracket intrinsic to the whole algebra, as shown in Remark~\ref{rem:concl-bracket-comparison}. Every new piece of mathematics required for the noncommutative case, the Jordan product, the GNS construction, and the Lie-Jordan identities of Theorem~\ref{thm:lie-jordan-to-cstar}, exists to compensate for the loss of commutativity and a given geometric space.
 	
-	\section{Example II: The Quantum Spin System}
+	\section{Example II: Quantum Spin System}
 	\label{sec:2-example}
 	
 	This example illustrates the GNS construction of Section~\ref{sec:states-representations-gns} and the noncommutative Gelfand-Naimark Theorem. The quantum spin is generated by three operators satisfying the $\mathfrak{su}(2)$ commutation relations. In contrast with the classical spin of Section~\ref{sec:1-example} where the same Lie algebra was realised as a Poisson bracket on the sphere. The comparison shows how the same algebraic relations yield a symplectic manifold in the commutative case and a Hilbert space of states in the noncommutative one.
