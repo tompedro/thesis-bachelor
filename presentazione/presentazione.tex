@@ -51,13 +51,22 @@
 	% ============ 1. IL PROBLEMA E LA STRATEGIA ============
 	\begin{frame}{Il problema e la strategia}
 		\begin{itemize}
-			\item Meccanica classica: spazio delle fasi, parentesi di Poisson. Meccanica quantistica: spazio di Hilbert, commutatore. Stessa dinamica hamiltoniana, stesso teorema di Noether, in due linguaggi formalmente incompatibili.
+			\item Meccanica classica e  Meccanica quantistica diverso formalismo ma stesse strutture. 
 			\item Esiste un linguaggio più primitivo, comune a entrambe le teorie?
-			\item Strategia Algebrica: non un oggetto geometrico, ma le osservabili fisiche stesse. Si sommano, si moltiplicano, hanno una coniugazione naturale e una norma compatibile risultando in una \textbf{C*-algebra}.
-			\item Capitolo 1: Meccanica classica da un'algebra commutativa.
-			\item Capitolo 2: Meccanica quantistica da un'algebra non commutativa. 
-			\item Capitolo 3: Geometrizzazione dello spazio di Hilbert.
+			\item Strategia Algebrica: \textbf{C*-algebre}.
 		\end{itemize}
+		
+		\begin{block}{C*-algebra}
+			Una \emph{C*-algebra} è un'algebra di Banach $\mathfrak{A}$ su $\mathbb{C}$ munita di un'involuzione $*:\mathfrak{A} \to \mathfrak{A}$ che soddisfa, per ogni $A, B \in \mathfrak{A}$ e $\lambda \in \mathbb{C}$
+			\begin{itemize}
+				\item $(A^*)^* = A$, $(A+B)^* = A^* + B^*$ e $(\lambda A)^* = \overline{\lambda}\, A^*$
+				\item $(AB)^* = B^* A^*$
+			\end{itemize}
+			tale che la norma soddisfi la \emph{C*-identità}
+			\[
+			\|A^* A\| = \|A\|^2, \qquad \forall A \in \mathfrak{A}.
+			\]
+		\end{block}
 	\end{frame}
 	
 	% ============ CAPITOLO 1 ============
@@ -65,19 +74,29 @@
 	% ---- 2. Spazio delle fasi ----
 	\begin{frame}{Lo spazio delle fasi}
 		\begin{itemize}
-			\item Lo spazio delle fasi è uno spazio liscio i cui punti sono gli stati del sistema, munita di una forma simplettica $\omega$.
-			\item L'energia $H$ genera la dinamica tramite il proprio campo vettoriale hamiltoniano $X_H$, definito da
+			\item Lo spazio delle fasi: spazio liscio dove i punti sono gli stati del sistema
+			
+			\item L'energia $H$ genera la dinamica tramite la forma simplettica
 			\[
 			\omega(X_H,\,\cdot\,) = dH.
 			\]
 			\item Le traiettorie del sistema sono le curve determinate dal campo vettoriale $X_H$.
 		\end{itemize}
+		
+		\begin{block}{Esempio: $\mathbb{R}^2$, $(q,p)$}
+			\[
+			\omega = dq \wedge dp, \qquad J = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}
+			\]
+			\[
+			X_H = J\nabla H \qquad \Longrightarrow \qquad \dot q = \frac{\partial H}{\partial p}, \quad \dot p = -\frac{\partial H}{\partial q}
+			\]
+		\end{block}
 	\end{frame}
 	
 	% ---- 3. Parentesi di Poisson ----
 	\begin{frame}{Le parentesi di Poisson}
 		\begin{itemize}
-			\item Valutando $\omega$ sui campi hamiltoniani di due osservabili $f,g$ si ottiene una parentesi antisimmetrica,
+			\item Parentesi di Poisson: $\omega$ su campi vettoriali di due osservabili $f,g$
 			\[
 			\{f,g\} = \omega(X_f,X_g), \qquad \dot f = \{f,H\}.
 			\]
@@ -89,14 +108,14 @@
 			\]
 		\end{block}
 		\begin{itemize}
-			\item Gli osservabili vengono identificati con le funzioni lisce reali $C^\infty(M;\mathbb{R})$ che sono immerse nella $C^*$-algebra $C^0(M; \mathbb{C})$.
+			\item Gli osservabili: $C^\infty(M;\mathbb{R})$ possiamo immergerli in $C^*$-algebra $C^0(M; \mathbb{C})$.
 		\end{itemize}
 	\end{frame}
 	
 	% ---- 4. Gelfand-Naimark, con riquadro ----
 	\begin{frame}{Il teorema di Gelfand--Naimark}
 	\begin{itemize}
-		\item Lo spazio degli stati puri relativi alla $C^*$-algebra $\mathfrak{A}$ è chiamato \textit{lo spettro} $X = \sigma(\mathfrak{A})$.
+		\item Spettro $X = \sigma(\mathfrak{A})$ : spazio degli stati puri del sistema
 	\end{itemize}
 	\begin{block}{Il teorema di Gelfand--Naimark}
 		\centering
@@ -105,15 +124,15 @@
 		\]
 	\end{block}
 	\begin{itemize}
-		\item Partendo dalla sola algebra astratta si ottengono i punti dello spazio delle fasi: gli stati puri del sistema.
+		\item Partendo dall'algebra astratta si ottiene $X$ 
 	\end{itemize}
 \end{frame}
 	
 	% ---- 5. Il limite della costruzione ----
 	\begin{frame}{Un ingrediente esterno}
 		\begin{itemize}
-			\item Lo spettro così ottenuto è solo uno spazio topologico: nessuna nozione di derivata, quindi nessuna parentesi di Poisson.
-			\item Per scriverla serve scegliere una sottoalgebra densa di funzioni lisce, una scelta che l'algebra C* non fissa da sola.
+			\item $X$ è solo uno spazio topologico: nessuna derivata e nessuna parentesi di Poisson.
+			\item Serve scegliere una sottoalgebra densa di funzioni lisce.
 		\end{itemize}
 		\vspace{0.4cm}
 		\alert{La parentesi di Poisson non è intrinseca all'algebra ma va importata dall'esterno.}
@@ -123,7 +142,7 @@
 	
 	% ---- 6. Costruzione dell'algebra degli osservabili, a riquadretti ----
 	\begin{frame}{La costruzione dell'algebra degli osservabili}
-		Punto di vista operativo, alla Bohr: dai due soli dati primitivi dell'esperimento ossia preparazioni e misure, l'algebra si costruisce in successione, senza mai assumere uno spazio di Hilbert.
+		Punto di vista operativo: $C^*$-algebra da un set minimale.
 		
 		\vspace{0.25cm}
 		\begin{columns}[T,onlytextwidth]
@@ -131,7 +150,7 @@
 			\begin{block}{1. Potenze e Somme}
 				\centering\footnotesize
 				\vspace{0.15cm}
-				$\quad A^n, \quad A^0 \equiv \mathbb{1}, \quad A+B$
+				$\quad A^n, \quad A^0 \equiv 1, \quad A+B$
 				\vspace{0.15cm}
 			\end{block}
 			\vspace{0.2cm}
@@ -155,20 +174,19 @@
 			\end{block}
 		\end{columns}
 		
-		\vspace{0.3cm}
-		Da riscalamento e quadrato delle osservabili emergono, in successione, il prodotto di Jordan, la parentesi di Poisson e infine il prodotto associativo di una C*-algebra: nulla impone che sia commutativo.
 	\end{frame}
 	
 	% ---- 7. GNS: risultato centrale ----
 	\begin{frame}{La costruzione GNS}
-		Uno stato è un funzionale lineare che restituisce il valore di aspettazione di un'osservabile. $$\omega(A) = \langle A \rangle, \qquad A \in \mathfrak{A}.$$
-		\begin{block}{Gelfand--Naimark--Segal}
+		Stato: un funzionale lineare che restituisce il valore di aspettazione
+		$$\omega(A) = \langle A \rangle, \qquad A \in \mathfrak{A}.$$
+		\begin{block}{Teorema Gelfand--Naimark--Segal}
 			Ogni stato $\omega$ su una C*-algebra $\mathfrak{A}$ genera uno spazio di Hilbert $\mathcal H_\omega$, una rappresentazione $\pi_\omega : \mathfrak{A} \to \mathcal{B}(\mathcal{H}_\omega)$ e un vettore $\Psi_\omega \in \mathcal{H}_\omega$ tali che
 			\[
 			\omega(A) = \big\langle \Psi_\omega,\, \pi_\omega(A)\,\Psi_\omega \big\rangle \qquad \forall A \in \mathfrak{A}.
 			\]
 		\end{block}
-		I postulati di Dirac--von Neumann, stati come vettori e osservabili come operatori, diventano giustificati.
+		I postulati di Dirac--von Neumann diventano giustificati.
 	\end{frame}
 	
 	% ============ CAPITOLO 3 ============
@@ -176,22 +194,24 @@
 	% ---- 8. Spazio di Hilbert proiettivo ----
 	\begin{frame}{Lo spazio di Hilbert proiettivo}
 		\begin{itemize}
-			\item Gli stati fisici di un sistema quantistico sono raggi di uno spazio di Hilbert: vettori definiti a meno di fase e di norma.
-			\item È lo spazio di Hilbert proiettivo $\mathbb P\mathcal H$ l'oggetto su cui vive davvero la fisica, perché due vettori che differiscono per una fase globale rappresentano lo stesso stato.
-			\item Questo spazio proiettivo può essere formalizzato come uno spazio liscio come in meccanica classica.
-			\item Gli osservabili, prima rappresentati da operatori $A \in \mathcal{B}(\mathcal{H})$, su questo spazio sono mappe $f: \mathbb{P} \mathcal{H} \to \mathbb{R}$ tali che $f = \langle A \rangle$.
+			\item Gli stati fisici di un sistema quantistico sono definiti a meno di fase e di norma.
+			
+			\item $\mathbb P\mathcal H$ è uno spazio liscio come in meccanica classica.
+			
+			\item Gli osservabili  sono mappe $f_A: \mathbb{P} \mathcal{H} \to \mathbb{R}$ tali che $f_A = \langle A \rangle$ con $A$ osservabile.
 		\end{itemize}
 	\end{frame}
 	
 	% ---- 9. Struttura di Kähler + hbar come curvatura ----
 	\begin{frame}{La struttura di Kähler}
-		\begin{itemize}
-			\item $\mathbb P\mathcal H$ porta con sé una metrica riemanniana $g$ e una forma simplettica $\omega$. La parte simplettica genera la dinamica, come nel capitolo 1. La parte metrica ne racchiude il contenuto statistico.
-			\item Fissando su $\mathbb P\mathcal H$ una curvatura sezionale olomorfa costante pari a $1/\hbar$, questo stesso flusso hamiltoniano è l'equazione di Schrödinger.
-		\end{itemize}
-		\vspace{0.2cm}
-		\alert{$\hbar$ è l'inverso di una curvatura dello spazio degli stati.}
-		\begin{block}{Schr\"odinger $\iff$ Hamilton}
+		
+		\textbf{Struttura di Kähler}: metrica riemanniana $g$ e una forma simplettica $\omega$. 
+		$$
+			\langle \cdot, \cdot \rangle = g(\cdot, \cdot) + i \omega(\cdot, \cdot)
+		$$
+		\textbf{Teorema di rigidità}: $\mathbb P\mathcal H$ ha una curvatura costante $1/\hbar$.
+
+		\begin{block}{Hamilton $\iff$ Schr\"odinger}
 			\centering
 			\[
 			\omega\big(X_{\langle H\rangle},\,\cdot\,\big) = d\langle H\rangle \qquad\Longleftrightarrow\qquad i\hbar\,\dot\Psi = H\Psi
@@ -204,7 +224,7 @@
 	% ---- 10. Indeterminazione e regola di Born ----
 	\begin{frame}{Indeterminazione e regola di Born}
 		\begin{itemize}
-			\item L'indeterminazione di un'osservabile $f$ si legge da $g$ che genera la dinamica,
+			\item La varianza di un'osservabile $f$ si legge dalla metrica $g$
 			\item La disuguaglianza di Robertson--Schrödinger è Cauchy--Schwarz per $g$.
 		\end{itemize}
 		\begin{block}{Indeterminazione su un osservabile}
@@ -215,7 +235,7 @@
 		\end{block}
 	
 		\begin{itemize}
-			\item Integrando $g$ lungo la geodetica più breve tra due stati puri si ottiene la loro probabilità di transizione, come il coseno al quadrato della distanza geodetica riscalata da $\hbar$: la regola di Born, qui puramente geometrica.
+			\item Integrando $g$ si ottiene la probabilità di transizione.
 		\end{itemize}
 	\end{frame}
 	
@@ -225,20 +245,19 @@
 	\begin{frame}{Sintesi e Sviluppi Futuri}
 		\begin{center}
 			\begin{tikzpicture}[node distance=0.5cm and 0.9cm, every node/.style={font=\footnotesize}]
-				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm] (c1) {\textbf{Cap. 1}\\ algebra commutativa\\ Poisson importata};
-				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm, right=of c1] (c2) {\textbf{Cap. 2}\\ algebra non commutativa\\ commutatore intrinseco};
-				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm, right=of c2] (c3) {\textbf{Cap. 3}\\ struttura di Kähler\\ su $\mathbb P\mathcal H$};
+				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm] (c1) {C*-algebra commutativa\\ Poisson importata};
+				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm, right=of c1] (c2) {C*-algebra non commutativa\\ metodo operazionale};
+				\node[draw, rounded corners, fill=lightbg, draw=steel, text width=3.2cm, align=center, minimum height=1.7cm, right=of c2] (c3) {Struttura di Kähler\\ su $\mathbb P\mathcal H$};
 				\draw[-{Stealth[length=3mm]}, thick, navy] (c1) -- (c2);
 				\draw[-{Stealth[length=3mm]}, thick, navy] (c2) -- (c3);
 			\end{tikzpicture}
 		\end{center}
 		\vspace{0.5cm}
-		La risposta alla domanda iniziale sta nel nucleo algebrico comune alle due teorie. Stessi teoremi, scritti in linguaggi diversi.
 		
+		Limiti e Sviluppi Futuri
 		\begin{itemize}
-			\item Teoria dei campi: infiniti gradi di libertà, rappresentazioni GNS inequivalenti. Qui è trattato solo il caso a dimensione finita.
+			\item Infiniti gradi di libertà: rappresentazioni GNS inequivalenti. 
 			\item Estensione a stati misti.
-			\item La scelta della sottoalgebra liscia nel capitolo 1 potrebbe risolversi con l'algebra Kähleriana quantistica del capitolo 3.
 		\end{itemize}
 	\end{frame}
 
@@ -252,29 +271,27 @@
 	\end{frame}
 	
 			% ============ CITAZIONE: APERTURA CAPITOLO 3 ============
-	\setbeamercolor{background canvas}{bg=navy}
-	\begin{frame}[plain]
-		\color{white}
-		\vfill
-		
-		\vspace{0.6cm}
-		{\rmfamily\itshape\large ``The correspondence between the quantum and classical theories lies not so much in the limiting agreement when $\hbar \to 0$ as in the fact that the mathematical operations on the two theories obey in many cases the same laws.''}
-		
-		\vspace{0.7cm}
-		\begin{flushright}
-			\normalfont\normalsize P.~A.~M.~Dirac (1925)
-		\end{flushright}
-		\vfill
-	\end{frame}
-	\setbeamercolor{background canvas}{bg=white}
+	%\setbeamercolor{background canvas}{bg=navy}
+	%\begin{frame}[plain]
+	%	\color{white}
+	%	\vfill
+	%	
+	%	\vspace{0.6cm}
+	%	{\rmfamily\itshape\large ``The correspondence between the quantum and classical theories lies not so much in the limiting agreement when $\hbar \to 0$ as in the fact that the mathematical operations on the two theories obey in many cases the same laws.''}
+	%	
+	%	\vspace{0.7cm}
+	%	\begin{flushright}
+	%		\normalfont\normalsize P.~A.~M.~Dirac (1925)
+	%	\end{flushright}
+	%	\vfill
+	%\end{frame}
+	%\setbeamercolor{background canvas}{bg=white}
 	
 		\begin{frame}
 		\frametitle{Il teorema di isomorfismo Lie--Jordan--K\"ahler}
 		
 		\begin{block}{Le funzioni k\"ahleriane}
-			Le funzioni $f=\langle A\rangle$ il cui flusso hamiltoniano preserva l'intera
-			struttura di K\"ahler $(\omega,g)$ sono dette \alert{funzioni k\"ahleriane},
-			e coincidono esattamente con i valori medi degli operatori autoaggiunti limitati.
+			Le funzioni $f=\langle A\rangle$ preservano la struttura di K\"ahler $(\omega,g)$ anche dette \alert{funzioni k\"ahleriane}.
 		\end{block}
 		
 		\begin{exampleblock}{Struttura di Lie (forma simplettica $\omega$)}
@@ -291,27 +308,220 @@
 			Il prodotto tra operatori si ricostruisce come prodotto tra funzioni osservabili.
 		\end{exampleblock}
 		
-		\vspace{0.2cm}
-		\begin{center}
-			\textbf{L'intera algebra degli operatori ha una controparte geometrica esatta.}
-		\end{center}
-		
 	\end{frame}
 	
-	\begin{frame}{Simmetrie e teorema di Noether}
-		\begin{itemize}
-			\item Le simmetrie continue, generate da operatori autoaggiunti, producono ancora una mappa momento sullo spazio di Kähler: al generatore di una simmetria corrisponde un'osservabile conservata $J$.
-		\end{itemize}
-		\begin{block}{}
-			\centering
-			\[
-			\{J,H\} = 0 \qquad\Longleftrightarrow\qquad [J,H]=0
-			\]
-		\end{block}
-		\begin{itemize}
-			\item La stessa legge di conservazione, nei due linguaggi del capitolo 1 e del capitolo 2 --- tradotta dalla stessa parentesi.
-		\end{itemize}
-	\end{frame}
+	
+	%\begin{frame}{Mappa momento e Noether, caso classico}
+	%	Sia $\Phi\colon G\times P \to P$ un'azione simplettica, $\xi_P$ il generatore infinitesimo di $\xi\in\mathfrak g$.
+	%	\begin{block}{Mappa momento}
+	%		$J\colon P \to \mathfrak g^*$ tale che, per ogni $\xi\in\mathfrak g$,
+	%		\[
+	%		d\hat J(\xi) = \iota_{\xi_P}\omega, \qquad \text{equivalentemente} \qquad X_{\hat J(\xi)} = \xi_P.
+	%		\]
+	%	\end{block}
+	%	\begin{itemize}
+	%		\item Le componenti $\hat J(\xi) = \langle J(\cdot),\xi\rangle$ sono le funzioni hamiltoniane che generano l'azione del gruppo di simmetria.
+	%	\end{itemize}
+	%	\begin{block}{Teorema di Noether geometrico}
+	%		$H$ invariante sotto $G$ $\iff$ $J$ è costante lungo il flusso di $X_H$.
+	%	\end{block}
+	%	\textbf{Esempio} Rotazioni $SO(3)$ su $S^2$: $\mu(x) = -x$. Con $H=x_3$ (invariante attorno a $z$), $x_3$ è conservata: precessione uniforme di $(x_1,x_2)$.
+	%\end{frame}
+	%
+	%\begin{frame}{Mappa momento e Noether, caso quantistico}
+	%	Sia $G\subseteq U(\mathcal H)$ connesso, $\xi\in\mathfrak g$ anti-autoaggiunto, $\xi_{\mathbb{P} \mathcal{H}}$ il generatore infinitesimo su $\mathbb{P} \mathcal{H}$.
+	%	\begin{block}{Mappa momento quantistica}
+	%		\[
+	%		\langle \mu([x]),\xi\rangle = \langle i\hbar\xi\rangle([x]), \qquad i\hbar\xi \in \mathcal B(\mathcal H) \text{ autoaggiunto}.
+	%		\]
+	%	\end{block}
+	%	\begin{block}{Teorema di Noether quantistico}
+	%		$\mu$ costante lungo il flusso hamiltoniano di $\langle H\rangle$ $\iff$ $[H,i\hbar\xi]=0 \ \ \forall\xi\in\mathfrak g$.
+	%	\end{block}
+	%	\begin{itemize}
+	%		\item Stessa struttura del caso classico: la parentesi di Poisson $\{\langle H\rangle,\langle i\hbar\xi\rangle\}$ diventa $\big\langle \tfrac{1}{i\hbar}[H,i\hbar\xi]\big\rangle$ via l'isomorfismo di LJK.
+	%	\end{itemize}
+	%	\textbf{Esempio} $\mu = \tfrac{\hbar}{2}r$. Con $H=\tfrac{\hbar\omega}{2}\sigma_3$, $[H,i\hbar\xi_3]=0$: $r_3$ conservata, precessione di $(r_1,r_2)$ a frequenza $\omega$.
+	%\end{frame}
+	%
+\begin{frame}{Esempio: $\mathbb{R}^2$ con coordinate $(q,p)$}
+	\begin{exampleblock}{La forma simplettica canonica su $\mathbb{R}^2$}
+		Per il Teorema di Darboux, $\omega = dq \wedge dp$, che si rappresenta con la matrice antisimmetrica
+		\[
+		[\omega] = \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix} =: J,
+		\]
+		ottenuta calcolando $\omega$ sui vettori di base. Dato $H=H(q,p)$, il campo hamiltoniano $X_H = a\,\partial_q + b\,\partial_p$ è definito da $\omega(X_H,\cdot) = dH$. Per antisimmetria,
+		\[
+		\omega(X_H,\cdot) = a\,dp - b\,dq \;=\; \partial_q H\, dq + \partial_p H\, dp,
+		\]
+		da cui, confrontando i coefficienti, $a = \partial_p H$, $b = -\partial_q H$, nessuna inversione di matrice, cioè
+		\[
+		X_H = J\,\nabla H = \begin{pmatrix} \partial H/\partial p \\ -\partial H/\partial q \end{pmatrix}.
+		\]
+	\end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{Dal prodotto di Jordan alla JB-algebra}
+	\begin{block}{Prodotto di Jordan}
+		\[
+		A \circ B := \tfrac12\big[(A+B)^2 - A^2 - B^2\big] = B \circ A
+		\]
+	\end{block}
+	\begin{itemize}
+		\item Commutativo, ma in generale \alert{non associativo}.
+		\item Per potenze di un solo osservabile coincide con il prodotto ordinario: $A \circ A^n = A^{n+1}$.
+	\end{itemize}
+	
+	\begin{block}{JB-algebra}
+		Spazio di Banach reale $\mathcal O$ con $\circ$ commutativo, distributivo, debolmente associativo
+		\[
+		A^2 \circ (B \circ A) = (A^2 \circ B) \circ A,
+		\]
+		tale che $\|A\circ B\|\le \|A\|\,\|B\|$, $\ \|A\|^2 = \|A^2\|$, $\ \|A^2\| \le \|A^2+B^2\|$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{L'immersione in una C*-algebra}
+	\begin{block}{Immersione}
+		$\mathcal O$ si immerge in una C*-algebra $\mathfrak{A}$ se esiste un'isometria lineare $\mathcal O \hookrightarrow \mathfrak{A}$ la cui immagine genera $\mathfrak{A}$, tale che per ogni $A,B\in\mathcal O$
+		\[
+		A^*=A \ \text{in } \mathfrak{A}, \qquad A\circ B = \tfrac12(AB+BA).
+		\]
+	\end{block}
+	\begin{itemize}
+		\item $\mathcal O$ si identifica con un sottospazio chiuso di $\mathfrak{A}_{sa}$.
+		\item Una JB-algebra che ammette questa immersione si dice \emph{JC-algebra}.
+	\end{itemize}
+	
+	\begin{block}{Complessificazione e prodotto ricostruito}
+		\[
+		\mathcal O_{\mathbb C} = \{A+iB \mid A,B\in\mathcal O\}, \qquad AB = A\circ B + \tfrac{i\hbar}{2}\{A,B\}.
+		\]
+	\end{block}
+	Il completamento di $\mathcal O_{\mathbb C}$ è la C*-algebra unitale $\mathfrak{A}$: il prodotto associativo si ricostruisce sommando il prodotto di Jordan e la parentesi di Lie.
+\end{frame}
+
+% ============================================================
+% GRUPPO 2 — Il prodotto di Kähler e il Corollario 3.5.5
+% (approfondisce la slide "Il teorema di isomorfismo
+% Lie–Jordan–Kähler")
+% ============================================================
+
+\begin{frame}{Il prodotto di Kähler $*_\nu$}
+	Gli isomorfismi musicali $I,G$ della struttura di Kähler $(\mathbb{P} \mathcal{H},\omega,g)$ definiscono due parentesi sulle funzioni lisce.
+	\begin{block}{Parentesi di Poisson e di Riemann}
+		\[
+		\{f,h\} := \omega(I df, I dh) \qquad (\!( f,l )\!) := g( Gdf, G\,dh).
+		\]
+	\end{block}
+	\begin{itemize}
+		\item $\{\cdot,\cdot\}$ dipende solo da $\omega$: genera la dinamica.
+		\item $(\!(\cdot,\cdot)\!)$ dipende solo da $g$: codifica la dispersione statistica.
+	\end{itemize}
+	\begin{block}{Parentesi e prodotti di Kähler}
+		\[
+		\langle f,h\rangle := (\!( f,h )\!) + i\{f,h\}, \qquad f *_\nu l := \tfrac{\nu}{2}\langle f,h\rangle + fh.
+		\]
+	\end{block}
+	$*_\nu$ è il candidato geometrico al prodotto associativo tra osservabili, per un parametro libero $\nu\in\mathbb R$.
+\end{frame}
+
+\begin{frame}{Perché $\nu=\hbar$}
+	\begin{block}{Corollario 3.5.5}
+		Se $(\!(\langle A\rangle,\langle B\rangle)\!)$ e $\{\langle A\rangle,\langle B\rangle\}$ non sono identicamente nulle su $\mathbb{P} \mathcal{H}$, allora
+		\[
+		\langle A\rangle *_\nu \langle B\rangle = \langle AB\rangle \ \text{su } \mathbb{P} \mathcal{H} \iff \nu = \hbar.
+		\]
+	\end{block}
+	\textbf{Idea della dimostrazione.} Poniamo $f=\langle A\rangle$, $k=\langle B\rangle$.
+	\begin{itemize}
+		\item Algebricamente, $AB = A\circ B + \tfrac{i\hbar}{2}\{A,B\}$.
+		\item Geometricamente, $\langle A\circ B\rangle = fk + \tfrac{\hbar}{2}(\!(f,k)\!)$ e $\langle\{A,B\}\rangle = \{f,k\}$.
+		\item Confrontando con $f*_\nu k = fk + \tfrac{\nu}{2}\big[(\!(f,k)\!)+i\{f,k\}\big]$,
+		\[
+		f *_\nu k - \langle AB\rangle = \tfrac{\nu-\hbar}{2}\big[(\!(f,k)\!) + i\{f,k\}\big].
+		\]
+	\end{itemize}
+	Si annulla per ogni stato solo se $\nu=\hbar$: la stessa normalizzazione che riproduce il flusso di Schrödinger fissa anche il prodotto geometrico.
+\end{frame}
+
+% ============================================================
+% GRUPPO 3 — Backup per possibili domande / punti deboli
+% ============================================================
+
+\begin{frame}{Perché $q$ e $p$ non ammettono una C*-norma}
+	\begin{block}{Ostruzione}
+		Da $[q,p]=i\hbar$ segue $[p,q^n] = -in\hbar\, q^{n-1}$, e quindi, se esistesse una C*-norma,
+		\[
+		\|q\|\,\|p\| \ge \tfrac{n\hbar}{2} \qquad \forall n\in\mathbb N.
+		\]
+	\end{block}
+	\begin{itemize}
+		\item $\|q\|$ e $\|p\|$ non possono essere entrambe finite.
+		\item Teorema di Wintner: per operatori \emph{limitati} $A,B$, $AB-BA \ne c 1$.
+	\end{itemize}
+	\begin{block}{Soluzione di Weyl}
+		Si sostituiscono $q,p$ con gli esponenziali unitari, limitati per costruzione,
+		\[
+		U(\alpha)=e^{i\alpha q}, \quad V(\beta) = e^{i\beta p}, \qquad U(\alpha)V(\beta) = V(\beta)U(\alpha)\,e^{-i\alpha\beta}.
+		\]
+	\end{block}
+	La C*-algebra di Weyl $\mathfrak{A}_W$ generata da $U,V$ è l'oggetto su cui si applica Gelfand--Naimark non commutativo.
+\end{frame}
+
+\begin{frame}{Il teorema di unicità di von Neumann}
+	\begin{itemize}
+		\item GNS garantisce l'\alert{esistenza} di una rappresentazione di $\mathfrak{A}_W$, non l'unicità.
+		\item Una rappresentazione è \emph{regolare} se $\pi(U(\alpha))$, $\pi(V(\beta))$ sono gruppi unitari fortemente continui: condizione necessaria per avere generatori autoaggiunti (teorema di Stone).
+	\end{itemize}
+	\begin{block}{Teorema di von Neumann}
+		Tutte le rappresentazioni regolari e irriducibili di $\mathfrak{A}_W$ sono unitariamente equivalenti.
+	\end{block}
+	\begin{itemize}
+		\item La rappresentazione di Schrödinger su $L^2(\mathbb R^s)$ è, a meno di equivalenza unitaria, \alert{l'unica} rappresentazione fisicamente ammissibile con un numero finito di gradi di libertà.
+		\item L'ipotesi di dimensione finita è cruciale: cade in teoria dei campi.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{La curvatura di $\mathbb{P} \mathcal{H}$ e il teorema di Hawley--Igusa}
+	\begin{block}{Curvatura sezionale olomorfa}
+		Per il potenziale di Kähler $K_\lambda = \tfrac{\lambda}{2}\ln(1+\|z\|^2)$, la curvatura sezionale olomorfa di $\mathbb{P} \mathcal{H}$ è costante, pari a $2/\lambda$.
+	\end{block}
+	Con la normalizzazione fisica $\lambda = 2\hbar$ (Fissata dal flusso di Schrödinger):
+	\[
+	\text{curvatura di } \mathbb{P} \mathcal{H} = \frac{1}{\hbar}.
+	\]
+	\begin{block}{Teorema di Hawley--Igusa}
+		A meno di isomorfismo, gli spazi proiettivi sono le \alert{uniche} varietà di Kähler connesse, semplicemente connesse, complete, a curvatura sezionale olomorfa costante e positiva.
+	\end{block}
+\end{frame}
+
+\begin{frame}{Dimensione infinita e settori di superselezione}
+	\begin{itemize}
+		\item La costruzione GNS resta valida senza modifiche per algebre di campo.
+		\item Cade però l'\alert{unicità}: nell'analogo infinito-dimensionale dell'algebra di Weyl, rappresentazioni regolari e irriducibili distinte non sono più unitariamente equivalenti.
+	\end{itemize}
+	\begin{block}{Conseguenza fisica}
+		Temperature di equilibrio diverse, o masse diverse, corrispondono a rappresentazioni \emph{inequivalenti}: situazioni fisicamente distinte, non un'unica immagine di Hilbert.
+	\end{block}
+	È il regime della teoria dei campi, della meccanica statistica quantistica e dei sistemi a molti corpi, fuori dall'ambito diretto di questa tesi, ma prosecuzione naturale del formalismo algebrico.
+\end{frame}
+
+\begin{frame}{Stati misti}
+	%\begin{itemize}
+	%	\item Lo spazio degli operatori densità \alert{non} è una varietà liscia globale: è uno spazio stratificato, la cui dimensione locale dipende dal rango della matrice densità.
+	%	\item Forma simplettica e metrica diventano singolari attraversando gli strati di rango diverso.
+	%\end{itemize}
+	\begin{block}{Aggiramento via purificazione GNS}
+		Ogni stato $\omega$, anche misto, genera comunque uno spazio di Hilbert $\mathcal H_\omega$ con vettore ciclico $\Psi_\omega$:
+		\[
+		\omega(A) = \big(\Psi_\omega, \pi_\omega(A)\Psi_\omega\big).
+		\]
+	\end{block}
+	Lo stato misto è rappresentato come punto $[\Psi_\omega]\in \mathbb P\mathcal H_\omega$: la geometria di Kähler si recupera globalmente, aggirando la singolarità dello spazio degli operatori densità.
+\end{frame}
+
 	
 \end{document}
 	
