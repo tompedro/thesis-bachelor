@@ -1,13 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  28 SEP 2026 08:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.24)  4 OCT 2026 09:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**bozza100.tex
-(./bozza100.tex
+**bozza30-extended.tex
+(./bozza30-extended.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
-(/Users/tommasopedroni/Desktop/TESI/Tesi/latex_prima_versione/preambolo_bozza.t
-ex (/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
+L3 programming layer <2022-02-24> (./preambolo_bozza.tex
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
@@ -1181,43 +1180,43 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-(./bozza100.aux)
-\openout1 = `bozza100.aux'.
+(./bozza30-extended.aux)
+\openout1 = `bozza30-extended.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 5.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 5
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 4.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 4
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 5.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 5
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 4.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 4
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
-LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
 
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1283,17 +1282,52 @@ File: english.lbx 2022/02/02 v3.17 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `bozza100.bcf'.
+\openout4 = `bozza30-extended.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'bozza100.bbl' found.
+Package biblatex Info: ... file 'bozza30-extended.bbl' found.
 
-(./bozza100.bbl)
-Package biblatex Info: Reference section=0 on input line 5.
-Package biblatex Info: Reference segment=0 on input line 5.
-Package hyperref Info: Link coloring ON on input line 5.
+(./bozza30-extended.bbl
 
-(/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TODO-FourierUniqueness
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TODO-Mor18
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TODO-RS03
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TODO-SNAG
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                TODO-Sobolev
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 4.
+Package biblatex Info: Reference segment=0 on input line 4.
+Package hyperref Info: Link coloring ON on input line 4.
+ (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1305,130 +1339,144 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count459
 )
-LaTeX Info: Redefining \ref on input line 5.
-LaTeX Info: Redefining \pageref on input line 5.
-LaTeX Info: Redefining \nameref on input line 5.
- (./bozza100.out) (./bozza100.out)
+LaTeX Info: Redefining \ref on input line 4.
+LaTeX Info: Redefining \pageref on input line 4.
+LaTeX Info: Redefining \nameref on input line 4.
+ (./bozza30-extended.out) (./bozza30-extended.out)
 \@outlinefile=\write5
-\openout5 = `bozza100.out'.
+\openout5 = `bozza30-extended.out'.
 
-
-Chapter 4.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 19.91054pt on input line 7.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 19.91054pt on input line 7.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 7.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 8.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 8.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
- 31.
+ 6.
+
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
- 31.
+ 6.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
- 31.
+ 6.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
- 31.
+ 6.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 31.
+ 6.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
- 31.
+ 6.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 31.
+(Font)              scaled to size 9.60007pt on input line 6.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 31.
+(Font)              scaled to size 6.72005pt on input line 6.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 31.
+(Font)              scaled to size 4.80003pt on input line 6.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 59.
+(Font)              scaled to size 10.51207pt on input line 12.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 16.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 59.
-
-[1
-
-
-
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation 'TODO-vonNeumannBicommutant' on page 2 undefined on inp
-ut line 108.
-
-
-Overfull \hbox (3.28363pt too wide) in paragraph at lines 117--124
-[][]\T1/mdbch/m/it/10.95 Remark \T1/mdbch/m/n/10.95 4.1.5\T1/mdbch/m/it/10.95 .
- []\T1/mdbch/m/n/10.95 By The-o-rem [][]4.1[][], a von Neu-mann al-ge-bra can e
-qually be char-ac-ter-ized as a uni-tal $\OMS/mdbch/m/n/10.95 ^^C$\T1/mdbch/m/n
-/10.95 -subalgebra
- []
-
-
-LaTeX Warning: Citation 'TODO-traceclass' on page 2 undefined on input line 151
-.
-
+(Font)              scaled to size 13.82408pt on input line 16.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 18.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 18.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 18.
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 180.
+(Font)              scaled to size 10.51207pt on input line 23.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1437,24 +1485,42 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[2
-design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
-ed.]
-
-LaTeX Warning: Citation 'TODO-traceclass' on page 3 undefined on input line 191
-.
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
-LaTeX Warning: Citation 'TODO-traceclass' on page 3 undefined on input line 220
-.
+]
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 24.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 11.52008pt on input line 24.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 38.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 7.68005pt on input line 39.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 39.
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
+ 63.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
+File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
+)
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 63.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 76.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 76.
 
 
-LaTeX Warning: Citation 'TODO-predual' on page 3 undefined on input line 246.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-LaTeX Warning: Citation 'TODO-normalStates' on page 3 undefined on input line 2
-71.
-
+[2]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1465,11 +1531,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-LaTeX Warning: Citation 'TODO-Sakai' on page 4 undefined on input line 302.
+LaTeX Warning: Reference `def:banach-space' on page 4 undefined on input line 1
+80.
+
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 10.5886pt on input line 197.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 7.73596pt on input line 197.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 5.80197pt on input line 197.
+
+LaTeX Warning: Reference `def:selfadj-element' on page 4 undefined on input lin
+e 199.
 
 
-LaTeX Warning: Citation 'TODO-GNSnormal' on page 4 undefined on input line 322.
-
+Overfull \hbox (10.00703pt too wide) in paragraph at lines 217--223
+[][]\T1/mdbch/m/it/10.95 Remark \T1/mdbch/m/n/10.95 2.1.16\T1/mdbch/m/it/10.95 
+. []\T1/mdbch/m/n/10.95 Ex-cep-tional Jor-dan al-ge-bras ex-ist but are clas-si
+-fied by an es-sen-tially unique finite-dimensional
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1489,6 +1569,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 11.60394pt on input line 338.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 338.
+
+
+LaTeX Warning: Reference `sec:classical-alg-rec' on page 6 undefined on input l
+ine 364.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1499,16 +1600,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Citation 'TODO-MurrayVonNeumann' on page 7 undefined on input li
-ne 609.
+LaTeX Warning: Reference `def:unital-c-star-algebra' on page 7 undefined on inp
+ut line 367.
 
 
-LaTeX Warning: Citation 'TODO-fineTypeIII' on page 7 undefined on input line 61
-9.
+LaTeX Warning: Reference `def:c-star-algebra' on page 7 undefined on input line
+ 380.
 
 
-LaTeX Warning: Citation 'TODO-QFTtypeIII' on page 7 undefined on input line 641
-.
+LaTeX Warning: Reference `def:c-star-algebra' on page 7 undefined on input line
+ 394.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1518,46 +1619,253 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[7] (./bozza100.aux)
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[9]
+
+LaTeX Warning: Reference `def:banach-space' on page 10 undefined on input line 
+541.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+
+LaTeX Warning: Reference `def:hilbert-space' on page 13 undefined on input line
+ 760.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
+
+LaTeX Warning: Citation 'TODO-RS03' on page 14 undefined on input line 769.
+
+
+LaTeX Warning: Citation 'TODO-RS03' on page 14 undefined on input line 804.
+
+
+LaTeX Warning: Citation 'TODO-Mor18' on page 14 undefined on input line 804.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14]
+
+LaTeX Warning: Reference `def:selfadjoint-operator' on page 15 undefined on inp
+ut line 809.
+
+
+LaTeX Warning: Citation 'TODO-RS03' on page 15 undefined on input line 812.
+
+
+LaTeX Warning: Citation 'TODO-Mor18' on page 15 undefined on input line 812.
+
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 10.51207pt on input line 823.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 823.
+LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 823.
+
+LaTeX Warning: Citation 'TODO-RS03' on page 15 undefined on input line 826.
+
+
+LaTeX Warning: Citation 'TODO-Mor18' on page 15 undefined on input line 826.
+
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 7.68005pt on input line 833.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 5.76004pt on input line 833.
+
+LaTeX Warning: Citation 'TODO-SNAG' on page 15 undefined on input line 838.
+
+
+LaTeX Warning: Citation 'TODO-FourierUniqueness' on page 15 undefined on input 
+line 851.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+
+LaTeX Warning: Citation 'TODO-RS03' on page 16 undefined on input line 895.
+
+
+LaTeX Warning: Citation 'TODO-Sobolev' on page 16 undefined on input line 895.
+
+
+LaTeX Warning: Citation 'TODO-RS03' on page 16 undefined on input line 895.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16] (./bozza30-extended.aux)
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `bozza100.out' has not changed.
-(rerunfilecheck)             Checksum: 6006A9D170AD2A459526935411E8DC89;874.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                bozza100
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'bozza100.run.xml'.
-\openout1 = `bozza100.run.xml'.
+Package rerunfilecheck Info: File `bozza30-extended.out' has not changed.
+(rerunfilecheck)             Checksum: 7B57E14F60C3F0923E59E7782755973D;616.
+Package logreq Info: Writing requests to 'bozza30-extended.run.xml'.
+\openout1 = `bozza30-extended.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33890 strings out of 478268
- 642423 string characters out of 5846347
- 1428785 words of memory out of 5000000
- 51491 multiletter control sequences out of 15000+600000
- 507273 words of font info for 87 fonts, out of 8000000 for 9000
+ 34189 strings out of 478268
+ 647599 string characters out of 5846347
+ 1432467 words of memory out of 5000000
+ 51655 multiletter control sequences out of 15000+600000
+ 547600 words of font info for 163 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,12n,106p,741b,1761s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7v.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y
-.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md
--chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/md
-bch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
-sign/mdbch/md-chrma.pfb>
-Output written on bozza100.pdf (7 pages, 128187 bytes).
+ 103i,12n,106p,1213b,1761s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{cite.0@murphyCalgebrasOperatorTheory1990} has been 
+referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@bratteliOperatorAlgebrasQuantum1981} has bee
+n referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@morettiSpectralTheoryQuantum} has been refer
+enced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@strocchiIntroductionMathematicalStructure200
+5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@bohrCanQuantumMechanicalDescription1935} has
+ been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@jammerPhilosophyQuantumMechanics1974} has be
+en referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@peresQuantumTheoryConcepts2002} has been ref
+erenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{cite.0@schilppAlbertEinsteinPhilosopherscientist199
+1} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}</usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+022/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chbi7m.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7m.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7
+v.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/mdbch/m
+d-chr7y.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathdesign/m
+dbch/md-chr8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/mathde
+sign/mdbch/md-chri7m.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
+/mathdesign/mdbch/md-chri8t.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/mathdesign/mdbch/md-chrma.pfb>
+Output written on bozza30-extended.pdf (16 pages, 193202 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 37 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 29 words of extra memory for PDF output out of 10000 (max. 10000000)
 

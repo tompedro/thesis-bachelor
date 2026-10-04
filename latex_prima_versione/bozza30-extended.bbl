@@ -1,0 +1,260 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{schilppAlbertEinsteinPhilosopherscientist1991}{book}{}
+      \name{author}{1}{}{%
+        {{hash=8f686a01aa39d455bf35cc2b1b5e0bdf}{%
+           family={Schilpp},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima Arthur},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Open court}%
+      }
+      \strng{namehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{fullhash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{bibnamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authorbibnamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authornamehash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \strng{authorfullhash}{8f686a01aa39d455bf35cc2b1b5e0bdf}
+      \field{labelalpha}{Sch91}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{pagetotal}{781}
+      \field{title}{Albert {{Einstein}}: {{Philosopher-Scientist}}}
+      \field{year}{1991}
+      \field{dateera}{ce}
+    \endentry
+    \entry{peresQuantumTheoryConcepts2002}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9fc737e2158b7231de1c864a26497567}{%
+           family={Peres},
+           familyi={P\bibinitperiod},
+           given={Asher},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Imprint: Springer}%
+      }
+      \strng{namehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{fullhash}{9fc737e2158b7231de1c864a26497567}
+      \strng{bibnamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authorbibnamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authornamehash}{9fc737e2158b7231de1c864a26497567}
+      \strng{authorfullhash}{9fc737e2158b7231de1c864a26497567}
+      \field{labelalpha}{Per02}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st ed. 2002}
+      \field{pagetotal}{536}
+      \field{title}{Quantum {{Theory}}: {{Concepts}} and {{Methods}}}
+      \field{year}{2002}
+      \field{dateera}{ce}
+    \endentry
+    \entry{jammerPhilosophyQuantumMechanics1974}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3457fde46d50f50946628b51edbde55c}{%
+           family={Jammer},
+           familyi={J\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{fullhash}{3457fde46d50f50946628b51edbde55c}
+      \strng{bibnamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authorbibnamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authornamehash}{3457fde46d50f50946628b51edbde55c}
+      \strng{authorfullhash}{3457fde46d50f50946628b51edbde55c}
+      \field{labelalpha}{Jam74}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagetotal}{536}
+      \field{title}{The Philosophy of Quantum Mechanics: The Interpretations of Quantum Mechanics in Historical Perspective}
+      \field{year}{1974}
+      \field{dateera}{ce}
+    \endentry
+    \entry{bohrCanQuantumMechanicalDescription1935}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a0bed8dbeec8d1cc48216777bb7dae35}{%
+           family={Bohr},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{fullhash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{bibnamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authorbibnamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authornamehash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \strng{authorfullhash}{a0bed8dbeec8d1cc48216777bb7dae35}
+      \field{labelalpha}{Boh35}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{journaltitle}{Physical Review}
+      \field{month}{10}
+      \field{number}{8}
+      \field{title}{Can {{Quantum-Mechanical Description}} of {{Physical Reality}} Be {{Considered Complete}}?}
+      \field{volume}{48}
+      \field{year}{1935}
+      \field{dateera}{ce}
+      \field{pages}{696\bibrangedash 702}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1103/PhysRev.48.696
+      \endverb
+    \endentry
+    \entry{strocchiIntroductionMathematicalStructure2005}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f0fd3a0c94648b9cb81b5c5b8f4defe6}{%
+           family={Strocchi},
+           familyi={S\bibinitperiod},
+           given={Franco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{fullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{bibnamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authorbibnamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authornamehash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \strng{authorfullhash}{f0fd3a0c94648b9cb81b5c5b8f4defe6}
+      \field{labelalpha}{Str05}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagetotal}{146}
+      \field{title}{An Introduction to the Mathematical Structure of Quantum Mechanics: A Short Course for Mathematicians}
+      \field{year}{2005}
+      \field{dateera}{ce}
+    \endentry
+    \entry{morettiSpectralTheoryQuantum}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c0752a0dca220b387d6c6d4be1aad288}{%
+           family={Moretti},
+           familyi={M\bibinitperiod},
+           given={Valter},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{fullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{bibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorbibnamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authornamehash}{c0752a0dca220b387d6c6d4be1aad288}
+      \strng{authorfullhash}{c0752a0dca220b387d6c6d4be1aad288}
+      \field{labelalpha}{Mor18}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{pagetotal}{950}
+      \field{title}{Spectral {{Theory}} and {{Quantum Mechanics}}}
+      \field{year}{2018}
+      \field{dateera}{ce}
+    \endentry
+    \entry{bratteliOperatorAlgebrasQuantum1981}{book}{}
+      \name{author}{2}{}{%
+        {{hash=5bdad1e8881d241508992d86f9adfef9}{%
+           family={Bratteli},
+           familyi={B\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0e65107932ea41e3207ae249522b1100}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Derek\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{fullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{bibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorbibnamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authornamehash}{cfea015e113bc2bfaeae4513edf3129c}
+      \strng{authorfullhash}{cfea015e113bc2bfaeae4513edf3129c}
+      \field{labelalpha}{BR81}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagetotal}{517}
+      \field{title}{Operator Algebras and Quantum Statistical Mechanics. 2: {{Equilibrium}} States ; Models in Quantum Statistical Mechanics}
+      \field{year}{1981}
+      \field{dateera}{ce}
+    \endentry
+    \entry{murphyCalgebrasOperatorTheory1990}{book}{}
+      \name{author}{1}{}{%
+        {{hash=6e3af3f6526b3a6092b9b2fc4866abab}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Gerard\bibnamedelima J.},
+           giveni={G\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Academic press}%
+      }
+      \strng{namehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{fullhash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{bibnamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authorbibnamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authornamehash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \strng{authorfullhash}{6e3af3f6526b3a6092b9b2fc4866abab}
+      \field{labelalpha}{Mur90}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{pagetotal}{296}
+      \field{title}{C*-Algebras and Operator Theory}
+      \field{year}{1990}
+      \field{dateera}{ce}
+    \endentry
+  \enddatalist
+  \missing{TODO-FourierUniqueness}
+  \missing{TODO-Mor18}
+  \missing{TODO-RS03}
+  \missing{TODO-SNAG}
+  \missing{TODO-Sobolev}
+\endrefsection
+\endinput
+

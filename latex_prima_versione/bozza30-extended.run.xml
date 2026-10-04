@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>bozza100.bcf</file>
+      <file>bozza30-extended.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>bozza100.bbl</file>
+      <file>bozza30-extended.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -60,23 +60,23 @@
       <file>english.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>bozza100</infile>
+      <infile>bozza30-extended</infile>
     </cmdline>
     <input>
-      <file>bozza100.bcf</file>
+      <file>bozza30-extended.bcf</file>
     </input>
     <output>
-      <file>bozza100.bbl</file>
+      <file>bozza30-extended.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>bozza100.bbl</file>
+      <file>bozza30-extended.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>bozza100.bcf</file>
+      <file>bozza30-extended.bcf</file>
     </requires>
     <requires type="editable">
       <file>bib.bib</file>
