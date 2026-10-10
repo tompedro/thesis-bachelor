@@ -1,0 +1,1217 @@
+\input{../../latex_prima_versione/preambolo_bozza.tex}
+\newgeometry{margin=2cm}
+\setlength{\headwidth}{\textwidth}
+
+\begin{document}
+	\setcounter{chapter}{4}
+	\chapter{Recovery of the Dirac Equation}
+	\label{ch:dirac}
+	
+	Chapter~\ref{ch:analytical-hamiltonians} derived the free Galilean Hamiltonian from a symmetry principle: the relation between boosts and time translations, together with irreducibility, forced $H=|\mathbf{P}|^2/2m+E_0\mathbb{1}$ (Theorem~\ref{thm:free-hamiltonian}). Two features of that result must be kept in mind. The mass $m$ was the parameter of a central extension, because $H^2(\mathfrak{g},\mathbb{R})\cong\mathbb{R}$ for the Galilei algebra (Proposition~\ref{prop:galilei-cohomology}), and the constant $E_0$ remained undetermined, because a Galilean action lifts to a unitary representation only up to a character $e^{i\epsilon s}$ (Proposition~\ref{prop:lift}). Moreover spin was inert under boosts: in the Schr\"odinger realization of Corollary~\ref{cor:schrodinger-realization} the boosts act by multiplication with $e^{im\mathbf{v}\cdot\mathbf{x}/\hbar}$ on the orbital factor alone, while the factor $\mathbb{C}^{2j+1}$ is touched only by rotations.
+	
+	In this chapter the Galilei group is replaced by the universal covering of the Poincar\'e group, as announced in Remark~\ref{rem:outlook}. Three things change. First, the second cohomology of the Lie algebra vanishes, so that no central extension is needed, the lift of the action is unique and the energy is fixed absolutely. Second, the mass is no longer the parameter of a cocycle but the value of a Casimir operator, and the Hamiltonian $H=\sqrt{|\mathbf{P}|^2+m^2}$ follows in a few lines (Theorem~\ref{thm:relativistic-hamiltonian}). Third, and this is the real subject of the chapter, boosts now act on the spin. The unitary representation is induced from the rotation subgroup, and a boost rotates the internal degrees of freedom by a matrix which depends on the momentum, the Wigner rotation. The resulting representation is correct and irreducible, but it is not local: the transformation of the value of a state at the momentum $p$ is not given by a fixed matrix, independent of $p$, and this has no counterpart in the Galilean case.
+	
+	The way out, which is also the way to the Dirac equation, is the following. We look for a finite-dimensional complex vector space $W$ carrying a linear representation $D$ of $SL(2,\mathbb{C})$, which cannot be unitary, and we realize the induced representation on $W$-valued functions of the momentum, constrained to a subspace $F(p)\subseteq W$ which depends on $p$. The constraint is obtained by transporting from the rest frame, where it must be invariant under rotations. The requirement of invariance under space inversion forces $W$ to be four-dimensional and fixes the rest-frame constraint up to a sign. The transported constraint is the Dirac equation. As in Chapter~\ref{ch:analytical-hamiltonians}, the equation of motion is a consequence of covariance and not a postulate: the gamma matrices, the four components and the first-order form are outputs of the construction. This reverses the logic of Dirac's original argument \cite[TODO-location]{TODO-Dirac1928}, where a first-order equation with a positive density was postulated.
+	
+	Section~\ref{sec:mass-shell} introduces the Poincar\'e group in a matrix model, the rest momentum, its stabilizer and the mass shell as a homogeneous space. Section~\ref{sec:poincare-invariance} requires Poincar\'e invariance of $\mathbb{P}\mathcal{H}$, and proves that for irreducible actions of positive energy the spectral measure of the four-momentum lives on the mass shell, which gives the relativistic Hamiltonian. Section~\ref{sec:induced} constructs the induced representation and computes the Wigner rotation. Section~\ref{sec:locality} formulates locality, shows that the unitarity of the local matrices must be abandoned, and proves that space inversion forces the Dirac space. Sections~\ref{sec:rest} and~\ref{sec:transport} determine the constraint in the rest frame and transport it, which yields the Dirac equation, and Section~\ref{sec:probability} shows that the covariant norm of the Dirac field coincides with the norm of the induced representation. We restrict to four spacetime dimensions, to $m>0$ and to spin $\frac12$ in the final sections. The massless case, higher spins and interactions are not treated.
+	% (chapter counter: one more than the value used in hamiltonians.tex)
+	% =====================================================================
+	% Chapter 5: Recovery of the Dirac Equation
+	% DRAFT v1. Companion of hamiltonians.tex (Chapter 4).
+	% Every \cite{TODO-...} must be matched to the real bibliography keys
+	% and every \ref to Chapters 1-4 to the real labels. The map is at the
+	% end. Environments assumed: definition, theorem, proposition, lemma,
+	% corollary, remark, example, proof (amsthm). No custom macros are used.
+	% Conventions: c=1, hbar explicit, signature (+,-,-,-).
+	% =====================================================================
+	% =====================================================================
+	% Poincare group sections, DRAFT v1: Section 1 (The Poincare Group) and
+	% Section 2 (Absence of Central Extensions).
+	% Environments assumed: definition, theorem, proposition, lemma, corollary,
+	% remark, example, proof (amsthm). No custom macros are used.
+	%
+	% References to Chapters 1-3 are printed as plain numbers.
+	% References to the Galilei sections use the real labels of hamiltonians.tex.
+	% New labels committed for the sections still to be written:
+	%   sec:poincare-lift          (Section 3, invariance and lift)
+	%   sec:poincare-spectral      (Section 4, spectral measure and Casimir)
+	%   sec:poincare-hamiltonian   (Section 5, main theorem)
+	%   sec:poincare-geometry      (Section 6, Hamiltonian functions)
+	% Every \cite{TODO-...} must be matched to the real bibliography keys.
+	% The convention c=1 is used in Sections 1 and 2 and is dropped in Section 5.
+	% =====================================================================
+	
+	\section{The Poincar\'e Group}\label{sec:poincare-group}
+	
+	The derivation of the free Hamiltonian in Section~\ref{sec:free-hamiltonian} rests on a symmetry group whose commutation relations tie the generator of time translations to the momentum. The Galilei group of Section~\ref{sec:galilei} is the symmetry group of Newtonian spacetime, where all inertial observers share the same time coordinate. The same strategy applies to the isometries of Minkowski spacetime, which form the Poincar\'e group, where boosts are replaced by Lorentz transformations mixing time and space. This section introduces the group in the form required by the rest of the chapter. As for the Galilei group, we work with the universal covering, because otherwise the fundamental group of the Lorentz group would reintroduce the sign ambiguity of Example~\ref{ex:so3-su2}. The universal covering of the proper orthochronous Lorentz group is $SL(2,\mathbb C)$, and we construct the covering map explicitly through the action of $SL(2,\mathbb C)$ on Hermitian matrices. We then decompose every element of the group into translations, boosts and rotations, and we record the relations between these transformations in the same form as Lemma~\ref{lem:galilei-relations}. The resulting Lie algebra is computed from a matrix realization of the group. In contrast with the Galilean case no central element appears in any of the relations, a fact that Section~\ref{sec:poincare-cohomology} traces back to the vanishing of the second cohomology of the Lie algebra.
+	
+	We write $\mathbb R^{1,3}=\mathbb R^4$ for Minkowski space, with points $x=(x^0,\mathbf x)$ and bilinear form $\eta(x,y)=x^0y^0-\mathbf x\cdot\mathbf y$. The speed of light is set equal to one throughout this section. The Lorentz group $O(1,3)$ is the Lie group of linear maps of $\mathbb R^{1,3}$ preserving $\eta$, and $SO^\uparrow(1,3)$ denotes its connected component of the identity, which is the group of proper orthochronous Lorentz transformations \cite[TODO-location]{TODO-BarutRaczka}. Since $O(1,3)$ is a closed subgroup of $GL(4,\mathbb R)$, so is $SO^\uparrow(1,3)$, because connected components are closed. For $x\in\mathbb R^{1,3}$ we set
+	\begin{equation}\label{eq:hermitian-map}
+		\hat x:=x^0\,\mathbb 1+\mathbf x\cdot\boldsymbol\sigma, \qquad \mathbf x\cdot\boldsymbol\sigma=\sum_{j=1}^3x^j\sigma_j,
+	\end{equation}
+	where $\sigma_j$ are the Pauli matrices of Example~1.2.5. The matrices $\mathbb 1,\sigma_1,\sigma_2,\sigma_3$ form a basis of the real vector space of Hermitian $2\times2$ matrices, so that $x\mapsto\hat x$ is a linear isomorphism onto it, and $\det\hat x=(x^0)^2-|\mathbf x|^2=\eta(x,x)$.
+	
+	The covering map is built from the action $\hat x\mapsto A\hat xA^\dagger$, and to prove that it is onto the Lorentz group we need to know that $SL(2,\mathbb C)$ is connected. We therefore begin with the polar decomposition of its elements, which also provides the global structure of the group.
+	
+	\begin{lemma}[Polar decomposition]\label{lem:polar}
+		The map $\Psi:\mathbb R^3\times SU(2)\to SL(2,\mathbb C)$ defined by
+		\begin{equation}
+			\Psi(\mathbf w,u):=\exp\!\big(\tfrac12\,\mathbf w\cdot\boldsymbol\sigma\big)\,u
+		\end{equation}
+		is a diffeomorphism. In particular $SL(2,\mathbb C)$ is connected and simply connected.
+	\end{lemma}
+	
+	\begin{proof}
+		Let $A\in SL(2,\mathbb C)$. The matrix $AA^\dagger$ is Hermitian and positive definite, with determinant one. It has a unique positive definite Hermitian square root $H:=(AA^\dagger)^{1/2}$, which depends smoothly on $A$ and has $\det H=1$, because the eigenvalues of $H$ are the positive square roots of those of $AA^\dagger$. The matrix $u:=H^{-1}A$ satisfies $uu^\dagger=H^{-1}AA^\dagger H^{-1}=\mathbb 1$ and $\det u=1$, so that $u\in SU(2)$ and $A=Hu$. If $A=H'u'$ is another decomposition of this type, then $AA^\dagger=H'^2$, and the uniqueness of the positive square root yields $H'=H$ and $u'=u$.
+		
+		It remains to parametrize the matrices $H$. A positive definite Hermitian matrix is the exponential of a unique Hermitian matrix $h=\log H$, which depends smoothly on $H$, and $\operatorname{tr}h=\log\det H=0$ because $\det e^h=e^{\operatorname{tr}h}$. Traceless Hermitian matrices are exactly the matrices $\tfrac12\mathbf w\cdot\boldsymbol\sigma$ with a unique $\mathbf w\in\mathbb R^3$, which shows that $\Psi$ is a smooth bijection with smooth inverse. The group $SU(2)$ is diffeomorphic to $S^3$, since it consists of the matrices with columns $(\alpha,\beta)^T$ and $(-\bar\beta,\bar\alpha)^T$ subject to $|\alpha|^2+|\beta|^2=1$. Hence $SL(2,\mathbb C)\simeq\mathbb R^3\times S^3$ is connected and simply connected.
+	\end{proof}
+	
+	\noindent See \cite[TODO-location]{TODO-Hal03} and \cite[Chapter 3, \S6]{TODO-BarutRaczka} for the polar and Cartan decompositions in general.
+	
+	With the connectedness of $SL(2,\mathbb C)$ at hand, we can construct the covering map. The following lemma is the relativistic analogue of the covering $SU(2)\to SO(3)$ that entered the definition of the Galilei group, and it also yields the differential of the map, which will be used in the computation of the Lie algebra.
+	
+	\begin{lemma}[Covering of the Lorentz group]\label{lem:sl2c-covering}
+		For $A\in SL(2,\mathbb C)$ let $\Lambda_A:\mathbb R^{1,3}\to\mathbb R^{1,3}$ be the linear map defined by
+		\begin{equation}\label{eq:lorentz-action}
+			\widehat{\Lambda_Ax}=A\,\hat x\,A^\dagger.
+		\end{equation}
+		Then $A\mapsto\Lambda_A$ is a smooth surjective homomorphism $SL(2,\mathbb C)\to SO^\uparrow(1,3)$ with kernel $\{\mathbb 1,-\mathbb 1\}$, and hence a covering map. Its differential at the identity is the injective linear map $\rho:\mathfrak{sl}(2,\mathbb C)\to\mathfrak{gl}(\mathbb R^{1,3})$ defined by
+		\begin{equation}\label{eq:rho}
+			\widehat{\rho(\xi)x}=\xi\,\hat x+\hat x\,\xi^\dagger,
+		\end{equation}
+		where $\mathfrak{sl}(2,\mathbb C)$ is regarded as a real Lie algebra of dimension $6$.
+	\end{lemma}
+	
+	\begin{proof}
+		The matrix $A\hat xA^\dagger$ is Hermitian, so Equation~\eqref{eq:lorentz-action} defines a linear map $\Lambda_A$. It preserves $\eta(x,x)=\det\hat x$ because $\det(A\hat xA^\dagger)=|\det A|^2\det\hat x=\det\hat x$, and it preserves $\eta$ by polarization, so $\Lambda_A\in O(1,3)$. The relation $\Lambda_{AB}=\Lambda_A\Lambda_B$ is immediate and $A\mapsto\Lambda_A$ is polynomial in the entries of $A$. By Lemma~\ref{lem:polar} the group $SL(2,\mathbb C)$ is connected, hence its image lies in the connected component $SO^\uparrow(1,3)$.
+		
+		Differentiating $A(t)\hat xA(t)^\dagger$ along $A(t)=\exp(t\xi)$ at $t=0$ yields Equation~\eqref{eq:rho}. If $\rho(\xi)=0$, then $x=(1,\mathbf 0)$ yields $\xi+\xi^\dagger=0$, and $x=(0,\mathbf e_j)$ then yields $\xi\sigma_j-\sigma_j\xi=0$ for $j=1,2,3$. The matrix $\xi$ commutes with $\mathbb 1,\sigma_1,\sigma_2,\sigma_3$, which span $M_2(\mathbb C)$, so $\xi$ is a multiple of the identity, and $\operatorname{tr}\xi=0$ forces $\xi=0$. Hence $\rho$ is injective. The Lie algebra of $O(1,3)$ is $\{M\in M_4(\mathbb R)\mid\eta M+M^T\eta=0\}$, where $\eta M$ is antisymmetric, so it has dimension $6=\dim\mathfrak{sl}(2,\mathbb C)$. It descends that $\rho$ is a linear bijection onto this Lie algebra, and by the inverse function theorem $A\mapsto\Lambda_A$ maps a neighbourhood of $\mathbb 1$ diffeomorphically onto a neighbourhood of the identity of $SO^\uparrow(1,3)$. The image is a subgroup containing this neighbourhood, and a neighbourhood of the identity in a connected group generates the whole group, so $A\mapsto\Lambda_A$ is surjective.
+		
+		If $\Lambda_A=\mathrm{id}$, then $AA^\dagger=\mathbb 1$ from $x=(1,\mathbf 0)$ and $A\sigma_jA^{-1}=\sigma_j$ for all $j$, so that $A$ commutes with $M_2(\mathbb C)$ and $A=\lambda\mathbb 1$ with $\lambda^2=\det A=1$. The kernel is therefore $\{\mathbb 1,-\mathbb 1\}$. A surjective Lie group homomorphism with discrete kernel is a covering map \cite[TODO-location]{TODO-Lee13}.
+	\end{proof}
+	
+	\noindent This is the covering used in the definition of the Poincar\'e group, in the same way as $SU(2)\to SO(3)$ is used in Definition~\ref{def:galilei-group}.
+	
+	The covering map allows us to define the group of isometries of Minkowski space together with its universal covering. We follow the construction of Definition~\ref{def:galilei-group}, in which the rotation group acts on the translation parameters and the product is a semidirect one.
+	
+	\begin{definition}[Poincar\'e group]\label{def:poincare-group}
+		Let $\Lambda_A$ be as per Lemma~\ref{lem:sl2c-covering}. The \emph{Poincar\'e group} $\mathcal P$ is the Lie group with underlying manifold $\mathbb R^{1,3}\times SL(2,\mathbb C)$ and product
+		\begin{equation}
+			(a,A)(a',A'):=\big(a+\Lambda_Aa',\ AA'\big).
+		\end{equation}
+	\end{definition}
+	
+	The product is the one of the semidirect product $\mathbb R^{1,3}\rtimes SL(2,\mathbb C)$ for the action $A\mapsto\Lambda_A$ by automorphisms of the additive group of $\mathbb R^{1,3}$ \cite[Chapter 3, \S4]{TODO-BarutRaczka}. The next remark verifies that Definition~\ref{def:poincare-group} yields a Lie group and relates it to the geometry of Minkowski space.
+	
+	\begin{remark}\label{rem:poincare-group}
+		Bracketing a triple product in the two possible ways yields in both cases $(a+\Lambda_Aa'+\Lambda_{AA'}a'',\,AA'A'')$, since $\Lambda_{AA'}=\Lambda_A\Lambda_{A'}$, so the product is associative. The identity is $(0,\mathbb 1)$ and the inverse of $(a,A)$ is $(-\Lambda_{A^{-1}}a,\,A^{-1})$. These operations are smooth because they are polynomial in the entries of $A$ and in $a$, and $\mathcal P$ is therefore a Lie group of dimension $10$. The group acts on $\mathbb R^{1,3}$ by $(a,A)\cdot x:=\Lambda_Ax+a$, and this is an action in the sense of Definition~1.5.1, because $\big((a,A)(a',A')\big)\cdot x=\Lambda_{AA'}x+a+\Lambda_Aa'=(a,A)\cdot\big((a',A')\cdot x\big)$. The kernel of the action is $\{(0,\mathbb 1),(0,-\mathbb 1)\}$, so that the quotient $\bar{\mathcal P}_0:=\mathcal P/\{(0,\pm\mathbb 1)\}\simeq\mathbb R^{1,3}\rtimes SO^\uparrow(1,3)$ is the group of proper orthochronous isometries of Minkowski space acting effectively, and $q:\mathcal P\to\bar{\mathcal P}_0$ is a double covering.
+	\end{remark}
+	
+	As for the Galilei group in Definition~\ref{def:elementary-transformations}, it is convenient to name the transformations from which every element is built. The only difference is that the boosts are now parametrized by the rapidity vector $\mathbf w$, because velocities do not add linearly in special relativity.
+	
+	\begin{definition}[Elementary transformations]\label{def:poincare-elementary}
+		Let $\mathcal P$ be the Poincar\'e group as per Definition~\ref{def:poincare-group}. For $a\in\mathbb R^{1,3}$, $\mathbf w\in\mathbb R^3$ and $u\in SU(2)$ we set
+		\begin{equation}
+			\tau_a:=(a,\mathbb 1),\qquad \beta_{\mathbf w}:=\big(0,\exp(\tfrac12\mathbf w\cdot\boldsymbol\sigma)\big),\qquad \rho_u:=(0,u),
+		\end{equation}
+		and we call them the translation, the boost and the rotation.
+	\end{definition}
+	
+	The boost $\beta_{\mathbf w}$ corresponds to a change to a frame moving with velocity $\tanh|\mathbf w|$ in the direction $\mathbf w/|\mathbf w|$, as the next lemma shows by computing its action on a time translation. The lemma also collects the relations between the elementary transformations, which are the counterpart of Lemma~\ref{lem:galilei-relations} and which will be differentiated in Section~\ref{sec:poincare-lift}.
+	
+	\begin{lemma}\label{lem:poincare-relations}
+		Let $\mathcal P$ be as per Definition~\ref{def:poincare-group}, with elementary transformations as per Definition~\ref{def:poincare-elementary}. For all $a,a'\in\mathbb R^{1,3}$, $\mathbf w\in\mathbb R^3$, $s,s'\in\mathbb R$ and $u,u'\in SU(2)$ the following hold.
+		\begin{enumerate}
+			\item $\tau_a\tau_{a'}=\tau_{a+a'}$, $\rho_u\rho_{u'}=\rho_{uu'}$ and $\beta_{s\mathbf w}\beta_{s'\mathbf w}=\beta_{(s+s')\mathbf w}$.
+			\item $(0,A)\,\tau_a\,(0,A)^{-1}=\tau_{\Lambda_Aa}$ for every $A\in SL(2,\mathbb C)$.
+			\item $\rho_u\tau_a\rho_u^{-1}=\tau_{(a^0,R_u\mathbf a)}$ for $a=(a^0,\mathbf a)$, and $\rho_u\beta_{\mathbf w}\rho_u^{-1}=\beta_{R_u\mathbf w}$, where $R_u\in SO(3)$ is the rotation determined by $u$ through $u\,(\mathbf x\cdot\boldsymbol\sigma)\,u^{-1}=(R_u\mathbf x)\cdot\boldsymbol\sigma$.
+			\item $\beta_{\mathbf w}\tau_{(s,\mathbf 0)}\beta_{\mathbf w}^{-1}=\tau_{(s\cosh|\mathbf w|,\ s\sinh|\mathbf w|\,\mathbf w/|\mathbf w|)}$ for $\mathbf w\neq\mathbf 0$.
+			\item Every element of $\mathcal P$ is written in a unique way as $\tau_a\,\beta_{\mathbf w}\,\rho_u$, and the map $(a,\mathbf w,u)\mapsto\tau_a\beta_{\mathbf w}\rho_u$ is a diffeomorphism $\mathbb R^4\times\mathbb R^3\times SU(2)\to\mathcal P$.
+		\end{enumerate}
+	\end{lemma}
+	
+	\begin{proof}
+		Item 1. The first two relations follow from Definition~\ref{def:poincare-group}, since $\Lambda_{\mathbb 1}=\mathrm{id}$ and $(0,u)(0,u')=(0,uu')$. For the third, $\exp(\tfrac12s\,\mathbf w\cdot\boldsymbol\sigma)\exp(\tfrac12s'\,\mathbf w\cdot\boldsymbol\sigma)=\exp(\tfrac12(s+s')\,\mathbf w\cdot\boldsymbol\sigma)$ because the exponents commute.
+		
+		Item 2. By Definition~\ref{def:poincare-group}, $(0,A)(a,\mathbb 1)=(\Lambda_Aa,A)=(\Lambda_Aa,\mathbb 1)(0,A)$.
+		
+		Item 3. For $u\in SU(2)$ one has $\Lambda_u(x^0,\mathbf x)=(x^0,R_u\mathbf x)$, because $u\mathbb 1u^{-1}=\mathbb 1$ and $u(\mathbf x\cdot\boldsymbol\sigma)u^{-1}$ is a traceless Hermitian matrix, hence of the form $\mathbf y\cdot\boldsymbol\sigma$. Since $\det(\mathbf x\cdot\boldsymbol\sigma)=-|\mathbf x|^2$ is preserved by conjugation, $|\mathbf y|=|\mathbf x|$, and $R_u:\mathbf x\mapsto\mathbf y$ is a linear isometry of $\mathbb R^3$. It has determinant $+1$ because $SU(2)$ is connected. The first relation is item 2. For the second, $u\exp(\tfrac12\mathbf w\cdot\boldsymbol\sigma)u^{-1}=\exp(\tfrac12u(\mathbf w\cdot\boldsymbol\sigma)u^{-1})=\exp(\tfrac12(R_u\mathbf w)\cdot\boldsymbol\sigma)$.
+		
+		Item 4. By item 2 the left-hand side is $\tau_{\Lambda_Aa}$ with $A=\exp(\tfrac12\mathbf w\cdot\boldsymbol\sigma)$ and $a=(s,\mathbf 0)$. The matrix $A$ is Hermitian, so $\Lambda_Aa$ is represented by $A\,(s\mathbb 1)\,A=s\,e^{\mathbf w\cdot\boldsymbol\sigma}=s\big(\cosh|\mathbf w|\,\mathbb 1+\sinh|\mathbf w|\,\tfrac{\mathbf w}{|\mathbf w|}\cdot\boldsymbol\sigma\big)$, which is the stated vector.
+		
+		Item 5. By Definition~\ref{def:poincare-group}, $\tau_a\beta_{\mathbf w}\rho_u=(a,\exp(\tfrac12\mathbf w\cdot\boldsymbol\sigma)\,u)=(a,\Psi(\mathbf w,u))$ with $\Psi$ as per Lemma~\ref{lem:polar}, which is a diffeomorphism.
+	\end{proof}
+	
+	\noindent Item 1 holds for boosts only along a fixed direction, since the product of two boosts with different directions is a boost composed with a rotation.
+	
+	The relations of Lemma~\ref{lem:poincare-relations} should be compared with those of Lemma~\ref{lem:galilei-relations}. The comparison identifies where the Poincar\'e group differs from the Galilei group at the level of the group law, before any representation is considered.
+	
+	\begin{remark}[Comparison with the Galilei group]\label{rem:poincare-vs-galilei}
+		In the Galilei group, a boost and a spatial translation commute, whereas the lifts of Lemma~\ref{lem:galilei-relations} commute only up to the central element $z(\mathbf v\cdot\mathbf a)$. In the Poincar\'e group no central element is available, and the interplay between boosts and translations is encoded in item 2 of Lemma~\ref{lem:poincare-relations}. A boost does not commute with a spatial translation along its direction, since it maps it to a translation with a nonvanishing time component, and it does not commute with a time translation, since by item 4 it maps it to a translation with a spatial component. The Galilean relation $\hat\tau_{-s}\hat\beta_{\mathbf v}\hat\tau_s=z(-\tfrac12s|\mathbf v|^2)\hat\beta_{\mathbf v}\hat\alpha_{s\mathbf v}$ of Lemma~\ref{lem:galilei-relations} has the same content as item 4, with a conjugation of the boost by a time translation instead of a conjugation of the time translation by a boost, and the phase present there is the one that the central extension of Section~\ref{sec:galilei} was introduced to absorb. Moreover boosts with different directions do not compose additively, and their product contains a rotation, which is the Thomas precession. This also has no counterpart in the Galilei group, where $\beta_{\mathbf v}\beta_{\mathbf v'}=\beta_{\mathbf v+\mathbf v'}$.
+	\end{remark}
+	
+	To pass from these relations to the generators of the unitary representations of Section~\ref{sec:poincare-lift}, we need the commutation relations of the Lie algebra of $\mathcal P$. The matrices $r_j=-\tfrac i2\sigma_j$ below are the generators $T_j$ of Example~1.2.5, while the boost generators $b_j$ are new.
+	
+	\begin{proposition}[Lie algebra of the Poincar\'e group]\label{prop:poincare-algebra}
+		Let $\rho$ be as in Equation~\eqref{eq:rho}. The Lie algebra $\mathfrak p$ of $\mathcal P$ is the real vector space $\mathfrak{sl}(2,\mathbb C)\oplus\mathbb R^{1,3}$ with the bracket
+		\begin{equation}\label{eq:poincare-bracket}
+			[(\xi,x),(\eta,y)]=\big([\xi,\eta],\ \rho(\xi)y-\rho(\eta)x\big).
+		\end{equation}
+		Let $r_j:=(-\tfrac i2\sigma_j,0)$, $b_j:=(\tfrac12\sigma_j,0)$ for $j=1,2,3$ and $t_\mu:=(0,\mathbf e_\mu)$ for $\mu=0,\dots,3$, where $\mathbf e_\mu$ is the canonical basis of $\mathbb R^{1,3}$. Then these ten elements form a basis of $\mathfrak p$, and up to antisymmetry the only nonvanishing brackets between them are
+		\begin{align}
+			[r_j,r_k]&=\epsilon_{jkl}\,r_l, & [r_j,b_k]&=\epsilon_{jkl}\,b_l, & [b_j,b_k]&=-\epsilon_{jkl}\,r_l,\label{eq:lorentz-algebra}\\
+			[r_j,t_k]&=\epsilon_{jkl}\,t_l, & [b_j,t_0]&=t_j, & [b_j,t_k]&=\delta_{jk}\,t_0,\label{eq:translation-action}
+		\end{align}
+		with $\epsilon_{jkl}$ the Levi-Civita symbol and a sum over the repeated index $l$.
+	\end{proposition}
+	
+	\begin{proof}
+		Consider the smooth map $F:\mathcal P\to GL(5,\mathbb R)$ given in block form by
+		\begin{equation*}
+			F(a,A)=\begin{pmatrix}\Lambda_A&a\\0&1\end{pmatrix},
+		\end{equation*}
+		which is a homomorphism because $F(a,A)F(a',A')=\begin{pmatrix}\Lambda_A\Lambda_{A'}&\Lambda_Aa'+a\\0&1\end{pmatrix}=F\big((a,A)(a',A')\big)$. Along the curve $t\mapsto(tx,\exp(t\xi))$ one has $\Lambda_{\exp(t\xi)}=\exp(t\rho(\xi))$, by the naturality property in Proposition~1.2.14 applied to the homomorphism of Lemma~\ref{lem:sl2c-covering}. The differential of $F$ at the identity is therefore
+		\begin{equation*}
+			dF(\xi,x)=\begin{pmatrix}\rho(\xi)&x\\0&0\end{pmatrix}.
+		\end{equation*}
+		This map is injective by Lemma~\ref{lem:sl2c-covering}, and it is a Lie algebra homomorphism into $\mathfrak{gl}(5,\mathbb R)=M_5(\mathbb R)$ with the commutator of Example~1.2.4, since the differential of a Lie group homomorphism preserves the brackets \cite[TODO-location]{TODO-Lee13}. A direct computation of the commutator of two such matrices yields
+		\begin{equation*}
+			\left[\begin{pmatrix}\rho(\xi)&x\\0&0\end{pmatrix},\begin{pmatrix}\rho(\eta)&y\\0&0\end{pmatrix}\right]=\begin{pmatrix}\rho([\xi,\eta])&\rho(\xi)y-\rho(\eta)x\\0&0\end{pmatrix},
+		\end{equation*}
+		where $[\rho(\xi),\rho(\eta)]=\rho([\xi,\eta])$ because $\rho$ is the differential of a homomorphism. Since $dF$ is an injective homomorphism, Equation~\eqref{eq:poincare-bracket} follows.
+		
+		The elements $r_j$ and $b_j$ form a basis of $\mathfrak{sl}(2,\mathbb C)$ as a real vector space, because $\tfrac12\sigma_j$ and $\tfrac i2\sigma_j$ span the traceless complex matrices. For the brackets in $\mathfrak{sl}(2,\mathbb C)$, $[\sigma_j,\sigma_k]=2i\epsilon_{jkl}\sigma_l$ yields $[r_j,r_k]=-\tfrac14[\sigma_j,\sigma_k]=-\tfrac i2\epsilon_{jkl}\sigma_l=\epsilon_{jkl}r_l$, then $[r_j,b_k]=-\tfrac i4[\sigma_j,\sigma_k]=\tfrac12\epsilon_{jkl}\sigma_l=\epsilon_{jkl}b_l$ and $[b_j,b_k]=\tfrac14[\sigma_j,\sigma_k]=\tfrac i2\epsilon_{jkl}\sigma_l=-\epsilon_{jkl}r_l$. For the action on translations we evaluate $\rho$ on $x=(x^0,\mathbf x)$. Since $r_j^\dagger=-r_j$, $\widehat{\rho(r_j)x}=[r_j,\hat x]=\epsilon_{jkl}x^k\sigma_l$, so that $\rho(r_j)x=(0,\mathbf e_j\times\mathbf x)$. Since $b_j^\dagger=b_j$, $\widehat{\rho(b_j)x}=\tfrac12\{\sigma_j,\hat x\}=x^0\sigma_j+x^j\mathbb 1$, so that $\rho(b_j)x=(x^j,\,x^0\mathbf e_j)$. Equation~\eqref{eq:poincare-bracket} yields $[(\xi,0),(0,x)]=(0,\rho(\xi)x)$ and $[(0,x),(0,y)]=0$, and evaluating on $x=\mathbf e_0$ and $x=\mathbf e_k$ yields Equation~\eqref{eq:translation-action}.
+	\end{proof}
+	
+	\noindent The relations in Equation~\eqref{eq:translation-action} contain the content of Lemma~\ref{lem:poincare-relations}: the bracket $[b_j,t_0]=t_j$ is the infinitesimal form of item 4, while $[b_j,t_k]=\delta_{jk}t_0$ has no counterpart in the Galilei algebra, where the corresponding bracket is central.
+	
+	The group structure, the covering map and the Lie algebra relations are now in place. We conclude the section by recording the topology of $\mathcal P$, which is what makes Bargmann's theorem applicable in Section~\ref{sec:poincare-cohomology}.
+	
+	\begin{corollary}[Topology of the Poincar\'e group]\label{cor:poincare-topology}
+		The group $\mathcal P$ is diffeomorphic to $\mathbb R^7\times S^3$, hence it is a connected and simply connected Lie group of dimension $10$. The homomorphism $q:\mathcal P\to\bar{\mathcal P}_0$ of Remark~\ref{rem:poincare-group} is the universal covering of the proper orthochronous Poincar\'e group, and $\pi_1(SO^\uparrow(1,3))\cong\mathbb Z_2$.
+	\end{corollary}
+	
+	\begin{proof}
+		By item 5 of Lemma~\ref{lem:poincare-relations}, $\mathcal P\simeq\mathbb R^4\times\mathbb R^3\times SU(2)$, and $SU(2)\simeq S^3$ is simply connected. The map $q$ is a covering map with kernel $\{(0,\pm\mathbb 1)\}$ by Lemma~\ref{lem:sl2c-covering} and Remark~\ref{rem:poincare-group}, and its total space is simply connected, so it is the universal covering. In a universal covering the group of deck transformations is isomorphic to the fundamental group of the base, and the deck group of $SL(2,\mathbb C)\to SO^\uparrow(1,3)$ is $\{\pm\mathbb 1\}\cong\mathbb Z_2$.
+	\end{proof}
+	
+	\noindent The fundamental group $\mathbb Z_2$ is the topological source of the sign ambiguity discussed in Example~\ref{ex:so3-su2}, and Section~\ref{sec:poincare-cohomology} shows that it is the only obstruction left.
+	
+	%--------------------------------------------------------------------
+	
+	\section{Absence of Central Extensions}\label{sec:poincare-cohomology}
+	
+	Section~\ref{sec:galilei} showed that the Galilei group has a one parameter family of inequivalent projective unitary representations, since $H^2(\mathfrak g,\mathbb R)\cong\mathbb R$ by Proposition~\ref{prop:galilei-cohomology}. The mass entered the theory as the class of a cocycle, and by Theorem~\ref{thm:bargmann} as the parameter of the central extension that turns a projective representation into a genuine one. In this section we show that nothing of this kind happens for the Poincar\'e group. We prove that $H^2(\mathfrak p,\mathbb R)=0$ for the Lie algebra of Proposition~\ref{prop:poincare-algebra}, by decomposing a cocycle along the semidirect structure of the algebra and removing it in three steps. The first two steps use the lemmas of Whitehead on the semisimple Lorentz algebra, and the third is an elementary computation with rotations. The consequence, through Proposition~\ref{prop:bargmann-correspondence}, is that every continuous projective unitary representation of $\mathcal P$ lifts to a genuine one without enlarging the group. This changes the origin of the mass, which can no longer be read from a phase and will be recovered in Section~\ref{sec:poincare-spectral} as the eigenvalue of a Casimir operator. A residual sign survives, and Proposition~\ref{prop:central-sign} shows that it is the topological obstruction of Example~\ref{ex:so3-su2}.
+	
+	Throughout the section $\mathfrak l:=\mathfrak{sl}(2,\mathbb C)$, regarded as a real Lie algebra, and $\mathfrak t:=\mathbb R^{1,3}$, so that $\mathfrak p=\mathfrak l\oplus\mathfrak t$ as in Proposition~\ref{prop:poincare-algebra}. We identify $\xi\in\mathfrak l$ with $(\xi,0)$ and $x\in\mathfrak t$ with $(0,x)$, so that Equation~\eqref{eq:poincare-bracket} reads
+	\begin{equation}\label{eq:semidirect-brackets}
+		[\xi,\eta]=[\xi,\eta]_{\mathfrak l},\qquad [\xi,x]=\rho(\xi)x,\qquad [x,y]=0,
+	\end{equation}
+	for $\xi,\eta\in\mathfrak l$ and $x,y\in\mathfrak t$. By Proposition~\ref{prop:lie-degree-two}, a $2$-cocycle of $\mathfrak p$ is a bilinear antisymmetric map $\psi:\mathfrak p\times\mathfrak p\to\mathbb R$ with $\psi([X,Y],Z)+\psi([Y,Z],X)+\psi([Z,X],Y)=0$, and the coboundaries are the maps $\psi_\lambda(X,Y)=\lambda([X,Y])$ with $\lambda\in\mathfrak p^*$.
+	
+	The first two steps of the proof rely on two classical results on semisimple Lie algebras. The second Whitehead lemma was already used in Example~\ref{ex:su2-cohomology} for $\mathfrak{su}(2)$, and we need it here for $\mathfrak l$ together with its first counterpart, which involves cocycles with values in a representation.
+	
+	\begin{theorem}[Whitehead's lemmas]\label{thm:whitehead}
+		Let $\mathfrak g$ be a finite dimensional semisimple real Lie algebra and let $\varrho:\mathfrak g\to\mathfrak{gl}(M)$ be a representation on a finite dimensional real vector space $M$.
+		\begin{enumerate}
+			\item If a linear map $\phi:\mathfrak g\to M$ satisfies $\phi([\xi,\eta])=\varrho(\xi)\phi(\eta)-\varrho(\eta)\phi(\xi)$ for all $\xi,\eta\in\mathfrak g$, then there is $m\in M$ such that $\phi(\xi)=\varrho(\xi)m$ for all $\xi\in\mathfrak g$.
+			\item $H^2(\mathfrak g,\mathbb R)=0$, \textit{i.e.}, every $2$-cocycle $\psi$ of $\mathfrak g$ is of the form $\psi_\lambda$ for some $\lambda\in\mathfrak g^*$.
+		\end{enumerate}
+	\end{theorem}
+	
+	\noindent See \cite[TODO-location]{TODO-Hum10}, where the statements are proved over $\mathbb C$, and they hold for real Lie algebras since the cohomologies involved are compatible with complexification.
+	
+	We apply Theorem~\ref{thm:whitehead} to the Lorentz algebra, whose semisimplicity has to be checked because the algebra is regarded as a real one. The next remark does so and identifies the representation of $\mathfrak l$ on which the first lemma is used.
+	
+	\begin{remark}\label{rem:lorentz-semisimple}
+		The complexification of $\mathfrak l=\mathfrak{sl}(2,\mathbb C)$ regarded as a real Lie algebra is $\mathfrak{sl}(2,\mathbb C)\oplus\mathfrak{sl}(2,\mathbb C)$ \cite[TODO-location]{TODO-Hum10}, which is semisimple, hence $\mathfrak l$ is semisimple. The representation of $\mathfrak l$ on $\mathfrak t$ is $\rho$ of Equation~\eqref{eq:rho}, and the dual space $\mathfrak t^*$ carries the dual representation $\varrho(\xi)f:=-f\circ\rho(\xi)$. Both are finite dimensional, so that Theorem~\ref{thm:whitehead} applies to $\mathfrak g=\mathfrak l$ with $M=\mathfrak t^*$.
+	\end{remark}
+	
+	The third step does not use any semisimplicity. After the first two steps the only surviving part of the cocycle is an antisymmetric form on the translations that is invariant under the Lorentz algebra, and it suffices to consider the rotations.
+	
+	\begin{lemma}[Rotation invariant forms]\label{lem:rotation-invariant}
+		Let $\omega:\mathfrak t\times\mathfrak t\to\mathbb R$ be a bilinear antisymmetric map such that $\omega(\rho(r_j)x,y)+\omega(x,\rho(r_j)y)=0$ for all $x,y\in\mathfrak t$ and $j=1,2,3$. Then $\omega=0$.
+	\end{lemma}
+	
+	\begin{proof}
+		Every bilinear antisymmetric map on $\mathbb R^{1,3}$ is of the form
+		\begin{equation*}
+			\omega(x,y)=x^0\,\mathbf v\cdot\mathbf y-y^0\,\mathbf v\cdot\mathbf x+\mathbf k\cdot(\mathbf x\times\mathbf y)
+		\end{equation*}
+		for unique $\mathbf v,\mathbf k\in\mathbb R^3$, namely $\mathbf v^j=\omega(\mathbf e_0,\mathbf e_j)$ and $\mathbf k^l=\tfrac12\epsilon_{jkl}\,\omega(\mathbf e_j,\mathbf e_k)$. By the proof of Proposition~\ref{prop:poincare-algebra}, $\rho(r_j)x=(0,\mathbf e_j\times\mathbf x)$. For $\mathbf n=\sum_jn^j\mathbf e_j$ the linear combination of the invariance conditions reads $\omega(\mathbf n\times\mathbf x,y)+\omega(x,\mathbf n\times\mathbf y)=0$, where $\mathbf n\times\mathbf x$ stands for $(0,\mathbf n\times\mathbf x)$. Taking $\mathbf x=\mathbf 0$ yields $x^0\,\mathbf v\cdot(\mathbf n\times\mathbf y)=0$ for all $x^0$, $\mathbf y$ and $\mathbf n$, so that $\mathbf n\cdot(\mathbf y\times\mathbf v)=0$ for all $\mathbf n$ and $\mathbf y$. Hence $\mathbf y\times\mathbf v=\mathbf 0$ for all $\mathbf y$, which entails $\mathbf v=\mathbf 0$. With $\mathbf v=\mathbf 0$ the condition becomes
+		\begin{equation*}
+			\mathbf k\cdot\big((\mathbf n\times\mathbf x)\times\mathbf y+\mathbf x\times(\mathbf n\times\mathbf y)\big)=\mathbf k\cdot\big(\mathbf n\times(\mathbf x\times\mathbf y)\big)=\mathbf n\cdot\big((\mathbf x\times\mathbf y)\times\mathbf k\big)=0,
+		\end{equation*}
+		where the first equality is the Jacobi identity of the cross product. Since $\mathbf n$ is arbitrary, $(\mathbf x\times\mathbf y)\times\mathbf k=\mathbf 0$ for all $\mathbf x,\mathbf y$, and choosing $\mathbf x\times\mathbf y$ orthogonal to $\mathbf k$ and nonvanishing, if $\mathbf k\neq\mathbf 0$, yields a contradiction. Hence $\mathbf k=\mathbf 0$.
+	\end{proof}
+	
+	\noindent The lemma holds because the rotation group has no nonzero invariant vector in $\mathbb R^3$, and the space of antisymmetric forms on $\mathbb R\oplus\mathbb R^3$ is isomorphic to two copies of $\mathbb R^3$.
+	
+	We have now all the ingredients to prove the vanishing of the second cohomology group of $\mathfrak p$. The argument is a decomposition along $\mathfrak p=\mathfrak l\oplus\mathfrak t$, in which the three components of a cocycle are removed one at a time by subtracting coboundaries.
+	
+	\begin{theorem}[$H^2$ of the Poincar\'e algebra]\label{thm:poincare-cohomology}
+		Let $\mathfrak p$ be the Lie algebra of $\mathcal P$. Then $H^2(\mathfrak p,\mathbb R)=0$, \textit{i.e.}, every $2$-cocycle $\psi$ of $\mathfrak p$ is of the form $\psi_\lambda$ for some $\lambda\in\mathfrak p^*$.
+	\end{theorem}
+	
+	\begin{proof}
+		Let $\psi$ be a $2$-cocycle of $\mathfrak p$. For $\lambda\in\mathfrak p^*$ the map $\psi_\lambda$ is a cocycle, and $\lambda\mapsto\psi_\lambda$ is linear, so that subtracting coboundaries preserves the cocycle condition.
+		
+		\emph{Step 1, the Lorentz sector.} The restriction of $\psi$ to $\mathfrak l\times\mathfrak l$ is a $2$-cocycle of $\mathfrak l$, because $\mathfrak l$ is a subalgebra. By Remark~\ref{rem:lorentz-semisimple} and item 2 of Theorem~\ref{thm:whitehead} there is $\lambda_0\in\mathfrak l^*$ with $\psi(\xi,\eta)=\lambda_0([\xi,\eta])$ for $\xi,\eta\in\mathfrak l$. We extend $\lambda_0$ to $\mathfrak p$ by $\lambda_0|_{\mathfrak t}=0$. Equation~\eqref{eq:semidirect-brackets} yields $\psi_{\lambda_0}(\xi,x)=\lambda_0(\rho(\xi)x)=0$ and $\psi_{\lambda_0}(x,y)=0$, so that $\psi':=\psi-\psi_{\lambda_0}$ is a cocycle vanishing on $\mathfrak l\times\mathfrak l$ and satisfying $\psi'(\xi,x)=\psi(\xi,x)$ and $\psi'(x,y)=\psi(x,y)$.
+		
+		\emph{Step 2, the mixed sector.} Set $\phi(\xi)(x):=\psi'(\xi,x)$, which defines a linear map $\phi:\mathfrak l\to\mathfrak t^*$. The cocycle condition for $\psi'$ on $(\xi,\eta,x)$ with $\xi,\eta\in\mathfrak l$ and $x\in\mathfrak t$ reads
+		\begin{equation*}
+			\psi'([\xi,\eta],x)+\psi'([\eta,x],\xi)+\psi'([x,\xi],\eta)=0.
+		\end{equation*}
+		By Equation~\eqref{eq:semidirect-brackets} and the antisymmetry of $\psi'$, the first term is $\phi([\xi,\eta])(x)$, the second is $-\phi(\xi)(\rho(\eta)x)$ and the third is $\phi(\eta)(\rho(\xi)x)$. Therefore
+		\begin{equation*}
+			\phi([\xi,\eta])(x)=\phi(\xi)(\rho(\eta)x)-\phi(\eta)(\rho(\xi)x).
+		\end{equation*}
+		In terms of the dual representation $\varrho$ of Remark~\ref{rem:lorentz-semisimple}, $\phi(\xi)\circ\rho(\eta)=-\varrho(\eta)\phi(\xi)$, and this identity becomes $\phi([\xi,\eta])=\varrho(\xi)\phi(\eta)-\varrho(\eta)\phi(\xi)$. Item 1 of Theorem~\ref{thm:whitehead} yields $m\in\mathfrak t^*$ with $\phi(\xi)=\varrho(\xi)m=-m\circ\rho(\xi)$, \textit{i.e.}, $\psi'(\xi,x)=-m(\rho(\xi)x)$. Let $\mu\in\mathfrak p^*$ be the extension of $m$ with $\mu|_{\mathfrak l}=0$. Then $\psi_\mu(\xi,x)=\mu(\rho(\xi)x)=m(\rho(\xi)x)$, while $\psi_\mu(\xi,\eta)=\mu([\xi,\eta]_{\mathfrak l})=0$ and $\psi_\mu(x,y)=0$. It descends that $\psi'':=\psi'+\psi_\mu$ is a cocycle vanishing on $\mathfrak l\times\mathfrak l$ and on $\mathfrak l\times\mathfrak t$.
+		
+		\emph{Step 3, the translation sector.} The cocycle condition for $\psi''$ on $(\xi,x,y)$ with $\xi\in\mathfrak l$ and $x,y\in\mathfrak t$ reads $\psi''([\xi,x],y)+\psi''([x,y],\xi)+\psi''([y,\xi],x)=0$. The second term vanishes because $[x,y]=0$, and the third equals $\psi''(x,\rho(\xi)y)$ by antisymmetry, so that
+		\begin{equation*}
+			\psi''(\rho(\xi)x,y)+\psi''(x,\rho(\xi)y)=0.
+		\end{equation*}
+		In particular this holds for $\xi=r_j$, and Lemma~\ref{lem:rotation-invariant} yields $\psi''|_{\mathfrak t\times\mathfrak t}=0$. Since $\psi''$ vanishes on all three sectors, $\psi''=0$ by bilinearity and antisymmetry. Collecting the three steps, $\psi=\psi_{\lambda_0}-\psi_\mu=\psi_{\lambda_0-\mu}$.
+	\end{proof}
+	
+	\noindent The semisimplicity of $\mathfrak l$ is used only in Steps 1 and 2 through Theorem~\ref{thm:whitehead}, while Step 3 uses the rotations alone.
+	
+	The vanishing of $H^2(\mathfrak p,\mathbb R)$ contrasts with the Galilei algebra, and the precise point of the contrast deserves to be spelled out. The Galilean cocycle is a boost-translation pairing, and it is available because the corresponding bracket vanishes in the Galilei algebra.
+	
+	\begin{remark}[Comparison with Proposition~\ref{prop:galilei-cohomology}]\label{rem:cohomology-comparison}
+		The generator of $H^2(\mathfrak g,\mathbb R)$ for the Galilei algebra is the class of $\psi_\zeta$, with $\psi_\zeta(X^\beta_i,X^\alpha_j)=\delta_{ij}$ by Proposition~\ref{prop:bargmann-nontrivial}. This value cannot be a coboundary, because $[X^\beta_i,X^\alpha_j]=0$ entails $\psi_\lambda(X^\beta_i,X^\alpha_j)=0$ for every $\lambda\in\mathfrak g^*$. In the Poincar\'e algebra the corresponding bracket is $[b_j,t_k]=\delta_{jk}t_0$ by Equation~\eqref{eq:translation-action}, and it does not vanish. A pairing between boosts and translations with value $\delta_{jk}$ is then the coboundary $\psi_\lambda$ with $\lambda(t_0)=1$ and $\lambda$ vanishing on the remaining basis elements, since $\psi_\lambda(b_j,t_k)=\lambda(\delta_{jk}t_0)=\delta_{jk}$. The nonvanishing bracket between boosts and translations is therefore what removes the Galilean cocycle. The vanishing of $H^2$ depends on the number of space dimensions, as Remark~\ref{rem:one-plus-one} shows.
+	\end{remark}
+	
+	We now translate the algebraic statement into the language of unitary representations. The group $\mathcal P$ is connected and simply connected by Corollary~\ref{cor:poincare-topology}, so Bargmann's correspondence of Proposition~\ref{prop:bargmann-correspondence} applies, and the argument follows the proof of Theorem~\ref{thm:bargmann} with the cocycle $\zeta=0$.
+	
+	\begin{corollary}[Lift of projective representations of $\mathcal P$]\label{cor:poincare-lift}
+		Let $\mathcal H$ be a separable Hilbert space and let $\kappa\mapsto V_\kappa$ be a continuous homomorphism from $\mathcal P$ to the group $U(\mathcal H)/U(1)$ of unitary ray transformations, with the topology of Theorem~\ref{thm:bargmann}. Then there is a strongly continuous unitary representation $\Pi:\mathcal P\to U(\mathcal H)$ such that $\Pi(\kappa)$ belongs to the ray $V_\kappa$ for all $\kappa\in\mathcal P$.
+	\end{corollary}
+	
+	\begin{proof}
+		By items 1 and 2 of Proposition~\ref{prop:bargmann-correspondence}, the class of the multiplier of $V$ corresponds to an element of $H^2(\mathfrak p,\mathbb R)$, which vanishes by Theorem~\ref{thm:poincare-cohomology}. The class of the multiplier is therefore the class of the trivial multiplier. Item 3 of the same proposition, applied to the continuous real cocycle $\zeta=0$, shows that the phases of $V$ can be chosen so that $V$ is strongly continuous with multiplier exactly $e^{i0}=1$, \textit{i.e.}, that $\Pi(\kappa):=V_\kappa$ is a strongly continuous unitary representation of $\mathcal P$ with $\Pi(\kappa)$ in the ray of the original operator.
+	\end{proof}
+	
+	\noindent The Galilean counterpart, Theorem~\ref{thm:bargmann}, yields a representation of the extension $\widehat{\mathcal G}$ and a parameter $m$, while here the lift is a representation of $\mathcal P$ itself.
+	
+	Corollary~\ref{cor:poincare-lift} concerns the universal covering. The next step is to show that the passage from $\bar{\mathcal P}_0$ to $\mathcal P$ cannot be avoided in general, by computing the value of the central element $(0,-\mathbb 1)$ in an irreducible representation. This is the relativistic version of Example~\ref{ex:so3-su2}, where the sign was produced by a rotation by $2\pi$.
+	
+	\begin{proposition}[The central sign]\label{prop:central-sign}
+		Let $z:=(0,-\mathbb 1)\in\mathcal P$. Then $z$ is central, $z^2=e$ for the identity $e$ of $\mathcal P$, and in every irreducible strongly continuous unitary representation $\Pi$ of $\mathcal P$ there is $\varepsilon\in\{1,-1\}$ with $\Pi(z)=\varepsilon\,\mathbb 1$.
+	\end{proposition}
+	
+	\begin{proof}
+		By Lemma~\ref{lem:sl2c-covering}, $\Lambda_{-\mathbb 1}=\mathrm{id}$, so $z(a,A)=(a,-A)=(a,A)z$ and $z$ is central, while $z^2=(0,\mathbb 1)$. The operator $\Pi(z)$ is unitary with $\Pi(z)^2=\mathbb 1$, so $\Pi(z)^*=\Pi(z)^{-1}=\Pi(z)$ and $\Pi(z)$ is selfadjoint. It commutes with the set $\mathcal M=\Pi(\mathcal P)$, which is irreducible by assumption, and $e^{it\Pi(z)}=\cos t\,\mathbb 1+i\sin t\,\Pi(z)$ commutes with $\mathcal M$ as well. Lemma~\ref{lem:schur-infinite} yields $\Pi(z)=\varepsilon\,\mathbb 1$ with $\varepsilon\in\mathbb R$, and $\varepsilon^2=1$.
+	\end{proof}
+	
+	\noindent If $\varepsilon=1$ the representation $\Pi$ factors through $\bar{\mathcal P}_0$, while if $\varepsilon=-1$ only the associated ray representation does, and $\varepsilon=-1$ will be shown in Section~\ref{sec:poincare-hamiltonian} to correspond to half integer spin.
+	
+	The vanishing of $H^2$ relies on the semisimplicity of the Lorentz algebra, and the last remark shows that the statement fails when this hypothesis does not hold. It also fixes the range of validity of Theorem~\ref{thm:poincare-cohomology}.
+	
+	\begin{remark}[The case of one space dimension]\label{rem:one-plus-one}
+		Theorem~\ref{thm:poincare-cohomology} is a statement on $\mathbb R^{1,3}$. In one space dimension the Poincar\'e algebra has basis $k,t_0,t_1$ with $[k,t_0]=t_1$, $[k,t_1]=t_0$ and $[t_0,t_1]=0$, and the Lorentz algebra spanned by $k$ is abelian, hence not semisimple. The bilinear antisymmetric map $\psi$ with $\psi(t_0,t_1)=1$ and all other independent values equal to zero is a cocycle, since the cocycle condition on $(k,t_0,t_1)$ reads $\psi([k,t_0],t_1)+\psi([t_0,t_1],k)+\psi([t_1,k],t_0)=\psi(t_1,t_1)-\psi(t_0,t_0)=0$, and on the remaining triples it holds by antisymmetry and $[t_0,t_1]=0$. It is not a coboundary, because $\psi_\lambda(t_0,t_1)=\lambda([t_0,t_1])=0$ for every $\lambda$. Hence the Poincar\'e algebra in $1+1$ dimensions has a nontrivial central extension, and the argument of this section does not extend to it.
+	\end{remark}
+	
+	% =====================================================================
+	% CROSS-REFERENCE MAP
+	% Plain-number references to Chapters 1-3 used above:
+	%   Example 1.2.5 (su(n), Pauli matrices), Definition 1.2.8 (Lie group),
+	%   Proposition 1.2.14 (naturality of exp), Definition 1.5.1 (action).
+	% Real labels from hamiltonians.tex used above:
+	%   sec:galilei, sec:free-hamiltonian, def:galilei-group,
+	%   def:elementary-transformations, lem:galilei-relations,
+	%   prop:galilei-cohomology, prop:bargmann-nontrivial, thm:bargmann,
+	%   prop:lie-degree-two, prop:bargmann-correspondence, ex:su2-cohomology,
+	%   ex:so3-su2, lem:schur-infinite.
+	% New labels defined in this file:
+	%   sec:poincare-group, lem:polar, lem:sl2c-covering, def:poincare-group,
+	%   rem:poincare-group, def:poincare-elementary, lem:poincare-relations,
+	%   rem:poincare-vs-galilei, prop:poincare-algebra, cor:poincare-topology,
+	%   sec:poincare-cohomology, thm:whitehead, rem:lorentz-semisimple,
+	%   lem:rotation-invariant, thm:poincare-cohomology,
+	%   rem:cohomology-comparison, cor:poincare-lift, prop:central-sign,
+	%   rem:one-plus-one, eq:hermitian-map, eq:lorentz-action, eq:rho,
+	%   eq:poincare-bracket, eq:lorentz-algebra, eq:translation-action,
+	%   eq:semidirect-brackets.
+	% Placeholders to match:
+	%   TODO-BarutRaczka, TODO-Hal03, TODO-Lee13, TODO-Hum10
+	%   (all with TODO-location, except Barut Chapter 3 section 6, taken from
+	%   the table of contents).
+	% =====================================================================
+	
+	
+	% =====================================================================
+	\section{Relativistic Kinematics: the Mass Shell as a Homogeneous Space}
+	\label{sec:mass-shell}
+	
+	Throughout the chapter $c=1$, while $\hbar$ is kept explicit as in Chapter~\ref{ch:analytical-hamiltonians}. Minkowski space is $\mathbb{M}:=\mathbb{R}^{1,3}$, with points $x=(x^0,\mathbf{x})$, product $x\cdot y:=x^0y^0-\mathbf{x}\cdot\mathbf{y}$ and $x^2:=x\cdot x$. The Galilean transformations of Chapter~\ref{ch:analytical-hamiltonians} acted on $\mathbb{R}\times\mathbb{R}^3$. Here the Lorentz transformations are realized on $\mathbb{M}$ through $2\times2$ matrices, which is the model in which both the standard boosts and the spinor representations of Section~\ref{sec:locality} are explicit. We write $\sigma_1,\sigma_2,\sigma_3$ for the Pauli matrices and $\mathbf{x}\cdot\boldsymbol{\sigma}:=\sum_kx^k\sigma_k$.
+	
+	\begin{definition}[Hermitian matrix model of $\mathbb{M}$]\label{def:hermitian-model}
+		For $x\in\mathbb{M}$ we set
+		\begin{equation*}
+			\hat{x}:=x^0\mathbb{1}+\mathbf{x}\cdot\boldsymbol{\sigma}, \qquad \tilde{x}:=x^0\mathbb{1}-\mathbf{x}\cdot\boldsymbol{\sigma}.
+		\end{equation*}
+	\end{definition}
+	
+	\begin{lemma}\label{lem:hermitian-model}
+		\begin{enumerate}
+			\item The map $x\mapsto\hat{x}$ is a real linear bijection from $\mathbb{M}$ onto the real vector space of Hermitian $2\times2$ matrices, with $\det\hat{x}=x^2$. Moreover $\tilde{x}=\operatorname{adj}\hat{x}$, $\hat{x}\tilde{x}=\tilde{x}\hat{x}=x^2\mathbb{1}$ and $x\cdot y=\tfrac{1}{2}\operatorname{tr}(\hat{x}\tilde{y})$.
+			\item For every $g\in SL(2,\mathbb{C})$ there is a unique linear map $\Lambda(g):\mathbb{M}\to\mathbb{M}$ with $\widehat{\Lambda(g)x}=g\hat{x}g^\dagger$. It preserves the product $x\cdot y$, it satisfies $\Lambda(gg')=\Lambda(g)\Lambda(g')$ and $\Lambda(-g)=\Lambda(g)$, and
+			\begin{equation}\label{eq:tilde-covariance}
+				\widetilde{\Lambda(g)x}=(g^\dagger)^{-1}\,\tilde{x}\,g^{-1}.
+			\end{equation}
+			\item $\Lambda$ is a smooth surjective homomorphism of $SL(2,\mathbb{C})$ onto the proper orthochronous Lorentz group $SO^\uparrow(1,3)$, with kernel $\{\pm\mathbb{1}\}$. The group $SL(2,\mathbb{C})$ is connected and simply connected.
+		\end{enumerate}
+	\end{lemma}
+	
+	\begin{proof}
+		Item 1. A Hermitian $2\times2$ matrix has the form $\begin{pmatrix}x^0+x^3&x^1-ix^2\\x^1+ix^2&x^0-x^3\end{pmatrix}$ with real $x^\mu$, and its determinant is $(x^0)^2-|\mathbf{x}|^2$. For a $2\times2$ matrix the adjugate is $\operatorname{adj}X=(\operatorname{tr}X)\mathbb{1}-X$, so that $\operatorname{adj}\hat{x}=\tilde{x}$, and $X\operatorname{adj}X=\det X\,\mathbb{1}$. The last identity follows from $(\mathbf{x}\cdot\boldsymbol{\sigma})(\mathbf{y}\cdot\boldsymbol{\sigma})=\mathbf{x}\cdot\mathbf{y}\,\mathbb{1}+i(\mathbf{x}\times\mathbf{y})\cdot\boldsymbol{\sigma}$.
+		
+		Item 2. The matrix $g\hat{x}g^\dagger$ is Hermitian and $\det(g\hat{x}g^\dagger)=|\det g|^2\det\hat{x}=x^2$, so that $\Lambda(g)$ is well defined, linear and preserves $x^2$, hence the product by polarization. The homomorphism property is $(gg')\hat{x}(gg')^\dagger=g(g'\hat{x}g'^\dagger)g^\dagger$. For Equation~\eqref{eq:tilde-covariance}, $\operatorname{adj}(XY)=\operatorname{adj}(Y)\operatorname{adj}(X)$ and $\operatorname{adj}g=g^{-1}$ for $\det g=1$ give $\widetilde{\Lambda(g)x}=\operatorname{adj}(g\hat{x}g^\dagger)=\operatorname{adj}(g^\dagger)\,\tilde{x}\,\operatorname{adj}(g)$.
+		
+		Item 3 is classical \cite[TODO-location]{TODO-Hal03}. We only recall that simple connectedness follows from the polar decomposition of Proposition~\ref{prop:orbit}, which shows that $SL(2,\mathbb{C})$ is diffeomorphic to $\mathbb{R}^3\times SU(2)$.
+	\end{proof}
+	
+	The map $\Lambda$ restricted to $SU(2)$ is the covering homomorphism $u\mapsto R_u$ of Definition~\ref{def:galilei-group}, since $u\hat{x}u^\dagger=x^0\mathbb{1}+(R_u\mathbf{x})\cdot\boldsymbol{\sigma}$. We can now define the group which replaces $\mathcal{G}$.
+	
+	\begin{definition}[Universal covering of the Poincar\'e group]\label{def:poincare-group}
+		The \emph{Poincar\'e group} $\widetilde{\mathcal{P}}$ is the Lie group with underlying manifold $\mathbb{M}\times SL(2,\mathbb{C})$ and product
+		\begin{equation*}
+			(a,g)(a',g'):=\big(a+\Lambda(g)a',\ gg'\big).
+		\end{equation*}
+	\end{definition}
+	
+	\begin{remark}
+		$\widetilde{\mathcal{P}}$ is a connected and simply connected Lie group of dimension $10$, and it is the universal covering of $\mathbb{M}\rtimes SO^\uparrow(1,3)$ by Lemma~\ref{lem:hermitian-model}. It contains the time translations $\tau_s:=((s,\mathbf{0}),\mathbb{1})$, the spatial translations $\alpha_{\mathbf{a}}:=((0,\mathbf{a}),\mathbb{1})$ and the rotations $\rho_u:=(0,u)$ with $u\in SU(2)$, which have the same meaning as in Definition~\ref{def:elementary-transformations}. The boosts are the elements $(0,A)$ with $A$ positive definite, see Proposition~\ref{prop:orbit}. The Galilei group is not a subgroup of $\widetilde{\mathcal{P}}$: it is its contraction for $c\to\infty$, and this limit is used heuristically in Remark~\ref{rem:contraction}.
+	\end{remark}
+	
+	The infinitesimal structure is needed twice, to show that no phase ambiguity survives in the lift of a Poincar\'e action (Section~\ref{sec:poincare-invariance}) and to separate chiralities (Section~\ref{sec:locality}).
+	
+	\begin{lemma}[Lie algebra of $\widetilde{\mathcal{P}}$]\label{lem:poincare-lie}
+		The Lie algebra of $SL(2,\mathbb{C})$ is the real Lie algebra $\mathfrak{sl}(2,\mathbb{C})=\{X\in M_2(\mathbb{C})\mid\operatorname{tr}X=0\}$. It has the real basis $r_k:=-\tfrac{i}{2}\sigma_k$ (rotations) and $b_k:=\tfrac12\sigma_k$ (boosts), $k=1,2,3$, with
+		\begin{equation}\label{eq:lorentz-brackets}
+			[r_j,r_k]=\sum_l\varepsilon_{jkl}\,r_l, \qquad [r_j,b_k]=\sum_l\varepsilon_{jkl}\,b_l, \qquad [b_j,b_k]=-\sum_l\varepsilon_{jkl}\,r_l,
+		\end{equation}
+		where $\varepsilon_{jkl}$ is the Levi-Civita symbol. The Lie algebra of $\widetilde{\mathcal{P}}$ is $\mathfrak{p}=\mathbb{M}\oplus\mathfrak{sl}(2,\mathbb{C})$ with the bracket
+		\begin{equation*}
+			[(a,X),(a',X')]=\big(\lambda(X)a'-\lambda(X')a,\ [X,X']\big), \qquad \widehat{\lambda(X)x}=X\hat{x}+\hat{x}X^\dagger.
+		\end{equation*}
+		Moreover $[\mathfrak{p},\mathfrak{p}]=\mathfrak{p}$.
+	\end{lemma}
+	
+	\begin{proof}
+		The relations~\eqref{eq:lorentz-brackets} follow from $[\sigma_j,\sigma_k]=2i\sum_l\varepsilon_{jkl}\sigma_l$. The map $\lambda$ is the derivative of $X\mapsto\Lambda(e^{tX})$ at $t=0$, and the bracket of $\mathfrak{p}$ is the derivative of the group law of Definition~\ref{def:poincare-group}. For the last claim, Equation~\eqref{eq:lorentz-brackets} gives $r_l=[r_j,r_k]$ and $b_l=[r_j,b_k]$ for $(j,k,l)$ cyclic, so that $\mathfrak{sl}(2,\mathbb{C})$ is contained in $[\mathfrak{p},\mathfrak{p}]$. As for the translations, $\widehat{\lambda(b_k)e_0}=\sigma_k=\hat{e}_k$ and $\widehat{\lambda(b_k)e_k}=\mathbb{1}=\hat{e}_0$, where $e_0,\dots,e_3$ is the canonical basis of $\mathbb{M}$. Hence $\lambda(\mathfrak{sl}(2,\mathbb{C}))\mathbb{M}=\mathbb{M}$, and $[(0,X),(a,0)]=(\lambda(X)a,0)$ shows that $\mathbb{M}\subseteq[\mathfrak{p},\mathfrak{p}]$.
+	\end{proof}
+	
+	We now fix the rest momentum and study its orbit. This is the geometric input which replaces the Galilean relation~\eqref{eq:W2} between boosts and translations.
+	
+	\begin{definition}[Mass shell and rest momentum]\label{def:mass-shell}
+		For $m>0$ the \emph{forward mass shell} is $\mathcal{O}_m^+:=\{p\in\mathbb{M}\mid p^2=m^2,\ p^0>0\}$, and $\mathcal{O}_m^-:=-\mathcal{O}_m^+$. The \emph{rest momentum} is $\mathring{p}:=(m,\mathbf{0})\in\mathcal{O}_m^+$. For $\mathbf{p}\in\mathbb{R}^3$ we set $\omega(\mathbf{p}):=\sqrt{|\mathbf{p}|^2+m^2}$, so that $\mathbf{p}\mapsto(\omega(\mathbf{p}),\mathbf{p})$ is a homeomorphism $\mathbb{R}^3\to\mathcal{O}_m^+$.
+	\end{definition}
+	
+	\begin{proposition}[Stabilizer, standard boosts and orbit]\label{prop:orbit}
+		Let $m>0$.
+		\begin{enumerate}
+			\item $\Lambda(SL(2,\mathbb{C}))$ maps $\mathcal{O}_m^+$ onto itself and acts transitively on it. The stabilizer of $\mathring{p}$ in $SL(2,\mathbb{C})$ is $SU(2)$.
+			\item For $p\in\mathcal{O}_m^+$ let $A_p:=(\hat{p}/m)^{1/2}$ be the positive square root. Then $A_p\in SL(2,\mathbb{C})$ is Hermitian and positive definite, $p\mapsto A_p$ is smooth, $A_{\mathring{p}}=\mathbb{1}$, $\Lambda(A_p)\mathring{p}=p$, and
+			\begin{equation}\label{eq:standard-boost}
+				A_p=\frac{\hat{p}+m\mathbb{1}}{\sqrt{2m(p^0+m)}},\qquad A_p^2=\frac{\hat{p}}{m},\qquad A_p^{-2}=\frac{\tilde{p}}{m}.
+			\end{equation}
+			\item Every $g\in SL(2,\mathbb{C})$ can be written in a unique way as $g=A_pu$ with $p\in\mathcal{O}_m^+$ and $u\in SU(2)$, namely $p=\Lambda(g)\mathring{p}$. The map $g\mapsto(p,u)$ is a diffeomorphism $SL(2,\mathbb{C})\to\mathcal{O}_m^+\times SU(2)$. Consequently $gSU(2)\mapsto\Lambda(g)\mathring{p}$ is a diffeomorphism
+			\begin{equation*}
+				\mathcal{O}_m^+\cong SL(2,\mathbb{C})/SU(2).
+			\end{equation*}
+		\end{enumerate}
+	\end{proposition}
+	
+	\begin{proof}
+		Item 2. The matrix $\hat{p}$ is Hermitian with eigenvalues $p^0\pm|\mathbf{p}|$, whose product is $m^2$ and whose sum is $2p^0>0$. Both are therefore positive, so that $\hat{p}/m$ is positive definite with determinant $1$. Its positive square root $A_p$ is Hermitian, positive definite, has $\det A_p=1$, and depends smoothly on $p$ because the square root is smooth on positive definite matrices. The Cayley--Hamilton identity $\hat{p}^2=2p^0\hat{p}-m^2\mathbb{1}$ gives $(\hat{p}+m\mathbb{1})^2=2(p^0+m)\hat{p}$, which is the explicit formula. Moreover $\widehat{\Lambda(A_p)\mathring{p}}=A_p(m\mathbb{1})A_p=mA_p^2=\hat{p}$, and $A_p^{-2}=m\hat{p}^{-1}=\tilde{p}/m$ by Lemma~\ref{lem:hermitian-model}.
+		
+		Item 1. For $g\in SL(2,\mathbb{C})$, $\widehat{\Lambda(g)\mathring{p}}=m\,gg^\dagger$ is positive definite with determinant $m^2$. By the first step of the proof of item 2, a Hermitian matrix with determinant $m^2$ is positive definite if and only if its trace is positive, so $\Lambda(g)\mathring{p}\in\mathcal{O}_m^+$. For arbitrary $p\in\mathcal{O}_m^+$, $\Lambda(g)p=\Lambda(gA_p)\mathring{p}\in\mathcal{O}_m^+$, and transitivity follows from $\Lambda(A_p)\mathring{p}=p$. Finally $\Lambda(g)\mathring{p}=\mathring{p}$ if and only if $gg^\dagger=\mathbb{1}$, that is $g\in SU(2)$.
+		
+		Item 3. Let $g\in SL(2,\mathbb{C})$ and $P:=(gg^\dagger)^{1/2}$, which is positive definite with $\det P=1$. Then $u:=P^{-1}g$ satisfies $uu^\dagger=\mathbb{1}$ and $\det u=1$, and $mP^2=\widehat{\Lambda(g)\mathring{p}}$ shows that $P=A_p$ with $p=\Lambda(g)\mathring{p}$. If $g=A_qu'$ is another such decomposition, then $gg^\dagger=A_q^2=\hat{q}/m$, so $q=p$ and $u'=u$. Both $g\mapsto(gg^\dagger)^{1/2}$ and $(p,u)\mapsto A_pu$ are smooth, which proves the diffeomorphism. The map $g\mapsto\Lambda(g)\mathring{p}$ is constant on the cosets $gSU(2)$ and has the smooth inverse $p\mapsto A_pSU(2)$.
+	\end{proof}
+	
+	The stabilizer $SU(2)$ is the group which plays the role of the rotations in the rest frame, and the orbit is the space of momenta. In the Galilean case the corresponding data were $\mathbb{R}^3$ with the subgroup $SU(2)$, and the boosts acted on the orbit by translations, see Lemma~\ref{lem:boost-covariance}. Here the orbit is curved, and this is the source of the Wigner rotation of Section~\ref{sec:induced}.
+	
+	Space inversion plays no role in the Poincar\'e group $\widetilde{\mathcal{P}}$, but it is needed in Section~\ref{sec:locality}, and its action on $SL(2,\mathbb{C})$ is determined by the matrix model.
+	
+	\begin{lemma}[Space inversion]\label{lem:inversion}
+		Let $\mathsf{P}(x^0,\mathbf{x}):=(x^0,-\mathbf{x})$ and $\theta(g):=(g^\dagger)^{-1}$ for $g\in SL(2,\mathbb{C})$.
+		\begin{enumerate}
+			\item $\widehat{\mathsf{P}x}=\tilde{x}$. The map $\theta$ is an automorphism of $SL(2,\mathbb{C})$ with $\theta^2=\mathrm{id}$ and $\theta|_{SU(2)}=\mathrm{id}$, and
+			\begin{equation}\label{eq:theta-lambda}
+				\Lambda(\theta(g))=\mathsf{P}\,\Lambda(g)\,\mathsf{P}.
+			\end{equation}
+			\item $\mathsf{P}\mathcal{O}_m^+=\mathcal{O}_m^+$, and for $p\in\mathcal{O}_m^+$
+			\begin{equation}\label{eq:theta-boost}
+				\theta(A_p)=A_{\mathsf{P}p}=A_p^{-1}.
+			\end{equation}
+		\end{enumerate}
+	\end{lemma}
+	
+	\begin{proof}
+		Item 1. The first claim is the definition of $\tilde{x}$. If $g\in SU(2)$ then $g^\dagger=g^{-1}$, so $\theta(g)=g$. By Equation~\eqref{eq:tilde-covariance}, $\widehat{\mathsf{P}\Lambda(g)x}=\widetilde{\Lambda(g)x}=(g^\dagger)^{-1}\tilde{x}g^{-1}=\theta(g)\,\widehat{\mathsf{P}x}\,\theta(g)^\dagger$, which is Equation~\eqref{eq:theta-lambda} after replacing $x$ by $\mathsf{P}x$.
+		
+		Item 2. $\mathsf{P}$ preserves $p^2$ and $p^0$. Since $A_p$ is Hermitian, $\theta(A_p)=A_p^{-1}$, which is positive definite. By Equation~\eqref{eq:theta-lambda} and $\mathsf{P}\mathring{p}=\mathring{p}$, $\Lambda(\theta(A_p))\mathring{p}=\mathsf{P}\Lambda(A_p)\mathring{p}=\mathsf{P}p$. The uniqueness in item 3 of Proposition~\ref{prop:orbit} gives $\theta(A_p)=A_{\mathsf{P}p}$.
+	\end{proof}
+	
+	Finally we record the invariant measure on the orbit, which is needed to define the Hilbert space of the induced representation.
+	
+	\begin{lemma}[Invariant measure]\label{lem:invariant-measure}
+		The measure $d\mu(p):=d^3\mathbf{p}\,/\,2\omega(\mathbf{p})$ on $\mathcal{O}_m^+\cong\mathbb{R}^3$ is invariant under $\Lambda(g)$ for every $g\in SL(2,\mathbb{C})$ and under $\mathsf{P}$.
+	\end{lemma}
+	
+	\begin{proof}
+		The Lebesgue measure $d^4p$ on $\mathbb{M}$ is invariant under $\Lambda(g)$ and under $\mathsf{P}$, since their determinants are $\pm1$, and $p^2$ and the sign of $p^0$ are invariant as well. Hence the measure $\delta(p^2-m^2)\,d^4p$, restricted to $p^0>0$, is invariant. Integrating over $p^0$ with $\delta((p^0)^2-\omega(\mathbf{p})^2)=\delta(p^0-\omega(\mathbf{p}))/2\omega(\mathbf{p})$ yields $d\mu$.
+	\end{proof}
+	
+	% =====================================================================
+	\section{Poincar\'e Invariance and the Spectrum of the Four-Momentum}
+	\label{sec:poincare-invariance}
+	
+	We now place the Poincar\'e group in the geometric setting of Chapter~\ref{ch:projective}, in the same way as Definition~\ref{def:galilean-action} did for the Galilei group. The hypothesis is the only assumption on the dynamics entering the chapter, together with the positivity of the energy and, in Section~\ref{sec:locality}, invariance under space inversion.
+	
+	\begin{definition}[Poincar\'e action and irreducibility]\label{def:poincare-action}
+		Let $\mathbb{P}\mathcal{H}$ be as in Definition~\ref{def:galilean-action}. A \emph{Poincar\'e action} on $\mathbb{P}\mathcal{H}$ is a group homomorphism $\Phi$ from $\widetilde{\mathcal{P}}$ to the group of Kähler isomorphisms of $\mathbb{P}\mathcal{H}$, such that every orbit map $\kappa\mapsto\Phi_\kappa(\phi)$ is continuous for the manifold topology. It is \emph{irreducible} if the only closed complex subspaces $\mathcal{K}\subseteq\mathcal{H}$ with $\Phi_\kappa(\mathbb{P}\mathcal{K})\subseteq\mathbb{P}\mathcal{K}$ for all $\kappa\in\widetilde{\mathcal{P}}$ are $\{0\}$ and $\mathcal{H}$.
+	\end{definition}
+	
+	The cohomological analysis of Chapter~\ref{ch:analytical-hamiltonians} shows that the lift to $\mathcal{H}$ is much simpler than in the Galilean case.
+	
+	\begin{proposition}[Unitary lift of a Poincar\'e action]\label{prop:poincare-lift}
+		Let $\Phi$ be a Poincar\'e action on $\mathbb{P}\mathcal{H}$. There exists a unique strongly continuous unitary representation $\Pi:\widetilde{\mathcal{P}}\to U(\mathcal{H})$ such that $\Phi_\kappa([x])=[\Pi(\kappa)x]$ for all $\kappa\in\widetilde{\mathcal{P}}$ and $[x]\in\mathbb{P}\mathcal{H}$.
+	\end{proposition}
+	
+	\begin{proof}
+		As in the proof of Proposition~\ref{prop:lift}, each $\Phi_\kappa$ is induced by a unitary operator $V_\kappa$, unique up to a phase, antiunitary operators being excluded because they reverse the sign of the symplectic form. The map $\kappa\mapsto[V_\kappa]$ is a continuous homomorphism into $U(\mathcal{H})/U(1)$ in the topology of Theorem~\ref{thm:bargmann}. The group $\widetilde{\mathcal{P}}$ is connected and simply connected, and $H^2(\mathfrak{p},\mathbb{R})=0$ \cite[TODO-location]{TODO-Bargmann1954}. Hence the class of the multiplier of $V$ vanishes, and item 3 of Proposition~\ref{prop:bargmann-correspondence} with $\zeta=0$ shows that the phases can be chosen so that $V$ is a strongly continuous genuine representation $\Pi$.
+		
+		If $\Pi'$ is another lift, then $\Pi'=\chi\,\Pi$ for a continuous homomorphism $\chi:\widetilde{\mathcal{P}}\to U(1)$, which is smooth. Its differential $d\chi:\mathfrak{p}\to i\mathbb{R}$ is a Lie algebra homomorphism into an abelian algebra, hence it vanishes on $[\mathfrak{p},\mathfrak{p}]=\mathfrak{p}$ by Lemma~\ref{lem:poincare-lie}. Since $\widetilde{\mathcal{P}}$ is connected, $\chi=1$.
+	\end{proof}
+	
+	\begin{remark}\label{rem:no-constant}
+		Proposition~\ref{prop:poincare-lift} should be compared with Proposition~\ref{prop:lift}. There the lift carried a real parameter $m$, the class of a multiplier, and was unique only up to $e^{i\epsilon s}$, which shifted the Hamiltonian by a constant. Here neither phenomenon occurs, because the Poincar\'e algebra has trivial second cohomology and no nonzero character. In particular the energy operator is determined without additive ambiguity.
+	\end{remark}
+	
+	From now on $\Pi$ denotes the lift of a fixed Poincar\'e action. The translations form a strongly continuous unitary representation of $\mathbb{R}^4$, and the SNAG theorem identifies their spectral measure, in the same way as in Definition~\ref{def:generators}.
+	
+	\begin{definition}[Four-momentum and positive energy]\label{def:four-momentum}
+		Let $T(a):=\Pi((a,\mathbb{1}))$ for $a\in\mathbb{M}$. By Theorem~\ref{thm:snag} there is a unique projection valued measure $E$ on $\mathbb{M}$ such that
+		\begin{equation*}
+			T(a)=\int e^{ia\cdot p/\hbar}\,dE(p).
+		\end{equation*}
+		The selfadjoint operators $H:=\int p^0\,dE$, $P_k:=\int p^k\,dE$ and $P^2:=\int p\cdot p\,dE$ are the energy, the momentum and the squared four-momentum. The action has \emph{positive energy} if $H$ is bounded below.
+	\end{definition}
+	
+	For $a=(s,\mathbf{0})$ and $a=(0,\mathbf{a})$ one recovers $T=e^{isH/\hbar}$ and $T=e^{-i\mathbf{a}\cdot\mathbf{P}/\hbar}$, in agreement with the active convention of Remark~\ref{rem:active-convention}. Positivity of the energy is the relativistic counterpart of the choice of the sign of $m$ in item 3 of Theorem~\ref{thm:free-hamiltonian}, and it will play the same role here, selecting a sheet of the mass hyperboloid.
+	
+	\begin{lemma}[Covariance of the spectral measure]\label{lem:poincare-covariance}
+		For every Borel set $d\subseteq\mathbb{M}$ and every $g\in SL(2,\mathbb{C})$,
+		\begin{equation*}
+			\Pi((0,g))\,E(d)\,\Pi((0,g))^{-1}=E(\Lambda(g)d).
+		\end{equation*}
+		Consequently, for every Borel function $f:\mathbb{M}\to\mathbb{R}$, $\Pi((0,g))\,f(P)\,\Pi((0,g))^{-1}=\int f(\Lambda(g)^{-1}p)\,dE(p)$, as operators with their domains.
+	\end{lemma}
+	
+	\begin{proof}
+		By Definition~\ref{def:poincare-group}, $(0,g)(a,\mathbb{1})(0,g)^{-1}=(\Lambda(g)a,\mathbb{1})$, so that $\Pi((0,g))T(a)\Pi((0,g))^{-1}=T(\Lambda(g)a)$. The right-hand side equals $\int e^{i\Lambda(g)a\cdot p/\hbar}dE(p)=\int e^{ia\cdot q/\hbar}dE'(q)$ with $q=\Lambda(g)^{-1}p$ and $E'(d):=E(\Lambda(g)d)$. Hence $E'$ and $\Pi((0,g))E(\,\cdot\,)\Pi((0,g))^{-1}$ are two projection valued measures with the same Fourier transform, and they coincide by the uniqueness in Theorem~\ref{thm:snag}. The second statement is the change of variables in the functional calculus, as in Lemma~\ref{lem:boost-covariance}.
+	\end{proof}
+	
+	We can now prove that irreducibility and positivity of the energy confine the spectral measure to a mass shell. This is the point at which the mass enters the theory, as an eigenvalue of a Casimir operator.
+	
+	\begin{proposition}[The spectral measure lives on a mass shell]\label{prop:mass-shell}
+		Let $\Phi$ be an irreducible Poincar\'e action of positive energy, with lift $\Pi$ and spectral measure $E$. Then
+		\begin{enumerate}
+			\item there is $m^2\in\mathbb{R}$ with $P^2=m^2\mathbb{1}$, and $E$ is concentrated on $\{p\in\mathbb{M}\mid p^2=m^2\}$,
+			\item $m^2\geq0$,
+			\item if $m>0$, then $E(\mathbb{M}\setminus\mathcal{O}_m^+)=0$ and $\operatorname{supp}E=\mathcal{O}_m^+$.
+		\end{enumerate}
+	\end{proposition}
+	
+	\begin{proof}
+		Item 1. The function $p\mapsto p\cdot p$ is Lorentz invariant, so Lemma~\ref{lem:poincare-covariance} gives $\Pi((0,g))e^{itP^2}\Pi((0,g))^{-1}=\int e^{it(\Lambda(g)^{-1}p)^2}dE(p)=e^{itP^2}$. The operator $e^{itP^2}$ also commutes with every $T(a)$, since both are functions of $E$. As $(a,g)=(a,\mathbb{1})(0,g)$, $e^{itP^2}$ commutes with $\Pi(\widetilde{\mathcal{P}})$. The set $\Pi(\widetilde{\mathcal{P}})$ is irreducible, since a closed invariant subspace $\mathcal{K}$ satisfies $\Phi_\kappa(\mathbb{P}\mathcal{K})\subseteq\mathbb{P}\mathcal{K}$, and Definition~\ref{def:poincare-action} forces $\mathcal{K}\in\{\{0\},\mathcal{H}\}$, as in Step 5 of the proof of Theorem~\ref{thm:free-hamiltonian}. Lemma~\ref{lem:schur-infinite} applied to $A=P^2$ yields $P^2=m^2\mathbb{1}$ for some $m^2\in\mathbb{R}$. Then $\int(p^2-m^2)^2\,d\langle\psi,E\psi\rangle=\|(P^2-m^2)\psi\|^2=0$ for every $\psi$ in the domain, so $E(\{p^2\neq m^2\})=0$.
+		
+		Items 2 and 3. Let $S:=\operatorname{supp}E$, as per Definition~\ref{def:pvm-support}. It is closed, nonempty because $E(\mathbb{M})=\mathbb{1}$, contained in $\{p^2=m^2\}$ by item 1, and invariant under $\Lambda(SL(2,\mathbb{C}))$ by Lemma~\ref{lem:poincare-covariance}. If $m^2<0$, the set $\{p^2=m^2\}$ is a single orbit of $SO^\uparrow(1,3)$, so $S$ is the whole hyperboloid, on which $p^0$ is unbounded from below. If $m^2>0$, the set $\{p^2=m^2\}$ is the union of the two orbits $\mathcal{O}_m^\pm$, and if $S$ met $\mathcal{O}_m^-$ it would contain it, again with $p^0$ unbounded from below. In both cases the open sets $\{p^0<-n\}$ meet $S$, hence $E(\{p^0<-n\})\neq0$ for every $n$, and $H=\int p^0dE$ is not bounded below, which contradicts positivity of the energy. Hence $m^2\geq0$, and for $m>0$ the support is a closed nonempty invariant subset of the single orbit $\mathcal{O}_m^+$, so $S=\mathcal{O}_m^+$.
+	\end{proof}
+	
+	\begin{remark}
+		The case $m=0$ is excluded from now on. The null cone contains the origin and several orbits, and the stabilizer of a null vector is not $SU(2)$ but the covering of the Euclidean group of the plane, so that the construction of this chapter does not apply. The same exclusion was made for the Galilean mass in the case $m=0$ of Remark~\ref{rem:weyl}.
+	\end{remark}
+	
+	For $m>0$ the Hamiltonian follows at once. The proof is much shorter than that of Theorem~\ref{thm:free-hamiltonian}, because the relation between boosts and time translations is already contained in the covariance of $E$.
+	
+	\begin{theorem}[Hamiltonian of the relativistic free particle]\label{thm:relativistic-hamiltonian}
+		Let $\Phi$ be an irreducible Poincar\'e action of positive energy, and let $m>0$ be as in Proposition~\ref{prop:mass-shell}. With $\omega(\mathbf{p})=\sqrt{|\mathbf{p}|^2+m^2}$,
+		\begin{equation}\label{eq:relativistic-hamiltonian}
+			H=\omega(\mathbf{P})=\sqrt{|\mathbf{P}|^2+m^2}, \qquad D(H)=D(|\mathbf{P}|).
+		\end{equation}
+		Moreover $\sigma(H)=[m,\infty)$, and the spectral measure of $\mathbf{P}$ has support $\mathbb{R}^3$.
+	\end{theorem}
+	
+	\begin{proof}
+		By Proposition~\ref{prop:mass-shell}, $E$ is concentrated on $\mathcal{O}_m^+$ with support $\mathcal{O}_m^+$. The image of $E$ under the homeomorphism $p\mapsto\mathbf{p}$ of $\mathcal{O}_m^+$ onto $\mathbb{R}^3$ is the spectral measure of $\mathbf{P}$, and its support is $\mathbb{R}^3$. Since $p^0=\omega(\mathbf{p})$ on $\mathcal{O}_m^+$, $H=\int p^0dE=\int\omega(\mathbf{p})\,dE=\omega(\mathbf{P})$. The domains coincide because $\omega(\mathbf{p})^2=|\mathbf{p}|^2+m^2$. Finally, item 5 of Proposition~\ref{prop:pvm-calculus} gives $\sigma(H)=\overline{\omega(\mathbb{R}^3)}=[m,\infty)$.
+	\end{proof}
+	
+	\begin{remark}[Comparison with the Galilean case]\label{rem:contraction}
+		Theorem~\ref{thm:relativistic-hamiltonian} has the structure of Theorem~\ref{thm:free-hamiltonian}, with two differences. The energy has the absolute spectrum $[m,\infty)$ instead of $[E_0,\infty)$ with $E_0$ free, in accordance with Remark~\ref{rem:no-constant}, and the mass is not a cocycle parameter but a Casimir eigenvalue, as announced in Remark~\ref{rem:outlook}. Formally, $\omega(\mathbf{p})=m+|\mathbf{p}|^2/2m+O(|\mathbf{p}|^4/m^3)$, so that the Galilean Hamiltonian is recovered with $E_0=mc^2$ when $c$ is restored and $c\to\infty$. In the same limit the central term $m\,\delta_{ij}$ of Proposition~\ref{prop:galilean-poisson} is the remnant of the Hamiltonian, which in the Poincar\'e algebra appears in the commutator of a boost with a momentum. We do not need this contraction, and we do not prove it.
+	\end{remark}
+	
+	% =====================================================================
+	\section{Induced Representations and the Wigner Rotation}
+	\label{sec:induced}
+	
+	Theorem~\ref{thm:relativistic-hamiltonian} determines the energy, but not yet the representation: the spectral measure $E$ of the momenta is fixed, whereas the structure of the space on which it acts, in particular the way boosts act on spin, is not. It is determined by the stabilizer $SU(2)$ of $\mathring{p}$, through the construction of induced representations \cite[TODO-location]{TODO-Mackey1958}. We carry out the construction explicitly, in a form which will be adapted to local fields in Section~\ref{sec:locality}.
+	
+	\begin{definition}[Spin data]\label{def:spin-data}
+		Let $j\in\{0,\frac12,1,\dots\}$, $V:=\mathbb{C}^{2j+1}$ and let $\pi:=d_j$ be the irreducible unitary representation of $SU(2)$ of dimension $2j+1$ of Corollary~\ref{cor:schrodinger-realization}. For $j=\frac12$ we have $V=\mathbb{C}^2$ and $\pi(u)=u$.
+	\end{definition}
+	
+	\subsection*{Equivariant Functions on $SL(2,\mathbb{C})$}
+	
+	The idea is to describe a state with spin as a function on the whole group $SL(2,\mathbb{C})$, with values in $V$, which is rigidly transported along the cosets of $SU(2)$. This global description has no preferred section, and it will be restricted to the mass shell afterwards.
+	
+	\begin{definition}[Equivariant functions]\label{def:equivariant}
+		Let $\mathcal{E}_\pi$ be the space of Borel functions $f:SL(2,\mathbb{C})\to V$ such that
+		\begin{equation}\label{eq:equivariance}
+			f(gu)=\pi(u^{-1})\,f(g), \qquad g\in SL(2,\mathbb{C}),\ u\in SU(2).
+		\end{equation}
+		For $g\in SL(2,\mathbb{C})$ the \emph{left translation} is $(\mathcal{L}(g)f)(g'):=f(g^{-1}g')$.
+	\end{definition}
+	
+	Left translations preserve $\mathcal{E}_\pi$, because they commute with the right multiplication by $SU(2)$, and $\mathcal{L}(g)\mathcal{L}(g')=\mathcal{L}(gg')$. The norm $\|f(g)\|$ is constant on each coset $gSU(2)$, since $\pi$ is unitary, so that it is a function on $\mathcal{O}_m^+$. By Proposition~\ref{prop:orbit}, an equivariant function is determined by its restriction to the standard boosts.
+	
+	\begin{lemma}[Equivariant functions are sections]\label{lem:equivariant-sections}
+		The map $f\mapsto\psi_f$, $\psi_f(p):=f(A_p)$, is a bijection from $\mathcal{E}_\pi$ onto the Borel functions $\mathcal{O}_m^+\to V$, with inverse $\psi\mapsto f_\psi$, $f_\psi(A_pu):=\pi(u^{-1})\psi(p)$.
+	\end{lemma}
+	
+	\begin{proof}
+		By Proposition~\ref{prop:orbit} every $g$ is uniquely of the form $A_pu$, so $f_\psi$ is well defined and Borel. It satisfies Equation~\eqref{eq:equivariance}, since $f_\psi(A_puu')=\pi(u'^{-1})\pi(u^{-1})\psi(p)=\pi(u'^{-1})f_\psi(A_pu)$. Conversely, Equation~\eqref{eq:equivariance} gives $f(A_pu)=\pi(u^{-1})f(A_p)$, so $f=f_{\psi_f}$.
+	\end{proof}
+	
+	The action of the left translations on the sections is the central computation of this section. It produces the matrix which will be responsible for the lack of locality.
+	
+	\begin{proposition}[Induced action and Wigner rotation]\label{prop:induced-action}
+		For $g\in SL(2,\mathbb{C})$ and $p\in\mathcal{O}_m^+$ set
+		\begin{equation}\label{eq:wigner-rotation}
+			R_W(g,p):=A_p^{-1}\,g\,A_{\Lambda(g)^{-1}p}.
+		\end{equation}
+		Then $R_W(g,p)\in SU(2)$, and for all $f\in\mathcal{E}_\pi$
+		\begin{equation}\label{eq:induced-action}
+			\psi_{\mathcal{L}(g)f}(p)=\pi\big(R_W(g,p)\big)\,\psi_f\big(\Lambda(g)^{-1}p\big).
+		\end{equation}
+		Moreover $R_W(gg',p)=R_W(g,p)\,R_W(g',\Lambda(g)^{-1}p)$, $R_W(\mathbb{1},p)=\mathbb{1}$, and $R_W(u,p)=u$ for every $u\in SU(2)$.
+	\end{proposition}
+	
+	\begin{proof}
+		Let $q:=\Lambda(g)^{-1}p$. Since $\Lambda(g^{-1}A_p)\mathring{p}=\Lambda(g)^{-1}p=q$, Proposition~\ref{prop:orbit} gives $g^{-1}A_p=A_qh$ with $h\in SU(2)$, namely $h=A_q^{-1}g^{-1}A_p=R_W(g,p)^{-1}$. Hence $R_W(g,p)\in SU(2)$ and
+		\begin{equation*}
+			\psi_{\mathcal{L}(g)f}(p)=f(g^{-1}A_p)=f(A_qh)=\pi(h^{-1})f(A_q)=\pi(R_W(g,p))\,\psi_f(q).
+		\end{equation*}
+		For the cocycle relation, with $q=\Lambda(g)^{-1}p$,
+		\begin{equation*}
+			R_W(g,p)R_W(g',q)=A_p^{-1}gA_q\,A_q^{-1}g'A_{\Lambda(g')^{-1}q}=A_p^{-1}gg'A_{\Lambda(gg')^{-1}p}=R_W(gg',p).
+		\end{equation*}
+		The identity $R_W(\mathbb{1},p)=\mathbb{1}$ is immediate. If $u\in SU(2)$, then $u^{-1}A_pu$ is positive definite with square $u^{-1}\hat{p}u/m=\widehat{\Lambda(u)^{-1}p}/m$, so that $A_{\Lambda(u)^{-1}p}=u^{-1}A_pu$ and $R_W(u,p)=A_p^{-1}uu^{-1}A_pu=u$.
+	\end{proof}
+	
+	Equation~\eqref{eq:induced-action} shows that on the section $\psi_f$ the translation by $g$ acts by a rigid rotation of the value, by $R_W(g,p)$, composed with the relocation of the argument. For rotations $R_W(u,p)=u$ does not depend on $p$. For boosts it does, as we show below.
+	
+	\begin{definition}[Induced representation]\label{def:induced-rep}
+		Let $\mu$ be the measure of Lemma~\ref{lem:invariant-measure} and $\mathcal{H}_{m,j}:=L^2(\mathcal{O}_m^+,\mu;V)$. For $(a,g)\in\widetilde{\mathcal{P}}$ and $\psi\in\mathcal{H}_{m,j}$ we set
+		\begin{equation}\label{eq:induced-rep}
+			\big(U(a,g)\psi\big)(p):=e^{ia\cdot p/\hbar}\,\pi\big(R_W(g,p)\big)\,\psi\big(\Lambda(g)^{-1}p\big).
+		\end{equation}
+	\end{definition}
+	
+	\begin{proposition}\label{prop:induced-unitary}
+		$U$ is a strongly continuous unitary representation of $\widetilde{\mathcal{P}}$ on $\mathcal{H}_{m,j}$. Its spectral measure of the translations is $E(d)=\chi_d$, the multiplication by the characteristic function of $d\subseteq\mathcal{O}_m^+$, so that $P^2=m^2\mathbb{1}$, $H$ is the multiplication by $\omega(\mathbf{p})$, and the energy is positive.
+	\end{proposition}
+	
+	\begin{proof}
+		\emph{Homomorphism.} The translations act by multiplication by $e^{ia\cdot p/\hbar}$. Using the invariance $a'\cdot\Lambda(g)^{-1}p=\Lambda(g)a'\cdot p$ of the product and the cocycle relation of Proposition~\ref{prop:induced-action},
+		\begin{align*}
+			\big(U(a,g)U(a',g')\psi\big)(p)&=e^{ia\cdot p/\hbar}\pi(R_W(g,p))\,e^{i\Lambda(g)a'\cdot p/\hbar}\pi\big(R_W(g',\Lambda(g)^{-1}p)\big)\psi\big(\Lambda(gg')^{-1}p\big)\\
+			&=e^{i(a+\Lambda(g)a')\cdot p/\hbar}\pi\big(R_W(gg',p)\big)\psi\big(\Lambda(gg')^{-1}p\big)=\big(U((a,g)(a',g'))\psi\big)(p).
+		\end{align*}
+		\emph{Unitarity.} Since $\pi(R_W(g,p))$ is unitary and $\mu$ is invariant by Lemma~\ref{lem:invariant-measure},
+		\begin{equation*}
+			\|U(a,g)\psi\|^2=\int\|\psi(\Lambda(g)^{-1}p)\|^2\,d\mu(p)=\|\psi\|^2,
+		\end{equation*}
+		and $U(a,g)$ is invertible with inverse $U((a,g)^{-1})$.
+		
+		\emph{Strong continuity.} For $\psi$ continuous with compact support, $(a,g,p)\mapsto e^{ia\cdot p/\hbar}\pi(R_W(g,p))\psi(\Lambda(g)^{-1}p)$ is continuous. For $(a,g)$ in a compact neighbourhood its support lies in a fixed compact set, and it is bounded by $\sup\|\psi\|$. By dominated convergence $(a,g)\mapsto U(a,g)\psi$ is continuous in $L^2$. Such $\psi$ are dense and the $U(a,g)$ are isometries, so continuity holds for every $\psi$.
+		
+		The last statement is read off from Equation~\eqref{eq:induced-rep} with $g=\mathbb{1}$.
+	\end{proof}
+	
+	The converse is the classification theorem of Wigner and Mackey, which we recall without proof. It is the relativistic counterpart of Corollary~\ref{cor:schrodinger-realization}.
+	
+	\begin{theorem}[Wigner, Mackey]\label{thm:wigner-mackey}
+		For every $m>0$ and $j\in\{0,\frac12,1,\dots\}$ the representation $U=U_{m,j}$ of Definition~\ref{def:induced-rep} is irreducible. Conversely, every irreducible strongly continuous unitary representation $\Pi$ of $\widetilde{\mathcal{P}}$ of positive energy with $P^2=m^2\mathbb{1}$, $m>0$, is unitarily equivalent to exactly one $U_{m,j}$.
+	\end{theorem}
+	
+	\noindent See \cite[TODO-location]{TODO-Wigner1939} and \cite[TODO-location]{TODO-Mackey1958}. In the proof of the converse, Proposition~\ref{prop:mass-shell} shows that $(\Pi,E)$ is a system of imprimitivity based on the homogeneous space $\mathcal{O}_m^+=SL(2,\mathbb{C})/SU(2)$, and Mackey's theorem identifies such a system with a representation induced from a unitary representation of the stabilizer $SU(2)$, which is irreducible if and only if $\Pi$ is.
+	
+	\begin{remark}\label{rem:spin-half}
+		The theorem identifies an elementary relativistic system with a pair $(m,j)$, exactly as in Chapter~\ref{ch:analytical-hamiltonians} an elementary Galilean system was labelled by $(m,j)$ after Corollary~\ref{cor:schrodinger-realization}. Combined with Proposition~\ref{prop:poincare-lift}, Proposition~\ref{prop:mass-shell} and Theorem~\ref{thm:relativistic-hamiltonian}, it says that an irreducible Poincar\'e action of positive energy and mass $m>0$ is realized, up to unitary equivalence, on $\mathcal{H}_{m,j}$ with $H=\omega(\mathbf{P})$. From now on we take $j=\frac12$, which is the case of the Dirac equation, so that $V=\mathbb{C}^2$ and $\pi(u)=u$.
+	\end{remark}
+	
+	\subsection*{The Wigner Rotation Depends on the Momentum}
+	
+	The matrix $R_W(g,p)$ is independent of $p$ for rotations. We now show that it is not so for boosts, which will be the origin of the problem treated in Section~\ref{sec:locality}.
+	
+	\begin{proposition}[Momentum dependence of the Wigner rotation]\label{prop:wigner-rotation}
+		Let $q\in\mathcal{O}_m^+$ with $\mathbf{q}\neq\mathbf{0}$, and let $p'\in\mathcal{O}_m^+$ and $p:=\Lambda(A_q)p'$. Then $R_W(A_q,p)=\mathbb{1}$ if and only if $\mathbf{q}\times\mathbf{p}'=\mathbf{0}$. In particular $p\mapsto R_W(A_q,p)$ is not constant, since $R_W(A_q,\mathring{p})=\mathbb{1}$ whereas $R_W(A_q,p)\neq\mathbb{1}$ if $\mathbf{p}'$ is not parallel to $\mathbf{q}$.
+	\end{proposition}
+	
+	\begin{proof}
+		Since $\Lambda(A_q)^{-1}p=p'$, $R_W(A_q,p)=A_p^{-1}A_qA_{p'}$, which equals $\mathbb{1}$ if and only if $A_p=A_qA_{p'}$. If this holds, $A_qA_{p'}$ is Hermitian, hence $A_qA_{p'}=(A_qA_{p'})^\dagger=A_{p'}A_q$, so $\hat{q}=mA_q^2$ and $\hat{p}'=mA_{p'}^2$ commute. Using $[\mathbf{a}\cdot\boldsymbol{\sigma},\mathbf{b}\cdot\boldsymbol{\sigma}]=2i(\mathbf{a}\times\mathbf{b})\cdot\boldsymbol{\sigma}$ we obtain $\mathbf{q}\times\mathbf{p}'=\mathbf{0}$. Conversely, if $\mathbf{q}\times\mathbf{p}'=\mathbf{0}$, then $\hat{q}$ and $\hat{p}'$ commute, and so do $A_q$ and $A_{p'}$, which are polynomials in them by Equation~\eqref{eq:standard-boost}. Then $A_qA_{p'}$ is positive definite and Hermitian, and $\Lambda(A_qA_{p'})\mathring{p}=\Lambda(A_q)p'=p$, so $A_qA_{p'}=A_p$ by the uniqueness in item 3 of Proposition~\ref{prop:orbit}. For the last claim, $\mathring{p}=\Lambda(A_q)p'$ with $p'=\mathsf{P}q$, and $\mathbf{p}'=-\mathbf{q}$ is parallel to $\mathbf{q}$.
+	\end{proof}
+	
+	\begin{remark}
+		Proposition~\ref{prop:wigner-rotation} is the Thomas--Wigner rotation: the composition of two boosts with non-collinear directions is a boost followed by a rotation. For $j=\frac12$ the representation $\pi$ is the defining one, so $\pi(R_W(A_q,\cdot))$ is not constant either. Thus a boost acts on the spin of a particle of momentum $p$ by a rotation which depends on $p$, and it is not possible to speak of the spin of the particle independently of its momentum. In the Galilean case no such effect exists, because $B(\mathbf{v})$ acts on $\mathbb{C}^{2j+1}$ trivially.
+	\end{remark}
+	
+	\subsection*{Space Inversion on the Induced Representation}
+	
+	Space inversion will be needed in Section~\ref{sec:locality}. Its action on the induced representation is local, \textit{i.e.}, free of Wigner rotations, and this is the property that will be transported to the field space.
+	
+	\begin{lemma}[Parity on the induced representation]\label{lem:parity-induced}
+		For $\epsilon\in\{+1,-1\}$ let $(U^\epsilon(\mathsf{P})\psi)(p):=\epsilon\,\psi(\mathsf{P}p)$ on $\mathcal{H}_{m,j}$. Then $U^\epsilon(\mathsf{P})$ is unitary, $U^\epsilon(\mathsf{P})^2=\mathbb{1}$, and
+		\begin{equation}\label{eq:parity-covariance-induced}
+			U^\epsilon(\mathsf{P})\,U(a,g)\,U^\epsilon(\mathsf{P})^{-1}=U(\mathsf{P}a,\theta(g)).
+		\end{equation}
+	\end{lemma}
+	
+	\begin{proof}
+		Unitarity follows from the invariance of $\mu$ under $\mathsf{P}$ (Lemma~\ref{lem:invariant-measure}), and $U^\epsilon(\mathsf{P})^2=\mathbb{1}$ from $\mathsf{P}^2=\mathrm{id}$ and $\epsilon^2=1$. We first show that $R_W(\theta(g),p)=R_W(g,\mathsf{P}p)$. By Equations~\eqref{eq:theta-lambda} and~\eqref{eq:theta-boost},
+		\begin{equation*}
+			R_W(\theta(g),p)=A_p^{-1}\theta(g)A_{\mathsf{P}\Lambda(g)^{-1}\mathsf{P}p}=\theta(A_{\mathsf{P}p})^{-1}\,\theta(g)\,\theta\big(A_{\Lambda(g)^{-1}\mathsf{P}p}\big)=\theta\big(R_W(g,\mathsf{P}p)\big)=R_W(g,\mathsf{P}p),
+		\end{equation*}
+		where the last equality holds because $R_W(g,\mathsf{P}p)\in SU(2)$ and $\theta$ is the identity on $SU(2)$. Then, using $a\cdot\mathsf{P}p=\mathsf{P}a\cdot p$ and $\mathsf{P}\Lambda(g)^{-1}\mathsf{P}=\Lambda(\theta(g))^{-1}$,
+		\begin{align*}
+			\big(U^\epsilon(\mathsf{P})U(a,g)U^\epsilon(\mathsf{P})^{-1}\psi\big)(p)&=\epsilon\,e^{ia\cdot\mathsf{P}p/\hbar}\pi(R_W(g,\mathsf{P}p))\,\epsilon\,\psi\big(\mathsf{P}\Lambda(g)^{-1}\mathsf{P}p\big)\\
+			&=e^{i\mathsf{P}a\cdot p/\hbar}\pi\big(R_W(\theta(g),p)\big)\psi\big(\Lambda(\theta(g))^{-1}p\big)=\big(U(\mathsf{P}a,\theta(g))\psi\big)(p).\qedhere
+		\end{align*}
+	\end{proof}
+	
+	\noindent The two signs $\epsilon=\pm1$ are the two possible intrinsic parities. They are not distinguished by the group relations, as will be seen again in Remark~\ref{rem:intrinsic-parity}.
+	
+	% =====================================================================
+	\section{Locality and the Spinorial Extension}
+	\label{sec:locality}
+	
+	The representation $U_{m,j}$ is unitary, irreducible, and it contains all the content of an elementary relativistic system. Its defect is that the transformation law~\eqref{eq:induced-rep} involves the matrix $\pi(R_W(g,p))$, which depends on the integration variable $p$ once the state is written in position space. In this section we make this precise, we prove that the defect cannot be removed as long as the transformation matrices are required to be unitary, and we show that the minimal way out which respects space inversion is the Dirac space $\mathbb{C}^4$.
+	
+	\subsection*{Local Covariant Realizations}
+	
+	A transformation law is local if the value of the field at a point is mapped to the value at the transformed point by a matrix which does not depend on the point. In momentum space this means a matrix independent of $p$. We therefore look for realizations of the induced representation of the following type.
+	
+	\begin{definition}[Local covariant realization]\label{def:local-realization}
+		Let $(\pi,V)$ be as in Definition~\ref{def:spin-data}. A \emph{local covariant realization} of $(\pi,V)$ is a triple $(D,W,\iota)$, where $W$ is a finite-dimensional complex vector space, $D:SL(2,\mathbb{C})\to GL(W)$ is a continuous homomorphism, not required to be unitary, and $\iota:V\to W$ is an injective linear map with
+		\begin{equation}\label{eq:iota-intertwiner}
+			\iota\,\pi(u)=D(u)\,\iota, \qquad u\in SU(2).
+		\end{equation}
+		We set $F(\mathring{p}):=\iota(V)$ and $F(p):=D(A_p)F(\mathring{p})$ for $p\in\mathcal{O}_m^+$, and we denote by $\mathcal{F}_D$ the space of Borel fields $\Psi:\mathcal{O}_m^+\to W$ with $\Psi(p)\in F(p)$ for all $p$. The group acts on $\mathcal{F}_D$ by
+		\begin{equation}\label{eq:local-action}
+			\big(\mathcal{U}_D(a,g)\Psi\big)(p):=e^{ia\cdot p/\hbar}\,D(g)\,\Psi\big(\Lambda(g)^{-1}p\big).
+		\end{equation}
+	\end{definition}
+	
+	The matrix $D(g)$ in Equation~\eqref{eq:local-action} does not depend on $p$, in contrast with $\pi(R_W(g,p))$ in Equation~\eqref{eq:induced-rep}. The price is that the fields are constrained to lie in $F(p)$. The two descriptions are equivalent, and the equivalence is where Equation~\eqref{eq:iota-intertwiner} is used.
+	
+	\begin{lemma}[Local realization of the induced representation]\label{lem:local-realization}
+		Let $(D,W,\iota)$ be a local covariant realization of $(\pi,V)$. The map
+		\begin{equation*}
+			(J\psi)(p):=D(A_p)\,\iota\,\psi(p)
+		\end{equation*}
+		is a linear bijection from the Borel functions $\mathcal{O}_m^+\to V$ onto $\mathcal{F}_D$, and, with $U(a,g)$ acting on Borel functions by Equation~\eqref{eq:induced-rep},
+		\begin{equation}\label{eq:J-intertwines}
+			J\,U(a,g)=\mathcal{U}_D(a,g)\,J.
+		\end{equation}
+		In particular $\mathcal{F}_D$ is invariant under $\mathcal{U}_D$, and $\mathcal{U}_D$ is a representation of $\widetilde{\mathcal{P}}$.
+	\end{lemma}
+	
+	\begin{proof}
+		$J$ is clearly linear, with values in $\mathcal{F}_D$, and it is bijective because $\iota$ is injective and $D(A_p)$ is invertible: the inverse is $\psi(p)=\iota^{-1}D(A_p)^{-1}\Psi(p)$ on the range of $\iota$. For Equation~\eqref{eq:J-intertwines}, let $q:=\Lambda(g)^{-1}p$. By Equation~\eqref{eq:wigner-rotation}, $gA_q=A_pR_W(g,p)$, and by Equation~\eqref{eq:iota-intertwiner}
+		\begin{align*}
+			\big(\mathcal{U}_D(a,g)J\psi\big)(p)&=e^{ia\cdot p/\hbar}D(g)D(A_q)\,\iota\,\psi(q)=e^{ia\cdot p/\hbar}D(A_p)D\big(R_W(g,p)\big)\iota\,\psi(q)\\
+			&=e^{ia\cdot p/\hbar}D(A_p)\,\iota\,\pi\big(R_W(g,p)\big)\psi(q)=\big(J\,U(a,g)\psi\big)(p).
+		\end{align*}
+		Hence $\mathcal{U}_D(a,g)$ maps $\mathcal{F}_D$ into itself, and $\mathcal{U}_D=JUJ^{-1}$ is a representation.
+	\end{proof}
+	
+	\begin{remark}[Locality in position space]\label{rem:position-space}
+		For a field $\Psi$ for which the integral converges, for instance continuous with compact support on $\mathcal{O}_m^+$, set $\Psi(x):=\int e^{-ip\cdot x/\hbar}\Psi(p)\,d\mu(p)$. The change of variables $p=\Lambda(g)q$ and the invariance of $\mu$ give
+		\begin{equation*}
+			\big(\mathcal{U}_D(a,g)\Psi\big)(x)=D(g)\,\Psi\big(\Lambda(g)^{-1}(x-a)\big).
+		\end{equation*}
+		This is a local transformation law: the value at $x$ is transformed into the value at the transformed point by the fixed matrix $D(g)$. For the induced representation the same computation gives
+		\begin{equation*}
+			\int e^{-ip\cdot x/\hbar}\,\pi\big(R_W(g,p)\big)\,\psi\big(\Lambda(g)^{-1}p\big)\,d\mu(p),
+		\end{equation*}
+		in which the matrix depends on the integration variable and cannot be taken out of the integral. By Proposition~\ref{prop:wigner-rotation} it is not constant in $p$. A change of the section $p\mapsto A_p$ would replace $R_W$ by a cohomologous cocycle and does not change this conclusion, see Proposition~\ref{prop:no-local-unitary}.
+	\end{remark}
+	
+	\subsection*{The Lorentz Algebra and its Chiral Decomposition}
+	
+	The next step is to find the finite-dimensional representations of $SL(2,\mathbb{C})$ which can serve as $D$. They are classified through the complexification of the Lie algebra, where rotations and boosts combine into two commuting copies of $\mathfrak{su}(2)$. We write $\mathfrak{sl}(2,\mathbb{C})_{\mathbb{C}}:=\mathfrak{sl}(2,\mathbb{C})\otimes_{\mathbb{R}}\mathbb{C}$. The differential of a continuous finite-dimensional representation $D$ is a homomorphism of real Lie algebras, which we extend complex-linearly to $\mathfrak{sl}(2,\mathbb{C})_{\mathbb{C}}$.
+	
+	\begin{lemma}[Chiral decomposition]\label{lem:chiral}
+		In $\mathfrak{sl}(2,\mathbb{C})_{\mathbb{C}}$ let $A_k:=\frac12(r_k-ib_k)$ and $B_k:=\frac12(r_k+ib_k)$. Then
+		\begin{equation}\label{eq:chiral-brackets}
+			[A_j,A_k]=\sum_l\varepsilon_{jkl}A_l, \qquad [B_j,B_k]=\sum_l\varepsilon_{jkl}B_l, \qquad [A_j,B_k]=0,
+		\end{equation}
+		and $r_k=A_k+B_k$, $b_k=i(A_k-B_k)$. Hence $\mathfrak{sl}(2,\mathbb{C})_{\mathbb{C}}\cong\mathfrak{su}(2)_{\mathbb{C}}\oplus\mathfrak{su}(2)_{\mathbb{C}}$, the sum of the two commuting ideals spanned by the $A_k$ and by the $B_k$.
+	\end{lemma}
+	
+	\begin{proof}
+		By Equation~\eqref{eq:lorentz-brackets}, and using $[b_j,r_k]=\sum_l\varepsilon_{jkl}b_l$,
+		\begin{align*}
+			[A_j,A_k]&=\tfrac14\big([r_j,r_k]-i[r_j,b_k]-i[b_j,r_k]-[b_j,b_k]\big)=\tfrac14\sum_l\varepsilon_{jkl}\big(2r_l-2ib_l\big)=\sum_l\varepsilon_{jkl}A_l,\\
+			[A_j,B_k]&=\tfrac14\big([r_j,r_k]+i[r_j,b_k]-i[b_j,r_k]+[b_j,b_k]\big)=\tfrac14\sum_l\varepsilon_{jkl}\big(r_l+ib_l-ib_l-r_l\big)=0,
+		\end{align*}
+		and the computation for $B$ is the complex conjugate of the first one. The expressions of $r_k$ and $b_k$ are solved from the definitions.
+	\end{proof}
+	
+	We introduce the two spinor representations which will be the building blocks of the Dirac space.
+	
+	\begin{definition}[Weyl spinors]\label{def:weyl-spinors}
+		On $\mathbb{C}^2$ we define
+		\begin{equation*}
+			D^{(1/2,0)}(g):=g, \qquad D^{(0,1/2)}(g):=(g^\dagger)^{-1}=\theta(g),
+		\end{equation*}
+		which we call the \emph{left-handed} and the \emph{right-handed Weyl representation}. Their differentials are
+		\begin{equation*}
+			dD^{(1/2,0)}(X)=X, \qquad dD^{(0,1/2)}(X)=-X^\dagger.
+		\end{equation*}
+	\end{definition}
+	
+	\noindent By Lemma~\ref{lem:chiral}, $dD^{(1/2,0)}$ sends $A_k\mapsto-\tfrac{i}{2}\sigma_k$ and $B_k\mapsto0$, whereas $dD^{(0,1/2)}$ sends $A_k\mapsto0$ and $B_k\mapsto-\tfrac{i}{2}\sigma_k$. Thus in the first one only the factor $A$ acts, with spin $\frac12$, and in the second one only the factor $B$ does. Both representations restrict to $\pi$ on $SU(2)$, because $\theta|_{SU(2)}=\mathrm{id}$. By Lemma~\ref{lem:inversion}, $D^{(1/2,0)}\circ\theta=D^{(0,1/2)}$ and $D^{(0,1/2)}\circ\theta=D^{(1/2,0)}$.
+	
+	\begin{theorem}[Finite-dimensional representations of $SL(2,\mathbb{C})$]\label{thm:finite-reps}
+		Every finite-dimensional continuous complex representation of $SL(2,\mathbb{C})$ is completely reducible. The irreducible ones are the representations $D^{(j_1,j_2)}$, $j_1,j_2\in\{0,\frac12,1,\dots\}$, in which the $A_k$ act as a representation of spin $j_1$ and the $B_k$ as a representation of spin $j_2$. Moreover $D^{(j_1,j_2)}|_{SU(2)}\cong d_{j_1}\otimes d_{j_2}$ and $D^{(j_1,j_2)}\circ\theta\cong D^{(j_2,j_1)}$.
+	\end{theorem}
+	
+	\noindent See \cite[TODO-location]{TODO-Hal03}. The last statement follows from $d\theta(r_k)=r_k$ and $d\theta(b_k)=-b_k$, which exchange $A_k$ and $B_k$.
+	
+	We now show why unitarity must be abandoned. A finite-dimensional unitary representation of the Lorentz group would be the natural candidate for a local transformation law, but it does not exist.
+	
+	\begin{proposition}[No finite-dimensional unitary representations]\label{prop:no-unitary}
+		Every continuous homomorphism $M:SL(2,\mathbb{C})\to U(n)$ is trivial.
+	\end{proposition}
+	
+	\begin{proof}
+		$M$ is smooth, and its differential maps $\mathfrak{sl}(2,\mathbb{C})$ into the skew-Hermitian matrices. Set $X_k:=dM(A_k)$ and $Y_k:=dM(B_k)$. Then $dM(r_k)=X_k+Y_k$ is skew-Hermitian, and $dM(b_k)=i(X_k-Y_k)$ is skew-Hermitian, \textit{i.e.}, $X_k-Y_k$ is Hermitian. Adding the two conditions, $X_k^\dagger=-Y_k$. By Equation~\eqref{eq:chiral-brackets}, $[X_j,Y_k]=0$, that is $[X_j,X_k^\dagger]=0$ for all $j,k$, and $X_3=[X_1,X_2]$. Using $X_2X_3^\dagger=X_3^\dagger X_2$ and cyclicity of the trace,
+		\begin{equation*}
+			\operatorname{tr}(X_3X_3^\dagger)=\operatorname{tr}(X_1X_2X_3^\dagger)-\operatorname{tr}(X_2X_1X_3^\dagger)=\operatorname{tr}(X_1X_3^\dagger X_2)-\operatorname{tr}(X_2X_1X_3^\dagger)=0.
+		\end{equation*}
+		Hence $X_3=0$, and by cyclic permutation $X_1=X_2=0$, so $Y_k=-X_k^\dagger=0$ and $dM=0$. Since $SL(2,\mathbb{C})$ is connected, $M$ is trivial.
+	\end{proof}
+	
+	\begin{proposition}[Obstruction to a local unitary realization]\label{prop:no-local-unitary}
+		Let $V'$ be a finite-dimensional Hilbert space and $M:SL(2,\mathbb{C})\to GL(V')$ a continuous representation such that
+		\begin{equation*}
+			\big(\mathcal{U}_M(a,g)\psi\big)(p):=e^{ia\cdot p/\hbar}\,M(g)\,\psi\big(\Lambda(g)^{-1}p\big)
+		\end{equation*}
+		is unitary on $L^2(\mathcal{O}_m^+,\mu;V')$ for all $(a,g)$. Then $M$ is trivial. Consequently, for half-integer $j$ the representation $U_{m,j}$ is not unitarily equivalent to any representation of this form.
+	\end{proposition}
+	
+	\begin{proof}
+		Take $\psi=\chi_Bv$, with $v\in V'$ and $B$ a Borel set with $0<\mu(B)<\infty$. By the invariance of $\mu$, $\|\mathcal{U}_M(0,g)\psi\|^2=\mu(B)\|M(g)v\|^2$, which equals $\|\psi\|^2=\mu(B)\|v\|^2$. Hence $M(g)$ is unitary, and Proposition~\ref{prop:no-unitary} gives $M=\mathbb{1}$. For half-integer $j$, $R_W(-\mathbb{1},p)=-\mathbb{1}$ and $\Lambda(-\mathbb{1})=\mathrm{id}$, so that $U_{m,j}(0,-\mathbb{1})=\pi(-\mathbb{1})=-\mathbb{1}$, whereas $\mathcal{U}_M(0,-\mathbb{1})=M(-\mathbb{1})=\mathbb{1}$.
+	\end{proof}
+	
+	\begin{remark}
+		Proposition~\ref{prop:no-local-unitary} is the precise form of the statement that spin and momentum cannot be separated. It also explains the first move of the strategy: the matrices $D(g)$ of a local realization cannot be unitary, and therefore the Euclidean norm of $W$ cannot be the norm of the representation. Unitarity of $\mathcal{U}_D$ will be recovered in Section~\ref{sec:probability} with a different, indefinite on $W$ but positive on $F(p)$, Hermitian form.
+	\end{remark}
+	
+	\begin{remark}[A single Weyl spinor is already local]\label{rem:weyl-realization}
+		Locality alone does not force a wave equation, nor a doubling of components. Take $W=\mathbb{C}^2$, $D=D^{(1/2,0)}$ and $\iota=\mathrm{id}$, so that $F(p)=\mathbb{C}^2$ for every $p$ and $\Psi(p)=A_p\psi(p)$. By Lemma~\ref{lem:local-realization} this is a local realization of the induced representation with $j=\frac12$, with no constraint at all. The norm of $\psi$ is $\int\Psi^\dagger\,(\tilde{p}/m)\,\Psi\,d\mu$ by Equation~\eqref{eq:standard-boost}, and it is Lorentz invariant because Equation~\eqref{eq:tilde-covariance} gives $g^\dagger\,\widetilde{\Lambda(g)p}\,g=\tilde{p}$. What a single Weyl spinor cannot do is accommodate space inversion, as we now show.
+	\end{remark}
+	
+	\subsection*{Space Inversion and the Doubling of Spinors}
+	
+	In the Galilean chapter no discrete symmetry was needed. Here we add, as an input, invariance under space inversion, in the same way as Definition~\ref{def:poincare-action} adds Poincar\'e invariance. This is not a consequence of the Poincar\'e group and of the Kähler structure, and weak interactions show that it is not a universal law of nature. It holds for a free massive particle, as Lemma~\ref{lem:parity-induced} proves, and it is a symmetry that a field theory of a parity-invariant interaction would require to be implemented locally.
+	
+	\begin{definition}[Parity-covariant local realization]\label{def:parity-realization}
+		Let $(D,W,\iota)$ be a local covariant realization. A \emph{parity matrix} for it is a matrix $M\in GL(W)$ with $M^2=\mathbb{1}$ and
+		\begin{equation}\label{eq:parity-matrix}
+			M\,D(g)\,M^{-1}=D(\theta(g)), \qquad g\in SL(2,\mathbb{C}).
+		\end{equation}
+		Space inversion acts on fields by $(\mathcal{U}_D(\mathsf{P})\Psi)(p):=M\,\Psi(\mathsf{P}p)$.
+	\end{definition}
+	
+	\noindent As in the proof of Lemma~\ref{lem:parity-induced}, Equation~\eqref{eq:parity-matrix} and $\mathsf{P}\Lambda(g)^{-1}\mathsf{P}=\Lambda(\theta(g))^{-1}$ give $\mathcal{U}_D(\mathsf{P})\mathcal{U}_D(a,g)\mathcal{U}_D(\mathsf{P})^{-1}=\mathcal{U}_D(\mathsf{P}a,\theta(g))$. So $\mathcal{U}_D$ extends to the group generated by $\widetilde{\mathcal{P}}$ and an involution $\mathsf{P}$ acting on $\widetilde{\mathcal{P}}$ by $(a,g)\mapsto(\mathsf{P}a,\theta(g))$. There is another double covering of the orthochronous Lorentz group with inversions, in which $\mathsf{P}^2=-\mathbb{1}$, and we do not consider it.
+	
+	\begin{lemma}[Parity stability]\label{lem:parity-stable}
+		Let $(D,W,\iota)$ be a local covariant realization with a parity matrix $M$. Then $\mathcal{F}_D$ is invariant under $\mathcal{U}_D(\mathsf{P})$ if and only if $M F(\mathring{p})=F(\mathring{p})$. In this case $M F(p)=F(\mathsf{P}p)$ for all $p\in\mathcal{O}_m^+$.
+	\end{lemma}
+	
+	\begin{proof}
+		By Equations~\eqref{eq:parity-matrix} and~\eqref{eq:theta-boost},
+		\begin{equation*}
+			MD(A_p)=D(\theta(A_p))M=D(A_{\mathsf{P}p})M, \qquad \text{hence}\qquad MF(p)=D(A_{\mathsf{P}p})MF(\mathring{p}).
+		\end{equation*}
+		If $MF(\mathring{p})=F(\mathring{p})$, then $MF(p)=F(\mathsf{P}p)$ for all $p$, and $M\Psi(\mathsf{P}p)\in MF(\mathsf{P}p)=F(p)$. Conversely, invariance of $\mathcal{F}_D$ means $MF(\mathsf{P}p)\subseteq F(p)$ for all $p$, and $p=\mathring{p}$ gives $MF(\mathring{p})\subseteq F(\mathring{p})$, with equality because $M$ is invertible.
+	\end{proof}
+	
+	The Weyl representations cannot carry such a matrix. This is the algebraic form of the fact that parity exchanges the two chiralities.
+	
+	\begin{proposition}[The parity problem]\label{prop:parity-problem}
+		\begin{enumerate}
+			\item There is no $T\in GL(2,\mathbb{C})$ with $T\,g\,T^{-1}=(g^\dagger)^{-1}$ for all $g\in SL(2,\mathbb{C})$. In particular $D^{(1/2,0)}$ and $D^{(0,1/2)}$ are not equivalent.
+			\item Consequently neither $D^{(1/2,0)}$ nor $D^{(0,1/2)}$ admits a parity matrix.
+		\end{enumerate}
+	\end{proposition}
+	
+	\begin{proof}
+		Item 1. Suppose $T$ exists. For $u\in SU(2)$, $(u^\dagger)^{-1}=u$, so $T$ commutes with all of $SU(2)$, and $T=c\,\mathbb{1}$ by Schur's lemma (Lemma~\ref{lem:schur}), since the defining representation of $SU(2)$ on $\mathbb{C}^2$ is irreducible. Then $g=(g^\dagger)^{-1}$ for all $g\in SL(2,\mathbb{C})$, which is false for $g=\operatorname{diag}(2,\tfrac12)$.
+		
+		Item 2. A parity matrix for $D^{(1/2,0)}$ would satisfy $MgM^{-1}=D^{(1/2,0)}(\theta(g))=(g^\dagger)^{-1}$, which contradicts item 1. For $D^{(0,1/2)}$, Equation~\eqref{eq:parity-matrix} reads $M(g^\dagger)^{-1}M^{-1}=g$, and $g\mapsto\theta(g)$ turns this into the same contradiction.
+	\end{proof}
+	
+	The failure is a failure of equivalence between $D$ and $D\circ\theta$, and any parity-covariant realization of a spin $\frac12$ particle must therefore contain both chiralities. The smallest way to do so is unique.
+	
+	\begin{proposition}[Minimal parity-covariant space]\label{prop:minimal-extension}
+		Let $(D,W,\iota)$ be a local covariant realization of $(d_{1/2},\mathbb{C}^2)$ with a parity matrix $M$. Then $\dim W\geq4$, and $\dim W=4$ if and only if $D\cong D^{(1/2,0)}\oplus D^{(0,1/2)}$.
+	\end{proposition}
+	
+	\begin{proof}
+		By Theorem~\ref{thm:finite-reps}, $D\cong\bigoplus_{(j_1,j_2)}n(j_1,j_2)\,D^{(j_1,j_2)}$ with multiplicities $n(j_1,j_2)\in\mathbb{N}$. Equation~\eqref{eq:parity-matrix} says that $M$ is an equivalence between $D$ and $D\circ\theta\cong\bigoplus n(j_1,j_2)D^{(j_2,j_1)}$, so $n(j_1,j_2)=n(j_2,j_1)$. The map $\iota$ embeds $d_{1/2}$ in $D|_{SU(2)}$, so some summand $(j_1,j_2)$ with $n(j_1,j_2)>0$ has $d_{j_1}\otimes d_{j_2}=\bigoplus_{J=|j_1-j_2|}^{j_1+j_2}d_J\ni d_{1/2}$. This requires $|j_1-j_2|\leq\frac12$ and $\frac12-|j_1-j_2|\in\mathbb{Z}$, \textit{i.e.}, $|j_1-j_2|=\frac12$. In particular $j_1\neq j_2$, so that $(j_2,j_1)$ is also present, and
+		\begin{equation*}
+			\dim W\geq2(2j_1+1)(2j_2+1)\geq4,
+		\end{equation*}
+		with equality if and only if $\{j_1,j_2\}=\{0,\tfrac12\}$ and $W$ contains nothing else.
+	\end{proof}
+	
+	\begin{definition}[Dirac space]\label{def:dirac-space}
+		The \emph{Dirac space} is $W_{\mathrm{D}}:=\mathbb{C}^4=\mathbb{C}^2\oplus\mathbb{C}^2$ with the representation and the matrix
+		\begin{equation*}
+			D(g):=\begin{pmatrix}g&0\\0&(g^\dagger)^{-1}\end{pmatrix},\qquad \gamma^0:=\begin{pmatrix}0&\mathbb{1}\\\mathbb{1}&0\end{pmatrix},
+		\end{equation*}
+		\textit{i.e.}, $D=D^{(1/2,0)}\oplus D^{(0,1/2)}$. We write $\gamma_0=\gamma^0$ and $M:=\gamma^0$.
+	\end{definition}
+	
+	\begin{lemma}\label{lem:dirac-space}
+		\begin{enumerate}
+			\item $(\gamma^0)^2=\mathbb{1}$, $\gamma^0$ is Hermitian, and $\gamma^0D(g)\gamma^0=D(\theta(g))$, so $\gamma^0$ is a parity matrix.
+			\item $D(g)^\dagger\gamma^0D(g)=\gamma^0$ for all $g\in SL(2,\mathbb{C})$.
+			\item $D(u)=\operatorname{diag}(u,u)$ is unitary for $u\in SU(2)$, and $D(A_p)=\operatorname{diag}(A_p,A_p^{-1})$.
+		\end{enumerate}
+	\end{lemma}
+	
+	\begin{proof}
+		Item 1. $\gamma^0D(g)\gamma^0=\operatorname{diag}((g^\dagger)^{-1},g)=D(\theta(g))$ because $\theta(g)^\dagger=g^{-1}$. Item 2.
+		\begin{equation*}
+			D(g)^\dagger\gamma^0D(g)=\begin{pmatrix}g^\dagger&0\\0&g^{-1}\end{pmatrix}\begin{pmatrix}0&\mathbb{1}\\\mathbb{1}&0\end{pmatrix}\begin{pmatrix}g&0\\0&(g^\dagger)^{-1}\end{pmatrix}=\begin{pmatrix}0&g^\dagger(g^\dagger)^{-1}\\g^{-1}g&0\end{pmatrix}=\gamma^0.
+		\end{equation*}
+		Item 3 follows from $\theta(u)=u$ and $\theta(A_p)=A_p^{-1}$, Equation~\eqref{eq:theta-boost}.
+	\end{proof}
+	
+	% =====================================================================
+	\section{The Rest Condition: Identification of the Physical Subspace}
+	\label{sec:rest}
+	
+	From now on $j=\frac12$, $V=\mathbb{C}^2$ and $W=W_{\mathrm{D}}$. A local covariant realization $(D,W_{\mathrm{D}},\iota)$ is determined by the subspace $F(\mathring{p})=\iota(V)\subseteq\mathbb{C}^4$, because all the other $F(p)$ are obtained from it by Equation~\eqref{eq:local-action} and Definition~\ref{def:local-realization}. In the rest frame the only symmetry left is $SU(2)$, together with space inversion, which fixes $\mathring{p}$. We determine $F(\mathring{p})$ from these two requirements, which are the only inputs.
+	
+	\subsection*{Kinematic Decoupling}
+	
+	Restricted to the stabilizer, the Dirac space decomposes in a way that separates the spin from the chirality. Identify $(\xi,\zeta)\in\mathbb{C}^2\oplus\mathbb{C}^2$ with $\xi\otimes e_1+\zeta\otimes e_2$, where $e_1,e_2$ is the canonical basis of $\mathbb{C}^2_{\mathrm{mult}}$. We obtain
+	\begin{equation*}
+		\mathbb{C}^4\cong\mathbb{C}^2_{\mathrm{spin}}\otimes\mathbb{C}^2_{\mathrm{mult}}, \qquad D(u)=u\otimes\mathbb{1}, \qquad \gamma^0=\mathbb{1}\otimes\sigma_1,
+	\end{equation*}
+	since $\gamma^0(\xi,\zeta)=(\zeta,\xi)\leftrightarrow\zeta\otimes e_1+\xi\otimes e_2=(\mathbb{1}\otimes\sigma_1)(\xi\otimes e_1+\zeta\otimes e_2)$. Thus the rotations act only on the spin factor, and the parity matrix only on the multiplicity factor. This is the reason why the two requirements do not interfere.
+	
+	\begin{lemma}[$SU(2)$-invariant subspaces]\label{lem:su2-subspaces}
+		The $SU(2)$-invariant subspaces of $\mathbb{C}^4$ are the subspaces $\mathbb{C}^2_{\mathrm{spin}}\otimes L$ with $L\subseteq\mathbb{C}^2_{\mathrm{mult}}$ a subspace, and such a subspace is isomorphic to the spin $\frac12$ representation if and only if $\dim L=1$. The invariant subspaces isomorphic to spin $\frac12$ form a family parametrized by $L\in\mathbb{CP}^1$.
+	\end{lemma}
+	
+	\begin{proof}
+		Since $D|_{SU(2)}$ is unitary, the orthogonal projector $Q$ onto an invariant subspace commutes with all $u\otimes\mathbb{1}$. The matrices $u\in SU(2)$ span $M_2(\mathbb{C})$, as the defining representation is irreducible (Burnside), and the commutant of $M_2(\mathbb{C})\otimes\mathbb{1}$ is $\mathbb{1}\otimes M_2(\mathbb{C})$. Hence $Q=\mathbb{1}\otimes Q'$ with $Q'$ a projector in $M_2(\mathbb{C})$, and the subspace is $\mathbb{C}^2\otimes\operatorname{ran}Q'$. It is isomorphic to $(\dim L)$ copies of spin $\frac12$.
+	\end{proof}
+	
+	So the requirement that $F(\mathring{p})$ carries exactly one copy of the spin $\frac12$ representation, as Equation~\eqref{eq:iota-intertwiner} demands, leaves a whole complex projective line of possibilities. Invariance under space inversion removes all but two.
+	
+	\begin{proposition}[Selection of the rest subspace]\label{prop:rest-selection}
+		Let $(D,W_{\mathrm{D}},\iota)$ be a local covariant realization of $(d_{1/2},\mathbb{C}^2)$ such that $\mathcal{F}_D$ is invariant under $\mathcal{U}_D(\mathsf{P})$, with $M=\gamma^0$. Then there is $\epsilon\in\{+1,-1\}$ with
+		\begin{equation}\label{eq:rest-subspace}
+			F(\mathring{p})=\{\varphi\in\mathbb{C}^4\mid\gamma^0\varphi=\epsilon\varphi\}=\{(\eta,\epsilon\eta)\mid\eta\in\mathbb{C}^2\},
+		\end{equation}
+		$\iota$ is a multiple of $\iota_\epsilon\eta:=(\eta,\epsilon\eta)$, and, with $\iota=\iota_\epsilon$,
+		\begin{equation*}
+			J\,U^\epsilon(\mathsf{P})=\mathcal{U}_D(\mathsf{P})\,J.
+		\end{equation*}
+		Conversely, for each $\epsilon$ the triple $(D,W_{\mathrm{D}},\iota_\epsilon)$ is a local covariant realization for which $\mathcal{F}_D$ is parity invariant.
+	\end{proposition}
+	
+	\begin{proof}
+		By Equation~\eqref{eq:iota-intertwiner} and Lemma~\ref{lem:su2-subspaces}, $F(\mathring{p})=\mathbb{C}^2\otimes L$ with $\dim L=1$. By Lemma~\ref{lem:parity-stable}, $\gamma^0F(\mathring{p})=F(\mathring{p})$, that is $(\mathbb{1}\otimes\sigma_1)(\mathbb{C}^2\otimes L)=\mathbb{C}^2\otimes\sigma_1L=\mathbb{C}^2\otimes L$, so $\sigma_1L=L$. The matrix $\sigma_1$ has simple spectrum $\{\pm1\}$, so $L$ is one of its two eigenlines $\mathbb{C}(e_1+\epsilon e_2)$. Hence $F(\mathring{p})=\{\eta\otimes(e_1+\epsilon e_2)\}=\{(\eta,\epsilon\eta)\}=\ker(\gamma^0-\epsilon)$. By Schur's lemma the intertwiner $\iota:V\to F(\mathring{p})$ is unique up to a scalar, so it is a multiple of $\iota_\epsilon$. For the last identity, Equation~\eqref{eq:theta-boost} and Equation~\eqref{eq:parity-matrix} give $D(A_{\mathsf{P}p})=\gamma^0D(A_p)\gamma^0$, and $\gamma^0\iota_\epsilon=\epsilon\iota_\epsilon$, so
+		\begin{equation*}
+			(\mathcal{U}_D(\mathsf{P})J\psi)(p)=\gamma^0D(A_{\mathsf{P}p})\iota_\epsilon\psi(\mathsf{P}p)=D(A_p)\gamma^0\iota_\epsilon\psi(\mathsf{P}p)=D(A_p)\iota_\epsilon\,\epsilon\psi(\mathsf{P}p)=(J\,U^\epsilon(\mathsf{P})\psi)(p).
+		\end{equation*}
+		The converse is a direct check: $\iota_\epsilon$ satisfies Equation~\eqref{eq:iota-intertwiner} since $D(u)=u\otimes\mathbb{1}$, and $\gamma^0F(\mathring{p})=F(\mathring{p})$ by construction.
+	\end{proof}
+	
+	\begin{remark}[Intrinsic parity and the choice of the sign]\label{rem:intrinsic-parity}
+		The sign $\epsilon$ is the intrinsic parity of Lemma~\ref{lem:parity-induced}: space inversion acts on the amplitude $\psi$ as $\epsilon\psi(\mathsf{P}p)$. The two choices are equivalent. The matrix $\gamma_5:=\operatorname{diag}(\mathbb{1},-\mathbb{1})$ commutes with every $D(g)$, anticommutes with $\gamma^0$, and maps $\ker(\gamma^0-\epsilon)$ onto $\ker(\gamma^0+\epsilon)$. Hence $\Psi\mapsto\gamma_5\Psi$ intertwines the two realizations $\mathcal{U}_D$ and exchanges the parity matrices $M$ and $-M$, and $-M$ is as good as $M$. Since only relative intrinsic parities are observable, we fix $\epsilon=+1$ from now on.
+	\end{remark}
+	
+	\begin{definition}[Rest projector]\label{def:rest-projector}
+		With $\epsilon=+1$, $F(\mathring{p})=\{(\eta,\eta)\mid\eta\in\mathbb{C}^2\}$, $\iota\eta:=(\eta,\eta)$, and the \emph{rest projector} is the orthogonal projector of $\mathbb{C}^4$ onto $F(\mathring{p})$,
+		\begin{equation*}
+			\mathcal{Q}(\mathring{p}):=\tfrac12(\mathbb{1}+\gamma^0).
+		\end{equation*}
+	\end{definition}
+	
+	\noindent Summing up, the group theory fixes everything except one complex line $L$ and, once the Dirac space is chosen, invariance under space inversion fixes $L$ up to the sign $\epsilon$. No further input on the form of the equation is used.
+	
+	% =====================================================================
+	\section{Covariant Transport and the Dirac Equation}
+	\label{sec:transport}
+	
+	The rest subspace $F(\mathring{p})=\{(\eta,\eta)\}$ is now fixed, and the constraint at an arbitrary momentum is obtained by transport with the standard boost, $F(p)=D(A_p)F(\mathring{p})$. Two things must be checked: that the transport does not depend on the choice of the boost, and that the resulting family of subspaces is stable under the whole symmetry group. Only then can the transported constraint be written as an equation.
+	
+	\begin{proposition}[Coherence of the constraint]\label{prop:coherence}
+		Let $F(\mathring{p})=\{(\eta,\eta)\mid\eta\in\mathbb{C}^2\}$ and $F(p)=D(A_p)F(\mathring{p})$ for $p\in\mathcal{O}_m^+$.
+		\begin{enumerate}
+			\item If $A'\in SL(2,\mathbb{C})$ satisfies $\Lambda(A')\mathring{p}=p$, then $D(A')F(\mathring{p})=F(p)$.
+			\item $D(g)F(p)=F(\Lambda(g)p)$ for all $g\in SL(2,\mathbb{C})$.
+			\item $\gamma^0F(p)=F(\mathsf{P}p)$.
+			\item $\dim F(p)=2$.
+		\end{enumerate}
+	\end{proposition}
+	
+	\begin{proof}
+		Item 1. By Proposition~\ref{prop:orbit}, $A'=A_pu$ with $u\in SU(2)$, and $D(u)(\eta,\eta)=(u\eta,u\eta)$, so $D(A')F(\mathring{p})=D(A_p)D(u)F(\mathring{p})=D(A_p)F(\mathring{p})$. Thus $F(p)$ does not depend on the choice of the boost, because the rest subspace is $SU(2)$-invariant.
+		
+		Item 2. Let $q:=\Lambda(g)p$. Then $gA_p=A_qu$ with $u=A_q^{-1}gA_p=R_W(g,q)\in SU(2)$, and $D(g)F(p)=D(A_q)D(u)F(\mathring{p})=F(q)$. This is the stability of the constraint under the Wigner rotations: the rotation $u$ moves $F(\mathring{p})$ into itself.
+		
+		Item 3 is Lemma~\ref{lem:parity-stable}, applicable since $\gamma^0F(\mathring{p})=F(\mathring{p})$. Item 4 holds because $D(A_p)$ is invertible.
+	\end{proof}
+	
+	\noindent Item 3 uses $A_{\mathsf{P}p}=\theta(A_p)$, \textit{i.e.}, that space inversion exchanges $A_p$ with $A_p^{-1}$, see Equation~\eqref{eq:theta-boost}. We now compute the transported projector. The gamma matrices appear here as the images of the Hermitian matrix model.
+	
+	\begin{lemma}[Gamma matrices]\label{lem:gamma}
+		Let $\gamma^0$ be as in Definition~\ref{def:dirac-space} and $\gamma^k:=\begin{pmatrix}0&-\sigma_k\\\sigma_k&0\end{pmatrix}$ for $k=1,2,3$. For $x\in\mathbb{M}$ set $\gamma(x):=\gamma_\mu x^\mu=\gamma^0x^0-\sum_k\gamma^kx^k$. Then
+		\begin{enumerate}
+			\item $\gamma(x)=\begin{pmatrix}0&\hat{x}\\\tilde{x}&0\end{pmatrix}$, $\gamma(x)^2=x^2\,\mathbb{1}$, hence $\{\gamma^\mu,\gamma^\nu\}=2\eta^{\mu\nu}\mathbb{1}$ with $\eta=\operatorname{diag}(1,-1,-1,-1)$, and $\gamma^{\mu\dagger}=\gamma^0\gamma^\mu\gamma^0$.
+			\item $D(g)\,\gamma(x)\,D(g)^{-1}=\gamma(\Lambda(g)x)$ for all $g\in SL(2,\mathbb{C})$.
+			\item $\gamma^0\gamma(x)\gamma^0=\gamma(\mathsf{P}x)$.
+		\end{enumerate}
+	\end{lemma}
+	
+	\begin{proof}
+		Item 1. The block form is read off from the definitions, and $\gamma(x)^2=\operatorname{diag}(\hat{x}\tilde{x},\tilde{x}\hat{x})=x^2\mathbb{1}$ by Lemma~\ref{lem:hermitian-model}. The Clifford relations follow by polarization. For the last claim, $\gamma^{0\dagger}=\gamma^0$, while $\gamma^{k\dagger}=\begin{pmatrix}0&\sigma_k\\-\sigma_k&0\end{pmatrix}=\gamma^0\gamma^k\gamma^0$.
+		
+		Item 2. By Equation~\eqref{eq:tilde-covariance},
+		\begin{equation*}
+			D(g)\gamma(x)D(g)^{-1}=\begin{pmatrix}g&0\\0&(g^\dagger)^{-1}\end{pmatrix}\begin{pmatrix}0&\hat{x}\\\tilde{x}&0\end{pmatrix}\begin{pmatrix}g^{-1}&0\\0&g^\dagger\end{pmatrix}=\begin{pmatrix}0&g\hat{x}g^\dagger\\(g^\dagger)^{-1}\tilde{x}g^{-1}&0\end{pmatrix}=\gamma(\Lambda(g)x).
+		\end{equation*}
+		Item 3. $\gamma^0\gamma(x)\gamma^0=\begin{pmatrix}0&\tilde{x}\\\hat{x}&0\end{pmatrix}$, and $\widehat{\mathsf{P}x}=\tilde{x}$, $\widetilde{\mathsf{P}x}=\hat{x}$.
+	\end{proof}
+	
+	\begin{proposition}[Transport of the rest projector]\label{prop:transport}
+		For every $p\in\mathcal{O}_m^+$,
+		\begin{equation}\label{eq:transport}
+			D(A_p)\,\gamma^0\,D(A_p)^{-1}=\frac{\gamma_\mu p^\mu}{m}.
+		\end{equation}
+	\end{proposition}
+	
+	\begin{proof}
+		Explicitly, using Lemma~\ref{lem:dirac-space} and Equation~\eqref{eq:standard-boost},
+		\begin{equation*}
+			\begin{pmatrix}A_p&0\\0&A_p^{-1}\end{pmatrix}\begin{pmatrix}0&\mathbb{1}\\\mathbb{1}&0\end{pmatrix}\begin{pmatrix}A_p^{-1}&0\\0&A_p\end{pmatrix}=\begin{pmatrix}0&A_p^2\\A_p^{-2}&0\end{pmatrix}=\frac1m\begin{pmatrix}0&\hat{p}\\\tilde{p}&0\end{pmatrix}=\frac{\gamma(p)}{m}.
+		\end{equation*}
+		The same follows from item 2 of Lemma~\ref{lem:gamma}, since $\gamma^0=\gamma(\mathring{p})/m$ and $\Lambda(A_p)\mathring{p}=p$.
+	\end{proof}
+	
+	Equation~\eqref{eq:transport} is the tensor transport announced in the introduction: the rest projector, which singles out the chirality-symmetric combination at rest, becomes the four-momentum contracted with the gamma matrices. The equation of the chapter follows.
+	
+	\begin{theorem}[Dirac equation in momentum space]\label{thm:dirac}
+		For $p\in\mathcal{O}_m^+$ let $\mathcal{Q}(p):=D(A_p)\,\mathcal{Q}(\mathring{p})\,D(A_p)^{-1}$. Then
+		\begin{equation}\label{eq:covariant-projector}
+			\mathcal{Q}(p)=\tfrac12\Big(\mathbb{1}+\frac{\gamma_\mu p^\mu}{m}\Big)
+		\end{equation}
+		is a projector of rank $2$ with range $F(p)$, and
+		\begin{equation}\label{eq:dirac-momentum}
+			F(p)=\big\{\Psi\in\mathbb{C}^4\ \big|\ (\gamma_\mu p^\mu-m)\Psi=0\big\}.
+		\end{equation}
+		Consequently the space of fields of Definition~\ref{def:local-realization} is
+		\begin{equation*}
+			\mathcal{F}_D=\big\{\Psi:\mathcal{O}_m^+\to\mathbb{C}^4\ \big|\ (\gamma_\mu p^\mu-m)\Psi(p)=0\ \ \text{for all }p\big\},
+		\end{equation*}
+		and, by Lemma~\ref{lem:local-realization}, $\mathcal{U}_D$ realizes the induced representation $U_{m,1/2}$, with the intrinsic parity $\epsilon=+1$.
+	\end{theorem}
+	
+	\begin{proof}
+		Equation~\eqref{eq:covariant-projector} is Proposition~\ref{prop:transport}. The matrix $\mathcal{Q}(p)$ is conjugate to the projector $\mathcal{Q}(\mathring{p})$, hence it is a projector of rank $2$, and its range is $D(A_p)\operatorname{ran}\mathcal{Q}(\mathring{p})=D(A_p)F(\mathring{p})=F(p)$. Finally $\mathcal{Q}(p)\Psi=\Psi$ if and only if $\gamma(p)\Psi=m\Psi$.
+	\end{proof}
+	
+	\begin{remark}\label{rem:Q-not-hermitian}
+		The projector $\mathcal{Q}(p)$ is not Hermitian for $\mathbf{p}\neq\mathbf{0}$, since $\gamma(p)^\dagger=\begin{pmatrix}0&\tilde{p}\\\hat{p}&0\end{pmatrix}\neq\gamma(p)$. This reflects the fact that $D(A_p)$ is not unitary, and it is the same phenomenon which forced us to abandon unitarity in Proposition~\ref{prop:no-local-unitary}. The consequences for the norm are drawn in Section~\ref{sec:probability}.
+	\end{remark}
+	
+	The equation in position space is obtained from Remark~\ref{rem:position-space}. Since the plane wave $e^{-ip\cdot x/\hbar}$ satisfies $i\hbar\partial_\mu e^{-ip\cdot x/\hbar}=p_\mu e^{-ip\cdot x/\hbar}$, multiplication by $\gamma_\mu p^\mu$ becomes a first-order differential operator.
+	
+	\begin{corollary}[Dirac equation in position space]\label{cor:dirac-position}
+		Let $\Psi\in\mathcal{F}_D$ be such that $\Psi(x)=\int e^{-ip\cdot x/\hbar}\Psi(p)\,d\mu(p)$ is well defined together with its derivatives, for instance continuous with compact support. Then
+		\begin{equation}\label{eq:dirac-position}
+			\big(i\hbar\,\gamma^\mu\partial_\mu-m\big)\Psi(x)=0,
+		\end{equation}
+		\textit{i.e.}, $i\hbar\,\partial_t\Psi=\big(\boldsymbol{\alpha}\cdot(-i\hbar\nabla)+m\beta\big)\Psi$ with $\beta:=\gamma^0$ and $\alpha^k:=\gamma^0\gamma^k=\operatorname{diag}(\sigma_k,-\sigma_k)$.
+	\end{corollary}
+	
+	\begin{proof}
+		Apply $i\hbar\gamma^\mu\partial_\mu$ under the integral to get $\int\gamma_\mu p^\mu e^{-ip\cdot x/\hbar}\Psi(p)\,d\mu(p)=m\Psi(x)$, by Equation~\eqref{eq:dirac-momentum}. Multiplying by $\gamma^0$ and using $(\gamma^0)^2=\mathbb{1}$ gives the Hamiltonian form, with $\mathbf{p}\to-i\hbar\nabla$ and $p^0\to i\hbar\partial_t$.
+	\end{proof}
+	
+	The Hamiltonian form closes the loop with Theorem~\ref{thm:relativistic-hamiltonian}. The matrix $h_{\mathrm{D}}(\mathbf{p}):=\boldsymbol{\alpha}\cdot\mathbf{p}+m\beta$ is the Dirac Hamiltonian of a plane wave, and the constraint selects precisely its positive spectral subspace.
+	
+	\begin{proposition}[The constraint is the positive spectral subspace]\label{prop:dirac-hamiltonian}
+		$h_{\mathrm{D}}(\mathbf{p})$ is Hermitian with $h_{\mathrm{D}}(\mathbf{p})^2=\omega(\mathbf{p})^2\,\mathbb{1}$, and $F(p)=\ker\big(h_{\mathrm{D}}(\mathbf{p})-\omega(\mathbf{p})\big)$. In particular the energy $p^0=\omega(\mathbf{p})$ of Theorem~\ref{thm:relativistic-hamiltonian} is the eigenvalue of the Dirac Hamiltonian on $F(p)$.
+	\end{proposition}
+	
+	\begin{proof}
+		The matrices $\alpha^k$ and $\beta$ are Hermitian and, by the Clifford relations of Lemma~\ref{lem:gamma}, $\{\alpha^j,\alpha^k\}=2\delta_{jk}\mathbb{1}$, $\{\alpha^k,\beta\}=0$, $\beta^2=\mathbb{1}$, so that $h_{\mathrm{D}}^2=(|\mathbf{p}|^2+m^2)\mathbb{1}$. Since $\operatorname{tr}\alpha^k=\operatorname{tr}\beta=0$, $h_{\mathrm{D}}$ has the eigenvalues $\pm\omega$, each with multiplicity $2$. A solution of Equation~\eqref{eq:dirac-momentum} satisfies $p^0\Psi=h_{\mathrm{D}}\Psi$ with $p^0=\omega(\mathbf{p})>0$, so $F(p)\subseteq\ker(h_{\mathrm{D}}-\omega)$, and the dimensions coincide.
+	\end{proof}
+	
+	% =====================================================================
+	\section{Probability Conservation and the Metric Structure}
+	\label{sec:probability}
+	
+	Section~\ref{sec:locality} showed that the matrices $D(g)$ of a local realization cannot be unitary. The Euclidean norm of $\mathbb{C}^4$ is therefore not the norm of the induced representation, and the question is which positive form on $F(p)$ is invariant. This section computes the solutions explicitly, exhibits the discrepancy between the Euclidean and the covariant norm, and proves that the covariant norm reproduces the scalar product of $\mathcal{H}_{m,1/2}$.
+	
+	\begin{proposition}[Explicit solutions]\label{prop:explicit-solutions}
+		For $p\in\mathcal{O}_m^+$,
+		\begin{equation*}
+			F(p)=\big\{\Psi=(A_p\eta,\ A_p^{-1}\eta)^T\ \big|\ \eta\in\mathbb{C}^2\big\}.
+		\end{equation*}
+		For an amplitude $\psi$ as in Lemma~\ref{lem:local-realization}, $(J\psi)(p)=(A_p\psi(p),A_p^{-1}\psi(p))^T$, \textit{i.e.}, $\eta=\psi(p)$.
+	\end{proposition}
+	
+	\begin{proof}
+		$F(p)=D(A_p)\{(\eta,\eta)\}=\{(A_p\eta,A_p^{-1}\eta)\}$ by Lemma~\ref{lem:dirac-space} and Definition~\ref{def:rest-projector}. The formula for $J$ is Lemma~\ref{lem:local-realization} with $\iota\eta=(\eta,\eta)$. One checks directly that these vectors solve Equation~\eqref{eq:dirac-momentum}: $\gamma(p)\Psi=(\hat{p}A_p^{-1}\eta,\tilde{p}A_p\eta)=(mA_p\eta,mA_p^{-1}\eta)=m\Psi$.
+	\end{proof}
+	
+	\noindent Two quadratic forms on $\mathbb{C}^4$ are available. The Euclidean one is $\Psi^\dagger\Phi$. The other is the Dirac form $\bar{\Psi}\Phi:=\Psi^\dagger\gamma^0\Phi$, where $\bar{\Psi}:=\Psi^\dagger\gamma^0$ is the Dirac adjoint, not the complex conjugate. By item 2 of Lemma~\ref{lem:dirac-space}, the second one is invariant under the representation,
+	\begin{equation}\label{eq:dirac-form-invariance}
+		\overline{D(g)\Psi}\,D(g)\Phi=\Psi^\dagger D(g)^\dagger\gamma^0D(g)\Phi=\bar{\Psi}\Phi, \qquad g\in SL(2,\mathbb{C}),
+	\end{equation}
+	whereas $D(g)^\dagger D(g)\neq\mathbb{1}$ in general, so that the first is not.
+	
+	\begin{proposition}[Euclidean and covariant norm]\label{prop:norms}
+		Let $\Psi=(A_p\eta,A_p^{-1}\eta)$ and $\Phi=(A_p\eta',A_p^{-1}\eta')$ be in $F(p)$.
+		\begin{enumerate}
+			\item $\bar{\Psi}\Phi=2\,(\eta,\eta')$. In particular the Dirac form is positive definite on $F(p)$, and $\bar{\Psi}\Psi=2|\eta|^2$.
+			\item For every $q\in\mathbb{M}$, $\bar{\Psi}\gamma(q)\Psi=\dfrac{2\,p\cdot q}{m}\,|\eta|^2$, \textit{i.e.}, $\bar{\Psi}\gamma^\mu\Psi=\dfrac{2p^\mu}{m}|\eta|^2$. In particular
+			\begin{equation}\label{eq:euclidean-norm}
+				\Psi^\dagger\Psi=\frac{2p^0}{m}\,|\eta|^2=\frac{p^0}{m}\,\bar{\Psi}\Psi.
+			\end{equation}
+		\end{enumerate}
+	\end{proposition}
+	
+	\begin{proof}
+		Item 1. Since $\gamma^0\Phi=(A_p^{-1}\eta',A_p\eta')$, $\bar{\Psi}\Phi=\eta^\dagger A_pA_p^{-1}\eta'+\eta^\dagger A_p^{-1}A_p\eta'=2(\eta,\eta')$.
+		
+		Item 2. Since $\gamma^0\gamma(q)=\operatorname{diag}(\tilde{q},\hat{q})$, $\bar{\Psi}\gamma(q)\Psi=\eta^\dagger\big(A_p\tilde{q}A_p+A_p^{-1}\hat{q}A_p^{-1}\big)\eta$. Since $A_p$ is Hermitian, Equation~\eqref{eq:tilde-covariance} and the definition of $\Lambda$ with $g=A_p^{-1}$ give $A_p\tilde{q}A_p=\widetilde{q'}$ and $A_p^{-1}\hat{q}A_p^{-1}=\widehat{q'}$ with $q':=\Lambda(A_p)^{-1}q$. Hence the bracket equals $\widetilde{q'}+\widehat{q'}=2q'^0\,\mathbb{1}$, and $q'^0=q\cdot\Lambda(A_p)e_0=q\cdot p/m$. Taking $q=e_0$, for which $\gamma(e_0)=\gamma^0$, gives Equation~\eqref{eq:euclidean-norm}.
+	\end{proof}
+	
+	Equation~\eqref{eq:euclidean-norm} is the discrepancy between the two metrics: the Euclidean density exceeds the invariant one by the factor $p^0/m$, which is the time dilation factor of a particle of momentum $p$. It is not a defect of the construction. The Euclidean density $\Psi^\dagger\Psi$ is the time component of the four-vector $\bar{\Psi}\gamma^\mu\Psi$, whereas the Dirac density $\bar{\Psi}\Psi$ is a scalar. The covariant norm is the one built from the scalar.
+	
+	\begin{theorem}[Covariant norm and equivalence with the induced representation]\label{thm:covariant-norm}
+		On $\mathcal{F}_D$ let
+		\begin{equation*}
+			\langle\Psi,\Phi\rangle_D:=\frac12\int\bar{\Psi}(p)\,\Phi(p)\,d\mu(p), \qquad \mathcal{F}_D^2:=\Big\{\Psi\in\mathcal{F}_D\ \Big|\ \int\bar{\Psi}\Psi\,d\mu<\infty\Big\}.
+		\end{equation*}
+		Then $\langle\cdot,\cdot\rangle_D$ is a positive definite scalar product, $\mathcal{F}_D^2$ is a Hilbert space, the map $J:\mathcal{H}_{m,1/2}\to\mathcal{F}_D^2$ is unitary, and $\mathcal{U}_D(a,g)$ is unitary on $\mathcal{F}_D^2$ with $J\,U_{m,1/2}(a,g)=\mathcal{U}_D(a,g)\,J$. Hence $\mathcal{U}_D$ is irreducible and unitarily equivalent to $U_{m,1/2}$.
+	\end{theorem}
+	
+	\begin{proof}
+		By Proposition~\ref{prop:norms}, $\tfrac12\overline{J\psi}(p)\,(J\phi)(p)=(\psi(p),\phi(p))_{\mathbb{C}^2}$ pointwise, so $\langle J\psi,J\phi\rangle_D=\langle\psi,\phi\rangle_{\mathcal{H}_{m,1/2}}$. Since $J$ is a bijection onto $\mathcal{F}_D$ (Lemma~\ref{lem:local-realization}), $\langle\cdot,\cdot\rangle_D$ is a scalar product making $\mathcal{F}_D^2$ a Hilbert space and $J$ unitary. The intertwining relation is Equation~\eqref{eq:J-intertwines}. Irreducibility follows from Theorem~\ref{thm:wigner-mackey}. Directly, unitarity of $\mathcal{U}_D$ also follows from Equation~\eqref{eq:dirac-form-invariance} and the invariance of $\mu$: $\overline{(\mathcal{U}_D(a,g)\Psi)(p)}(\mathcal{U}_D(a,g)\Phi)(p)=\bar{\Psi}(\Lambda(g)^{-1}p)\Phi(\Lambda(g)^{-1}p)$.
+	\end{proof}
+	
+	\noindent Theorem~\ref{thm:covariant-norm} says that the scalar product of the induced representation, which was the starting point of Section~\ref{sec:induced}, is preserved by the construction of the Dirac field: the unitary structure is not lost by the passage to a non-unitary $D$, it is carried by the form $\frac12\bar{\Psi}\Phi$ instead of the Euclidean one.
+	
+	The Euclidean density has a physical meaning of its own, which is the time component of a conserved current. We verify that it is conserved and that its integral is a constant multiple of the covariant norm.
+	
+	\begin{proposition}[Conservation of probability]\label{prop:continuity}
+		Let $\Psi\in\mathcal{F}_D$ be smooth with compact support in $\mathbf{p}$, and let $\Psi(x)=\int e^{-ip\cdot x/\hbar}\Psi(p)\,d\mu(p)$ be the position-space field. Then $j^\mu:=\bar{\Psi}\gamma^\mu\Psi$ satisfies
+		\begin{equation}\label{eq:continuity}
+			\partial_\mu j^\mu=0, \qquad j^0=\Psi^\dagger\Psi\geq0,
+		\end{equation}
+		and for every $t\in\mathbb{R}$, with $\psi=J^{-1}\Psi$,
+		\begin{equation}\label{eq:charge}
+			\int_{\mathbb{R}^3}\Psi^\dagger(t,\mathbf{x})\Psi(t,\mathbf{x})\,d^3\mathbf{x}=\frac{(2\pi\hbar)^3}{m}\,\|\psi\|^2_{\mathcal{H}_{m,1/2}}.
+		\end{equation}
+	\end{proposition}
+	
+	\begin{proof}
+		Let $\Psi=\Psi(x)$. By Corollary~\ref{cor:dirac-position}, $i\hbar\gamma^\mu\partial_\mu\Psi=m\Psi$. Taking the adjoint and using $\gamma^{\mu\dagger}=\gamma^0\gamma^\mu\gamma^0$, then multiplying on the right by $\gamma^0$, we get $-i\hbar\,\partial_\mu\bar{\Psi}\gamma^\mu=m\bar{\Psi}$. Therefore
+		\begin{equation*}
+			\partial_\mu(\bar{\Psi}\gamma^\mu\Psi)=\big(\partial_\mu\bar{\Psi}\gamma^\mu\big)\Psi+\bar{\Psi}\big(\gamma^\mu\partial_\mu\Psi\big)=\frac{im}{\hbar}\bar{\Psi}\Psi-\frac{im}{\hbar}\bar{\Psi}\Psi=0.
+		\end{equation*}
+		For Equation~\eqref{eq:charge}, at time $t$ we have $\Psi(t,\mathbf{x})=\int d^3\mathbf{p}\,e^{i(\mathbf{p}\cdot\mathbf{x}-\omega t)/\hbar}\,\Psi(p)/2\omega$, which is a Fourier transform multiplied by a phase of modulus one. By Plancherel and Equation~\eqref{eq:euclidean-norm},
+		\begin{equation*}
+			\int\Psi^\dagger\Psi\,d^3\mathbf{x}=(2\pi\hbar)^3\int\frac{\Psi^\dagger\Psi}{4\omega^2}\,d^3\mathbf{p}=(2\pi\hbar)^3\int\frac{1}{4\omega^2}\frac{2\omega}{m}|\psi|^2\,d^3\mathbf{p}=\frac{(2\pi\hbar)^3}{m}\int|\psi|^2\frac{d^3\mathbf{p}}{2\omega},
+		\end{equation*}
+		which is the right-hand side of Equation~\eqref{eq:charge}.
+	\end{proof}
+	
+	\begin{remark}\label{rem:probability-limits}
+		The time component $j^0=\Psi^\dagger\Psi$ of the conserved current is positive, and its integral is a multiple of the Wigner norm, so the Euclidean $L^2$ norm of the Dirac field in position space is conserved and is preserved by the Poincar\'e action, as it must be. The factor $2\omega/m$ of Equation~\eqref{eq:euclidean-norm} is exactly compensated by the Jacobian $1/4\omega^2$ between the invariant measure and the Fourier measure. This does not make $j^0(x)$ the probability density of a position measurement of the particle: the construction introduces no position observable. In the Galilean case $\mathbf{K}/m$ played this role (Remark~\ref{rem:weyl}), and the corresponding relativistic question, the localization of a relativistic particle, is not touched here. Moreover the positive energy hypothesis restricts $\Psi$ to $\mathcal{O}_m^+$. Solutions supported on $\mathcal{O}_m^-$ would give a second irreducible representation, the one of the antiparticle, and they do not appear in $\mathcal{F}_D$.
+	\end{remark}
+	
+	% =====================================================================
+	\section{Summary of the Construction}
+	\label{sec:dirac-summary}
+	
+	The chain of the chapter can be read as a sequence of questions, each answered by a symmetry requirement.
+	
+	\begin{remark}[What was used]\label{rem:dirac-used}
+		\emph{The energy.} Poincar\'e invariance of $\mathbb{P}\mathcal{H}$, irreducibility and positivity of the energy give $H=\sqrt{|\mathbf{P}|^2+m^2}$, with the mass as a Casimir eigenvalue and no additive constant (Theorem~\ref{thm:relativistic-hamiltonian}).
+		
+		\emph{The representation.} The stabilizer $SU(2)$ of the rest momentum and the spin $j=\frac12$ determine the induced representation, whose boosts act on spin through the Wigner rotation (Proposition~\ref{prop:induced-action}).
+		
+		\emph{The locality.} A fixed matrix transformation law requires a finite-dimensional, necessarily non-unitary, representation of $SL(2,\mathbb{C})$ (Propositions~\ref{prop:no-unitary} and~\ref{prop:no-local-unitary}), and invariance under space inversion forces $D^{(1/2,0)}\oplus D^{(0,1/2)}$ (Propositions~\ref{prop:parity-problem} and~\ref{prop:minimal-extension}).
+		
+		\emph{The equation.} Invariance of the rest subspace under $SU(2)$ and under space inversion fixes it up to the sign of the intrinsic parity (Proposition~\ref{prop:rest-selection}), and its transport with the standard boosts is the Dirac equation (Theorem~\ref{thm:dirac}).
+		
+		\emph{The norm.} The scalar product of the induced representation is carried by the invariant form $\frac12\bar{\Psi}\Phi$, and probability is conserved (Theorem~\ref{thm:covariant-norm} and Proposition~\ref{prop:continuity}).
+		
+		No postulate on the form of the wave equation, on the number of components or on the gamma matrices has been used.
+	\end{remark}
+	
+	\begin{remark}[Outlook]\label{rem:dirac-outlook}
+		The strategy of Chapter~\ref{ch:analytical-hamiltonians} and of this chapter leaves two natural continuations. The first is the geometric reading, on $\mathbb{P}\mathcal{H}^\infty$, of the mean value functions of the Poincar\'e generators, with the Poisson algebra of Proposition~\ref{prop:galilean-poisson} replaced by one in which the mass is a Casimir function and not a constant. The second is the massless case, in which the stabilizer of the momentum is not $SU(2)$ and the Weyl equation and the helicity appear in place of the Dirac equation and the spin. Interactions, and in particular minimal coupling to an electromagnetic potential, require the local transformation law of Section~\ref{sec:locality} and are not treated here.
+	\end{remark}
+	
+	% =====================================================================
+	% CROSS-REFERENCE MAP (labels used above -> thesis numbers; adapt)
+	% From Chapter 4 (hamiltonians.tex):
+	% ch:analytical-hamiltonians   Chapter 4
+	% def:galilei-group, def:elementary-transformations, def:galilean-action,
+	% def:generators, rem:active-convention, rem:weyl, lem:boost-covariance,
+	% prop:galilean-poisson, thm:free-hamiltonian, prop:lift, thm:bargmann,
+	% prop:bargmann-correspondence, prop:galilei-cohomology,
+	% cor:schrodinger-realization, lem:schur-infinite, rem:outlook
+	% From Chapters 1-3 and the inserts:
+	% lem:schur                    Lemma 1.2.26
+	% ch:projective                Chapter 3
+	% thm:snag, def:pvm-support, prop:pvm-calculus   Chapter 2 insert
+	% NEW LABELS OF THIS CHAPTER (prefix-free): ch:dirac, sec:mass-shell,
+	% sec:poincare-invariance, sec:induced, sec:locality, sec:rest,
+	% sec:transport, sec:probability, sec:dirac-summary
+	%
+	% BIBLIOGRAPHY TO ADD OR MATCH (verify every location before use)
+	% TODO-Dirac1928    P.A.M. Dirac, The quantum theory of the electron,
+	%                   Proc. R. Soc. Lond. A 117 (1928) 610-624
+	% TODO-Wigner1939   E. Wigner, On unitary representations of the
+	%                   inhomogeneous Lorentz group, Ann. Math. 40 (1939) 149-204
+	% TODO-Mackey1958   G.W. Mackey, Unitary representations of group
+	%                   extensions I, Acta Math. 99 (1958) 265-311
+	% TODO-Bargmann1954 (already in Chapter 4): H^2 of the Poincare algebra
+	% TODO-Hal03        Hall (already in the thesis bibliography as [Hal03]):
+	%                   finite-dimensional representations of SL(2,C), covering
+	%                   SL(2,C) -> SO^up(1,3)
+\end{document}

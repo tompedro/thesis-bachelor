@@ -1,4 +1,4 @@
-\input{/Users/tommasopedroni/Desktop/TESI/Tesi/latex_prima_versione/preambolo_bozza.tex}
+\input{../../latex_prima_versione/preambolo_bozza.tex}
 \newgeometry{margin=2cm}
 \setlength{\headwidth}{\textwidth}
 
@@ -18,6 +18,7 @@
 % Environments assumed: definition, theorem, proposition, lemma, corollary,
 % remark, proof (amsthm). No custom macros are used.
 % =====================================================================
+
 
 \chapter{Recovery of Analytical Expression of Hamiltonians}
 \label{ch:analytical-hamiltonians}
@@ -128,31 +129,31 @@ The momentum maps of Chapter 1 involve closed $1$-forms instead. For these, the 
 The definition of $H^k_{\mathrm{dR}}(M)$ uses only two properties of $(\Omega^k(M),d)$, namely that $d$ raises the degree by one and that $d\circ d=0$. Abstracting them yields a notion which applies to any sequence of spaces connected by such operators, and in particular to the objects of Sections~\ref{subsec:group-cohomology} and~\ref{subsec:lie-cohomology}.
 
 \begin{definition}[Cochain complex]\label{def:cochain-complex}
-	A \emph{cochain complex} is a sequence $(C^k,\delta_k)_{k\geq0}$, where each $C^k$ is an abelian group, written additively, and each $\delta_k:C^k\to C^{k+1}$ is a group homomorphism such that $\delta_{k+1}\circ\delta_k=0$ for all $k\geq0$. The complex is denoted by $C^\bullet$.
+	A \emph{cochain complex} is a sequence $(C^k, d_k)_{k\geq0}$, where each $C^k$ is an abelian group, written additively, and each $d_k:C^k\to C^{k+1}$ is a group homomorphism such that $d_{k+1}\circ d_k=0$ for all $k\geq0$. The complex is denoted by $C^\bullet$.
 \end{definition}
 
 \begin{definition}[Cocycles, coboundaries and cohomology]\label{def:abstract-cohomology}
 	Let $C^\bullet$ be a cochain complex as per Definition~\ref{def:cochain-complex}. The groups of \emph{cocycles} and of \emph{coboundaries} in degree $k$ are
 	\begin{equation*}
-		Z^k(C^\bullet):=\ker\delta_k, \qquad B^k(C^\bullet):=\operatorname{im}\delta_{k-1},
+		Z^k(C^\bullet):=\ker{d}_k, \qquad B^k(C^\bullet):=\operatorname{im} d_{k-1},
 	\end{equation*}
 	with $B^0(C^\bullet):=\{0\}$. The \emph{$k$-th cohomology group} of $C^\bullet$ is $H^k(C^\bullet):=Z^k(C^\bullet)/B^k(C^\bullet)$.
 \end{definition}
 
-Since $\delta_k\circ\delta_{k-1}=0$, one has $B^k(C^\bullet)\subseteq Z^k(C^\bullet)$, and the quotient is well defined. The de Rham complex $(\Omega^k(M),d)$ is the first example, with $Z^k$, $B^k$ and $H^k$ as in Definitions~\ref{def:closed-exact} and~\ref{def:de-rham}.
+Since $d_k\circ d_{k-1}=0$, one has $B^k(C^\bullet)\subseteq Z^k(C^\bullet)$, and the quotient is well defined. The de Rham complex $(\Omega^k(M),d)$ is the first example, with $Z^k$, $B^k$ and $H^k$ as in Definitions~\ref{def:closed-exact} and~\ref{def:de-rham}.
 
 \begin{remark}[Cohomology as an obstruction]\label{rem:obstruction}
-	In every cochain complex the equation $\delta_{k-1}x=z$ for the unknown $x\in C^{k-1}$ has $\delta_kz=0$ as a necessary condition, because $\delta_k\circ\delta_{k-1}=0$. The group $H^k(C^\bullet)$ measures the failure of this condition to be sufficient: it vanishes if and only if every cocycle is a coboundary. The three problems recalled at the beginning of the section have this form. In Remark~1.5.11 the equation is $d\hat J(\xi)=\iota_{\xi_P}\omega$, for the projective representations of Section~\ref{subsec:group-cohomology} it is the rephasing equation of Proposition~\ref{prop:rephasing}, and for Lie algebra extensions it is the equation of Proposition~\ref{prop:lie-extension}.
+	In every cochain complex the equation $d_{k-1}x=z$ for the unknown $x\in C^{k-1}$ has $d_kz=0$ as a necessary condition, because $d_k\circ d_{k-1}=0$. The group $H^k(C^\bullet)$ measures the failure of this condition to be sufficient: it vanishes if and only if every cocycle is a coboundary. The three problems recalled at the beginning of the section have this form. In Remark~1.5.11 the equation is $d\hat J(\xi)=\iota_{\xi_P}\omega$, for the projective representations of Section~\ref{subsec:group-cohomology} it is the rephasing equation of Proposition~\ref{prop:rephasing}, and for Lie algebra extensions it is the equation of Proposition~\ref{prop:lie-extension}.
 \end{remark}
 
 Maps between complexes which respect the differentials descend to cohomology. This is what makes cohomology functorial, and it is the reason why classes can be compared across different manifolds, groups or algebras.
 
 \begin{proposition}[Cochain maps]\label{prop:cochain-map}
-	Let $C^\bullet$ and $D^\bullet$ be cochain complexes with differentials $\delta$ and $\delta'$, and let $\varphi^k:C^k\to D^k$ be group homomorphisms with $\delta'_k\circ\varphi^k=\varphi^{k+1}\circ\delta_k$ for all $k\geq0$. Then $\varphi^k$ maps $Z^k(C^\bullet)$ into $Z^k(D^\bullet)$ and $B^k(C^\bullet)$ into $B^k(D^\bullet)$, and it induces a homomorphism $H^k(\varphi):H^k(C^\bullet)\to H^k(D^\bullet)$, $[z]\mapsto[\varphi^k(z)]$.
+	Let $C^\bullet$ and $D^\bullet$ be cochain complexes with differentials $d$ and $d'$, and let $\varphi^k:C^k\to D^k$ be group homomorphisms with $d'_k\circ\varphi^k=\varphi^{k+1}\circ d_k$ for all $k\geq0$. Then $\varphi^k$ maps $Z^k(C^\bullet)$ into $Z^k(D^\bullet)$ and $B^k(C^\bullet)$ into $B^k(D^\bullet)$, and it induces a homomorphism $H^k(\varphi):H^k(C^\bullet)\to H^k(D^\bullet)$, $[z]\mapsto[\varphi^k(z)]$.
 \end{proposition}
 
 \begin{proof}
-	If $\delta_kz=0$, then $\delta'_k\varphi^k(z)=\varphi^{k+1}(\delta_kz)=0$. If $z=\delta_{k-1}x$, then $\varphi^k(z)=\delta'_{k-1}\varphi^{k-1}(x)$. Hence $\varphi^k$ descends to the quotients.
+	If $d_kz=0$, then $d'_k\varphi^k(z)=\varphi^{k+1}(d_kz)=0$. If $z=d_{k-1}x$, then $\varphi^k(z)=d'_{k-1}\varphi^{k-1}(x)$. Hence $\varphi^k$ descends to the quotients.
 \end{proof}
 
 \begin{example}[Pullback]\label{ex:pullback}
@@ -160,108 +161,472 @@ Maps between complexes which respect the differentials descend to cohomology. Th
 \end{example}
 
 %--------------------------------------------------------------------
+
+%=====================================================================
+% PART A of the rewritten subsection "Group Cohomology, Multipliers and
+% Central Extensions".
+% Replaces everything from \subsection{Group Cohomology, ...} up to
+% (and excluding) Definition~\ref{def:projective-representation}.
+% Part B (projective representations, classification of extensions,
+% commutator pairing, Klein example) follows in the next message.
+%
+% Environments assumed: definition, proposition, remark, example, proof.
+% No custom macros. The only \cite is the pre-existing TODO placeholder of rem:topological-groups.
+%
+% Labels removed from this part (to be re-created in Part B):
+%   rem:associator, prop:cocycle-extension, prop:commutator-pairing,
+%   rem:class-of-multiplier, ex:klein-pauli.
+% Labels moved here from later in the subsection:
+%   def:central-extension, def:equiv-extensions.
+% New labels: ex:heisenberg-group, eq:heisenberg-law, def:section,
+%   def:defect, eq:defect, eq:product-defect, rem:holonomy, def:simplex,
+%   rem:labels, ex:triangle-tetrahedron, rem:boundary-stokes,
+%   prop:defect-properties, eq:defect-associativity, eq:change-section,
+%   rem:picture-reading, ex:area-defect, fig:triangle, fig:tetrahedron,
+%   fig:quadrilateral.
+%=====================================================================
+
 \subsection{Group Cohomology, Multipliers and Central Extensions}\label{subsec:group-cohomology}
 
-By Proposition~3.3.6, a symmetry group acting on $\mathbb{P}\H$ by Kähler isomorphisms is implemented by unitary operators which are determined by the action on rays only up to a phase. Choosing one representative for each group element produces a family of unitary operators which composes according to the group law only up to phases. The algebraic structure governing these phases is the cohomology of the group, which we now define in the low degrees that are needed. For a group $G$ with identity $e$ we write the group law multiplicatively and we let $G$ act trivially on the abelian group $A$ of values.
+By Proposition~3.3.6, a symmetry group acting on $\mathbb{P}\mathcal{H}$ by Kähler isomorphisms is implemented on $\mathcal{H}$ by unitary operators which are determined by the action on rays only up to a phase. Choosing one representative for each group element produces a family of unitary operators which composes according to the group law only up to phases, and the problem is whether a different choice of representatives can remove them. This is a problem of the same type as the ones recalled at the beginning of the section. A local identity, here the compatibility of the phases with the associativity of the product in the group, is necessary for the existence of a global object, here a genuine representation, and one asks whether it is also sufficient.
 
-\begin{definition}[Cochain complex of a group]\label{def:group-cochains}
-	Let $G$ be a group and let $A$ be an abelian group, written additively. The \emph{normalized cochains} of $G$ with values in $A$ are
-	\begin{align*}
-		C^0(G,A)&:=A, & C^1(G,A)&:=\{\mu:G\to A\mid\mu(e)=0\},\\
-		C^2(G,A)&:=\{\zeta:G\times G\to A\mid\zeta(\kappa,e)=\zeta(e,\kappa)=0\ \ \forall\kappa\in G\}, & C^3(G,A)&:=\{\text{maps }G\times G\times G\to A\},
-	\end{align*}
-	with $C^k(G,A):=\{0\}$ for $k\geq4$. The differentials are $\delta_0:=0$,
-	\begin{align*}
-		(\delta_1\mu)(\kappa,\kappa')&:=\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa'),\\
-		(\delta_2\zeta)(\kappa,\kappa',\kappa'')&:=\zeta(\kappa',\kappa'')-\zeta(\kappa\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa'')-\zeta(\kappa,\kappa'),
-	\end{align*}
-	for all $\kappa,\kappa',\kappa''\in G$, and $\delta_k:=0$ for $k\geq3$.
+There is however a difference with the previous subsections. A group $G$, regarded as a set equipped with a multiplication, is not a manifold, so that it carries neither differential forms nor an exterior derivative. The structure of a cochain complex nevertheless survives, and its origin is geometric. Rather than stating the definitions at once, which would hide the reason for their form, the subsection builds them from a picture. The starting point is the extension problem, which consists in enlarging $G$ by a group of phases so that the phases become an additional coordinate and no longer an obstruction. Its solution requires a function of two group elements, called the defect, and two questions about it, namely which functions can occur and how they depend on a choice. We then represent this function as a number attached to a triangle, much as an area is, and we show that the associativity of the product is the statement that the four triangles bounding a tetrahedron are compatible with one another. Only at this point the cochains, the differentials, the cocycles and the coboundaries are defined, as the algebraic transcription of the picture and as the group counterpart of the closed and exact forms of Section~\ref{subsec:de-rham}. Projective unitary representations are treated afterwards, and their multiplier is recognized as the defect of an extension. The triangle and the tetrahedron remain the guiding intuition for the rest of the chapter, and the computations on the Galilei group of Section~\ref{sec:galilei} are instances of them.
+
+%--------------------------------------------------------------------
+\subsubsection*{The Extension Problem}
+
+A symmetry group acts on rays, whereas we need it to act by unitary operators. Passing from the first to the second amounts to adjoining to the group a copy of the phases, and the mathematical notion describing this operation is the central extension. We state it for a general group $G$ and a general abelian group $A$, written additively, since the same notion will be used both with $A=\mathbb{R}$ and with $A=U(1)$. For $A=U(1)$ the group operation is the multiplication of phases, the zero element is $1$ and the opposite of $a$ is $a^{-1}$.
+
+\begin{definition}[Central extension]\label{def:central-extension}
+	Let $G$ be a group and let $A$ be an abelian group. A \emph{central extension} of $G$ by $A$ is a group $\widehat{G}$ together with an injective homomorphism $\iota:A\to\widehat{G}$ whose image is contained in the center of $\widehat{G}$, and a surjective homomorphism $\pi:\widehat{G}\to G$ with $\ker\pi=\iota(A)$.
 \end{definition}
 
-For $A=U(1)$ the group law is the multiplication of phases, and the formulas above are read multiplicatively. For instance $(\delta_1\mu)(\kappa,\kappa')=\mu(\kappa)\mu(\kappa')\mu(\kappa\kappa')^{-1}$. We still have to verify that the maps of Definition~\ref{def:group-cochains} are well defined and that they form a complex in the degrees of interest.
+In a central extension the preimage $\pi^{-1}(\kappa)$ of an element $\kappa\in G$ is a coset of $\iota(A)$, \textit{i.e.}, a copy of $A$, and the elements of $\iota(A)$ commute with every element of $\widehat{G}$. The extra coordinate is therefore invisible in the quotient $G$, and its only trace is the way in which two elements multiply. To compare two extensions of the same group by the same group we need a notion of isomorphism which respects this structure.
 
-\begin{proposition}\label{prop:group-complex}
-	In Definition~\ref{def:group-cochains}, $\delta_1$ takes values in $C^2(G,A)$ and $\delta_2\circ\delta_1=0$. Hence $C^\bullet(G,A)$ is a cochain complex as per Definition~\ref{def:cochain-complex} in the degrees $k\leq2$.
+\begin{definition}[Equivalent extensions]\label{def:equiv-extensions}
+	Two central extensions $(\widehat{G},\iota,\pi)$ and $(\widehat{G}',\iota',\pi')$ of $G$ by $A$ are \emph{equivalent} if there is an isomorphism $\Theta:\widehat{G}\to\widehat{G}'$ with $\Theta\circ\iota=\iota'$ and $\pi'\circ\Theta=\pi$.
+\end{definition}
+
+The simplest extension is the direct product $A\times G$, with $\iota(a)=(a,e)$ and $\pi(a,\kappa)=\kappa$, which we call the trivial extension. The extension problem asks for all central extensions of $G$ by $A$ up to equivalence, and in particular for the ones which are not equivalent to the trivial one. The following example shows that such extensions exist, and it is the guiding example of the whole subsection.
+
+\begin{example}[A nontrivial extension of $\mathbb{R}^2$]\label{ex:heisenberg-group}
+	Let $G=\mathbb{R}^2$ with the addition and let $A=\mathbb{R}$. For $\mathbf{u}=(u_1,u_2)$ and $\mathbf{u}'=(u_1',u_2')$ we set $\mathbf{u}\wedge\mathbf{u}':=u_1u_2'-u_2u_1'$. On the set $\mathbb{R}\times\mathbb{R}^2$ we define
+	\begin{equation}\label{eq:heisenberg-law}
+		(a,\mathbf{u})(a',\mathbf{u}')=\Big(a+a'+\tfrac12\,\mathbf{u}\wedge\mathbf{u}',\ \mathbf{u}+\mathbf{u}'\Big).
+	\end{equation}
+	The product is associative, because $\mathbf{u}\wedge\mathbf{u}'$ is bilinear, so that both ways of bracketing three factors yield
+	\begin{equation*}
+		\Big(a+a'+a''+\tfrac12\big(\mathbf{u}\wedge\mathbf{u}'+\mathbf{u}\wedge\mathbf{u}''+\mathbf{u}'\wedge\mathbf{u}''\big),\ \mathbf{u}+\mathbf{u}'+\mathbf{u}''\Big).
+	\end{equation*}
+	The identity is $(0,\mathbf{0})$, the inverse of $(a,\mathbf{u})$ is $(-a,-\mathbf{u})$ because $\mathbf{u}\wedge\mathbf{u}=0$, and the elements $(a,\mathbf{0})$ are central. With $\iota(a)=(a,\mathbf{0})$ and $\pi(a,\mathbf{u})=\mathbf{u}$ this is a central extension of $\mathbb{R}^2$ by $\mathbb{R}$. Since $\mathbf{u}\wedge\mathbf{u}'=-\mathbf{u}'\wedge\mathbf{u}$, Equation~\eqref{eq:heisenberg-law} entails
+	\begin{equation*}
+		(a,\mathbf{u})(a',\mathbf{u}')=\iota\big(\mathbf{u}\wedge\mathbf{u}'\big)\,(a',\mathbf{u}')(a,\mathbf{u}),
+	\end{equation*}
+	so that two elements above $\mathbf{u}$ and $\mathbf{u}'$, which commute in $\mathbb{R}^2$, commute only up to the central element $\iota(\mathbf{u}\wedge\mathbf{u}')$. The trivial extension $\mathbb{R}\times\mathbb{R}^2$ is an abelian group, and an equivalence is an isomorphism, hence this extension is not equivalent to the trivial one. It is the Heisenberg Lie group of Definition~2.4.14 up to the sign of the central coordinate, as shown in Example~\ref{ex:heisenberg-extension}.
+\end{example}
+
+The example exhibits a phenomenon which is invisible at the level of $G$ alone, namely that the lifts of two commuting elements may fail to commute. To control it in general, we need a description of the product of $\widehat{G}$ in terms of data living on $G$ and $A$ only. The next paragraph provides it.
+
+%--------------------------------------------------------------------
+\subsubsection*{Sections and the Defect}
+
+Let $(\widehat{G},\iota,\pi)$ be a central extension of $G$ by $A$. Since $\pi$ is surjective, we can choose for every $\kappa\in G$ one element of $\widehat{G}$ lying above it. Such a choice is the only extra datum at our disposal, and it is not required to respect the group law.
+
+\begin{definition}[Section]\label{def:section}
+	Let $(\widehat{G},\iota,\pi)$ be a central extension of $G$ by $A$ as per Definition~\ref{def:central-extension}. A \emph{section} is a map $\varsigma:G\to\widehat{G}$ with $\pi\circ\varsigma=\mathrm{id}_G$ and $\varsigma(e)=e$.
+\end{definition}
+
+A section exists because $\pi$ is surjective, and it is in general not a homomorphism, which is the point of the construction. Every element of $\widehat{G}$ is determined by its image in $G$ together with a displacement along $\iota(A)$. Indeed, for $x\in\widehat{G}$ the element $\kappa=\pi(x)$ is forced, and $x\,\varsigma(\kappa)^{-1}$ lies in $\ker\pi=\iota(A)$, so that it equals $\iota(a)$ for a unique $a\in A$ since $\iota$ is injective. Hence $x=\iota(a)\varsigma(\kappa)$ in a unique way, and $\widehat{G}$ is in bijection with $A\times G$. The multiplication of $\widehat{G}$ is then determined once we know how to multiply two sections. The elements $\varsigma(\kappa)\varsigma(\kappa')$ and $\varsigma(\kappa\kappa')$ lie above the same element $\kappa\kappa'$ of $G$, hence they differ by an element of $\iota(A)$.
+
+\begin{definition}[Defect of a section]\label{def:defect}
+	Let $\varsigma$ be a section as per Definition~\ref{def:section}. The \emph{defect} of $\varsigma$ is the map $\zeta_\varsigma:G\times G\to A$ uniquely determined by
+	\begin{equation}\label{eq:defect}
+		\varsigma(\kappa)\,\varsigma(\kappa')=\iota\big(\zeta_\varsigma(\kappa,\kappa')\big)\,\varsigma(\kappa\kappa'), \qquad \kappa,\kappa'\in G.
+	\end{equation}
+\end{definition}
+
+The defect measures how far $\varsigma$ is from being a homomorphism, since $\zeta_\varsigma$ vanishes identically if and only if $\varsigma$ is one. Because $\iota(A)$ is central, the product of two arbitrary elements of $\widehat{G}$ is expressed through the defect alone,
+\begin{equation}\label{eq:product-defect}
+	\big(\iota(a)\varsigma(\kappa)\big)\big(\iota(a')\varsigma(\kappa')\big)=\iota\big(a+a'+\zeta_\varsigma(\kappa,\kappa')\big)\,\varsigma(\kappa\kappa').
+\end{equation}
+It descends that, in the coordinates $(a,\kappa)$, the group $\widehat{G}$ is the set $A\times G$ with the product $(a,\kappa)(a',\kappa')=(a+a'+\zeta_\varsigma(\kappa,\kappa'),\kappa\kappa')$. This is the form of Equation~\eqref{eq:heisenberg-law}, with $\zeta_\varsigma(\mathbf{u},\mathbf{u}')=\tfrac12\mathbf{u}\wedge\mathbf{u}'$. The defect therefore encodes the whole extension, and the extension problem splits into two questions. The first asks which functions $\zeta:G\times G\to A$ occur as defects, since only these can be used to build extensions. The second asks how the defect depends on the choice of the section, since two defects which differ by a change of section describe the same extension. Both questions have a short algebraic answer, which we state in Proposition~\ref{prop:defect-properties} below. Its content, however, is best understood through the picture of the next paragraph.
+
+%--------------------------------------------------------------------
+\subsubsection*{A Picture: Simplices with Vertices in a Group}
+
+The identities which answer the two questions involve products of group elements, and they are difficult to read in the abstract. We therefore look for a picture in which the defect is a number attached to a geometric object, and in which the identities become statements on how such objects fit together. The Heisenberg group suggests the picture, and the following remark shows that the object involved is a triangle in general.
+
+\begin{remark}[The defect as a displacement]\label{rem:holonomy}
+	Equation~\eqref{eq:defect} can be rewritten as $\varsigma(\kappa)\varsigma(\kappa')\varsigma(\kappa\kappa')^{-1}=\iota\big(\zeta_\varsigma(\kappa,\kappa')\big)$. The left-hand side is the lifted product along a closed path of $G$ with three steps, from $e$ to $\kappa$, then from $\kappa$ to $\kappa\kappa'$ by multiplication with $\kappa'$ on the right, and last from $\kappa\kappa'$ back to $e$. The lift of this path does not close in $\widehat{G}$. It ends at $\iota(\zeta_\varsigma(\kappa,\kappa'))$, that is, it is displaced along the fibre $A$ by the defect. For the section $\varsigma(\mathbf{u})=(0,\mathbf{u})$ of Example~\ref{ex:heisenberg-group}, Equation~\eqref{eq:heisenberg-law} yields
+	\begin{equation*}
+		\varsigma(\mathbf{u})\varsigma(\mathbf{u}')\varsigma(\mathbf{u}+\mathbf{u}')^{-1}=\big(\tfrac12\,\mathbf{u}\wedge\mathbf{u}',\ \mathbf{0}\big),
+	\end{equation*}
+	and $\tfrac12\mathbf{u}\wedge\mathbf{u}'$ is the signed area of the triangle of the plane with vertices $\mathbf{0}$, $\mathbf{u}$ and $\mathbf{u}+\mathbf{u}'$. The displacement accumulated when going around the boundary of a triangle is its area, and in a general extension the defect plays the same role.
+\end{remark}
+
+To make this precise for an arbitrary group, we need a notion of triangle, and more generally of simplex, whose vertices are elements of $G$ itself. A $k$-simplex is the convex hull of $k+1$ points, \textit{i.e.}, a point for $k=0$, a segment for $k=1$, a triangle for $k=2$ and a tetrahedron for $k=3$. Only its combinatorial structure matters here, namely the ordered list of vertices and the faces obtained by omitting one of them. The order is needed to orient the edges, from the vertex of lower index to the vertex of higher index.
+
+\begin{definition}[Simplex of a group]\label{def:simplex}
+	Let $G$ be a group and let $k\geq0$. A \emph{$k$-simplex of $G$} is an ordered $(k+1)$-tuple $\sigma=(g_0,\dots,g_k)$ with $g_0,\dots,g_k\in G$, whose entries are called the vertices of $\sigma$.
+\end{definition}
+
+A simplex of $G$ has no geometry of its own, so that the quantity attached to an edge must be read off from the group. The relevant quantity is the group element which carries one vertex to the other. In the plane, with the addition as group law, it is the vector joining the two vertices, and this is the reading to keep in mind.
+
+\begin{remark}[Edge labels and left invariance]\label{rem:labels}
+	We label the edge from $g_i$ to $g_j$, with $i<j$, by the element $g_i^{-1}g_j\in G$. It is the element which carries $g_i$ to $g_j$ by left multiplication, since $g_i\,(g_i^{-1}g_j)=g_j$. The \emph{consecutive} edges carry the labels $\kappa_i:=g_{i-1}^{-1}g_i$ for $i=1,\dots,k$, and every other label is a product of consecutive ones, $g_i^{-1}g_j=\kappa_{i+1}\kappa_{i+2}\cdots\kappa_j$.
+	
+	Two simplices which differ by the simultaneous left multiplication of all vertices by a fixed $h\in G$ have the same labels, because $(hg_i)^{-1}(hg_j)=g_i^{-1}g_j$. Conversely, a simplex with consecutive labels $\kappa_1,\dots,\kappa_k$ is the left translate by $g_0$ of the simplex $(e,\kappa_1,\kappa_1\kappa_2,\dots,\kappa_1\cdots\kappa_k)$. Hence a function of $k$ group elements $(\kappa_1,\dots,\kappa_k)$ is the same thing as a function of $k$-simplices which takes the same value on simplices related by a left translation. This invariance is the reason why the defect $\zeta_\varsigma(\kappa,\kappa')$ is a function of two group elements and not of three vertices, since it describes the product of $\kappa$ and $\kappa'$ and does not depend on the vertex at which one decides to start. For $k=0$ the left translations act transitively on the vertices, so that an invariant function on $0$-simplices is a constant.
+	
+	If $\kappa_i=e$ for some $i$, then $g_{i-1}=g_i$ and the simplex is degenerate, \textit{i.e.}, collapsed along one edge. A function which vanishes on degenerate simplices is called normalized. The defect is normalized, since $\varsigma(e)=e$ entails $\zeta_\varsigma(\kappa,e)=\zeta_\varsigma(e,\kappa)=0$, as proved in Proposition~\ref{prop:defect-properties}, and a collapsed triangle has no area.
+\end{remark}
+
+We now name the edges and the faces of the two simplices which matter for the defect. The faces of a simplex are obtained by omitting one vertex, and their labels are computed from those of the simplex by the rule of Remark~\ref{rem:labels}.
+
+\begin{example}[The triangle and the tetrahedron]\label{ex:triangle-tetrahedron}
+	Let $(g_0,g_1,g_2)$ be a $2$-simplex with consecutive labels $\kappa_1=g_0^{-1}g_1$ and $\kappa_2=g_1^{-1}g_2$. We call $\kappa_1$ and $\kappa_2$ the short edges and $\kappa_1\kappa_2=g_0^{-1}g_2$ the long edge, as in Figure~\ref{fig:triangle}. Omitting $g_0$, $g_1$ and $g_2$ yields the three edges $(g_1,g_2)$, $(g_0,g_2)$ and $(g_0,g_1)$, with labels $\kappa_2$, $\kappa_1\kappa_2$ and $\kappa_1$.
+	
+	Let $(g_0,g_1,g_2,g_3)$ be a $3$-simplex with consecutive labels $\kappa_1,\kappa_2,\kappa_3$. It has six edges, as in Figure~\ref{fig:tetrahedron}. Three are the consecutive ones, with labels $\kappa_1$, $\kappa_2$ and $\kappa_3$. The edge $(g_0,g_2)$ has label $\kappa_1\kappa_2$, the edge $(g_1,g_3)$ has label $\kappa_2\kappa_3$ and the edge $(g_0,g_3)$, which we call the long edge, has label $\kappa_1\kappa_2\kappa_3$. It has four faces, which are triangles:
+	\begin{center}
+		\begin{tabular}{lll}
+			\hline
+			omitted vertex & face & labels of the short edges \\ \hline
+			$g_0$ & $(g_1,g_2,g_3)$ & $(\kappa_2,\kappa_3)$ \\
+			$g_1$ & $(g_0,g_2,g_3)$ & $(\kappa_1\kappa_2,\kappa_3)$ \\
+			$g_2$ & $(g_0,g_1,g_3)$ & $(\kappa_1,\kappa_2\kappa_3)$ \\
+			$g_3$ & $(g_0,g_1,g_2)$ & $(\kappa_1,\kappa_2)$ \\ \hline
+		\end{tabular}
+	\end{center}
+\end{example}
+
+\begin{figure}[ht]
+	\centering
+	% ---------------------------------------------------------------
+	% PROMPT FOR A TIKZ GENERATOR (paste everything between the rules)
+	% ---------------------------------------------------------------
+	% Write TikZ code for a figure, to be compiled inside a LaTeX
+	% document that already loads tikz. Use only the libraries
+	% arrows.meta, calc and positioning. Black and white only, line
+	% width 0.8pt, final width about 0.45\textwidth, labels in math mode
+	% with the standard LaTeX math font.
+	% Content: a triangle with three ordered vertices, g_0 bottom left,
+	% g_1 bottom right, g_2 on top and roughly above the midpoint of g_0
+	% and g_1. Write the vertex names $g_0$, $g_1$, $g_2$ outside the
+	% triangle, next to the vertices, and mark each vertex with a small
+	% filled dot. Draw the three edges as arrows with a closed arrow tip
+	% (Stealth), directed from the lower to the higher index: g_0 to
+	% g_1, g_1 to g_2, and g_0 to g_2. Label the edge g_0 to g_1 with
+	% $\kappa_1=g_0^{-1}g_1$, the edge g_1 to g_2 with
+	% $\kappa_2=g_1^{-1}g_2$, and the edge g_0 to g_2 with
+	% $\kappa_1\kappa_2=g_0^{-1}g_2$. Place each label on the outer side
+	% of its edge. Next to the labels of the two edges kappa_1 and
+	% kappa_2 add the small gray italic text "short edge", and next to
+	% the label of the edge kappa_1 kappa_2 add "long edge". Inside the
+	% triangle draw a small counterclockwise circular arrow, indicating
+	% the orientation g_0, g_1, g_2, and write next to it the symbol
+	% $\zeta(\kappa_1,\kappa_2)$.
+	% ---------------------------------------------------------------
+	\fbox{\parbox{0.45\textwidth}{\centering\vspace{3cm}TODO: triangle figure\vspace{3cm}}}
+	\caption{A $2$-simplex of $G$ with its consecutive labels $\kappa_1$ and $\kappa_2$ and its long edge $\kappa_1\kappa_2$. The defect $\zeta_\varsigma(\kappa_1,\kappa_2)$ is the number attached to the triangle.}
+	\label{fig:triangle}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	% ---------------------------------------------------------------
+	% PROMPT FOR A TIKZ GENERATOR (paste everything between the rules)
+	% ---------------------------------------------------------------
+	% Write TikZ code for a figure, to be compiled inside a LaTeX
+	% document that already loads tikz. Use only the libraries
+	% arrows.meta, calc and positioning. Black and white only, line
+	% width 0.8pt, final width about 0.55\textwidth, labels in math mode
+	% with the standard LaTeX math font.
+	% Content: a tetrahedron drawn in oblique projection with four
+	% ordered vertices and these coordinates (in cm): g_0 at (0,0),
+	% g_1 at (2.2,-0.9), g_2 at (4.4,0), g_3 at (2.2,2.6). Mark every
+	% vertex with a small filled dot and write the names $g_0$, $g_1$,
+	% $g_2$, $g_3$ outside the solid, next to the vertices. Draw six
+	% edges as arrows with a closed arrow tip (Stealth), each directed
+	% from the lower to the higher index. The edge from g_0 to g_2 lies
+	% behind the solid and must be dashed, all others are solid. Label
+	% the edges, placing each label near the middle of its edge, as
+	% follows: g_0 to g_1: $\kappa_1$, g_1 to g_2: $\kappa_2$,
+	% g_2 to g_3: $\kappa_3$, g_0 to g_2: $\kappa_1\kappa_2$,
+	% g_1 to g_3: $\kappa_2\kappa_3$, g_0 to g_3: $\kappa_1\kappa_2\kappa_3$.
+	% Use a slightly smaller font for the three labels
+	% $\kappa_1\kappa_2$, $\kappa_2\kappa_3$, $\kappa_1\kappa_2\kappa_3$
+	% and avoid overlaps between labels and edges.
+	% ---------------------------------------------------------------
+	\fbox{\parbox{0.55\textwidth}{\centering\vspace{3.5cm}TODO: tetrahedron figure\vspace{3.5cm}}}
+	\caption{A $3$-simplex of $G$ with its six edge labels. The edge from $g_0$ to $g_2$ lies behind the solid.}
+	\label{fig:tetrahedron}
+\end{figure}
+
+The faces of a simplex come with signs, and these signs are the last ingredient of the picture. They are the same signs which appear in the boundary of a simplex in the cohomology of manifolds, where they have a precise meaning.
+
+\begin{remark}[The boundary of a simplex and Stokes' theorem]\label{rem:boundary-stokes}
+	The \emph{oriented boundary} of a simplex $\sigma=(g_0,\dots,g_k)$ is the formal sum $\partial\sigma:=\sum_{j=0}^k(-1)^j\sigma_j$, where $\sigma_j$ is the face obtained by omitting $g_j$. The alternating signs orient the faces coherently with the order of the vertices of $\sigma$. For a triangle one finds $\partial(g_0,g_1,g_2)=(g_1,g_2)-(g_0,g_2)+(g_0,g_1)$, which is the path $g_0\to g_1\to g_2$ followed by the path $g_2\to g_0$ along the long edge run backwards. For a tetrahedron
+	\begin{equation*}
+		\partial(g_0,g_1,g_2,g_3)=(g_1,g_2,g_3)-(g_0,g_2,g_3)+(g_0,g_1,g_3)-(g_0,g_1,g_2).
+	\end{equation*}
+	A function on simplices extends linearly to formal sums, so that it can be evaluated on $\partial\sigma$. This is the mechanism of the cohomology of manifolds. By Stokes' theorem, the exterior derivative of Definition~1.1.24 is characterized, in terms of integration on simplices, by $\int_\sigma d\alpha=\int_{\partial\sigma}\alpha$, so that $d\alpha$ is the function on $k$-simplices obtained by evaluating $\alpha$ on the boundary. Closed forms are the ones with $d\alpha=0$, exact forms are the ones of the shape $d\beta$, and the identity $d\circ d=0$ expresses that the boundary of a boundary is empty. We keep this heuristic reading and we apply the same recipe to functions of simplices of $G$, which are invariant under left translation by Remark~\ref{rem:labels}.
+\end{remark}
+
+%--------------------------------------------------------------------
+\subsubsection*{The Two Questions in the Picture}
+
+With the picture in hand we can answer the two questions on the defect. The answers are two short computations, which we state first and then read geometrically.
+
+\begin{proposition}[Properties of the defect]\label{prop:defect-properties}
+	Let $(\widehat{G},\iota,\pi)$ be a central extension of $G$ by $A$ as per Definition~\ref{def:central-extension}, let $\varsigma$ be a section and let $\zeta:=\zeta_\varsigma$ be its defect as per Definition~\ref{def:defect}.
+	\begin{enumerate}
+		\item $\zeta(\kappa,e)=\zeta(e,\kappa)=0$ for all $\kappa\in G$, and for all $\kappa_1,\kappa_2,\kappa_3\in G$
+		\begin{equation}\label{eq:defect-associativity}
+			\zeta(\kappa_1,\kappa_2)+\zeta(\kappa_1\kappa_2,\kappa_3)=\zeta(\kappa_2,\kappa_3)+\zeta(\kappa_1,\kappa_2\kappa_3).
+		\end{equation}
+		\item If $\varsigma'$ is another section, there is a unique map $\mu:G\to A$ with $\mu(e)=0$ and $\varsigma'(\kappa)=\iota(\mu(\kappa))\varsigma(\kappa)$, and
+		\begin{equation}\label{eq:change-section}
+			\zeta_{\varsigma'}(\kappa,\kappa')=\zeta_\varsigma(\kappa,\kappa')+\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa').
+		\end{equation}
+	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	For $\mu\in C^1(G,A)$ we have $(\delta_1\mu)(\kappa,e)=\mu(\kappa)+\mu(e)-\mu(\kappa)=0$, and likewise $(\delta_1\mu)(e,\kappa)=0$. Substituting the definition of $\delta_1$ in that of $\delta_2$ yields
+	Item 1. Since $\varsigma(e)=e$, Equation~\eqref{eq:defect} with $\kappa'=e$ reads $\varsigma(\kappa)=\iota(\zeta(\kappa,e))\varsigma(\kappa)$, hence $\iota(\zeta(\kappa,e))=e$ and $\zeta(\kappa,e)=0$ because $\iota$ is injective. The same argument with $\kappa=e$ yields $\zeta(e,\kappa)=0$. For the identity we bracket $\varsigma(\kappa_1)\varsigma(\kappa_2)\varsigma(\kappa_3)$ in the two possible ways, using Equation~\eqref{eq:defect} twice and the centrality of $\iota(A)$ to collect the factors in $\iota(A)$ on the left,
 	\begin{align*}
-		(\delta_2\delta_1\mu)(\kappa,\kappa',\kappa'')={}&[\mu(\kappa')+\mu(\kappa'')-\mu(\kappa'\kappa'')]-[\mu(\kappa\kappa')+\mu(\kappa'')-\mu(\kappa\kappa'\kappa'')]\\
-		&+[\mu(\kappa)+\mu(\kappa'\kappa'')-\mu(\kappa\kappa'\kappa'')]-[\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa')],
+		\big(\varsigma(\kappa_1)\varsigma(\kappa_2)\big)\varsigma(\kappa_3)&=\iota\big(\zeta(\kappa_1,\kappa_2)\big)\varsigma(\kappa_1\kappa_2)\varsigma(\kappa_3)\\
+		&=\iota\big(\zeta(\kappa_1,\kappa_2)+\zeta(\kappa_1\kappa_2,\kappa_3)\big)\varsigma(\kappa_1\kappa_2\kappa_3),\\
+		\varsigma(\kappa_1)\big(\varsigma(\kappa_2)\varsigma(\kappa_3)\big)&=\iota\big(\zeta(\kappa_2,\kappa_3)\big)\varsigma(\kappa_1)\varsigma(\kappa_2\kappa_3)\\
+		&=\iota\big(\zeta(\kappa_2,\kappa_3)+\zeta(\kappa_1,\kappa_2\kappa_3)\big)\varsigma(\kappa_1\kappa_2\kappa_3).
 	\end{align*}
-	and the twelve terms cancel in pairs.
+	The two expressions coincide by associativity of the product of $\widehat{G}$, and $\iota$ is injective, which yields Equation~\eqref{eq:defect-associativity}.
+	
+	Item 2. The elements $\varsigma'(\kappa)$ and $\varsigma(\kappa)$ lie above the same element of $G$, so that $\varsigma'(\kappa)\varsigma(\kappa)^{-1}\in\ker\pi=\iota(A)$ defines a unique $\mu(\kappa)\in A$, and $\mu(e)=0$ because $\varsigma'(e)=\varsigma(e)=e$. Using the centrality of $\iota(A)$ and $\varsigma(\kappa\kappa')=\iota(-\mu(\kappa\kappa'))\varsigma'(\kappa\kappa')$,
+	\begin{align*}
+		\varsigma'(\kappa)\varsigma'(\kappa')&=\iota\big(\mu(\kappa)+\mu(\kappa')+\zeta_\varsigma(\kappa,\kappa')\big)\varsigma(\kappa\kappa')\\
+		&=\iota\big(\mu(\kappa)+\mu(\kappa')+\zeta_\varsigma(\kappa,\kappa')-\mu(\kappa\kappa')\big)\varsigma'(\kappa\kappa'),
+	\end{align*}
+	which is Equation~\eqref{eq:change-section} by Definition~\ref{def:defect}.
 \end{proof}
 
-\begin{remark}\label{rem:group-general}
-	For all degrees $k\geq0$ the standard differential is
-	\begin{equation*}
-		(\delta_k\zeta)(\kappa_1,\dots,\kappa_{k+1})=\zeta(\kappa_2,\dots,\kappa_{k+1})+\sum_{i=1}^k(-1)^i\zeta(\kappa_1,\dots,\kappa_i\kappa_{i+1},\dots,\kappa_{k+1})+(-1)^{k+1}\zeta(\kappa_1,\dots,\kappa_k),
-	\end{equation*}
-	which reduces to Definition~\ref{def:group-cochains} for $k=1,2$ \cite[TODO-location]{TODO-GroupCohomology}. Restricting to normalized cochains does not change the cohomology groups, and we only use the groups of degree at most two.
+\noindent The proposition answers the second question completely, while for the first one it provides a necessary condition, whose sufficiency is proved in Proposition~\ref{prop:cocycle-extension}.
+
+The two equations of the proposition acquire a meaning once they are read on the simplices of Example~\ref{ex:triangle-tetrahedron}. The reading shows that Equation~\eqref{eq:defect-associativity} is a closure condition of the tetrahedron, and that it is the exact counterpart of the associativity of the product of $\widehat{G}$.
+
+\begin{remark}[Reading Proposition~\ref{prop:defect-properties} on simplices]\label{rem:picture-reading}
+	\emph{Associativity is the closure of the tetrahedron.} Consider four vertices $g_0,\dots,g_3$ and the quadrilateral formed by the three consecutive edges $\kappa_1,\kappa_2,\kappa_3$ together with the long edge from $g_0$ to $g_3$, as in Figure~\ref{fig:quadrilateral}. It can be cut into two triangles in two ways. The cut along the diagonal from $g_0$ to $g_2$ yields the triangles $(g_0,g_1,g_2)$ and $(g_0,g_2,g_3)$, to which the defect assigns $\zeta(\kappa_1,\kappa_2)$ and $\zeta(\kappa_1\kappa_2,\kappa_3)$. The cut along the diagonal from $g_1$ to $g_3$ yields $(g_1,g_2,g_3)$ and $(g_0,g_1,g_3)$, with values $\zeta(\kappa_2,\kappa_3)$ and $\zeta(\kappa_1,\kappa_2\kappa_3)$. Equation~\eqref{eq:defect-associativity} states that the total value on the quadrilateral does not depend on the diagonal, just as the area of a quadrilateral does not. The four triangles are the four faces of the tetrahedron $(g_0,g_1,g_2,g_3)$, and with the signs of Remark~\ref{rem:boundary-stokes} the equation reads $\zeta(\text{face }0)-\zeta(\text{face }1)+\zeta(\text{face }2)-\zeta(\text{face }3)=0$. The defect evaluated on the boundary of a tetrahedron vanishes, \textit{i.e.}, the tetrahedron closes.
+	
+	The two diagonals correspond to the two bracketings of a product of three factors. The first merges $\varsigma(\kappa_1)$ and $\varsigma(\kappa_2)$ into a section above $\kappa_1\kappa_2$, which is the cut along the diagonal from $g_0$ to $g_2$, and the second merges $\varsigma(\kappa_2)$ and $\varsigma(\kappa_3)$, which is the cut along the diagonal from $g_1$ to $g_3$. This explains the proof of item 1: associativity of $\widehat{G}$ is the independence of the total defect from the way the quadrilateral is cut.
+	
+	\emph{A change of section is a boundary.} A section is a choice of a number $\mu(\kappa)$ for every edge. Equation~\eqref{eq:change-section} states that changing the section modifies the value on a triangle by $\mu(\kappa_1)+\mu(\kappa_2)-\mu(\kappa_1\kappa_2)$, the oriented sum of $\mu$ on the boundary of the triangle. This modification does not spoil the closure of the tetrahedron. Each of the six edges of a tetrahedron belongs to exactly two of its four faces, and it enters their boundaries with opposite signs, so that the corresponding contributions cancel. This is the statement that the boundary of a boundary is empty, and it is the content of Proposition~\ref{prop:group-complex} below. It is also the reason why a change of section turns a defect into another defect.
 \end{remark}
 
+\begin{figure}[ht]
+	\centering
+	% ---------------------------------------------------------------
+	% PROMPT FOR A TIKZ GENERATOR (paste everything between the rules)
+	% ---------------------------------------------------------------
+	% Write TikZ code for a figure made of two quadrilaterals side by
+	% side, separated by the symbol "=" drawn in the middle, to be
+	% compiled inside a LaTeX document that already loads tikz. Use only
+	% the libraries arrows.meta, calc and positioning. Black and white
+	% (light gray fills allowed), line width 0.8pt, total width about
+	% 0.95\textwidth, labels in math mode with the standard LaTeX math
+	% font.
+	% Each quadrilateral is a square of side 2cm with vertices g_0 at
+	% (0,0), g_1 at (2,0), g_2 at (2,2), g_3 at (0,2). Write the names
+	% $g_0$, $g_1$, $g_2$, $g_3$ outside the square next to the vertices
+	% and mark the vertices with small filled dots. Draw the boundary as
+	% arrows with a closed arrow tip (Stealth): g_0 to g_1 labelled
+	% $\kappa_1$, g_1 to g_2 labelled $\kappa_2$, g_2 to g_3 labelled
+	% $\kappa_3$, and the long edge g_0 to g_3 labelled
+	% $\kappa_1\kappa_2\kappa_3$ on the left side. Place the labels
+	% outside the square.
+	% Left square: draw the diagonal from g_0 to g_2 as an arrow. Fill
+	% the two triangles (g_0,g_1,g_2) and (g_0,g_2,g_3) with two
+	% different light gray tones and write inside them
+	% $\zeta(\kappa_1,\kappa_2)$ and $\zeta(\kappa_1\kappa_2,\kappa_3)$
+	% respectively. Label the diagonal $\kappa_1\kappa_2$.
+	% Right square: draw the diagonal from g_1 to g_3 as an arrow. Fill
+	% the two triangles (g_1,g_2,g_3) and (g_0,g_1,g_3) with two
+	% different light gray tones and write inside them
+	% $\zeta(\kappa_2,\kappa_3)$ and $\zeta(\kappa_1,\kappa_2\kappa_3)$
+	% respectively. Label the diagonal $\kappa_2\kappa_3$.
+	% Under the left square write the caption text
+	% "bracketing $(\varsigma(\kappa_1)\varsigma(\kappa_2))\varsigma(\kappa_3)$"
+	% and under the right square
+	% "bracketing $\varsigma(\kappa_1)(\varsigma(\kappa_2)\varsigma(\kappa_3))$".
+	% ---------------------------------------------------------------
+	\fbox{\parbox{0.9\textwidth}{\centering\vspace{3.5cm}TODO: quadrilateral figure\vspace{3.5cm}}}
+	\caption{The two ways of cutting the quadrilateral $(g_0,g_1,g_2,g_3)$ into triangles. Equation~\eqref{eq:defect-associativity} states that the total value of the defect is the same for both.}
+	\label{fig:quadrilateral}
+\end{figure}
+
+The guiding example makes the closure condition literal, since the defect of the Heisenberg group is an area and areas are additive.
+
+\begin{example}[The defect of the Heisenberg group]\label{ex:area-defect}
+	Consider the section $\varsigma(\mathbf{u})=(0,\mathbf{u})$ of Example~\ref{ex:heisenberg-group}. Equation~\eqref{eq:heisenberg-law} yields $\varsigma(\mathbf{u})\varsigma(\mathbf{u}')=\iota\big(\tfrac12\mathbf{u}\wedge\mathbf{u}'\big)\varsigma(\mathbf{u}+\mathbf{u}')$, hence $\zeta_\varsigma(\mathbf{u},\mathbf{u}')=\tfrac12\mathbf{u}\wedge\mathbf{u}'$. For a triangle $(g_0,g_1,g_2)$ of $\mathbb{R}^2$ the consecutive labels are $\mathbf{u}=g_1-g_0$ and $\mathbf{u}'=g_2-g_1$, and the signed area of the triangle is
+	\begin{equation*}
+		\tfrac12\,(g_1-g_0)\wedge(g_2-g_0)=\tfrac12\,\mathbf{u}\wedge(\mathbf{u}+\mathbf{u}')=\tfrac12\,\mathbf{u}\wedge\mathbf{u}',
+	\end{equation*}
+	which is also $\tfrac12(g_0\wedge g_1+g_1\wedge g_2+g_2\wedge g_0)$. Hence $\zeta_\varsigma$ is the signed area, and Equation~\eqref{eq:defect-associativity} is the additivity of the area. In the alternating sum of the four faces of a tetrahedron $(g_0,g_1,g_2,g_3)$ each of the six terms $g_i\wedge g_j$ with $i<j$ occurs in exactly two faces with opposite signs, as one checks by direct expansion, so that the sum vanishes.
+	
+	The defect is not the differential of a $1$-cochain. Since $\mathbb{R}^2$ is abelian, every expression $\mu(\mathbf{u})+\mu(\mathbf{u}')-\mu(\mathbf{u}+\mathbf{u}')$ is symmetric in $(\mathbf{u},\mathbf{u}')$, whereas $\zeta_\varsigma(\mathbf{e}_1,\mathbf{e}_2)=\tfrac12=-\zeta_\varsigma(\mathbf{e}_2,\mathbf{e}_1)$ for the canonical basis. By Equation~\eqref{eq:change-section}, no section of this extension has vanishing defect, in agreement with the fact that the extension is not abelian and therefore not trivial.
+\end{example}
+
+%--------------------------------------------------------------------
+\subsubsection*{The Algebraic Transcription: Cochains and Differentials}
+
+We now transcribe the picture into definitions. A $k$-cochain is a normalized function of $k$ group elements, \textit{i.e.}, a normalized function on $k$-simplices which is invariant under left translation by Remark~\ref{rem:labels}. The differential is the evaluation on the oriented boundary of Remark~\ref{rem:boundary-stokes}, written in terms of the labels of the faces computed in Example~\ref{ex:triangle-tetrahedron}. We keep the cochains of degree up to three, which suffice for the classification of central extensions.
+
+\begin{definition}[Cochain complex of a group]\label{def:group-cochains}
+	Let $G$ be a group with identity $e$ and let $A$ be an abelian group, written additively, on which $G$ acts trivially. The \emph{normalized cochains} of $G$ with values in $A$ are
+	\begin{align*}
+		C^0(G,A)&:=A,\\
+		C^1(G,A)&:=\{\mu:G\to A\mid\mu(e)=0\},\\
+		C^2(G,A)&:=\big\{\zeta:G\times G\to A\mid\zeta(\kappa,e)=\zeta(e,\kappa)=0\ \ \forall\kappa\in G\big\},\\
+		C^3(G,A)&:=\{\text{maps }G\times G\times G\to A\},
+	\end{align*}
+	with $C^k(G,A):=\{0\}$ for $k\geq4$. The \emph{differentials} are $d_0:=0$,
+	\begin{align*}
+		(d_1\mu)(\kappa,\kappa')&:=\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa'),\\
+		(d_2\zeta)(\kappa,\kappa',\kappa'')&:=\zeta(\kappa',\kappa'')-\zeta(\kappa\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa'')-\zeta(\kappa,\kappa'),
+	\end{align*}
+	for all $\kappa,\kappa',\kappa''\in G$, and $d_k:=0$ for $k\geq3$.
+\end{definition}
+
+The definition is the dictionary of the picture. Elements of $C^1(G,A)$ attach a value to each edge, elements of $C^2(G,A)$ to each triangle and elements of $C^3(G,A)$ to each tetrahedron, and the trivial action of $G$ on $A$ reflects the centrality of $\iota(A)$. The normalization requires a cochain to vanish on degenerate simplices, which is the property recorded in item 1 of Proposition~\ref{prop:defect-properties} and in the condition $\mu(e)=0$. The differential $d_1\mu$ is the sum of $\mu$ on the oriented boundary of the triangle $(g_0,g_1,g_2)$, the two short edges with the sign $+$ and the long edge with the sign $-$. The differential $d_2\zeta$ is the sum of $\zeta$ on the oriented boundary of the tetrahedron $(g_0,g_1,g_2,g_3)$, with the faces omitting $g_0,g_1,g_2,g_3$ carrying the signs $+,-,+,-$ and the values read in the table of Example~\ref{ex:triangle-tetrahedron}. For $A=U(1)$ the group operation is the multiplication, the zero element is $1$ and the opposite of $a$ is $a^{-1}$, so that the differentials read
+\begin{equation*}
+	(d_1\mu)(\kappa,\kappa')=\frac{\mu(\kappa)\,\mu(\kappa')}{\mu(\kappa\kappa')}, \qquad (d_2\omega)(\kappa,\kappa',\kappa'')=\frac{\omega(\kappa',\kappa'')\,\omega(\kappa,\kappa'\kappa'')}{\omega(\kappa\kappa',\kappa'')\,\omega(\kappa,\kappa')}.
+\end{equation*}
+In this notation Equation~\eqref{eq:change-section} reads $\zeta_{\varsigma'}=\zeta_\varsigma+d_1\mu$, and Equation~\eqref{eq:defect-associativity} reads $d_2\zeta_\varsigma=0$.
+
+\begin{remark}[The differential in every degree]\label{rem:group-general}
+	The recipe of Remark~\ref{rem:boundary-stokes} produces a differential in every degree. For a $(k+1)$-simplex with consecutive labels $\kappa_1,\dots,\kappa_{k+1}$, the face omitting $g_0$ has consecutive labels $(\kappa_2,\dots,\kappa_{k+1})$, the face omitting $g_{k+1}$ has $(\kappa_1,\dots,\kappa_k)$, and the face omitting $g_j$ with $1\leq j\leq k$ has the labels in which $\kappa_j$ and $\kappa_{j+1}$ are replaced by their product $\kappa_j\kappa_{j+1}$. Evaluating a $k$-cochain $\zeta$ on the oriented boundary yields
+	\begin{multline*}
+		(d_k\zeta)(\kappa_1,\dots,\kappa_{k+1})=\zeta(\kappa_2,\dots,\kappa_{k+1})\\
+		+\sum_{j=1}^k(-1)^j\zeta(\kappa_1,\dots,\kappa_j\kappa_{j+1},\dots,\kappa_{k+1})+(-1)^{k+1}\zeta(\kappa_1,\dots,\kappa_k),
+	\end{multline*}
+	which reduces to Definition~\ref{def:group-cochains} for $k=1,2$. The identity $d\circ d=0$ is the statement that the boundary of a boundary is empty. We only need it in degree two, where it is verified in Proposition~\ref{prop:group-complex}.
+\end{remark}
+
+\begin{proposition}\label{prop:group-complex}
+	In Definition~\ref{def:group-cochains}, $d_1$ takes values in $C^2(G,A)$ and $d_2\circ d_1=0$. Hence $C^\bullet(G,A)$ is a cochain complex as per Definition~\ref{def:cochain-complex}.
+\end{proposition}
+
+\begin{proof}
+	For $\mu\in C^1(G,A)$ we have $(d_1\mu)(\kappa,e)=\mu(\kappa)+\mu(e)-\mu(\kappa)=0$, and likewise $(d_1\mu)(e,\kappa)=0$. Substituting the definition of $d_1$ in that of $d_2$ yields
+	\begin{align*}
+		(d_2d_1\mu)(\kappa,\kappa',\kappa'')={}&[\mu(\kappa')+\mu(\kappa'')-\mu(\kappa'\kappa'')]-[\mu(\kappa\kappa')+\mu(\kappa'')-\mu(\kappa\kappa'\kappa'')]\\
+		&+[\mu(\kappa)+\mu(\kappa'\kappa'')-\mu(\kappa\kappa'\kappa'')]-[\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa')],
+	\end{align*}
+	and the twelve terms cancel in pairs. The remaining requirements of Definition~\ref{def:cochain-complex} hold because $d_0=0$ and $d_k=0$ for $k\geq3$.
+\end{proof}
+
+\noindent In the picture, the cancellation is the one of Remark~\ref{rem:picture-reading}, since each edge of the tetrahedron appears in two faces with opposite signs.
+
+Since $C^\bullet(G,A)$ is a cochain complex, Definition~\ref{def:abstract-cohomology} applies and we can name the objects which answer the two questions on the defect. Cocycles are the cochains which are closed, in the sense of Remark~\ref{rem:boundary-stokes}, and coboundaries are the ones which are exact.
+
 \begin{definition}[Cocycle]\label{def:cocycle}
-	Let $G$ be a group with identity $e$ and let $A$ be an abelian group, written additively. A \emph{$2$-cocycle} on $G$ with values in $A$ is a map $\zeta\in C^2(G,A)$ with $\delta_2\zeta=0$, \textit{i.e.}, such that
+	Let $G$ be a group with identity $e$ and let $A$ be an abelian group, written additively. A \emph{$2$-cocycle} on $G$ with values in $A$ is a map $\zeta\in C^2(G,A)$ with $d_2\zeta=0$, \textit{i.e.}, such that
 	\begin{equation*}
 		\zeta(\kappa,\kappa')+\zeta(\kappa\kappa',\kappa'')=\zeta(\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa''), \qquad \kappa,\kappa',\kappa''\in G.
 	\end{equation*}
 	A cocycle with values in $A=\mathbb{R}$ is called a real cocycle.
 \end{definition}
 
+By Proposition~\ref{prop:defect-properties}, the defect of every section of a central extension is a $2$-cocycle. Changing the section modifies it by the differential of a $1$-cochain, which is the structure singled out by the next definition.
+
 \begin{definition}[Coboundary and second cohomology group]\label{def:cohomology-group}
-	Let $G$ and $A$ be as in Definition~\ref{def:cocycle}. A $2$-cocycle $\zeta$ is a \emph{coboundary} if $\zeta=\delta_1\mu$ for some $\mu\in C^1(G,A)$, that is, if $\zeta(\kappa,\kappa')=\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa')$. Two cocycles are \emph{cohomologous} if their difference is a coboundary. The \emph{second cohomology group} $H^2(G,A)$ is the cohomology group of degree two of $C^\bullet(G,A)$ as per Definition~\ref{def:abstract-cohomology}.
+	Let $G$ and $A$ be as in Definition~\ref{def:cocycle}. A $2$-cocycle $\zeta$ is a \emph{coboundary} if $\zeta=d_1\mu$ for some $\mu\in C^1(G,A)$, \textit{i.e.}, if $\zeta(\kappa,\kappa')=\mu(\kappa)+\mu(\kappa')-\mu(\kappa\kappa')$. Two cocycles are \emph{cohomologous} if their difference is a coboundary. The \emph{second cohomology group} $H^2(G,A)$ is the cohomology group of degree two of $C^\bullet(G,A)$ as per Definition~\ref{def:abstract-cohomology}.
 \end{definition}
 
-\noindent In degrees zero and one the same construction yields $H^0(G,A)=A$ and $H^1(G,A)=\{\mu:G\to A\mid\mu(\kappa\kappa')=\mu(\kappa)+\mu(\kappa')\}$, the group of homomorphisms from $G$ to $A$, because $\delta_0=0$.
+In degrees zero and one the same construction yields $H^0(G,A)=A$ and $H^1(G,A)=\{\mu:G\to A\mid\mu(\kappa\kappa')=\mu(\kappa)+\mu(\kappa')\}$, the group of homomorphisms from $G$ to $A$, because $d_0=0$. The group $H^2(G,A)$ is the object of interest, and it plays for the extension problem the role that $H^k_{\mathrm{dR}}(M)$ plays for the existence of a primitive of a closed form, in the sense of Remark~\ref{rem:obstruction}. The defects of the sections of one extension form a single class in $H^2(G,A)$ by Equation~\eqref{eq:change-section}, and the class vanishes if and only if some section has vanishing defect, \textit{i.e.}, if and only if the extension is trivial. The converse, that every class arises from an extension and that distinct classes yield inequivalent extensions, is the content of Proposition~\ref{prop:cocycle-extension}.
 
 \begin{remark}[Topological groups]\label{rem:topological-groups}
-	The cochains of Definition~\ref{def:group-cochains} are arbitrary maps, which is the appropriate choice for abstract groups. For a Lie group one works with Borel cochains, and in this setting all statements below on multipliers of Lie groups are to be read. Without a regularity condition the groups become much larger. For $G=\mathbb{R}^2$ every bi-additive antisymmetric map $B:\mathbb{R}^2\times\mathbb{R}^2\to\mathbb{R}$ produces the cocycle $\frac12B$ by the argument of Example~\ref{ex:heisenberg-extension}, and bi-additive maps need not be bilinear because additive maps $\mathbb{R}\to\mathbb{R}$ need not be continuous.
+	The cochains of Definition~\ref{def:group-cochains} are arbitrary maps, which is the appropriate choice for abstract groups. For a Lie group one works with Borel cochains \cite[TODO-location]{TODO-Varadarajan1985}, and all statements below on multipliers of Lie groups are to be read in this setting. Without a regularity condition the cohomology groups become much larger. For $G=\mathbb{R}^2$ every bi-additive antisymmetric map $B:\mathbb{R}^2\times\mathbb{R}^2\to\mathbb{R}$ produces the cocycle $\frac12B$ by the same computation as in Example~\ref{ex:area-defect}, and bi-additive maps need not be bilinear because additive maps $\mathbb{R}\to\mathbb{R}$ need not be continuous.
 \end{remark}
 
-We now return to the operators $V_\kappa$ obtained by lifting a symmetry group. The following definition records the algebraic structure they satisfy.
+The picture also explains why this machinery is needed for the Galilei group. In Example~\ref{ex:heisenberg-group} two commuting elements of $G$ have lifts which commute only up to a central element, and this element is the area of the parallelogram spanned by them. The same mechanism occurs for the boosts and the translations of the Galilei group, which commute in $\mathcal{G}$ while their lifts differ by a phase, as Lemma~\ref{lem:galilei-relations} shows. The size of this phase, which no choice of section can remove, is the mass, and it is read in Section~\ref{sec:galilei} as the value of an invariant cocycle in the same way as the area is read here. To transfer these statements to unitary operators, we now need the notion of projective representation, which is the object of the next paragraphs.
+
+\subsubsection*{Projective Unitary Representations}
+
+The subsection so far has been abstract, with a generic abelian group $A$. We now return to the problem which motivated it, and we take $A=U(1)$. A symmetry acts on rays, and its implementation on $\mathcal{H}$ is a family of unitary operators which is fixed only up to phases. We first define this family precisely. We then compute the two facts about its phases which the cochains of Definition~\ref{def:group-cochains} were designed to record, namely the identity which the phases satisfy and their transformation under a change of representatives. These are the computations of Proposition~\ref{prop:defect-properties}, carried out in the setting in which the central group is $U(1)$.
 
 \begin{definition}[Projective unitary representation]\label{def:projective-representation}
-	Let $G$ be a group and let $\H$ be a Hilbert space as per Definition~2.2.6. A \emph{projective unitary representation} of $G$ on $\H$ is a map $V:G\to U(\H)$, $\kappa\mapsto V_\kappa$, taking values in the unitary operators of Definition~2.2.22 with $V_e=\mathbb{1}$, such that for all $\kappa,\kappa'\in G$ there is $\omega(\kappa,\kappa')\in U(1)$ with
+	Let $G$ be a group with identity $e$ and let $\mathcal{H}$ be a Hilbert space as per Definition~2.2.6. A \emph{projective unitary representation} of $G$ on $\mathcal{H}$ is a map $V:G\to U(\mathcal{H})$, $\kappa\mapsto V_\kappa$, taking values in the unitary operators of Definition~2.2.22 with $V_e=\mathbb{1}$, such that for all $\kappa,\kappa'\in G$ there is $\omega(\kappa,\kappa')\in U(1)$ with
 	\begin{equation*}
 		V_\kappa V_{\kappa'}=\omega(\kappa,\kappa')\,V_{\kappa\kappa'}.
 	\end{equation*}
 	The function $\omega:G\times G\to U(1)$ is called the \emph{multiplier} of $V$.
 \end{definition}
 
-\begin{remark}
-	A projective unitary representation is the same thing as a homomorphism of $G$ into the quotient group $U(\H)/U(1)$, \textit{i.e.}, into the group of unitary transformations of the rays of $\H$, together with a choice of one representative for each group element. It is a genuine representation as per Definition~1.2.18 if and only if $\omega\equiv1$, and it is a strongly continuous one as per Definition~1.2.28 if moreover $\kappa\mapsto V_\kappa$ is strongly continuous. If $G$ is a Lie group, we call $V$ continuous if $\kappa\mapsto|(x,V_\kappa y)|$ is continuous for all $x,y\in\H$.
+A projective unitary representation is a bookkeeping device for a symmetry of rays, and its relation with the extensions of the previous paragraphs is the content of the following remark.
+
+\begin{remark}\label{rem:projective-quotient}
+	A projective unitary representation is the same thing as a homomorphism of $G$ into the quotient group $U(\mathcal{H})/U(1)$, \textit{i.e.}, into the group of unitary transformations of the rays of $\mathcal{H}$, together with a choice of one representative for each group element. The multiplier records the discrepancy between this choice and the group law. The map $V$ is a genuine representation as per Definition~1.2.18 if and only if $\omega\equiv1$, and it is a strongly continuous one as per Definition~1.2.28 if moreover $\kappa\mapsto V_\kappa$ is strongly continuous. If $G$ is a Lie group, we call $V$ continuous if $\kappa\mapsto|(x,V_\kappa y)|$ is continuous for all $x,y\in\mathcal{H}$.
 \end{remark}
 
-The multiplier is not an arbitrary function, since the associativity of the product of operators constrains it. This is the first appearance of a cocycle in representation theory.
+The choice of one representative for each element is the analogue of the choice of a section in Definition~\ref{def:section}, and the multiplier is the analogue of the defect of Definition~\ref{def:defect}. The analogy is made exact in Proposition~\ref{prop:cocycle-extension}, and for the moment it explains why the multiplier must satisfy the identity of Proposition~\ref{prop:defect-properties}. We verify it directly, since it is the first appearance of a cocycle in representation theory.
 
 \begin{proposition}[The multiplier is a cocycle]\label{prop:multiplier-cocycle}
-	The multiplier $\omega$ of a projective unitary representation of $G$ is a $2$-cocycle on $G$ with values in $U(1)$.
+	Let $V$ be a projective unitary representation of $G$ with multiplier $\omega$. Then $\omega(\kappa,e)=\omega(e,\kappa)=1$ and
+	\begin{equation}\label{eq:multiplier-identity}
+		\omega(\kappa,\kappa')\,\omega(\kappa\kappa',\kappa'')=\omega(\kappa',\kappa'')\,\omega(\kappa,\kappa'\kappa''), \qquad \kappa,\kappa',\kappa''\in G.
+	\end{equation}
 \end{proposition}
 
 \begin{proof}
-	Normalization follows from $V_e=\mathbb{1}$. Computing $V_\kappa V_{\kappa'}V_{\kappa''}$ in the two possible ways yields $\omega(\kappa,\kappa')\,\omega(\kappa\kappa',\kappa'')\,V_{\kappa\kappa'\kappa''}$ and $\omega(\kappa',\kappa'')\,\omega(\kappa,\kappa'\kappa'')\,V_{\kappa\kappa'\kappa''}$, and $V_{\kappa\kappa'\kappa''}\neq0$.
+	Since $V_e=\mathbb{1}$, the relations $V_\kappa=V_\kappa V_e=\omega(\kappa,e)V_\kappa$ and $V_\kappa=V_eV_\kappa=\omega(e,\kappa)V_\kappa$ entail $\omega(\kappa,e)=\omega(e,\kappa)=1$, because $V_\kappa$ is invertible. Bracketing the product $V_\kappa V_{\kappa'}V_{\kappa''}$ in the two possible ways yields
+	\begin{align*}
+		(V_\kappa V_{\kappa'})V_{\kappa''}&=\omega(\kappa,\kappa')\,\omega(\kappa\kappa',\kappa'')\,V_{\kappa\kappa'\kappa''},\\
+		V_\kappa(V_{\kappa'}V_{\kappa''})&=\omega(\kappa',\kappa'')\,\omega(\kappa,\kappa'\kappa'')\,V_{\kappa\kappa'\kappa''}.
+	\end{align*}
+	The two expressions coincide by associativity of the product of operators, and $V_{\kappa\kappa'\kappa''}$ is invertible, so that Equation~\eqref{eq:multiplier-identity} holds.
 \end{proof}
 
-The operators $V_\kappa$ are determined by the action on rays only up to a phase, so $V$ can be modified by multiplying each $V_\kappa$ by a phase. This modification changes the multiplier in a controlled way, and it is natural to ask whether it can be used to make the multiplier trivial.
+\noindent Equation~\eqref{eq:multiplier-identity} is the associativity of the product of operators, rewritten in terms of the phases, \textit{i.e.}, the closure of the tetrahedron of Remark~\ref{rem:picture-reading} with the values of $\omega$ on its faces. It is the only constraint which we will find on $\omega$, and Definition~\ref{def:cocycle} names it.
+
+The operators $V_\kappa$ are determined by the action on rays only up to a phase. A change of representatives modifies the multiplier in a way which can be computed explicitly, and it is natural to ask whether this freedom can be used to make the multiplier trivial.
 
 \begin{proposition}[Rephasing]\label{prop:rephasing}
-	Let $V$ be a projective unitary representation of $G$ with multiplier $\omega$, and let $\mu\in C^1(G,U(1))$. Then $V'_\kappa:=\mu(\kappa)V_\kappa$ is a projective unitary representation with multiplier $\omega'=\omega\cdot\delta_1\mu$, \textit{i.e.}, $\omega'(\kappa,\kappa')=\omega(\kappa,\kappa')\,\mu(\kappa)\mu(\kappa')\mu(\kappa\kappa')^{-1}$. In particular, $V$ can be rephased into a genuine representation if and only if $\omega$ is a coboundary.
+	Let $V$ be a projective unitary representation of $G$ with multiplier $\omega$, and let $\mu:G\to U(1)$ be a map with $\mu(e)=1$. Then $V'_\kappa:=\mu(\kappa)V_\kappa$ is a projective unitary representation with multiplier
+	\begin{equation}\label{eq:rephasing}
+		\omega'(\kappa,\kappa')=\omega(\kappa,\kappa')\,\frac{\mu(\kappa)\,\mu(\kappa')}{\mu(\kappa\kappa')}.
+	\end{equation}
+	In particular, $V$ can be rephased into a genuine representation if and only if there is such a map $\mu$ with $\omega(\kappa,\kappa')=\mu(\kappa\kappa')\big/\big(\mu(\kappa)\mu(\kappa')\big)$ for all $\kappa,\kappa'\in G$.
 \end{proposition}
 
 \begin{proof}
-	The formula for $\omega'$ follows from $V'_\kappa V'_{\kappa'}=\mu(\kappa)\mu(\kappa')\,\omega(\kappa,\kappa')V_{\kappa\kappa'}$. The new multiplier is trivial if and only if $\omega=(\delta_1\mu)^{-1}=\delta_1(\mu^{-1})$, that is, if and only if $\omega$ is a coboundary.
+	We have $V'_e=\mathbb{1}$ and
+	\begin{equation*}
+		V'_\kappa V'_{\kappa'}=\mu(\kappa)\mu(\kappa')\,\omega(\kappa,\kappa')\,V_{\kappa\kappa'}=\frac{\mu(\kappa)\mu(\kappa')}{\mu(\kappa\kappa')}\,\omega(\kappa,\kappa')\,V'_{\kappa\kappa'},
+	\end{equation*}
+	which is Equation~\eqref{eq:rephasing}. The new multiplier is trivial if and only if $\omega(\kappa,\kappa')=\mu(\kappa\kappa')\big/\big(\mu(\kappa)\mu(\kappa')\big)$.
 \end{proof}
 
-\noindent The class of the multiplier in $H^2(G,U(1))$ is therefore the obstruction to removing the phases, and it does not depend on the choice of the operators within their rays. The same cocycles also describe enlargements of the group, to which we now turn.
+\noindent The freedom in the choice of representatives acts on the multiplier through the factor $\mu(\kappa)\mu(\kappa')/\mu(\kappa\kappa')$, which is the differential $d_1\mu$ of Definition~\ref{def:group-cochains} written multiplicatively, and which equals $1$ exactly when $\mu$ is a homomorphism.
 
-\begin{definition}[Central extension]\label{def:central-extension}
-	Let $G$ be a group and let $A$ be an abelian group. A \emph{central extension} of $G$ by $A$ is a group $\widehat{G}$ together with an injective homomorphism $\iota:A\to\widehat{G}$ whose image is contained in the center of $\widehat{G}$, and a surjective homomorphism $\pi:\widehat{G}\to G$ with $\ker\pi=\iota(A)$. Two central extensions are \emph{equivalent} if there is an isomorphism between them commuting with $\iota$ and $\pi$.
-\end{definition}
+In the notation of Definition~\ref{def:group-cochains} with $A=U(1)$, the two propositions state that the multiplier $\omega$ belongs to $C^2(G,U(1))$ and satisfies $d_2\omega=1$, and that a change of representatives replaces $\omega$ by $\omega\cdot d_1\mu$. This is the exact counterpart of Proposition~\ref{prop:defect-properties}, with the multiplier in the role of the defect and the rephasing in the role of the change of section. The consequence is that only the class of the multiplier can carry information.
 
-\begin{remark}
-	In a central extension every element of $G$ is replaced by a copy of $A$ inside $\widehat{G}$, and the elements of this copy commute with everything. The extra coordinate is invisible once one passes to the quotient $G$, and its only trace is in the way two elements multiply. The next proposition shows that this trace is precisely a cocycle.
+\begin{remark}[The class of the multiplier]\label{rem:class-of-multiplier}
+	Proposition~\ref{prop:multiplier-cocycle} states that the multiplier of a projective unitary representation is a $2$-cocycle on $G$ with values in $U(1)$, and Equation~\eqref{eq:rephasing} states that a change of representatives replaces it by $\omega\cdot d_1\mu$, which is cohomologous to $\omega$. It descends that the class $[\omega]\in H^2(G,U(1))$ does not depend on the operators chosen within their rays. By Proposition~\ref{prop:rephasing}, $V$ can be rephased into a genuine representation if and only if $[\omega]=0$, so that this class is the obstruction to removing the phases.
 \end{remark}
+
+%--------------------------------------------------------------------
+\subsubsection*{Realizing a Cocycle: the Classification of Central Extensions}
+
+When the class $[\omega]$ does not vanish, the phases cannot be removed, and the previous picture suggests the alternative. Rather than eliminating them, one promotes them to an additional coordinate of the group, which is the construction of a central extension. We have so far proved only one direction of the correspondence between cocycles and extensions, namely that the defect of a section is a cocycle. The converse requires building a group out of a cocycle. The construction is the associativity computation of Proposition~\ref{prop:defect-properties} run backwards, and we display it first, since it explains the shape of $d_2$.
+
+\begin{remark}[The meaning of $d_2$]\label{rem:associator}
+	Let $\zeta\in C^2(G,A)$ be an arbitrary normalized map and consider on the set $A\times G$ the operation $(a,\kappa)(a',\kappa'):=\big(a+a'+\zeta(\kappa,\kappa'),\,\kappa\kappa'\big)$, which is Equation~\eqref{eq:product-defect} read as a definition. Bracketing a triple product in the two possible ways yields
+	\begin{align*}
+		\big((a,\kappa)(a',\kappa')\big)(a'',\kappa'')&=\big(a+a'+a''+\zeta(\kappa,\kappa')+\zeta(\kappa\kappa',\kappa''),\,\kappa\kappa'\kappa''\big),\\
+		(a,\kappa)\big((a',\kappa')(a'',\kappa'')\big)&=\big(a+a'+a''+\zeta(\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa''),\,\kappa\kappa'\kappa''\big).
+	\end{align*}
+	The difference between the first components of the two expressions is $-(d_2\zeta)(\kappa,\kappa',\kappa'')$, so that the operation is associative if and only if $d_2\zeta=0$. In the picture of Remark~\ref{rem:picture-reading}, the first line corresponds to the cut of the quadrilateral along the diagonal from $g_0$ to $g_2$ and the second to the cut along the diagonal from $g_1$ to $g_3$. Each of the four terms of $d_2\zeta$ comes from one of the four triangles which appear in the two cuts.
+\end{remark}
+
+The statement below collects the converse, the comparison between an extension and its defect, and the classification. Its last item is the dictionary with unitary representations, which closes the loop with the beginning of the subsection.
 
 \begin{proposition}[Cocycles, extensions and projective representations]\label{prop:cocycle-extension}
 	Let $G$ be a group, $A$ an abelian group and $\zeta$ a $2$-cocycle on $G$ with values in $A$.
@@ -270,56 +635,96 @@ The operators $V_\kappa$ are determined by the action on rays only up to a phase
 		\begin{equation*}
 			(a,\kappa)(a',\kappa'):=\big(a+a'+\zeta(\kappa,\kappa'),\,\kappa\kappa'\big)
 		\end{equation*}
-		is a group with identity $(0,e)$. The maps $\iota(a)=(a,e)$ and $\pi(a,\kappa)=\kappa$ make it a central extension of $G$ by $A$.
-		\item Every central extension $(\widehat{G},\iota,\pi)$ of $G$ by $A$ admits a map $\varsigma:G\to\widehat{G}$ with $\pi\circ\varsigma=\mathrm{id}_G$ and $\varsigma(e)=e$. The relation $\varsigma(\kappa)\varsigma(\kappa')=\iota\big(\zeta(\kappa,\kappa')\big)\varsigma(\kappa\kappa')$ defines a cocycle $\zeta$, and $(a,\kappa)\mapsto\iota(a)\varsigma(\kappa)$ is an equivalence of $\widehat{G}_\zeta$ with $\widehat{G}$.
+		is a group with identity $(0,e)$. The maps $\iota(a)=(a,e)$ and $\pi(a,\kappa)=\kappa$ make it a central extension of $G$ by $A$, as per Definition~\ref{def:central-extension}.
+		\item Every central extension $(\widehat{G},\iota,\pi)$ of $G$ by $A$ admits a section $\varsigma$ as per Definition~\ref{def:section}. The defect $\zeta_\varsigma$ is a cocycle, and $\Theta(a,\kappa):=\iota(a)\varsigma(\kappa)$ is an equivalence of $\widehat{G}_{\zeta_\varsigma}$ with $\widehat{G}$.
 		\item $\widehat{G}_\zeta$ and $\widehat{G}_{\zeta'}$ are equivalent if and only if $\zeta$ and $\zeta'$ are cohomologous. Hence $H^2(G,A)$ classifies the central extensions of $G$ by $A$ up to equivalence.
 		\item Let $\chi:A\to U(1)$ be a homomorphism and let $\Pi$ be a unitary representation of $\widehat{G}_\zeta$ with $\Pi(\iota(a))=\chi(a)\mathbb{1}$ for all $a\in A$. Then $V_\kappa:=\Pi(0,\kappa)$ is a projective unitary representation of $G$ with multiplier $\chi\circ\zeta$. Conversely, if $V$ is a projective unitary representation with multiplier $\chi\circ\zeta$, then $\Pi(a,\kappa):=\chi(a)V_\kappa$ is such a representation of $\widehat{G}_\zeta$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	Item 1. For the two ways of multiplying three elements one finds
-	\begin{align*}
-		\big((a,\kappa)(a',\kappa')\big)(a'',\kappa'')&=\big(a+a'+a''+\zeta(\kappa,\kappa')+\zeta(\kappa\kappa',\kappa''),\,\kappa\kappa'\kappa''\big),\\
-		(a,\kappa)\big((a',\kappa')(a'',\kappa'')\big)&=\big(a+a'+a''+\zeta(\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa''),\,\kappa\kappa'\kappa''\big),
-	\end{align*}
-	which coincide by the cocycle identity, so the product is associative. The element $(0,e)$ is a two-sided identity because $\zeta(e,\kappa)=\zeta(\kappa,e)=0$. Moreover $(a,\kappa)\big(-a-\zeta(\kappa,\kappa^{-1}),\kappa^{-1}\big)=(0,e)$, so every element has a right inverse, which suffices for a monoid to be a group. The same normalization shows that $\iota(A)$ is central, and $\ker\pi=\iota(A)$ is immediate.
+	Item 1. By Remark~\ref{rem:associator} the product is associative, because $d_2\zeta=0$. The element $(0,e)$ is a two-sided identity because $\zeta(e,\kappa)=\zeta(\kappa,e)=0$. Moreover $(a,\kappa)\big(-a-\zeta(\kappa,\kappa^{-1}),\kappa^{-1}\big)=(0,e)$, so that every element $x$ has a right inverse $y$. Then $y$ has a right inverse $z$, and $x=x(yz)=(xy)z=z$, so that $yx=yz=(0,e)$ and $y$ is a two-sided inverse. Hence $\widehat{G}_\zeta$ is a group. The same normalization shows that $(a,e)(a',\kappa')=(a+a',\kappa')=(a',\kappa')(a,e)$, so that $\iota(A)$ is central, and $\ker\pi=\iota(A)$ is immediate.
 	
-	Item 2. A map $\varsigma$ exists because $\pi$ is surjective, and it can be chosen with $\varsigma(e)=e$. The elements $\varsigma(\kappa)\varsigma(\kappa')$ and $\varsigma(\kappa\kappa')$ have the same image under $\pi$, hence they differ by an element of $\iota(A)$, which defines $\zeta(\kappa,\kappa')$ since $\iota$ is injective. From $\varsigma(\kappa)\varsigma(e)=\varsigma(\kappa)$ one gets $\zeta(\kappa,e)=0$, and similarly $\zeta(e,\kappa)=0$. Evaluating $\varsigma(\kappa)\varsigma(\kappa')\varsigma(\kappa'')$ in the two possible ways and using that $\iota(A)$ is central yields
+	Item 2. A section exists because $\pi$ is surjective, and $\zeta_\varsigma$ is a cocycle by item 1 of Proposition~\ref{prop:defect-properties}. By Equation~\eqref{eq:product-defect},
 	\begin{equation*}
-		\iota\big(\zeta(\kappa,\kappa')+\zeta(\kappa\kappa',\kappa'')\big)\varsigma(\kappa\kappa'\kappa'')=\iota\big(\zeta(\kappa',\kappa'')+\zeta(\kappa,\kappa'\kappa'')\big)\varsigma(\kappa\kappa'\kappa''),
+		\Theta(a,\kappa)\Theta(a',\kappa')=\iota\big(a+a'+\zeta_\varsigma(\kappa,\kappa')\big)\varsigma(\kappa\kappa')=\Theta\big((a,\kappa)(a',\kappa')\big),
 	\end{equation*}
-	which is the cocycle identity. Setting $\Theta(a,\kappa):=\iota(a)\varsigma(\kappa)$ and using again centrality,
+	so that $\Theta$ is a homomorphism. It commutes with $\iota$ and $\pi$. It is injective, because $\iota(a)\varsigma(\kappa)=e$ implies $\kappa=e$ after applying $\pi$ and then $a=0$, and it is surjective, because $x\varsigma(\pi(x))^{-1}\in\ker\pi=\iota(A)$ for every $x\in\widehat{G}$.
+	
+	Item 3. An equivalence $\Theta:\widehat{G}_\zeta\to\widehat{G}_{\zeta'}$ satisfies $\Theta(a,e)=(a,e)$ and $\Theta(0,\kappa)=(\mu(\kappa),\kappa)$ for a map $\mu:G\to A$ with $\mu(e)=0$. Since $(a,\kappa)=(a,e)(0,\kappa)$, one has $\Theta(a,\kappa)=(a+\mu(\kappa),\kappa)$. Comparing $\Theta(a,\kappa)\Theta(a',\kappa')$ with $\Theta\big((a,\kappa)(a',\kappa')\big)$ shows that $\Theta$ is a homomorphism if and only if $\zeta'(\kappa,\kappa')=\zeta(\kappa,\kappa')-\mu(\kappa)-\mu(\kappa')+\mu(\kappa\kappa')$, that is, if and only if $\zeta'-\zeta=-d_1\mu$. Conversely, for every such $\mu$ the map $\Theta$ just written is an equivalence, with inverse built from $-\mu$. It follows that the assignment $[\zeta]\mapsto[\widehat{G}_\zeta]$ is well defined and injective on $H^2(G,A)$, and it is surjective by item 2.
+	
+	Item 4. We have $V_e=\Pi(0,e)=\mathbb{1}$ and
 	\begin{equation*}
-		\Theta(a,\kappa)\Theta(a',\kappa')=\iota\big(a+a'+\zeta(\kappa,\kappa')\big)\varsigma(\kappa\kappa')=\Theta\big((a,\kappa)(a',\kappa')\big).
+		\Pi(0,\kappa)\Pi(0,\kappa')=\Pi\big(\zeta(\kappa,\kappa'),\kappa\kappa'\big)=\Pi\big(\iota(\zeta(\kappa,\kappa'))\,(0,\kappa\kappa')\big)=\chi\big(\zeta(\kappa,\kappa')\big)\,V_{\kappa\kappa'}.
 	\end{equation*}
-	The map $\Theta$ commutes with $\iota$ and $\pi$. It is injective, because $\iota(a)\varsigma(\kappa)=e$ implies $\kappa=e$ after applying $\pi$ and then $a=0$, and it is surjective, because $x\varsigma(\pi(x))^{-1}\in\ker\pi=\iota(A)$ for every $x\in\widehat{G}$.
-	
-	Item 3. An equivalence $\Theta:\widehat{G}_\zeta\to\widehat{G}_{\zeta'}$ commuting with $\iota$ and $\pi$ satisfies $\Theta(a,e)=(a,e)$ and $\Theta(0,\kappa)=(\mu(\kappa),\kappa)$ for a map $\mu:G\to A$ with $\mu(e)=0$. Since $(a,\kappa)=(a,e)(0,\kappa)$, one has $\Theta(a,\kappa)=(a+\mu(\kappa),\kappa)$. Comparing $\Theta(a,\kappa)\Theta(a',\kappa')$ with $\Theta\big((a,\kappa)(a',\kappa')\big)$ shows that $\Theta$ is a homomorphism if and only if $\zeta'(\kappa,\kappa')=\zeta(\kappa,\kappa')-\mu(\kappa)-\mu(\kappa')+\mu(\kappa\kappa')$, that is, if and only if $\zeta'-\zeta=-\delta_1\mu$. Conversely, for every such $\mu$ the map $\Theta$ just written is an equivalence, with inverse built from $-\mu$.
-	
-	Item 4. We have $\Pi(0,\kappa)\Pi(0,\kappa')=\Pi\big(\zeta(\kappa,\kappa'),\kappa\kappa'\big)=\Pi\big(\iota(\zeta(\kappa,\kappa'))\,(0,\kappa\kappa')\big)=\chi\big(\zeta(\kappa,\kappa')\big)\,V_{\kappa\kappa'}$. Conversely, $\Pi(a,\kappa)\Pi(a',\kappa')=\chi(a+a')\,V_\kappa V_{\kappa'}=\chi\big(a+a'+\zeta(\kappa,\kappa')\big)\,V_{\kappa\kappa'}=\Pi\big((a,\kappa)(a',\kappa')\big)$.
+	Conversely, $\Pi(\iota(a))=\Pi(a,e)=\chi(a)\mathbb{1}$ and
+	\begin{equation*}
+		\Pi(a,\kappa)\Pi(a',\kappa')=\chi(a+a')\,V_\kappa V_{\kappa'}=\chi\big(a+a'+\zeta(\kappa,\kappa')\big)\,V_{\kappa\kappa'}=\Pi\big((a,\kappa)(a',\kappa')\big).
+	\end{equation*}
 \end{proof}
 
-\noindent Item 4 is the dictionary used in the sequel. A projective representation with multiplier $\chi\circ\zeta$ is the same as a genuine representation of the extension in which the central subgroup acts by the character $\chi$, so that the phases are absorbed by the extra coordinate.
+\noindent Items 1 to 3 answer the first previous question, since the functions which occur as defects are exactly the cocycles, and the second, since the class of the defect does not depend on the section.
 
-A cocycle depends on the choice of the section $\varsigma$ and of the phases, hence it is difficult to inspect directly. There is however a quantity built from it which does not depend on these choices, and which gives a practical test to prove that a cocycle is not a coboundary.
+Item 4 is the dictionary used in the sequel. A projective representation with multiplier $\chi\circ\zeta$ is the same as a genuine representation of the extension in which the central subgroup acts by the character $\chi$, so that the phases are absorbed by the extra coordinate. Applied to a multiplier $\omega$ with $A=U(1)$, $\chi=\mathrm{id}$ and $\zeta=\omega$, which is a cocycle by Proposition~\ref{prop:multiplier-cocycle}, it yields a genuine unitary representation $\Pi(z,\kappa)=zV_\kappa$ of the extension $\widehat{G}_\omega$ of $G$ by $U(1)$. In $\widehat{G}_\omega$ the section $\kappa\mapsto(1,\kappa)$ has defect $\omega$, which completes the correspondence between the multiplier and the defect announced after Remark~\ref{rem:projective-quotient}. The sign in item 3 differs from the one in Equation~\eqref{eq:rephasing}, but this is immaterial, since the two formulas are exchanged by $\mu\mapsto-\mu$ and $\mu$ ranges over a group.
+
+%--------------------------------------------------------------------
+\subsubsection*{A Test for Nontrivial Classes: the Commutator Pairing}
+
+A cocycle depends on the choice of the section $\varsigma$ and of the phases, hence it is difficult to inspect directly. Showing that it is not a coboundary by definition would require excluding every possible map $\mu$. There is however a quantity built from the cocycle which does not depend on any of these choices, and which provides a practical test. Its picture is the one already met in Example~\ref{ex:heisenberg-group}. If two elements $\kappa$ and $\kappa'$ commute, the two broken paths from $e$ to $\kappa\kappa'=\kappa'\kappa$, one through $\kappa$ and one through $\kappa'$, bound a parallelogram, as in Figure~\ref{fig:parallelogram}. The displacement along the fibre accumulated around its boundary is the difference between the values of the cocycle on the two triangles into which the diagonal cuts it.
+
+\begin{figure}[ht]
+	\centering
+	% ---------------------------------------------------------------
+	% PROMPT FOR A TIKZ GENERATOR (paste everything between the rules)
+	% ---------------------------------------------------------------
+	% Write TikZ code for a figure, to be compiled inside a LaTeX
+	% document that already loads tikz. Use only the libraries
+	% arrows.meta, calc and positioning. Black and white (light gray
+	% fills allowed), line width 0.8pt, final width about 0.5\textwidth,
+	% labels in math mode with the standard LaTeX math font.
+	% Content: a parallelogram with vertices $e$ at (0,0), $\kappa$ at
+	% (3,-0.6), $\kappa'$ at (0.8,2) and $\kappa\kappa'=\kappa'\kappa$
+	% at (3.8,1.4). Mark the vertices with small filled dots and write
+	% their names outside the figure, next to the vertices. Draw the
+	% four sides as arrows with a closed arrow tip (Stealth): the lower
+	% path from $e$ to $\kappa$ and from $\kappa$ to $\kappa\kappa'$,
+	% labelled $\kappa$ and $\kappa'$, and the upper path from $e$ to
+	% $\kappa'$ and from $\kappa'$ to $\kappa\kappa'$, labelled $\kappa'$
+	% and $\kappa$. Place the labels on the outer side of the sides.
+	% Draw the diagonal from $e$ to $\kappa\kappa'$ as a dashed arrow.
+	% Fill the lower triangle (e, kappa, kappa kappa') with a light gray
+	% and write inside it $\zeta(\kappa,\kappa')$, and fill the upper
+	% triangle (e, kappa', kappa kappa') with a lighter gray and write
+	% inside it $\zeta(\kappa',\kappa)$. Under the figure write
+	% "$\Omega_\zeta(\kappa,\kappa')=\zeta(\kappa,\kappa')-\zeta(\kappa',\kappa)$".
+	% ---------------------------------------------------------------
+	\fbox{\parbox{0.5\textwidth}{\centering\vspace{3cm}TODO: parallelogram figure\vspace{3cm}}}
+	\caption{Two commuting elements $\kappa$ and $\kappa'$ and the two broken paths from $e$ to $\kappa\kappa'$. The pairing $\Omega_\zeta(\kappa,\kappa')$ is the difference between the values of the cocycle on the two triangles, and in $\mathbb{R}^2$ it is twice the area of the parallelogram.}
+	\label{fig:parallelogram}
+\end{figure}
 
 \begin{proposition}[Commutator pairing]\label{prop:commutator-pairing}
 	Let $\zeta$ be a $2$-cocycle on $G$ with values in $A$, and let $\kappa,\kappa'\in G$ satisfy $\kappa\kappa'=\kappa'\kappa$. Set $\Omega_\zeta(\kappa,\kappa'):=\zeta(\kappa,\kappa')-\zeta(\kappa',\kappa)\in A$. Then
 	\begin{enumerate}
 		\item in $\widehat{G}_\zeta$, any lifts $\hat\kappa,\hat\kappa'$ of $\kappa,\kappa'$ satisfy $\hat\kappa\hat\kappa'=\iota\big(\Omega_\zeta(\kappa,\kappa')\big)\hat\kappa'\hat\kappa$,
-		\item if $\zeta'$ is cohomologous to $\zeta$, then $\Omega_{\zeta'}(\kappa,\kappa')=\Omega_\zeta(\kappa,\kappa')$. In particular $\Omega_\zeta$ vanishes on all commuting pairs if $\zeta$ is a coboundary,
-		\item if $V$ is a projective unitary representation with multiplier $\omega$, then $V_\kappa V_{\kappa'}=\omega(\kappa,\kappa')\,\omega(\kappa',\kappa)^{-1}\,V_{\kappa'}V_\kappa$.
+		\item if $\zeta'$ is cohomologous to $\zeta$, then $\Omega_{\zeta'}(\kappa,\kappa')=\Omega_\zeta(\kappa,\kappa')$ for every commuting pair. In particular $\Omega_\zeta$ vanishes on all commuting pairs if $\zeta$ is a coboundary,
+		\item if $V$ is a projective unitary representation with multiplier $\omega$, then $V_\kappa V_{\kappa'}=\Omega_\omega(\kappa,\kappa')\,V_{\kappa'}V_\kappa$, where $\Omega_\omega(\kappa,\kappa'):=\omega(\kappa,\kappa')\,\omega(\kappa',\kappa)^{-1}$ is the pairing of item 1 written multiplicatively for $A=U(1)$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	Item 1. For the lifts $(0,\kappa)$ and $(0,\kappa')$ one has $(0,\kappa)(0,\kappa')=(\zeta(\kappa,\kappa'),\kappa\kappa')$ and $(0,\kappa')(0,\kappa)=(\zeta(\kappa',\kappa),\kappa\kappa')$, which yields the claim. Replacing a lift by another one multiplies it by a central element, which does not affect the relation. Item 2. If $\zeta'=\zeta+\delta_1\mu$, then $\Omega_{\zeta'}-\Omega_\zeta$ is the antisymmetrization of $\delta_1\mu$, which vanishes because $\delta_1\mu$ is symmetric. Item 3. This is obtained by writing $V_\kappa V_{\kappa'}$ and $V_{\kappa'}V_\kappa$ through $\omega$ and using $V_{\kappa\kappa'}=V_{\kappa'\kappa}$.
+	Item 1. For the lifts $(0,\kappa)$ and $(0,\kappa')$ one has $(0,\kappa)(0,\kappa')=(\zeta(\kappa,\kappa'),\kappa\kappa')$ and $(0,\kappa')(0,\kappa)=(\zeta(\kappa',\kappa),\kappa\kappa')$, which yields the claim. Replacing a lift by another one multiplies it by a central element, which does not affect the relation. Item 2. If $\zeta'=\zeta+d_1\mu$, then $\Omega_{\zeta'}(\kappa,\kappa')-\Omega_\zeta(\kappa,\kappa')=-\mu(\kappa\kappa')+\mu(\kappa'\kappa)=0$, because $\kappa\kappa'=\kappa'\kappa$. Item 3. We have $V_\kappa V_{\kappa'}=\omega(\kappa,\kappa')V_{\kappa\kappa'}$ and $V_{\kappa'}V_\kappa=\omega(\kappa',\kappa)V_{\kappa'\kappa}=\omega(\kappa',\kappa)V_{\kappa\kappa'}$, and eliminating $V_{\kappa\kappa'}$ yields the claim.
 \end{proof}
 
 \noindent The pairing $\Omega_\zeta$ is the precise sense in which a cocycle measures how wrongly the lifted operators commute. If it is nonzero for one pair of commuting elements, no choice of phases can make the representation genuine, and $\zeta$ is not a coboundary.
 
-%--------------------------------------------------------------------
+In the guiding example, Example~\ref{ex:area-defect} yields $\Omega_\zeta(\mathbf{u},\mathbf{u}')=\mathbf{u}\wedge\mathbf{u}'$, which is twice the area of the parallelogram spanned by $\mathbf{u}$ and $\mathbf{u}'$ and is nonzero as soon as the two vectors are not parallel. Proposition~\ref{prop:commutator-pairing} therefore reproduces by a short test the conclusion which Example~\ref{ex:area-defect} reached by a direct argument, and it is the test that we apply to the Galilei group in Proposition~\ref{prop:bargmann-nontrivial}. The following finite example shows all the objects of the subsection at work, without any differentiable structure and without an area to compute. It also anticipates, in the simplest possible setting, the mechanism by which boosts and translations will produce the mass.
+
+\begin{example}[The Klein group and the Pauli matrices]\label{ex:klein-pauli}
+	Let $G=\{e,a,b,ab\}$ be the Klein four-group, \textit{i.e.}, the abelian group generated by two elements $a$ and $b$ of order two, and let $\mathcal{H}=\mathbb{C}^2$. Define $V_e:=\mathbb{1}$, $V_a:=\sigma_x$, $V_b:=\sigma_z$ and $V_{ab}:=\sigma_x\sigma_z$, where $\sigma_x$ and $\sigma_z$ are the Pauli matrices. Since $\sigma_x^2=\sigma_z^2=\mathbb{1}$ and $\sigma_z\sigma_x=-\sigma_x\sigma_z$, any product $V_\kappa V_{\kappa'}$ is a phase times $V_{\kappa\kappa'}$, so that $V$ is a projective unitary representation. Its multiplier satisfies $\omega(a,b)=1$ and $\omega(b,a)=-1$, hence $\Omega_\omega(a,b)=-1$. Since $a$ and $b$ commute, item 2 of Proposition~\ref{prop:commutator-pairing} entails that $\omega$ is not a coboundary. This is also visible directly, because in a genuine representation of an abelian group the operators $V_a$ and $V_b$ would commute, whereas a rephasing multiplies each of them by a phase and cannot change the relation $V_aV_b=-V_bV_a$.
+	
+	Equation~\eqref{eq:rephasing} can be tested on the same data. Choosing $\mu(a)=i$ and $\mu(b)=\mu(ab)=1$ yields $V'_a=i\sigma_x$ and $V'_b=V_b$, with multiplier $\omega'(a,a)=\omega(a,a)\,\mu(a)^2=-1$, $\omega'(a,b)=i$ and $\omega'(b,a)=-i$. The multiplier has changed at each of these pairs, as it must since $d_1\mu\neq1$, but $\Omega_{\omega'}(a,b)=i/(-i)=-1$ coincides with $\Omega_\omega(a,b)$, in accordance with Proposition~\ref{prop:commutator-pairing}. Example~\ref{ex:heisenberg-extension} below exhibits the same mechanism for the continuous group $\mathbb{R}^2$.
+\end{example}
 \subsection{Lie Algebra Cohomology and Invariant Forms}\label{subsec:lie-cohomology}
 
 For Lie groups the classification of multipliers can be transferred to the Lie algebra, where the cocycle identity becomes a linear condition. In this subsection $\mathfrak{g}$ is the finite-dimensional real Lie algebra of a Lie group $G$ as per Definition~1.2.10. Its cochains are the alternating multilinear forms on $\mathfrak{g}$, and the differential is built from the bracket alone.
@@ -435,7 +840,7 @@ We have now two cohomologies attached to a Lie group $G$, the one of the group w
 \end{definition}
 
 \begin{remark}
-	If $[X,Y]=0$, then $\exp sX$ and $\exp tY$ commute for all $s,t$, and $\psi_\zeta(X,Y)=\partial_s\partial_t\,\Omega_\zeta(\exp sX,\exp tY)|_{s=t=0}$. Thus $\psi_\zeta$ detects, at the infinitesimal level, the same failure of commutation as $\Omega_\zeta$.
+	If $[X,Y]=0$, then $\exp sX$ and $\exp tY$ commute for all $s,t$, and $$\psi_\zeta(X,Y)=\partial_s\partial_t\,\Omega_\zeta(\exp sX,\exp tY)|_{s=t=0}.$$ Thus $\psi_\zeta$ detects, at the infinitesimal level, the same failure of commutation as $\Omega_\zeta$.
 \end{remark}
 
 We can now state the result which reduces the classification of projective representations of a simply connected Lie group to a computation in its Lie algebra. The statement is the form of Bargmann's theorem used in the thesis, and it is recalled without proof. As explained in Remark~\ref{rem:topological-groups}, multipliers are continuous and rephasing functions are Borel maps.
@@ -633,20 +1038,20 @@ An elementary physical system is one whose pure states cannot be separated into 
 
 \subsection*{Multipliers, Cohomology and the Origin of the Mass}
 
-The lifts $V_\kappa$ of a Galilean action are determined only up to a phase, so that $V_\kappa V_{\kappa'}$ and $V_{\kappa\kappa'}$ may differ by a phase which cannot be avoided. Whether this discrepancy can be removed by a suitable choice of the phases is a cohomological question, which was formulated for general groups in Chapter~\ref{ch:classical}, in the subsection on cocycles and central extensions that follows Definition~\ref{def:strongly-continuous}. There it was shown that the obstruction is the class of the multiplier, and, in Proposition~\ref{prop:bargmann-correspondence}, that for a connected and simply connected group this class can be computed on the Lie algebra. In this subsection we carry out the computation for the Galilei group, in order to see where the real parameter $m$ comes from. We first show that the Bargmann cocycle is not a coboundary and that different multiples of it are not cohomologous. We then read Bargmann's theorem for the Galilei group in four steps, and only afterwards state it.
+The lifts $V_\kappa$ of a Galilean action are determined only up to a phase, so that $V_\kappa V_{\kappa'}$ and $V_{\kappa\kappa'}$ may differ by a phase which cannot be avoided. Whether this discrepancy can be removed by a suitable choice of the phases is a cohomological question in the subsection on cocycles and central extensions that follows Definition~\ref{def:strongly-continuous}. There it was shown that the obstruction is the class of the multiplier, and, in Proposition~\ref{prop:bargmann-correspondence}, that for a connected and simply connected group this class can be computed on the Lie algebra. In this subsection we carry out the computation for the Galilei group, in order to see where the real parameter $m$ comes from. We first show that the Bargmann cocycle is not a coboundary and that different multiples of it are not cohomologous. We then read Bargmann's theorem for the Galilei group in four steps, and only afterwards state it.
 
 \begin{proposition}[The Bargmann cocycle is not trivial]\label{prop:bargmann-nontrivial}
 	Let $\zeta$ be the Bargmann cocycle of Definition~\ref{def:bargmann-cocycle}.
 	\begin{enumerate}
 		\item For $m,m'\in\mathbb{R}$ the real cocycles $m\zeta$ and $m'\zeta$ are cohomologous if and only if $m=m'$. In particular $\zeta$ is not a coboundary.
-		\item Let $X^\alpha_j$ and $X^\beta_j$ be the elements of the Lie algebra of $\mathcal{G}$ such that $\exp(tX^\alpha_j)=\alpha_{te_j}$ and $\exp(tX^\beta_j)=\beta_{te_j}$. Then $[X^\beta_i,X^\alpha_j]=0$ and the infinitesimal cocycle of Definition~\ref{def:infinitesimal-cocycle} satisfies $\psi_\zeta(X^\beta_i,X^\alpha_j)=\delta_{ij}$.
+		\item Let $X^\alpha_j$ and $X^\beta_j$ be the elements of the Lie algebra of $\mathcal{G}$ such that $\exp(tX^\alpha_j)=\alpha_{te_j}$ and $\exp(tX^\beta_j)=\beta_{te_j}$. Then $[X^\beta_i,X^\alpha_j]=0$ and the infinitesimal cocycle of Definition~\ref{def:infinitesimal-cocycle} satisfies $\psi_\zeta(X^\beta_i,X^\alpha_j)=d_{ij}$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
 	Item 1. By Lemma~\ref{lem:galilei-relations}, $\beta_{\mathbf{v}}\alpha_{\mathbf{a}}=\alpha_{\mathbf{a}}\beta_{\mathbf{v}}=(0,\mathbf{a},\mathbf{v},1)$, so that $\beta_{\mathbf{v}}$ and $\alpha_{\mathbf{a}}$ commute in $\mathcal{G}$. The commutator pairing of Proposition~\ref{prop:commutator-pairing} gives $\Omega_{m\zeta}(\beta_{\mathbf{v}},\alpha_{\mathbf{a}})=m\big(\zeta(\beta_{\mathbf{v}},\alpha_{\mathbf{a}})-\zeta(\alpha_{\mathbf{a}},\beta_{\mathbf{v}})\big)=m\,\mathbf{v}\cdot\mathbf{a}$. If $m\zeta-m'\zeta=(m-m')\zeta$ were a coboundary, item 2 of that proposition would give $(m-m')\,\mathbf{v}\cdot\mathbf{a}=0$ for all $\mathbf{v},\mathbf{a}\in\mathbb{R}^3$, hence $m=m'$. The converse is trivial.
 	
-	Item 2. The one-parameter subgroups $t\mapsto\beta_{te_i}$ and $t\mapsto\alpha_{te_j}$ commute, so the Lie bracket of their generators vanishes. Moreover $\zeta(\beta_{se_i},\alpha_{te_j})-\zeta(\alpha_{te_j},\beta_{se_i})=st\,\delta_{ij}$, whose mixed derivative at the origin is $\delta_{ij}$.
+	Item 2. The one-parameter subgroups $t\mapsto\beta_{te_i}$ and $t\mapsto\alpha_{te_j}$ commute, so the Lie bracket of their generators vanishes. Moreover $\zeta(\beta_{se_i},\alpha_{te_j})-\zeta(\alpha_{te_j},\beta_{se_i})=st\,d_{ij}$, whose mixed derivative at the origin is $d_{ij}$.
 \end{proof}
 
 \noindent Item 2 gives a second proof that $\zeta$ is not a coboundary, at the level of the Lie algebra. Every coboundary $\psi_\lambda$ of Definition~\ref{def:lie-cohomology-group} vanishes on the pair $(X^\beta_i,X^\alpha_j)$, since $\lambda([X^\beta_i,X^\alpha_j])=0$, whereas $\psi_\zeta$ does not.
@@ -666,7 +1071,7 @@ We can now read Bargmann's theorem for the Galilei group. Each step below is a r
 	
 	\emph{Step 2, the class.} Only the class of $\omega$ matters, by Proposition~\ref{prop:rephasing}. Boosts and translations commute in $\mathcal{G}$, but their lifts commute only up to a phase, which by Proposition~\ref{prop:commutator-pairing} does not depend on the choice of the phases. If this phase is nontrivial, the class is nontrivial and no rephasing yields a genuine representation of $\mathcal{G}$.
 	
-	\emph{Step 3, the Lie algebra.} Since $\mathcal{G}$ is connected and simply connected, the class is an element of $H^2(\mathfrak{g},\mathbb{R})$ by Proposition~\ref{prop:bargmann-correspondence}. Concretely, the generators satisfy $[K_i,P_j]=i\hbar m\,\delta_{ij}\mathbb{1}$ on the smooth vectors, as derived in the proof of Proposition~\ref{prop:galilean-poisson}, and shifting a generator by a multiple of $\mathbb{1}$ does not change this commutator.
+	\emph{Step 3, the Lie algebra.} Since $\mathcal{G}$ is connected and simply connected, the class is an element of $H^2(\mathfrak{g},\mathbb{R})$ by Proposition~\ref{prop:bargmann-correspondence}. Concretely, the generators satisfy $[K_i,P_j]=i\hbar m\,d_{ij}\mathbb{1}$ on the smooth vectors, as derived in the proof of Proposition~\ref{prop:galilean-poisson}, and shifting a generator by a multiple of $\mathbb{1}$ does not change this commutator.
 	
 	\emph{Step 4, the parameter.} By Proposition~\ref{prop:galilei-cohomology} the group $H^2(\mathfrak{g},\mathbb{R})$ is one dimensional, so the whole freedom is a single real number, and by Proposition~\ref{prop:bargmann-nontrivial} this number labels the class of $\frac{m}{\hbar}\zeta$ injectively. This number is the mass. The same argument for $SU(2)$ yields no parameter, because $H^2(\mathfrak{su}(2),\mathbb{R})=0$ by Example~\ref{ex:su2-cohomology}. The only obstruction for the rotations is the topological one of Example~\ref{ex:so3-su2}, which is removed by working with the universal covering.
 \end{remark}
@@ -833,7 +1238,7 @@ We now apply this theorem to $\widehat{\mathcal{G}}$ and read the relations of P
 \begin{proposition}[Poisson algebra of the Galilean generators]\label{prop:galilean-poisson}
 	Let $\Pi$ be as in Proposition~\ref{prop:lift} and let the brackets be those of Lemma~\ref{lem:pointwise-formulas} with $\mathcal{D}=\mathcal{H}^\infty$. For $i,j\in\{1,2,3\}$, on $\mathbb{P}\mathcal{H}^\infty$,
 	\begin{equation}
-		\{p_i,p_j\}=0,\quad \{k_i,k_j\}=0,\quad \{k_i,p_j\}=m\,\delta_{ij},\quad \{p_i,h\}=0,\quad \{k_i,h\}=p_i.
+		\{p_i,p_j\}=0,\quad \{k_i,k_j\}=0,\quad \{k_i,p_j\}=m\,d_{ij},\quad \{p_i,h\}=0,\quad \{k_i,h\}=p_i.
 		\label{eq:galilean-poisson}
 	\end{equation}
 \end{proposition}
@@ -841,13 +1246,13 @@ We now apply this theorem to $\widehat{\mathcal{G}}$ and read the relations of P
 \begin{proof}
 	By Theorem~\ref{thm:smooth-vectors}, $H$, $P_j$ and $K_j$ restricted to $\mathcal{H}^\infty$ are, up to constant factors, the operators $d\Pi$ of the corresponding Lie algebra elements, and they leave $\mathcal{H}^\infty$ invariant. By Equation~\eqref{eq:pointwise-poisson} it suffices to prove the commutation relations
 	\begin{equation}
-		[P_i,P_j]=0,\quad [K_i,K_j]=0,\quad [K_i,P_j]=i\hbar m\,\delta_{ij},\quad [P_i,H]=0,\quad [K_i,H]=i\hbar P_i
+		[P_i,P_j]=0,\quad [K_i,K_j]=0,\quad [K_i,P_j]=i\hbar m\,d_{ij},\quad [P_i,H]=0,\quad [K_i,H]=i\hbar P_i
 	\end{equation}
-	on $\mathcal{H}^\infty$. The first two follow from the commutativity of the groups $T$ and $B$ and the fourth from Equation~\eqref{eq:W1}. For $x\in\mathcal{H}^\infty$ the maps $(\mathbf{v},\mathbf{a})\mapsto B(\mathbf{v})T(\mathbf{a})x$ and $(s,\mathbf{v})\mapsto S(-s)B(\mathbf{v})S(s)x$ are smooth. Applying $\partial_{v_i}\partial_{a_j}$ at the origin to Equation~\eqref{eq:W2} yields $\hbar^{-2}K_iP_jx=\tfrac{im}{\hbar}\delta_{ij}x+\hbar^{-2}P_jK_ix$, which is the third relation. Applying $\partial_s\partial_{v_i}$ at the origin to Equation~\eqref{eq:W3}, the phase gives no contribution since it is quadratic in $\mathbf{v}$, and one obtains $\hbar^{-2}[H,K_i]x=-\tfrac{i}{\hbar}P_ix$, which is the fifth relation.
+	on $\mathcal{H}^\infty$. The first two follow from the commutativity of the groups $T$ and $B$ and the fourth from Equation~\eqref{eq:W1}. For $x\in\mathcal{H}^\infty$ the maps $(\mathbf{v},\mathbf{a})\mapsto B(\mathbf{v})T(\mathbf{a})x$ and $(s,\mathbf{v})\mapsto S(-s)B(\mathbf{v})S(s)x$ are smooth. Applying $\partial_{v_i}\partial_{a_j}$ at the origin to Equation~\eqref{eq:W2} yields $\hbar^{-2}K_iP_jx=\tfrac{im}{\hbar}d_{ij}x+\hbar^{-2}P_jK_ix$, which is the third relation. Applying $\partial_s\partial_{v_i}$ at the origin to Equation~\eqref{eq:W3}, the phase gives no contribution since it is quadratic in $\mathbf{v}$, and one obtains $\hbar^{-2}[H,K_i]x=-\tfrac{i}{\hbar}P_ix$, which is the fifth relation.
 \end{proof}
 
 \begin{remark}\label{rem:momentum-map}
-	By Proposition~\ref{prop:quantum-momentum-map} the momentum functions of the infinitesimal generators of $\Phi$ are $\langle\mu,\xi\rangle=\langle i\hbar\,d\Pi(\xi)\rangle$, which equal $-h$ for the time translation, $\mathbf{a}\cdot\mathbf{p}$ for the translation $\alpha_{\mathbf{a}}$ and $-\mathbf{v}\cdot\mathbf{k}$ for the boost $\beta_{\mathbf{v}}$. The overall signs depend on the active convention of Remark~\ref{rem:active-convention} and are immaterial. The relation $\{k_i,p_j\}=m\delta_{ij}$ shows that the Poisson bracket between two momentum functions is not the momentum function of the Lie bracket, but differs from it by the constant $m\delta_{ij}$. This constant is the value of the momentum function of the central element, in agreement with Example~\ref{ex:u1-phase}, and it is the cocycle that the Bargmann group removes.
+	By Proposition~\ref{prop:quantum-momentum-map} the momentum functions of the infinitesimal generators of $\Phi$ are $\langle\mu,\xi\rangle=\langle i\hbar\,d\Pi(\xi)\rangle$, which equal $-h$ for the time translation, $\mathbf{a}\cdot\mathbf{p}$ for the translation $\alpha_{\mathbf{a}}$ and $-\mathbf{v}\cdot\mathbf{k}$ for the boost $\beta_{\mathbf{v}}$. The overall signs depend on the active convention of Remark~\ref{rem:active-convention} and are immaterial. The relation $\{k_i,p_j\}=md_{ij}$ shows that the Poisson bracket between two momentum functions is not the momentum function of the Lie bracket, but differs from it by the constant $md_{ij}$. This constant is the value of the momentum function of the central element, in agreement with Example~\ref{ex:u1-phase}, and it is the cocycle that the Bargmann group removes.
 \end{remark}
 
 % =====================================================================
@@ -857,9 +1262,9 @@ We now apply this theorem to $\widehat{\mathcal{G}}$ and read the relations of P
 We now have all the ingredients to derive the Hamiltonian. The strategy is to compare the time translation group with the explicit one-parameter group $s\mapsto e^{is|\mathbf{P}|^2/2m\hbar}$ built from the momentum operators, and to show that the quotient of the two commutes with the whole representation. Relation~\eqref{eq:W3} between boosts and time translations has no counterpart in the Weyl relations of Section~\ref{sec:weyl-algebra}, and it is the identity that makes the comparison possible. For an irreducible action the quotient is a phase, and the Hamiltonian is determined up to the additive constant already identified in Proposition~\ref{prop:lift}. We first collect two lemmas, one on the covariance of the spectral measure of $\mathbf{P}$ under boosts and one on Schur's lemma in infinite dimensions, which replaces Lemma~\ref{lem:schur} when the representation space is not finite dimensional.
 
 \begin{lemma}[Covariance of the momentum spectral measure]\label{lem:boost-covariance}
-	Let $E$ be the projection valued measure of $\mathbf{P}$ as per Definition~\ref{def:generators}. Then for every Borel set $\Delta\subseteq\mathbb{R}^3$, every $\mathbf{v}\in\mathbb{R}^3$ and every $u\in SU(2)$,
+	Let $E$ be the projection valued measure of $\mathbf{P}$ as per Definition~\ref{def:generators}. Then for every Borel set $d\subseteq\mathbb{R}^3$, every $\mathbf{v}\in\mathbb{R}^3$ and every $u\in SU(2)$,
 	\begin{equation}
-		B(\mathbf{v})^{-1}E(\Delta)B(\mathbf{v})=E(\Delta-m\mathbf{v}),\qquad \Pi(\hat\rho_u)\,E(\Delta)\,\Pi(\hat\rho_u)^{-1}=E(R_u\Delta).
+		B(\mathbf{v})^{-1}E(d)B(\mathbf{v})=E(d-m\mathbf{v}),\qquad \Pi(\hat\rho_u)\,E(d)\,\Pi(\hat\rho_u)^{-1}=E(R_ud).
 	\end{equation}
 	Consequently, for every Borel function $f:\mathbb{R}^3\to\mathbb{C}$, as equalities between operators with their domains,
 	\begin{equation*}
@@ -869,9 +1274,9 @@ We now have all the ingredients to derive the Hamiltonian. The strategy is to co
 \end{lemma}
 
 \begin{proof}
-	Set $U(\mathbf{t}):=T(-\hbar\mathbf{t})$, so that $E$ is the measure associated with $U$ by Theorem~\ref{thm:snag}. By Equation~\eqref{eq:W2}, $B(\mathbf{v})^{-1}U(\mathbf{t})B(\mathbf{v})=e^{im\mathbf{v}\cdot\mathbf{t}}\,U(\mathbf{t})$. This is the hypothesis of Proposition~\ref{prop:pvm-covariance} with $W=B(\mathbf{v})^{-1}$, $L=\mathbb{1}$ and $\mathbf{c}=m\mathbf{v}$. Here $\phi(\boldsymbol{\lambda})=\boldsymbol{\lambda}+m\mathbf{v}$ and $\phi^{-1}(\Delta)=\Delta-m\mathbf{v}$, which yields the first identity. By Equation~\eqref{eq:W4b}, $\Pi(\hat\rho_u)U(\mathbf{t})\Pi(\hat\rho_u)^{-1}=U(R_u\mathbf{t})$, which is the same hypothesis with $L=R_u$ and $\mathbf{c}=0$. Now $\phi(\boldsymbol{\lambda})=R_u^{T}\boldsymbol{\lambda}=R_u^{-1}\boldsymbol{\lambda}$ and $\phi^{-1}(\Delta)=R_u\Delta$, which yields the second identity. The statement on functions is the second part of Proposition~\ref{prop:pvm-covariance}.
+	Set $U(\mathbf{t}):=T(-\hbar\mathbf{t})$, so that $E$ is the measure associated with $U$ by Theorem~\ref{thm:snag}. By Equation~\eqref{eq:W2}, $B(\mathbf{v})^{-1}U(\mathbf{t})B(\mathbf{v})=e^{im\mathbf{v}\cdot\mathbf{t}}\,U(\mathbf{t})$. This is the hypothesis of Proposition~\ref{prop:pvm-covariance} with $W=B(\mathbf{v})^{-1}$, $L=\mathbb{1}$ and $\mathbf{c}=m\mathbf{v}$. Here $\phi(\boldsymbol{\lambda})=\boldsymbol{\lambda}+m\mathbf{v}$ and $\phi^{-1}(d)=d-m\mathbf{v}$, which yields the first identity. By Equation~\eqref{eq:W4b}, $\Pi(\hat\rho_u)U(\mathbf{t})\Pi(\hat\rho_u)^{-1}=U(R_u\mathbf{t})$, which is the same hypothesis with $L=R_u$ and $\mathbf{c}=0$. Now $\phi(\boldsymbol{\lambda})=R_u^{T}\boldsymbol{\lambda}=R_u^{-1}\boldsymbol{\lambda}$ and $\phi^{-1}(d)=R_ud$, which yields the second identity. The statement on functions is the second part of Proposition~\ref{prop:pvm-covariance}.
 	
-	For the last claim, the first identity shows that $E(\Delta)=0$ if and only if $E(\Delta-m\mathbf{v})=0$. Since $m\neq0$, the vectors $m\mathbf{v}$ exhaust $\mathbb{R}^3$. If $E(U)=0$ for a nonempty open set $U$, then all its translates are $E$-null, and $\mathbb{R}^3$ is covered by countably many of them. This would give $E(\mathbb{R}^3)=\mathbb{1}=0$, a contradiction.
+	For the last claim, the first identity shows that $E(d)=0$ if and only if $E(d-m\mathbf{v})=0$. Since $m\neq0$, the vectors $m\mathbf{v}$ exhaust $\mathbb{R}^3$. If $E(U)=0$ for a nonempty open set $U$, then all its translates are $E$-null, and $\mathbb{R}^3$ is covered by countably many of them. This would give $E(\mathbb{R}^3)=\mathbb{1}=0$, a contradiction.
 \end{proof}
 
 \begin{lemma}[Schur's lemma for a selfadjoint operator]\label{lem:schur-infinite}
@@ -879,7 +1284,7 @@ We now have all the ingredients to derive the Hamiltonian. The strategy is to co
 \end{lemma}
 
 \begin{proof}
-	Let $E_A$ be the spectral measure of $A$ given by Theorem~\ref{thm:spectral}, so that $E_A$ is the measure associated with $t\mapsto e^{itA}$ by Theorem~\ref{thm:snag}. By Proposition~\ref{prop:pvm-commutation}, every $X\in\mathcal{M}$ commutes with every $E_A(\Delta)$. Hence $E_A(\Delta)\mathcal{H}$ is a closed subspace invariant under $\mathcal{M}$, and irreducibility gives $E_A(\Delta)\in\{0,\mathbb{1}\}$ for every Borel set $\Delta\subseteq\mathbb{R}$. Set
+	Let $E_A$ be the spectral measure of $A$ given by Theorem~\ref{thm:spectral}, so that $E_A$ is the measure associated with $t\mapsto e^{itA}$ by Theorem~\ref{thm:snag}. By Proposition~\ref{prop:pvm-commutation}, every $X\in\mathcal{M}$ commutes with every $E_A(d)$. Hence $E_A(d)\mathcal{H}$ is a closed subspace invariant under $\mathcal{M}$, and irreducibility gives $E_A(d)\in\{0,\mathbb{1}\}$ for every Borel set $d\subseteq\mathbb{R}$. Set
 	\begin{equation*}
 		a:=\sup\big\{\lambda\in\mathbb{R}\ \big|\ E_A((-\infty,\lambda))=0\big\}.
 	\end{equation*}
@@ -931,11 +1336,11 @@ We now have all the ingredients to derive the Hamiltonian. The strategy is to co
 	The two phases cancel, and this is where it matters that $S_0$ and $S$ satisfy the same relation.
 	
 	\medskip
-	\noindent\textbf{Step 3: $C$ is a one-parameter group and defines $H_{\mathrm{int}}$.} By Step 2 and Proposition~\ref{prop:pvm-commutation}, the operator $S(s')$ commutes with every $E(\Delta)$, hence with $S_0(s)$. Therefore
+	\noindent\textbf{Step 3: $C$ is a one-parameter group and defines $H_{\mathrm{int}}$.} By Step 2 and Proposition~\ref{prop:pvm-commutation}, the operator $S(s')$ commutes with every $E(d)$, hence with $S_0(s)$. Therefore
 	\begin{equation*}
 		C(s+s')=S_0(-s)S_0(-s')S(s)S(s')=S_0(-s)S(s)\,S_0(-s')S(s')=C(s)\,C(s'),
 	\end{equation*}
-	and $C$ is strongly continuous. Theorem~\ref{thm:stone} yields a selfadjoint operator $H_{\mathrm{int}}$ with $C(s)=e^{isH_{\mathrm{int}}/\hbar}$. Write $H_0:=\frac{1}{2m}|\mathbf{P}|^2$, so that $S_0(s)=e^{isH_0/\hbar}$. By Step 2 and Proposition~\ref{prop:pvm-commutation}, $C(s)$ commutes with every $E(\Delta)$, hence with $S_0(s')$. Applying Proposition~\ref{prop:pvm-commutation} twice, first to $X=S_0(s')$ and the group $C$, then to $X=E_{H_{\mathrm{int}}}(\Delta)$ and the group $S_0$, shows that $H_0$ and $H_{\mathrm{int}}$ commute strongly. Theorem~\ref{thm:joint-spectral} then implies that $S(s)=S_0(s)C(s)$ is generated by the closure of $H_0+H_{\mathrm{int}}$ on $D(H_0)\cap D(H_{\mathrm{int}})$, and the uniqueness in Theorem~\ref{thm:stone} identifies this closure with $H$.
+	and $C$ is strongly continuous. Theorem~\ref{thm:stone} yields a selfadjoint operator $H_{\mathrm{int}}$ with $C(s)=e^{isH_{\mathrm{int}}/\hbar}$. Write $H_0:=\frac{1}{2m}|\mathbf{P}|^2$, so that $S_0(s)=e^{isH_0/\hbar}$. By Step 2 and Proposition~\ref{prop:pvm-commutation}, $C(s)$ commutes with every $E(d)$, hence with $S_0(s')$. Applying Proposition~\ref{prop:pvm-commutation} twice, first to $X=S_0(s')$ and the group $C$, then to $X=E_{H_{\mathrm{int}}}(d)$ and the group $S_0$, shows that $H_0$ and $H_{\mathrm{int}}$ commute strongly. Theorem~\ref{thm:joint-spectral} then implies that $S(s)=S_0(s)C(s)$ is generated by the closure of $H_0+H_{\mathrm{int}}$ on $D(H_0)\cap D(H_{\mathrm{int}})$, and the uniqueness in Theorem~\ref{thm:stone} identifies this closure with $H$.
 	
 	\medskip
 	\noindent\textbf{Step 4: $C(s)$ commutes with the whole representation.} By Lemma~\ref{lem:boost-covariance}, $\Pi(\hat\rho_u)\,|\mathbf{P}|^2\,\Pi(\hat\rho_u)^{-1}=|R_u^{-1}\mathbf{P}|^2=|\mathbf{P}|^2$, so $\Pi(\hat\rho_u)$ commutes with $S_0(s)$. It commutes with $S(s)$ by Relation~\eqref{eq:W4a}, hence with $C(s)$. Together with Steps 2 and 3 and the trivial commutation with scalars, $C(s)$ commutes with all the generators listed in Proposition~\ref{prop:unitary-relations}, and therefore with $\Pi(\widehat{\mathcal{G}})$. By Proposition~\ref{prop:pvm-commutation} applied to the group $C$, the spectral projections of $H_{\mathrm{int}}$ commute with $\Pi(\widehat{\mathcal{G}})$ as well. This proves item 1.
@@ -965,7 +1370,7 @@ The result can be rewritten in the language of Chapter~\ref{ch:projective}. The 
 		h([x])=\frac{1}{2m}\sum_{j=1}^3 p_j\circ_{\hbar} p_j+E_0=\frac{|\mathbf{p}|^2}{2m}+\frac{\hbar}{4m}\sum_{j=1}^3((p_j,p_j))+E_0,
 		\label{eq:geometric-hamiltonian}
 	\end{equation}
-	where $\circ_{\hbar}$ is the pointwise product $f\circ_{\hbar} l=\tfrac{\hbar}{2}((f,l))+fl$ of Definition~\ref{def:kahler-bracket}. Equivalently, $h=|\mathbf{p}|^2/2m+\tfrac{1}{2m}\sum_j(\Delta p_j)^2+E_0$, with the dispersions of Definition~\ref{def:dispersion}.
+	where $\circ_{\hbar}$ is the pointwise product $f\circ_{\hbar} l=\tfrac{\hbar}{2}((f,l))+fl$ of Definition~\ref{def:kahler-bracket}. Equivalently, $h=|\mathbf{p}|^2/2m+\tfrac{1}{2m}\sum_j(d p_j)^2+E_0$, with the dispersions of Definition~\ref{def:dispersion}.
 \end{corollary}
 
 \begin{proof}
@@ -975,30 +1380,30 @@ The result can be rewritten in the language of Chapter~\ref{ch:projective}. The 
 \noindent The first term of Equation~\eqref{eq:geometric-hamiltonian} is the kinetic energy of a classical particle of mass $m$ and momentum $\mathbf{p}$, as in Chapter~\ref{ch:classical}. The second term has no classical counterpart, and it is the subject of the following remark and proposition.
 
 \begin{remark}[Meaning of the dispersion term]\label{rem:dispersion-term}
-	The function $p_j$ is the mean momentum of the state, while $(\Delta p_j)^2$ is the variance of the momentum in the same state. Equation~\eqref{eq:geometric-hamiltonian} is therefore the identity $\langle|\mathbf{P}|^2\rangle=|\langle\mathbf{P}\rangle|^2+\sum_j(\Delta p_j)^2$, divided by $2m$ and shifted by $E_0$. The energy of a free particle splits into the kinetic energy of the motion of the mean momentum and the energy stored in the spread of the momentum around it. The second part is a genuinely quantum contribution, since in a classical state the momentum is a point and the spread vanishes. In geometric terms $(\Delta p_j)^2=\tfrac{\hbar}{2}((p_j,p_j))$ is proportional to the squared length of the Hamiltonian vector field of $p_j$, by Equation~\eqref{eq:pointwise-riemann}. The next proposition shows that this length never vanishes and that it is bounded below by the uncertainty relation, so that localizing a free particle always costs kinetic energy. Example~\ref{ex:gaussian-packet} makes both statements explicit on a Gaussian packet.
+	The function $p_j$ is the mean momentum of the state, while $(d p_j)^2$ is the variance of the momentum in the same state. Equation~\eqref{eq:geometric-hamiltonian} is therefore the identity $\langle|\mathbf{P}|^2\rangle=|\langle\mathbf{P}\rangle|^2+\sum_j(d p_j)^2$, divided by $2m$ and shifted by $E_0$. The energy of a free particle splits into the kinetic energy of the motion of the mean momentum and the energy stored in the spread of the momentum around it. The second part is a genuinely quantum contribution, since in a classical state the momentum is a point and the spread vanishes. In geometric terms $(d p_j)^2=\tfrac{\hbar}{2}((p_j,p_j))$ is proportional to the squared length of the Hamiltonian vector field of $p_j$, by Equation~\eqref{eq:pointwise-riemann}. The next proposition shows that this length never vanishes and that it is bounded below by the uncertainty relation, so that localizing a free particle always costs kinetic energy. Example~\ref{ex:gaussian-packet} makes both statements explicit on a Gaussian packet.
 \end{remark}
 
 \begin{proposition}[Positivity of the dispersion]\label{prop:dispersion-positive}
-	In the hypotheses of Theorem~\ref{thm:free-hamiltonian}, item 2, let $[x]\in\mathbb{P}\mathcal{H}^\infty$ and set $\Delta p_j([x]):=\sqrt{\hbar/2}\,\sqrt{((p_j,p_j))([x])}$ as in Definition~\ref{def:dispersion}, and in the same way $\Delta k_j([x])$. Then, for $j\in\{1,2,3\}$,
+	In the hypotheses of Theorem~\ref{thm:free-hamiltonian}, item 2, let $[x]\in\mathbb{P}\mathcal{H}^\infty$ and set $d p_j([x]):=\sqrt{\hbar/2}\,\sqrt{((p_j,p_j))([x])}$ as in Definition~\ref{def:dispersion}, and in the same way $d k_j([x])$. Then, for $j\in\{1,2,3\}$,
 	\begin{enumerate}
-		\item $\Delta p_j([x])>0$,
-		\item $\Delta k_j([x])\,\Delta p_j([x])\ge\frac{\hbar}{2}\,|m|$. In particular, for $q_j:=k_j/m$ and $\Delta q_j:=\Delta k_j/|m|$ one has $\Delta q_j\,\Delta p_j\ge\hbar/2$.
+		\item $d p_j([x])>0$,
+		\item $d k_j([x])\,d p_j([x])\ge\frac{\hbar}{2}\,|m|$. In particular, for $q_j:=k_j/m$ and $d q_j:=d k_j/|m|$ one has $d q_j\,d p_j\ge\hbar/2$.
 	\end{enumerate}
 \end{proposition}
 
 \begin{proof}
-	Let $x$ be a unit representative of $[x]$. Equation~\eqref{eq:pointwise-riemann} with $A=B=P_j$ gives $(\Delta p_j)^2=\langle P_j^2\rangle-p_j^2=\|(P_j-p_j([x]))x\|^2$, and the same holds for $K_j$.
+	Let $x$ be a unit representative of $[x]$. Equation~\eqref{eq:pointwise-riemann} with $A=B=P_j$ gives $(d p_j)^2=\langle P_j^2\rangle-p_j^2=\|(P_j-p_j([x]))x\|^2$, and the same holds for $K_j$.
 	
-	Item 1. If $\Delta p_j([x])=0$, then $P_jx=p_j([x])x$, so that $x$ is an eigenvector of $P_j$. By Lemma~\ref{lem:boost-covariance}, with $\mathbf{v}=ve_j$, one has $B(ve_j)^{-1}P_jB(ve_j)=P_j+mv$ as operators with equal domains. Hence $B(ve_j)x\in D(P_j)$ and $P_jB(ve_j)x=(p_j([x])+mv)\,B(ve_j)x$ for every $v\in\mathbb{R}$. Since $m\neq0$, these are eigenvectors of the selfadjoint operator $P_j$ with pairwise distinct eigenvalues, hence pairwise orthogonal unit vectors. There are uncountably many of them, which contradicts the separability of $\mathcal{H}$.
+	Item 1. If $d p_j([x])=0$, then $P_jx=p_j([x])x$, so that $x$ is an eigenvector of $P_j$. By Lemma~\ref{lem:boost-covariance}, with $\mathbf{v}=ve_j$, one has $B(ve_j)^{-1}P_jB(ve_j)=P_j+mv$ as operators with equal domains. Hence $B(ve_j)x\in D(P_j)$ and $P_jB(ve_j)x=(p_j([x])+mv)\,B(ve_j)x$ for every $v\in\mathbb{R}$. Since $m\neq0$, these are eigenvectors of the selfadjoint operator $P_j$ with pairwise distinct eigenvalues, hence pairwise orthogonal unit vectors. There are uncountably many of them, which contradicts the separability of $\mathcal{H}$.
 	
-	Item 2. Take $A=K_j$ and $B=P_j$, and let $\eta_A,\eta_B$ be the vectors of Lemma~\ref{lem:pointwise-formulas}. Since $\eta_B\perp x$ and $(A-f_A([x]))x=i\hbar\,\eta_A$, one has $(\eta_B,Ax)=(\eta_B,(A-f_A([x]))x)=i\hbar\,(\eta_B,\eta_A)$, hence $\{f_A,f_B\}([x])=2\hbar\,\mathrm{Im}(\eta_A,\eta_B)$. The Cauchy--Schwarz inequality and $\|\eta_A\|=\Delta a/\hbar$, with $\Delta a:=\|(A-f_A([x]))x\|$ and similarly for $B$, give
+	Item 2. Take $A=K_j$ and $B=P_j$, and let $\eta_A,\eta_B$ be the vectors of Lemma~\ref{lem:pointwise-formulas}. Since $\eta_B\perp x$ and $(A-f_A([x]))x=i\hbar\,\eta_A$, one has $(\eta_B,Ax)=(\eta_B,(A-f_A([x]))x)=i\hbar\,(\eta_B,\eta_A)$, hence $\{f_A,f_B\}([x])=2\hbar\,\mathrm{Im}(\eta_A,\eta_B)$. The Cauchy--Schwarz inequality and $\|\eta_A\|=d a/\hbar$, with $d a:=\|(A-f_A([x]))x\|$ and similarly for $B$, give
 	\begin{equation*}
-		|\{f_A,f_B\}([x])|\le2\hbar\,\|\eta_A\|\,\|\eta_B\|=\frac{2}{\hbar}\,\Delta a\,\Delta b.
+		|\{f_A,f_B\}([x])|\le2\hbar\,\|\eta_A\|\,\|\eta_B\|=\frac{2}{\hbar}\,d a\,d b.
 	\end{equation*}
 	Proposition~\ref{prop:galilean-poisson} gives $\{k_j,p_j\}=m$, which yields the claim.
 \end{proof}
 
-\noindent By item 2, for $m>0$ the dispersion term of Equation~\eqref{eq:geometric-hamiltonian} is bounded below by $\frac{\hbar^2}{8m}\sum_j(\Delta q_j)^{-2}$. A state localized in a region of size $\Delta q_j$ therefore carries a kinetic energy of order $\hbar^2/m(\Delta q_j)^2$, which grows as the localization increases.
+\noindent By item 2, for $m>0$ the dispersion term of Equation~\eqref{eq:geometric-hamiltonian} is bounded below by $\frac{\hbar^2}{8m}\sum_j(d q_j)^{-2}$. A state localized in a region of size $d q_j$ therefore carries a kinetic energy of order $\hbar^2/m(d q_j)^2$, which grows as the localization increases.
 
 We now derive the equations of motion on $\mathbb{P}\mathcal{H}$. They reproduce uniform rectilinear motion, and they exhibit the explicitly time dependent integral of motion associated with the boost.
 
@@ -1023,7 +1428,7 @@ The geometric statements above do not use the structure of $\mathcal{H}$ beyond 
 	\end{equation}
 	where $\Pi_{\mathrm{orb}}(u)\psi=\psi(R_u^{-1}\,\cdot)$ and $d_j$ is the irreducible representation of $SU(2)$ of dimension $2j+1$ acting on $\mathbb{C}^{2j+1}$, with $\psi\in L^2(\mathbb{R}^3,\mathbb{C}^{2j+1})$. In this realization
 	\begin{equation}
-		H=-\frac{\hbar^2}{2m}\,\Delta\otimes\mathbb{1}+E_0\,\mathbb{1}, \qquad \mathbf{P}=-i\hbar\nabla\otimes\mathbb{1}, \qquad \mathbf{K}=m\mathbf{x}\otimes\mathbb{1}.
+		H=-\frac{\hbar^2}{2m}\,d\otimes\mathbb{1}+E_0\,\mathbb{1}, \qquad \mathbf{P}=-i\hbar\nabla\otimes\mathbb{1}, \qquad \mathbf{K}=m\mathbf{x}\otimes\mathbb{1}.
 	\end{equation}
 \end{corollary}
 
@@ -1037,13 +1442,13 @@ The geometric statements above do not use the structure of $\mathcal{H}$ beyond 
 	\noindent\textbf{Step 2: the rotations.} The operator $\Pi_{\mathrm{orb}}(u)\otimes\mathbb{1}$ transforms $T(\mathbf{a})$ into $T(R_u\mathbf{a})$ and $B(\mathbf{v})$ into $B(R_u\mathbf{v})$, as one checks on the explicit formulas, and so does $\Pi(\hat\rho_u)$ by Relations~\eqref{eq:W4b} and~\eqref{eq:W4c}. Hence $(\Pi_{\mathrm{orb}}(u)\otimes\mathbb{1})^{-1}\Pi(\hat\rho_u)$ commutes with all $T(\mathbf{a})$ and $B(\mathbf{v})$. By irreducibility of the Schrödinger representation these operators generate $B(L^2(\mathbb{R}^3))\otimes\mathbb{1}$ as a von Neumann algebra, whose commutant is $\mathbb{1}\otimes B(\mathcal{K})$. Therefore $\Pi(\hat\rho_u)=\Pi_{\mathrm{orb}}(u)\otimes d(u)$ for a unitary operator $d(u)$ on $\mathcal{K}$. Both $\Pi$ and $\Pi_{\mathrm{orb}}$ are representations of $SU(2)$, and $\mathbb{1}\otimes d(u)$ commutes with $\Pi_{\mathrm{orb}}(u')\otimes\mathbb{1}$, so that $d(uu')=d(u)d(u')$. The map $d$ is strongly continuous, hence a unitary representation of $SU(2)$ on $\mathcal{K}$.
 	
 	\medskip
-	\noindent\textbf{Step 3: irreducibility of $d$.} By Theorem~\ref{thm:free-hamiltonian}, $S(s)=e^{is|\mathbf{P}|^2/2m\hbar}e^{isE_0/\hbar}$, and $|\mathbf{P}|^2=-\hbar^2\Delta\otimes\mathbb{1}$ acts on the first factor only. Let $\mathcal{K}_1\subseteq\mathcal{K}$ be a closed subspace invariant under $d$. Then $L^2(\mathbb{R}^3)\otimes\mathcal{K}_1$ is invariant under $T$, $B$, $S$, $\Pi(\hat\rho_u)$ and the scalars, hence under $\Pi(\widehat{\mathcal{G}})$ by Proposition~\ref{prop:unitary-relations}. Irreducibility of $\Phi$, in the form obtained in Step 5 of the proof of Theorem~\ref{thm:free-hamiltonian}, gives $\mathcal{K}_1\in\{\{0\},\mathcal{K}\}$. Thus $d$ is an irreducible strongly continuous unitary representation of the compact group $SU(2)$. Such a representation is finite dimensional and isomorphic to the representation $d_j$ of dimension $2j+1$ for a unique $j\in\{0,\tfrac{1}{2},1,\dots\}$ \cite[TODO-location]{TODO-Hal03}, so that $\mathcal{K}\cong\mathbb{C}^{2j+1}$.
+	\noindent\textbf{Step 3: irreducibility of $d$.} By Theorem~\ref{thm:free-hamiltonian}, $S(s)=e^{is|\mathbf{P}|^2/2m\hbar}e^{isE_0/\hbar}$, and $|\mathbf{P}|^2=-\hbar^2d\otimes\mathbb{1}$ acts on the first factor only. Let $\mathcal{K}_1\subseteq\mathcal{K}$ be a closed subspace invariant under $d$. Then $L^2(\mathbb{R}^3)\otimes\mathcal{K}_1$ is invariant under $T$, $B$, $S$, $\Pi(\hat\rho_u)$ and the scalars, hence under $\Pi(\widehat{\mathcal{G}})$ by Proposition~\ref{prop:unitary-relations}. Irreducibility of $\Phi$, in the form obtained in Step 5 of the proof of Theorem~\ref{thm:free-hamiltonian}, gives $\mathcal{K}_1\in\{\{0\},\mathcal{K}\}$. Thus $d$ is an irreducible strongly continuous unitary representation of the compact group $SU(2)$. Such a representation is finite dimensional and isomorphic to the representation $d_j$ of dimension $2j+1$ for a unique $j\in\{0,\tfrac{1}{2},1,\dots\}$ \cite[TODO-location]{TODO-Hal03}, so that $\mathcal{K}\cong\mathbb{C}^{2j+1}$.
 	
 	\medskip
 	\noindent\textbf{Step 4: the formulas.} The expressions for $\mathbf{P}$ and $\mathbf{K}$ follow from Definition~\ref{def:generators} and the form of $T$ and $B$ in Step 1, and the expression for $H$ follows from Equation~\eqref{eq:free-hamiltonian}. In particular $B(\mathbf{v})^{-1}\mathbf{P}B(\mathbf{v})=\mathbf{P}+m\mathbf{v}$, so that boosts increase the momentum by $m\mathbf{v}$, as stated in Remark~\ref{rem:active-convention}.
 \end{proof}
 
-\noindent It descends that the free Schrödinger equation $i\hbar\,\partial_t\psi=-\tfrac{\hbar^2}{2m}\Delta\psi$ is recovered with no reference to a classical Hamiltonian, and that spin enters only through the representation $d_j$, without affecting the form of $H$. An elementary Galilean system is thus labelled by the pair $(m,j)$ and by the irrelevant constant $E_0$.
+\noindent It descends that the free Schrödinger equation $i\hbar\,\partial_t\psi=-\tfrac{\hbar^2}{2m}d\psi$ is recovered with no reference to a classical Hamiltonian, and that spin enters only through the representation $d_j$, without affecting the form of $H$. An elementary Galilean system is thus labelled by the pair $(m,j)$ and by the irrelevant constant $E_0$.
 
 The identification just obtained also pins down the space of smooth vectors of Section~\ref{sec:galilean-functions}, which was defined abstractly and shown to be unique in Proposition~\ref{prop:unique-smooth}. In the realization above it is a classical function space, which makes the domain of the Galilean mean value functions completely explicit.
 
@@ -1063,7 +1468,7 @@ The identification just obtained also pins down the space of smooth vectors of S
 	\emph{Inclusion $\supseteq$.} Let $\psi\in\mathcal{S}(\mathbb{R}^3;\mathbb{C}^N)$. By item 6 of Lemma~\ref{lem:galilei-relations}, $\Pi(c,\kappa)\psi=e^{imc/\hbar}\,S(s)T(\mathbf{a})B(\mathbf{v})\Pi(\hat\rho_u)\psi$ for $\kappa=(s,\mathbf{a},\mathbf{v},u)$, and $(c,s,\mathbf{a},\mathbf{v},u)$ are global coordinates on $\widehat{\mathcal{G}}$. It suffices to show that each of the four maps $s\mapsto S(s)\phi$, $\mathbf{a}\mapsto T(\mathbf{a})\phi$, $\mathbf{v}\mapsto B(\mathbf{v})\phi$ and $u\mapsto\Pi(\hat\rho_u)\phi$ is a smooth action on the Fr\'echet space $\mathcal{S}(\mathbb{R}^3;\mathbb{C}^N)$. Indeed, their composition is then smooth with values in $\mathcal{S}$, hence in $L^2$ by the continuity of the inclusion. Now $T(\mathbf{a})$ and $B(\mathbf{v})$ are translations and multiplications by $e^{im\mathbf{v}\cdot\mathbf{x}/\hbar}$, with derivatives $\partial_{a_j}T(\mathbf{a})\phi=T(\mathbf{a})(-\partial_j\phi)$ and $\partial_{v_j}B(\mathbf{v})\phi=\tfrac{im}{\hbar}\,x_jB(\mathbf{v})\phi$. The rotations act through $\phi\mapsto\phi\circ R_u^{-1}$ and the matrices $d_j(u)$. The group $S(s)$ acts in Fourier variables as the multiplication by $e^{is(|\mathbf{p}|^2/2m+E_0)/\hbar}$, whose derivatives are polynomially bounded. By items 2 and 3 of Proposition~\ref{prop:schwartz-properties} each of these maps is smooth into $\mathcal{S}$, and each derivative is a continuous operator on $\mathcal{S}$. Hence $\psi\in\mathcal{H}^\infty_\Phi$.
 \end{proof}
 
-\noindent In particular, the Galilean mean value functions $h$, $p_j$ and $k_j$ are defined on the rays of Schwartz functions, on which $Q_j$, $P_j$ and $\Delta$ act as the familiar differential operators.
+\noindent In particular, the Galilean mean value functions $h$, $p_j$ and $k_j$ are defined on the rays of Schwartz functions, on which $Q_j$, $P_j$ and $d$ act as the familiar differential operators.
 
 The following example shows the content of Equation~\eqref{eq:geometric-hamiltonian} and of Proposition~\ref{prop:dispersion-positive} on the simplest family of states with nonzero momentum dispersion.
 
@@ -1074,17 +1479,17 @@ The following example shows the content of Equation~\eqref{eq:geometric-hamilton
 	\end{equation*}
 	It is normalized and it belongs to $\mathcal{S}(\mathbb{R}^3;\mathbb{C}^{2j+1})$ by item 1 of Proposition~\ref{prop:schwartz-properties}, hence $[\psi]\in\mathbb{P}\mathcal{H}^\infty_\Phi$ by Proposition~\ref{prop:smooth-schwartz}. The position density is $(2\pi\sigma^2)^{-3/2}e^{-|\mathbf{x}|^2/2\sigma^2}$, so that $\langle x_j\rangle=0$ and $\langle x_j^2\rangle=\sigma^2$. For the momentum, $P_j\psi=\big(p_{0,j}+\tfrac{i\hbar}{2\sigma^2}x_j\big)\psi$, hence
 	\begin{equation*}
-		p_j([\psi])=p_{0,j},\qquad (P_j-p_{0,j})\psi=\frac{i\hbar}{2\sigma^2}\,x_j\psi,\qquad \Delta p_j([\psi])^2=\frac{\hbar^2}{4\sigma^4}\,\sigma^2=\frac{\hbar^2}{4\sigma^2}.
+		p_j([\psi])=p_{0,j},\qquad (P_j-p_{0,j})\psi=\frac{i\hbar}{2\sigma^2}\,x_j\psi,\qquad d p_j([\psi])^2=\frac{\hbar^2}{4\sigma^4}\,\sigma^2=\frac{\hbar^2}{4\sigma^2}.
 	\end{equation*}
-	Thus $\Delta p_j=\hbar/2\sigma$, $\Delta q_j=\sigma$ and $\Delta q_j\Delta p_j=\hbar/2$, so that the bound of Proposition~\ref{prop:dispersion-positive} is saturated. The Riemann bracket is $((p_j,p_j))([\psi])=2(\Delta p_j)^2/\hbar=\hbar/2\sigma^2$, and Equation~\eqref{eq:geometric-hamiltonian} yields
+	Thus $d p_j=\hbar/2\sigma$, $d q_j=\sigma$ and $d q_jd p_j=\hbar/2$, so that the bound of Proposition~\ref{prop:dispersion-positive} is saturated. The Riemann bracket is $((p_j,p_j))([\psi])=2(d p_j)^2/\hbar=\hbar/2\sigma^2$, and Equation~\eqref{eq:geometric-hamiltonian} yields
 	\begin{equation*}
 		h([\psi])=\frac{|\mathbf{p}_0|^2}{2m}+\frac{3\hbar^2}{8m\sigma^2}+E_0,
 	\end{equation*}
-	which agrees with the direct evaluation of $(\psi,H\psi)$. The energy exceeds the classical value $|\mathbf{p}_0|^2/2m+E_0$ by $3\hbar^2/8m\sigma^2$, and the excess grows as the packet is squeezed. It vanishes only in the limit $\sigma\to\infty$, in which $\Delta p_j\to0$ but the packet ceases to be normalizable and leaves $\mathbb{P}\mathcal{H}$. By Corollary~\ref{cor:uniform-motion}, the mean position evolves as $q_j(t)=t\,p_{0,j}/m$.
+	which agrees with the direct evaluation of $(\psi,H\psi)$. The energy exceeds the classical value $|\mathbf{p}_0|^2/2m+E_0$ by $3\hbar^2/8m\sigma^2$, and the excess grows as the packet is squeezed. It vanishes only in the limit $\sigma\to\infty$, in which $d p_j\to0$ but the packet ceases to be normalizable and leaves $\mathbb{P}\mathcal{H}$. By Corollary~\ref{cor:uniform-motion}, the mean position evolves as $q_j(t)=t\,p_{0,j}/m$.
 \end{example}
 
 \begin{remark}[Poisson reading of the proof]\label{rem:poisson-shadow}
-	Theorem~\ref{thm:free-hamiltonian} is the operator version of a statement on $\mathbb{P}\mathcal{H}^\infty$ that follows from Proposition~\ref{prop:galilean-poisson}. Setting $q_i=k_i/m$ one has $\{q_i,p_j\}=\delta_{ij}$, and $\{k_i,\langle P_j^2\rangle\}=\langle\tfrac{1}{i\hbar}[K_i,P_j^2]\rangle=2m\,\delta_{ij}\,p_i$. Hence the function $h_{\mathrm{int}}:=h-\tfrac{1}{2m}\sum_j\langle P_j^2\rangle$ satisfies $\{k_i,h_{\mathrm{int}}\}=\{p_i,h_{\mathrm{int}}\}=0$, so it is invariant under the translations and the boosts. For an irreducible action the only such functions are constants, which is the content of Step 5.
+	Theorem~\ref{thm:free-hamiltonian} is the operator version of a statement on $\mathbb{P}\mathcal{H}^\infty$ that follows from Proposition~\ref{prop:galilean-poisson}. Setting $q_i=k_i/m$ one has $\{q_i,p_j\}=d_{ij}$, and $\{k_i,\langle P_j^2\rangle\}=\langle\tfrac{1}{i\hbar}[K_i,P_j^2]\rangle=2m\,d_{ij}\,p_i$. Hence the function $h_{\mathrm{int}}:=h-\tfrac{1}{2m}\sum_j\langle P_j^2\rangle$ satisfies $\{k_i,h_{\mathrm{int}}\}=\{p_i,h_{\mathrm{int}}\}=0$, so it is invariant under the translations and the boosts. For an irreducible action the only such functions are constants, which is the content of Step 5.
 \end{remark}
 
 \begin{remark}[Outlook]\label{rem:outlook}
