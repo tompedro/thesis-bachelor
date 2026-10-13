@@ -2370,12 +2370,13 @@
     <bcf:citekey order="7" intorder="1">TODO-Lee13</bcf:citekey>
     <bcf:citekey order="8" intorder="1">TODO-Hum10</bcf:citekey>
     <bcf:citekey order="9" intorder="1">TODO-Hum10</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">TODO-Hal03</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">TODO-Bargmann1954</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">TODO-Mor18</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">TODO-Wigner1939</bcf:citekey>
     <bcf:citekey order="12" intorder="1">TODO-Mackey1958</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">TODO-Wigner1939</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">TODO-Mackey1958</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">TODO-Hal03</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">TODO-Hal03</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">TODO-Hal03</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">TODO-Lee13</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">TODO-BarutRaczka</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

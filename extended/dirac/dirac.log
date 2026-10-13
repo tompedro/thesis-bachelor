@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2026.9.29)  10 OCT 2026 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Fedora 39) (preloaded format=pdflatex 2026.9.29)  13 OCT 2026 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1196,11 +1196,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./dirac.aux
-
-LaTeX Warning: Label `def:poincare-group' multiply defined.
-
-)
+ (./dirac.aux)
 \openout1 = `dirac.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1220,7 +1216,7 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 5.
 LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 5
 .
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
 LaTeX Font Info:    ... okay on input line 5.
@@ -1314,153 +1310,139 @@ Package hyperref Info: Link coloring ON on input line 5.
 \openout5 = `dirac.out'.
 
 
-Chapter 5.
+Chapter 6.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 19.91054pt on input line 7.
+(Font)              scaled to size 19.91054pt on input line 26.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 19.91054pt on input line 7.
+(Font)              scaled to size 19.91054pt on input line 26.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 23.88496pt on input line 7.
+(Font)              scaled to size 23.88496pt on input line 26.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 
 LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 1 undefined on in
-put line 10.
+put line 29.
 
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line
- 10.
+ 29.
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
 File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
 )
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Trying to load font information for OML+mdbch on input line
- 10.
+ 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
 File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
 )
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line
- 10.
+ 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
 File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
 )
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line
- 10.
+ 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line
- 10.
+ 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line
- 10.
+ 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
 File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
 )
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 29.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 10.
+(Font)              scaled to size 7.68005pt on input line 29.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 10.
+(Font)              scaled to size 5.76004pt on input line 29.
 
 
 LaTeX Warning: Reference `thm:free-hamiltonian' on page 1 undefined on input li
-ne 10.
+ne 29.
 
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 10.5886pt on input line 10.
+(Font)              scaled to size 10.5886pt on input line 29.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 7.73596pt on input line 10.
+(Font)              scaled to size 7.73596pt on input line 29.
 LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 5.80197pt on input line 10.
+(Font)              scaled to size 5.80197pt on input line 29.
 
 LaTeX Warning: Reference `prop:galilei-cohomology' on page 1 undefined on input
- line 10.
+ line 29.
 
 
-LaTeX Warning: Reference `prop:lift' on page 1 undefined on input line 10.
+LaTeX Warning: Reference `prop:lift' on page 1 undefined on input line 29.
 
 
 LaTeX Warning: Reference `cor:schrodinger-realization' on page 1 undefined on i
-nput line 10.
+nput line 29.
 
 
-LaTeX Warning: Reference `rem:outlook' on page 1 undefined on input line 12.
+LaTeX Warning: Reference `ch:projective' on page 1 undefined on input line 31.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 31.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 31.
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 1 undefined on in
+put line 33.
 
 
 LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 1 undefined on in
-put line 14.
+put line 37.
 
 
-LaTeX Warning: Citation 'TODO-Dirac1928' on page 1 undefined on input line 14.
-
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 16.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 16.
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 13.82408pt on input line 44.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 13.82408pt on input line 44.
-
-LaTeX Warning: Reference `sec:free-hamiltonian' on page 1 undefined on input li
-ne 46.
-
-
-LaTeX Warning: Reference `sec:galilei' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Reference `ex:so3-su2' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Reference `lem:galilei-relations' on page 1 undefined on input l
-ine 46.
+LaTeX Warning: Citation 'TODO-Dirac1928' on page 1 undefined on input line 37.
 
 [1
 
@@ -1469,62 +1451,81 @@ ine 46.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/ly1/texnansi.enc}]
 
-LaTeX Warning: Citation 'TODO-BarutRaczka' on page 2 undefined on input line 48
-.
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 2 undefined on in
+put line 41.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 44.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 13.82408pt on input line 44.
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 2 undefined on in
+put line 47.
+
+
+LaTeX Warning: Reference `sec:galilei' on page 2 undefined on input line 47.
+
+
+LaTeX Warning: Reference `ex:so3-su2' on page 2 undefined on input line 49.
 
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `OT1/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/it' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `OMS/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `OMX/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `OML/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 50.
+(Font)              scaled to size 10.51207pt on input line 49.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 50.
+(Font)              scaled to size 7.68005pt on input line 49.
 LaTeX Font Info:    Font shape `MDB/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 50.
+(Font)              scaled to size 5.76004pt on input line 49.
+
+LaTeX Warning: Reference `lem:galilei-relations' on page 2 undefined on input l
+ine 49.
+
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 10.51207pt on input line 56.
+(Font)              scaled to size 10.51207pt on input line 51.
 
-LaTeX Warning: Citation 'TODO-Hal03' on page 2 undefined on input line 70.
-
-
-LaTeX Warning: Citation 'TODO-BarutRaczka' on page 2 undefined on input line 70
+LaTeX Warning: Citation 'TODO-BarutRaczka' on page 2 undefined on input line 51
 .
 
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 53.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 11.52008pt on input line 53.
 LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 10.51207pt on input line 78.
+(Font)              scaled to size 10.51207pt on input line 56.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1537,35 +1538,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
 ed.]
 
-LaTeX Warning: Citation 'TODO-Lee13' on page 3 undefined on input line 91.
+LaTeX Warning: Citation 'TODO-Hal03' on page 3 undefined on input line 97.
+
+
+LaTeX Warning: Citation 'TODO-BarutRaczka' on page 3 undefined on input line 97
+.
 
 
 LaTeX Warning: Reference `def:galilei-group' on page 3 undefined on input line 
-94.
-
-
-LaTeX Warning: Reference `def:galilei-group' on page 3 undefined on input line 
-96.
-
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 99.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 99.
-
-LaTeX Warning: Citation 'TODO-BarutRaczka' on page 3 undefined on input line 10
-5.
-
-
-LaTeX Warning: Reference `def:elementary-transformations' on page 3 undefined o
-n input line 111.
-
-
-LaTeX Warning: Reference `lem:galilei-relations' on page 3 undefined on input l
-ine 121.
-
-
-LaTeX Warning: Reference `sec:poincare-lift' on page 3 undefined on input line 
-121.
+100.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1577,23 +1558,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [3]
 
-LaTeX Warning: Reference `lem:galilei-relations' on page 4 undefined on input l
-ine 148.
+LaTeX Warning: Citation 'TODO-Lee13' on page 4 undefined on input line 131.
 
 
-LaTeX Warning: Reference `lem:galilei-relations' on page 4 undefined on input l
-ine 151.
+LaTeX Warning: Reference `def:galilei-group' on page 4 undefined on input line 
+136.
 
 
-LaTeX Warning: Reference `lem:galilei-relations' on page 4 undefined on input l
-ine 151.
-
-
-LaTeX Warning: Reference `sec:galilei' on page 4 undefined on input line 151.
-
-
-LaTeX Warning: Reference `sec:poincare-lift' on page 4 undefined on input line 
-154.
+LaTeX Warning: Reference `ex:so3-su2' on page 4 undefined on input line 139.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1605,31 +1577,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
-LaTeX Warning: Citation 'TODO-Lee13' on page 5 undefined on input line 178.
+LaTeX Warning: Reference `def:galilei-group' on page 5 undefined on input line 
+144.
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 7.68005pt on input line 147.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 147.
+
+LaTeX Warning: Citation 'TODO-BarutRaczka' on page 5 undefined on input line 15
+3.
 
 
-LaTeX Warning: Reference `ex:so3-su2' on page 5 undefined on input line 199.
+LaTeX Warning: Reference `def:galilei-group' on page 5 undefined on input line 
+153.
 
 
-LaTeX Warning: Reference `sec:galilei' on page 5 undefined on input line 205.
+LaTeX Warning: Reference `def:elementary-transformations' on page 5 undefined o
+n input line 159.
 
 
-LaTeX Warning: Reference `prop:galilei-cohomology' on page 5 undefined on input
- line 205.
-
-
-LaTeX Warning: Reference `thm:bargmann' on page 5 undefined on input line 205.
-
-
-LaTeX Warning: Reference `prop:bargmann-correspondence' on page 5 undefined on 
-input line 205.
-
-
-LaTeX Warning: Reference `sec:poincare-spectral' on page 5 undefined on input l
-ine 205.
-
-
-LaTeX Warning: Reference `ex:so3-su2' on page 5 undefined on input line 205.
+LaTeX Warning: Reference `lem:galilei-relations' on page 5 undefined on input l
+ine 169.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1641,18 +1610,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 
-LaTeX Warning: Reference `prop:lie-degree-two' on page 6 undefined on input lin
-e 211.
+LaTeX Warning: Reference `lem:galilei-relations' on page 6 undefined on input l
+ine 216.
 
 
-LaTeX Warning: Reference `ex:su2-cohomology' on page 6 undefined on input line 
-213.
+LaTeX Warning: Reference `lem:galilei-relations' on page 6 undefined on input l
+ine 219.
 
 
-LaTeX Warning: Citation 'TODO-Hum10' on page 6 undefined on input line 223.
+LaTeX Warning: Reference `lem:galilei-relations' on page 6 undefined on input l
+ine 219.
 
 
-LaTeX Warning: Citation 'TODO-Hum10' on page 6 undefined on input line 228.
+LaTeX Warning: Reference `sec:galilei' on page 6 undefined on input line 219.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1664,12 +1634,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: Reference `prop:galilei-cohomology' on page 7 undefined on input
- line 283.
-
-
-LaTeX Warning: Reference `prop:bargmann-nontrivial' on page 7 undefined on inpu
-t line 284.
+LaTeX Warning: Citation 'TODO-Lee13' on page 7 undefined on input line 248.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1681,40 +1646,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 
-LaTeX Warning: Reference `prop:bargmann-correspondence' on page 8 undefined on 
-input line 287.
-
-
-LaTeX Warning: Reference `thm:bargmann' on page 8 undefined on input line 287.
-
-
-LaTeX Warning: Reference `thm:bargmann' on page 8 undefined on input line 290.
-
-
-LaTeX Warning: Reference `prop:bargmann-correspondence' on page 8 undefined on 
-input line 294.
-
-
-LaTeX Warning: Reference `thm:bargmann' on page 8 undefined on input line 297.
-
-
-LaTeX Warning: Reference `ex:so3-su2' on page 8 undefined on input line 299.
-
-
-LaTeX Warning: Reference `lem:schur-infinite' on page 8 undefined on input line
- 306.
-
-
-LaTeX Warning: Reference `sec:poincare-hamiltonian' on page 8 undefined on inpu
-t line 309.
-
-
-LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 8 undefined on in
-put line 349.
-
-
-LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 8 undefined on in
-put line 349.
+LaTeX Warning: Citation 'TODO-Hum10' on page 8 undefined on input line 288.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1726,18 +1658,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [8]
 
-LaTeX Warning: Citation 'TODO-Hal03' on page 9 undefined on input line 374.
+LaTeX Warning: Reference `ex:so3-su2' on page 9 undefined on input line 301.
 
 
-LaTeX Warning: Reference `def:galilei-group' on page 9 undefined on input line 
-377.
+LaTeX Warning: Reference `sec:galilei' on page 9 undefined on input line 307.
 
 
-LaTeX Warning: Reference `def:elementary-transformations' on page 9 undefined o
-n input line 387.
+LaTeX Warning: Reference `prop:galilei-cohomology' on page 9 undefined on input
+ line 307.
 
 
-LaTeX Warning: Reference `eq:W2' on page 9 undefined on input line 408.
+LaTeX Warning: Reference `thm:bargmann' on page 9 undefined on input line 307.
+
+
+LaTeX Warning: Reference `prop:lie-degree-two' on page 9 undefined on input lin
+e 309.
+
+
+LaTeX Warning: Reference `prop:bargmann-correspondence' on page 9 undefined on 
+input line 311.
+
+
+LaTeX Warning: Reference `ex:so3-su2' on page 9 undefined on input line 311.
+
+
+LaTeX Warning: Reference `prop:lie-degree-two' on page 9 undefined on input lin
+e 317.
+
+
+LaTeX Warning: Reference `ex:su2-cohomology' on page 9 undefined on input line 
+321.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1749,15 +1699,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: Reference `lem:boost-covariance' on page 10 undefined on input l
-ine 437.
+LaTeX Warning: Citation 'TODO-Hum10' on page 10 undefined on input line 331.
 
-LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 11.37706pt on input line 442.
-LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 8.31201pt on input line 442.
-LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 6.23401pt on input line 442.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 11.60394pt on input line 359.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 359.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1766,47 +1725,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+[10]
 
-LaTeX Warning: Reference `ch:projective' on page 11 undefined on input line 475
-.
-
-
-LaTeX Warning: Reference `def:galilean-action' on page 11 undefined on input li
-ne 475.
+LaTeX Warning: Reference `prop:galilei-cohomology' on page 11 undefined on inpu
+t line 393.
 
 
-LaTeX Warning: Reference `def:galilean-action' on page 11 undefined on input li
-ne 478.
-
-
-LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 11 undefined on i
-nput line 481.
-
-
-LaTeX Warning: Reference `prop:lift' on page 11 undefined on input line 488.
-
-
-LaTeX Warning: Reference `thm:bargmann' on page 11 undefined on input line 488.
-
-
-
-LaTeX Warning: Citation 'TODO-Bargmann1954' on page 11 undefined on input line 
-488.
+LaTeX Warning: Reference `prop:bargmann-nontrivial' on page 11 undefined on inp
+ut line 394.
 
 
 LaTeX Warning: Reference `prop:bargmann-correspondence' on page 11 undefined on
- input line 488.
+ input line 399.
 
 
-LaTeX Warning: Reference `prop:lift' on page 11 undefined on input line 494.
+LaTeX Warning: Reference `thm:bargmann' on page 11 undefined on input line 399.
 
 
-LaTeX Warning: Reference `def:generators' on page 11 undefined on input line 49
-7.
+
+LaTeX Warning: Reference `thm:bargmann' on page 11 undefined on input line 402.
 
 
-LaTeX Warning: Reference `thm:snag' on page 11 undefined on input line 500.
+
+LaTeX Warning: Reference `prop:bargmann-correspondence' on page 11 undefined on
+ input line 406.
+
+
+LaTeX Warning: Reference `thm:bargmann' on page 11 undefined on input line 409.
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1818,38 +1764,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 
-LaTeX Warning: Reference `rem:active-convention' on page 12 undefined on input 
-line 507.
-
-
-LaTeX Warning: Reference `thm:free-hamiltonian' on page 12 undefined on input l
-ine 507.
-
-
-LaTeX Warning: Reference `thm:snag' on page 12 undefined on input line 518.
-
-
-LaTeX Warning: Reference `lem:boost-covariance' on page 12 undefined on input l
-ine 518.
-
-
-LaTeX Warning: Reference `thm:free-hamiltonian' on page 12 undefined on input l
-ine 533.
+LaTeX Warning: Reference `ex:so3-su2' on page 12 undefined on input line 411.
 
 
 LaTeX Warning: Reference `lem:schur-infinite' on page 12 undefined on input lin
-e 533.
+e 418.
 
 
-LaTeX Warning: Reference `def:pvm-support' on page 12 undefined on input line 5
-35.
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 12 undefined on i
+nput line 432.
 
 
-LaTeX Warning: Reference `rem:weyl' on page 12 undefined on input line 539.
+LaTeX Warning: Reference `ch:projective' on page 12 undefined on input line 432
+.
 
 
-LaTeX Warning: Reference `thm:free-hamiltonian' on page 12 undefined on input l
-ine 542.
+LaTeX Warning: Reference `eq:physical-kahler' on page 12 undefined on input lin
+e 432.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1861,50 +1792,54 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 
-LaTeX Warning: Reference `prop:pvm-calculus' on page 13 undefined on input line
- 553.
+LaTeX Warning: Reference `def:galilean-action' on page 13 undefined on input li
+ne 442.
 
 
-LaTeX Warning: Reference `thm:free-hamiltonian' on page 13 undefined on input l
-ine 557.
+LaTeX Warning: Reference `prop:holomorphic-atlas' on page 13 undefined on input
+ line 442.
+
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
+ 456.
+(/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
+File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
+)
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 10.51207pt on input line 456.
 
 
-LaTeX Warning: Reference `rem:outlook' on page 13 undefined on input line 557.
+LaTeX Warning: Reference `ch:projective' on page 13 undefined on input line 456
+.
 
 
-LaTeX Warning: Reference `prop:galilean-poisson' on page 13 undefined on input 
-line 557.
+LaTeX Warning: Citation 'TODO-Mor18' on page 13 undefined on input line 466.
 
 
-LaTeX Warning: Citation 'TODO-Mackey1958' on page 13 undefined on input line 56
-4.
+LaTeX Warning: Reference `eq:physical-kahler' on page 13 undefined on input lin
+e 466.
 
 
-LaTeX Warning: Reference `cor:schrodinger-realization' on page 13 undefined on 
-input line 567.
+Overfull \hbox (5.18155pt too wide) in paragraph at lines 466--467
+[][]\T1/mdbch/m/it/10.95 Remark \T1/mdbch/m/n/10.95 6.3.4 (The pro-jec-tive spa
+ce does not carry the spin)\T1/mdbch/m/it/10.95 . []\T1/mdbch/m/n/10.95 Let $[]
+[]$ and $[][]$ be sep-a-ra-ble infinite-dimensional
+ []
 
-LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
-(Font)              scaled to size 12.46802pt on input line 570.
-LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
-(Font)              scaled to size 11.60394pt on input line 570.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 570.
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 13 undefined on i
+nput line 472.
+
+
+LaTeX Warning: Reference `prop:lift' on page 13 undefined on input line 479.
+
+
+LaTeX Warning: Reference `prop:kahler-isomorphisms' on page 13 undefined on inp
+ut line 479.
+
+
+LaTeX Warning: Reference `thm:bargmann' on page 13 undefined on input line 479.
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1915,24 +1850,40 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [13]
 
-LaTeX Warning: Reference `cor:schrodinger-realization' on page 14 undefined on 
-input line 648.
+LaTeX Warning: Reference `prop:lift' on page 14 undefined on input line 485.
 
 
-LaTeX Warning: Citation 'TODO-Wigner1939' on page 14 undefined on input line 65
-4.
+LaTeX Warning: Reference `thm:snag' on page 14 undefined on input line 488.
 
 
-LaTeX Warning: Citation 'TODO-Mackey1958' on page 14 undefined on input line 65
-4.
+LaTeX Warning: Reference `def:generators' on page 14 undefined on input line 48
+8.
 
 
-LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 14 undefined on i
-nput line 657.
+LaTeX Warning: Reference `thm:snag' on page 14 undefined on input line 491.
 
 
-LaTeX Warning: Reference `cor:schrodinger-realization' on page 14 undefined on 
-input line 657.
+LaTeX Warning: Reference `rem:active-convention' on page 14 undefined on input 
+line 498.
+
+
+Overfull \hbox (2.61708pt too wide) in paragraph at lines 501--502
+[][]\T1/mdbch/b/n/10.95 Definition 6.3.8 \T1/mdbch/m/n/10.95 (El-e-men-tary rel
+-a-tivis-tic sys-tem)\T1/mdbch/b/n/10.95 . []\T1/mdbch/m/it/10.95 An \T1/mdbch/
+m/n/10.95 el-e-men-tary rel-a-tivis-tic sys-tem \T1/mdbch/m/it/10.95 is an ir-r
+e-ducible Poincaré
+ []
+
+
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 14 undefined on input l
+ine 504.
+
+
+LaTeX Warning: Reference `thm:snag' on page 14 undefined on input line 520.
+
+
+LaTeX Warning: Reference `lem:boost-covariance' on page 14 undefined on input l
+ine 520.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1944,6 +1895,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 15 undefined on input l
+ine 557.
+
+
+LaTeX Warning: Reference `lem:schur-infinite' on page 15 undefined on input lin
+e 557.
+
+
+LaTeX Warning: Reference `def:pvm-support' on page 15 undefined on input line 5
+59.
+
+
+LaTeX Warning: Reference `rem:weyl' on page 15 undefined on input line 563.
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1952,6 +1918,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 16 undefined on i
+nput line 567.
+
+
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 16 undefined on input l
+ine 573.
+
+
+LaTeX Warning: Reference `prop:pvm-calculus' on page 16 undefined on input line
+ 584.
+
+
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 16 undefined on input l
+ine 588.
+
+
+LaTeX Warning: Reference `rem:outlook' on page 16 undefined on input line 588.
+
+
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 16 undefined on input l
+ine 600.
+
+
+LaTeX Warning: Reference `thm:free-hamiltonian' on page 16 undefined on input l
+ine 611.
+
+
+LaTeX Warning: Reference `prop:lift' on page 16 undefined on input line 611.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1962,7 +1958,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16]
 
-LaTeX Warning: Citation 'TODO-Hal03' on page 17 undefined on input line 797.
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 17 undefined on 
+input line 616.
+
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 17 undefined on 
+input line 623.
+
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 17 undefined on i
+nput line 630.
+
+
+LaTeX Warning: Reference `lem:boost-covariance' on page 17 undefined on input l
+ine 630.
+
+
+Overfull \hbox (2.61018pt too wide) in paragraph at lines 638--639
+[]\T1/mdbch/m/it/10.95 For $\OML/mdbch/m/it/10.95 p \OMS/mdbch/m/n/10.95 2 [][]
+$ \T1/mdbch/m/it/10.95 let $\T1/mdbch/b/n/10.95 w[] \OT1/mdbch/m/n/10.95 := [](
+\OMS/mdbch/m/n/10.95 j\T1/mdbch/b/n/10.95 p\OMS/mdbch/m/n/10.95 j\OML/mdbch/m/i
+t/10.95 =m\OT1/mdbch/m/n/10.95 ) \T1/mdbch/b/n/10.95 p\OML/mdbch/m/it/10.95 =\O
+MS/mdbch/m/n/10.95 j\T1/mdbch/b/n/10.95 p\OMS/mdbch/m/n/10.95 j$ \T1/mdbch/m/it
+/10.95 be its ra-pid-ity vec-tor, with $\T1/mdbch/b/n/10.95 w[] \OT1/mdbch/m/n/
+10.95 = \T1/mdbch/b/n/10.95 0$\T1/mdbch/m/it/10.95 , and let $\OML/mdbch/m/it/1
+0.95 A[] \OT1/mdbch/m/n/10.95 := [][][]$\T1/mdbch/m/it/10.95 .
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1973,19 +1994,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-Overfull \hbox (5.1315pt too wide) in paragraph at lines 845--846
-\T1/mdbch/m/n/10.95 As in the proof of Lemma [][]5.5.10[][], Equa-tion [] and $
-\T1/cmss/m/n/10.95 P\OML/mdbch/m/n/10.95 ^^C\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/
-it/10.95 g\OT1/mdbch/m/n/10.95 )[]\T1/cmss/m/n/10.95 P \OT1/mdbch/m/n/10.95 = \
-OML/mdbch/m/n/10.95 ^^C\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 ^^R\OT1/mdbc
-h/m/n/10.95 (\OML/mdbch/m/it/10.95 g\OT1/mdbch/m/n/10.95 ))[]$ \T1/mdbch/m/n/10
-.95 give $[][]\OT1/mdbch/m/n/10.95 (\T1/cmss/m/n/10.95 P\OT1/mdbch/m/n/10.95 )[
-][](\OML/mdbch/m/it/10.95 a; g\OT1/mdbch/m/n/10.95 )[][](\T1/cmss/m/n/10.95 P\O
-T1/mdbch/m/n/10.95 )[] =
- []
 
-
-LaTeX Warning: Reference `lem:schur' on page 18 undefined on input line 869.
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 18 undefined on i
+nput line 658.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1996,8 +2007,135 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18]
-Overfull \hbox (8.06157pt too wide) in paragraph at lines 877--878
-[][]\T1/mdbch/b/n/10.95 Proposition 5.6.13 \T1/mdbch/m/n/10.95 (Min-i-mal par-i
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 19 undefined on 
+input line 679.
+
+
+Overfull \hbox (0.11853pt too wide) in paragraph at lines 700--701
+\T1/mdbch/m/n/10.95 Definition [][]6.4.5[][] and Lemma [][]6.4.6[][] say that $
+[][]$ is the space of sec-tions of the as-so-ci-ated bun-dle $\OML/mdbch/m/it/1
+0.95 SL\OT1/mdbch/m/n/10.95 (2\OML/mdbch/m/it/10.95 ; \MDA/mdbch/m/n/10.95 C\OT
+1/mdbch/m/n/10.95 ) \OMS/mdbch/m/n/10.95 ^^B[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 20 undefined on 
+input line 772.
+
+
+LaTeX Warning: Citation 'TODO-Wigner1939' on page 20 undefined on input line 78
+2.
+
+
+LaTeX Warning: Citation 'TODO-Mackey1958' on page 20 undefined on input line 78
+2.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+
+LaTeX Warning: Citation 'TODO-Hal03' on page 21 undefined on input line 791.
+
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 21 undefined on 
+input line 795.
+
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 21 undefined on i
+nput line 799.
+
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 21 undefined on 
+input line 799.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 11.37706pt on input line 819.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 8.31201pt on input line 819.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 6.23401pt on input line 819.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[22{/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+
+LaTeX Warning: Citation 'TODO-Hal03' on page 24 undefined on input line 932.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+Overfull \hbox (8.54788pt too wide) in paragraph at lines 1003--1004
+\T1/mdbch/m/n/10.95 As in the proof of Lemma [][]6.5.13[][], Equa-tion [] and $
+\T1/cmss/m/n/10.95 P\OML/mdbch/m/n/10.95 ^^C\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/
+it/10.95 g\OT1/mdbch/m/n/10.95 )[]\T1/cmss/m/n/10.95 P \OT1/mdbch/m/n/10.95 = \
+OML/mdbch/m/n/10.95 ^^C\OT1/mdbch/m/n/10.95 (\OML/mdbch/m/it/10.95 ^^R\OT1/mdbc
+h/m/n/10.95 (\OML/mdbch/m/it/10.95 g\OT1/mdbch/m/n/10.95 ))[]$ \T1/mdbch/m/n/10
+.95 yield $[][]\OT1/mdbch/m/n/10.95 (\T1/cmss/m/n/10.95 P\OT1/mdbch/m/n/10.95 )
+[][](\OML/mdbch/m/it/10.95 a; g\OT1/mdbch/m/n/10.95 )[][](\T1/cmss/m/n/10.95 P\
+OT1/mdbch/m/n/10.95 )[] =
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25]
+
+LaTeX Warning: Reference `lem:schur' on page 26 undefined on input line 1027.
+
+
+Overfull \hbox (8.06157pt too wide) in paragraph at lines 1035--1036
+[][]\T1/mdbch/b/n/10.95 Proposition 6.5.17 \T1/mdbch/m/n/10.95 (Min-i-mal par-i
 -ty--co-vari-ant space)\T1/mdbch/b/n/10.95 . []\T1/mdbch/m/it/10.95 Let $\OT1/m
 dbch/m/n/10.95 (\OML/mdbch/m/it/10.95 D; W; ^^S\OT1/mdbch/m/n/10.95 )$ \T1/mdbc
 h/m/it/10.95 be a lo-cal co-vari-ant re-al-iza-tion of $\OT1/mdbch/m/n/10.95 (\
@@ -2012,53 +2150,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19]
+[26]
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[20]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[21]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[23]
-
-LaTeX Warning: Reference `rem:weyl' on page 24 undefined on input line 1162.
-
-
-LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 24 undefined on i
-nput line 1186.
-
-
-LaTeX Warning: Reference `prop:galilean-poisson' on page 24 undefined on input 
-line 1186.
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 27 undefined on i
+nput line 1076.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2068,7 +2163,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24]
+[27]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -2077,15 +2172,189 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[25] (./dirac.aux)
+[28]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[31]
+
+LaTeX Warning: Reference `rem:weyl' on page 32 undefined on input line 1332.
+
+
+LaTeX Warning: Reference `ch:analytical-hamiltonians' on page 32 undefined on i
+nput line 1358.
+
+
+LaTeX Warning: Reference `prop:galilean-poisson' on page 32 undefined on input 
+line 1358.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32]
+Chapter 7.
+
+LaTeX Warning: Reference `cor:schrodinger-realization' on page 33 undefined on 
+input line 1427.
+
+[33
+
+]
+
+LaTeX Warning: Citation 'TODO-Lee13' on page 34 undefined on input line 1455.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 14.96161pt on input line 1524.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 10.39001pt on input line 1524.
+LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
+(Font)              scaled to size 7.27301pt on input line 1524.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 13.92471pt on input line 1524.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 9.66995pt on input line 1524.
+LaTeX Font Info:    Font shape `U/xmdeuf/m/n' will be
+(Font)              scaled to size 6.76897pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 13.82408pt on input line 1524.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 9.60007pt on input line 1524.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 1524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1524.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1524.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation 'TODO-BarutRaczka' on page 37 undefined on input line 1
+702.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38] (./dirac.aux)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `dirac.out' has not changed.
-(rerunfilecheck)             Checksum: C625EDF76C70E126534567882A691A49;3031.
+(rerunfilecheck)             Checksum: F8D083EF0B85886DCF88C23FFF7618B8;6788.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                dirac
@@ -2096,23 +2365,27 @@ Package logreq Info: Writing requests to 'dirac.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34440 strings out of 477985
- 648989 string characters out of 5839370
+ 34681 strings out of 477985
+ 653051 string characters out of 5839370
  1878388 words of memory out of 6000000
- 53858 multiletter control sequences out of 15000+600000
- 590686 words of font info for 156 fonts, out of 8000000 for 9000
+ 53992 multiletter control sequences out of 15000+600000
+ 607537 words of font info for 187 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 103i,12n,106p,1514b,1765s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,12n,106p,1411b,1763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{definition.5.6.12} has been referenced but does not
+pdfTeX warning (dest): name{definition.6.5.16} has been referenced but does not
  exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{definition.5.6.15} has been referenced but does not
+pdfTeX warning (dest): name{definition.6.5.19} has been referenced but does not
  exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{definition.5.3.2} has been referenced but does not 
+pdfTeX warning (dest): name{definition.6.1.16} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{definition.6.1.2} has been referenced but does not 
 exist, replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/sh
@@ -2132,10 +2405,10 @@ e1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/mathdesign/mdbch/md-chrma.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/cm-super/sfss0800.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/cm-super/sfss1095.pfb>
-Output written on dirac.pdf (25 pages, 290220 bytes).
+Output written on dirac.pdf (38 pages, 370480 bytes).
 PDF statistics:
- 658 PDF objects out of 1000 (max. 8388607)
- 591 compressed objects within 6 object streams
- 191 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1042 PDF objects out of 1200 (max. 8388607)
+ 958 compressed objects within 10 object streams
+ 290 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
