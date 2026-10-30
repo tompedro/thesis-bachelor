@@ -1,0 +1,316 @@
+\section{The Spin Operator and its Behaviour under Boosts}
+\label{sec:spin-operator}
+
+Theorem~\ref{thm:wigner-mackey} fixes the spin of an elementary system as the label $j$ of an irreducible representation of $SU(2)$, and it leaves open how the spin of a given state is read. The question of this section concerns the states. For $j=\frac12$ one asks whether the spin of a ray of $\mathbb{P}\mathcal{H}$ is measured by three operators on $\mathcal{H}$ which behave as the spin does at rest, \textit{i.e.}, which are compatible with the four-momentum, generate $\mathfrak{su}(2)$ and form a vector under a change of inertial observer. At rest the stabilizer of the momentum is $SU(2)$, and the generators of its action on the amplitudes are the natural candidates. For a state of momentum $p\neq\mathring{p}$ the stabilizer is a different subgroup of $SL(2,\mathbb{C})$, and the amplitudes at different momenta are compared only through the standard boosts. The data are the model $\mathcal{H}_{m,1/2}$ of Definition~\ref{def:induced-rep}, the Wigner rotation of Proposition~\ref{prop:induced-action} and, for the last subsection, the Dirac fields of Theorem~\ref{thm:dirac}. The outcome has a positive and a negative part. The spin at a fixed momentum is well defined as a representation of the stabilizer of that momentum, and the operators obtained by collecting it over all momenta through the standard boosts form a vector under rotations. They do not form a vector under boosts, and Theorem~\ref{thm:no-invariant-spin} shows that no triple of bounded operators compatible with the four-momentum is covariant under the whole Lorentz group. The covariant object is a four-vector of operators with momentum dependent matrices, while the matrices acting on the Dirac space are not observables on the rays of solutions. This section is not a step of the chain of the chapter and it is not used in the proof of Theorem~\ref{thm:main}. It fixes, in each of the models M2 and M3, which operators deserve the name of spin.
+
+%--------------------------------------------------------------------
+\subsection{The Canonical Spin}
+\label{subsec:canonical-spin}
+
+The spin of a state is attached to its momentum, since at a given momentum $p$ only the stabilizer of $p$ acts without moving it. The induced model of Section 6.4 reads this action through the standard boost $A_p$ of Proposition~\ref{prop:orbit}. This subsection makes the stabilizer explicit, shows that it acts on the fibre above $p$ as $SU(2)$ acts at rest, and collects the resulting generators over all momenta in operators on $\mathcal{H}_{m,1/2}$. The data are Proposition~\ref{prop:orbit}, Definition~\ref{def:associated-bundle} and Proposition~\ref{prop:induced-action}. The result is a triple of bounded operators with the commutation relations of $\mathfrak{su}(2)$ which transforms as a vector under rotations, and the next subsection computes its transformation under boosts. From now on $j=\frac12$, so that $V=\mathbb{C}^2$ and $\pi(u)=u$ as per Definition~\ref{def:spin-data}.
+
+\begin{lemma}[Stabilizer of a momentum]\label{lem:stabilizer}
+	Let $p\in\mathcal{O}_m^+$ and $G_p:=\{g\in SL(2,\mathbb{C})\mid\Lambda(g)p=p\}$.
+	\begin{enumerate}
+		\item $G_p=A_p\,SU(2)\,A_p^{-1}$.
+		\item Let $g\in SL(2,\mathbb{C})$ and $q:=\Lambda(g)^{-1}p$. Then $g\,G_q\,g^{-1}=G_p$ and, for every $u\in SU(2)$,
+		\begin{equation*}
+			g\,\big(A_q\,u\,A_q^{-1}\big)\,g^{-1}=A_p\,\big(R_W(g,p)\,u\,R_W(g,p)^{-1}\big)A_p^{-1}.
+		\end{equation*}
+		\item Let $E:=SL(2,\mathbb{C})\times_{SU(2)}\mathbb{C}^2$ be the associated bundle of Definition~\ref{def:associated-bundle}, with fibre $E_p$ above $p$ and left action $g\cdot[g',v]:=[gg',v]$ as per Proposition~\ref{prop:action-equivariant}. For $g\in G_p$ and $v\in\mathbb{C}^2$,
+		\begin{equation*}
+			g\cdot[A_p,v]=\big[A_p,\ (A_p^{-1}gA_p)\,v\big].
+		\end{equation*}
+	\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+	Item 1. Since $\Lambda(A_p)\mathring{p}=p$, one has $\Lambda(g)p=p$ if and only if $\Lambda(A_p^{-1}gA_p)\mathring{p}=\mathring{p}$, \textit{i.e.}, by item 1 of Proposition~\ref{prop:orbit}, if and only if $A_p^{-1}gA_p\in SU(2)$.
+	
+	Item 2. For $x\in G_q$ one has $\Lambda(gxg^{-1})p=\Lambda(g)\Lambda(x)q=\Lambda(g)q=p$, and the same computation with $g^{-1}$ yields the opposite inclusion. By Equation~\eqref{eq:wigner-rotation} of Proposition~\ref{prop:induced-action}, $gA_q=A_pR_W(g,p)$, hence $A_q^{-1}g^{-1}=R_W(g,p)^{-1}A_p^{-1}$, and the formula follows.
+	
+	Item 3. Let $u:=A_p^{-1}gA_p\in SU(2)$ by item 1. Then $g\cdot[A_p,v]=[gA_p,v]=[A_pu,v]=[A_p,uv]$ by the equivalence relation of Definition~\ref{def:associated-bundle} with $\pi(u)=u$.
+\end{proof}
+
+\noindent Hypotheses used: none beyond the construction of Section 6.4.
+
+Item 3 states that, in the standard frame, the stabilizer of $p$ acts on the spin space above $p$ through the representation $u\mapsto\pi(A_p^{-1}\,\cdot\,A_p)$. The spin at a single momentum is therefore defined with no further choice. Item 2 states that the transport of the stabilizer along $g$, from the momentum $q$ to the momentum $p$, is read in the standard frames as the conjugation by the Wigner rotation and not as the identity. This is the origin of all the statements below, and it motivates the following definition.
+
+\begin{definition}[Canonical spin]\label{def:canonical-spin}
+	The \emph{canonical spin operators} on $\mathcal{H}_{m,1/2}$ are the multiplication operators
+	\begin{equation*}
+		\big(S_k\psi\big)(p):=\frac{\hbar}{2}\,\sigma_k\,\psi(p),\qquad k=1,2,3.
+	\end{equation*}
+\end{definition}
+
+\begin{remark}[Meaning of the definition and dependence on the section]\label{rem:canonical-spin}
+	Each $S_k$ is bounded and selfadjoint with $\|S_k\|=\frac\hbar2$. By item 3 of Lemma~\ref{lem:stabilizer}, $S_k(p)=\frac\hbar2\sigma_k$ is the generator of the one-parameter subgroup $\theta\mapsto A_p\exp(\theta r_k)A_p^{-1}$ of $G_p$, in the sense that its action on the fibre above $p$ is $e^{-i\theta S_k(p)/\hbar}$, with $r_k$ as per Proposition~\ref{prop:poincare-algebra}. It measures the component of the spin along the axis $\mathbf{e}_k$ of the rest frame reached from $p$ by $A_p^{-1}$, which is the rest frame obtained with no rotation. The name \emph{canonical} records that this frame is a choice. Every section $s_0$ of Definition~\ref{def:section-principal} has the form $s_0(p)=A_pb(p)$ with $b(p):=A_p^{-1}s_0(p)\in SU(2)$ by Proposition~\ref{prop:orbit}, and for $f$ as per Definition~\ref{def:equivariant} the amplitude in the new gauge is $f(A_pb(p))=b(p)^{-1}f(A_p)$. The operators defined by the recipe of Definition~\ref{def:canonical-spin} in the new gauge correspond, on the original amplitudes, to
+	\begin{equation*}
+		S^b_k=\sum_{l=1}^3\big(R_{b(p)}\big)_{lk}\,S_l.
+	\end{equation*}
+	Hence $\sum_kS_k^2=\frac34\hbar^2\mathbb{1}$ and the label $j$ do not depend on the section, whereas the triple does.
+\end{remark}
+
+The operators of Definition~\ref{def:canonical-spin} are the generators of the rotation of the value in the action of $SU(2)$ on $\mathcal{H}_{m,1/2}$. Writing $J_k$ for the selfadjoint generator of $\theta\mapsto U(0,e^{-i\theta\sigma_k/2})$, which exists by Theorem~2.10 since $U$ is strongly continuous by Proposition~\ref{prop:induced-unitary}, and
+\begin{equation*}
+	L_k:=-i\hbar\sum_{a,b}\varepsilon_{kab}\,p_a\,\frac{\partial}{\partial p_b},
+\end{equation*}
+acting on $C_c^\infty(\mathcal{O}_m^+;\mathbb{C}^2)$ through the coordinate $\mathbf{p}$, the next proposition shows how $S_k$ relates to them.
+
+\begin{proposition}[Canonical spin and rotations]\label{prop:spin-rotations}
+	\begin{enumerate}
+		\item $[S_j,S_k]=i\hbar\sum_l\varepsilon_{jkl}S_l$ and $\sum_kS_k^2=\frac34\hbar^2\mathbb{1}$. Every $S_k$ commutes with the multiplication by $\chi_d$ for every Borel set $d\subseteq\mathcal{O}_m^+$, hence with $P^\mu$ and with $H$.
+		\item For every $u\in SU(2)$ and every $k$,
+		\begin{equation}\label{eq:spin-rotation}
+			U(0,u)\,S_k\,U(0,u)^{-1}=\sum_{l=1}^3\big(R_u\big)_{lk}\,S_l.
+		\end{equation}
+		\item On $C_c^\infty(\mathcal{O}_m^+;\mathbb{C}^2)$ one has $J_k=L_k+S_k$, $[L_j,S_k]=0$ and
+		\begin{equation*}
+			[J_j,S_k]=i\hbar\sum_l\varepsilon_{jkl}S_l,\qquad [J_j,J_k]=i\hbar\sum_l\varepsilon_{jkl}J_l.
+		\end{equation*}
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	Item 1. The first two relations are $[\sigma_j,\sigma_k]=2i\sum_l\varepsilon_{jkl}\sigma_l$ and $\sum_k\sigma_k^2=3\cdot\mathbb{1}$. The operators $S_k$ are multiplications by constant matrices, and $\chi_d$, $P^\mu$ and $H$ are multiplications by scalar functions, by Proposition~\ref{prop:induced-unitary}.
+	
+	Item 2. By Proposition~\ref{prop:induced-action}, $R_W(u,p)=u$, so Definition~\ref{def:induced-rep} yields $(U(0,u)\varphi)(p)=u\,\varphi(\Lambda(u)^{-1}p)$. Let $\psi:=U(0,u)\varphi$ and $q:=\Lambda(u)^{-1}p$. Then $(U(0,u)S_k\varphi)(p)=\frac\hbar2\,u\sigma_k\varphi(q)=\frac\hbar2\,u\sigma_ku^{-1}\psi(p)$, and item 3 of Lemma~\ref{lem:poincare-relations} yields $u\sigma_ku^{-1}=(R_u\mathbf{e}_k)\cdot\boldsymbol{\sigma}=\sum_l(R_u)_{lk}\sigma_l$.
+	
+	Item 3. For $u=e^{-i\theta\sigma_k/2}$ the matrix $R_u$ is the rotation of angle $\theta$ about $\mathbf{e}_k$, and $\Lambda(u)^{-1}$ acts on $\mathbf{p}$ as $R_u^{-1}$. For $\psi\in C_c^\infty$,
+	\begin{equation*}
+		\big(U(0,u)\psi\big)(\mathbf{p})=e^{-i\theta S_k/\hbar}\,\psi(\mathbf{p}-\theta\,\mathbf{e}_k\times\mathbf{p}+O(\theta^2))=\big(1-\tfrac{i\theta}{\hbar}(S_k+L_k)\big)\psi(\mathbf{p})+O(\theta^2)
+	\end{equation*}
+	in $L^2$, because $(\mathbf{e}_k\times\mathbf{p})\cdot\nabla_{\mathbf{p}}=\mathbf{e}_k\cdot(\mathbf{p}\times\nabla_{\mathbf{p}})$. It descends that $J_k\psi=(L_k+S_k)\psi$. The operators $L_k$ act on the variable $\mathbf{p}$ and $S_k$ on the value, so $[L_j,S_k]=0$. Moreover $[L_j,L_k]=i\hbar\sum_l\varepsilon_{jkl}L_l$, which is the algebra of $\mathbf{x}\times(-i\hbar\nabla)$ with $\mathbf{x}$ replaced by $\mathbf{p}$. The last two relations follow from item 1 and from these three facts.
+\end{proof}
+
+\noindent Hypotheses used: H1 to H3 and $j=\frac12$, through the model $\mathcal{H}_{m,1/2}$ of Theorem~\ref{thm:wigner-mackey}.
+
+The canonical spin has now the properties expected of a spin, and it is defined on the model M2. The following remark transports it to the abstract space $\mathbb{P}\mathcal{H}$, which is the space on which the states are given.
+
+\begin{remark}[The spin on the state space]\label{rem:spin-state-space}
+	Let $\mathcal{W}:\mathcal{H}\to\mathcal{H}_{m,1/2}$ be the unitary operator of Theorem~\ref{thm:wigner-mackey} and set $S_k^{\mathcal{H}}:=\mathcal{W}^{-1}S_k\mathcal{W}$. Another unitary operator with the same intertwining property differs from $\mathcal{W}$ by a phase, by irreducibility of $U_{m,1/2}$, so that $S_k^{\mathcal{H}}$ depends only on the section of Remark~\ref{rem:canonical-spin}. Since $S_k^{\mathcal{H}}$ is bounded and selfadjoint, its mean value function of Definition 3.3.1 is an observable function on $\mathbb{P}\mathcal{H}$ in the sense of Definition 3.5.1, and it equals $\langle S_k\rangle\circ F$ with $F=\mathbb{P}\mathcal{W}$ the Kähler isomorphism of Theorem~\ref{thm:main}. By Proposition 3.3.4 and item 1 of Proposition~\ref{prop:spin-rotations},
+	\begin{equation*}
+		\big\{\langle S_j^{\mathcal{H}}\rangle,\langle S_k^{\mathcal{H}}\rangle\big\}=\sum_l\varepsilon_{jkl}\,\langle S_l^{\mathcal{H}}\rangle.
+	\end{equation*}
+	The mean spins realize on $\mathbb{P}\mathcal{H}$ the Poisson relations of $\mathfrak{so}(3)$, as the coordinate functions of the classical spin of Section 1.7 do on the sphere.
+\end{remark}
+
+%--------------------------------------------------------------------
+\subsection{The Canonical Spin under Boosts}
+\label{subsec:spin-boosts}
+
+The canonical spin is defined through the standard boosts, and a Lorentz transformation does not respect them. The question of this subsection is how a generic element of $SL(2,\mathbb{C})$ acts on the triple of Definition~\ref{def:canonical-spin}, and what this says about the spin of a boosted state. The data are Definition~\ref{def:induced-rep}, the Wigner rotation of Proposition~\ref{prop:induced-action} and its momentum dependence from Proposition~\ref{prop:wigner-rotation}. What is obtained is a closed formula for the conjugated triple, three consequences of it and an explicit evaluation for perpendicular boosts. The next subsection shows that the failure found here is not a feature of the particular triple.
+
+For $g\in SL(2,\mathbb{C})$ and $p\in\mathcal{O}_m^+$ we set $\mathcal{R}(g,p):=R_u\in SO(3)$ with $u:=R_W(g,p)$, where $R_u$ is as per Lemma~\ref{lem:poincare-relations}. By item 3 of Proposition~\ref{prop:induced-action}, $\mathcal{R}(u,p)=R_u$ for $u\in SU(2)$.
+
+\begin{proposition}[Canonical spin under Lorentz transformations]\label{prop:spin-boost}
+	For every $g\in SL(2,\mathbb{C})$, every $k$ and every $\psi\in\mathcal{H}_{m,1/2}$,
+	\begin{equation}\label{eq:spin-boost}
+		\big(U(0,g)\,S_k\,U(0,g)^{-1}\psi\big)(p)=\sum_{l=1}^3\mathcal{R}(g,p)_{lk}\,\big(S_l\psi\big)(p).
+	\end{equation}
+\end{proposition}
+
+\begin{proof}
+	Let $\varphi:=U(0,g)^{-1}\psi$, $q:=\Lambda(g)^{-1}p$ and $u:=R_W(g,p)$. By Definition~\ref{def:induced-rep}, $\psi(p)=u\,\varphi(q)$. Applying $U(0,g)$ to $S_k\varphi$ yields $(U(0,g)S_k\varphi)(p)=\frac\hbar2\,u\sigma_k\varphi(q)=\frac\hbar2\,u\sigma_ku^{-1}\psi(p)$, and $u\sigma_ku^{-1}=\sum_l(R_u)_{lk}\sigma_l$ as in the proof of Proposition~\ref{prop:spin-rotations}.
+\end{proof}
+
+\noindent Hypotheses used: H1 to H3 and $j=\frac12$.
+
+For $g\in SU(2)$ Equation~\eqref{eq:spin-boost} reduces to Equation~\eqref{eq:spin-rotation}. For a boost the matrix $\mathcal{R}(g,p)$ depends on the point, so that the conjugated operator is, at each $p$, the spin operator of a frame rotated by an angle which varies with $p$. The next corollary separates what is preserved from what is lost, and it uses Proposition~\ref{prop:wigner-rotation} to decide where the rotation is trivial.
+
+\begin{corollary}[Preserved and lost]\label{cor:spin-consequences}
+	\begin{enumerate}
+		\item For every $g\in SL(2,\mathbb{C})$ one has $U(0,g)\sum_kS_k^2U(0,g)^{-1}=\frac34\hbar^2\mathbb{1}$, and the triple $S_k':=U(0,g)S_kU(0,g)^{-1}$ satisfies $[S_j',S_k']=i\hbar\sum_l\varepsilon_{jkl}S_l'$.
+		\item Let $q\in\mathcal{O}_m^+$ with $q\neq\mathring{p}$. Then $\mathcal{R}(A_q,p)\neq\mathbb{1}$ for $\mu$-almost every $p$, and there is $k$ with $U(0,A_q)S_kU(0,A_q)^{-1}\neq S_k$.
+		\item Let $\mathrm{Hel}$ be the multiplication by $\frac\hbar2\,\hat{\mathbf{p}}\cdot\boldsymbol{\sigma}$ on $\mathbf{p}\neq\mathbf{0}$, with $\hat{\mathbf{p}}=\mathbf{p}/|\mathbf{p}|$. For $g\in SL(2,\mathbb{C})$ and $p$ with $\mathbf{p}\neq\mathbf{0}$ let $\mathbf{q}$ be the spatial part of $\Lambda(g)^{-1}p$ and assume $\mathbf{q}\neq\mathbf{0}$. Then
+		\begin{equation}\label{eq:helicity-boost}
+			\big(U(0,g)\,\mathrm{Hel}\,U(0,g)^{-1}\psi\big)(p)=\frac\hbar2\,\big(\mathcal{R}(g,p)\hat{\mathbf{q}}\big)\cdot\boldsymbol{\sigma}\,\psi(p).
+		\end{equation}
+		If moreover $g=A_b$ with $\mathbf{b}\neq\mathbf{0}$ and $\mathbf{q}$ is parallel to $\mathbf{b}$, then $\mathcal{R}(g,p)=\mathbb{1}$, $\mathbf{p}$ is parallel to $\mathbf{b}$ and $\mathcal{R}(g,p)\hat{\mathbf{q}}=\operatorname{sgn}(\mathbf{q}\cdot\mathbf{p})\,\hat{\mathbf{p}}$.
+	\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+	Item 1. Conjugation by $U(0,g)$ is an automorphism of the algebra of bounded operators, and it preserves the scalar $\frac34\hbar^2\mathbb{1}$ and the relations of item 1 of Proposition~\ref{prop:spin-rotations}.
+	
+	Item 2. Let $p':=\Lambda(A_q)^{-1}p$. Since $R_u=\mathbb{1}$ if and only if $u=\pm\mathbb{1}$, it suffices to exclude $R_W(A_q,p)=-\mathbb{1}$. By Equation~\eqref{eq:wigner-rotation}, this would mean $A_qA_{p'}=-A_p$. The trace of a product of two positive definite matrices is positive, since $\operatorname{tr}(XY)=\operatorname{tr}(X^{1/2}YX^{1/2})>0$, whereas $\operatorname{tr}(-A_p)<0$. Hence $\mathcal{R}(A_q,p)=\mathbb{1}$ if and only if $R_W(A_q,p)=\mathbb{1}$, and Proposition~\ref{prop:wigner-rotation} shows that this happens if and only if $\mathbf{q}\times\mathbf{p}'=\mathbf{0}$, where $\mathbf{q}\neq\mathbf{0}$ because $q\neq\mathring{p}$. The set of such $p'$ is a line in the coordinate $\mathbf{p}'$, hence $\mu$-null, and its image under $\Lambda(A_q)$ is $\mu$-null by Lemma~\ref{lem:invariant-measure}. For $\mu$-almost every $p$ some column of $\mathcal{R}(A_q,p)$ differs from the corresponding basis vector. Hence for some $k$ this holds on a set of positive measure, and since $\sigma_1,\sigma_2,\sigma_3$ are linearly independent, Equation~\eqref{eq:spin-boost} yields an operator different from $S_k$.
+	
+	Item 3. Let $\varphi:=U(0,g)^{-1}\psi$ and $u:=R_W(g,p)$, so that $\psi(p)=u\varphi(\Lambda(g)^{-1}p)$. As in the proof of Proposition~\ref{prop:spin-boost}, the left-hand side equals $\frac\hbar2\,u(\hat{\mathbf{q}}\cdot\boldsymbol{\sigma})u^{-1}\psi(p)$, which is Equation~\eqref{eq:helicity-boost}. If $g=A_b$ and $\mathbf{q}\parallel\mathbf{b}$, then $R_W(A_b,p)=\mathbb{1}$ by Proposition~\ref{prop:wigner-rotation}, with $b$ in the role of $q$ and $\Lambda(A_b)^{-1}p$ in the role of $p'$. The matrices $\hat{q}$ and $A_b$ are polynomials in $\hat{\mathbf{b}}\cdot\boldsymbol{\sigma}$, hence so is $\hat{p}=A_b\hat{q}A_b$, and therefore $\mathbf{p}\parallel\mathbf{b}$. Writing $\mathbf{q}=\lambda\mathbf{b}$ and $\mathbf{p}=\lambda'\mathbf{b}$ yields $\hat{\mathbf{q}}=\operatorname{sgn}(\lambda\lambda')\hat{\mathbf{p}}=\operatorname{sgn}(\mathbf{q}\cdot\mathbf{p})\hat{\mathbf{p}}$.
+\end{proof}
+
+\noindent Hypotheses used: H1 to H3 and $j=\frac12$.
+
+Item 1 says that the squared spin is a scalar of the fibre, and item 2 says that nothing more of the triple survives. Item 3 expresses the loss for the helicity. A state concentrated at the momentum $\mathbf{q}$, with spin vector $\mathbf{n}$, is carried by a boost along $\mathbf{b}$ to a state concentrated at $\mathbf{p}$ with the same amplitude and hence the same spin vector, and if the boost reverses the direction of motion the helicity changes sign. For $m>0$ the helicity is therefore not a Lorentz invariant.
+
+\begin{example}[Perpendicular boosts]\label{ex:spin-thomas}
+	Let $q,p'\in\mathcal{O}_m^+$ have rapidity vectors $w_1\mathbf{e}_1$ and $w_2\mathbf{e}_2$, so that $A_q=e^{w_1\sigma_1/2}$ and $A_{p'}=e^{w_2\sigma_2/2}$, and let $p:=\Lambda(A_q)p'$. With $c_i:=\cosh\frac{w_i}2$ and $s_i:=\sinh\frac{w_i}2$ one has $g:=A_qA_{p'}=c_1c_2\mathbb{1}+s_1c_2\sigma_1+c_1s_2\sigma_2+i\,s_1s_2\sigma_3$, because $\sigma_1\sigma_2=i\sigma_3$. Define $\vartheta\in(0,\frac\pi2)$ by $\tan\frac\vartheta2=\tanh\frac{w_1}2\tanh\frac{w_2}2$ and $U:=e^{i\vartheta\sigma_3/2}$. The coefficient of $\sigma_3$ in $gU^{-1}$ is $i(s_1s_2\cos\frac\vartheta2-c_1c_2\sin\frac\vartheta2)=0$, the coefficients of $\mathbb{1},\sigma_1,\sigma_2$ are real, the scalar part is positive and $\det gU^{-1}=1$. Hence $gU^{-1}$ is Hermitian and positive definite of determinant one. Since $\Lambda(A_q)^{-1}p=p'$, one has $g=A_p\,R_W(A_q,p)$ with $R_W(A_q,p)\in SU(2)$, and the uniqueness in Lemma~\ref{lem:polar} yields $R_W(A_q,p)=U$ and $A_p=gU^{-1}$. This is the rotation of angle $-\vartheta$ about $\mathbf{e}_3$, with $\vartheta\simeq w_1w_2/2$ for small rapidities. By Equation~\eqref{eq:spin-boost}, at this $p$,
+	\begin{equation*}
+		\big(U(0,A_q)\,S_1\,U(0,A_q)^{-1}\psi\big)(p)=\big(\cos\vartheta\,S_1-\sin\vartheta\,S_2\big)\psi(p),
+	\end{equation*}
+	while $S_3$ is unchanged.
+\end{example}
+
+\noindent The component of the spin along the axis orthogonal to the plane of the two boosts is not affected, and the two components in the plane are rotated by the Thomas angle.
+
+\begin{remark}[Mean spin of a boosted state]\label{rem:mean-spin}
+	For $\psi\in\mathcal{H}_{m,1/2}$ and $\psi_g:=U(0,g)\psi$, the substitution $p=\Lambda(g)q$ and the invariance of $\mu$ from Lemma~\ref{lem:invariant-measure} yield
+	\begin{equation*}
+		\langle\psi_g,S_k\psi_g\rangle=\sum_l\int\mathcal{R}\big(g,\Lambda(g)q\big)_{kl}\,\big(\psi(q),S_l\psi(q)\big)_{\mathbb{C}^2}\,d\mu(q).
+	\end{equation*}
+	If $\psi$ is concentrated near a momentum $p_0$, the mean spin vector of the boosted state is the original one rotated by $R_W(g,\Lambda(g)p_0)$. In the Galilean case the corresponding rotation is absent, as Remark~\ref{rem:spin-galilean} records.
+\end{remark}
+
+%--------------------------------------------------------------------
+\subsection{No Invariant Spin}
+\label{subsec:no-invariant-spin}
+
+The non-invariance found in Corollary~\ref{cor:spin-consequences} could be an artefact of the section $p\mapsto A_p$, and Remark~\ref{rem:canonical-spin} shows that other sections yield other triples. The question of this subsection is whether some triple of observables on the states, compatible with the four-momentum and generating $\mathfrak{su}(2)$, is covariant under the whole Lorentz group. The data are the irreducibility of $U_{m,1/2}$ from Theorem~\ref{thm:wigner-mackey} and the absence of nontrivial finite-dimensional unitary representations of $SL(2,\mathbb{C})$ from Proposition~\ref{prop:no-unitary}. The answer is negative, and the proof shows that the obstruction is the one that excluded a local unitary realization in Section 6.5.
+
+\begin{theorem}[No invariant spin]\label{thm:no-invariant-spin}
+	There is no triple $T_1,T_2,T_3$ of bounded selfadjoint operators on $\mathcal{H}_{m,1/2}$ with the following properties.
+	\begin{enumerate}
+		\item[\textup{S1}] Every $T_k$ commutes with the multiplication by $\chi_d$ for every Borel set $d\subseteq\mathcal{O}_m^+$.
+		\item[\textup{S2}] $[T_j,T_k]=i\hbar\sum_l\varepsilon_{jkl}T_l$ and $\sum_kT_k^2=\frac34\hbar^2\mathbb{1}$.
+		\item[\textup{S3}] The real linear span $V:=\operatorname{span}_{\mathbb{R}}\{T_1,T_2,T_3\}$ satisfies $U(0,g)\,T\,U(0,g)^{-1}\in V$ for all $T\in V$ and all $g\in SL(2,\mathbb{C})$.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	The space $V$ is nonzero by S2, and we set $d:=\dim_{\mathbb{R}}V$. For $g\in SL(2,\mathbb{C})$ the map $A\mapsto U(0,g)AU(0,g)^{-1}$ is a linear isometry of the operator norm and, by S3, it maps $V$ into $V$, hence it restricts to a linear isometry $N(g)$ of $(V,\|\cdot\|)$. Since $U(0,g)U(0,g')=U(0,gg')$, the map $N$ is a homomorphism into the group $\mathrm{Isom}(V)$. It is continuous. Indeed, for $A\in V$ and $\psi,\varphi\in\mathcal{H}_{m,1/2}$ the function $g\mapsto(\psi,U(0,g)AU(0,g)^{-1}\varphi)=(U(0,g)^{-1}\psi,AU(0,g)^{-1}\varphi)$ is continuous by Proposition~\ref{prop:induced-unitary}, so that $g\mapsto N(g)A$ is continuous for the weak operator topology, which on the finite-dimensional space $V$ coincides with the norm topology. The group $\mathrm{Isom}(V)$ is closed and bounded in $GL(V)$, hence compact, and averaging an inner product over it with the Haar measure yields an inner product on $V$ invariant under all $N(g)$ \cite[TODO-location]{TODO-Hal03}. In an orthonormal basis for this inner product, $N$ becomes a continuous homomorphism $SL(2,\mathbb{C})\to O(d)\subseteq U(d)$, which is trivial by Proposition~\ref{prop:no-unitary}. Hence $U(0,g)T_kU(0,g)^{-1}=T_k$ for all $g$ and $k$.
+	
+	By Definition~\ref{def:induced-rep}, $U(a,\mathbb{1})$ is the multiplication by $e^{ia\cdot p/\hbar}$, which is the integral of a bounded function against the measure of Proposition~\ref{prop:induced-unitary}, so S1 yields that $T_k$ commutes with it. Since $(a,g)=(a,\mathbb{1})(0,g)$, the operator $T_k$ commutes with $U(\mathcal{P})$. The representation $U_{m,1/2}$ is irreducible by Theorem~\ref{thm:wigner-mackey}, and Lemma~\ref{lem:schur-infinite} applied to $T_k$ yields $T_k=t_k\mathbb{1}$ with $t_k\in\mathbb{R}$. The relations S2 reduce to $i\hbar\sum_l\varepsilon_{jkl}t_l=0$, so $t_1=t_2=t_3=0$, which contradicts $\sum_kT_k^2=\frac34\hbar^2\mathbb{1}$.
+\end{proof}
+
+\noindent Hypotheses used: H1 to H3 and $j=\frac12$, through the irreducibility of $U_{m,1/2}$ in Theorem~\ref{thm:wigner-mackey}.
+
+The canonical triple satisfies S1 and S2 by Proposition~\ref{prop:spin-rotations}, and it satisfies S3 for $g\in SU(2)$ by Equation~\eqref{eq:spin-rotation}. The theorem therefore isolates the boosts as the transformations for which S3 must fail, and it does so for every section. The following corollary records this for the triple of Definition~\ref{def:canonical-spin}.
+
+\begin{corollary}[The span of the canonical spin is not boost invariant]\label{cor:spin-span}
+	Let $V:=\operatorname{span}_{\mathbb{R}}\{S_1,S_2,S_3\}$. There exist $p\in\mathcal{O}_m^+$ and $k$ such that $U(0,A_p)S_kU(0,A_p)^{-1}\notin V$.
+\end{corollary}
+
+\begin{proof}
+	If $U(0,A_p)VU(0,A_p)^{-1}\subseteq V$ for every $p$, then S3 holds for every $g=A_pu$ by Proposition~\ref{prop:orbit}, since $V$ is invariant under $U(0,u)$ by Equation~\eqref{eq:spin-rotation}, and the canonical triple satisfies S1 and S2. This contradicts Theorem~\ref{thm:no-invariant-spin}.
+\end{proof}
+
+\noindent The statement is stronger than item 2 of Corollary~\ref{cor:spin-consequences}, since it excludes any rotation of the triple among its own components.
+
+\begin{remark}[Algebraic origin of the obstruction]\label{rem:spin-lie-algebra}
+	The proof of Theorem~\ref{thm:no-invariant-spin} uses only that every continuous homomorphism of $SL(2,\mathbb{C})$ into a unitary group is trivial, which rests on the noncompactness of the boosts. At the level of the Lie algebra, Proposition~\ref{prop:poincare-algebra} gives $[b_j,r_k]=\sum_l\varepsilon_{jkl}b_l$, so that the rotations form a subalgebra of $\mathfrak{sl}(2,\mathbb{C})$ and not an ideal. It descends that $e^{\theta\,\mathrm{ad}\,b_j}r_k=r_k+\theta\sum_l\varepsilon_{jkl}b_l+O(\theta^2)$, \textit{i.e.}, the adjoint action of a boost takes a rotation generator out of the span of the rotations. The same holds for the generators $J_k=L_k+S_k$ of Proposition~\ref{prop:spin-rotations}, so that the splitting of the total angular momentum into an orbital and an internal part has no invariant meaning. Geometrically, by Lemma~\ref{lem:stabilizer}, the stabilizer of $p$ is $A_pSU(2)A_p^{-1}$ and moves with $p$, and only the stabilizer of $\mathring{p}$ is the subgroup of rotations.
+\end{remark}
+
+\begin{remark}[Why the Galilean spin is absolute]\label{rem:spin-galilean}
+	In the realization of Corollary~\ref{cor:schrodinger-realization} the boosts act on $L^2(\mathbb{R}^3)\otimes\mathbb{C}^{2j+1}$ as $e^{im\mathbf{v}\cdot\mathbf{x}/\hbar}\otimes\mathbb{1}$ and the rotations as $\Pi_{\mathrm{orb}}(u)\otimes d_j(u)$. The triple $\mathbb{1}\otimes S_k$, with $S_k$ the generators of $d_j$, therefore satisfies the analogues of S1, S2 and S3 for the Galilei group, with $N(u)=R_u$ and $N$ trivial on boosts. Theorem~\ref{thm:no-invariant-spin} does not apply, because the proof relies on Proposition~\ref{prop:no-unitary}, whereas the Galilei group has nontrivial finite-dimensional unitary representations through its quotient onto $SO(3)$. The boosts form a subgroup acting simply transitively on the momenta, so that the spin spaces above different momenta are identified with no choice. Restoring $c$ in Example~\ref{ex:spin-thomas}, the rapidities are of order $v_i/c$ and the Thomas angle is of order $v_1v_2/c^2$, which vanishes in the limit $c\to\infty$.
+\end{remark}
+
+%--------------------------------------------------------------------
+\subsection{The Covariant Spin Four-Vector}
+\label{subsec:spin-four-vector}
+
+Theorem~\ref{thm:no-invariant-spin} excludes a covariant triple of bounded operators with constant matrices, and it leaves open a covariant object with momentum dependent matrices. The idea is to carry the rest-frame spin to the momentum $p$ with the standard boost, exactly as in Proposition~\ref{prop:transport} the rest projector was carried. The data are the canonical spin of Definition~\ref{def:canonical-spin}, the boost $A_p$ and the relation $gA_q=A_pR_W(g,p)$. What is obtained is a four-vector of operators transforming with $\Lambda(g)^{-1}$ as $P^\mu$ does, orthogonal to the momentum, of fixed Lorentz square and independent of the section.
+
+\begin{definition}[Spin four-vector]\label{def:spin-four-vector}
+	For $\mu=0,\dots,3$ and $p\in\mathcal{O}_m^+$ let
+	\begin{equation*}
+		\mathcal{S}^\mu(p):=\sum_{k=1}^3\Lambda(A_p)^\mu{}_k\,S_k(p),\qquad S_k(p)=\tfrac\hbar2\sigma_k,
+	\end{equation*}
+	and let $\mathcal{S}^\mu$ be the selfadjoint operator of multiplication by $\mathcal{S}^\mu(p)$ on its maximal domain.
+\end{definition}
+
+\begin{remark}\label{rem:spin-four-vector-domain}
+	The matrix $\mathcal{S}^\mu(p)$ is a real combination of the Pauli matrices, hence Hermitian. The entries of $\Lambda(A_p)$ grow as $\omega(\mathbf{p})/m$, so that $\mathcal{S}^0$ and $\boldsymbol{\mathcal{S}}$ are unbounded. We denote by $\mathcal{D}$ the space of bounded Borel functions $\mathcal{O}_m^+\to\mathbb{C}^2$ with compact support, which is dense, contained in every $D(\mathcal{S}^\mu)$ and invariant under $U(\mathcal{P})$.
+\end{remark}
+
+\begin{proposition}[Properties of the spin four-vector]\label{prop:spin-four-vector}
+	\begin{enumerate}
+		\item For $(a,g)\in\mathcal{P}$ and $\psi\in\mathcal{D}$,
+		\begin{equation*}
+			U(a,g)\,\mathcal{S}^\mu\,U(a,g)^{-1}\psi=\sum_\nu\big[\Lambda(g)^{-1}\big]^\mu{}_\nu\,\mathcal{S}^\nu\psi.
+		\end{equation*}
+		\item $\sum_\mu p_\mu\mathcal{S}^\mu(p)=0$ and $\sum_{\mu,\nu}\eta_{\mu\nu}\mathcal{S}^\mu(p)\mathcal{S}^\nu(p)=-\frac34\hbar^2\mathbb{1}$ for every $p$.
+		\item With $\mathbf{S}=(S_1,S_2,S_3)$ and $\omega=\omega(\mathbf{p})$,
+		\begin{equation}\label{eq:spin-s0}
+			\mathcal{S}^0(p)=\frac{\mathbf{p}\cdot\mathbf{S}}{m},\qquad \boldsymbol{\mathcal{S}}(p)=\mathbf{S}+\frac{\mathbf{p}\,(\mathbf{p}\cdot\mathbf{S})}{m\,(\omega+m)}.
+		\end{equation}
+		\item $\mathcal{S}(\mathring{p})=(0,\mathbf{S})$. If the section $p\mapsto A_p$ is replaced by $p\mapsto A_pb(p)$ with $b(p)\in SU(2)$, and the canonical spin by $S^b_k$ as per Remark~\ref{rem:canonical-spin}, the resulting four-vector coincides with $\mathcal{S}^\mu$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	Item 1. Translations act by scalar phases, so it suffices to take $(0,g)$. Let $q:=\Lambda(g)^{-1}p$, $u:=R_W(g,p)$ and $\psi=U(0,g)\varphi$. As in the proof of Proposition~\ref{prop:spin-boost},
+	\begin{equation*}
+		\big(U(0,g)\mathcal{S}^\mu\varphi\big)(p)=\sum_k\Lambda(A_q)^\mu{}_k\,u\,S_k\,u^{-1}\psi(p)=\sum_{k,l}\Lambda(A_q)^\mu{}_k\,(R_u)_{lk}\,S_l\psi(p).
+	\end{equation*}
+	By Equation~\eqref{eq:wigner-rotation}, $gA_q=A_pu$, so $\Lambda(A_q)=\Lambda(g)^{-1}\Lambda(A_p)\Lambda(u)$ with $\Lambda(u)=\operatorname{diag}(1,R_u)$ by item 3 of Lemma~\ref{lem:poincare-relations}. Since $\sum_k(R_u)_{mk}(R_u)_{lk}=\delta_{ml}$, the right-hand side equals $\sum_\nu[\Lambda(g)^{-1}]^\mu{}_\nu\sum_l\Lambda(A_p)^\nu{}_lS_l\psi(p)$, which is the claim. It is the transformation law of $P^\mu$ from Lemma~\ref{lem:poincare-covariance}.
+	
+	Item 2. Since $p=\Lambda(A_p)\mathring{p}$ and $\Lambda(A_p)$ preserves $\eta$, one has $p\cdot\mathcal{S}(p)=\mathring{p}\cdot(0,\mathbf{S})=0$ and $\mathcal{S}(p)\cdot\mathcal{S}(p)=(0,\mathbf{S})\cdot(0,\mathbf{S})=-\sum_kS_k^2=-\frac34\hbar^2\mathbb{1}$.
+	
+	Item 3. Let $\mathbf{n}:=\hat{\mathbf{p}}$, $N:=\mathbf{n}\cdot\boldsymbol{\sigma}$ and $w:=|\mathbf{w}_p|$, so that $\sinh w=|\mathbf{p}|/m$, $\cosh w=\omega/m$ and $A_p=\cosh\frac w2+\sinh\frac w2\,N$. For a real vector $\mathbf{s}=s_\parallel\mathbf{n}+\mathbf{s}_\perp$, the matrix $\mathbf{s}_\perp\cdot\boldsymbol{\sigma}$ anticommutes with $N$, so $A_p(\mathbf{s}_\perp\cdot\boldsymbol{\sigma})A_p=\mathbf{s}_\perp\cdot\boldsymbol{\sigma}$, and $A_pNA_p=\sinh w+\cosh w\,N$. By Equation~\eqref{eq:lorentz-action}, $\Lambda(A_p)(0,\mathbf{s})=(s_\parallel\sinh w,\ \mathbf{s}_\perp+s_\parallel\cosh w\,\mathbf{n})$. Linearity in $\mathbf{s}$ and $|\mathbf{p}|^2=(\omega-m)(\omega+m)$ yield Equation~\eqref{eq:spin-s0}.
+	
+	Item 4. At $p=\mathring{p}$ one has $A_p=\mathbb{1}$. For the new section, $\Lambda(A_pb)=\Lambda(A_p)\Lambda(b)$ and $\Lambda(b)^m{}_k=(R_b)_{mk}$, so that
+	\begin{equation*}
+		\sum_k\Lambda(A_pb)^\mu{}_kS_k^b=\sum_{m,l}\Lambda(A_p)^\mu{}_m\Big(\sum_k(R_b)_{mk}(R_b)_{lk}\Big)S_l=\mathcal{S}^\mu(p).\qedhere
+	\end{equation*}
+\end{proof}
+
+\noindent Hypotheses used: H1 to H3 and $j=\frac12$.
+
+By item 3, the helicity is up to the factor $|\mathbf{p}|/m$ the time component of $\mathcal{S}$, which explains why it is not invariant, since the time component of a four-vector mixes with the spatial ones under boosts. The spatial part is the canonical spin plus a correction proportional to the momentum, and this correction is what compensates the Wigner rotation of Equation~\eqref{eq:spin-boost}.
+
+\begin{remark}[Second Casimir operator]\label{rem:pauli-lubanski}
+	The operator $m\,\mathcal{S}^\mu$ is, up to the sign convention for the Levi-Civita symbol, the Pauli--Lubanski vector of the representation \cite[TODO-location]{TODO-BarutRaczka}. By item 2 of Proposition~\ref{prop:spin-four-vector} its Lorentz square is $-\frac34m^2\hbar^2\mathbb{1}=-m^2\hbar^2j(j+1)\mathbb{1}$ for $j=\frac12$. This is the second Casimir operator, which in Section 6.3 distinguishes the spins in the same way as $P^2=m^2\mathbb{1}$ fixes the mass. The covariant spin $\mathcal{S}^\mu$ is the object seen by the representation theory, and the canonical spin $S_k$ is its value in the frame at rest.
+\end{remark}
+
+%--------------------------------------------------------------------
+\subsection{The Spin Matrices of the Dirac Space}
+\label{subsec:dirac-spin}
+
+On the Dirac fields of Theorem~\ref{thm:dirac} the natural candidate for the spin is the matrix $\Sigma_k:=\operatorname{diag}(\sigma_k,\sigma_k)$, since $D(u)=\operatorname{diag}(u,u)$ for $u\in SU(2)$ by Lemma~\ref{lem:dirac-space}. The question is whether $\Sigma_k$ defines an observable on the rays of solutions, \textit{i.e.}, an operator on the model M3. The data are the realization of Section 6.6 with $\epsilon=+1$, the invariant form of Proposition~\ref{prop:norms} and the Dirac Hamiltonian of Proposition~\ref{prop:dirac-hamiltonian}. The outcome is that $\Sigma_k$ does not preserve the space of solutions at a fixed momentum, except along the momentum, and that its compression to the solutions does not generate $\mathfrak{su}(2)$. Hypotheses H4 to H6 are in force throughout this subsection.
+
+\begin{lemma}[Boosts turn $\Sigma$ into $\alpha$]\label{lem:dirac-tensor}
+	The differential of $D$ is $dD(\xi)=\operatorname{diag}(\xi,-\xi^\dagger)$, and with $\alpha_k:=\gamma^0\gamma^k=\operatorname{diag}(\sigma_k,-\sigma_k)$,
+	\begin{equation*}
+		dD(r_k)=-\tfrac i2\Sigma_k,\qquad dD(b_k)=\tfrac12\alpha_k,\qquad \big[\tfrac12\alpha_j,\Sigma_k\big]=i\sum_l\varepsilon_{jkl}\,\alpha_l.
+	\end{equation*}
+\end{lemma}
+
+\begin{proof}
+	The formula for $dD$ is the differential of Definition~\ref{def:dirac-space}, since $\frac{d}{dt}(e^{t\xi^\dagger})^{-1}|_{t=0}=-\xi^\dagger$. For $\xi=-\frac i2\sigma_k$ one has $-\xi^\dagger=-\frac i2\sigma_k$, and for $\xi=\frac12\sigma_k$ one has $-\xi^\dagger=-\frac12\sigma_k$. The form of $\alpha_k$ follows from Lemma~\ref{lem:gamma}, and $[\alpha_j,\Sigma_k]=\operatorname{diag}([\sigma_j,\sigma_k],-[\sigma_j,\sigma_k])=2i\sum_l\varepsilon_{jkl}\alpha_l$.
+\end{proof}
+
+\noindent The last relation is the image under $dD$ of $[b_j,r_k]=\sum_l\varepsilon_{jkl}b_l$, so that a boost mixes $\Sigma_k$ with $\alpha_l$ in the same way as it mixes rotation and boost generators.
+
+\begin{proposition}[The Dirac spin]\label{prop:dirac-spin}
+	Let $h_{\mathrm{D}}(\mathbf{p})=\boldsymbol{\alpha}\cdot\mathbf{p}+m\gamma^0$ be as per Proposition~\ref{prop:dirac-hamiltonian}, and let $p=(\omega(\mathbf{p}),\mathbf{p})\in\mathcal{O}_m^+$ with $F(p)$ as per Theorem~\ref{thm:dirac}.
+	\begin{enumerate}
+		\item $[\Sigma_k,h_{\mathrm{D}}(\mathbf{p})]=2i\,(\mathbf{p}\times\boldsymbol{\alpha})_k$.
+		\item $\Sigma_kF(p)\subseteq F(p)$ if and only if $\mathbf{p}\times\mathbf{e}_k=\mathbf{0}$. In particular $\mathbf{p}\cdot\boldsymbol{\Sigma}$ preserves $F(p)$.
+		\item For $\Psi=(A_p\eta,A_p^{-1}\eta)$ and $\Phi=(A_p\eta',A_p^{-1}\eta')$ in $F(p)$, with $\gamma:=\omega(\mathbf{p})/m$ and $\hat{\mathbf{p}}\neq\mathbf{0}$,
+		\begin{equation}\label{eq:dirac-spin-effective}
+			\tfrac12\,\bar\Psi\,\Sigma_k\,\Phi=\eta^\dagger\,\Sigma^{\mathrm{eff}}_k(p)\,\eta',\qquad \Sigma^{\mathrm{eff}}_k(p)=\sigma_k+(\gamma-1)\big(\sigma_k-\hat p_k\,\hat{\mathbf{p}}\cdot\boldsymbol{\sigma}\big).
+		\end{equation}
+		\item If $\mathbf{p}=|\mathbf{p}|\mathbf{e}_3$, the matrices $S^{\mathrm{eff}}_k:=\frac\hbar2\Sigma^{\mathrm{eff}}_k$ satisfy $[S^{\mathrm{eff}}_1,S^{\mathrm{eff}}_2]=i\hbar\gamma^2S^{\mathrm{eff}}_3$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	Item 1. The matrix $\Sigma_k$ commutes with $\gamma^0$, which exchanges two equal blocks. By Lemma~\ref{lem:dirac-tensor}, $[\Sigma_k,\alpha_l]=2i\sum_m\varepsilon_{klm}\alpha_m$. It descends that $[\Sigma_k,h_{\mathrm{D}}]=2i\sum_{l,m}\varepsilon_{klm}p_l\alpha_m=2i(\mathbf{p}\times\boldsymbol{\alpha})_k$.
+	
+	Item 2. Suppose $\Sigma_kF(p)\subseteq F(p)$. For $\Psi\in F(p)=\ker(h_{\mathrm{D}}-\omega)$ both $\Psi$ and $\Sigma_k\Psi$ are eigenvectors of $h_{\mathrm{D}}$ with eigenvalue $\omega$, so $[h_{\mathrm{D}},\Sigma_k]\Psi=0$, \textit{i.e.}, $\boldsymbol{\alpha}\cdot(\mathbf{e}_k\times\mathbf{p})\,\Psi=0$ by item 1. The matrix $\boldsymbol{\alpha}\cdot\mathbf{v}$ squares to $|\mathbf{v}|^2\mathbb{1}$ by Lemma~\ref{lem:gamma}, hence it is invertible unless $\mathbf{v}=\mathbf{0}$. Since $F(p)\neq\{0\}$, this forces $\mathbf{e}_k\times\mathbf{p}=\mathbf{0}$. Conversely, if $\mathbf{p}\parallel\mathbf{e}_k$ then $\Sigma_k$ commutes with $h_{\mathrm{D}}$ and preserves its eigenspaces. Moreover $[\mathbf{p}\cdot\boldsymbol{\Sigma},h_{\mathrm{D}}]=2i\,\mathbf{p}\cdot(\mathbf{p}\times\boldsymbol{\alpha})=0$.
+	
+	Item 3. By Proposition~\ref{prop:explicit-solutions}, $\gamma^0\Sigma_k\Phi=(\sigma_kA_p^{-1}\eta',\sigma_kA_p\eta')$, so $\bar\Psi\Sigma_k\Phi=\eta^\dagger\big(A_p\sigma_kA_p^{-1}+A_p^{-1}\sigma_kA_p\big)\eta'$. Let $N:=\hat{\mathbf{p}}\cdot\boldsymbol{\sigma}$ and write $\sigma_k=\hat p_kN+\sigma_\perp$ with $\sigma_\perp=\sigma_k-\hat p_kN$, which anticommutes with $N$. Then $A_pNA_p^{-1}=N$, $A_p\sigma_\perp A_p^{-1}=A_p^2\sigma_\perp$ and $A_p^{-1}\sigma_\perp A_p=A_p^{-2}\sigma_\perp$, and $A_p^2+A_p^{-2}=2\cosh w=2\gamma$ by Equation~\eqref{eq:standard-boost}. Hence $\bar\Psi\Sigma_k\Phi=2\eta^\dagger\big(\hat p_kN+\gamma\sigma_\perp\big)\eta'$, which is Equation~\eqref{eq:dirac-spin-effective} after halving and using $\sigma_k=\hat p_kN+\sigma_\perp$.
+	
+	Item 4. For $\hat{\mathbf{p}}=\mathbf{e}_3$ one has $\Sigma_1^{\mathrm{eff}}=\gamma\sigma_1$, $\Sigma_2^{\mathrm{eff}}=\gamma\sigma_2$ and $\Sigma_3^{\mathrm{eff}}=\sigma_3$, so that $[S^{\mathrm{eff}}_1,S^{\mathrm{eff}}_2]=\frac{\hbar^2}4\gamma^2\,2i\sigma_3=i\hbar\gamma^2S^{\mathrm{eff}}_3$.
+\end{proof}
+
+\noindent Hypotheses used: H4 to H6 with $\epsilon=+1$, and H3 through $p^0>0$ on $\mathcal{O}_m^+$.
+
+By Proposition~\ref{prop:norms}, $\frac12\bar\Psi\Phi=(\eta,\eta')$ on $F(p)$, so $\Sigma_k^{\mathrm{eff}}(p)$ is the matrix, in the amplitude $\eta=\psi(p)$, of the compression of $\Sigma_k$ to $F(p)$ with respect to the invariant form. Only the compression is available, since $\Sigma_k$ leaves $F(p)$ except along the momentum. The compression coincides with $\sigma_k$ for $\gamma=1$ and for the component along $\hat{\mathbf{p}}$, its transverse components are amplified by $\gamma$, and it does not close on $\mathfrak{su}(2)$. The matrices $\Sigma_k$ are therefore not observables on the rays of solutions in the sense of M3, and the operator with the algebra of a spin is the canonical one of Definition~\ref{def:canonical-spin} read in the amplitude $\psi=J^{-1}\Psi$.
+
+\begin{remark}[Dirac spin and total angular momentum]\label{rem:spin-split}
+	In position space, with $h_{\mathrm{D}}=\boldsymbol{\alpha}\cdot(-i\hbar\nabla)+m\gamma^0$ as per Corollary~\ref{cor:dirac-position} and $\mathbf{L}=\mathbf{x}\times(-i\hbar\nabla)$, one has $[L_k,\hat p_n]=i\hbar\sum_b\varepsilon_{knb}\hat p_b$ for $\hat{\mathbf{p}}=-i\hbar\nabla$, hence $[L_k,h_{\mathrm{D}}]=-i\hbar(\hat{\mathbf{p}}\times\boldsymbol{\alpha})_k$. By item 1 of Proposition~\ref{prop:dirac-spin}, $\mathbf{J}^{\mathrm{D}}:=\mathbf{L}+\frac\hbar2\boldsymbol{\Sigma}$ commutes with $h_{\mathrm{D}}$ while $\frac\hbar2\boldsymbol{\Sigma}$ does not. This is the splitting of the same generator $r_k$ on the Dirac fields, and it differs from the splitting $J_k=L_k+S_k$ of Proposition~\ref{prop:spin-rotations}, in which $L_k$ acts on the amplitude in momentum space. Only the sum is intrinsic, in agreement with Remark~\ref{rem:spin-lie-algebra}.
+\end{remark}
+
+\begin{remark}[The spin at rest and away from rest]\label{rem:spin-summary}
+	At the rest momentum the three objects of this section coincide, $S_k(\mathring{p})=\frac\hbar2\sigma_k$, $\mathcal{S}(\mathring{p})=(0,\mathbf{S})$ and $\Sigma_k^{\mathrm{eff}}(\mathring{p})=\sigma_k$, because $\gamma=1$ and $A_{\mathring{p}}=\mathbb{1}$. Away from rest each differs from the others by a term controlled by the Wigner rotation or by $\gamma-1$. The canonical spin is a vector under rotations only, and it depends on the section by Remark~\ref{rem:canonical-spin}. The four-vector $\mathcal{S}^\mu$ is covariant and independent of the section, at the price of unbounded momentum dependent matrices. The Dirac matrices are not observables. This is the quantitative content of the statement that a boost acts on the spin of a particle through a rotation depending on its momentum, so that the spin of a state cannot be separated from its momentum by any triple of operators with fixed matrices.
+\end{remark}

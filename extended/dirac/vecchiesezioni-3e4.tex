@@ -1,0 +1,242 @@
+\section{The Four-Momentum and the Mass Shell}
+\label{sec:poincare-spectral}
+
+The previous section turned an irreducible Poincar\'e action $\Phi$ on $\mathbb{P}\mathcal{H}$ into a unique strongly continuous unitary representation $\Pi$ of $\mathcal{P}$. The question of this section, expressed in terms of states, is which values of the four-momentum the states of the system can take, and how the Lorentz group relates these values to each other. The data are the lift $\Pi$ of Proposition~\ref{prop:poincare-lift}, the irreducibility of $\Phi$ and the positivity of the energy, \textit{i.e.}, hypotheses H1 to H3 of Definition~\ref{def:hypotheses}. The translations form an abelian group, so that the restriction of $\Pi$ to them decomposes over the characters of $\mathbb{R}^4$. A character is labelled by a vector $p\in M^*$, where $M^*$ is the space of momenta, identified with $M$ through $\eta$. The variable $p$ is not a point of $\mathbb{P}\mathcal{H}$, which is a manifold of rays with no momentum coordinate, and it is not a point of spacetime $M$. It is the label of a character of the translation group, \textit{i.e.}, a possible value of the four-momentum. The spectral measure $E$ of the translations records how a ray is distributed over these values, and its support is the set of all values that occur. The outcome of the section is that this support is a single sheet $\mathcal{O}_m^+$ of a mass hyperboloid, with $m$ the eigenvalue of a Casimir operator. The set $\mathcal{O}_m^+$ is therefore a set of values of the four-momentum and not a set of states. This is the first step of the chain. What it leaves open, the multiplicity of $E$ above each point of $\mathcal{O}_m^+$ and the action of the Lorentz group on it, is what the next step has to determine.
+
+The restriction of $\Pi$ to the translations is the only part of the representation that is accessible without information on the Lorentz group. Since $(a,\mathbb{1})(a',\mathbb{1})=(a+a',\mathbb{1})$ by Definition~\ref{def:poincare-group}, the map $a\mapsto\Pi((a,\mathbb{1}))$ is a strongly continuous unitary representation of the additive group $M$. Its restrictions to the time axis and to each spatial axis are therefore strongly continuous one-parameter unitary groups, to which Stone's theorem applies.
+
+\begin{definition}[Generators of the translations]\label{def:poincare-generators}
+	Let $\Pi$ be as per Proposition~\ref{prop:poincare-lift}. For $a\in M$ and $s\in\mathbb{R}$ we set
+	\begin{equation*}
+		T(a):=\Pi\big((a,\mathbb{1})\big), \qquad S(s):=T\big((s,\mathbf{0})\big).
+	\end{equation*}
+	The selfadjoint operators $H$ and $P_k$, with $k\in\{1,2,3\}$, are the generators, in the sense of Theorem~2.10, of the strongly continuous one-parameter unitary groups
+	\begin{equation}\label{eq:generators-convention}
+		S(s)=e^{isH/\hbar}, \qquad T\big((0,t\,\mathbf{e}_k)\big)=e^{-itP_k/\hbar}, \qquad s,t\in\mathbb{R},
+	\end{equation}
+	where $\mathbf{e}_k$ is the canonical basis of $\mathbb{R}^3$. We write $\mathbf{P}=(P_1,P_2,P_3)$.
+\end{definition}
+
+\begin{remark}\label{rem:generators-conventions}
+	The operator $H$ is the energy operator referred to in Definitions~\ref{def:energy-operator} and~\ref{def:positive-energy}. The signs in Equation~\eqref{eq:generators-convention} are those of the active convention of Remark~\ref{rem:active-convention} and agree with Definition~\ref{def:generators}. With $a\cdot p=a^0p^0-\mathbf{a}\cdot\mathbf{p}$, the relative sign between $H$ and $\mathbf{P}$ is produced by the signature of $\eta$ and not imposed separately. Stone's theorem treats each one-parameter group in isolation, hence Definition~\ref{def:poincare-generators} does not assert that $H,P_1,P_2,P_3$ strongly commute. This is supplied by the joint spectral measure of the next proposition, in which $H$ and $\mathbf{P}$ turn out to be four components of a single vector-valued operator.
+\end{remark}
+
+The joint spectral measure of the translations is the object that replaces the choice of a momentum basis in $\mathcal{H}$. Its existence and uniqueness follow from the Stone--Naimark--Ambrose--Godement theorem, and the identification of $H$ and $\mathbf{P}$ with its first moments follows from the uniqueness in Stone's theorem.
+
+\begin{proposition}[Spectral measure of the translations]\label{prop:snag-translations}
+	Let $\Pi$ be the lift of a Poincar\'e action $\Phi$ as per Proposition~\ref{prop:poincare-lift}, \textit{i.e.}, assume H1. There is a unique projection valued measure $E$, as per Definition~\ref{def:pvm}, on the Borel sets of $M^*$ such that
+	\begin{equation}\label{eq:translation-spectral}
+		T(a)=\int_{M^*}e^{ia\cdot p/\hbar}\,dE(p), \qquad a\in M.
+	\end{equation}
+	Moreover the following hold.
+	\begin{enumerate}
+		\item $H=\int p^0\,dE$ and $P_k=\int p^k\,dE$ for $k\in\{1,2,3\}$, these four operators strongly commute as per Definition~\ref{def:strongly-commuting}, and $T((0,\mathbf{a}))=e^{-i\mathbf{a}\cdot\mathbf{P}/\hbar}$ with $\mathbf{a}\cdot\mathbf{P}:=\int\mathbf{a}\cdot\mathbf{p}\,dE(p)$.
+		\item The operator $P^2:=\int p\cdot p\,dE$, with domain $D(P^2)=\{x\in\mathcal{H}\mid\int(p\cdot p)^2\,d\langle x,Ex\rangle<\infty\}$, is selfadjoint and strongly commutes with $H$ and $\mathbf{P}$. On $D(H^2)\cap D(|\mathbf{P}|^2)$ it acts as $H^2-|\mathbf{P}|^2$.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	Every continuous character of $M$ has the form $a\mapsto e^{i\lambda(a)/\hbar}$ for a unique linear form $\lambda$ on $M$. Since $\eta$ is nondegenerate, $\lambda=\eta(\,\cdot\,,p)$ for a unique $p\in M^*$, where $M^*$ is identified with $M$ through $\eta$. Hence $p\mapsto\chi_p$, $\chi_p(a):=e^{ia\cdot p/\hbar}$, is an isomorphism of topological groups from $M^*$ onto the dual group of $M$. Theorem~\ref{thm:snag} applied to $T$ yields a unique projection valued measure on the dual group with $T(a)=\int\chi(a)\,dE(\chi)$, and transporting it through this isomorphism yields $E$ with Equation~\eqref{eq:translation-spectral} and its uniqueness.
+	
+	Item 1. For $a=(s,\mathbf{0})$ one has $a\cdot p=s\,p^0$, so that $S(s)=\int e^{isp^0/\hbar}dE(p)=e^{isH'/\hbar}$ with $H':=\int p^0\,dE$ selfadjoint by the functional calculus of Proposition~\ref{prop:pvm-calculus}. The uniqueness in Theorem~2.10 yields $H=H'$. For $a=(0,t\,\mathbf{e}_k)$ one has $a\cdot p=-t\,p^k$, and the same argument yields $P_k=\int p^k\,dE$. The spectral projections of $\int f\,dE$ are $E(f^{-1}(B))$ for the Borel sets $B\subseteq\mathbb{R}$, by Proposition~\ref{prop:pvm-calculus}, and those associated with different real Borel functions commute because all of them are built from the single measure $E$. It descends that $H,P_1,P_2,P_3$ strongly commute. The formula for $T((0,\mathbf{a}))$ is Equation~\eqref{eq:translation-spectral} with $a\cdot p=-\mathbf{a}\cdot\mathbf{p}$.
+	
+	Item 2. Since $p\mapsto p\cdot p$ is a real Borel function, $P^2$ is selfadjoint and strongly commutes with the operators of item 1 by the same argument. If $x\in D(H^2)\cap D(|\mathbf{P}|^2)$, then $\int(p^0)^4d\langle x,Ex\rangle<\infty$ and $\int|\mathbf{p}|^4d\langle x,Ex\rangle<\infty$, and $(p\cdot p)^2\leq2\big((p^0)^4+|\mathbf{p}|^4\big)$ yields $x\in D(P^2)$. On such $x$ one has $P^2x=\int\big((p^0)^2-|\mathbf{p}|^2\big)dE\,x=H^2x-|\mathbf{P}|^2x$.
+\end{proof}
+
+\noindent The point $p$ is a character of $M$ and not a point of $\mathbb{P}\mathcal{H}$ or of $M$, and $E(d)$ is the projection onto the vectors whose four-momentum lies in $d$.
+
+The Lorentz group does not act on the translations by conjugation in a trivial way, since $(0,g)(a,\mathbb{1})(0,g)^{-1}=(\Lambda(g)a,\mathbb{1})$ by Lemma~\ref{lem:poincare-relations}. This relation transfers to $E$ through the uniqueness in Proposition~\ref{prop:snag-translations}, and its consequence is that the support of $E$ is a union of Lorentz orbits in $M^*$.
+
+\begin{lemma}[Covariance of the spectral measure]\label{lem:poincare-covariance}
+	Let $\Pi$ and $E$ be as per Proposition~\ref{prop:snag-translations}, \textit{i.e.}, assume H1. For every Borel set $d\subseteq M^*$ and every $\kappa=(a,g)\in\mathcal{P}$,
+	\begin{equation}\label{eq:covariance}
+		\Pi(\kappa)\,E(d)\,\Pi(\kappa)^{-1}=E\big(\Lambda(g)d\big),
+	\end{equation}
+	where $\Lambda(g)$ acts on $M^*\cong M$ through $\eta$, \textit{i.e.}, $\Lambda(g)a\cdot\Lambda(g)p=a\cdot p$. Consequently
+	\begin{enumerate}
+		\item for every Borel function $f:M^*\to\mathbb{R}$, with $f(P):=\int f\,dE$ and as operators with their domains,
+		\begin{equation*}
+			\Pi((0,g))\,f(P)\,\Pi((0,g))^{-1}=\int f\big(\Lambda(g)^{-1}p\big)\,dE(p),
+		\end{equation*}
+		\item $\Lambda(g)\operatorname{supp}E=\operatorname{supp}E$ for every $g\in SL(2,\mathbb{C})$, with $\operatorname{supp}E$ as per Definition~\ref{def:pvm-support}.
+	\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+	Set $U:=\Pi((0,g))$. By item 2 of Lemma~\ref{lem:poincare-relations}, $UT(a)U^{-1}=T(\Lambda(g)a)$. By the invariance of $\eta$, the right-hand side equals $\int e^{ia\cdot\Lambda(g)^{-1}p/\hbar}dE(p)=\int e^{ia\cdot q/\hbar}dE'(q)$, where $E'(d):=E(\Lambda(g)d)$ is the image of $E$ under $p\mapsto\Lambda(g)^{-1}p$. The left-hand side equals $\int e^{ia\cdot p/\hbar}dE_U(p)$ with $E_U(d):=UE(d)U^{-1}$. Hence $E_U$ and $E'$ are two projection valued measures with the same transform in the sense of Equation~\eqref{eq:translation-spectral}, and they coincide by the uniqueness in Proposition~\ref{prop:snag-translations}. For a general $\kappa$, write $(a,g)=(a,\mathbb{1})(0,g)$. The operator $T(a)=\int e^{ia\cdot p/\hbar}dE$ commutes with every $E(d)$, so that $\Pi(\kappa)E(d)\Pi(\kappa)^{-1}=T(a)E(\Lambda(g)d)T(a)^{-1}=E(\Lambda(g)d)$.
+	
+	Item 1 is the change of variables in the functional calculus, as in the proof of Lemma~\ref{lem:boost-covariance}.
+	
+	Item 2. Let $N:=M^*\setminus\operatorname{supp}E$, the largest open $E$-null set as per Definition~\ref{def:pvm-support}. The set $\Lambda(g)N$ is open, and $E(\Lambda(g)N)=UE(N)U^{-1}=0$ by Equation~\eqref{eq:covariance}. Hence $\Lambda(g)N\subseteq N$, and the same argument applied to $g^{-1}$ yields $\Lambda(g)N=N$.
+\end{proof}
+
+\noindent Item 2 states that the possible values of the four-momentum are permuted among themselves by changes of inertial frame.
+
+The orbits of $\Lambda(SL(2,\mathbb{C}))$ in $M^*$ are the sheets of the hyperboloids $p\cdot p=\mathrm{const}$ together with the null cone and the origin. The covariance of $E$ and the positivity of the energy select among them. The scalar $P^2$ is invariant under the Lorentz group and is a function of $E$, hence it commutes with the whole representation. The next proposition uses H1 and H2 in item 1, and H3 in addition in items 2 and 3.
+
+\begin{proposition}[The spectral measure lives on a mass shell]\label{prop:mass-shell}
+	Let $\Phi$ be an elementary relativistic system as per Definition~\ref{def:elementary-system}, with lift $\Pi$ and spectral measure $E$. Then
+	\begin{enumerate}
+		\item there is $m^2\in\mathbb{R}$ with $P^2=m^2\mathbb{1}$, and $E\big(\{p\in M^*\mid p\cdot p\neq m^2\}\big)=0$,
+		\item $m^2\geq0$,
+		\item if $m^2>0$ and $m$ denotes its positive square root, then $E(M^*\setminus\mathcal{O}_m^+)=0$ and $\operatorname{supp}E=\mathcal{O}_m^+$, with $\mathcal{O}_m^+$ as per Definition~\ref{def:mass-shell}.
+	\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+	Item 1. By item 1 of Lemma~\ref{lem:poincare-covariance} and the invariance of $p\mapsto p\cdot p$ under $\Lambda(g)$,
+	\begin{equation*}
+		\Pi((0,g))\,e^{itP^2}\,\Pi((0,g))^{-1}=\int e^{it(\Lambda(g)^{-1}p)\cdot(\Lambda(g)^{-1}p)}dE(p)=e^{itP^2}, \qquad t\in\mathbb{R}.
+	\end{equation*}
+	The operator $e^{itP^2}$ also commutes with every $T(a)$, since both are functions of $E$. As $(a,g)=(a,\mathbb{1})(0,g)$, it commutes with $\Pi(\mathcal{P})$. The set $\Pi(\mathcal{P})$ is irreducible. Indeed, a closed subspace $\mathcal{K}$ invariant under $\Pi(\mathcal{P})$ satisfies $\Phi_\kappa(\mathbb{P}\mathcal{K})\subseteq\mathbb{P}\mathcal{K}$ for all $\kappa\in\mathcal{P}$, and Definition~\ref{def:poincare-irreducible} forces $\mathcal{K}\in\{\{0\},\mathcal{H}\}$, as in Step 5 of the proof of Theorem~\ref{thm:free-hamiltonian}. Lemma~\ref{lem:schur-infinite} applied to $A=P^2$ yields $P^2=m^2\mathbb{1}$ for some $m^2\in\mathbb{R}$. It descends that for every $x\in\mathcal{H}$
+	\begin{equation*}
+		\int\big(p\cdot p-m^2\big)^2\,d\langle x,Ex\rangle=\big\|(P^2-m^2)x\big\|^2=0,
+	\end{equation*}
+	so that the open set $\{p\cdot p\neq m^2\}$ is $E$-null.
+	
+	Items 2 and 3. Let $S:=\operatorname{supp}E$. It is nonempty because $E(M^*)=\mathbb{1}$, it is contained in $\{p\cdot p=m^2\}$ by item 1, and it is invariant under $\Lambda(SL(2,\mathbb{C}))$ by item 2 of Lemma~\ref{lem:poincare-covariance}. Every open set meeting $S$ has nonzero $E$-measure. Moreover $E(\{p^0<-n\})$ is the spectral projection of $H$ on $(-\infty,-n)$ by item 1 of Proposition~\ref{prop:snag-translations}, and it vanishes for large $n$ if and only if $H$ is bounded below.
+	
+	Suppose that $m^2<0$ and set $\nu:=\sqrt{-m^2}$. By item 2 of Lemma~\ref{lem:hyperboloid-orbits} the hyperboloid $\{p\cdot p=-\nu^2\}$ is a single orbit, hence $S$ equals the whole hyperboloid. On it $p^0$ takes every real value, because $|\mathbf{p}|^2=(p^0)^2+\nu^2$ imposes no restriction on $p^0$. Hence every open set $\{p^0<-n\}$ meets $S$, so that $E(\{p^0<-n\})\neq0$ for all $n\in\mathbb{N}$, and $H$ is not bounded below. This contradicts H3, and item 2 follows.
+	
+	Suppose that $m^2>0$. By item 1, $S\subseteq\mathcal{O}_m^+\cup\mathcal{O}_m^-$. If $S$ met $\mathcal{O}_m^-$, then $\mathcal{O}_m^-\subseteq S$, since $\mathcal{O}_m^-$ is a single orbit by item 1 of Lemma~\ref{lem:hyperboloid-orbits}, and $p^0\leq-m$ would be unbounded below on $S$. The argument above would again contradict H3. Hence $S\cap\mathcal{O}_m^-=\emptyset$, so that $\mathcal{O}_m^-\subseteq M^*\setminus S$ is $E$-null, and together with item 1 this yields $E(M^*\setminus\mathcal{O}_m^+)=0$. Moreover $S\subseteq\mathcal{O}_m^+$ is nonempty and invariant, and $\mathcal{O}_m^+$ is a single orbit, so $S=\mathcal{O}_m^+$.
+\end{proof}
+
+\noindent Hypothesis H3 enters only through the exclusion of the sheet $\mathcal{O}_m^-$ and of the hyperboloids of negative squared mass.
+
+\begin{remark}[The mass as the eigenvalue of a Casimir operator]\label{rem:casimir-label}
+	The operator $P^2$ commutes with $\Pi(\mathcal{P})$, as shown in the proof of Proposition~\ref{prop:mass-shell}, so that it is a Casimir operator of the representation, and Schur's lemma makes it a scalar on an irreducible one. The mass is therefore the label of an irreducible representation, which replaces the Galilean statement of Chapter~\ref{ch:analytical-hamiltonians}, where the mass was the parameter of a central extension in Theorem~\ref{thm:bargmann} and Proposition~\ref{prop:lift}. The origin of the difference is the vanishing of $H^2(\mathfrak{p},\mathbb{R})$ in Theorem~\ref{thm:poincare-cohomology}, which leaves no phase from which a mass could be read. The same vanishing is behind a second difference. In Proposition~\ref{prop:lift} the generator $H$ was determined only up to an additive constant, whereas here the lift is unique by Proposition~\ref{prop:poincare-lift} and the zero of the energy is fixed by the support of $E$. A second Casimir operator, built from the Pauli--Lubanski vector \cite[TODO-location]{TODO-BarutRaczka}, would distinguish the spins, but it is not needed. For $m>0$ the spin is read from the representation of the stabilizer $SU(2)$ of the rest momentum, as shown in Theorem~\ref{thm:wigner-mackey} and Remark~\ref{rem:spin-emerges}.
+\end{remark}
+
+\begin{remark}[The cases $m^2<0$ and $m=0$]\label{rem:massless}
+	The case $m^2<0$ is excluded by H3 in Proposition~\ref{prop:mass-shell} and would describe tachyons. The case $m=0$ is excluded from now on. The null cone $\{p\cdot p=0\}$ is the union of the origin, which is an orbit by itself, and of two nonzero sheets, and the stabilizer in $SL(2,\mathbb{C})$ of a nonzero null momentum is not $SU(2)$ but the covering of the Euclidean group of the plane \cite[TODO-location]{TODO-BarutRaczka}. The construction of the next section relies on Proposition~\ref{prop:orbit}, in which the stabilizer of the rest momentum is $SU(2)$, so that it does not apply. The same exclusion was made for the Galilean mass in the case $m=0$ of Remark~\ref{rem:weyl}.
+\end{remark}
+
+\noindent What remains undetermined is the multiplicity of $E$ above each point of $\mathcal{O}_m^+$ and the action of the Lorentz group on it, which is settled in the next section by Theorem~\ref{thm:wigner-mackey}.
+
+\section{Classification of the Elementary Systems}
+\label{sec:classification}
+
+The question of this section is how the pure states of an elementary relativistic system are described when the hypotheses H1 to H3 of Definition~\ref{def:hypotheses} are the only information available, \textit{i.e.}, which data a ray of $\mathbb{P}\mathcal{H}$ has to specify besides the momentum. The datum is the pair $(\mathbb{P}\mathcal{H},\Phi)$ together with its unitary lift $\Pi$ of Proposition~\ref{prop:poincare-lift}. The translations of $\Pi$ have the spectral measure $E$ of Proposition~\ref{prop:snag-translations}, which is concentrated on the forward mass shell $\mathcal{O}_m^+$ by Proposition~\ref{prop:mass-shell}. The set $\mathcal{O}_m^+$ is not a set of states. It is the support of $E$, \textit{i.e.}, the set of the possible values of the four-momentum. What is obtained is a model of the states on a space of square integrable functions on $\mathcal{O}_m^+$ with values in a finite-dimensional spin space, the model denoted M2 in the opening of the chapter. In it a state is the ray of a function $\psi$, the vector $\psi(p)$ is the amplitude of the momentum $p$ together with the amplitudes of the spin components, and the Poincar\'e group acts through an explicit formula containing the Wigner rotation of Proposition~\ref{prop:induced-action}. Each elementary system is labelled by the mass $m$ and by a number $j\in\{0,\tfrac12,1,\dots\}$, which is not an input but the label of an irreducible representation of the stabilizer $SU(2)$ of the rest momentum. This is the classification step of the chain of the chapter. Its output, the model on $\mathcal{O}_m^+$ with the energy $H=\omega(\mathbf{P})$, is the starting point of the next section, where the dependence of the Wigner rotation on the momentum is shown to obstruct a description of the states by fields transforming with fixed matrices.
+
+The form of the representation is motivated as follows. Since $E$ is concentrated on $\mathcal{O}_m^+$, a realization of $\mathcal{H}$ as a space of square integrable functions on $\mathcal{O}_m^+$ with values in a Hilbert space $\mathcal{K}$, in which $E$ acts by multiplication by characteristic functions, makes the translations act by multiplication by $e^{ia\cdot p/\hbar}$. By Lemma~\ref{lem:poincare-covariance} the unitary $\Pi((0,g))$ transforms $E(d)$ into $E(\Lambda(g)d)$, so it carries functions supported on $d$ to functions supported on $\Lambda(g)d$. Since the measure $\mu$ of Lemma~\ref{lem:invariant-measure} is invariant under $\Lambda(g)$, this suggests the form $\psi\mapsto R(g,p)\,\psi(\Lambda(g)^{-1}p)$ with $R(g,p)$ a unitary operator on $\mathcal{K}$. The homomorphism property of $\Pi$ then makes $R$ a cocycle, \textit{i.e.}, $R(gg',p)=R(g,p)R(g',\Lambda(g)^{-1}p)$. The induction developed among the preliminaries of the chapter provides the canonical cocycle $R(g,p)=\pi(R_W(g,p))$, with $\pi$ a unitary representation of the stabilizer $SU(2)$ and $R_W$ the Wigner rotation of Proposition~\ref{prop:induced-action}, see also Theorem~\ref{thm:equivariant-sections}. This is an argument of motivation and not a derivation. That every elementary system has this form is the content of Theorem~\ref{thm:wigner-mackey}.
+
+\begin{definition}[Spin data]\label{def:spin-data}
+	Let $j\in\{0,\tfrac12,1,\dots\}$. The \emph{spin data} of label $j$ is the pair $(\pi,V)$ with $V:=\mathbb{C}^{2j+1}$ and $\pi:=d_j$ the irreducible unitary representation of $SU(2)$ of dimension $2j+1$, as per Definition~1.2.25, denoted $d_j$ in Corollary~\ref{cor:schrodinger-realization}.
+\end{definition}
+
+The space $V$ collects the internal amplitudes attached to a single value of the momentum, and $\pi$ prescribes how the stabilizer of the rest momentum rotates them. Letting the amplitudes depend on $p\in\mathcal{O}_m^+$ yields a Hilbert space of functions of the momentum, whose vectors are states with $\psi(p)$ the amplitude of the momentum $p$ and of the spin components, and on which the Poincar\'e group acts through the Wigner rotation.
+
+\begin{definition}[Induced representation]\label{def:induced-rep}
+	Let $(\pi,V)$ be the spin data of label $j$ as per Definition~\ref{def:spin-data}, let $\mu$ be the measure of Lemma~\ref{lem:invariant-measure} and set $\mathcal{H}_{m,j}:=L^2(\mathcal{O}_m^+,\mu;V)$. The \emph{induced representation} $U_{m,j}$ takes $(a,g)\in\mathcal{P}$ and yields the operator on $\mathcal{H}_{m,j}$ defined by
+	\begin{equation}\label{eq:induced-rep}
+		\big(U_{m,j}(a,g)\psi\big)(p):=e^{ia\cdot p/\hbar}\,\pi\big(R_W(g,p)\big)\,\psi\big(\Lambda(g)^{-1}p\big),
+	\end{equation}
+	where $R_W(g,p)=A_p^{-1}\,g\,A_{\Lambda(g)^{-1}p}\in SU(2)$ is the Wigner rotation of Proposition~\ref{prop:induced-action}, with $A_p$ the standard boost of Proposition~\ref{prop:orbit}.
+\end{definition}
+
+By Theorem~\ref{thm:equivariant-sections} and Proposition~\ref{prop:action-trivialization}, $\mathcal{H}_{m,j}$ is the space of square integrable sections of the bundle associated to the spin data, written in the trivialization $p\mapsto A_p$, and Equation~\eqref{eq:induced-rep} is the action of the left translations in that trivialization combined with the multiplication by the phase of the translations. The cocycle identity of $R_W$ is the property that turns the formula into a representation, as the following proposition verifies together with the properties of the spectral measure.
+
+\begin{proposition}[Unitarity of the induced representation]\label{prop:induced-unitary}
+	$U_{m,j}$ is a strongly continuous unitary representation of $\mathcal{P}$ on $\mathcal{H}_{m,j}$, as per Definition~1.2.28. The spectral measure of its translations is $E_{m,j}(d)=\chi_d$, \textit{i.e.}, the multiplication by the characteristic function of the Borel set $d\subseteq\mathcal{O}_m^+$. Consequently $P^\mu$ acts by multiplication by $p^\mu$, $P^\mu P_\mu=m^2\,\mathbb{1}$, and $H$ acts by multiplication by $\omega(\mathbf{p})\geq m$.
+\end{proposition}
+
+\begin{proof}
+	We write $U:=U_{m,j}$.
+	
+	\emph{Homomorphism.} By Proposition~\ref{prop:induced-action}, $R_W(\mathbb{1},p)=\mathbb{1}$ and $R_W(gg',p)=R_W(g,p)R_W(g',\Lambda(g)^{-1}p)$. Together with the identity $a'\cdot\Lambda(g)^{-1}p=\Lambda(g)a'\cdot p$ and with the product $(a,g)(a',g')=(a+\Lambda(g)a',gg')$ of Definition~\ref{def:poincare-group}, this yields
+	\begin{align*}
+		\big(U(a,g)U(a',g')\psi\big)(p)&=e^{ia\cdot p/\hbar}\pi\big(R_W(g,p)\big)\,e^{i\Lambda(g)a'\cdot p/\hbar}\pi\big(R_W(g',\Lambda(g)^{-1}p)\big)\psi\big(\Lambda(gg')^{-1}p\big)\\
+		&=e^{i(a+\Lambda(g)a')\cdot p/\hbar}\,\pi\big(R_W(gg',p)\big)\,\psi\big(\Lambda(gg')^{-1}p\big)=\big(U((a,g)(a',g'))\psi\big)(p).
+	\end{align*}
+	Since $U(0,\mathbb{1})=\mathbb{1}$, every $U(a,g)$ is invertible with inverse $U((a,g)^{-1})$.
+	
+	\emph{Unitarity.} The operator $\pi(R_W(g,p))$ is unitary and $\mu$ is invariant under $\Lambda(g)$ by Lemma~\ref{lem:invariant-measure}, so that
+	\begin{equation*}
+		\|U(a,g)\psi\|^2=\int\|\psi(\Lambda(g)^{-1}p)\|^2\,d\mu(p)=\|\psi\|^2.
+	\end{equation*}
+	
+	\emph{Strong continuity.} Let $\psi$ be continuous with compact support. Since $p\mapsto A_p$ is smooth, the function $(a,g,p)\mapsto e^{ia\cdot p/\hbar}\pi(R_W(g,p))\psi(\Lambda(g)^{-1}p)$ is continuous. For $(a,g)$ in a compact set the support of $U(a,g)\psi$ lies in a fixed compact set, and its norm is bounded by $\sup\|\psi\|$. Dominated convergence yields the continuity of $(a,g)\mapsto U(a,g)\psi$ in $L^2$. Such vectors are dense and the operators $U(a,g)$ are isometries, so continuity holds for every $\psi\in\mathcal{H}_{m,j}$.
+	
+	\emph{Translations.} By Equation~\eqref{eq:induced-rep}, $U(a,\mathbb{1})$ is the multiplication by $e^{ia\cdot p/\hbar}$, \textit{i.e.}, $\int e^{ia\cdot p/\hbar}\,d\chi_d(p)$, and the uniqueness in Proposition~\ref{prop:snag-translations} identifies $E_{m,j}$ with $\chi$. The remaining statements follow from $p\cdot p=m^2$ and $p^0=\omega(\mathbf{p})\geq m$ on $\mathcal{O}_m^+$.
+\end{proof}
+
+The representation $U_{m,j}$ contains a topological datum, the value taken by the element of $\mathcal{P}$ that covers the identity of the proper orthochronous isometries. It is the same datum that distinguishes rotations of $2\pi$ on integer and half-integer spin in Example~\ref{ex:so3-su2}, and the next proposition shows that it is a sign in every irreducible representation.
+
+\begin{proposition}[The central sign]\label{prop:central-sign}
+	Let $z:=(0,-\mathbb{1})\in\mathcal{P}$. Then $z$ is central, $z^2$ is the identity of $\mathcal{P}$, and for every irreducible strongly continuous unitary representation $\Pi$ of $\mathcal{P}$ there is $s_\Pi\in\{1,-1\}$ with $\Pi(z)=s_\Pi\,\mathbb{1}$.
+\end{proposition}
+
+\begin{proof}
+	By Lemma~\ref{lem:sl2c-covering}, $\Lambda(-\mathbb{1})=\mathrm{id}$, so $z(a,g)=(a,-g)=(a,g)z$ and $z^2=(0,\mathbb{1})$. The operator $\Pi(z)$ is unitary with $\Pi(z)^2=\mathbb{1}$, hence $\Pi(z)^*=\Pi(z)$ and $\Pi(z)$ is selfadjoint. It commutes with $\Pi(\mathcal{P})$ because $z$ is central, and so does $e^{it\Pi(z)}=\cos t\,\mathbb{1}+i\sin t\,\Pi(z)$. Lemma~\ref{lem:schur-infinite} yields $\Pi(z)=s_\Pi\mathbb{1}$ with $s_\Pi\in\mathbb{R}$, and $s_\Pi^2=1$.
+\end{proof}
+
+\noindent The lift of an irreducible Poincar\'e action is irreducible in the sense required here, since a closed subspace invariant under $\Pi$ is invariant under $\Phi$ as per Definition~\ref{def:poincare-irreducible}.
+
+The proposition leaves $s_\Pi$ undetermined, and the induced representation allows one to compute it. The computation connects the sign to the label $j$ of the spin data, without any reference to the particular value of the momentum.
+
+\begin{corollary}[The central sign is $(-1)^{2j}$]\label{cor:central-sign-spin}
+	In $U_{m,j}$ one has $U_{m,j}(z)=(-1)^{2j}\,\mathbb{1}$. Hence, whenever $U_{m,j}$ is irreducible, as shown in Theorem~\ref{thm:wigner-mackey}, its central sign is $s_\Pi=(-1)^{2j}$. For integer $j$ it factors through the proper orthochronous Poincar\'e group of Corollary~\ref{cor:poincare-topology}, and for half-integer $j$ it does not.
+\end{corollary}
+
+\begin{proof}
+	Since $\Lambda(-\mathbb{1})=\mathrm{id}$, Equation~\eqref{eq:induced-rep} yields $(U_{m,j}(z)\psi)(p)=\pi(R_W(-\mathbb{1},p))\psi(p)$ and $R_W(-\mathbb{1},p)=A_p^{-1}(-\mathbb{1})A_p=-\mathbb{1}$. By Example~1.2.17, $-\mathbb{1}=\exp(-2\pi i\,\sigma_3/2)$ in $SU(2)$, so $d_j(-\mathbb{1})=e^{-2\pi iJ_3}$. The eigenvalues of $J_3$ in $d_j$ are $j,j-1,\dots,-j$ \cite[TODO-location]{TODO-Hal03}, all congruent to $j$ modulo integers, and therefore $d_j(-\mathbb{1})=e^{-2\pi ij}\,\mathbb{1}=(-1)^{2j}\,\mathbb{1}$.
+\end{proof}
+
+The representations $U_{m,j}$ are candidates, and nothing so far guarantees that an elementary system is equivalent to one of them. The classification theorem closes this gap, and it does so by showing that the label $j$ is determined by the action $\Phi$ and not chosen.
+
+\begin{theorem}[Wigner, Mackey]\label{thm:wigner-mackey}
+	Let $m>0$.
+	\begin{enumerate}
+		\item For every $j\in\{0,\tfrac12,1,\dots\}$ the representation $U_{m,j}$ of Definition~\ref{def:induced-rep} is an irreducible strongly continuous unitary representation of $\mathcal{P}$ of positive energy with $P^\mu P_\mu=m^2\mathbb{1}$.
+		\item Let $\Phi$ be an elementary relativistic system as per Definition~\ref{def:elementary-system}, \textit{i.e.}, satisfying H1 to H3 of Definition~\ref{def:hypotheses}, with lift $\Pi$ as per Proposition~\ref{prop:poincare-lift} and mass $m>0$ as per Proposition~\ref{prop:mass-shell}. Then there exist a unique $j\in\{0,\tfrac12,1,\dots\}$ and a unitary operator $W:\mathcal{H}\to\mathcal{H}_{m,j}$ such that $W\,\Pi(\kappa)\,W^{-1}=U_{m,j}(\kappa)$ for all $\kappa\in\mathcal{P}$ and $W\,E(d)\,W^{-1}=\chi_d$ for every Borel set $d\subseteq\mathcal{O}_m^+$.
+	\end{enumerate}
+\end{theorem}
+
+\noindent See \cite[TODO-location]{TODO-Wigner1939} and \cite[TODO-location]{TODO-Mackey1958}.
+
+The proof is not reproduced. The following remark isolates the role of each ingredient, and it is the scheme of the proof.
+
+\begin{remark}[Reading the theorem in four steps]\label{rem:mackey-steps}
+	\emph{Step 1, a system of imprimitivity.} By Lemma~\ref{lem:poincare-covariance} and Proposition~\ref{prop:mass-shell}, $E$ is a projection valued measure concentrated on $\mathcal{O}_m^+$ with $\Pi((0,g))E(d)\Pi((0,g))^{-1}=E(\Lambda(g)d)$. Hence $g\mapsto\Pi((0,g))$ and $E$ form a system of imprimitivity for $SL(2,\mathbb{C})$ based on the homogeneous space $\mathcal{O}_m^+\cong SL(2,\mathbb{C})/SU(2)$ of Proposition~\ref{prop:orbit}.
+	
+	\emph{Step 2, the induced form.} Mackey's imprimitivity theorem identifies $\mathcal{H}$ with $L^2(\mathcal{O}_m^+,\mu;\mathcal{K})$ for a separable Hilbert space $\mathcal{K}$, with $E$ acting by multiplication by characteristic functions, and $SL(2,\mathbb{C})$ acting as in the representation induced from a unitary representation $d$ of $SU(2)$ on $\mathcal{K}$. In the trivialization of Proposition~\ref{prop:action-trivialization} this action is $\psi\mapsto d(R_W(g,p))\psi(\Lambda(g)^{-1}p)$. The measure $\mu$ of Lemma~\ref{lem:invariant-measure} belongs to the unique quasi-invariant class on the homogeneous space, so that no Radon--Nikodym factor appears.
+	
+	\emph{Step 3, the translations.} By Proposition~\ref{prop:snag-translations}, $T(a)=\int e^{ia\cdot p/\hbar}\,dE(p)$, so the translations act by multiplication by $e^{ia\cdot p/\hbar}$. Since $(a,g)=(a,\mathbb{1})(0,g)$, the representation $\Pi$ is given by Equation~\eqref{eq:induced-rep} with $(d,\mathcal{K})$ in place of $(\pi,V)$.
+	
+	\emph{Step 4, irreducibility selects the spin.} If $\mathcal{K}_1\subseteq\mathcal{K}$ is a closed subspace invariant under $d$, then $L^2(\mathcal{O}_m^+,\mu;\mathcal{K}_1)$ is invariant under $\Pi$, so irreducibility forces $d$ to be irreducible. Since $SU(2)$ is compact, $d$ is finite-dimensional and equivalent to $d_j$ for a unique $j$ \cite[TODO-location]{TODO-Hal03}, so that $\mathcal{K}\cong\mathbb{C}^{2j+1}$. Equivalence classes of induced representations correspond bijectively to equivalence classes of the inducing representations, which yields the uniqueness of $j$. Conversely, the irreducibility of $d_j$ yields that of $U_{m,j}$.
+\end{remark}
+
+The theorem fixes the multiplicity of $E$ and the action of the Lorentz group, and hence the energy as a function of the momentum. Since the energy is the generator of the time translations, its expression follows from the form of $E$ alone, with no further use of the group structure.
+
+\begin{corollary}[Hamiltonian of the relativistic free particle]\label{thm:relativistic-hamiltonian}
+	Let $\Phi$ be an elementary relativistic system of mass $m>0$, \textit{i.e.}, satisfying H1 to H3 of Definition~\ref{def:hypotheses}, and let $H$ and $\mathbf{P}$ be as per Definition~\ref{def:poincare-generators}. Then
+	\begin{equation}\label{eq:relativistic-hamiltonian}
+		H=\omega(\mathbf{P})=\sqrt{|\mathbf{P}|^2+m^2},\qquad D(H)=D(|\mathbf{P}|),
+	\end{equation}
+	the spectrum is $\sigma(H)=[m,\infty)$, and the spectral measure of $\mathbf{P}$ has support $\mathbb{R}^3$.
+\end{corollary}
+
+\begin{proof}
+	Let $W$ and $j$ be as in item 2 of Theorem~\ref{thm:wigner-mackey}. Since $W E(d)W^{-1}=\chi_d$, the functional calculus yields that $WHW^{-1}=\int p^0\,d\chi$ and $W\mathbf{P}W^{-1}=\int\mathbf{p}\,d\chi$ are the multiplication operators by $p^0=\omega(\mathbf{p})$ and by $\mathbf{p}$ on $\mathcal{H}_{m,j}$, with maximal domains. Through the homeomorphism $\mathbf{p}\mapsto(\omega(\mathbf{p}),\mathbf{p})$ of Definition~\ref{def:mass-shell}, $\mathcal{O}_m^+\cong\mathbb{R}^3$ and $\mu=d^3\mathbf{p}/2\omega(\mathbf{p})$, which has a positive continuous density. Hence $H=\omega(\mathbf{P})$, and every nonempty open set has positive $\mu$ measure, so that the spectral measure of $\mathbf{P}$ has support $\mathbb{R}^3$. Since $|\mathbf{p}|\leq\omega(\mathbf{p})\leq|\mathbf{p}|+m$, one has $D(H)=D(|\mathbf{P}|)$.
+	
+	For the spectrum, let $\lambda\geq m$ and $\mathbf{p}_0$ with $\omega(\mathbf{p}_0)=\lambda$, which exists because $\omega$ is continuous with $\omega(\mathbb{R}^3)=[m,\infty)$. For $\varepsilon>0$ let $\psi_\varepsilon$ be the normalized characteristic function of a ball centred at $\mathbf{p}_0$ on which $|\omega-\lambda|<\varepsilon$. Then $\|(H-\lambda)\psi_\varepsilon\|\leq\varepsilon$, so $\lambda\in\sigma(H)$. If $\lambda\notin[m,\infty)$, then $|\omega-\lambda|\geq\operatorname{dist}(\lambda,[m,\infty))>0$, and $(H-\lambda)^{-1}$ is the bounded multiplication by $(\omega-\lambda)^{-1}$. It descends that $\sigma(H)=[m,\infty)$.
+\end{proof}
+
+\noindent The statement is independent of $j$, and no relation between boosts and time translations was used, since the transitivity of the Lorentz group on the mass shell is already contained in the support of $E$.
+
+\begin{remark}[Spin is an output]\label{rem:spin-emerges}
+	Theorem~\ref{thm:wigner-mackey} answers the question left open by Remark~\ref{rem:ph-no-spin}. The state space $\mathbb{P}\mathcal{H}$ does not contain the spin, which is a property of the action $\Phi$. It enters as the label of the irreducible representation of the stabilizer of the rest momentum that irreducibility selects, and integer and half-integer values are distinguished by the central sign $s_\Pi=(-1)^{2j}$ of Corollary~\ref{cor:central-sign-spin}. In the model $\mathcal{H}_{m,j}$ the vector $\psi(p)$ collects the amplitudes of the spin components at the momentum $p$, and for a unit vector $\psi$ one has $\langle\psi,E(d)\psi\rangle=\int_d\|\psi(p)\|^2\,d\mu(p)$, so that $\|\psi(p)\|^2d\mu(p)$ is the distribution of the four-momentum in the state $[\psi]$. The components are defined through the standard boost $A_p$, hence they are the components of the spin in the rest frame reached by $A_p^{-1}$, and a boost acts on them through the Wigner rotation of Proposition~\ref{prop:wigner-rotation}, which depends on $p$. In the Galilean model of Corollary~\ref{cor:schrodinger-realization} the boosts act trivially on the factor $\mathbb{C}^{2j+1}$, and this difference is what the next section turns into an obstruction. From the next section on we fix $j=\tfrac12$, which is a choice of label and not a hypothesis. The hypotheses H4 to H6 of Definition~\ref{def:hypotheses} have not been used.
+\end{remark}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}, part (A)]
+	Only H1 to H3 are used. By Proposition~\ref{prop:poincare-lift}, $\Phi$ has a unique unitary lift $\Pi$, and by item 2 of Theorem~\ref{thm:wigner-mackey} there exist a unique $j$ and a unitary operator $W:\mathcal{H}\to\mathcal{H}_{m,j}$ with $W\Pi(\kappa)W^{-1}=U_{m,j}(\kappa)$. By Lemma~\ref{lem:kahler-iso-two-spaces}, $F:[x]\mapsto[Wx]$ is an isomorphism of Kähler manifolds from $\mathbb{P}\mathcal{H}$ onto $\mathbb{P}\mathcal{H}_{m,j}$, and
+	\begin{equation*}
+		F\big(\Phi_\kappa[x]\big)=[W\Pi(\kappa)x]=[U_{m,j}(\kappa)Wx]=[U_{m,j}(\kappa)\,\cdot\,]\,F[x],\qquad \kappa\in\mathcal{P},\ [x]\in\mathbb{P}\mathcal{H}.
+	\end{equation*}
+	This is the existence of the isomorphism, \textit{i.e.}, a realization as per Definition~\ref{def:realization}.
+	
+	For the uniqueness, let $F':\mathbb{P}\mathcal{H}\to\mathbb{P}\mathcal{H}_{m,j'}$ be a Kähler isomorphism intertwining $\Phi_\kappa$ with $[U_{m,j'}(\kappa)\,\cdot\,]$. The latter is a Poincar\'e action, since the strong continuity of $U_{m,j'}$ makes the expectation values continuous along orbits, and hence the orbit maps by Proposition~3.2.9. By the uniqueness in Proposition~\ref{prop:poincare-lift} its lift is $U_{m,j'}$, and Proposition~\ref{prop:realization-equivalence} yields a unitary operator $\mathcal{H}\to\mathcal{H}_{m,j'}$ intertwining $\Pi$ with $U_{m,j'}$. The uniqueness of $j$ in Theorem~\ref{thm:wigner-mackey} gives $j'=j$.
+	
+	Under $W$ the energy operator of $\Pi$ corresponds to the multiplication by $\omega(\mathbf{p})$, and Corollary~\ref{thm:relativistic-hamiltonian} yields $H=\omega(\mathbf{P})$ with $D(H)=D(|\mathbf{P}|)$.
+\end{proof}
+

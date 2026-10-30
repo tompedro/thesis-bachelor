@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'dirac_integrated.blg'
+[69] biber-darwin:340> INFO - === Sun Oct 18, 2026, 14:59:54
+[81] Biber.pm:418> INFO - Reading 'dirac_integrated.bcf'
+[151] Biber.pm:972> INFO - Found 10 citekeys in bib section 0
+[164] Biber.pm:4383> INFO - Processing section 0
+[173] Biber.pm:4574> INFO - Looking for bibtex file 'bib.bib' for section 0
+[301] Utils.pm:409> ERROR - Cannot find 'bib.bib'!
+[301] Biber.pm:135> INFO - ERRORS: 1
